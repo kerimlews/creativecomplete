@@ -1,0 +1,261 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { getCollection } from 'astro:content';
+import BottomCTA from '../../components/BottomCTA.astro';
+
+const images = await import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
+
+// Function to get project image by slug
+function getImage(slug) {
+  const imagePath = `/src/images/services/${slug}.png`;  
+  return images[imagePath]() ? imagePath : '/src/content/projects/default.png';
+}
+
+// Get all services
+const services = (await getCollection('services')).map(s => ({ ...s, image: getImage(s.id)}));
+
+// Sort services by priority (highest first) then featured
+const sortedServices = services.toSorted((a, b) => {
+  if (a.data.featured && !b.data.featured) return -1;
+  if (!a.data.featured && b.data.featured) return 1;
+  return (b.data.priority || 5) - (a.data.priority || 5);
+});
+
+// Extract unique categories for filtering
+const categories = [...new Set(services.map(service => service.data.category))].filter(Boolean);
+
+// Generate JSON-LD for services page
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Digital Marketing Services",
+  "description": "Comprehensive digital marketing services including SEO, web design, automation, SaaS development, e-commerce, and mobile app development.",
+  "numberOfItems": services.length,
+  "itemListElement": services.map((service, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "Service",
+      "name": service.data.title,
+      "description": service.data.description,
+      "url": `${Astro.url.origin}/services/${service.id}`,
+      "serviceType": service.data.category
+    }
+  }))
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: Astro.url.origin },
+  { name: 'Services', url: Astro.url.href }
+];
+---
+
+<Layout 
+  title="Premium Digital Services - Drive Measurable Business Growth"
+  description="Comprehensive digital marketing services including SEO, web design, automation, SaaS development, e-commerce, and mobile apps. Real results, not empty promises."
+  structuredData={structuredData}
+  breadcrumbs={breadcrumbs}
+  openGraph={{
+    title: "Digital Services That Drive Revenue",
+    description: "Get 287% more leads, 3X revenue growth, and 20+ hours saved weekly with our proven digital solutions.",
+    image: "/images/services-og.jpg"
+  }}
+  priority={9}
+>
+  <div class="services-page">
+    <!-- Hero Section -->
+    <section class="services-hero section-padding">
+      <div class="container">
+        <div class="hero-content text-center">
+          <nav class="breadcrumb">
+            <a href="/">Home</a> / <span>Services</span>
+          </nav>
+          
+          <h1 class="hero-title">Digital Services That Deliver <span class="text-gradient">Real Results</span></h1>
+          <p class="hero-subtitle">
+            We don't just build websites or run ads - we drive measurable business growth with proven strategies and technical excellence.
+          </p>
+          
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-number">287%</div>
+              <div class="stat-label">Avg. Lead Increase</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">47</div>
+              <div class="stat-label">New Clients in 90 Days</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">3.4%</div>
+              <div class="stat-label">Avg. Conversion Rate</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">20+</div>
+              <div class="stat-label">Hours Saved Weekly</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-grid-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Our Comprehensive Service Portfolio</h2>
+          <p class="section-subtitle">Each service is backed by verified case studies and proven methodologies</p>
+        </div>
+
+        <!-- Category Filters -->
+        {categories.length > 0 && (
+          <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">All Services</button>
+            {categories.map(category => (
+              <button class="filter-btn" data-filter={category.toLowerCase().replace(/\s+/g, '-')}>
+                {category}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <!-- Services Grid -->
+        <div class="services-grid" id="servicesGrid">
+          {sortedServices.map((service, index) => (
+            <ServiceCard
+              title={service.data.title}
+              description={service.data.description}
+              features={service.data.features}
+              ctaText={service.data.ctaText}
+              image={service.image}
+              delay={service.data.delay}
+              featured={service.data.featured}
+              priority={service.data.priority}
+              category={service.data.category}
+              url={`/services/${service.id}`}
+              index={index}
+            />
+          ))}
+        </div>
+
+        <!-- Empty State -->
+        {services.length === 0 && (
+          <div class="empty-state text-center">
+            <h3>No Services Available</h3>
+            <p>Our services are currently being updated. Please check back soon.</p>
+            <a href="/contact" class="cta-button cta-primary">Contact Us</a>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section section-padding bg-light">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Our Proven Process for Success</h2>
+          <p class="section-subtitle">A systematic approach that ensures measurable results every time</p>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">01</div>
+            <h3>Discovery & Strategy</h3>
+            <p>Deep analysis of your business, competition, and goals to create a custom strategy with clear KPIs.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">02</div>
+            <h3>Implementation</h3>
+            <p>Rapid execution with expert precision, regular updates, and transparent communication throughout.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">03</div>
+            <h3>Optimization</h3>
+            <p>Continuous monitoring, testing, and refinement to maximize performance and ROI.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">04</div>
+            <h3>Scale & Grow</h3>
+            <p>Strategic expansion of successful initiatives to drive sustainable long-term growth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies Teaser -->
+    <section class="case-studies-teaser section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Real Results, Real Clients</h2>
+          <p class="section-subtitle">Every service is backed by verified case studies with measurable outcomes</p>
+        </div>
+
+        <div class="case-studies-grid">
+          <div class="case-study-teaser">
+            <div class="teaser-content">
+              <h3>From Page 5 to #1 in 90 Days</h3>
+              <p>Local plumbing company achieved 47 new clients through strategic SEO implementation.</p>
+              <a href="/services/local-seo-case-study-page-5-to-page-1" class="teaser-link">
+                Read Case Study →
+              </a>
+            </div>
+          </div>
+          
+          <div class="case-study-teaser">
+            <div class="teaser-content">
+              <h3>20 Hours Weekly Saved with AI</h3>
+              <p>Service business automated scheduling and invoicing, reclaiming 20+ hours weekly.</p>
+              <a href="/services/ai-automation-saved-20-hours-weekly" class="teaser-link">
+                Read Case Study →
+              </a>
+            </div>
+          </div>
+          
+          <div class="case-study-teaser">
+            <div class="teaser-content">
+              <h3>3X Revenue with Mobile App</h3>
+              <p>Fitness studio tripled revenue and reduced customer churn by 45% with custom app.</p>
+              <a href="/services/how-mobile-app-3x-revenue-local-business" class="teaser-link">
+                Read Case Study →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <BottomCTA />
+  </div>
+</Layout>
+
+<script>
+// Filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const servicesGrid = document.getElementById('servicesGrid');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      const filter = this.getAttribute('data-filter');
+      const serviceCards = servicesGrid.querySelectorAll('.service-card');
+      
+      serviceCards.forEach(card => {
+        if (filter === 'all') {
+          card.style.display = 'block';
+        } else {
+          const category = card.getAttribute('data-category');
+          if (category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+});
+</script>

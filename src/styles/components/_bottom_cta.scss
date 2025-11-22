@@ -1,0 +1,106 @@
+// Services CTA Section
+.bottom-cta {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(255, 140, 66, 0.1) 100%);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 10% 20%, rgba(255, 107, 53, 0.2) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .urgency-badge {
+    @include flex-center;
+    gap: $space-xs;
+    background: rgba(255, 107, 53, 0.2);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    color: $primary-light;
+    padding: $space-xs $space-md;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 auto $space-xl;
+    display: inline-flex;
+    backdrop-filter: blur(10px);
+    
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: $primary;
+      border-radius: 50%;
+      animation: astroPulse 2s ease-in-out infinite;
+    }
+  }
+
+  h2 {
+    @include text-gradient($orange-gradient);
+    margin-bottom: $space-md;
+  }
+
+  .cta-subtitle {
+    font-size: 1.1rem;
+    color: $text-lighter;
+    margin-bottom: $space-2xl;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .value-proposition {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: $space-lg;
+    margin-bottom: $space-2xl;
+    
+    @include mobile {
+      @include flex-column;
+      gap: $space-md;
+    }
+
+    .value-item {
+      @include flex-center;
+      gap: $space-xs;
+      color: $text-lighter;
+      font-weight: 500;
+      
+      svg {
+        color: $primary;
+      }
+    }
+  }
+
+  .cta-buttons {
+    @include flex-center;
+    gap: $space-lg;
+    margin-bottom: $space-xl;
+    
+    @include mobile {
+      @include flex-column;
+      gap: $space-md;
+    }
+  }
+
+  .cta-note {
+    @include flex-center;
+    gap: $space-xs;
+    font-size: 0.9rem;
+    color: $text-lighter;
+    
+    svg {
+      color: $primary;
+    }
+  }
+}

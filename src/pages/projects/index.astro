@@ -1,0 +1,293 @@
+---
+// src/pages/projects/index.astro
+import Layout from '../../layouts/Layout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+import BottomCTA from '../../components/BottomCTA.astro';
+
+const images = await import.meta.glob('/src/images/projects/*.{png,jpg,jpeg,webp}');
+
+// Function to get project image by slug
+function getImage(slug) {
+  const imagePath = `/src/images/projects/${slug}.png`;  
+  return images[imagePath] ? images[imagePath]() : '/images/projects/default.png';
+}
+
+// Get all projects
+const projects = await getCollection('projects');
+
+// Transform projects data for the card component
+const transformedProjects = projects.map(project => {
+  // Extract stats from project content
+  const stats = [];
+  
+  // Add revenue growth stats if mentioned in content
+  if (project.data.title.includes('$30k to $120k')) {
+    stats.push({ value: '300%', label: 'Revenue Growth' });
+    stats.push({ value: '4.3%', label: 'Conversion Rate' });
+  }
+  
+  if (project.data.title.includes('200,000+')) {
+    stats.push({ value: '200K+', label: 'Active Users' });
+    stats.push({ value: '95%', label: 'Performance Score' });
+  }
+  
+  if (project.data.title.includes('280 Hours')) {
+    stats.push({ value: '280h', label: 'Monthly Time Saved' });
+    stats.push({ value: '$280K', label: 'Annual Savings' });
+  }
+  
+  if (project.data.title.includes('7 Separate Tools')) {
+    stats.push({ value: '95%', label: 'Operations Automated' });
+    stats.push({ value: '45%', label: 'Retention Increase' });
+  }
+  
+  if (project.data.title.includes('245% traffic')) {
+    stats.push({ value: '245%', label: 'Traffic Increase' });
+    stats.push({ value: '90%', label: 'Admin Reduction' });
+  }
+
+  return {
+    title: project.data.title,
+    description: project.data.description,
+    image: getImage(project.id),
+    slug: project.id,
+    category: project.data.category,
+    url: project.data.url,
+    featured: project.data.featured,
+    stats: stats
+  };
+});
+
+// Sort projects by featured first, then by published date
+const sortedProjects = transformedProjects.toSorted((a, b) => {
+  if (a.featured && !b.featured) return -1;
+  if (!a.featured && b.featured) return 1;
+  return 0;
+});
+
+// Extract unique categories for filtering
+const categories = [...new Set(projects.map(project => project.data.category))].filter(Boolean);
+
+// Generate JSON-LD for projects page
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Project Portfolio - Case Studies & Results",
+  "description": "Showcase of successful digital projects including SaaS products, e-commerce platforms, mobile apps, and automation systems with verified results.",
+  "numberOfItems": projects.length,
+  "itemListElement": projects.map((project, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "CreativeWork",
+      "name": project.data.title,
+      "description": project.data.description,
+      "url": `${Astro.url.origin}/projects/${project.slug}`,
+      "genre": project.data.category
+    }
+  }))
+};
+
+const breadcrumbs = [
+  { name: 'Home', url: Astro.url.origin },
+  { name: 'Projects', url: Astro.url.href }
+];
+---
+
+<Layout 
+  title="Project Portfolio - Real Results & Case Studies"
+  description="Explore our successful projects including SaaS products, mobile apps, e-commerce platforms, and automation systems with verified metrics and outcomes."
+  structuredData={structuredData}
+  breadcrumbs={breadcrumbs}
+  openGraph={{
+    title: "Project Portfolio - Case Studies & Results",
+    description: "See how we've helped businesses achieve 300% revenue growth, automate 280+ hours monthly, and dominate their markets.",
+    image: "/images/og-default.jpg"
+  }}
+  priority={8}
+>
+  <div class="services-page">
+    <!-- Hero Section -->
+    <section class="services-hero section-padding">
+      <div class="container">
+        <div class="hero-content text-center">
+          <nav class="breadcrumb">
+            <a href="/">Home</a> / <span>Projects</span>
+          </nav>
+          
+          <h1 class="hero-title">Real Projects, <span class="text-gradient">Measurable Results</span></h1>
+          <p class="hero-subtitle">
+            Every project tells a story of transformation - from concept to measurable business impact with verified metrics.
+          </p>
+          
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-number">{projects.length}+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">300%</div>
+              <div class="stat-label">Avg. Revenue Growth</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">280h</div>
+              <div class="stat-label">Monthly Time Saved</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Our Project Portfolio</h2>
+          <p class="section-subtitle">Each project includes detailed case studies with verified metrics and real business outcomes</p>
+        </div>
+
+        <!-- Category Filters -->
+        {categories.length > 0 && (
+          <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            {categories.map(category => (
+              <button class="filter-btn" data-filter={category.toLowerCase().replace(/\s+/g, '-')}>
+                {category}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          {sortedProjects.map((project, index) => (
+            <ProjectCard project={project} />
+          ))}
+        </div>
+
+        <!-- Empty State -->
+        {projects.length === 0 && (
+          <div class="empty-state text-center">
+            <h3>No Projects Available</h3>
+            <p>Our project portfolio is currently being updated. Please check back soon.</p>
+            <a href="/contact" class="cta-button cta-primary">Contact Us</a>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="methodology-section section-padding bg-light">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Our Project Methodology</h2>
+          <p class="section-subtitle">A proven framework that ensures project success and maximum ROI</p>
+        </div>
+
+        <div class="methodology-steps">
+          <div class="methodology-step">
+            <div class="step-number">01</div>
+            <h3>Discovery & Planning</h3>
+            <p>Comprehensive analysis of business goals, technical requirements, and success metrics to create a detailed project roadmap.</p>
+          </div>
+          <div class="methodology-step">
+            <div class="step-number">02</div>
+            <h3>Design & Development</h3>
+            <p>Agile development process with iterative feedback loops, ensuring alignment with business objectives at every stage.</p>
+          </div>
+          <div class="methodology-step">
+            <div class="step-number">03</div>
+            <h3>Testing & Quality</h3>
+            <p>Rigorous testing protocols including user acceptance testing, performance optimization, and security audits.</p>
+          </div>
+          <div class="methodology-step">
+            <div class="step-number">04</div>
+            <h3>Launch & Scale</h3>
+            <p>Strategic deployment with performance monitoring, user training, and scalable infrastructure planning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Client Success Stories</h2>
+          <p class="section-subtitle">Don't just take our word for it - hear from the businesses we've transformed</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"The automation system saved us 280 hours monthly. Best investment we ever made."</p>
+              <div class="testimonial-author">
+                <strong>PrepMe Team</strong>
+                <span>Automation Platform</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"From $30k to $120k/month in 6 months. They engineered our entire customer journey for maximum conversion."</p>
+              <div class="testimonial-author">
+                <strong>Nianave Fashion</strong>
+                <span>E-commerce Scaling</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"200,000+ academics now use our platform with 95% performance scores. The architecture decisions were spot-on."</p>
+              <div class="testimonial-author">
+                <strong>Paperpile Team</strong>
+                <span>SaaS Development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <BottomCTA />
+  </div>
+</Layout>
+
+<script>
+// Filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectsGrid = document.getElementById('projectsGrid');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      const filter = this.getAttribute('data-filter');
+      const projectCards = projectsGrid.querySelectorAll('.project-card');
+      
+      projectCards.forEach(card => {
+        if (filter === 'all') {
+          card.style.display = 'block';
+        } else {
+          const category = card.getAttribute('data-category');
+          if (category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+});
+</script>

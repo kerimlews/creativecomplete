@@ -1,0 +1,680 @@
+// src/styles/pages/_kerim-alihodza.scss
+
+.kerim-alihodza-page {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: $white;
+  min-height: 100vh;
+  padding-top: 80px; // Account for fixed header
+
+  /* Header Styles - Reusing your design system */
+  .profile-header {
+    @include glass-effect(20px, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $z-sticky;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    .header-container {
+      @include flex-between;
+      padding: $space-md $space-lg;
+      max-width: 1200px;
+      margin: 0 auto;
+      
+      @include mobile {
+        padding: $space-sm $space-md;
+      }
+    }
+
+    .header-brand {
+      @include flex-center;
+      gap: $space-sm;
+      text-decoration: none;
+      
+      .brand-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: $radius-sm;
+        background: $primary-gradient;
+        @include flex-center;
+        font-weight: 700;
+        color: $white;
+        font-size: 1.2rem;
+      }
+      
+      .brand-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+        @include text-gradient($primary-gradient);
+        
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    .header-nav {
+      @include flex-center;
+      gap: $space-xl;
+      
+      @include tablet {
+        gap: $space-lg;
+      }
+      
+      @include mobile {
+        gap: $space-md;
+      }
+
+      .nav-link {
+        color: $text-lighter;
+        text-decoration: none;
+        font-weight: 500;
+        padding: $space-xs $space-sm;
+        border-radius: $radius-sm;
+        transition: all 0.3s ease;
+        position: relative;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background: $primary-gradient;
+          transition: all 0.3s ease;
+          transform: translateX(-50%);
+        }
+        
+        &:hover,
+        &.active {
+          color: $white;
+          
+          &::after {
+            width: 100%;
+          }
+        }
+        
+        &.cta-link {
+          background: $primary-gradient;
+          color: $white;
+          padding: $space-xs $space-lg;
+          border-radius: $radius-md;
+          
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-lg;
+          }
+          
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .mobile-menu-btn {
+      @include button-reset;
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: $space-xs;
+      
+      @include mobile {
+        display: flex;
+      }
+      
+      .menu-bar {
+        width: 20px;
+        height: 2px;
+        background: $white;
+        transition: all 0.3s ease;
+        border-radius: 1px;
+      }
+      
+      &.active {
+        .menu-bar:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .menu-bar:nth-child(2) {
+          opacity: 0;
+        }
+        
+        .menu-bar:nth-child(3) {
+          transform: rotate(-45deg) translate(7px, -6px);
+        }
+      }
+    }
+  }
+
+  /* Hero Section - Updated with two rows and no social icons */
+  .hero-section {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(255, 140, 66, 0.1) 100%);
+    padding: $space-4xl 0 $space-3xl;
+    position: relative;
+    overflow: hidden;
+    min-height: unset !important;
+    max-height: unset !important;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.05) 0%, transparent 50%); // Changed to primary color
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      margin: auto;
+      z-index: 2;
+      @include flex-column;
+      align-items: center;
+      gap: $space-2xl;
+      
+      @include mobile {
+        gap: $space-xl;
+      }
+
+      // First row: Profile image
+      .profile-image-container {
+        .profile-image {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 4px solid rgba(255, 107, 53, 0.3); // Primary color border
+          box-shadow: $shadow-2xl;
+          @include hover-lift;
+          
+          @include mobile {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+
+      // Second row: Text content
+      .hero-text {
+        @include flex-column;
+        align-items: center;
+        gap: $space-lg;
+        text-align: center;
+
+        .hero-title {
+          font-size: 3.5rem;
+          font-weight: 700;
+          line-height: 1.1;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          
+          @include tablet {
+            font-size: 3rem;
+          }
+          
+          @include mobile {
+            font-size: 2.5rem;
+          }
+        }
+
+        .hero-subtitle {
+          font-size: 1.5rem;
+          opacity: 0.95;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          
+          @include mobile {
+            font-size: 1.25rem;
+          }
+
+          .text-accent {
+            color: $primary-light;
+            font-weight: 600;
+          }
+        }
+
+        .hero-quote {
+          blockquote {
+            font-size: 1.25rem;
+            font-style: italic;
+            max-width: 600px;
+            opacity: 0.95;
+            border-left: 4px solid $primary-light;
+            padding-left: $space-md;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            line-height: 1.6;
+            
+            @include mobile {
+              font-size: 1.1rem;
+              padding-left: $space-sm;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Sections - Reusing your spacing system */
+  .section-padding {
+    padding: $space-3xl 0;
+    
+    @include mobile {
+      padding: $space-2xl 0;
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $space-md;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: $space-2xl;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: $space-sm;
+      color: $white;
+      
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  /* Bio Section */
+  .bio-section {
+    background: $background-dark;
+    
+    .bio-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .bio-text {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      margin-bottom: $space-lg;
+      color: $text-lighter;
+      
+      @include mobile {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  /* Approach Section - Using card pattern from services */
+  .approach-section {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(255, 140, 66, 0.02) 100%);
+    
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: $space-xl;
+      margin-bottom: $space-3xl;
+      
+      @include mobile {
+        grid-template-columns: 1fr;
+        gap: $space-lg;
+      }
+    }
+
+    .approach-card {
+      @extend .service-card; // Reusing service card styles
+      text-align: center;
+      @include hover-lift;
+
+      .card-icon {
+        font-size: 3rem;
+        margin-bottom: $space-md;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: $space-md;
+        color: $white;
+      }
+
+      p {
+        color: $text-lighter;
+        line-height: 1.6;
+      }
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: $space-lg;
+      text-align: center;
+      
+      @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+
+      .result-item {
+        padding: $space-lg;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: $radius-lg;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+
+        .result-number {
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin-bottom: $space-sm;
+          @include text-gradient($primary-gradient);
+          
+          @include mobile {
+            font-size: 2rem;
+          }
+        }
+
+        .result-label {
+          font-size: 0.9rem;
+          color: $text-lighter;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  /* Philosophy Section */
+  .philosophy-section {
+    background: $background-dark;
+    
+    .philosophy-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .philosophy-text {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      margin-bottom: $space-xl;
+      color: $text-lighter;
+      
+      @include mobile {
+        font-size: 1rem;
+      }
+    }
+
+    .philosophy-highlight {
+      background: $glass-gradient;
+      padding: $space-xl;
+      border-radius: $radius-lg;
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      backdrop-filter: blur(10px);
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: $space-md;
+        @include text-gradient($primary-gradient);
+        
+        @include mobile {
+          font-size: 1.25rem;
+        }
+      }
+
+      p {
+        color: $text-lighter;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  /* CTA Section - Reusing your CTA patterns */
+  .cta-section {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(255, 140, 66, 0.1) 100%);
+    
+    .cta-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: $space-lg;
+        color: $white;
+        
+        @include mobile {
+          font-size: 2rem;
+        }
+      }
+
+      .cta-text {
+        font-size: 1.125rem;
+        margin-bottom: $space-xl;
+        opacity: 0.9;
+        line-height: 1.6;
+        color: $text-lighter;
+      }
+
+      .cta-highlights {
+        margin-bottom: $space-2xl;
+      }
+
+      .cta-highlight {
+        background: rgba(255, 255, 255, 0.1);
+        padding: $space-lg;
+        border-radius: $radius-md;
+        margin-bottom: $space-md;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        line-height: 1.6;
+        color: $text-lighter;
+        
+        strong {
+          color: $white;
+        }
+      }
+    }
+
+    .social-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: $space-md;
+      max-width: 500px;
+      margin: 0 auto;
+      
+      @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .social-link {
+        @include flex-center;
+        gap: $space-xs;
+        padding: $space-md;
+        background: $primary-gradient;
+        color: $white;
+        text-decoration: none;
+        border-radius: $radius-md;
+        font-weight: 500;
+        @include transition-all;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+          background: $orange-gradient;
+        }
+
+        // Platform variants
+        &.whatsapp {
+          background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+          
+          &:hover {
+            background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+          }
+        }
+
+        &.linkedin {
+          background: linear-gradient(135deg, #0077B5 0%, #00A0DC 100%);
+          
+          &:hover {
+            background: linear-gradient(135deg, #00A0DC 0%, #0077B5 100%);
+          }
+        }
+
+        &.twitter {
+          background: linear-gradient(135deg, #1DA1F2 0%, #0d8bd9 100%);
+          
+          &:hover {
+            background: linear-gradient(135deg, #0d8bd9 0%, #1DA1F2 100%);
+          }
+        }
+
+        &.github {
+          background: linear-gradient(135deg, #333 0%, #6e5494 100%);
+          
+          &:hover {
+            background: linear-gradient(135deg, #6e5494 0%, #333 100%);
+          }
+        }
+      }
+    }
+  }
+
+  /* Footer */
+  .profile-footer {
+    background: $text-dark;
+    color: $white;
+    padding: $space-lg 0;
+    text-align: center;
+
+    .footer-note {
+      opacity: 0.8;
+      font-size: 0.9rem;
+      color: $text-lighter;
+    }
+  }
+
+  /* Text Gradient - Reusing your utility */
+  .text-gradient {
+    @include text-gradient($primary-gradient);
+  }
+
+  /* Floating Elements - Updated with primary colors */
+  .floating-elements {
+    position: fixed;
+    right: $space-lg;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+    z-index: $z-tooltip;
+    
+    @include mobile {
+      right: $space-md;
+      gap: $space-sm;
+    }
+
+    .social-card {
+      @include flex-center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 107, 53, 0.1); // Primary color background
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 107, 53, 0.2); // Primary color border
+      @include transition-all;
+      position: relative;
+      
+      @include mobile {
+        width: 45px;
+        height: 45px;
+      }
+
+      .social-icon {
+        width: 24px;
+        height: 24px;
+        color: $primary-light; // Primary color icons
+        @include transition-all;
+        
+        @include mobile {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-3px) scale(1.1);
+        background: $primary; // Solid primary on hover
+        border-color: $primary-light;
+        
+        .social-icon {
+          color: $white; // White icons on hover
+        }
+        
+        &::after {
+          content: attr(data-tooltip);
+          position: absolute;
+          right: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(255, 107, 53, 0.9); // Primary color tooltip
+          color: white;
+          padding: $space-xs $space-sm;
+          border-radius: $radius-sm;
+          font-size: 0.75rem;
+          white-space: nowrap;
+          margin-right: $space-sm;
+          pointer-events: none;
+          font-weight: 500;
+        }
+      }
+
+      // Platform-specific colors with primary theme
+      &.linkedin:hover {
+        background: #0077B5;
+        border-color: #0077B5;
+        box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
+      }
+
+      &.twitter:hover {
+        background: #1DA1F2;
+        border-color: #1DA1F2;
+        box-shadow: 0 5px 15px rgba(29, 161, 242, 0.4);
+      }
+
+      &.github:hover {
+        background: #333;
+        border-color: #333;
+        box-shadow: 0 5px 15px rgba(51, 51, 51, 0.4);
+      }
+
+      &.whatsapp:hover {
+        background: #25D366;
+        border-color: #25D366;
+        box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+      }
+
+      &.youtube:hover {
+        background: #FF0000;
+        border-color: #FF0000;
+        box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+      }
+    }
+  }
+}
+
+// Mobile breakpoint extension
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}

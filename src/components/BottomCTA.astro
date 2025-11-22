@@ -1,0 +1,100 @@
+---
+import CtaButton from "./CtaButton.astro";
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  urgencyText?: string;
+  valueProps?: string[];
+  primaryButton?: {
+    text: string;
+    href: string;
+  };
+  secondaryButton?: {
+    text: string;
+    href: string;
+  };
+  securityNote?: string;
+  showUrgency?: boolean;
+  showValueProps?: boolean;
+  showSecurityNote?: boolean;
+}
+
+const {
+  title = "Ready to Transform Your Business?",
+  subtitle = "Stop guessing and start growing with proven digital strategies",
+  urgencyText = "Limited Capacity - 3 Spots Available This Month",
+  valueProps = [
+    "Free Comprehensive Audit ($2,500 Value)",
+    "Custom Strategy Session", 
+    "No Obligation, Real Insights"
+  ],
+  primaryButton = {
+    text: "Get Free Service Consultation",
+    href: "/contact?source=services-page"
+  },
+  secondaryButton = {
+    text: "View Our Projects", 
+    href: "/projects"
+  },
+  securityNote = "Your information is secure. No spam, no pressure tactics.",
+  showUrgency = true,
+  showValueProps = true,
+  showSecurityNote = true
+} = Astro.props;
+---
+
+<section class="bottom-cta section-padding">
+  <div class="container">
+    <div class="cta-content text-center">
+      {showUrgency && (
+        <div class="urgency-badge">
+          <span class="pulse-dot"></span>
+          {urgencyText}
+        </div>
+      )}
+      
+      <h2>{title}</h2>
+      <p class="cta-subtitle">{subtitle}</p>
+      
+      {showValueProps && valueProps.length > 0 && (
+        <div class="value-proposition">
+          {valueProps.map((prop) => (
+            <div class="value-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              {prop}
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div class="cta-buttons">
+        <CtaButton
+          text={primaryButton.text} 
+          href={primaryButton.href} 
+          variant="primary" 
+          size="lg" 
+        />
+        {secondaryButton && (
+          <CtaButton 
+            text={secondaryButton.text} 
+            href={secondaryButton.href} 
+            variant="secondary" 
+            size="lg" 
+          />
+        )}
+      </div>
+      
+      {showSecurityNote && (
+        <div class="cta-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+          {securityNote}
+        </div>
+      )}
+    </div>
+  </div>
+</section>

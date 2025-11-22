@@ -1,0 +1,241 @@
+---
+// src/pages/kerim-alihodza.astro
+
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/Layout.astro';
+import { KERIM_SOCIAL_MEDIA, getActiveSocials } from '../utils/constants';
+import kerim from '../images/hero_org.png';
+
+// Get active social media profiles
+const activeSocials = getActiveSocials(KERIM_SOCIAL_MEDIA);
+
+// JSON-LD Schema (updated with social profiles)
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kerim Alihodza",
+  "jobTitle": "CEO & Business Mechanic",
+  "description": "10+ years transforming businesses from 'potential' to 'profit' through ruthless digital strategy and engineered growth systems.",
+  "url": "https://yourdomain.com/kerim-alihodza",
+  "image": "https://yourdomain.com/images/kerim-alihodza.jpg",
+  "sameAs": activeSocials.map(([key, social]) => social.url),
+  "knowsAbout": [
+    "Digital Business Transformation",
+    "Revenue Growth Strategy",
+    "Business Automation",
+    "SaaS Platform Development",
+    "E-commerce Scaling",
+    "Performance Optimization"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Business Mechanic",
+    "description": "Engineering revenue machines and growth systems for businesses",
+    "occupationLocation": {
+      "@type": "Country",
+      "name": "Bosnia and Herzegovina"
+    }
+  },
+  "workLocation": {
+    "@type": "Country",
+    "name": "Bosnia and Herzegovina"
+  },
+  "knowsLanguage": [
+    {
+      "@type": "Language",
+      "name": "English"
+    },
+    {
+      "@type": "Language",
+      "name": "Bosnian"
+    }
+  ]
+};
+---
+
+<BaseLayout title="Kerim Alihodza - CEO & Business Mechanic" description="10+ years transforming businesses from 'potential' to 'profit' through ruthless digital strategy and engineered growth systems.">
+  {/* JSON-LD Schema */}
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  
+  <div class="kerim-alihodza-page">
+    <!-- Hero Section -->
+    <section class="hero-section astro-immediate">
+      <div class="hero-content">
+        <!-- Profile Image on Top -->
+        <div class="profile-image-container">
+          <Image
+            src={kerim}
+            alt="Kerim Alihodza - CEO & Business Mechanic" 
+            class="profile-image hover-lift"
+            width={1000}
+            height={1000}
+            loading="eager"
+          />
+        </div>
+
+        <!-- Name and Title -->
+        <div class="hero-text">
+          <h1 class="hero-title astro-fadeInUp">
+            Kerim <span class="text-gradient">Alihodza</span>
+          </h1>
+          <h2 class="hero-subtitle astro-fadeInUp">
+            CEO & <span class="text-accent">Business Mechanic</span>
+          </h2>
+          <div class="hero-quote astro-fadeInUp">
+            <blockquote>
+              "I don't build pretty websites. I engineer revenue machines that make competitors sweat and clients wonder why they waited so long."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Social Elements -->
+    <div class="floating-elements">
+      {activeSocials.map(([key, social]) => (
+        <a 
+          href={social.url} 
+          class={`social-card ${key}`}
+          target="_blank" 
+          rel="noopener noreferrer"
+          data-tooltip={social.tooltip}
+        >
+          <span set:html={social.icon}></span>
+        </a>
+      ))}
+    </div>
+
+    <!-- Rest of your sections remain the same -->
+    <section class="bio-section section-padding">
+      <div class="container">
+        <div class="section-header astro-fadeInUp">
+          <h2>The 10-Year <span class="text-gradient">Reality Check</span></h2>
+        </div>
+        <div class="bio-content">
+          <p class="bio-text astro-fadeInUp">
+            I've spent the last decade in the trenches of digital business transformation. Not in theory. Not in conferences. In the fucking reality of taking businesses from struggling to dominant.
+          </p>
+          <p class="bio-text astro-fadeInUp">
+            Most agencies sell dreams. I deliver measurable outcomes. While others talk about "brand presence," I'm engineering systems that drive 300% revenue growth, automate 80% of manual work, and position businesses as market leaders.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add other sections here... -->
+  </div>
+
+  <style is:global>
+    /* Floating Social Elements */
+    .floating-elements {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+      
+      @include mobile {
+        right: 10px;
+        gap: 10px;
+      }
+    }
+
+    .social-card {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      
+      @include mobile {
+        width: 45px;
+        height: 45px;
+      }
+
+      .social-icon {
+        width: 24px;
+        height: 24px;
+        transition: all 0.3s ease;
+        
+        @include mobile {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-3px) scale(1.1);
+        
+        &::after {
+          content: attr(data-tooltip);
+          position: absolute;
+          right: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(0, 0, 0, 0.8);
+          color: white;
+          padding: 5px 10px;
+          border-radius: 4px;
+          font-size: 0.75rem;
+          white-space: nowrap;
+          margin-right: 10px;
+          pointer-events: none;
+        }
+      }
+
+      /* Platform-specific colors */
+      &.linkedin:hover {
+        background: #0077B5;
+        border-color: #0077B5;
+        box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
+      }
+
+      &.twitter:hover {
+        background: #1DA1F2;
+        border-color: #1DA1F2;
+        box-shadow: 0 5px 15px rgba(29, 161, 242, 0.4);
+      }
+
+      &.github:hover {
+        background: #333;
+        border-color: #333;
+        box-shadow: 0 5px 15px rgba(51, 51, 51, 0.4);
+      }
+
+      &.whatsapp:hover {
+        background: #25D366;
+        border-color: #25D366;
+        box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+      }
+
+      &.youtube:hover {
+        background: #FF0000;
+        border-color: #FF0000;
+        box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+      }
+
+      &.instagram:hover {
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        border-color: transparent;
+        box-shadow: 0 5px 15px rgba(220, 39, 67, 0.4);
+      }
+
+      &.facebook:hover {
+        background: #1877F2;
+        border-color: #1877F2;
+        box-shadow: 0 5px 15px rgba(24, 119, 242, 0.4);
+      }
+    }
+
+    /* Rest of your existing styles... */
+  </style>
+</BaseLayout>

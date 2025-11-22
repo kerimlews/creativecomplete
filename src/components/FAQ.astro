@@ -1,0 +1,39 @@
+<section class="service-faq">
+    <div class="container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            {Astro.props.faq.map((item, index) => (
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3 class="faq-question">{item.question}</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>{item.answer}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    
+        const faqItems = document.querySelectorAll('.faq-item');
+    
+        faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Close other items
+            faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('active');
+            }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+        });
+    })
+</script>

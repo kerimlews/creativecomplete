@@ -1,0 +1,165 @@
+// Utils
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/animations';
+@import './utils/responsive';
+
+// Components
+@import './components/header';
+@import './components/hero';
+@import './components/service-card';
+@import './components/cta-button';
+@import './components/footer';
+@import './components/bottom_cta';
+@import './components/project-card';
+@import './components/consent-modal';
+
+// Sections
+@import './sections/services';
+@import './sections/projects';
+@import './sections/testimonials';
+@import './sections/faq';
+@import './sections/testimonials';
+
+// Pages
+@import './pages/index';
+@import './pages/services';
+@import './pages/kerim-alihodza';
+@import './pages/about';
+@import './pages/contact';
+
+// Collections
+@import './collections/blogs';
+@import './collections/projects';
+@import './collections/services';
+@import './collections/authors';
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  
+  @include tablet {
+    font-size: 15px;
+  }
+  
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: $text-dark;
+  background: $background-light;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  
+  @include mobile {
+    padding: 0 1rem;
+  }
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  @include text-gradient($primary-gradient);
+}
+
+h1 {
+  font-size: 3.5rem;
+  
+  @include tablet {
+    font-size: 2.8rem;
+  }
+  
+  @include mobile {
+    font-size: 2.2rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  
+  @include tablet {
+    font-size: 2.2rem;
+  }
+  
+  @include mobile {
+    font-size: 1.8rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+  
+  @include tablet {
+    font-size: 1.5rem;
+  }
+  
+  @include mobile {
+    font-size: 1.25rem;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+  color: $text-light;
+}
+
+// Utility classes
+.text-gradient {
+  @include text-gradient;
+}
+
+.glass-effect {
+  @include glass-effect;
+}
+
+.section-padding {
+  padding: $space-3xl 0;
+  
+  @include tablet {
+    padding: $space-2xl 0;
+  }
+  
+  @include mobile {
+    padding: $space-xl 0;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Scrollbar Styling
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $background-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary-gradient;
+  border-radius: $radius-sm;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $orange-gradient;
+}

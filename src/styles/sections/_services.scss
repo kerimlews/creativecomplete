@@ -1,0 +1,233 @@
+.services-section {
+  background: linear-gradient(180deg, #0f0f1f 0%, #1a1a2e 50%, #0f0f1f 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 10% 20%, rgba(255, 107, 53, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 90% 80%, rgba(255, 140, 66, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .section-header {
+    margin-bottom: $space-3xl;
+    
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: #FFFFFF; // Pure white for emphasis
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 400;
+      
+      @include mobile {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0; // Remove gap since borders will separate
+    
+    @include mobile {
+      gap: 0;
+    }
+  }
+
+  .service-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-2xl;
+    align-items: center;
+    padding: $space-3xl 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    
+    @include desktop {
+      gap: $space-xl;
+    }
+    
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: $space-lg;
+      padding: $space-2xl 0;
+    }
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $space-lg;
+      padding: $space-xl 0;
+    }
+
+    // Remove borders from first and last items
+    &:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    // Alternate image positions - always image on left
+    &:nth-child(odd) {
+      .service-visual {
+        order: -1;
+      }
+    }
+
+    &:nth-child(even) {
+      .service-visual {
+        order: -1;
+        
+        @include tablet {
+          order: 0; // On tablet/mobile, image goes to top
+        }
+      }
+    }
+  }
+
+  .service-visual {
+    position: relative;
+    
+    @include tablet {
+      order: -1; // Image on top for tablet/mobile
+    }
+    
+    @include mobile {
+      margin-bottom: $space-lg;
+    }
+
+    .service-image {
+      width: 100%;
+      height: 500px;
+      border-radius: $radius-2xl;
+      overflow: hidden;
+      position: relative;
+      box-shadow: $shadow-2xl;
+      
+      @include desktop {
+        height: 450px;
+      }
+      
+      @include tablet {
+        height: 400px;
+      }
+      
+      @include mobile {
+        height: 300px;
+        border-radius: $radius-xl;
+      }
+
+      @media (max-width: 375px) {
+        height: 250px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 140, 66, 0.1) 100%);
+        z-index: 1;
+        transition: opacity 0.8s ease;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.08);
+        }
+        
+        &::before {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+// Enhanced staggered animation for service rows
+.astro-stagger-rows > * {
+  opacity: 0;
+  transform: translateY(40px);
+  
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      animation: astroFadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) #{$i * 0.15}s forwards;
+    }
+  }
+}
+
+// Add subtle hover effect to entire service row
+.service-row {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: rgba(255, 107, 53, 0.3);
+    
+    .service-title {
+      background: $orange-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+}
+
+// Mobile-specific adjustments
+@include mobile {
+  .services-section {
+    .service-row {
+      text-align: center;
+      
+      .service-content {
+        .service-features {
+          .feature-item {
+            text-align: left;
+            justify-content: flex-start;
+          }
+        }
+        
+        .service-cta {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+// Add decorative elements
+.service-row::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: $primary-gradient;
+  transition: width 0.6s ease;
+}
+
+.service-row:hover::after {
+  width: 100%;
+}

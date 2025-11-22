@@ -1,0 +1,64 @@
+---
+// src/components/ProjectCard.astro
+import { Image } from "astro:assets";
+
+export interface Props {
+  project: {
+    title: string;
+    description: string;
+    image: string;
+    slug: string;
+    category: string;
+    url?: string;
+    featured?: boolean;
+    stats?: {
+      value: string;
+      label: string;
+    }[];
+  };
+}
+
+const { project } = Astro.props;
+
+---
+
+<div class="project-card" data-category={project.category?.toLowerCase().replace(/\s+/g, '-')}>
+  <div class="project-image">
+    <Image src={project.image} alt={project.title} width={800} height={800} />
+    {project.featured && <div class="featured-badge">Featured</div>}
+    <div class="category-badge">{project.category}</div>
+  </div>
+  
+  <div class="project-content">
+    <h3 class="project-title">{project.title}</h3>
+    <p class="project-description">{project.description}</p>
+    
+    {project.stats && project.stats.length > 0 && (
+      <div class="project-stats">
+        {project.stats.map((stat, index) => (
+          <div class="stat" key={index}>
+            <span class="stat-value">{stat.value}</span>
+            <span class="stat-label">{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    )}
+    
+    <div class="project-actions">
+      <a href={`/projects/${project.slug}`} class="project-link primary">
+        View Case Study
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      {project.url && (
+        <a href={project.url} target="_blank" rel="noopener noreferrer" class="project-link secondary">
+          Live Site
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      )}
+    </div>
+  </div>
+</div>

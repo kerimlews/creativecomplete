@@ -1,0 +1,417 @@
+// About Page Styles
+.about-page {
+  background: $background-dark;
+
+  .service-card {
+  padding: $space-2xl;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-md;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-xl;
+  }
+  
+  @include mobile {
+    padding: $space-xl;
+  }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $space-lg;
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $space-md;
+  }
+}
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, $background-dark 0%, #2D3748 100%);
+  color: white;
+  text-align: center;
+  padding: $space-4xl 0;
+  position: relative;
+  overflow: hidden;
+
+  @include tablet {
+    padding: $space-3xl 0;
+  }
+  
+  @include mobile {
+    padding: $space-4xl 0 !important;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(102, 126, 234, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+}
+
+.about-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.company-logo {
+  margin-bottom: $space-2xl;
+  
+  img {
+    border-radius: $radius-lg;
+  }
+}
+
+.company-name {
+  font-size: 3rem;
+  @include text-gradient($primary-gradient);
+  margin-top: $space-sm;
+  font-weight: 700;
+  
+  @include tablet {
+    font-size: 2.5rem;
+  }
+  
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+.about-intro {
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: $space-lg;
+    color: white;
+    line-height: 1.2;
+    
+    @include tablet {
+      font-size: 2rem;
+    }
+    
+    @include mobile {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: $text-lighter;
+  
+  @include mobile {
+    font-size: 1.1rem;
+  }
+}
+
+/* Founder Section */
+.founder-section {
+  background: $background-dark;
+  padding: $space-4xl 0;
+
+  @include tablet {
+    padding: $space-3xl 0;
+  }
+  
+  @include mobile {
+    padding: $space-2xl 0;
+  }
+}
+
+.founder-header {
+  text-align: center;
+  margin-bottom: $space-3xl;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: $text-light;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  
+  @include mobile {
+    font-size: 1.1rem;
+  }
+}
+
+.founder-profile {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: $space-3xl;
+  align-items: start;
+  
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+}
+
+.founder-info {
+  h3 {
+    font-size: 2rem;
+    margin-bottom: $space-xs;
+    color: $text-dark;
+    line-height: 1.2;
+    
+    @include mobile {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.founder-title {
+  font-size: 1.1rem;
+  color: $primary;
+  font-weight: 600;
+  margin-bottom: $space-lg;
+}
+
+.founder-bio {
+  p {
+    margin-bottom: $space-md;
+    color: $text-light;
+    line-height: 1.7;
+  }
+}
+
+.founder-cta {
+  margin-top: $space-xl;
+}
+
+.founder-stats {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+  
+  @include mobile {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  @include text-gradient($primary-gradient);
+  margin-bottom: $space-xs;
+  line-height: 1;
+  
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+.stat-label {
+  color: $text-light;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Services Section */
+.services-section {
+  background: $background-dark;
+  padding: $space-4xl 0;
+
+  @include tablet {
+    padding: $space-3xl 0;
+  }
+  
+  @include mobile {
+    padding: $space-2xl 0;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: $space-3xl;
+  
+  h2 {
+    margin-bottom: $space-md;
+  }
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: $space-lg;
+  display: block;
+}
+
+.service-card {
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: $space-md;
+    color: $text-dark;
+    line-height: 1.3;
+  }
+  
+  p {
+    color: $text-light;
+    margin-bottom: $space-lg;
+    line-height: 1.6;
+  }
+}
+
+
+.service-features {
+    background: transparent !important;
+  li {
+    padding: $space-xs 0;
+    color: $text-light;
+    position: relative;
+    padding-left: $space-lg;
+    line-height: 1.5;
+    
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+}
+
+/* Process Section */
+.process-section {
+  background: $background-dark;
+  padding: $space-4xl 0;
+
+  @include tablet {
+    padding: $space-3xl 0;
+  }
+  
+  @include mobile {
+    padding: $space-2xl 0;
+  }
+}
+
+
+.step-number {
+  font-size: 3rem;
+  font-weight: 700;
+  @include text-gradient($primary-gradient);
+  flex-shrink: 0;
+  line-height: 1;
+  
+  @include mobile {
+    font-size: 2.5rem;
+    align-self: flex-start;
+  }
+}
+
+.step-content {
+  flex: 1;
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: $space-md;
+    color: $text-dark;
+    line-height: 1.3;
+    
+    @include mobile {
+      font-size: 1.3rem;
+    }
+  }
+  
+  p {
+    color: $text-light;
+    margin-bottom: $space-lg;
+    line-height: 1.7;
+  }
+  
+  ul {
+    color: $text-light;
+    padding-left: $space-lg;
+    list-style: none;
+  }
+  
+  li {
+    margin-bottom: $space-xs;
+    line-height: 1.6;
+    position: relative;
+    padding-left: $space-md;
+    
+    &::before {
+      content: '•';
+      color: $primary;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  }
+}
+
+/* CTA Section */
+.about-cta {
+  background: linear-gradient(135deg, $background-dark 0%, #2D3748 100%);
+  color: $white;
+  text-align: center;
+  padding: $space-4xl 0;
+
+  @include tablet {
+    padding: $space-3xl 0;
+  }
+  
+  @include mobile {
+    padding: $space-2xl 0;
+  }
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: $space-md;
+    color: $white;
+    line-height: 1.2;
+    
+    @include tablet {
+      font-size: 2rem;
+    }
+    
+    @include mobile {
+      font-size: 1.75rem;
+    }
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: $space-xl;
+    color: $text-lighter;
+    line-height: 1.6;
+    
+    @include mobile {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.cta-actions {
+  @include flex-center;
+  gap: $space-md;
+  flex-wrap: wrap;
+  
+  @include mobile {
+    @include flex-column;
+  }
+}

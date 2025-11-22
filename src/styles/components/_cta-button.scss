@@ -1,0 +1,101 @@
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: $radius-lg;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: inherit;
+  
+  // Sizes
+  &.cta-sm {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  &.cta-md {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+  
+  &.cta-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+  }
+  
+  // Variants
+  &.cta-primary {
+    background: $orange-gradient;
+    color: white;
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    &:hover::before {
+      left: 100%;
+    }
+    
+    &:hover {
+      box-shadow: 0 8px 25px rgba(245, 87, 108, 0.5);
+      transform: translateY(-2px);
+    }
+  }
+  
+  &.cta-secondary {
+    background: $primary-gradient;
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    
+    &:hover {
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+      transform: translateY(-2px);
+    }
+  }
+  
+  &.cta-outline {
+    background: transparent;
+    color: $primary;
+    border: 2px solid $primary;
+    
+    &:hover {
+      background: $primary;
+      color: white;
+      transform: translateY(-2px);
+    }
+  }
+  
+  .arrow-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: $space-xs;
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover .arrow-icon {
+    transform: translateX(3px);
+  }
+  
+  // Magnetic effect
+  &.magnetic {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px) scale(1.05);
+    }
+  }
+}

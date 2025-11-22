@@ -1,0 +1,227 @@
+// Astro Animation Keyframes
+@keyframes astroFadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes astroFadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes astroFadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes astroFadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(40px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes astroZoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes astroSlideInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes astroBounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+// Astro Animation Base Styles
+[data-astro-animate] {
+  opacity: 1;
+  
+  // Disable animations on mobile for better performance
+  @media (max-width: 767px) {
+    opacity: 1;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+// Astro Animation Classes
+.astro-animated {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+// Specific animation types
+.astro-fadeInUp {
+  animation-name: astroFadeInUp;
+}
+
+.astro-fadeInDown {
+  animation-name: astroFadeInDown;
+}
+
+.astro-fadeInLeft {
+  animation-name: astroFadeInLeft;
+}
+
+.astro-fadeInRight {
+  animation-name: astroFadeInRight;
+}
+
+.astro-zoomIn {
+  animation-name: astroZoomIn;
+}
+
+.astro-slideInUp {
+  animation-name: astroSlideInUp;
+}
+
+.astro-bounceIn {
+  animation-name: astroBounceIn;
+  animation-duration: 0.75s;
+}
+
+// Stagger container
+.astro-stagger > * {
+  opacity: 0;
+}
+
+// Immediate animations (no scroll trigger)
+.astro-immediate {
+  opacity: 0;
+  animation: astroFadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+// Keep your existing hover effects (they work great!)
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.4);
+  }
+}
+
+.magnetic {
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.float {
+  animation: astroFloat 3s ease-in-out infinite;
+}
+
+@keyframes astroFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background-size: 400% 400%;
+  animation: astroGradientShift 8s ease infinite;
+}
+
+@keyframes astroGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// Pulse animation
+@keyframes astroPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.astro-pulse {
+  animation: astroPulse 2s ease-in-out infinite;
+}

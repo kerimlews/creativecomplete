@@ -1,0 +1,184 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { generateServiceJsonLd } from '../../utils/jsonld';
+import FAQ from '../../components/FAQ.astro';
+import { formatAuthorName } from '../../utils/helpers';
+import BottomCTA from '../../components/BottomCTA.astro';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const services = await getCollection('services');
+  
+  return services.map((service) => {
+      
+    // src/content/projects/en/paperpile-saas-scaling-case-study.md
+    const lang = service?.filePath?.split('/')[3]; // 'en', 'de', etc.
+    const slug = service.id; // actual slug
+        
+    return {
+      params: { 
+        slug: (lang === 'en' ? [slug] : [lang, slug]).join('/') 
+      },
+      props: { service },
+    };
+  });
+}
+
+const { service } = Astro.props;
+
+const structuredData = generateServiceJsonLd(service);
+const breadcrumbs = [
+  { name: 'Home', url: Astro.url.origin },
+  { name: 'Services', url: `${Astro.url.origin}/services` },
+  { name: service.data.title, url: Astro.url.href }
+];
+
+const images = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
+
+const image = images[`/src/images/services/${service.id}.png`]();
+
+// Get related articles (you can customize this logic based on your content)
+const allServices = await getCollection('services');
+const relatedArticles = allServices
+  .slice(0, 7) // Get top 3 related articles
+  .map(service => ({
+    slug: service.id,
+    title: service.data.title,
+    description: service.data.description,
+    category: service.data.category || 'General',
+    readTime: service.data.readTime || '5 min read'
+  }));
+
+---
+
+<Layout 
+  title={service.data.title}
+  description={service.data.description}
+  structuredData={structuredData}
+  breadcrumbs={breadcrumbs}
+  openGraph={{
+    title: service.data.title,
+    description: service.data.description,
+    image: service.data.image
+  }}
+  service={service}
+  priority={service.data.priority}
+>
+  <article class="service-detail">
+    <header class="service-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/">Home</a> / <a href="/services">Services</a> / <span>{service.data.title}</span>
+        </nav>
+        
+        <div class="service-hero">
+          <div class="service-info">
+            <h1>{service.data.title}</h1>
+            <p class="service-subtitle">{service.data.subtitle}</p>
+            <p class="service-description">{service.data.description}</p>
+            
+            <div class="service-meta">
+              <div class="meta-item">
+                <span class="meta-label">Delivery Time</span>
+                <span class="meta-value">{service.data.delay} days</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Priority</span>
+                <span class="meta-value">{service.data.priority}/10</span>
+              </div>
+              {service.data.featured && (
+                <div class="featured-badge">Featured Service</div>
+              )}
+              <div class="meta-item">
+                <span class="meta-label">Category</span>
+                <span class="meta-value">{service.data.category}</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Author</span>
+                <a class="meta-value" href={`/${service.data.author}`}>{formatAuthorName(service.data.author)}</a>
+              </div>
+            </div>
+            
+            <div class="service-actions">
+              <a href="/contact" class="cta-button cta-primary cta-lg">
+                {service.data.ctaText}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="service-visual">
+            <Image src={image} alt={service.data.title} width={500} height={500} />
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="service-features">
+        <div class="container">
+        <h2>What's Included</h2>
+        <div class="features-grid">
+          {service.data.features.map((feature, index) => (
+            <div class="feature-card" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="feature-icon">{index + 1}</div>
+              <h3>{feature}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <div class="service-content">
+      <div class="container">
+        <div class="content-container">
+          <!-- Main Content -->
+          <div class="main-content">
+            <div set:html={service.rendered?.html} />
+          </div>
+
+          <!-- Related Articles Sidebar -->
+          <aside class="related-articles-sidebar">
+            <div class="sidebar-header">
+              <h3>Related Articles</h3>
+              <p>More insights you might find helpful</p>
+            </div>
+            
+            <div class="related-articles-list">
+              {relatedArticles.map(article => (
+                <a href={`/services/${article.slug}`} class="related-article-card">
+                  <span class="article-category">{article.category}</span>
+                  <h4 class="article-title">{article.title}</h4>
+                  <p class="article-excerpt">{article.description}</p>
+                  <div class="article-meta">
+                    <span class="read-time">📖 {article.readTime}</span>
+                    <span class="article-link">Read more</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            <div class="sidebar-cta">
+              <h4>Need Help With Your Project?</h4>
+              <p>Let's discuss how we can bring your ideas to life</p>
+              <a href="/contact" class="cta-button cta-primary">
+                Get Free Consultation
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    {service.data.faq && service.data.faq.length > 0 && (
+      <FAQ faq={service.data.faq} />
+    )}
+    <BottomCTA />
+  </article>
+</Layout>

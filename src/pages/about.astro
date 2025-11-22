@@ -1,0 +1,295 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import { generateAboutPageJsonLd } from '../utils/jsonld';
+import logo from '../images/logo-svg.svg';
+
+// Page metadata
+const pageTitle = 'About Us - Creative Complete | Custom Software & Automation Solutions';
+const pageDescription = 'Learn about Creative Complete - we build custom software, automate business processes, and drive growth. Founded by Kerim Alihodza.';
+
+// Breadcrumbs
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about' }
+];
+
+// JSON-LD structured data
+const aboutStructuredData = generateAboutPageJsonLd({
+  name: 'Creative Complete',
+  description: pageDescription,
+  url: 'https://creativecomplete.com/about',
+  founder: {
+    name: 'Kerim Alihodza',
+    url: 'https://creativecomplete.com/kerim-alihodza'
+  },
+  foundingDate: '2023',
+  services: [
+    'Custom Software Development',
+    'Business Process Automation',
+    'SaaS Development',
+    'E-commerce Solutions',
+    'Mobile App Development',
+    'SEO & Digital Marketing'
+  ]
+});
+
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  structuredData={aboutStructuredData}
+  breadcrumbs={breadcrumbs}
+  openGraph={{
+    title: pageTitle,
+    description: pageDescription,
+    type: 'website'
+  }}
+  twitterCard={{
+    title: pageTitle,
+    description: pageDescription
+  }}
+  priority={0.8}
+>
+  <div class="about-page">
+    <!-- Hero Section -->
+    <section class="about-hero section-padding">
+      <div class="container">
+        <div class="about-hero-content">
+          <!-- Company Logo -->
+          <div class="company-logo">
+            <Image
+              src={logo}
+              alt="Creative Complete Logo" 
+              width={120} 
+              height={120}
+            />
+            <h1 class="company-name">Creative Complete</h1>
+          </div>
+          
+          <div class="about-intro">
+            <h2>We Build Software That Solves Real Business Problems</h2>
+            <p class="lead">
+              From custom SaaS platforms to business automation systems, we transform complex challenges into elegant digital solutions that drive growth and efficiency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section section-padding">
+      <div class="container">
+        <div class="founder-content">
+          <div class="founder-header">
+            <h2>Meet Our Founder</h2>
+            <p class="section-subtitle">The vision behind Creative Complete</p>
+          </div>
+          
+          <div class="founder-profile">
+            <div class="founder-info">
+              <h3>Kerim Alihodza</h3>
+              <p class="founder-title">Founder & Lead Developer</p>
+              <div class="founder-bio">
+                <p>
+                  With over a decade of experience in software development and digital transformation, 
+                  Kerim founded Creative Complete to bridge the gap between complex business problems 
+                  and practical technology solutions.
+                </p>
+                <p>
+                  His expertise spans full-stack development, system architecture, and growth strategy, 
+                  with a proven track record of delivering results for businesses across multiple industries.
+                </p>
+              </div>
+              <div class="founder-cta">
+                <a href="/kerim-alihodza" class="cta-button cta-primary cta-md">
+                  Learn More About Kerim
+                </a>
+              </div>
+            </div>
+            
+            <div class="founder-stats">
+              <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Projects Delivered</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">$2M+</div>
+                <div class="stat-label">Revenue Generated</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="services-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>What We Do</h2>
+          <p class="section-subtitle">
+            We specialize in building custom solutions that automate processes, 
+            streamline operations, and drive measurable business growth.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🚀</div>
+            <h3>Custom Software Development</h3>
+            <p>
+              Bespoke applications tailored to your unique business needs, 
+              built with scalable architecture and modern technologies.
+            </p>
+            <ul class="service-features">
+              <li>SaaS Platforms</li>
+              <li>Web Applications</li>
+              <li>API Development</li>
+              <li>System Integration</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Business Process Automation</h3>
+            <p>
+              Eliminate manual work and reduce errors by automating repetitive 
+              tasks and streamlining your workflows.
+            </p>
+            <ul class="service-features">
+              <li>Workflow Automation</li>
+              <li>AI Integration</li>
+              <li>CRM Systems</li>
+              <li>Data Processing</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📈</div>
+            <h3>Growth & Optimization</h3>
+            <p>
+              Drive revenue growth through strategic SEO, conversion optimization, 
+              and data-driven marketing strategies.
+            </p>
+            <ul class="service-features">
+              <li>SEO Strategy</li>
+              <li>Conversion Rate Optimization</li>
+              <li>E-commerce Scaling</li>
+              <li>Performance Analytics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="process-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Process</h2>
+          <p class="section-subtitle">
+            A structured approach that ensures we deliver solutions that 
+            not only work but drive real business value.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Discovery & Analysis</h3>
+              <p>
+                We dive deep into your business challenges, goals, and technical 
+                requirements to understand exactly what success looks like for you.
+              </p>
+              <ul>
+                <li>Business requirements analysis</li>
+                <li>Technical feasibility assessment</li>
+                <li>Competitive landscape review</li>
+                <li>Success metrics definition</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Strategy & Planning</h3>
+              <p>
+                We create a detailed project roadmap with clear milestones, 
+                timelines, and technical specifications.
+              </p>
+              <ul>
+                <li>Project architecture design</li>
+                <li>Technology stack selection</li>
+                <li>Development timeline</li>
+                <li>Resource allocation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Development & Implementation</h3>
+              <p>
+                Our team builds your solution using agile methodologies, 
+                with regular updates and opportunities for feedback.
+              </p>
+              <ul>
+                <li>Agile development sprints</li>
+                <li>Regular progress demos</li>
+                <li>Quality assurance testing</li>
+                <li>Staging environment setup</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h3>Launch & Optimization</h3>
+              <p>
+                We deploy your solution and provide ongoing support to ensure 
+                optimal performance and continuous improvement.
+              </p>
+              <ul>
+                <li>Production deployment</li>
+                <li>Performance monitoring</li>
+                <li>User training & documentation</li>
+                <li>Ongoing support & maintenance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta section-padding">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Transform Your Business?</h2>
+          <p>
+            Let's discuss how we can help you automate processes, 
+            build custom software, or drive growth for your business.
+          </p>
+          <div class="cta-actions">
+            <a href="/contact" class="cta-button cta-primary cta-lg">
+              Start Your Project
+            </a>
+            <a href="/projects" class="cta-button cta-secondary cta-lg">
+              View Our Work
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

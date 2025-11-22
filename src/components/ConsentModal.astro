@@ -1,0 +1,258 @@
+
+<div id="consent-manager" class="consent-manager">
+  <!-- Main Consent Modal -->
+  <div id="consent-modal" class="consent-modal hidden">
+    <div class="consent-content">
+      <div class="consent-header">
+        <h3>Your Privacy Matters</h3>
+        <p>We use cookies and similar technologies to analyze traffic, personalize content, and improve your experience. Choose your preferences below.</p>
+      </div>
+      
+      <div class="consent-features">
+        <div class="feature-item">Analyze website traffic and usage</div>
+        <div class="feature-item">Personalize your experience</div>
+        <div class="feature-item">Improve our services</div>
+      </div>
+      
+      <div class="consent-actions">
+        <button class="consent-btn accept-all" id="accept-all-btn">
+          Accept All
+        </button>
+        <button class="consent-btn customize" id="customize-btn">
+          Customize
+        </button>
+      </div>
+      
+      <div class="consent-links">
+        <a href="/privacy-policy" target="_blank">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customization Modal -->
+  <div id="customization-modal" class="consent-customization hidden">
+    <div class="customization-header">
+      <h3>Cookie Preferences</h3>
+      <p>Manage your consent preferences for different types of cookies we use.</p>
+    </div>
+    
+    <div class="consent-options">
+      <div class="consent-option">
+        <div class="option-info">
+          <h4>Essential Cookies</h4>
+          <p>Required for the website to function properly. Cannot be disabled.</p>
+        </div>
+        <div class="option-toggle">
+          <label class="toggle-switch">
+            <input type="checkbox" checked disabled />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="consent-option">
+        <div class="option-info">
+          <h4>Analytics Cookies</h4>
+          <p>Help us understand how visitors interact with our website through Google Analytics.</p>
+        </div>
+        <div class="option-toggle">
+          <label class="toggle-switch">
+            <input type="checkbox" id="analytics-toggle" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="consent-option">
+        <div class="option-info">
+          <h4>Marketing Cookies</h4>
+          <p>Used to track visitors across websites for advertising purposes.</p>
+        </div>
+        <div class="option-toggle">
+          <label class="toggle-switch">
+            <input type="checkbox" id="marketing-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="customization-actions">
+      <button class="save-btn" id="save-preferences-btn">
+        Save Preferences
+      </button>
+      <button class="cancel-btn" id="cancel-customization-btn">
+        Cancel
+      </button>
+    </div>
+  </div>
+
+  <!-- Backdrop -->
+  <div id="consent-backdrop" class="consent-backdrop hidden"></div>
+</div>
+
+<script is:inline>
+class ConsentManager {
+  constructor() {
+    this.storageKey = 'creative-complete-consent';
+    this.consentModal = document.getElementById('consent-modal');
+    this.customizationModal = document.getElementById('customization-modal');
+    this.backdrop = document.getElementById('consent-backdrop');
+    this.manager = document.getElementById('consent-manager');
+    
+    this.init();
+  }
+
+  init() {
+    // Check if consent already given
+    const savedConsent = this.getSavedConsent();
+    
+    console.log({ savedConsent });
+    
+    if (!savedConsent) {
+      // Show consent modal after a short delay
+      setTimeout(() => this.showConsentModal(), 1000);
+    } else {
+      this.applyConsent(savedConsent);
+      this.manager.classList.add('consent-given');
+    }
+
+    this.bindEvents();
+  }
+
+  bindEvents() {
+    // Main modal buttons
+    document.getElementById('accept-all-btn')?.addEventListener('click', () => {
+      this.acceptAll();
+    });
+
+    document.getElementById('customize-btn')?.addEventListener('click', () => {
+      this.showCustomizationModal();
+    });
+
+    // Customization modal buttons
+    document.getElementById('save-preferences-btn')?.addEventListener('click', () => {
+      this.savePreferences();
+    });
+
+    document.getElementById('cancel-customization-btn')?.addEventListener('click', () => {
+      this.hideCustomizationModal();
+    });
+
+    // Backdrop click
+    this.backdrop?.addEventListener('click', () => {
+      this.hideConsentModal();
+      this.hideCustomizationModal();
+    });
+  }
+
+  showConsentModal() {
+    this.consentModal.classList.remove('hidden');
+    this.consentModal.classList.add('visible');
+    this.backdrop.classList.remove('hidden');
+    this.backdrop.classList.add('visible');
+  }
+
+  hideConsentModal() {
+    this.consentModal.classList.remove('visible');
+    this.consentModal.classList.add('hidden');
+    this.backdrop.classList.remove('visible');
+    this.backdrop.classList.add('hidden');
+  }
+
+  showCustomizationModal() {
+    this.hideConsentModal();
+    this.customizationModal.classList.remove('hidden');
+    this.customizationModal.classList.add('visible');
+  }
+
+  hideCustomizationModal() {
+    this.customizationModal.classList.remove('visible');
+    this.customizationModal.classList.add('hidden');
+    this.backdrop.classList.remove('visible');
+    this.backdrop.classList.add('hidden');
+  }
+
+  acceptAll() {
+    const consent = {
+      essential: true,
+      analytics: true,
+      marketing: true,
+      timestamp: new Date().toISOString()
+    };
+    
+    this.saveConsent(consent);
+    this.applyConsent(consent);
+    this.hideConsentModal();
+  }
+
+  savePreferences() {
+    const analyticsToggle = document.getElementById('analytics-toggle');
+    const marketingToggle = document.getElementById('marketing-toggle');
+    
+    const consent = {
+      essential: true, // Always required
+      analytics: analyticsToggle?.checked || false,
+      marketing: marketingToggle?.checked || false,
+      timestamp: new Date().toISOString()
+    };
+    
+    this.saveConsent(consent);
+    this.applyConsent(consent);
+    this.hideCustomizationModal();
+  }
+
+  saveConsent(consent) {
+    try {
+      localStorage.setItem(this.storageKey, JSON.stringify(consent));
+    } catch (e) {
+      console.warn('Could not save consent preferences:', e);
+    }
+  }
+
+  getSavedConsent() {
+    try {
+      const saved = localStorage.getItem(this.storageKey);
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  applyConsent(consent) {
+    if (consent.analytics) {
+      // Enable Google Analytics
+      if (typeof updateConsents === 'function') {
+        updateConsents();
+      }
+      
+      // Enable analytics storage
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted'
+        });
+      }
+    } else {
+      // Keep analytics disabled
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', {
+          analytics_storage: 'denied'
+        });
+      }
+    }
+
+    // Mark as consent given
+    this.manager.classList.add('consent-given');
+    
+    // Dispatch event for other components
+    window.dispatchEvent(new CustomEvent('consentUpdated', { detail: consent }));
+  }
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => new ConsentManager());
+} else {
+  new ConsentManager();
+}
+</script>

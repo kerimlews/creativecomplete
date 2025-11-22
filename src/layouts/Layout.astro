@@ -1,0 +1,317 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+import '../styles/global.scss';
+import { generateBreadcrumbJsonLd, generateServiceJsonLd } from '../utils/jsonld';
+import ConsentModal from '../components/ConsentModal.astro';
+
+// Enhanced props with defaults and validation
+const {
+  title = 'Creative Complete - Digital Agency & Web Solutions',
+  description = 'Professional digital services including SEO, web design, AI automation, and custom software development. Transform your online presence with Creative Complete.',
+  canonicalUrl = Astro.url.href,
+  noindex = false,
+  structuredData,
+  breadcrumbs,
+  service, // For service-specific pages
+  openGraph = {},
+  twitterCard = {},
+  priority = 0.5
+} = Astro.props;
+
+// Generate canonical URL
+const siteUrl = Astro.url.origin;
+const currentUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : Astro.url.href;
+const pageTitle = title.includes('Creative Complete') ? title : `${title} | Creative Complete`;
+
+// Generate structured data if service is provided
+let jsonLd = structuredData;
+if (service && !structuredData) {
+  jsonLd = generateServiceJsonLd(service);
+}
+
+let breadcrumbJsonLd;
+if (breadcrumbs && !structuredData) {
+  breadcrumbJsonLd = generateBreadcrumbJsonLd(breadcrumbs);
+} else if (service && !structuredData) {
+  breadcrumbJsonLd = generateBreadcrumbJsonLd(service);
+}
+
+// Default Open Graph and Twitter images
+const defaultImage = `${siteUrl}/og-default.svg`;
+const ogImage = openGraph.image || service?.data?.featuredImage || defaultImage;
+const twitterImage = twitterCard.image || service?.data?.featuredImage || defaultImage;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FF6B35" />
+    
+    <!-- SEO Meta -->
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+    <link rel="canonical" href={currentUrl} />
+    <meta name="priority" content={priority} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={openGraph.title || pageTitle} />
+    <meta property="og:description" content={openGraph.description || description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:type" content={openGraph.type || 'website'} />
+    <meta property="og:site_name" content="Creative Complete" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content={twitterCard.cardType || "summary_large_image"} />
+    <meta name="twitter:title" content={twitterCard.title || pageTitle} />
+    <meta name="twitter:description" content={twitterCard.description || description} />
+    <meta name="twitter:image" content={twitterImage} />
+    <meta name="twitter:site" content={twitterCard.site || "@creativecomplete"} />
+    <meta name="twitter:creator" content={twitterCard.creator || "@creativecomplete"} />
+    
+    <!-- Additional SEO -->
+    <meta name="author" content={service?.data?.author || "Creative Complete"} />
+    <meta name="keywords" content={service?.data?.tags?.join(', ') || "digital agency, web design, SEO, AI automation, web development, creative complete"} />
+    
+    <!-- Structured Data -->
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+    {breadcrumbJsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+    )}
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
+    
+    <!-- Icons & Manifest -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/logo-svg.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/global.scss" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" 
+      rel="stylesheet" 
+    />
+    
+    <!-- DNS Prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    
+    <!-- View Transitions API -->
+    <meta name="view-transition" content="same-origin" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      data-category="analytics"
+      is:inline
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+
+    <script data-category="analytics" is:inline type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      
+      gtag("consent", "default", {
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          analytics_storage: "denied",
+      });
+
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+  </head>
+  
+  <body>
+    <div id="page-wrapper">
+      <!-- Skip to main content for accessibility -->
+      <a href="#main-content" tabindex="-1" class="skip-link">Skip to main content</a>
+      
+      <Header />
+      
+      <main id="main-content" tabindex="-1">
+        <slot />
+      </main>
+      
+      <Footer />
+
+      <ConsentModal />
+    </div>
+
+    <!-- Progressive Enhancement Script -->
+    <script>
+      // View Transitions API support detection
+      if (typeof document.startViewTransition === 'function') {
+        console.log('View Transitions API supported');
+      }
+      
+      // Skip link focus
+      document.addEventListener('DOMContentLoaded', () => {
+        const skipLink = document.querySelector('.skip-link');
+        skipLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          const mainContent = document.getElementById('main-content');
+          mainContent.focus();
+          mainContent.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style lang="scss">
+:root {
+  --color-primary: #FF6B35;
+  --color-primary-dark: #e55a2b;
+  --color-primary-light: #ff8c5a;
+  --color-background: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-light: #666666;
+  --color-border: #e5e5e5;
+}
+
+:global(*) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:global(html) {
+  scroll-behavior: smooth;
+}
+
+#page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.2s ease;
+  font-weight: 600;
+
+  &:focus {
+    top: 6px;
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* Enhanced View Transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.4s;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  animation: fadeOutUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+::view-transition-new(root) {
+  animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  :global(html) {
+    scroll-behavior: auto;
+  }
+  
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .skip-link {
+    display: none;
+  }
+  
+  #page-wrapper {
+    min-height: auto;
+  }
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Primary color utilities */
+.primary-color {
+  color: var(--color-primary);
+}
+
+.primary-bg {
+  background-color: var(--color-primary);
+}
+
+.primary-border {
+  border-color: var(--color-primary);
+}
+</style>

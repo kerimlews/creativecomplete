@@ -1,0 +1,24 @@
+{
+  "name": "interstellar-inclination",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "create-placeholders": "node create-placeholders.js"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.10",
+    "@astrojs/partytown": "^2.1.4",
+    "@astrojs/sitemap": "^3.6.0",
+    "@playform/compress": "^0.2.0",
+    "astro": "^5.15.5",
+    "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.93.3"
+  }
+}

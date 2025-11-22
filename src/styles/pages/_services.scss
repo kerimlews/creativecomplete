@@ -1,0 +1,834 @@
+// Services Page Styles
+.services-page {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: $white;
+  min-height: 100vh;
+
+  .service-card {
+    padding: 0;
+  }
+  .card-glass {
+    grid-template-columns: 1fr;
+    border: none;
+  }
+}
+
+// Hero Section
+.services-hero {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 140, 66, 0.05) 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(102, 126, 234, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .breadcrumb {
+    @include flex-center;
+    gap: $space-xs;
+    margin-bottom: $space-xl;
+    font-size: 0.9rem;
+    
+    a {
+      color: $text-lighter;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: $primary-light;
+      }
+    }
+    
+    span {
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    margin-bottom: $space-lg;
+    line-height: 1.1;
+    
+    @include tablet {
+      font-size: 3rem;
+    }
+    
+    @include mobile {
+      font-size: 2.5rem;
+    }
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: $space-2xl;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $text-lighter;
+    
+    @include mobile {
+      font-size: 1.1rem;
+    }
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: $space-xl;
+    margin-top: $space-2xl;
+    
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-lg;
+    }
+
+    .stat {
+      text-align: center;
+      
+      &-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: $space-xs;
+        @include text-gradient($orange-gradient);
+        
+        @include mobile {
+          font-size: 2rem;
+        }
+      }
+      
+      &-label {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        color: $text-lighter;
+      }
+    }
+  }
+}
+
+
+// Services Grid Section
+.services-grid-section {
+  background: $background-dark;
+  
+  .section-header {
+    margin-bottom: $space-2xl;
+    
+    h2 {
+      @include text-gradient($primary-gradient);
+      margin-bottom: $space-md;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: $text-lighter;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Category Filters
+.category-filters {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: $space-md;
+  margin-bottom: $space-2xl;
+  
+  @include mobile {
+    gap: $space-sm;
+  }
+
+  .filter-btn {
+    @include button-reset;
+    padding: $space-sm $space-lg;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: $text-lighter;
+    backdrop-filter: blur(10px);
+    
+    @include mobile {
+      padding: $space-xs $space-md;
+      font-size: 0.9rem;
+    }
+
+    &.active,
+    &:hover {
+      background: $primary-gradient;
+      color: $white;
+      border-color: $primary;
+      transform: translateY(-2px);
+      box-shadow: $shadow-lg;
+    }
+  }
+}
+
+// Services Grid
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(380px, 1fr));
+  gap: $space-xl;
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $space-lg;
+  }
+}
+
+// Empty State
+.empty-state {
+  padding: $space-3xl 0;
+  
+  h3 {
+    @include text-gradient($primary-gradient);
+    margin-bottom: $space-md;
+  }
+  
+  p {
+    color: $text-lighter;
+    margin-bottom: $space-lg;
+  }
+}
+
+// Process Section
+.process-section {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(255, 140, 66, 0.02) 100%);
+  
+  .section-header {
+    margin-bottom: $space-2xl;
+    
+    h2 {
+      @include text-gradient($orange-gradient);
+      margin-bottom: $space-md;
+    }
+    
+    .section-subtitle {
+      color: $text-lighter;
+    }
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $space-2xl;
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $space-xl;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: $space-xl;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: $radius-lg;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-5px);
+        border-color: $primary;
+        box-shadow: $shadow-xl;
+      }
+
+      .step-number {
+        @include flex-center;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto $space-lg;
+        background: $primary-gradient;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $white;
+        position: relative;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          inset: -4px;
+          background: $primary-gradient;
+          border-radius: 50%;
+          opacity: 0.3;
+          z-index: -1;
+        }
+      }
+
+      h3 {
+        margin-bottom: $space-md;
+        color: $white;
+      }
+
+      p {
+        color: $text-lighter;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// Case Studies Teaser
+.case-studies-teaser {
+  background: $background-dark;
+  
+  .section-header {
+    margin-bottom: $space-2xl;
+    
+    h2 {
+      @include text-gradient($primary-gradient);
+      margin-bottom: $space-md;
+    }
+    
+    .section-subtitle {
+      color: $text-lighter;
+    }
+  }
+
+  .case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $space-xl;
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    .case-study-teaser {
+      padding: $space-2xl;
+      background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(102, 126, 234, 0.05) 100%);
+      border-radius: $radius-xl;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: $primary-gradient;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover {
+        transform: translateY(-5px);
+        border-color: $primary;
+        box-shadow: $shadow-xl;
+        
+        &::before {
+          transform: scaleX(1);
+        }
+        
+        .teaser-link {
+          color: $primary-light;
+          transform: translateX(5px);
+        }
+      }
+
+      .teaser-content {
+        position: relative;
+        z-index: 2;
+        
+        h3 {
+          color: $white;
+          margin-bottom: $space-md;
+          font-size: 1.5rem;
+        }
+        
+        p {
+          color: $text-lighter;
+          margin-bottom: $space-lg;
+          line-height: 1.6;
+        }
+        
+        .teaser-link {
+          color: $primary;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          display: inline-flex;
+          align-items: center;
+          gap: $space-xs;
+          
+          &::after {
+            content: '→';
+            transition: transform 0.3s ease;
+          }
+          
+          &:hover::after {
+            transform: translateX(3px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Service Detail Page Styles
+.service-detail {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: $white;
+  min-height: 100vh;
+}
+
+.service-header {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 140, 66, 0.05) 100%);
+  padding: $space-3xl 0;
+  
+  .breadcrumb {
+    @include flex-center;
+    gap: $space-xs;
+    margin-bottom: $space-xl;
+    font-size: 0.9rem;
+    
+    a {
+      color: $text-lighter;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: $primary-light;
+      }
+    }
+    
+    span {
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+
+  .service-hero {
+    @include flex-between;
+    gap: $space-2xl;
+    align-items: center;
+    
+    @include tablet {
+      @include flex-column;
+      text-align: center;
+    }
+
+    .service-info {
+      flex: 1;
+      
+      h1 {
+        @include text-gradient($primary-gradient);
+        margin-bottom: $space-lg;
+      }
+
+      .service-description {
+        font-size: 1.25rem;
+        color: $text-lighter;
+        margin-bottom: $space-xl;
+        line-height: 1.6;
+      }
+
+      .service-meta {
+        @include flex-center;
+        gap: $space-xl;
+        margin-bottom: $space-xl;
+        flex-wrap: wrap;
+        
+        .meta-item {
+          text-align: center;
+          
+          .meta-label {
+            display: block;
+            font-size: 0.9rem;
+            color: $text-lighter;
+            margin-bottom: $space-xs;
+          }
+          
+          .meta-value {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: $white;
+          }
+        }
+
+        .featured-badge {
+          background: $primary-gradient;
+          color: $white;
+          padding: $space-xs $space-md;
+          border-radius: $radius-sm;
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+      }
+
+      .service-actions {
+        .cta-button {
+          @include flex-center;
+          gap: $space-xs;
+        }
+      }
+    }
+
+    .service-visual {
+      flex: 0 0 400px;
+      
+      @include tablet {
+        flex: none;
+        max-width: 400px;
+        width: 100%;
+      }
+      
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: $radius-lg;
+        box-shadow: $shadow-2xl;
+      }
+    }
+  }
+}
+
+.service-features {
+  padding: $space-3xl 0;
+  background: $background-dark;
+  
+  h2 {
+    @include text-gradient($orange-gradient);
+    text-align: center;
+    margin-bottom: $space-2xl;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $space-xl;
+    
+    .feature-card {
+      padding: $space-xl;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: $radius-lg;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      text-align: center;
+      
+      &:hover {
+        transform: translateY(-5px);
+        border-color: $primary;
+        box-shadow: $shadow-xl;
+      }
+
+      .feature-icon {
+        @include flex-center;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto $space-lg;
+        background: $primary-gradient;
+        border-radius: $radius-md;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $white;
+      }
+
+      h3 {
+        color: $white;
+        margin-bottom: $space-md;
+      }
+    }
+  }
+}
+
+// Service Content with Sidebar Layout
+.service-content {
+  padding: $space-3xl 0;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(255, 140, 66, 0.02) 100%);
+  
+  .content-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: $space-2xl;
+    align-items: start;
+    
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: $space-xl;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $space-xl;
+    }
+  }
+
+  .main-content {
+    :global {
+      h1, h2, h3, h4, h5, h6 {
+        @include text-gradient($primary-gradient);
+        margin-top: $space-xl;
+        margin-bottom: $space-lg;
+      }
+      
+      p {
+        color: $text-lighter;
+        line-height: 1.7;
+        margin-bottom: $space-lg;
+      }
+      
+      ul, ol {
+        color: $text-lighter;
+        margin-bottom: $space-lg;
+        padding-left: $space-lg;
+        
+        li {
+          margin-bottom: $space-xs;
+          line-height: 1.6;
+        }
+      }
+      
+      blockquote {
+        border-left: 4px solid $primary;
+        padding-left: $space-lg;
+        margin: $space-xl 0;
+        color: $text-lighter;
+        font-style: italic;
+      }
+      
+      code {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2px 6px;
+        border-radius: $radius-sm;
+        color: $primary-light;
+        font-size: 0.9em;
+      }
+      
+      pre {
+        background: rgba(255, 255, 255, 0.05);
+        padding: $space-lg;
+        border-radius: $radius-lg;
+        overflow-x: auto;
+        margin: $space-xl 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        
+        code {
+          background: none;
+          padding: 0;
+          color: $text-lighter;
+        }
+      }
+    }
+  }
+
+  // Related Articles Sidebar
+  .related-articles-sidebar {
+    position: sticky;
+    top: $space-xl;
+    
+    @include tablet {
+      position: static;
+    }
+
+    .sidebar-header {
+      margin-bottom: $space-lg;
+      padding-bottom: $space-md;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      
+      h3 {
+        @include text-gradient($orange-gradient);
+        font-size: 1.5rem;
+        margin-bottom: $space-xs;
+      }
+      
+      p {
+        color: $text-lighter;
+        font-size: 0.9rem;
+      }
+    }
+
+    .related-articles-list {
+      display: flex;
+      flex-direction: column;
+      gap: $space-md;
+    }
+
+    .related-article-card {
+      padding: $space-lg;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: $radius-lg;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      
+      &:hover {
+        transform: translateY(-3px);
+        border-color: $primary;
+        box-shadow: $shadow-lg;
+        
+        .article-title {
+          color: $primary-light;
+        }
+        
+        .article-link {
+          color: $primary-light;
+          transform: translateX(3px);
+        }
+      }
+
+      .article-category {
+        display: inline-block;
+        background: $primary-gradient;
+        color: $white;
+        padding: $space-xs $space-sm;
+        border-radius: $radius-sm;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-bottom: $space-sm;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .article-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: $space-xs;
+        color: $white;
+        line-height: 1.4;
+        transition: color 0.3s ease;
+      }
+
+      .article-excerpt {
+        color: $text-lighter;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: $space-md;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .article-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+        color: $text-lighter;
+        
+        .read-time {
+          display: flex;
+          align-items: center;
+          gap: $space-xs;
+        }
+        
+        .article-link {
+          color: $primary;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          display: inline-flex;
+          align-items: center;
+          gap: $space-xs;
+          
+          &::after {
+            content: '→';
+            transition: transform 0.3s ease;
+          }
+        }
+      }
+    }
+
+    .sidebar-cta {
+      margin-top: $space-xl;
+      padding: $space-lg;
+      background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 140, 66, 0.05) 100%);
+      border-radius: $radius-lg;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      
+      h4 {
+        @include text-gradient($primary-gradient);
+        margin-bottom: $space-sm;
+        font-size: 1.25rem;
+      }
+      
+      p {
+        color: $text-lighter;
+        margin-bottom: $space-md;
+        font-size: 0.9rem;
+      }
+      
+      .cta-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.service-cta {
+  padding: $space-3xl 0;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(255, 140, 66, 0.1) 100%);
+  text-align: center;
+  
+  h2 {
+    @include text-gradient($orange-gradient);
+    margin-bottom: $space-md;
+  }
+  
+  p {
+    color: $text-lighter;
+    margin-bottom: $space-xl;
+    font-size: 1.1rem;
+  }
+  
+  .cta-actions {
+    @include flex-center;
+    gap: $space-lg;
+    
+    @include mobile {
+      @include flex-column;
+      gap: $space-md;
+    }
+  }
+}
+
+// Style for the secondary button
+.cta-secondary {
+  background: transparent;
+  border: 2px solid $primary;
+  color: $primary;
+  
+  &:hover {
+    background: $primary;
+    color: $white;
+  }
+}
+
+.service-actions {
+  display: flex;
+  gap: $space-md;
+  flex-wrap: wrap;
+  
+  @include mobile {
+    flex-direction: column;
+  }
+}

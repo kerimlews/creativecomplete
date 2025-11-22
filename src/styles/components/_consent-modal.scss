@@ -1,0 +1,387 @@
+// Consent Modal Styles
+.consent-modal {
+  position: fixed;
+  bottom: $space-lg;
+  left: $space-lg;
+  right: $space-lg;
+  max-width: 500px;
+  background: rgba($background-dark, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: $radius-xl;
+  padding: $space-xl;
+  z-index: $z-modal;
+  box-shadow: $shadow-2xl;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  @include mobile {
+    left: $space-md;
+    right: $space-md;
+    bottom: $space-md;
+    padding: $space-lg;
+  }
+
+  &.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &.hidden {
+    transform: translateY(100px);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.consent-content {
+  @include flex-column;
+  gap: $space-lg;
+
+  .consent-header {
+    h3 {
+      @include text-gradient($primary-gradient);
+      margin-bottom: $space-xs;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: $text-lighter;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+  }
+
+  .consent-features {
+    @include flex-column;
+    gap: $space-sm;
+
+    .feature-item {
+      @include flex-center;
+      gap: $space-sm;
+      color: $text-lighter;
+      font-size: 0.9rem;
+
+      &::before {
+        content: '✓';
+        color: $primary;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .consent-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-md;
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $space-sm;
+    }
+
+    .consent-btn {
+      @include button-reset;
+      padding: $space-md $space-lg;
+      border-radius: $radius-md;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      font-size: 0.95rem;
+      
+      &.accept-all {
+        background: $primary-gradient;
+        color: $white;
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: $shadow-lg;
+        }
+      }
+      
+      &.customize {
+        background: rgba(255, 255, 255, 0.1);
+        color: $white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        
+        &:hover {
+          background: rgba(255, 255, 255, 0.15);
+          border-color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+  }
+
+  .consent-links {
+    text-align: center;
+    
+    a {
+      color: $primary-light;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+// Customization Modal
+.consent-customization {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: $background-dark;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: $radius-xl;
+  padding: $space-2xl;
+  z-index: $z-modal + 10;
+  box-shadow: $shadow-2xl;
+  opacity: 0;
+  transition: all 0.3s ease;
+  
+  @include mobile {
+    padding: $space-xl;
+    width: 95%;
+  }
+
+  &.visible {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  &.hidden {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .customization-header {
+    margin-bottom: $space-xl;
+    
+    h3 {
+      @include text-gradient($primary-gradient);
+      margin-bottom: $space-xs;
+      font-size: 1.5rem;
+    }
+    
+    p {
+      color: $text-lighter;
+      line-height: 1.6;
+    }
+  }
+
+  .consent-options {
+    @include flex-column;
+    gap: $space-lg;
+    margin-bottom: $space-2xl;
+
+    .consent-option {
+      @include flex-between;
+      gap: $space-md;
+      padding: $space-lg;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: $radius-lg;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .option-info {
+        flex: 1;
+        
+        h4 {
+          color: $white;
+          margin-bottom: $space-xs;
+          font-size: 1.1rem;
+        }
+        
+        p {
+          color: $text-lighter;
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+      }
+
+      .option-toggle {
+        .toggle-switch {
+          position: relative;
+          display: inline-block;
+          width: 50px;
+          height: 24px;
+          
+          input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            
+            &:checked + .slider {
+              background: $primary-gradient;
+              
+              &::before {
+                transform: translateX(26px);
+              }
+            }
+          }
+          
+          .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            border-radius: 24px;
+            
+            &::before {
+              position: absolute;
+              content: '';
+              height: 16px;
+              width: 16px;
+              left: 4px;
+              bottom: 4px;
+              background: $white;
+              transition: all 0.3s ease;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .customization-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-md;
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    .save-btn {
+      @include button-reset;
+      padding: $space-md $space-lg;
+      background: $primary-gradient;
+      color: $white;
+      border-radius: $radius-md;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-lg;
+      }
+    }
+
+    .cancel-btn {
+      @include button-reset;
+      padding: $space-md $space-lg;
+      background: rgba(255, 255, 255, 0.1);
+      color: $white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: $radius-md;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+// Backdrop
+.consent-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: $z-modal - 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  &.visible {
+    opacity: 1;
+  }
+  
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+// Consent Manager State
+.consent-manager {
+  // Hidden state for when consent is already given
+  &.consent-given {
+    display: none;
+  }
+}
+
+// Animation classes
+.consent-animate-in {
+  animation: consentSlideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.consent-animate-out {
+  animation: consentSlideOut 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes consentSlideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes consentSlideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .consent-modal,
+  .consent-customization,
+  .consent-backdrop {
+    transition: none;
+  }
+  
+  .consent-animate-in,
+  .consent-animate-out {
+    animation: none;
+  }
+}
