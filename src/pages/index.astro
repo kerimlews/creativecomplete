@@ -14,12 +14,12 @@ const projectsImages = await import.meta.glob('/src/images/projects/*.{png,jpg,j
 // Function to get project image by slug
 function getServiceImage(slug) {
   const imagePath = `/src/images/services/${slug}.png`;  
-  return servicesImages[imagePath]() ? imagePath : '/src/content/services/default.png';
+  return servicesImages[imagePath]();
 }
 
 function getProjectImage(slug) {  
   const imagePath = `/src/images/projects/${slug}.png`;    
-  return projectsImages[imagePath]() ? imagePath : '/src/content/projects/default.png';
+  return projectsImages[imagePath]();
 }
 
 // SERVICE DATA WITH CASE STUDY INTEGRATION
