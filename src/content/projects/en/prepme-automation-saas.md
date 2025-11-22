@@ -1,5 +1,5 @@
 ---
-title: "How We Automated an €50K/year Business and Saved Them 280 Hours/Month"
+title: "How We Automated an €50K/monthly Business and Saved Them 280 Hours/Month"
 subtitle: "Replacing manual spreadsheet hell with custom automation that pays for itself in 90 days"
 image: "/images/prepme-project.jpg"
 author: "kerim-alihodza"
