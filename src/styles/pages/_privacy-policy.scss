@@ -1,0 +1,20 @@
+    .content-section {
+      margin-bottom: $space-2xl;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    .feature-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: $space-lg;
+      border-radius: $radius-lg;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin: $space-lg 0;
+      
+      h3, h4 {
+        margin-top: 0;
+        color: $white;
+      }
+    }
