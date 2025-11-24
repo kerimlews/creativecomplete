@@ -9,7 +9,7 @@ const images = await import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp
 // Function to get project image by slug
 function getImage(slug) {
   const imagePath = `/src/images/services/${slug}.png`;  
-  return images[imagePath]() ? imagePath : '/src/content/projects/default.png';
+  return images[imagePath]();
 }
 
 // Get all services
