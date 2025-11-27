@@ -8,13 +8,14 @@ import playformCompress from "@playform/compress";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://creativecomplete.com',
+  site: 'https://www.creativecomplete.com',
   output: 'static',
   prefetch: {
     defaultStrategy: "hover",
     prefetchAll: true,
   },
   compressHTML: true,
+  trailingSlash: 'always',
 
   build: {
     concurrency: 9999,
@@ -28,21 +29,21 @@ export default defineConfig({
             transformer: "postcss",
         },
     build: {
-        rollupOptions: {
-          output: {
-            assetFileNames: (assetInfo) => {
-              if (assetInfo.names[0]?.endsWith('.css')) {
-                return 'assets/css/[name][extname]';
-              }
-              if (assetInfo.names[0]?.match(/\.(png|jpe?g|gif|svg|webp|avif)$/)) {
-                return 'assets/images/[name][extname]';
-              }
-              return 'assets/js/[name][extname]';
-            },
-            chunkFileNames: 'assets/js/[name]-[hash].js',
-            entryFileNames: 'assets/js/[name]-[hash].js'
-          }
+      rollupOptions: {
+        output: {
+          assetFileNames: (assetInfo) => {
+            if (assetInfo.names[0]?.endsWith('.css')) {
+              return 'assets/css/[name]-[hash][extname]'; // Added hash for cache busting
+            }
+            if (assetInfo.names[0]?.match(/\.(png|jpe?g|gif|svg|webp|avif)$/)) {
+              return 'assets/images/[name]-[hash][extname]'; // Added hash
+            }
+            return 'assets/js/[name]-[hash][extname]';
+          },
+          chunkFileNames: 'assets/js/[name]-[hash].js',
+          entryFileNames: 'assets/js/[name]-[hash].js'
         }
+      }
       },
   },
 
@@ -56,7 +57,7 @@ export default defineConfig({
       CSS: true,
       File: true,
       HTML: true,
-      Image: false,
+      Image: true,
       JSON: true,
       JavaScript: true,
       Path: true,
