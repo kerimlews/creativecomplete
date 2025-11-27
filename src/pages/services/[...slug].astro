@@ -69,7 +69,7 @@ const relatedArticles = allServices
     <header class="service-header">
       <div class="container">
         <nav class="breadcrumb">
-          <a href="/">Home</a> / <a href="/services">Services</a> / <span>{service.data.title}</span>
+          <a href="/">Home</a> / <a href="/services/">Services</a> / <span>{service.data.title}</span>
         </nav>
         
         <div class="service-hero">
@@ -96,12 +96,12 @@ const relatedArticles = allServices
               </div>
               <div class="meta-item">
                 <span class="meta-label">Author</span>
-                <a class="meta-value" href={`/${service.data.author}`}>{formatAuthorName(service.data.author)}</a>
+                <a class="meta-value" href={`/${service.data.author}/`}>{formatAuthorName(service.data.author)}</a>
               </div>
             </div>
             
             <div class="service-actions">
-              <a href="/contact" class="cta-button cta-primary cta-lg">
+              <a href="/contact/" class="cta-button cta-primary cta-lg">
                 {service.data.ctaText}
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
@@ -149,7 +149,7 @@ const relatedArticles = allServices
             
             <div class="related-articles-list">
               {relatedArticles.map(article => (
-                <a href={`/services/${article.slug}`} class="related-article-card">
+                <a href={`/services/${article.slug}/`} class="related-article-card">
                   <span class="article-category">{article.category}</span>
                   <h4 class="article-title">{article.title}</h4>
                   <p class="article-excerpt">{article.description}</p>
@@ -164,7 +164,7 @@ const relatedArticles = allServices
             <div class="sidebar-cta">
               <h4>Need Help With Your Project?</h4>
               <p>Let's discuss how we can bring your ideas to life</p>
-              <a href="/contact" class="cta-button cta-primary">
+              <a href="/contact/" class="cta-button cta-primary">
                 Get Free Consultation
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>

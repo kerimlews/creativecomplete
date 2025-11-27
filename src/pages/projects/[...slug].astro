@@ -65,7 +65,7 @@ const relatedArticles = allProjects
     <header class="service-header">
       <div class="container">
         <nav class="breadcrumb">
-          <a href="/">Home</a> / <a href="/projects">Projects</a> / <span>{project.data.title}</span>
+          <a href="/">Home</a> / <a href="/projects/">Projects</a> / <span>{project.data.title}</span>
         </nav>
         <div class="service-hero">
           <div class="service-info">
@@ -79,7 +79,7 @@ const relatedArticles = allProjects
               </div>
               <div class="meta-item">
                 <span class="meta-label">Author</span>
-                <a class="meta-value" href={`/kerim-alihodza`}>Kerim Alihodza</a>
+                <a class="meta-value" href={`/kerim-alihodza/`}>Kerim Alihodza</a>
               </div>
               {project.data.stats && project.data.stats.length > 0 && (
                 project.data.stats.map((stat, index) => (
@@ -107,7 +107,7 @@ const relatedArticles = allProjects
                 </a>
               )}
               
-              <a href="/contact" class="cta-button cta-primary cta-lg">
+              <a href="/contact/" class="cta-button cta-primary cta-lg">
                 Start Your Project Now
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
@@ -139,7 +139,7 @@ const relatedArticles = allProjects
             
             <div class="related-articles-list">
               {relatedArticles.map(article => (
-                <a href={`/projects/${article.slug}`} class="related-article-card">
+                <a href={`/projects/${article.slug}/`} class="related-article-card">
                   <span class="article-category">{article.category}</span>
                   <h4 class="article-title">{article.title}</h4>
                   <p class="article-excerpt">{article.description}</p>
@@ -154,7 +154,7 @@ const relatedArticles = allProjects
             <div class="sidebar-cta">
               <h4>Need Help With Your Project?</h4>
               <p>Let's discuss how we can bring your ideas to life</p>
-              <a href="/contact" class="cta-button cta-primary">
+              <a href="/contact/" class="cta-button cta-primary">
                 Get Free Consultation
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>

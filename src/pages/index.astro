@@ -264,7 +264,7 @@ const testimonials = [
     </div>
 
     <div class="view-all text-center">
-      <a href="/services" class="view-all-btn">
+      <a href="/services/" class="view-all-btn">
         Explore All Case Studies
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
           <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -301,7 +301,7 @@ const testimonials = [
                 <div class="author-company">{testimonial.company}</div>
               </div>
             </div>
-            <a href={`/projects/${testimonial.caseStudy}`} class="case-study-link">
+            <a href={`/projects/${testimonial.caseStudy}/`} class="case-study-link">
               Read Detailed Case Study →
             </a>
           </div>
@@ -319,11 +319,11 @@ const testimonials = [
   valueProps={[]}
   primaryButton={{
     text: "Get My Free Growth Audit",
-    href: "/contact?source=final-cta-audit"
+    href: "/contact"
   }}
   secondaryButton={{
     text: "Schedule Strategy Call",
-    href: "/booking?type=discovery"
+    href: "/contact"
   }}
   securityNote="Your information is secure. We don't do spam or pressure tactics."
   showValueProps={false}
