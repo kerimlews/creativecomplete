@@ -30,8 +30,8 @@ const { service } = Astro.props;
 const structuredData = generateServiceJsonLd(service);
 const breadcrumbs = [
   { name: 'Home', url: Astro.url.origin },
-  { name: 'Services', url: `${Astro.url.origin}/services` },
-  { name: service.data.title, url: Astro.url.href }
+  { name: 'Services', url: `${Astro.url.origin}/services/` },
+  { name: service.data.title, url: `${Astro.url.href}/` }
 ];
 
 const images = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');

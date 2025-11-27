@@ -27,7 +27,7 @@ const { project } = Astro.props;
 const breadcrumbs = [
   { name: 'Home', url: Astro.url.origin },
   { name: 'Projects', url: `${Astro.url.origin}/projects` },
-  { name: project.data.title, url: Astro.url.href }
+  { name: project.data.title, url: `${Astro.url.href}/` }
 ];
 
 const images = import.meta.glob('/src/images/projects/*.{png,jpg,jpeg,webp}');

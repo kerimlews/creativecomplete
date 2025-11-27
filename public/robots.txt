@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /assets/images/
+Disallow: /assets/css/
+Disallow: /assets/js/
 
 Sitemap: https://www.creativecomplete.com/sitemap-index.xml
