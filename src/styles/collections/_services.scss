@@ -125,20 +125,7 @@
       }
     }
   }
-  
-  .service-visual {
-    img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 1rem;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      
-      @include mobile {
-        height: 300px;
-      }
-    }
-  }
+
 }
 
 .service-features {
