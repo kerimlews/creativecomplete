@@ -52,6 +52,7 @@
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      @include glass-effect(0.2); // Enhanced glass effect on hover
     }
 
     &::before {
@@ -69,10 +70,32 @@
       position: relative;
       z-index: 2;
 
+      .verified-badge {
+        display: flex;
+        align-items: center;
+        gap: $space-xs;
+        color: #10b981;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: $space-md;
+
+        .stars {
+          display: flex;
+          gap: 2px;
+          margin-left: auto;
+
+          svg {
+            width: 14px;
+            height: 14px;
+            fill: #fbbf24;
+          }
+        }
+      }
+
       .testimonial-text {
         font-size: 1.125rem;
         line-height: 1.7;
-        color: $text-lighter;
+        color: $text-lighter; // Keep original color (not darkened)
         margin-bottom: $space-lg;
         font-style: italic;
       }
@@ -81,29 +104,59 @@
         display: flex;
         align-items: center;
         gap: $space-md;
+        margin-bottom: $space-md;
 
-        .author-avatar {
+        .author-image {
           width: 50px;
           height: 50px;
           border-radius: 50%;
+          overflow: hidden;
           background: $primary-gradient;
           @include flex-center;
-          color: white;
-          font-weight: 600;
-          font-size: 1.125rem;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .author-avatar {
+            color: white;
+            font-weight: 600;
+            font-size: 1.125rem;
+          }
         }
 
         .author-info {
+          flex: 1;
+
           .author-name {
             font-weight: 600;
             color: white;
             margin-bottom: $space-xs;
           }
 
-          .author-role {
+          .author-role,
+          .author-company {
             color: $text-lighter;
             font-size: 0.875rem;
+            line-height: 1.4;
           }
+        }
+      }
+
+      .case-study-link {
+        display: inline-flex;
+        align-items: center;
+        gap: $space-xs;
+        color: $primary; // Blue primary color
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: lighten($primary, 10%);
+          gap: $space-sm;
         }
       }
     }

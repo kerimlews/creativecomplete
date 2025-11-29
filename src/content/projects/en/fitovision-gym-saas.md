@@ -5,7 +5,7 @@ image: "/images/fitovision-project.jpg"
 author: "kerim-alihodza"
 description: "Most gyms juggle multiple software tools. We built Fitovision to handle everything from door access to payments in one integrated platform."
 category: "Mobile / Web / SEO / Marketing"
-url: http://fitovision.com/
+url: https://fitovision.com/
 related_articles: ["paperpile-saas-scaling-case-study", "prepme-automation-saas"]
 slug: "fitovision-gym-saas"
 published: "2024-03-29"

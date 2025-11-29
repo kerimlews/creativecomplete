@@ -6,20 +6,29 @@ import ServiceCard from '../components/ServiceCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import BottomCTA from '../components/BottomCTA.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 // Get service images from content folder
-const servicesImages = await import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
-const projectsImages = await import.meta.glob('/src/images/projects/*.{png,jpg,jpeg,webp}');
+const servicesImages = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
+const projectsImages = import.meta.glob('/src/images/projects/*.{png,jpg,jpeg,webp}');
+const testImages = import.meta.glob('/src/images/testimonials/*.{png,jpg,jpeg,webp}');
+
+console.log(testImages);
 
 // Function to get project image by slug
-function getServiceImage(slug) {
+function getServiceImage(slug: string) {
   const imagePath = `/src/images/services/${slug}.png`;  
   return servicesImages[imagePath]();
 }
 
-function getProjectImage(slug) {  
+function getProjectImage(slug: string) {  
   const imagePath = `/src/images/projects/${slug}.png`;    
   return projectsImages[imagePath]();
+}
+
+function getTestimonalImage(slug: string) {  
+  const imagePath = `/src/images/testimonials/${slug}.png`;    
+  return testImages[imagePath]();
 }
 
 // SERVICE DATA WITH CASE STUDY INTEGRATION
@@ -149,6 +158,7 @@ const testimonials = [
     role: "Founder",
     company: "Fitovision",
     avatar: "MP",
+    image: getTestimonalImage("matej-poznic"), // Add image path
     caseStudy: "fitovision-gym-saas",
     verified: true
   },
@@ -158,6 +168,7 @@ const testimonials = [
     role: "Owner", 
     company: "PrepMe",
     avatar: "TB",
+    // image: "/images/testimonials/tomislav-bratunic.jpg", // Add image path
     caseStudy: "prepme-automation-saas",
     verified: true
   },
@@ -167,6 +178,7 @@ const testimonials = [
     role: "Geschäftsführerin",
     company: "CareConnect",
     avatar: "AM",
+    image: getTestimonalImage("alisa-murtezi"), // Add image path
     caseStudy: "careconnect-recruitment-automation", 
     verified: true
   }
@@ -291,10 +303,30 @@ const testimonials = [
                 <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
               Verified Case Study
+              <div class="stars">
+                {/* 5 stars */}
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  </svg>
+                ))}
+              </div>
             </div>
             <p class="testimonial-text">"{testimonial.text}"</p>
             <div class="testimonial-author">
-              <div class="author-avatar">{testimonial.avatar}</div>
+              <div class="author-image">
+                {testimonial.image ? (
+                  <Image 
+                    src={testimonial.image} 
+                    alt={testimonial.author}
+                    width="50"
+                    height="50"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div class="author-avatar">{testimonial.avatar}</div>
+                )}
+              </div>
               <div class="author-info">
                 <div class="author-name">{testimonial.author}</div>
                 <div class="author-role">{testimonial.role}</div>
