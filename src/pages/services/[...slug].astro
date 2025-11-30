@@ -7,6 +7,8 @@ import { formatAuthorName } from '../../utils/helpers';
 import BottomCTA from '../../components/BottomCTA.astro';
 import { Image } from 'astro:assets';
 import BreadCrumb from '../../components/BreadCrumb.astro';
+import StackedImagesWithPopup from '../../components/StackedImagesWithPopup.astro';
+import RelatedArticlesSidebar from '../../components/RelatedArticlesSidebar.astro';
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
@@ -122,40 +124,7 @@ const relatedArticles = allServices
           </div>
           
           <div class="service-visual">
-            {hasMultipleImages ? (
-              <div class="stacked-images">
-                {displayImages.map((img, index) => (
-                  <div class="stacked-item" data-index={index}>
-                    <Image 
-                      src={img.src} 
-                      alt={`${img.alt} - Image ${index + 1}`}
-                      width={600}
-                      height={400}
-                      loading={index === 0 ? "eager" : "lazy"}
-                    />
-                  </div>
-                ))}
-                {serviceImages.length > 3 && (
-                  <div class="image-counter">
-                    +{serviceImages.length - 3} more
-                  </div>
-                )}
-              </div>
-            ) : serviceImages.length === 1 ? (
-              <div class="service-image">
-                <Image 
-                  src={serviceImages[0].src} 
-                  alt={serviceImages[0].alt}
-                  width={600}
-                  height={500}
-                  loading="eager"
-                />
-              </div>
-            ) : (
-              <div class="service-image">
-                <div>No images available</div>
-              </div>
-            )}
+            <StackedImagesWithPopup images={serviceImages} />
           </div>
         </div>
       </div>
@@ -184,38 +153,8 @@ const relatedArticles = allServices
             <div set:html={service.rendered?.html} />
           </div>
 
-          <!-- Related Articles Sidebar -->
-          <aside class="related-articles-sidebar">
-            <div class="sidebar-header">
-              <h3>Related Articles</h3>
-              <p>More insights you might find helpful</p>
-            </div>
-            
-            <div class="related-articles-list">
-              {relatedArticles.map(article => (
-                <a href={`/services/${article.slug}/`} class="related-article-card">
-                  <span class="article-category">{article.category}</span>
-                  <h4 class="article-title">{article.title}</h4>
-                  <p class="article-excerpt">{article.description}</p>
-                  <div class="article-meta">
-                    <span class="read-time">📖 {article.readTime}</span>
-                    <span class="article-link">Read more</span>
-                  </div>
-                </a>
-              ))}
-            </div>
+          <RelatedArticlesSidebar items={relatedArticles} />
 
-            <div class="sidebar-cta">
-              <h4>Need Help With Your Project?</h4>
-              <p>Let's discuss how we can bring your ideas to life</p>
-              <a href="/contact/" class="cta-button cta-primary">
-                Get Free Consultation
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
-                </svg>
-              </a>
-            </div>
-          </aside>
         </div>
       </div>
     </div>

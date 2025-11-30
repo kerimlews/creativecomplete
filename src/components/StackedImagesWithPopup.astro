@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+
+const { images } = Astro.props;
+
+const hasMultipleImages = images.length > 1;
+const displayImages = hasMultipleImages ? images.slice(0, 3) : images;
+
+---
+
+<script src="../scripts/imagePopup.ts"></script>
+
+
+<!-- POPUP FOR IMAGES -->
+<div class="image-popup" id="imagePopup">
+    <div class="popup-content">
+        <button class="close-btn" id="closePopup">×</button>
+        <img class="popup-image" id="popupImage" />
+        <button class="popup-nav prev" id="prevImage">‹</button>
+        <button class="popup-nav next" id="nextImage">›</button>
+        <div class="popup-counter" id="popupCounter"></div>
+    </div>
+</div>
+
+{hasMultipleImages ? (
+    <div class="stacked-images">
+    {displayImages.map((img, index) => (
+        <div class="stacked-item" data-index={index}>
+        <Image 
+            src={img.src} 
+            alt={`${img.alt} - Image ${index + 1}`}
+            width={600}
+            height={400}
+            loading={index === 0 ? "eager" : "lazy"}
+        />
+        </div>
+    ))}
+    {images.length > 3 && (
+        <div class="image-counter">
+        +{images.length - 3} more
+        </div>
+    )}
+    </div>
+) : images.length === 1 ? (
+    <div class="service-image">
+    <Image 
+        src={images[0].src} 
+        alt={images[0].alt}
+        width={600}
+        height={500}
+        loading="eager"
+    />
+    </div>
+) : (
+    <div class="service-image">
+    <div>No images available</div>
+    </div>
+)}
