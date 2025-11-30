@@ -1,5 +1,5 @@
   let currentImageIndex = 0;
-  let projectImages: any[] = [];
+  let serviceImages: any[] = [];
 
   document.addEventListener('DOMContentLoaded', () => {
     const imagePopup = document.getElementById('imagePopup');
@@ -41,10 +41,10 @@
       return images;
     }
 
-    projectImages = extractImagesFromDOM();
+    serviceImages = extractImagesFromDOM();
 
     function openPopup(index: number) {
-      if (projectImages.length === 0) return;
+      if (serviceImages.length === 0) return;
       
       currentImageIndex = index;
       updatePopupImage();
@@ -58,18 +58,18 @@
     }
 
     function updatePopupImage() {
-      if (popupImage && projectImages[currentImageIndex]) {
-        popupImage.src = projectImages[currentImageIndex].src;
-        popupImage.alt = projectImages[currentImageIndex].alt;
-        popupCounter.textContent = `${currentImageIndex + 1} / ${projectImages.length}`;
+      if (popupImage && serviceImages[currentImageIndex]) {
+        popupImage.src = serviceImages[currentImageIndex].src;
+        popupImage.alt = serviceImages[currentImageIndex].alt;
+        popupCounter.textContent = `${currentImageIndex + 1} / ${serviceImages.length}`;
         
         prevImageBtn.disabled = currentImageIndex === 0;
-        nextImageBtn.disabled = currentImageIndex === projectImages.length - 1;
+        nextImageBtn.disabled = currentImageIndex === serviceImages.length - 1;
       }
     }
 
     function nextImage() {
-      if (currentImageIndex < projectImages.length - 1) {
+      if (currentImageIndex < serviceImages.length - 1) {
         currentImageIndex++;
         updatePopupImage();
       }

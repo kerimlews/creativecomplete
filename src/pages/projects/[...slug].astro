@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import BottomCTA from '../../components/BottomCTA.astro';
+import BreadCrumb from '../../components/BreadCrumb.astro';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -36,7 +37,6 @@ const projectImages = await Promise.all(Object.entries(images)
     src: image(),
     alt: project.data.title
   })));
-  console.log(projectImages);
   
 const hasMultipleImages = projectImages.length > 1;
 const displayImages = hasMultipleImages ? projectImages.slice(0, 3) : projectImages;
@@ -68,13 +68,7 @@ const relatedArticles = allProjects
   <article class="service-detail">
     <header class="service-header">
       <div class="container">
-        <nav class="breadcrumb">
-          {breadcrumbs.map((bread, index) => index === breadcrumbs.length - 1 ? (
-            <span style="white-space: nowrap;">{bread.name}</span>
-          ) : (
-            <a href={bread.url}>{bread.name}</a>
-          ))}
-        </nav>
+        <BreadCrumb items={breadcrumbs} />
         
         <!-- Move h1 to full width above the hero content -->
         <div class="service-title-fullwidth">

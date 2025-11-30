@@ -6,6 +6,7 @@ import FAQ from '../../components/FAQ.astro';
 import { formatAuthorName } from '../../utils/helpers';
 import BottomCTA from '../../components/BottomCTA.astro';
 import { Image } from 'astro:assets';
+import BreadCrumb from '../../components/BreadCrumb.astro';
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
@@ -36,7 +37,15 @@ const breadcrumbs = [
 
 const images = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
 
-const image = images[`/src/images/services/${service.id}.png`]();
+const serviceImages = await Promise.all(Object.entries(images)
+  .filter(([path]) => path.includes(`/src/images/services/${service.id}`))
+  .map(async ([path, image]) => ({
+    src: image(),
+    alt: service.data.title
+  })));
+  
+const hasMultipleImages = serviceImages.length > 1;
+const displayImages = hasMultipleImages ? serviceImages.slice(0, 3) : serviceImages;
 
 // Get related articles (you can customize this logic based on your content)
 const allServices = await getCollection('services');
@@ -67,13 +76,16 @@ const relatedArticles = allServices
   <article class="service-detail">
     <header class="service-header">
       <div class="container">
-        <nav class="breadcrumb">
-          <a href="/">Home</a> / <a href="/services/">Services</a> / <span>{service.data.title}</span>
-        </nav>
         
+        <BreadCrumb items={breadcrumbs} />
+        
+        <!-- Move h1 to full width above the hero content -->
+        <div class="service-title-fullwidth">
+          <h1>{service.data.title}</h1>
+        </div>
+
         <div class="service-hero">
           <div class="service-info">
-            <h1>{service.data.title}</h1>
             <p class="service-subtitle">{service.data.subtitle}</p>
             <p class="service-description">{service.data.description}</p>
             
@@ -110,7 +122,40 @@ const relatedArticles = allServices
           </div>
           
           <div class="service-visual">
-            <Image src={image} alt={service.data.title} width={500} height={500} />
+            {hasMultipleImages ? (
+              <div class="stacked-images">
+                {displayImages.map((img, index) => (
+                  <div class="stacked-item" data-index={index}>
+                    <Image 
+                      src={img.src} 
+                      alt={`${img.alt} - Image ${index + 1}`}
+                      width={600}
+                      height={400}
+                      loading={index === 0 ? "eager" : "lazy"}
+                    />
+                  </div>
+                ))}
+                {serviceImages.length > 3 && (
+                  <div class="image-counter">
+                    +{serviceImages.length - 3} more
+                  </div>
+                )}
+              </div>
+            ) : serviceImages.length === 1 ? (
+              <div class="service-image">
+                <Image 
+                  src={serviceImages[0].src} 
+                  alt={serviceImages[0].alt}
+                  width={600}
+                  height={500}
+                  loading="eager"
+                />
+              </div>
+            ) : (
+              <div class="service-image">
+                <div>No images available</div>
+              </div>
+            )}
           </div>
         </div>
       </div>
