@@ -15,11 +15,11 @@ export interface Props {
   heroImage?: string;
 }
 const { 
-  title, 
-  subtitle, 
-  ctaText = "Start Your Project", 
+  title = "The Full-Stack Growth Engine for Ambitious Brands", 
+  subtitle = "From #1 SEO rankings and AI-powered workflows to social dominance and maximized conversion rates. We architect every layer of your digital presence to capture and keep customers.", 
+  ctaText = "Unlock My Custom Growth Plan", 
   ctaHref = "/contact/",
-  secondaryCtaText = "View Our Work",
+  secondaryCtaText = "Explore 287% Lead Increase Cases",
   secondaryCtaHref = "/projects/",
   youtubeShortsUrl = "https://www.youtube.com/embed/D9PuWCs_Pa4",
   shortsTitle = "A Steady Presence",
@@ -45,28 +45,49 @@ const {
     <div class="hero-content">
       <!-- Main Content -->
       <div class="hero-text">
+        <div class="hero-badge" data-astro-animate="fadeInDown" data-astro-delay="100">
+          <span class="badge-text">Only 3 projects we take this month!</span>
+        </div>
+
         <h1 class="hero-title" data-astro-animate="fadeInUp" data-astro-delay="200">
-          <span class="title-line line-1">{title.split(' ').slice(0, 4).join(' ')}</span>
-          <span class="title-line line-2">{title.split(' ').slice(4).join(' ')}</span>
+          {title}
         </h1>
 
         <p class="hero-subtitle" data-astro-animate="fadeInUp" data-astro-delay="400">
           {subtitle}
         </p>
 
-        <!-- Stats Bar -->
-        <div class="hero-stats" data-astro-animate="fadeInUp" data-astro-delay="600">
-          <div class="stat-item">
-            <div class="stat-number" id="yearsStat">0+</div>
-            <div class="stat-label">Years Experience</div>
+        <!-- Feature List -->
+        <div class="hero-features" data-astro-animate="fadeInUp" data-astro-delay="600">
+          <div class="feature-item">
+            <div class="feature-icon">🏆</div>
+            <div class="feature-text">
+              <strong>Dominate Local Search</strong> – Ranked #1 on Google Maps for our clients
+            </div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number" id="projectsStat">0+</div>
-            <div class="stat-label">Projects Delivered</div>
+          <div class="feature-item">
+            <div class="feature-icon">💻</div>
+            <div class="feature-text">
+              <strong>High-Converting Web Design</strong> – Built for SEO, speed, and sales
+            </div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number" id="satisfactionStat">0%</div>
-            <div class="stat-label">Client Satisfaction</div>
+          <div class="feature-item">
+            <div class="feature-icon">🎬</div>
+            <div class="feature-text">
+              <strong>Professional Video Marketing</strong> – Promotional videos that tell your story and drive action
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🤖</div>
+            <div class="feature-text">
+              <strong>Efficiency Through AI</strong> – Automate repetitive tasks and workflows
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📱</div>
+            <div class="feature-text">
+              <strong>Custom App Development</strong> – Seamless web, mobile, and desktop experiences
+            </div>
           </div>
         </div>
 
@@ -80,17 +101,18 @@ const {
             </svg>
           </a>
           
-          <a href={secondaryCtaHref} class="cta-button secondary magnetic">
-            <span class="button-text">{secondaryCtaText}</span>
+          <!-- <a href={secondaryCtaHref} class="cta-button secondary magnetic">
+            <span class="button-text">{secondaryCtaText} →</span>
             <div class="play-icon">
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
               </svg>
             </div>
-          </a>
+          </a> -->
         </div>
 
-        <!-- YouTube Shorts Section -->
+        <!-- YouTube Shorts Section - Commented Out -->
+        <!--
         <div class="youtube-shorts" data-astro-animate="fadeInUp" data-astro-delay="1000">
           <div class="shorts-label">
             <svg class="youtube-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -102,7 +124,6 @@ const {
           <div class="shorts-container">
             <div class="shorts-thumbnail" id="shortsThumbnail">
               <div class="thumbnail-image">
-                <!-- Replace with actual thumbnail or keep gradient -->
                 <div style="width:100%;height:100%;background:linear-gradient(135deg,#FF6B35,#FF8C42);display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;">
                   YouTube Shorts Preview
                 </div>
@@ -128,7 +149,6 @@ const {
             </div>
           </div>
 
-          <!-- YouTube Popup -->
           <div class="youtube-popup" id="youtubePopup">
             <div class="popup-header">
               <h4 class="popup-title">Watch Case Study</h4>
@@ -150,9 +170,10 @@ const {
             </div>
           </div>
         </div>
+        -->
       </div>
 
-     <!-- Hero Visual - Full Height Image with Social Media Elements -->
+      <!-- Hero Visual - Full Height Image with Social Media Elements -->
       <div class="hero-visual" data-astro-animate="fadeInLeft" data-astro-delay="1000">
         <div class="visual-container">
           <Image 
@@ -165,7 +186,7 @@ const {
             height={800}
             sizes="(max-width: 375px) 300px, (max-width: 768px) 500px, (max-width: 1024px) 800px, 1200px"
             />
-          <div class="image-overlay"></div>
+          <!-- <div class="image-overlay"></div> -->
           <div class="floating-elements">
             <!-- LinkedIn -->
             <a href="https://linkedin.com/in/kerim-alihodza-a765aa145" target="_blank" class="social-card linkedin" data-tooltip="LinkedIn">
@@ -192,7 +213,6 @@ const {
       </div>
     </div>
 
-
     <!-- Scroll Indicator -->
     <div class="scroll-indicator" data-astro-animate="fadeInUp" data-astro-delay="1200">
       <div class="scroll-text">Discover More</div>
@@ -215,8 +235,7 @@ const {
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      // Use easing function for more natural animation
-      const easedProgress = 1 - Math.pow(1 - progress, 3); // Cubic ease out
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
       const value = Math.floor(easedProgress * (end - start) + start);
       element.textContent = value + suffix;
       if (progress < 1) {
@@ -249,47 +268,6 @@ const {
     statsObserver.observe(statsContainer);
   }
 
-  // YouTube Shorts Popup functionality
-  const shortsThumbnail = document.getElementById('shortsThumbnail');
-  const watchShortsBtn = document.getElementById('watchShortsBtn');
-  const youtubePopup = document.getElementById('youtubePopup');
-  const closePopup = document.getElementById('closePopup');
-  const popupOverlay = null //document.getElementById('popupOverlay');
-
-  function openPopup() {
-    youtubePopup.classList.add('active');
-    popupOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closePopupFunc() {
-    youtubePopup.classList.remove('active');
-    popupOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  // Event listeners
-  if (shortsThumbnail) {
-    shortsThumbnail.addEventListener('click', openPopup);
-  }
-  if (watchShortsBtn) {
-    watchShortsBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openPopup();
-    });
-  }
-  if (closePopup) {
-    closePopup.addEventListener('click', closePopupFunc);
-  }
-  if (popupOverlay) {
-    popupOverlay.addEventListener('click', closePopupFunc);
-  }
-
-  // Close on escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closePopupFunc();
-  });
-
   // Magnetic button effect
   document.querySelectorAll('.magnetic').forEach(button => {
     button.addEventListener('mousemove', (e) => {
@@ -313,7 +291,52 @@ const {
 </script>
 
 <style>
-  /* Add counting animation styles */
+  /* Hero Badge */
+  .hero-badge {
+    margin-bottom: 1.5rem;
+  }
+  
+  .badge-text {
+    display: inline-block;
+    background: rgba(255, 107, 53, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    color: #FF8C42;
+    padding: 0.5rem 1rem;
+    border-radius: $radius-lg;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: $shadow-md;
+  }
+
+  /* Hero Features */
+  .hero-features {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .feature-icon {
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    margin-top: 0.125rem;
+  }
+
+  .feature-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Stats Section */
   .hero-stats {
     display: flex;
     gap: 2rem;
@@ -328,7 +351,7 @@ const {
   .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #FF6B35, #FF8C42);
+    background: $orange-gradient;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -353,7 +376,35 @@ const {
   }
 
   /* Responsive adjustments */
-  @media (max-width: 768px) {
+  @include mobile {
+    .hero-badge {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    .badge-text {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+    }
+    
+    .hero-features {
+      margin: 1.5rem 0;
+      gap: 0.5rem;
+    }
+    
+    .feature-item {
+      gap: 0.5rem;
+    }
+    
+    .feature-icon {
+      font-size: 1rem;
+    }
+    
+    .feature-text {
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    
     .hero-stats {
       gap: 1rem;
     }
@@ -365,6 +416,16 @@ const {
     
     .stat-label {
       font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .feature-text {
+      font-size: 0.8rem;
+    }
+    
+    .stat-number {
+      font-size: 1.75rem;
     }
   }
 </style>
