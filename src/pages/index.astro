@@ -7,6 +7,7 @@ import ProjectCard from '../components/ProjectCard.astro';
 import BottomCTA from '../components/BottomCTA.astro';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
+import Testimonials from '../components/Testimonials.astro';
 
 // Get service images from content folder
 const servicesImages = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
@@ -194,6 +195,8 @@ const testimonials = [
 <!-- HERO SECTION - CONVERSION FOCUSED -->
 <Hero  />
 
+<Testimonials items={testimonials} />
+
 <!--   title="Your Business Deserves Better Than Empty Marketing Promises"
   subtitle="We deliver measurable revenue growth through strategic digital solutions. 287% average increase in qualified leads for our clients."
   ctaText="Get My Free Growth Audit"
@@ -281,63 +284,6 @@ const testimonials = [
           <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="testimonials-section section-padding">
-  <div class="container">
-    <div class="section-header text-center" data-aos="fade-up">
-      <h2>Client Results Backed By Data</h2>
-      <p class="section-subtitle">Every testimonial includes the actual case study with detailed metrics and strategy</p>
-    </div>
-
-    <div class="testimonials-grid">
-      {testimonials.map((testimonial, index) => (
-        <div class="testimonial-card" data-aos="fade-up" data-aos-delay={index * 200}>
-          <div class="testimonial-content">
-            <div class="verified-badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-              Verified Case Study
-              <div class="stars">
-                {/* 5 stars */}
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} viewBox="0 0 24 24">
-                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-                  </svg>
-                ))}
-              </div>
-            </div>
-            <p class="testimonial-text">"{testimonial.text}"</p>
-            <div class="testimonial-author">
-              <div class="author-image">
-                {testimonial.image ? (
-                  <Image 
-                    src={testimonial.image} 
-                    alt={testimonial.author}
-                    width="50"
-                    height="50"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div class="author-avatar">{testimonial.avatar}</div>
-                )}
-              </div>
-              <div class="author-info">
-                <div class="author-name">{testimonial.author}</div>
-                <div class="author-role">{testimonial.role}</div>
-                <div class="author-company">{testimonial.company}</div>
-              </div>
-            </div>
-            <a href={`/projects/${testimonial.caseStudy}/`} class="case-study-link">
-              Read Detailed Case Study →
-            </a>
-          </div>
-        </div>
-      ))}
     </div>
   </div>
 </section>
