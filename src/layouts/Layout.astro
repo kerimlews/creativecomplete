@@ -79,6 +79,7 @@ const twitterImage = twitterCard.image || service?.data?.featuredImage || defaul
     <meta name="author" content={service?.data?.author || "Creative Complete"} />
     <meta name="keywords" content={service?.data?.tags?.join(', ') || "digital agency, web design, SEO, AI automation, web development, creative complete"} />
     
+
     <!-- Structured Data -->
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -122,6 +123,9 @@ const twitterImage = twitterCard.image || service?.data?.featuredImage || defaul
     <!-- View Transitions API -->
     <meta name="view-transition" content="same-origin" />
     <meta name="msvalidate.01" content="D99B279B604C7863C29C91CAF5DEDD2E" />
+
+    <!-- HOTJAR -->
+    <script src="https://t.contentsquare.net/uxa/be34155e4623d.js" type="text/partytown"></script>
 
     <!-- Google tag (gtag.js) -->
     <script
