@@ -8,8 +8,8 @@ category: "UI-UX / SEO / CRM / Marketing"
 url: https://careconnect.swiss/
 related_articles: ["prepme-automation-saas", "nianave-ecommerce-scaling-case-study"]
 slug: "careconnect-recruitment-automation"
-published: "2024-03-15"
-updated: "2024-03-15"
+published: "2025-12-15"
+updated: "2025-12-15"
 faq:
   - question: "How can SEO help a B2B service business?"
     answer: "SEO isn't for e-commerce only. For B2B, it's about capturing commercial intent - people searching for solutions to expensive problems."

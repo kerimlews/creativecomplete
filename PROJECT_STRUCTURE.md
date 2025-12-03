@@ -14,7 +14,7 @@ creativecomplete-astro/
 │       ├── saas-development.webp      # Service image ⚠️ Need to generate
 │       ├── og-default.webp            # Default OG image ⚠️ Need to generate
 │       └── 📁 blog/                   # Blog post images
-│           └── social-media-2025.webp # Blog image ⚠️ Need to generate
+│           └── social-media-2025-.webp # Blog image ⚠️ Need to generate
 │
 ├── 📁 src/                             # Source code
 │   │
@@ -59,7 +59,7 @@ creativecomplete-astro/
 │   │   │       └── de.md              # German contact ⚠️ Need to create
 │   │   │
 │   │   └── 📁 blog/                   # Blog posts
-│   │       └── 📁 social-media-marketing-2025/
+│   │       └── 📁 social-media-marketing-2025-/
 │   │           ├── en.md              # English blog post ✓ Created
 │   │           ├── hr.md              # Croatian blog post ⚠️ Need to create
 │   │           └── de.md              # German blog post ⚠️ Need to create
@@ -98,7 +98,7 @@ creativecomplete-astro/
    - `/public/images/branding.webp`
    - `/public/images/saas-development.webp`
    - `/public/images/og-default.webp`
-   - `/public/images/blog/social-media-2025.webp`
+   - `/public/images/blog/social-media-2025-.webp`
 
 2. **Create Minimal Page Content** (20 min)
    - `src/content/pages/services/en.md`

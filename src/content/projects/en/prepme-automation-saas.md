@@ -8,8 +8,8 @@ related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas"]
 category: "AI / CRM / Automation"
 url: https://prepme.hr/
 slug: "prepme-automation-saas"
-published: "2024-03-22"
-updated: "2024-03-22"
+published: "2025-12-22"
+updated: "2025-12-22"
 faq:
   - question: "How do I know if my business is ready for automation?"
     answer: "If you have repetitive tasks that take 10+ hours weekly, you're losing money by not automating."

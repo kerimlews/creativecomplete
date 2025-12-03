@@ -49,7 +49,21 @@ export default defineConfig({
 
   integrations: [
 	partytown({ config: { forward: ['dataLayer.push'] } }),
-	sitemap(),
+	sitemap({
+      filter: (page) => {
+        if (page.includes('/sl/')) {
+          return page.includes('google-maps-optimizacija-slovenija');
+        }
+        return true;
+      },
+      i18n: {
+        defaultLocale: 'en', // All urls that don't contain `es` or `fr` after `https://example.com/` will be treated as default locale, i.e. `en`
+        locales: {
+          en: 'en-US', // The `defaultLocale` value must present in `locales` keys
+          sl: 'sl-SI',
+        },
+      },
+  }),
     playformCompress({
       SVG: true,
       Action: true,

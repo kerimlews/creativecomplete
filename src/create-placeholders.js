@@ -29,7 +29,7 @@ const placeholders = [
   { file: 'branding.webp', text: 'Branding', width: 800, height: 600 },
   { file: 'saas-development.webp', text: 'SaaS Dev', width: 800, height: 600 },
   { file: 'og-default.svg', text: 'CreativeComplete', width: 1200, height: 630 },
-  { file: 'blog/social-media-2025.webp', text: 'Social Media 2025', width: 1200, height: 600 }
+  { file: 'blog/social-media-2025-.webp', text: 'Social Media 2025-', width: 1200, height: 600 }
 ];
 
 placeholders.forEach(({ file, text, width, height }) => {

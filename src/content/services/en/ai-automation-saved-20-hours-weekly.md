@@ -16,8 +16,8 @@ delay: 100
 featured: true
 priority: 8
 slug: "ai-automation-saved-20-hours-weekly"
-published: "2024-02-01"
-updated: "2024-02-01"
+published: "2025-12-01"
+updated: "2025-12-01"
 faq:
   - question: "What kind of tasks can AI automate for my business?"
     answer: "Common automations include customer communication, appointment scheduling, invoice processing, data entry, and report generation."

@@ -16,8 +16,8 @@ delay: 160
 featured: true
 priority: 8
 slug: "from-idea-to-10k-mrr-saas-case-study"
-published: "2024-02-08"
-updated: "2024-02-08"
+published: "2025-12-01"
+updated: "2025-12-01"
 faq:
   - question: "Can any business idea be turned into a SaaS?"
     answer: "Most service businesses have unique processes that can be productized. The key is identifying solutions that solve common industry problems."

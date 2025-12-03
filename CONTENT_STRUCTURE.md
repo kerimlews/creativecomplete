@@ -12,7 +12,7 @@ excerpt: "A compelling excerpt that appears in blog listings and social shares"
 author:
   name: "Author Full Name"
   avatar: "AN" # Two initials
-date: "2025-10-28" # YYYY-MM-DD format
+date: "2025--10-28" # YYYY-MM-DD format
 readTime: "X min read"
 image: "/images/blog/post-slug.webp"
 tags: ["Tag 1", "Tag 2", "Tag 3", "Tag 4"]
@@ -158,7 +158,7 @@ Any additional content that doesn't fit the structured sections.
 
 2. **Related Posts**: At the end of sections
    ```markdown
-   For more on this topic, check our [SEO guide](/blog/seo-strategies-2025)
+   For more on this topic, check our [SEO guide](/blog/seo-strategies-2025-)
    ```
 
 3. **Call-to-Action Links**: Converting readers
@@ -213,7 +213,7 @@ Any additional content that doesn't fit the structured sections.
 - Tools
 
 **Trend Tags:**
-- 2025 Trends
+- 2025- Trends
 - Industry News
 - Case Studies
 - Best Practices
@@ -225,9 +225,9 @@ Plan your content:
 ```
 | Date | Post Title | Topic | Tags | Status |
 |------|-----------|-------|------|--------|
-| 2025-10-28 | Social Media 2025 | Marketing | Social, Marketing | Published |
-| 2025-11-04 | Local SEO Guide | SEO | SEO, Local | Draft |
-| 2025-11-11 | Branding Basics | Branding | Branding | Planned |
+| 2025--10-28 | Social Media 2025- | Marketing | Social, Marketing | Published |
+| 2025--11-04 | Local SEO Guide | SEO | SEO, Local | Draft |
+| 2025--11-11 | Branding Basics | Branding | Branding | Planned |
 ```
 
 ## 🎨 Image Requirements

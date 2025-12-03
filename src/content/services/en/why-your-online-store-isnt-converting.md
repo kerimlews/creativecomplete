@@ -16,8 +16,8 @@ delay: 140
 featured: true
 priority: 6
 slug: "why-your-online-store-isnt-converting"
-published: "2024-02-15"
-updated: "2024-02-15"
+published: "2025-02-15"
+updated: "2025-02-15"
 faq:
   - question: "What's a good conversion rate for e-commerce?"
     answer: "Industry averages are 1-3%, but we regularly help clients achieve 4-7% with proper optimization."

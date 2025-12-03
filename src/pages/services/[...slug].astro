@@ -45,9 +45,6 @@ const serviceImages = await Promise.all(Object.entries(images)
     src: image(),
     alt: service.data.title
   })));
-  
-const hasMultipleImages = serviceImages.length > 1;
-const displayImages = hasMultipleImages ? serviceImages.slice(0, 3) : serviceImages;
 
 // Get related articles (you can customize this logic based on your content)
 const allServices = await getCollection('services');

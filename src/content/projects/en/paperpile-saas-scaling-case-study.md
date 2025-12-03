@@ -8,8 +8,8 @@ category: "Saas / Mobile / SEO / Marketing"
 url: https://paperpile.com/
 related_articles: ["fitovision-gym-saas", "prepme-automation-saas"]
 slug: "paperpile-saas-scaling-case-study"
-published: "2024-03-08"
-updated: "2024-03-08"
+published: "2025-12-08"
+updated: "2025-12-08"
 faq:
   - question: "What's the most common technical mistake SaaS startups make?"
     answer: "Building for today's users instead of tomorrow's scale. Technical debt will kill your growth faster than any competitor."

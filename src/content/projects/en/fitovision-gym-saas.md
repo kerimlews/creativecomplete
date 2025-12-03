@@ -8,8 +8,8 @@ category: "Mobile / Web / SEO / Marketing"
 url: https://fitovision.com/
 related_articles: ["paperpile-saas-scaling-case-study", "prepme-automation-saas"]
 slug: "fitovision-gym-saas"
-published: "2024-03-29"
-updated: "2024-03-29"
+published: "2025-12-29"
+updated: "2025-12-29"
 verified: true
 faq:
   - question: "Why is a custom SaaS platform superior to patching together off-the-shelf tools?"

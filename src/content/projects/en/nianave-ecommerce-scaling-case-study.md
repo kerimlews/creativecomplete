@@ -8,8 +8,8 @@ category: "Webshop / Marketing / Payments"
 url: https://nianave.com/
 related_articles: ["prepme-automation-saas", "why-your-online-store-isnt-converting"]
 slug: "nianave-ecommerce-scaling-case-study"
-published: "2024-03-01"
-updated: "2024-03-01"
+published: "2025-12-01"
+updated: "2025-12-01"
 faq:
   - question: "What's the biggest mistake e-commerce stores make when scaling?"
     answer: "Trying to scale before fixing their conversion fundamentals. You can't outrun a broken foundation with more traffic."

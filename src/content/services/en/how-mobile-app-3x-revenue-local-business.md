@@ -16,8 +16,8 @@ delay: 150
 featured: true
 priority: 9
 slug: "how-mobile-app-3x-revenue-local-business"
-published: "2024-02-22"
-updated: "2024-02-22"
+published: "2025-12-01"
+updated: "2025-12-01"
 faq:
   - question: "Do local businesses really need mobile apps?"
     answer: "Businesses with repeat customers see the biggest benefits - fitness, beauty, healthcare, restaurants, and service providers."

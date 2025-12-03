@@ -16,8 +16,8 @@ delay: 130
 featured: true
 priority: 7
 slug: "why-your-beautiful-website-isnt-making-sales"
-published: "2024-01-25"
-updated: "2024-01-25"
+published: "2025-12-01"
+updated: "2025-12-01"
 faq:
   - question: "How long does it take to see results from conversion optimization?"
     answer: "Most clients see measurable improvements within 2-4 weeks after implementing our changes."

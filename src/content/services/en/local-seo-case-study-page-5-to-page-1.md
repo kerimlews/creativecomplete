@@ -16,8 +16,8 @@ delay: 120
 featured: true
 priority: 10
 slug: "local-seo-case-study-page-5-to-page-1"
-published: "2024-01-20"
-updated: "2024-01-20"
+published: "2025-12-01"
+updated: "2025-12-01"
 faq:
   - question: "How long does it take to see results from SEO?"
     answer: "Most clients see initial improvements in 30-60 days, but sustainable dominance takes 3-6 months of consistent effort."

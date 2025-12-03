@@ -94,7 +94,7 @@ public/
 │   ├── saas-development.webp
 │   ├── og-default.webp
 │   └── blog/
-│       └── social-media-2025.webp
+│       └── social-media-2025-.webp
 ```
 
 ### 5. Create Minimal Content (20 minutes)
@@ -201,7 +201,7 @@ cp public/images/placeholder.svg public/images/local-seo.webp
 cp public/images/placeholder.svg public/images/branding.webp
 cp public/images/placeholder.svg public/images/saas-development.webp
 cp public/images/placeholder.svg public/images/og-default.webp
-cp public/images/placeholder.svg public/images/blog/social-media-2025.webp
+cp public/images/placeholder.svg public/images/blog/social-media-2025-.webp
 ```
 
 ### 3. Minimal Pages (5 min)
