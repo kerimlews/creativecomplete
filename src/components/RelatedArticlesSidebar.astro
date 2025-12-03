@@ -7,7 +7,7 @@
     
     <div class="related-articles-list">
         {Astro.props.items.map(article => (
-            <a href={`/projects/${article.slug}/`} class="related-article-card">
+            <a href={`/${Astro.props.id}/${article.slug}/`} class="related-article-card">
                 <span class="article-category">{article.category}</span>
                 <h4 class="article-title">{article.title}</h4>
                 <p class="article-excerpt">{article.description}</p>

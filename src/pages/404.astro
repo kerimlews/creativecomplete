@@ -1,0 +1,112 @@
+---
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section class="error-section">
+    <!-- Optional: Add decorative background illustrations -->
+    <div class="error-illustration error-illustration-left">✨</div>
+    <div class="error-illustration error-illustration-right">🚀</div>
+    
+    <div class="error-content astro-animated astro-zoomIn">
+      <h1 class="error-title">404</h1>
+      <h2 class="error-subtitle">Page Not Found</h2>
+      <p class="error-description">
+        Oops! It seems you've ventured into uncharted territory. 
+        The page you're looking for might have been moved, deleted, 
+        or never existed in the first place.
+      </p>
+      
+      <a href="/" class="home-button">
+        Back to Homepage
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Import the 404 styles if not already imported via SCSS */
+  .error-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 0;
+    position: relative;
+  }
+  
+  .error-content {
+    max-width: 600px;
+    padding: 4rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+  }
+  
+  .error-title {
+    font-size: 8rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 50%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: gradientShift 3s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  .error-subtitle {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2D3748;
+  }
+  
+  .error-description {
+    font-size: 1.1rem;
+    color: #718096;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+  
+  .home-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+    color: white;
+    padding: 1.5rem 3rem;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .home-button:hover {
+    background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  }
+  
+  @media (max-width: 767px) {
+    .error-title { font-size: 5rem; }
+    .error-subtitle { font-size: 1.5rem; }
+    .error-content { padding: 2rem; margin: 1rem; }
+    .home-button { padding: 1.2rem 2rem; }
+  }
+</style>

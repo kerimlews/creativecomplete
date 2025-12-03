@@ -1,0 +1,128 @@
+.error-section {
+  min-height: 80vh;
+  @include flex-center;
+  @include flex-column;
+  text-align: center;
+  padding: $space-3xl 0;
+  position: relative;
+}
+
+.error-content {
+  max-width: 600px;
+  padding: $space-2xl;
+  border-radius: $radius-2xl;
+  @include glass-effect;
+  box-shadow: $shadow-2xl;
+  margin: 0 auto;
+}
+
+.error-title {
+  font-size: 8rem;
+  font-weight: 900;
+  margin-bottom: $space-sm;
+  background: linear-gradient(135deg, $primary 0%, $primary-light 50%, $accent-purple 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: gradientShift 3s ease infinite;
+  
+  @include mobile {
+    font-size: 5rem;
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.error-subtitle {
+  font-size: 2rem;
+  margin-bottom: $space-md;
+  color: $text-dark;
+  
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+.error-description {
+  font-size: 1.1rem;
+  color: $text-light;
+  margin-bottom: $space-xl;
+  line-height: 1.8;
+}
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  background: $primary-gradient;
+  color: $white;
+  padding: $space-md $space-xl;
+  border-radius: $radius-lg;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: $shadow-lg;
+  position: relative;
+  overflow: hidden;
+  @include hover-lift;
+  
+  &:hover {
+    background: $orange-gradient;
+    transform: translateY(-3px);
+    box-shadow: $shadow-xl;
+    
+    .button-icon {
+      transform: translateX(3px);
+    }
+  }
+  
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+.button-icon {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.error-illustration {
+  position: absolute;
+  opacity: 0.03;
+  z-index: -1;
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+  pointer-events: none;
+  
+  @include mobile {
+    display: none;
+  }
+}
+
+.error-illustration-left {
+  left: 5%;
+  top: 20%;
+  animation: astroFloat 6s ease-in-out infinite;
+}
+
+.error-illustration-right {
+  right: 5%;
+  bottom: 20%;
+  animation: astroFloat 6s ease-in-out infinite reverse;
+}
+
+// Add this to your global.scss imports
+// @import './pages/404';
