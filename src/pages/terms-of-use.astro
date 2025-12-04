@@ -10,9 +10,10 @@ const pageDescription = 'Terms and conditions governing your use of Creative Com
 const canonicalUrl = '/terms-of-use/';
 
 const breadcrumbs = [
-  { name: 'Home', url: '/' },
-  { name: 'Terms of Use', url: '/terms-of-use/' }
+  { name: 'Home', url: `${Astro.url.origin}/` },
+  { name: 'Terms of Use', url: `${Astro.url.origin}/terms-of-use/` }
 ];
+
 ---
 
 <Layout 

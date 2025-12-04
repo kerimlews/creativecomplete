@@ -24,7 +24,7 @@ Visit `http://localhost:4321` to see your site!
 
 **Update `astro.config.mjs`:**
 ```javascript
-site: 'https://yourdomain.com', // Change to your domain
+site: 'https://creativecomplete.com', // Change to your domain
 ```
 
 **Update Organization Info in `src/utils/jsonld.ts`:**

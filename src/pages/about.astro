@@ -10,8 +10,8 @@ const pageDescription = 'Learn about Creative Complete - we build custom softwar
 
 // Breadcrumbs
 const breadcrumbs = [
-  { name: 'Home', url: '/' },
-  { name: 'About', url: '/about' }
+  { name: 'Home', url: `${Astro.url.origin}/` },
+  { name: 'About', url: Astro.url.href }
 ];
 
 // JSON-LD structured data

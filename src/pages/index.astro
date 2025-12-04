@@ -6,15 +6,12 @@ import ServiceCard from '../components/ServiceCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import BottomCTA from '../components/BottomCTA.astro';
 import { getCollection } from 'astro:content';
-import { Image } from 'astro:assets';
 import Testimonials from '../components/Testimonials.astro';
 
 // Get service images from content folder
 const servicesImages = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
 const projectsImages = import.meta.glob('/src/images/projects/*.{png,jpg,jpeg,webp}');
 const testImages = import.meta.glob('/src/images/testimonials/*.{png,jpg,jpeg,webp}');
-
-console.log(testImages);
 
 // Function to get project image by slug
 function getServiceImage(slug: string) {

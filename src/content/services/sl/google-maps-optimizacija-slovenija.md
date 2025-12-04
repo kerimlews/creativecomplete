@@ -12,7 +12,7 @@ features: [
   "Strateško ciljanje lokacijskih ključnih besed",
   "Vsebina optimizirana za lokalno iskanje in konverzije"
 ]
-ctaText: "✅ Brezplačna Analiza Vašega SEO Položaja"
+ctaText: "Brezplačna Analiza Vašega SEO Položaja"
 delay: 100
 featured: true
 priority: 9

@@ -10,8 +10,8 @@ const pageDescription = 'Learn how Creative Complete protects your privacy and h
 const canonicalUrl = '/privacy-policy/';
 
 const breadcrumbs = [
-  { name: 'Home', url: '/' },
-  { name: 'Privacy Policy', url: '/privacy-policy/' }
+  { name: 'Home', url: `${Astro.url.origin}/` },
+  { name: 'Privacy Policy', url: `${Astro.url.origin}/privacy-policy/` }
 ];
 ---
 
