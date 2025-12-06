@@ -5,6 +5,9 @@ import BottomCTA from '../../components/BottomCTA.astro';
 import BreadCrumb from '../../components/BreadCrumb.astro';
 import StackedImagesWithPopup from '../../components/StackedImagesWithPopup.astro';
 import RelatedArticlesSidebar from '../../components/RelatedArticlesSidebar.astro';
+import HappyClients from '../../components/HappyClients.astro';
+import { Image } from 'astro:assets';
+import KerimImage from '../../images/hero_old_2.png';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -71,20 +74,26 @@ const relatedArticles = allProjects
           <h1>{project.data.title}</h1>
         </div>
         
-        <div class="service-hero">
-          <div class="service-info">
-            <!-- Remove the h1 from here -->
-            <p class="service-description">{project.data.description}</p>
-            
-            <div class="service-meta">
+        
+        
+        <div class="service-meta">
               <div class="meta-item">
                 <span class="meta-label">Stack</span>
                 <span class="meta-value">{project.data.category}</span>
               </div>
               <div class="meta-item">
-                <span class="meta-label">Author</span>
-                <a class="meta-value" href={`/kerim-alihodza/`}>Kerim Alihodza</a>
+                
+                <a class="meta-value" style="display: flex;" href={`/kerim-alihodza/`}>
+                  <Image src={KerimImage} style="border-radius: 50%;" alt="Kerim Alihodza and Author" width={40} height={50} class="author-image" />
+                  <div style="display: flex; flex-direction: column; margin-left: 0.5rem;">
+                    <span class="meta-label">Author</span>
+                    <span>Kerim Alihodza</span>
+                  </div>
+                </a>
               </div>
+              
+              <HappyClients />
+
               {project.data.stats && project.data.stats.length > 0 && (
                 project.data.stats.map((stat, index) => (
                   <div class="stat" key={index}>
@@ -94,6 +103,12 @@ const relatedArticles = allProjects
                 ))
               )}
             </div>
+
+        <div class="service-hero">
+          <div class="service-info">
+            <!-- Remove the h1 from here -->
+            <p class="service-description">{project.data.description}</p>
+          
 
             <div class="service-actions">
               {project.data.url && (

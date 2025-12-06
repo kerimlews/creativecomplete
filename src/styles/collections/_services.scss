@@ -68,41 +68,7 @@
       margin-bottom: 2rem;
       line-height: 1.6;
     }
-    
-    .service-meta {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-      
-      .meta-item {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        
-        .meta-label {
-          font-size: 0.875rem;
-          color: rgba(255, 255, 255, 0.6);
-        }
-        
-        .meta-value {
-          font-size: 1.125rem;
-          font-weight: 600;
-          color: #FF6B35;
-        }
-      }
-      
-      .featured-badge {
-        background: $orange-gradient;
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 2rem;
-        font-weight: 600;
-        font-size: 0.875rem;
-        align-self: center;
-      }
-    }
-    
+
     .service-actions {
       margin-top: 2rem;
       
@@ -637,10 +603,6 @@
     
     .service-subtitle {
       font-size: 1.25rem;
-    }
-    
-    .service-meta {
-      gap: 1rem;
     }
   }
   

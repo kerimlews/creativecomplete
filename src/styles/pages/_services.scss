@@ -14,113 +14,854 @@
 }
 
 // Hero Section
-.services-hero {
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 140, 66, 0.05) 100%);
+
+// Clean, modern service hero layout
+.service-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: $space-3xl;
+  align-items: start;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-      background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(102, 126, 234, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
-
-  .breadcrumb {
-    @include flex-center;
-    gap: $space-xs;
-    margin-bottom: $space-xl;
-    font-size: 0.9rem;
-    
-    a {
-      color: $text-lighter;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      
-      &:hover {
-        color: $primary-light;
-      }
-    }
-    
-    span {
-      color: $primary;
-      font-weight: 600;
-    }
-  }
-
-  .hero-title {
-    font-size: 4rem;
-    margin-bottom: $space-lg;
-    line-height: 1.1;
-    
-    @include tablet {
-      font-size: 3rem;
-    }
-    
-    @include mobile {
-      font-size: 2.5rem;
-    }
-  }
-
-  .hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: $space-2xl;
-    opacity: 0.9;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    color: $text-lighter;
-    
-    @include mobile {
-      font-size: 1.1rem;
-    }
-  }
-
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  @include tablet {
+    grid-template-columns: 1fr;
     gap: $space-xl;
-    margin-top: $space-2xl;
+  }
+
+  @include mobile {
+    gap: $space-lg;
+  }
+}
+
+.service-info {
+  position: relative;
+  z-index: 2;
+  
+  @include desktop-up {
+    padding-top: $space-sm;
+  }
+}
+
+.service-description {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: $text-light;
+  margin-bottom: $space-xl;
+  max-width: 580px;
+
+  @include mobile {
+    font-size: 1.1rem;
+    margin-bottom: $space-lg;
+  }
+}
+
+// Clean, prominent CTA section
+.service-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-md;
+  width: 100%;
+  margin-top: $space-xl;
+  position: relative;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $space-sm;
+  }
+
+  // Primary CTA - Full emphasis
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-sm;
+    padding: $space-md $space-xl;
+    background: $primary-gradient;
+    color: $white;
+    border: none;
+    border-radius: $radius-lg;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.25);
     
-    @include mobile {
-      grid-template-columns: repeat(2, 1fr);
-      gap: $space-lg;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
+      background: linear-gradient(135deg, lighten($primary, 5%) 0%, $primary 100%);
     }
 
-    .stat {
-      text-align: center;
-      
-      &-number {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: $space-xs;
-        @include text-gradient($orange-gradient);
-        
-        @include mobile {
-          font-size: 2rem;
-        }
-      }
-      
-      &-label {
-        font-size: 0.9rem;
-        opacity: 0.8;
-        color: $text-lighter;
-      }
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(3px);
+    }
+  }
+
+  // Secondary CTA - Clean outline
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-sm;
+    padding: calc($space-md - 1px) $space-xl;
+    background: transparent;
+    color: $primary;
+    border: 1px solid rgba($primary, 0.3);
+    border-radius: $radius-lg;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba($primary, 0.05);
+      border-color: $primary;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(3px);
     }
   }
 }
 
+.service-visual {
+  position: relative;
+  z-index: 2;
+  
+  @include tablet {
+    margin-bottom: $space-lg;
+  }
+
+  img, .stacked-images {
+    border-radius: $radius-xl;
+    box-shadow: $shadow-2xl;
+    transition: transform 0.5s ease;
+    
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Add subtle decorative elements
+.service-hero::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.08) 0%, transparent 70%);
+  top: 20%;
+  right: 5%;
+  z-index: 1;
+  pointer-events: none;
+  
+  @include mobile {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+  }
+}
+
+.service-info {
+  position: relative;
+  z-index: 2;
+  
+  @include desktop-up {
+    padding-top: $space-sm;
+  }
+}
+
+
+.service-description {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: $text-light;
+  margin-bottom: $space-xl;
+  max-width: 580px;
+
+  @include mobile {
+    font-size: 1.1rem;
+    margin-bottom: $space-lg;
+  }
+}
+
+// Clean, prominent CTA section
+.service-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-md;
+  width: 100%;
+  margin-top: $space-xl;
+  position: relative;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $space-sm;
+  }
+
+  // Primary CTA - Full emphasis
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-sm;
+    padding: $space-md $space-xl;
+    background: $primary-gradient;
+    color: $white;
+    border: none;
+    border-radius: $radius-lg;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.25);
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
+      background: linear-gradient(135deg, lighten($primary, 5%) 0%, $primary 100%);
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(3px);
+    }
+  }
+
+  // Secondary CTA - Clean outline
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-sm;
+    padding: calc($space-md - 1px) $space-xl;
+    background: transparent;
+    color: $primary;
+    border: 1px solid rgba($primary, 0.3);
+    border-radius: $radius-lg;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba($primary, 0.05);
+      border-color: $primary;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.service-visual {
+  position: relative;
+  z-index: 2;
+  
+  @include tablet {
+    margin-bottom: $space-lg;
+  }
+
+  img, .stacked-images {
+    border-radius: $radius-xl;
+    box-shadow: $shadow-2xl;
+    transition: transform 0.5s ease;
+    
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Add subtle decorative elements
+.service-hero::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.08) 0%, transparent 70%);
+  top: 20%;
+  right: 5%;
+  z-index: 1;
+  pointer-events: none;
+  
+  @include mobile {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+  }
+}
+
+.service-info {
+  position: relative;
+  z-index: 2;
+  
+  @include desktop-up {
+    padding-top: $space-sm;
+  }
+}
+
+.service-description {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: $text-light;
+  margin-bottom: $space-xl;
+  max-width: 580px;
+
+  @include mobile {
+    font-size: 1.1rem;
+    margin-bottom: $space-lg;
+  }
+}
+
+// Clean, prominent CTA section
+.service-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-md;
+  width: 100%;
+  margin-top: $space-xl;
+  position: relative;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $space-sm;
+  }
+
+  // Primary CTA - Full emphasis
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-sm;
+    padding: $space-md $space-xl;
+    background: $primary-gradient;
+    color: $white;
+    border: none;
+    border-radius: $radius-lg;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.25);
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
+      background: linear-gradient(135deg, lighten($primary, 5%) 0%, $primary 100%);
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(3px);
+    }
+  }
+
+  // Secondary CTA - Clean outline
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-sm;
+    padding: calc($space-md - 1px) $space-xl;
+    background: transparent;
+    color: $primary;
+    border: 1px solid rgba($primary, 0.3);
+    border-radius: $radius-lg;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba($primary, 0.05);
+      border-color: $primary;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.service-visual {
+  position: relative;
+  z-index: 2;
+  
+  @include tablet {
+    margin-bottom: $space-lg;
+  }
+
+  img, .stacked-images {
+    border-radius: $radius-xl;
+    box-shadow: $shadow-2xl;
+    transition: transform 0.5s ease;
+    
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Add subtle decorative elements
+.service-hero::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.08) 0%, transparent 70%);
+  top: 20%;
+  right: 5%;
+  z-index: 1;
+  pointer-events: none;
+  
+  @include mobile {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+  }
+}
+
+.service-info {
+  position: relative;
+  z-index: 2;
+  
+  @include desktop-up {
+    padding-right: $space-xl;
+  }
+
+  @include tablet {
+    order: 2;
+  }
+}
+
+.service-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: $text-light;
+  margin-bottom: $space-lg;
+  max-width: 600px;
+
+  @include mobile {
+    font-size: 1.1rem;
+    margin-bottom: $space-md;
+  }
+}
+
+// Full-width CTA without background
+.service-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-md;
+  width: 100%;
+  margin-top: $space-xl;
+
+  @include mobile {
+    flex-direction: column;
+    gap: $space-sm;
+    margin-top: $space-lg;
+  }
+
+  // Primary CTA - Full width variant
+  .cta-primary {
+    flex: 1;
+    min-width: 0;
+    background: $primary-gradient;
+    color: $white;
+    border: none;
+    padding: $space-md $space-xl;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: $radius-lg;
+    text-decoration: none;
+    @include flex-center;
+    gap: $space-sm;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+      background: linear-gradient(135deg, $primary-light 0%, $primary 100%);
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    &:hover svg {
+      transform: translateX(4px);
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: $space-md;
+      font-size: 1rem;
+    }
+  }
+
+  // Secondary CTA - Full width variant
+  .cta-secondary {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    color: $primary;
+    border: 2px solid rgba($primary, 0.3);
+    padding: calc($space-md - 2px) $space-xl;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: $radius-lg;
+    text-decoration: none;
+    @include flex-center;
+    gap: $space-sm;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba($primary, 0.05);
+      border-color: $primary;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.15);
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    &:hover svg {
+      transform: translateX(4px);
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: calc($space-md - 2px);
+      font-size: 1rem;
+    }
+  }
+}
+
+.service-visual {
+  position: relative;
+  z-index: 2;
+  @include flex-center;
+  
+  @include tablet {
+    order: 1;
+  }
+
+  // Add subtle animation to the visual area
+  img, .stacked-images {
+    border-radius: $radius-xl;
+    box-shadow: $shadow-2xl;
+    transition: transform 0.5s ease;
+    
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Floating element moved to not interfere
+.service-hero::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+  bottom: 10%;
+  left: 5%;
+  z-index: 1;
+  animation: astroFloat 10s ease-in-out infinite;
+  
+  @include mobile {
+    width: 150px;
+    height: 150px;
+    bottom: 5%;
+  }
+}
+
+// Ensure content has proper spacing from top
+.service-hero > .service-info {
+  position: relative;
+  padding-top: 60px; // Space for absolute positioned meta
+
+  @include tablet {
+    padding-top: 0;
+  }
+}
+
+.service-info {
+  position: relative;
+  z-index: 2;
+  
+  @include desktop-up {
+    padding-right: $space-xl;
+  }
+
+  @include tablet {
+    order: 2;
+  }
+}
+
+.service-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: $text-light;
+  margin-bottom: $space-xl;
+  max-width: 600px;
+
+  @include mobile {
+    font-size: 1.1rem;
+  }
+}
+
+.service-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-lg;
+  border-bottom: 2px solid rgba($primary, 0.1);
+
+  @include mobile {
+    gap: $space-md;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+
+    .meta-label {
+      font-size: 0.875rem;
+      color: $text-lighter;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .meta-value {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: $primary;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary-light;
+      }
+    }
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-xs;
+
+    &-value {
+      font-size: 2rem;
+      font-weight: 700;
+      @include text-gradient($primary-gradient);
+      line-height: 1;
+
+      @include mobile {
+        font-size: 1.75rem;
+      }
+    }
+
+    &-label {
+      font-size: 0.875rem;
+      color: $text-lighter;
+      text-align: center;
+    }
+  }
+}
+
+// CTA Section - Fixed Positioning for Visibility
+.service-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-md;
+  align-items: center;
+  position: sticky;
+  top: $space-xl;
+  backdrop-filter: blur(10px);
+  padding: $space-lg;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-lg;
+  margin-top: $space-2xl;
+  border: 1px solid rgba($primary, 0.1);
+  
+  @include tablet {
+    position: relative;
+    top: 0;
+    margin-top: $space-xl;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: $space-sm;
+    padding: $space-md;
+  }
+
+  // Primary CTA - Make it stand out
+  .cta-primary {
+    flex: 1;
+    min-width: 200px;
+    background: $primary-gradient;
+    color: $white;
+    border: none;
+    padding: $space-lg $space-xl;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: $radius-lg;
+    text-decoration: none;
+    @include flex-center;
+    gap: $space-sm;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+      background: linear-gradient(135deg, $primary-light 0%, $primary 100%);
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(4px);
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: $space-md $space-lg;
+    }
+  }
+
+  // Secondary CTA
+  .cta-secondary {
+    flex: 1;
+    min-width: 200px;
+    background: transparent;
+    color: $primary;
+    border: 2px solid $primary;
+    padding: calc($space-lg - 2px) $space-xl;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: $radius-lg;
+    text-decoration: none;
+    @include flex-center;
+    gap: $space-sm;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: rgba($primary, 0.1);
+      transform: translateY(-3px);
+      box-shadow: $shadow-md;
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(4px) translateY(-2px);
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: calc($space-md - 2px) $space-lg;
+    }
+  }
+}
+
+.service-visual {
+  position: relative;
+  z-index: 2;
+  @include flex-center;
+  
+  @include tablet {
+    order: 1;
+  }
+
+  // Add subtle animation to the visual area
+  img, .stacked-images {
+    border-radius: $radius-xl;
+    box-shadow: $shadow-2xl;
+    transition: transform 0.5s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+// Add a floating element for visual interest
+.service-hero::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+  top: 20%;
+  right: 10%;
+  z-index: 1;
+  animation: astroFloat 8s ease-in-out infinite;
+  
+  @include mobile {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    right: 5%;
+  }
+}
 
 // Services Grid Section
 .services-grid-section {
@@ -445,40 +1186,6 @@
         color: $text-lighter;
         margin-bottom: $space-xl;
         line-height: 1.6;
-      }
-
-      .service-meta {
-        @include flex-center;
-        gap: $space-xl;
-        margin-bottom: $space-xl;
-        flex-wrap: wrap;
-        
-        .meta-item {
-          text-align: center;
-          
-          .meta-label {
-            display: block;
-            font-size: 0.9rem;
-            color: $text-lighter;
-            margin-bottom: $space-xs;
-          }
-          
-          .meta-value {
-            display: block;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: $white;
-          }
-        }
-
-        .featured-badge {
-          background: $primary-gradient;
-          color: $white;
-          padding: $space-xs $space-md;
-          border-radius: $radius-sm;
-          font-size: 0.8rem;
-          font-weight: 600;
-        }
       }
 
       .service-actions {
