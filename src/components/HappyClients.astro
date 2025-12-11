@@ -1,10 +1,31 @@
+---
+export interface Props {
+  starsCount?: number;
+  ratingPrefix?: string;
+  rating?: string;
+  ratingMiddleText?: string;
+  clientsCount?: string;
+  ratingPrefix2?: string;
+}
+
+const {
+  starsCount = 5,
+  ratingPrefix = "Rate",
+  rating = "5.0",
+  ratingMiddleText = "by",
+  clientsCount = "30+",
+  ratingPrefix2 = "Happy Clients"
+} = Astro.props;
+
+// Generate stars array
+const stars = Array.from({ length: starsCount }, () => "★");
+---
+
 <div class="hero-social-proof">
     <div class="stars-container">
-    <span class="star">★</span>
-    <span class="star">★</span>
-    <span class="star">★</span>
-    <span class="star">★</span>
-    <span class="star">★</span>
+    {stars.map((star) => (
+      <span class="star">{star}</span>
+    ))}
     </div>
-    <span class="rating-text">Rate <strong>5.0</strong> by <strong>30+</strong> Happy Clients</span>
+    <span class="rating-text">{ratingPrefix} <strong>{rating}</strong> {ratingMiddleText} <strong>{clientsCount}</strong> {ratingPrefix2}</span>
 </div>

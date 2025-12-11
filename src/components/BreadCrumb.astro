@@ -1,11 +1,6 @@
 <nav class="breadcrumb">
     {Astro.props.items.map((bread: { url: string; name: string }, index) => index === Astro.props.items.length - 1 ? (
-    <span style="
-        max-width: 150px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    ">{bread.name}</span> 
+    <span>{bread.name}</span> 
     ) : (
     <><a href={bread.url}>{bread.name}</a> / </>
     ))}
