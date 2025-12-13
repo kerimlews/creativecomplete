@@ -303,20 +303,6 @@
   }
 }
 
-
-.step-number {
-  font-size: 3rem;
-  font-weight: 700;
-  @include text-gradient($primary-gradient);
-  flex-shrink: 0;
-  line-height: 1;
-  
-  @include mobile {
-    font-size: 2.5rem;
-    align-self: flex-start;
-  }
-}
-
 .step-content {
   flex: 1;
   

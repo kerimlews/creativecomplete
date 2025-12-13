@@ -83,17 +83,17 @@ const authorSchema = z.object({
 // });
 
 const authors = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/authors' }),
+  loader: glob({ pattern: 'en/**/*.md', base: './src/content/authors' }),
   //schema: authorSchema,
 });
 
 const projects = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
+  loader: glob({ pattern: 'en/**/*.md', base: './src/content/projects' }),
   //schema: projectSchema,
 });
 
 const services = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/services' }),
+  loader: glob({ pattern: 'en/**/*.md', base: './src/content/services' }),
   //schema: serviceSchema,
 });
 

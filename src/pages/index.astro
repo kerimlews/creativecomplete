@@ -2,32 +2,14 @@
 // CORRECTED DYNAMIC IMAGE IMPORTS FOR PROJECTS
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import Process from '../components/Process.astro';
+import Services from '../components/Services.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import BottomCTA from '../components/BottomCTA.astro';
 import { getCollection } from 'astro:content';
 import Testimonials from '../components/Testimonials.astro';
-
-// Get service images from content folder
-const servicesImages = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
-const projectsImages = import.meta.glob('/src/images/projects/*.{png,jpg,jpeg,webp}');
-const testImages = import.meta.glob('/src/images/testimonials/*.{png,jpg,jpeg,webp}');
-
-// Function to get project image by slug
-function getServiceImage(slug: string) {
-  const imagePath = `/src/images/services/${slug}.png`;  
-  return servicesImages[imagePath]();
-}
-
-function getProjectImage(slug: string) {  
-  const imagePath = `/src/images/projects/${slug}.png`;    
-  return projectsImages[imagePath]();
-}
-
-function getTestimonalImage(slug: string) {  
-  const imagePath = `/src/images/testimonials/${slug}.png`;    
-  return testImages[imagePath]();
-}
+import { getProjectImage, getServiceImage, getTestimonalImage, testimonials } from '../utils/constants';
 
 // SERVICE DATA WITH CASE STUDY INTEGRATION
 const SERVICES_DATA = [
@@ -45,7 +27,7 @@ const SERVICES_DATA = [
     ctaText: "Get My Free SEO Audit",
     delay: 100,
     caseStudy: {
-      slug: "local-seo-case-study-page-5-to-page-1",
+      slug: "local-seo-case-study-page-5-to-page",
       results: "47 new clients in 90 days for plumbing company"
     }
   },
@@ -148,39 +130,41 @@ const projects = (await getCollection('projects')).map((project) => {
   };
 });
 
-// TESTIMONIALS DIRECTLY LINKED TO CASE STUDIES
-const testimonials = [
-  {
-    text: "I'm impressed by how seriously they take every project. They found the most cost-effective solution that replaced 7 different tools we were using - mobile app, WDMS, SaaS platform, and landing page all in one.",
-    author: "Matej Poznic",
-    role: "Founder",
-    company: "Fitovision",
-    avatar: "MP",
-    image: getTestimonalImage("matej-poznic"), // Add image path
-    caseStudy: "fitovision-gym-saas",
-    verified: true
-  },
-  {
-    text: "They automated our entire order processing system. What used to take hundreds of hours monthly now runs automatically. Zero stress, zero manual work - everything from Shopify orders to complex CSV files is handled flawlessly.",
-    author: "Tomislav Bratunic",
-    role: "Owner", 
-    company: "PrepMe",
-    avatar: "TB",
-    // image: "/images/testimonials/tomislav-bratunic.jpg", // Add image path
-    caseStudy: "prepme-automation-saas",
-    verified: true
-  },
-  {
-    text: "Wir sind beeindruckt von der Detailgenauigkeit und Pünktlichkeit während des gesamten Prozesses. Das Team hat unser Recruitment-System komplett automatisiert und die Effizienz massiv gesteigert.",
-    author: "Alisa Murtezi",
-    role: "Geschäftsführerin",
-    company: "CareConnect",
-    avatar: "AM",
-    image: getTestimonalImage("alisa-murtezi"), // Add image path
-    caseStudy: "careconnect-recruitment-automation", 
-    verified: true
+const TESTIMONIALS = testimonials.map(t => ({ ...t, image: t.image ? getTestimonalImage(t.image) : null }));
+
+// Merge testimonials with projects - match by caseStudy slug or create fake project
+const mergedTestimonialsWithProjects = TESTIMONIALS.map((testimonial) => {
+  // Try to find matching project by caseStudy slug
+  const matchingProject = projects.find(p => p.slug === testimonial.caseStudy);
+  
+  if (matchingProject) {
+    return {
+      ...testimonial,
+      project: matchingProject
+    };
   }
-];
+  
+  // Create fake project with real name if no match found
+  const fakeProject = {
+    title: `How We Engineered ${testimonial.company} Platform`,
+    description: testimonial.text.substring(0, 150) + '...',
+    slug: testimonial.caseStudy || testimonial.company.toLowerCase().replace(/\s+/g, '-'),
+    category: "UI-UX / SEO / CRM / Marketing",
+    image: testimonial.image || null,
+    featured: false,
+    stats: [
+      { value: "287%", label: "Growth" },
+      { value: "90 Days", label: "Results" }
+    ],
+    lang: 'en' as const
+  };
+  
+  return {
+    ...testimonial,
+    project: fakeProject
+  };
+});
+
 ---
 
 <Layout 
@@ -192,21 +176,12 @@ const testimonials = [
 <!-- HERO SECTION - CONVERSION FOCUSED -->
 <Hero  />
 
-<Testimonials items={testimonials} />
+<Process />
 
-<!--   title="Your Business Deserves Better Than Empty Marketing Promises"
-  subtitle="We deliver measurable revenue growth through strategic digital solutions. 287% average increase in qualified leads for our clients."
-  ctaText="Get My Free Growth Audit"
-  ctaHref="/contact?source=hero-audit"
-  secondaryCtaText="See Real Case Studies →"
-  secondaryCtaHref="/projects"
-  stats={[
-    { number: "287%", label: "Avg. Lead Increase" },
-    { number: "47", label: "New Clients in 90 Days" },
-    { number: "3.4%", label: "Avg. Conversion Rate" },
-    { number: "20+", label: "Hours Saved Weekly" }
-  ]} -->
-<!-- SERVICES SECTION -->
+<Services />
+
+<Testimonials items={mergedTestimonialsWithProjects} />
+
 <section id="services" class="services-section section-padding">
   <div class="container">
     <div class="section-header text-center" data-aos="fade-up">
@@ -217,7 +192,6 @@ const testimonials = [
     <div class="services-grid stagger-children">
       {SERVICES_DATA.map((service, index) => (
         <ServiceCard
-          key={service.slug}
           image={service.image}
           title={service.title}
           description={service.description}
@@ -225,65 +199,12 @@ const testimonials = [
           ctaText={service.ctaText}
           delay={service.delay}
           url={`/services/${service.caseStudy.slug}`}
-          caseStudy={service.caseStudy}
-          showResults={true}
         />
       ))}
     </div>
   </div>
 </section>
 
-<!-- PROJECTS SECTION - WITH CORRECT IMAGE PATHS -->
-<section id="projects" class="projects-section section-padding bg-light">
-  <div class="container">
-    <div class="section-header text-center" data-aos="fade-up">
-      <h2>Verified Case Studies With Real Metrics</h2>
-      <p class="section-subtitle">Every project has a detailed case study showing exactly how we achieved these results</p>
-    </div>
-
-    <div class="projects-carousel">
-      <div class="carousel-container" id="carouselContainer">
-        {projects.map((project, index) => (
-          <div class="carousel-slide" data-aos="fade-up" data-aos-delay={index * 200} key={project.slug}>
-            <ProjectCard
-              project={project}
-              showVerification={true}
-              showCaseStudyLink={true}
-            />
-          </div>
-        ))}
-      </div>
-      
-      <div class="carousel-nav">
-        <button class="carousel-btn" id="prevBtn" aria-label="Previous project">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <button class="carousel-btn" id="nextBtn" aria-label="Next project">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </div>
-      
-      <div class="carousel-dots" id="carouselDots">
-        {projects.map((_, index) => (
-          <div class={`carousel-dot ${index === 0 ? 'active' : ''}`} data-index={index}></div>
-        ))}
-      </div>
-    </div>
-
-    <div class="view-all text-center">
-      <a href="/services/" class="view-all-btn">
-        Explore All Case Studies
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- FINAL CTA -->
 <BottomCTA 
@@ -303,64 +224,3 @@ const testimonials = [
   showValueProps={false}
 />
 </Layout>
-
-<script>
-// CAROUSEL CODE
-document.addEventListener('DOMContentLoaded', function() {
-  const carouselContainer = document.getElementById('carouselContainer');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const dots = document.querySelectorAll('.carousel-dot');
-  
-  let currentIndex = 0;
-  const totalSlides = document.querySelectorAll('.carousel-slide').length;
-  let autoAdvance;
-  
-  function updateCarousel() {
-    carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    
-    dots.forEach((dot, index) => {
-      dot.classList.toggle('active', index === currentIndex);
-    });
-  }
-  
-  function startAutoAdvance() {
-    autoAdvance = setInterval(() => {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateCarousel();
-    }, 8000);
-  }
-  
-  function stopAutoAdvance() {
-    clearInterval(autoAdvance);
-  }
-  
-  prevBtn.addEventListener('click', () => {
-    stopAutoAdvance();
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-    startAutoAdvance();
-  });
-  
-  nextBtn.addEventListener('click', () => {
-    stopAutoAdvance();
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateCarousel();
-    startAutoAdvance();
-  });
-  
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      stopAutoAdvance();
-      currentIndex = parseInt(dot.getAttribute('data-index'));
-      updateCarousel();
-      startAutoAdvance();
-    });
-  });
-  
-  carouselContainer.addEventListener('mouseenter', stopAutoAdvance);
-  carouselContainer.addEventListener('mouseleave', startAutoAdvance);
-  
-  startAutoAdvance();
-});
-</script>

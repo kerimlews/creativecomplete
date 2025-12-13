@@ -1,7 +1,7 @@
 ---
 title: "From Idea to $10k MRR: How We Built a SaaS for a Local Business"
 subtitle: "Turning a local service company's internal tool into a profitable SaaS product"
-image: "/images/saas-case-study.jpg"
+image: "local-seo-case-study-page-5-to-page"
 author: "kerim-alihodza"
 category: "saas-development"
 description: "Discover how we transformed a local business's internal software into a $10k/month SaaS product. Step-by-step case study."

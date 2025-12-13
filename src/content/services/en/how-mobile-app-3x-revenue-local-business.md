@@ -1,7 +1,7 @@
 ---
 title: "How a Mobile App 3X'd Revenue for a Local Service Business"
 subtitle: "The surprising way a simple app transformed customer loyalty and repeat business"
-image: "/images/mobile-app-case-study.jpg"
+image: "local-seo-case-study-page-5-to-page"
 author: "kerim-alihodza"
 category: "mobile-development"
 description: "Discover how a local fitness studio used a custom mobile app to triple revenue and reduce customer churn. Real case study."

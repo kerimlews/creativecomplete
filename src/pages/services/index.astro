@@ -7,13 +7,15 @@ import BottomCTA from '../../components/BottomCTA.astro';
 const images = await import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
 
 // Function to get project image by slug
-function getImage(slug) {
+function getImage(slug: string) {
+  console.log(slug);
+  
   const imagePath = `/src/images/services/${slug}.png`;  
   return images[imagePath]();
 }
 
 // Get all services
-const services = (await getCollection('services')).map(s => ({ ...s, image: getImage(s.id)}));
+const services = (await getCollection('services')).map(s => ({ ...s, image: getImage(s.data.image)}));
 
 // Sort services by priority (highest first) then featured
 const sortedServices = services.toSorted((a, b) => {
@@ -194,7 +196,7 @@ const breadcrumbs = [
             <div class="teaser-content">
               <h3>From Page 5 to #1 in 90 Days</h3>
               <p>Local plumbing company achieved 47 new clients through strategic SEO implementation.</p>
-              <a href="/services/local-seo-case-study-page-5-to-page-1/" class="teaser-link">
+              <a href="/services/local-seo-case-study-page-5-to-page/" class="teaser-link">
                 Read Case Study →
               </a>
             </div>

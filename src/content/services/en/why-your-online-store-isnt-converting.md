@@ -1,7 +1,7 @@
 ---
 title: "Why Your Online Store Isn't Converting (5 Fixes We Implement)"
 subtitle: "How we increased e-commerce conversions by 185% for a specialty food business"
-image: "/images/ecommerce-conversion-case-study.jpg"
+image: "why-your-online-store-isnt-converting"
 author: "kerim-alihodza"
 category: "ecommerce"
 description: "Discover the 5 conversion killers hurting your online store and how to fix them. Real case study with 185% conversion increase."

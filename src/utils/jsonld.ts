@@ -1,4 +1,5 @@
 // JSON-LD Schema generation utilities
+import { ORGANIZATION } from './organization';
 
 export interface Organization {
   name: string;
@@ -162,18 +163,28 @@ export function generateServiceSchema(service: {
   };
 }
 
-export function generateServiceJsonLd(service) {
+export function generateServiceJsonLd(service: { data: { title: string; description: string; category?: string }; id: string; slug?: string }) {
+  const serviceUrl = `https://creativecomplete.com/services/${service.slug || service.id}`;
+  
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": service.data.title,
     "description": service.data.description,
+    "url": serviceUrl,
     "provider": {
       "@type": "Organization",
-      "name": "Creative Complete",
-      "url": "https://creativecomplete.com"
+      "name": ORGANIZATION.name,
+      "url": ORGANIZATION.url,
+      "logo": {
+        "@type": "ImageObject",
+        "url": ORGANIZATION.logo
+      }
     },
-    "areaServed": "Worldwide",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Worldwide"
+    },
     "serviceType": service.data.category || "Digital Service",
     "offers": {
       "@type": "Offer",
@@ -182,34 +193,37 @@ export function generateServiceJsonLd(service) {
   };
 }
 
-export function generateBlogPostJsonLd(blog) {
+export function generateBlogPostJsonLd(blog: { data: { title: string; description: string; published: string; updated?: string; author: string }; slug: string }) {
+  const blogUrl = `https://creativecomplete.com/blogs/${blog.slug}`;
+  
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": blog.data.title,
     "description": blog.data.description,
     "datePublished": blog.data.published,
-    "dateModified": blog.data.updated,
+    "dateModified": blog.data.updated || blog.data.published,
     "author": {
       "@type": "Person",
       "name": blog.data.author
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Creative Complete",
+      "name": ORGANIZATION.name,
       "logo": {
         "@type": "ImageObject",
-        "url": "https://creativecomplete.com/logo.png"
+        "url": ORGANIZATION.logo
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://creativecomplete.com/blogs/${blog.slug}`
-    }
+      "@id": blogUrl
+    },
+    "url": blogUrl
   };
 }
 
-export function generateFAQJsonLd(faqs) {
+export function generateFAQJsonLd(faqs: FAQItem[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -225,7 +239,7 @@ export function generateFAQJsonLd(faqs) {
 }
 
 // Enhanced JSON-LD generators
-export function generateBreadcrumbJsonLd(breadcrumbs) {
+export function generateBreadcrumbJsonLd(breadcrumbs: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -238,35 +252,45 @@ export function generateBreadcrumbJsonLd(breadcrumbs) {
   };
 }
 
-export function generateProjectJsonLd(project) {
+export function generateProjectJsonLd(project: { data: { title: string; description: string; published: string; category?: string }; slug: string; id: string }) {
+  const projectUrl = `https://creativecomplete.com/projects/${project.slug || project.id}`;
+  
   return {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
+    "@id": projectUrl,
     "name": project.data.title,
     "description": project.data.description,
-    "url": `https://creativecomplete.com/projects/${project.slug}`,
-    "author": {
+    "url": projectUrl,
+    "creator": {
       "@type": "Organization",
-      "name": "Creative Complete"
+      "name": ORGANIZATION.name,
+      "url": ORGANIZATION.url
     },
-    "datePublished": project.data.published
+    "datePublished": project.data.published,
+    ...(project.data.category && {
+      "genre": project.data.category
+    })
   };
 }
 
-export function generatePersonJsonLd(author) {
+export function generatePersonJsonLd(author: { data: { name: string; role: string; bio: string; image?: string; social?: Record<string, string> }; slug: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": author.data.name,
     "jobTitle": author.data.role,
     "description": author.data.bio,
-    "image": author.data.image,
+    ...(author.data.image && { "image": author.data.image }),
     "url": `https://creativecomplete.com/${author.slug}`,
-    "sameAs": Object.values(author.data.social || {})
+    ...(author.data.social && { "sameAs": Object.values(author.data.social) })
   };
 }
 
-// Add this to your existing jsonld.ts file
+/**
+ * Generate JSON-LD for About page
+ * Uses WebPage type (AboutPage is not a valid Schema.org type)
+ */
 export function generateAboutPageJsonLd(aboutData: {
   name: string;
   description: string;
@@ -280,20 +304,105 @@ export function generateAboutPageJsonLd(aboutData: {
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
+    "@type": "WebPage",
+    "@id": aboutData.url,
     "name": aboutData.name,
     "description": aboutData.description,
     "url": aboutData.url,
     "mainEntity": {
       "@type": "Organization",
       "name": aboutData.name,
+      "url": ORGANIZATION.url,
+      "logo": {
+        "@type": "ImageObject",
+        "url": ORGANIZATION.logo
+      },
       "foundingDate": aboutData.foundingDate,
       "founder": {
         "@type": "Person",
         "name": aboutData.founder.name,
         "url": aboutData.founder.url
       },
-      "serviceType": aboutData.services
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": aboutData.services.map((service, index) => ({
+          "@type": "Offer",
+          "position": index + 1,
+          "itemOffered": {
+            "@type": "Service",
+            "name": service
+          }
+        }))
+      }
+    }
+  };
+}
+
+/**
+ * Generate Organization JSON-LD schema
+ * Should be included on homepage and key pages
+ */
+export function generateOrganizationJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${ORGANIZATION.url}#organization`,
+    "name": ORGANIZATION.name,
+    "url": ORGANIZATION.url,
+    "logo": {
+      "@type": "ImageObject",
+      "url": ORGANIZATION.logo
+    },
+    "description": ORGANIZATION.description,
+    "foundingDate": ORGANIZATION.foundingDate,
+    "founder": {
+      "@type": "Person",
+      "name": ORGANIZATION.founder.name,
+      "url": ORGANIZATION.founder.url
+    },
+    ...(ORGANIZATION.contactPoint && {
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": ORGANIZATION.contactPoint.telephone,
+        "contactType": ORGANIZATION.contactPoint.contactType,
+        "email": ORGANIZATION.contactPoint.email
+      }
+    }),
+    ...(ORGANIZATION.address && {
+      "address": {
+        "@type": "PostalAddress",
+        ...ORGANIZATION.address
+      }
+    }),
+    ...(ORGANIZATION.sameAs && {
+      "sameAs": ORGANIZATION.sameAs
+    })
+  };
+}
+
+/**
+ * Generate WebSite JSON-LD schema for homepage
+ */
+export function generateWebSiteJsonLd(siteUrl: string, languages: string[] = ['en', 'sl', 'de', 'hr']) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}#website`,
+    "url": siteUrl,
+    "name": ORGANIZATION.name,
+    "description": ORGANIZATION.description,
+    "publisher": {
+      "@id": `${ORGANIZATION.url}#organization`
+    },
+    "inLanguage": languages,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${siteUrl}/search?q={search_term_string}`
+      },
+      "query-input": "required name=search_term_string"
     }
   };
 }

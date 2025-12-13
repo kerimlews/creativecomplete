@@ -1,7 +1,7 @@
 ---
 title: "Lokalni SEO Slovenija: Kako Smo Podjetje Pospeli na 1. Mesto Google v 90 Dneh"
 subtitle: "Strategija, ki Prinaša Stranke: 47 Novih Strank v 3 Mesecih z Lokalnim SEO"
-image: "/images/local-seo-case-study-page-5-to-page-1.png"
+image: "why-your-online-store-isnt-converting"
 author: "kerim-alihodza"
 category: "digitalni-marketing"
 description: "Primer študije: Kako je lokalno podjetje z optimizacijo lokalnega SEO, Google Maps in Google Business Profile pridobilo 47 novih strank v 90 dneh. Odkrijte ključne korake za uspeh na slovenskem trgu."

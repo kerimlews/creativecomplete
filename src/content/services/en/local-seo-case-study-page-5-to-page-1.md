@@ -1,7 +1,7 @@
 ---
 title: "How We Took a Local Business From Google Page 5 to #1 in 90 Days"
 subtitle: "The exact SEO strategy that generated 47 new customers in 3 months"
-image: "/images/seo-case-study.jpg"
+image: "local-seo-case-study-page-5-to-page"
 author: "kerim-alihodza"
 category: "seo"
 description: "Discover how we helped a local service business dominate Google search results and get 47 new customers in 90 days using strategic SEO."
@@ -15,7 +15,7 @@ ctaText: "Get Free SEO Strategy Session"
 delay: 120
 featured: true
 priority: 10
-slug: "local-seo-case-study-page-5-to-page-1"
+slug: "why-your-online-store-isnt-converting-1"
 published: "2025-12-01"
 updated: "2025-12-01"
 faq:

@@ -6,6 +6,8 @@ const { images } = Astro.props;
 const hasMultipleImages = images.length > 1;
 const displayImages = hasMultipleImages ? images.slice(0, 3) : images;
 
+console.log({images});
+
 ---
 
 <script src="../scripts/imagePopup.ts"></script>

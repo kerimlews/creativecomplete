@@ -1,0 +1,1116 @@
+---
+import { Image } from 'astro:assets';
+
+// Import a video call image - using one of the hero images as placeholder
+const videoCallImages = import.meta.glob('/src/images/hero/*.{jpg,jpeg,png}', { eager: true });
+const videoCallImage = Object.values(videoCallImages)[0] as any;
+
+export interface Props {
+  subtitle?: string;
+  title?: string;
+  steps?: Array<{
+    number: string;
+    title: string;
+    description: string;
+    graphic?: string;
+  }>;
+}
+
+const {
+  subtitle = "STARTING IS EASY",
+  title = "HOW DOES IT WORK?",
+  steps = [
+    {
+      number: "STEP 1",
+      title: "You book a free intro call",
+      description: "We learn more about your business and find the best design solution that fits your needs and budget."
+    },
+    {
+      number: "STEP 2",
+      title: "We assign an A+ design team",
+      description: "To handle everything product-related, so you can focus on what you do best, growing your business."
+    },
+    {
+      number: "STEP 3",
+      title: "We deliver work daily",
+      description: "You'll see daily updates as we work through your backlog. We're your partner every step of the way."
+    }
+  ]
+} = Astro.props;
+---
+
+<section class="process-section" id="process-section">
+  <!-- Floating Decorative Elements -->
+  <div class="floating-elements">
+    <div class="floating-circle circle-1"></div>
+    <div class="floating-circle circle-2"></div>
+    <div class="floating-circle circle-3"></div>
+    <div class="floating-star star-1">✨</div>
+    <div class="floating-star star-2">⭐</div>
+    <div class="floating-star star-3">💫</div>
+  </div>
+
+  <!-- Spiral Arrow Connector -->
+  <div class="spiral-connector">
+    <svg class="spiral-svg" viewBox="0 0 200 600" preserveAspectRatio="xMidYMid meet">
+      <path class="spiral-path" d="M100,50 Q150,100 100,200 T100,400 T100,550" fill="none" stroke="url(#spiralGradient)" stroke-width="3"/>
+      <defs>
+        <linearGradient id="spiralGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#ff7002;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#ffc2ae;stop-opacity:0.8" />
+          <stop offset="100%" style="stop-color:#4285f4;stop-opacity:0.6" />
+        </linearGradient>
+      </defs>
+      <circle class="spiral-dot dot-1" cx="100" cy="50" r="6" fill="#ff7002"/>
+      <circle class="spiral-dot dot-2" cx="100" cy="200" r="6" fill="#ffc2ae"/>
+      <circle class="spiral-dot dot-3" cx="100" cy="400" r="6" fill="#4285f4"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="process-header">
+      <p class="process-subtitle">{subtitle}</p>
+      <h2 class="process-title">{title}</h2>
+    </div>
+
+    <div class="process-steps-wrapper">
+      <div class="process-steps">
+        {steps.map((step, index) => (
+          <div class="step-card" data-step={index + 1} data-index={index}>
+            <!-- Step Number Badge -->
+            <div class="step-number-badge">
+              <span class="step-number">{index + 1}</span>
+            </div>
+
+            <div class="step-graphic">
+                {step.number === "STEP 1" && videoCallImage && (
+                  <div class="graphic-card video-call">
+                    <div class="graphic-overlay"></div>
+                    <Image 
+                      src={videoCallImage.default || videoCallImage} 
+                      alt="Video call interface"
+                      class="video-call-image"
+                      width={400}
+                      height={200}
+                      quality={90}
+                    />
+                  </div>
+                )}
+                {step.number === "STEP 2" && (
+                  <div class="graphic-card project-board overflow-hidden">
+                    <div class="graphic-overlay"></div>
+                    <div class="board-header">
+                      <div class="board-column">
+                        <div class="column-header">
+                          <span>Task Backlog (2)</span>
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                          </svg>
+                        </div>
+                        <div class="board-button">Backlog</div>
+                        <div class="board-card">
+                          <div class="card-title">Task Backlog (Instructions)</div>
+                          <div class="card-meta">
+                            <span>💬</span>
+                            <span>📎</span>
+                            <span>0/1</span>
+                          </div>
+                        </div>
+                        <div class="board-card">
+                          <div class="card-title">Web & Mobile: Resources Library</div>
+                          <div class="card-meta"><span>💬</span></div>
+                        </div>
+                        <div class="board-card">
+                          <div class="card-title">Web & Mobile: Events</div>
+                          <div class="card-meta">
+                            <span>💬</span>
+                            <span>1</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="board-column">
+                        <div class="column-header">
+                          <span>Active (2)</span>
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                          </svg>
+                        </div>
+                        <div class="board-card">
+                          <div class="card-title">App Onboarding Flow</div>
+                          <div class="card-meta">
+                            <span>💬</span>
+                            <span>1</span>
+                          </div>
+                        </div>
+                        <div class="board-card">
+                          <div class="card-title">Splash Screen</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {step.number === "STEP 3" && (
+                  <div class="graphic-card web-mockup">
+                    <div class="graphic-overlay"></div>
+                    <div class="mockup-header">
+                      <div class="mockup-nav">
+                        <span>Products</span>
+                        <span>Features</span>
+                        <span>Pricing</span>
+                        <span>Blog</span>
+                      </div>
+                      <button class="mockup-button">Sign Up</button>
+                    </div>
+                    <div class="mockup-content">
+                      <h3 class="mockup-headline">The Most Accurate Data - All Powered by AI Before AI Was Cool</h3>
+                      <div class="mockup-diagram">
+                        <div class="diagram-node"></div>
+                        <div class="diagram-node"></div>
+                        <div class="diagram-node"></div>
+                        <div class="diagram-connections"></div>
+                      </div>
+                      <div class="mockup-profiles">
+                        <div class="profile-card">
+                          <div class="profile-name">Darrell Lane</div>
+                          <div class="profile-email">darrell@example.com</div>
+                        </div>
+                        <div class="profile-card">
+                          <div class="profile-name">Jenny Wilson</div>
+                          <div class="profile-email">jenny@example.com</div>
+                        </div>
+                      </div>
+                      <div class="mockup-search">🔍</div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div class="step-content">
+                <div class="step-icon">
+                  {step.number === "STEP 1" && (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                  )}
+                  {step.number === "STEP 2" && (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 010 7.75"/>
+                    </svg>
+                  )}
+                  {step.number === "STEP 3" && (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  )}
+                </div>
+                <h3 class="step-title">{step.title}</h3>
+                <p class="step-description">{step.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+      <div class="features-container">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Instant onboarding</h3>
+          <p class="feature-description">Skip the hiring delays. Start seeing results in days, not weeks.</p>
+          <div class="feature-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+              <polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">High-impact, low overhead</h3>
+          <p class="feature-description">No full-time salaries or bloated costs - just senior design that delivers.</p>
+          <div class="feature-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9"/>
+              <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Stress-free collaboration</h3>
+          <p class="feature-description">We take full ownership of your project, from start to finish.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .process-section {
+    padding: 8rem 0;
+    background: #1a202c;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .process-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(255, 112, 2, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(66, 133, 244, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Floating Decorative Elements */
+  .floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 112, 2, 0.2) 0%, rgba(66, 133, 244, 0.2) 100%);
+    filter: blur(40px);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .circle-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+  }
+
+  .circle-2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 10%;
+    animation-delay: 2s;
+  }
+
+  .circle-3 {
+    width: 180px;
+    height: 180px;
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 4s;
+  }
+
+  .floating-star {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.6;
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  .star-1 {
+    top: 15%;
+    right: 20%;
+    animation-delay: 0s;
+  }
+
+  .star-2 {
+    top: 50%;
+    left: 8%;
+    animation-delay: 1s;
+  }
+
+  .star-3 {
+    bottom: 30%;
+    right: 15%;
+    animation-delay: 2s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -30px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+  }
+
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.2) rotate(180deg);
+    }
+  }
+
+  /* Spiral Connector */
+  .spiral-connector {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    transform: translateX(-50%);
+    z-index: 0;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .spiral-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .spiral-path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawSpiral 3s ease-in-out forwards;
+  }
+
+  .spiral-dot {
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .dot-1 {
+    animation-delay: 0s;
+  }
+
+  .dot-2 {
+    animation-delay: 0.7s;
+  }
+
+  .dot-3 {
+    animation-delay: 1.4s;
+  }
+
+  @keyframes drawSpiral {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .process-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .process-subtitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    background: linear-gradient(138deg, #ffc2ae 0%, #ff7002 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .process-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin: 0;
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    text-shadow: 0 2px 20px rgba(255, 112, 2, 0.3);
+  }
+
+  .process-steps-wrapper {
+    position: relative;
+    padding: 2rem 0;
+    z-index: 1;
+  }
+
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .process-steps .step-card:first-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 500px;
+  }
+
+  .process-steps .step-card:nth-child(2) {
+    grid-column: 1;
+    justify-self: end;
+  }
+
+  .process-steps .step-card:nth-child(3) {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  @media (max-width: 1024px) {
+    .process-steps .step-card:first-child,
+    .process-steps .step-card:nth-child(2),
+    .process-steps .step-card:nth-child(3) {
+      grid-column: 1;
+      justify-self: stretch;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  /* Step Number Badge */
+  .step-number-badge {
+    position: absolute;
+    left: 50%;
+    top: -24px;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(138deg, #ffc2ae 0%, #ff7002 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(255, 112, 2, 0.4);
+    border: 3px solid #1a202c;
+  }
+
+  .step-number {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff !important;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Step Card */
+  .step-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    padding-left: 3.5rem;
+    border: none;
+    border-left: 4px solid rgba(255, 112, 2, 0.3);
+    transition: all 0.4s ease;
+    overflow: visible;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, border-left-color 0.6s ease;
+  }
+
+  .step-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    border-left-color: rgba(255, 112, 2, 0.8);
+  }
+
+  .step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 112, 2, 0.05) 0%, rgba(66, 133, 244, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 20px;
+    pointer-events: none;
+  }
+
+  .step-card.visible::before {
+    opacity: 1;
+  }
+
+  .step-card.visible {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .step-card.visible:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 50px rgba(255, 112, 2, 0.2);
+  }
+
+
+  .step-graphic {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .graphic-card {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .graphic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 112, 2, 0.1) 0%, rgba(66, 133, 244, 0.1) 100%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .process-step.visible .graphic-card:hover .graphic-overlay {
+    opacity: 1;
+  }
+
+
+  /* Video Call Graphic */
+  .video-call {
+    padding: 0;
+  }
+
+  .video-call-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  /* Project Board Graphic */
+  .project-board {
+    padding: 1rem;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .board-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    height: 100%;
+  }
+
+  .board-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .column-header svg {
+    width: 12px;
+    height: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .board-button {
+    background: linear-gradient(135deg, #4285f4 0%, #667eea 100%);
+    color: #ffffff;
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
+  }
+
+  .board-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.625rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .card-title {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0.375rem;
+  }
+
+  .card-meta {
+    display: flex;
+    gap: 0.375rem;
+    font-size: 0.5625rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Web Mockup Graphic */
+  .web-mockup {
+    padding: 1rem;
+  }
+
+  .mockup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 0.75rem;
+  }
+
+  .mockup-nav {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.6875rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+  }
+
+  .mockup-button {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    color: #ffffff;
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .mockup-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .mockup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+  }
+
+  .mockup-headline {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .mockup-diagram {
+    position: relative;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .diagram-node {
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, #4285f4 0%, #667eea 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(66, 133, 244, 0.4);
+  }
+
+  .diagram-connections {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #4285f4 50%, transparent 100%);
+    opacity: 0.4;
+  }
+
+  .mockup-profiles {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .profile-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .profile-name {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0.25rem;
+  }
+
+  .profile-email {
+    font-size: 0.5625rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .mockup-search {
+    text-align: center;
+    font-size: 1.25rem;
+    opacity: 0.6;
+  }
+
+  .step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .step-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(138deg, #ffc2ae 0%, #ff7002 100%);
+    border-radius: 16px;
+    color: #ffffff;
+    flex-shrink: 0;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(255, 112, 2, 0.4);
+    transition: transform 0.3s ease;
+  }
+
+  .process-step.visible .step-icon {
+    animation: iconPulse 2s ease-in-out infinite;
+  }
+
+  .process-step.visible .step-card:hover .step-icon {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  @keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .step-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 2.5;
+  }
+
+  .step-title {
+    font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.3;
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .step-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 400;
+    max-width: 90%;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .process-steps {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .step-number-badge {
+      left: 50%;
+      top: -24px;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+    }
+
+    .step-number {
+      font-size: 1rem;
+    }
+
+    .step-card {
+      padding-left: 3rem;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .step-graphic {
+      max-width: 500px;
+      margin: 0 auto;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .process-section {
+      padding: 5rem 0;
+    }
+
+    .container {
+      padding: 0 1rem;
+    }
+
+    .process-header {
+      margin-bottom: 3rem;
+    }
+
+    .process-steps {
+      gap: 3rem;
+    }
+
+    .step-graphic {
+      height: 180px;
+      max-width: 100%;
+    }
+
+    .step-icon {
+      width: 56px;
+      height: 56px;
+    }
+
+    .step-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .step-card {
+      padding: 1.5rem;
+      padding-left: 3rem;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  /* Features Section */
+  .features-section {
+    margin-top: 6rem;
+    padding: 0;
+  }
+
+  .features-container {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    box-shadow: none;
+  }
+
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .feature-arrow {
+    display: none;
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(138deg, #ffc2ae 0%, #ff7002 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+
+  .feature-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .feature-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.3;
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .feature-description {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .features-container {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .feature-card {
+      padding: 2rem 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .features-section {
+      margin-top: 4rem;
+    }
+
+    .feature-card {
+      padding: 1.5rem 0;
+    }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .feature-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .feature-title {
+      font-size: 0.9375rem;
+    }
+
+    .feature-description {
+      font-size: 0.8125rem;
+    }
+  }
+</style>
+
+<script>
+  // Scroll-triggered animations
+  document.addEventListener('DOMContentLoaded', () => {
+    const processSection = document.getElementById('process-section');
+    const steps = document.querySelectorAll('.step-card');
+
+    if (!processSection) return;
+
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px'
+    };
+
+    const stepObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+
+          }, index * 200);
+        }
+      });
+    }, observerOptions);
+
+    steps.forEach((step) => {
+      stepObserver.observe(step);
+    });
+  });
+</script>

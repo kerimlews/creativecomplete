@@ -1,7 +1,7 @@
 ---
 title: "Why Your Beautiful Website Isn't Making Sales (And How to Fix It)"
 subtitle: "How we helped a local service business increase conversions by 217% in 3 months"
-image: "/images/web-design-conversion.jpg"
+image: "local-seo-case-study-page-5-to-page"
 author: "kerim-alihodza"
 category: "web-design"
 description: "Discover the 5 conversion-killing mistakes on your website and how to fix them. Real case study from Creative Complete."

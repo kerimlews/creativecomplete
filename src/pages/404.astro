@@ -1,9 +1,12 @@
 ---
 import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
+import { getLanguageFromUrl, t, getLocalizedUrl } from '../utils/translations';
+
+const currentLang = getLanguageFromUrl(Astro.url);
 ---
 
-<Layout>
+<Layout title={t('404.title', currentLang)}>
   <section class="error-section">
     <!-- Optional: Add decorative background illustrations -->
     <div class="error-illustration error-illustration-left">✨</div>
@@ -11,15 +14,13 @@ import Layout from "../layouts/Layout.astro";
     
     <div class="error-content astro-animated astro-zoomIn">
       <h1 class="error-title">404</h1>
-      <h2 class="error-subtitle">Page Not Found</h2>
+      <h2 class="error-subtitle">{t('404.subtitle', currentLang)}</h2>
       <p class="error-description">
-        Oops! It seems you've ventured into uncharted territory. 
-        The page you're looking for might have been moved, deleted, 
-        or never existed in the first place.
+        {t('404.description', currentLang)}
       </p>
       
-      <a href="/" class="home-button">
-        Back to Homepage
+      <a href={getLocalizedUrl('/', currentLang)} class="home-button">
+        {t('404.button', currentLang)}
       </a>
     </div>
   </section>

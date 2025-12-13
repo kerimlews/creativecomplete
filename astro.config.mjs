@@ -51,16 +51,16 @@ export default defineConfig({
 	partytown({ config: { forward: ['dataLayer.push'] } }),
 	sitemap({
       filter: (page) => {
-        if (page.includes('/sl/')) {
-          return page.includes('google-maps-optimizacija-slovenija');
-        }
-        return true;
+        // Filter out any unwanted pages
+        return !page.includes('/de/') && !page.includes('/hr/'); // Remove German and Croatian for now, focus on EN/SL
       },
       i18n: {
-        defaultLocale: 'en', // All urls that don't contain `es` or `fr` after `https://example.com/` will be treated as default locale, i.e. `en`
+        defaultLocale: 'en',
         locales: {
-          en: 'en-US', // The `defaultLocale` value must present in `locales` keys
+          en: 'en-US',
           sl: 'sl-SI',
+          de: 'de-DE',
+          hr: 'hr-HR',
         },
       },
   }),

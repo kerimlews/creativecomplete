@@ -1,7 +1,7 @@
 ---
 title: "How We Automated a Service Business and Saved Them 20 Hours/Week"
 subtitle: "The exact AI tools and processes that eliminated manual work for a local company"
-image: "/images/ai-automation-case-study.jpg"
+image: "local-seo-case-study-page-5-to-page"
 author: "kerim-alihodza"
 category: "automation"
 description: "Discover how we implemented AI automation for a service business, saving 20 hours weekly and reducing errors by 95%. Real case study."

@@ -82,7 +82,7 @@ By unifying the entire member journey under one codebase, we achieved what piece
 The principle we proved with Fitovision is universal: **deeply integrated systems defeat fragmented tool stacks every single time.** This same architectural mindset is how we drive results across all our services:
 
 *   Want a similar transformation for your online store? Our **[E-commerce Conversion Optimization](/services/why-your-online-store-isnt-converting/)** service applies the same ruthless focus to your sales funnel.
-*   Need to be found by customers? Our **[Local SEO](/services/local-seo-case-study-page-5-to-page-1/)** strategy is about dominating search results with the same systematic precision.
+*   Need to be found by customers? Our **[Local SEO](/services/local-seo-case-study-page-5-to-page/)** strategy is about dominating search results with the same systematic precision.
 *   Drowning in admin work? Our **[AI Automation](/services/ai-automation-saved-20-hours-weekly/)** service identifies and eliminates time-sucks, just like we did for the gym's back office.
 
 ## Is Your Business Suffering from a Disconnected Tech Stack?

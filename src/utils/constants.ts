@@ -84,3 +84,59 @@ export const getActiveSocials = (SOCIALS: { [key: string]: { url: string; toolti
     return social.url && social.url !== "";
   });
 };
+
+// Get service images from content folder
+const servicesImages = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
+const projectsImages = import.meta.glob('/src/images/projects/*.{png,jpg,jpeg,webp}');
+const testImages = import.meta.glob('/src/images/testimonials/*.{png,jpg,jpeg,webp}');
+
+// Function to get project image by slug
+export function getServiceImage(slug: string) {  
+  const imagePath = `/src/images/services/${slug}.png`;  
+  return servicesImages[imagePath] ? servicesImages[imagePath]() : null;
+}
+
+export function getProjectImage(slug: string) {  
+  const imagePath = `/src/images/projects/${slug}.png`;    
+  return projectsImages[imagePath] ? projectsImages[imagePath]() : null;
+}
+
+export function getTestimonalImage(slug: string) {
+  console.log(slug);
+  
+  const imagePath = `/src/images/testimonials/${slug}.png`;    
+  return testImages[imagePath] ? testImages[imagePath]() : null;
+}
+
+export const testimonials = [
+  {
+    text: "I'm impressed by how seriously they take every project. They found the most cost-effective solution that replaced 7 different tools we were using - mobile app, WDMS, SaaS platform, and landing page all in one.",
+    author: "Matej Poznic",
+    role: "Founder",
+    company: "Fitovision",
+    avatar: "MP",
+    image: "matej-poznic", // Add image path
+    caseStudy: "fitovision-gym-saas",
+    verified: true
+  },
+  {
+    text: "They automated our entire order processing system. What used to take hundreds of hours monthly now runs automatically. Zero stress, zero manual work - everything from Shopify orders to complex CSV files is handled flawlessly.",
+    author: "Tomislav Bratunic",
+    role: "Owner", 
+    company: "PrepMe",
+    avatar: "TB",
+    // image: "/images/testimonials/tomislav-bratunic.jpg", // Add image path
+    caseStudy: "prepme-automation-saas",
+    verified: true
+  },
+  {
+    text: "Wir sind beeindruckt von der Detailgenauigkeit und Pünktlichkeit während des gesamten Prozesses. Das Team hat unser Recruitment-System komplett automatisiert und die Effizienz massiv gesteigert.",
+    author: "Alisa Murtezi",
+    role: "Geschäftsführerin",
+    company: "CareConnect",
+    avatar: "AM",
+    image: "alisa-murtezi", // Add image path
+    caseStudy: "careconnect-recruitment-automation", 
+    verified: true
+  }
+];

@@ -4,10 +4,11 @@ import { Image } from 'astro:assets';
 export interface Props {
   title: string;
   description: string;
-  image: string;
+  image: any; // Should be ImageMetadata but using any for now
   features: string[];
   ctaText?: string;
   delay?: number;
+  url?: string;
 }
 
 const { title, description, image, features, url, ctaText = "Learn More", delay = 0 } = Astro.props;
@@ -17,17 +18,19 @@ const { title, description, image, features, url, ctaText = "Learn More", delay 
 <div class="service-card" data-astro-animate="fadeInUp" data-astro-delay="{delay}">
   <div class="card-glass">
     <!-- Image on LEFT side -->
-    <div class="card-image">
-      <Image 
-        src={image}
-        alt={title}
-        class="service-image"
-        loading="lazy"
-        width={500}
-        height={400}
-      />
-      <div class="card-overlay"></div>
-    </div>
+    {image && (
+      <div class="card-image">
+        <Image 
+          src={image}
+          alt={title}
+          class="service-image"
+          loading="lazy"
+          width={500}
+          height={400}
+        />
+        <div class="card-overlay"></div>
+      </div>
+    )}
 
     <!-- Content on RIGHT side -->
     <div class="card-content">

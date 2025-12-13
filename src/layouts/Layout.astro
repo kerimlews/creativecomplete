@@ -25,9 +25,12 @@ const siteUrl = Astro.url.origin;
 const pageTitle = title.includes('Creative Complete') ? title : `${title} | Creative Complete`;
 
 // Generate structured data if service is provided
-let jsonLd = structuredData;
-if (service && !structuredData) {
-  jsonLd = generateServiceJsonLd(service);
+let jsonLdSchemas: any[] = [];
+if (structuredData) {
+  // Handle both array and single object
+  jsonLdSchemas = Array.isArray(structuredData) ? structuredData : [structuredData];
+} else if (service) {
+  jsonLdSchemas = [generateServiceJsonLd(service)];
 }
 
 let breadcrumbJsonLd;
@@ -55,14 +58,14 @@ const twitterImage = twitterCard.image || service?.data?.featuredImage || defaul
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
-    <link rel="canonical" href={canonicalUrl} />
+    <link rel="canonical" href={Astro.url.href} />
     <meta name="priority" content={priority} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={openGraph.title || pageTitle} />
     <meta property="og:description" content={openGraph.description || description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:url" content={Astro.url.href} />
     <meta property="og:type" content={openGraph.type || 'website'} />
     <meta property="og:site_name" content="Creative Complete" />
     <meta property="og:locale" content="en_US" />
@@ -81,22 +84,14 @@ const twitterImage = twitterCard.image || service?.data?.featuredImage || defaul
     
 
     <!-- Structured Data -->
-    {jsonLd && (
-      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-    )}
+    {jsonLdSchemas.map((schema, index) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
     {breadcrumbJsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
     )}
     
-    <!-- NEW: Additional schema markup -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Creative Complete",
-      "url": "https://www.creativecomplete.com",
-      "logo": "https://www.creativecomplete.com/logo-svg.svg",
-      "description": "Results-driven digital agency specializing in SEO, web design, and AI automation",
-    })} />
+    <!-- Organization schema is now handled via structuredData prop -->
   
     <!-- Preload Critical Resources -->
     <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
@@ -112,7 +107,7 @@ const twitterImage = twitterCard.image || service?.data?.featuredImage || defaul
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link 
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" 
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;500;600;700;800;900&display=swap" 
       rel="stylesheet" 
     />
     
@@ -179,11 +174,11 @@ const twitterImage = twitterCard.image || service?.data?.featuredImage || defaul
       // Skip link focus
       document.addEventListener('DOMContentLoaded', () => {
         const skipLink = document.querySelector('.skip-link');
-        skipLink.addEventListener('click', (e) => {
+        skipLink?.addEventListener('click', (e) => {
           e.preventDefault();
           const mainContent = document.getElementById('main-content');
-          mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });
+          mainContent?.focus();
+          mainContent?.scrollIntoView({ behavior: 'smooth' });
         });
       });
     </script>

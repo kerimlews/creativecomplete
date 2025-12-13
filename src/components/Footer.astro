@@ -3,7 +3,9 @@ import CtaButton from './CtaButton.astro';
 import { Image } from 'astro:assets';
 import logo from '../images/logo-svg.svg';
 import { COMPANY_SOCIAL_MEDIA } from '../utils/constants';
+import { getLanguageFromUrl, t, getLocalizedUrl } from '../utils/translations';
 
+const currentLang = getLanguageFromUrl(Astro.url);
 ---
 
 <footer class="footer">
@@ -30,29 +32,29 @@ import { COMPANY_SOCIAL_MEDIA } from '../utils/constants';
 
       <!-- Services Links -->
       <div class="footer-section">
-        <h4 class="footer-heading">Our Services</h4>
+        <h4 class="footer-heading">{t('nav.services', currentLang)}</h4>
         <ul class="footer-links">
-          <li><a href="/services/local-seo-case-study-page-5-to-page-1/">SEO Strategy</a></li>
-          <li><a href="/services/why-your-beautiful-website-isnt-making-sales/">Web Design</a></li>
-          <li><a href="/services/ai-automation-saved-20-hours-weekly/">AI Automation</a></li>
-          <li><a href="/services/from-idea-to-10k-mrr-saas-case-study/">SaaS Development</a></li>
-          <li><a href="/services/why-your-online-store-isnt-converting/">E-commerce</a></li>
-          <li><a href="/services/how-mobile-app-3x-revenue-local-business/">Mobile Apps</a></li>
-          <li><a href="/services/sl/google-maps-optimizacija-slovenija/">Slovenija Local Business</a></li>
+          <li><a href={getLocalizedUrl('/services/local-seo-case-study-page-5-to-page/', currentLang)}>SEO Strategy</a></li>
+          <li><a href={getLocalizedUrl('/services/why-your-beautiful-website-isnt-making-sales/', currentLang)}>Web Design</a></li>
+          <li><a href={getLocalizedUrl('/services/ai-automation-saved-20-hours-weekly/', currentLang)}>AI Automation</a></li>
+          <li><a href={getLocalizedUrl('/services/from-idea-to-10k-mrr-saas-case-study/', currentLang)}>SaaS Development</a></li>
+          <li><a href={getLocalizedUrl('/services/why-your-online-store-isnt-converting/', currentLang)}>E-commerce</a></li>
+          <li><a href={getLocalizedUrl('/services/how-mobile-app-3x-revenue-local-business/', currentLang)}>Mobile Apps</a></li>
+          <li><a href={getLocalizedUrl('/services/sl/google-maps-optimizacija-slovenija/', currentLang)}>Slovenija Local Business</a></li>
         </ul>
       </div>
 
       <!-- Company Links -->
       <div class="footer-section">
-        <h4 class="footer-heading">Company</h4>
+        <h4 class="footer-heading">{t('nav.about', currentLang)}</h4>
         <ul class="footer-links">
-          <li><a href="/kerim-alihodza/">About Kerim</a></li>
-          <li><a href="/projects/">Our Work</a></li>
-          <li><a href="/services/">Our Services</a></li>
-          <li><a href="/#testimonials">Testimonials</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="/terms-of-use/">Terms of use</a></li>
+          <li><a href={getLocalizedUrl('/kerim-alihodza/', currentLang)}>About Kerim</a></li>
+          <li><a href={getLocalizedUrl('/projects/', currentLang)}>Our Work</a></li>
+          <li><a href={getLocalizedUrl('/services/', currentLang)}>Our Services</a></li>
+          <li><a href={getLocalizedUrl('/#testimonials', currentLang)}>Testimonials</a></li>
+          <li><a href={getLocalizedUrl('/contact/', currentLang)}>Contact</a></li>
+          <li><a href={getLocalizedUrl('/privacy-policy/', currentLang)}>Privacy Policy</a></li>
+          <li><a href={getLocalizedUrl('/terms-of-use/', currentLang)}>Terms of use</a></li>
         </ul>
       </div>
 
@@ -75,7 +77,7 @@ import { COMPANY_SOCIAL_MEDIA } from '../utils/constants';
         </div>
         <CtaButton 
           text="Start Your Project" 
-          href="/contact" 
+          href={getLocalizedUrl('/contact/', currentLang)} 
           variant="primary" 
           size="sm" 
           class="footer-cta"
@@ -85,7 +87,7 @@ import { COMPANY_SOCIAL_MEDIA } from '../utils/constants';
 
     <!-- Footer Bottom -->
     <div class="footer-bottom">
-      <p>&copy; 2024 Digital Growth Agency. All rights reserved.</p>
+      <p>&copy; 2024 Digital Growth Agency. {t('footer.rights', currentLang)}</p>
     </div>
   </div>
 </footer>

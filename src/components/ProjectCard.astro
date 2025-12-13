@@ -1,6 +1,8 @@
 ---
 // src/components/ProjectCard.astro
 import { Image } from "astro:assets";
+import { getProjectUrl } from '../utils/routing';
+import type { Language } from '../utils/translations';
 
 export interface Props {
   project: {
@@ -15,16 +17,22 @@ export interface Props {
       value: string;
       label: string;
     }[];
+    lang?: Language;
   };
 }
 
 const { project } = Astro.props;
+const projectLang = project.lang || 'en';
 
 ---
 
 <div class="project-card" data-category={project.category?.toLowerCase().replace(/\s+/g, '-')}>
   <div class="project-image">
-    <Image src={project.image} alt={project.title} width={800} height={800} />
+    {project.image ? (
+      <Image src={project.image} alt={project.title} width={800} height={800} />
+    ) : (
+      <div class="image-placeholder">No image available</div>
+    )}
     {project.featured && <div class="featured-badge">Featured</div>}
     <div class="category-badge">{project.category}</div>
   </div>
@@ -45,7 +53,7 @@ const { project } = Astro.props;
     )}
     
     <div class="project-actions">
-      <a href={`/projects/${project.slug}/`} class="project-link primary">
+      <a href={getProjectUrl(projectLang, project.slug)} class="project-link primary">
         View Case Study
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
           <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

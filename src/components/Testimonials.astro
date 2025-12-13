@@ -1,66 +1,575 @@
 ---
 import { Image } from "astro:assets";
+import { getLanguageFromUrl } from '../utils/translations';
+import { getProjectUrl } from '../utils/routing';
 
 const {
-  header = "Client Results Backed By Data",
-  desc = "These testimonials feature detailed case studies from our most challenging projects, complete with the metrics and strategy that drove success."
+  header = "MORE CLIENT SUCCESS STORIES",
+  desc = "Hear it from our partners.",
+  items = []
 } = Astro.props;
 
+const currentLang = getLanguageFromUrl(Astro.url);
+const testimonials = items;
 ---
 
 <!-- TESTIMONIALS -->
-<section id="testimonials" class="testimonials-section section-padding">
+<section id="testimonials" class="testimonials-section">
   <div class="container">
-    <div class="section-header text-center" data-aos="fade-up">
-        <h2>{header}</h2>
-        <p class="section-subtitle">{desc}</p>
+    <div class="testimonials-header">
+      <h2 class="testimonials-title">{header}</h2>
+      <p class="testimonials-subtitle">{desc}</p>
     </div>
 
-    <div class="testimonials-grid">
-      {Astro.props.items.map((testimonial, index) => (
-        <div class="testimonial-card" data-aos="fade-up" data-aos-delay={index * 200}>
-          <div class="testimonial-content">
-            <div class="verified-badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-              Verified Case Study
-              <div class="stars">
-                {/* 5 stars */}
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} viewBox="0 0 24 24">
-                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-                  </svg>
-                ))}
-              </div>
-            </div>
-            <p class="testimonial-text">"{testimonial.text}"</p>
-            <div class="testimonial-author">
-              <div class="author-image">
-                {testimonial.image ? (
-                  <Image 
-                    src={testimonial.image} 
-                    alt={testimonial.author}
-                    width="50"
-                    height="50"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div class="author-avatar">{testimonial.avatar}</div>
+    <div class="testimonials-container">
+      <!-- Projects Carousel -->
+      <div class="projects-carousel">
+        <div class="carousel-container" id="carouselContainer">
+          {testimonials.map((item, index) => (
+            <div class="carousel-slide" data-index={index}>
+              <div class="unified-card">
+
+                <!-- Project Image -->
+                {item.project?.image && (
+                  <div class="unified-card-image">
+                    <Image 
+                      src={item.project.image} 
+                      alt={item.project.title}
+                      width={600}
+                      height={400}
+                      loading="lazy"
+                    />
+                    <div class="image-overlay"></div>
+                  </div>
                 )}
-              </div>
-              <div class="author-info">
-                <div class="author-name">{testimonial.author}</div>
-                <div class="author-role">{testimonial.role}</div>
-                <div class="author-company">{testimonial.company}</div>
+
+                <!-- Card Content -->
+                <div class="unified-card-content">
+                  <!-- Category Badge -->
+                  {item.project?.category && (
+                    <div class="category-badge">{item.project.category}</div>
+                  )}
+
+                  <!-- Project Title -->
+                  {item.project?.title && (
+                    <h3 class="project-title">{item.project.title}</h3>
+                  )}
+
+                  <!-- Project Description -->
+                  {item.project?.description && (
+                    <p class="project-description">{item.project.description}</p>
+                  )}
+
+                  <!-- Project Stats -->
+                  {item.project?.stats && item.project.stats.length > 0 && (
+                    <div class="project-stats">
+                      {item.project.stats.map((stat, statIndex) => (
+                        <div class="stat-item" key={statIndex}>
+                          <span class="stat-value">{stat.value}</span>
+                          <span class="stat-label">{stat.label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <!-- Case Study Link -->
+                  {item.project?.slug && (
+                    <a href={getProjectUrl(currentLang, item.project.slug)} class="case-study-link">
+                      View Case Study
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  )}
+
+                  <!-- Divider -->
+                  <div class="card-divider"></div>
+
+                  <!-- Testimonial Section -->
+                  <div class="testimonial-section">
+                    <p class="testimonial-quote">
+                      {item.text.split('**').map((part, i) => 
+                        i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+                      )}
+                    </p>
+
+                    <div class="testimonial-author-info">
+                      <div class="author-avatar">
+                        {item.image ? (
+                          <Image 
+                            src={item.image} 
+                            alt={item.author}
+                            width="50"
+                            height="50"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div class="avatar-emoji">{item.avatar || '👋'}</div>
+                        )}
+                      </div>
+                      <div class="author-details">
+                        <div class="author-name">{item.author}</div>
+                        <div class="author-role">{item.role}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <a href={`/projects/${testimonial.caseStudy}/`} class="case-study-link">
-              Read Detailed Case Study →
-            </a>
-          </div>
+          ))}
         </div>
-      ))}
+        
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="prevBtn" aria-label="Previous">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="carousel-btn" id="nextBtn" aria-label="Next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="carousel-dots" id="carouselDots">
+          {testimonials.map((_, index) => (
+            <div class={`carousel-dot ${index === 0 ? 'active' : ''}`} data-index={index}></div>
+          ))}
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .testimonials-section {
+    padding: 8rem 0;
+    background: #1a202c;
+    position: relative;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .testimonials-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .testimonials-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem 0;
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .testimonials-subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .testimonials-container {
+    position: relative;
+  }
+
+  /* Projects Carousel */
+  .projects-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .unified-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 0;
+    position: relative;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    min-height: 600px;
+  }
+
+  .unified-card-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .unified-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(26, 32, 44, 0.8) 100%);
+  }
+
+  .unified-card-content {
+    padding: 3rem;
+  }
+
+  .category-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 112, 2, 0.2);
+    border: 1px solid rgba(255, 112, 2, 0.3);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #ffc2ae;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .project-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.2;
+  }
+
+  .project-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 2rem 0;
+  }
+
+  .project-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ff7002;
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .card-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+    margin: 2rem 0;
+  }
+
+  .testimonial-section {
+    margin-top: 2rem;
+  }
+
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .carousel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-btn:hover {
+    background: rgba(255, 112, 2, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    min-height: 50px;
+  }
+
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .carousel-dot.active {
+    background: #ff7002;
+    transform: scale(1.2);
+  }
+
+
+  .case-study-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #ff7002 0%, #ffc2ae 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 112, 2, 0.3);
+  }
+
+  .case-study-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 112, 2, 0.4);
+  }
+
+  .case-study-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+
+  .testimonial-quote {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .testimonial-quote strong {
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .testimonial-author-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .avatar-emoji {
+    font-size: 2rem;
+  }
+
+  .author-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .author-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .author-role {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+  }
+
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .testimonials-section {
+      padding: 5rem 0;
+    }
+
+    .unified-card-content {
+      padding: 2rem;
+    }
+
+    .unified-card {
+      min-height: 500px;
+    }
+
+    .unified-card-image {
+      height: 250px;
+    }
+
+
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+
+    .testimonials-header {
+      margin-bottom: 3rem;
+    }
+
+    .unified-card-content {
+      padding: 1.5rem;
+    }
+
+    .unified-card {
+      min-height: 400px;
+    }
+
+    .unified-card-image {
+      height: 200px;
+    }
+
+    .project-stats {
+      gap: 1rem;
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+    }
+
+    .testimonial-quote {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carouselContainer = document.getElementById('carouselContainer');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    let currentIndex = 0;
+    const totalSlides = document.querySelectorAll('.carousel-slide').length;
+    let autoAdvance: ReturnType<typeof setInterval> | null = null;
+    
+    function updateCarousel() {
+      if (carouselContainer) {
+        carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+      
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+    
+    function startAutoAdvance() {
+      autoAdvance = setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+      }, 8000);
+    }
+    
+    function stopAutoAdvance() {
+      if (autoAdvance) {
+        clearInterval(autoAdvance);
+      }
+    }
+    
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        stopAutoAdvance();
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+        startAutoAdvance();
+      });
+    }
+    
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        stopAutoAdvance();
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+        startAutoAdvance();
+      });
+    }
+    
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        stopAutoAdvance();
+        currentIndex = parseInt(dot.getAttribute('data-index') || '0');
+        updateCarousel();
+        startAutoAdvance();
+      });
+    });
+    
+    if (carouselContainer) {
+      carouselContainer.addEventListener('mouseenter', stopAutoAdvance);
+      carouselContainer.addEventListener('mouseleave', startAutoAdvance);
+    }
+    
+    startAutoAdvance();
+  });
+</script>

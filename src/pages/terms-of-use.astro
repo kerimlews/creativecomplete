@@ -4,14 +4,17 @@ import { Image } from 'astro:assets';
 import BottomCTA from '../components/BottomCTA.astro';
 import Layout from '../layouts/Layout.astro';
 import logo from '../images/logo-svg.svg';
+import { getLanguageFromUrl, t, getLocalizedUrl } from '../utils/translations';
 
-const pageTitle = 'Terms of Use - Creative Complete';
-const pageDescription = 'Terms and conditions governing your use of Creative Complete digital agency services. Read our terms of use agreement.';
-const canonicalUrl = '/terms-of-use/';
+const currentLang = getLanguageFromUrl(Astro.url);
+
+const pageTitle = t('terms.title', currentLang);
+const pageDescription = t('terms.description', currentLang);
+const canonicalUrl = getLocalizedUrl('/terms-of-use/', currentLang);
 
 const breadcrumbs = [
-  { name: 'Home', url: `${Astro.url.origin}/` },
-  { name: 'Terms of Use', url: `${Astro.url.origin}/terms-of-use/` }
+  { name: t('nav.home', currentLang), url: getLocalizedUrl('/', currentLang) },
+  { name: t('terms.header', currentLang), url: getLocalizedUrl('/terms-of-use/', currentLang) }
 ];
 
 ---
@@ -27,16 +30,16 @@ const breadcrumbs = [
     <section class="service-header">
       <div class="container">
         <nav class="breadcrumb">
-          <a href="/">Home</a>
+          <a href={getLocalizedUrl('/', currentLang)}>{t('nav.home', currentLang)}</a>
           <span>›</span>
-          <span>Terms of Use</span>
+          <span>{t('terms.header', currentLang)}</span>
         </nav>
         
         <div class="service-hero">
           <div class="service-info">
-            <h1>Terms of Use</h1>
+            <h1>{t('terms.header', currentLang)}</h1>
             <p class="service-description">
-              Please read these terms carefully before using our services. By accessing our website, you agree to be bound by these terms.
+              {t('terms.subtitle', currentLang)}
             </p>
             
             <div class="service-meta">

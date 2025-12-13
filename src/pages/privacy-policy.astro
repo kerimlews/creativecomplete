@@ -4,14 +4,17 @@ import { Image } from 'astro:assets';
 import BottomCTA from '../components/BottomCTA.astro';
 import Layout from '../layouts/Layout.astro';
 import logo from '../images/logo-svg.svg';
+import { getLanguageFromUrl, t, getLocalizedUrl } from '../utils/translations';
 
-const pageTitle = 'Privacy Policy - Creative Complete';
-const pageDescription = 'Learn how Creative Complete protects your privacy and handles your data. Our commitment to transparency and GDPR compliance.';
-const canonicalUrl = '/privacy-policy/';
+const currentLang = getLanguageFromUrl(Astro.url);
+
+const pageTitle = t('privacy.title', currentLang);
+const pageDescription = t('privacy.description', currentLang);
+const canonicalUrl = getLocalizedUrl('/privacy-policy/', currentLang);
 
 const breadcrumbs = [
-  { name: 'Home', url: `${Astro.url.origin}/` },
-  { name: 'Privacy Policy', url: `${Astro.url.origin}/privacy-policy/` }
+  { name: t('nav.home', currentLang), url: getLocalizedUrl('/', currentLang) },
+  { name: t('privacy.header', currentLang), url: getLocalizedUrl('/privacy-policy/', currentLang) }
 ];
 ---
 
@@ -26,16 +29,16 @@ const breadcrumbs = [
     <section class="service-header">
       <div class="container">
         <nav class="breadcrumb">
-          <a href="/">Home</a>
+          <a href={getLocalizedUrl('/', currentLang)}>{t('nav.home', currentLang)}</a>
           <span>›</span>
-          <span>Privacy Policy</span>
+          <span>{t('privacy.header', currentLang)}</span>
         </nav>
         
         <div class="service-hero">
           <div class="service-info">
-            <h1>Privacy Policy</h1>
+            <h1>{t('privacy.header', currentLang)}</h1>
             <p class="service-description">
-              Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
+              {t('privacy.subtitle', currentLang)}
             </p>
             
             <div class="service-meta">

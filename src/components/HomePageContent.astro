@@ -1,0 +1,226 @@
+---
+// Reusable homepage content component
+// Single source of truth for homepage structure
+import Hero from './Hero.astro';
+import ServiceCard from './ServiceCard.astro';
+import ProjectCard from './ProjectCard.astro';
+import BottomCTA from './BottomCTA.astro';
+import Testimonials from './Testimonials.astro';
+import { t, type Language } from '../utils/translations';
+import { getBasePath, getServicesPath, getProjectsPath } from '../utils/routing';
+
+interface Props {
+  currentLang: Language;
+  basePath: string;
+  services: Array<{
+    slug: string;
+    title: string;
+    description: string;
+    features: string[];
+    ctaText: string;
+    delay: number;
+    image: any;
+    url: string;
+  }>;
+  projects: Array<{
+    slug: string;
+    title: string;
+    description: string;
+    image: any;
+    [key: string]: any;
+  }>;
+  testimonials: Array<{
+    text: string;
+    author: string;
+    role: string;
+    company: string;
+    avatar: string;
+    image: any;
+    caseStudy: string;
+    verified: boolean;
+  }>;
+}
+
+const { currentLang, basePath, services, projects, testimonials } = Astro.props;
+---
+
+<!-- HERO SECTION - CONVERSION FOCUSED -->
+<Hero
+  title={t('hero.title', currentLang)}
+  subtitle={t('hero.subtitle', currentLang)}
+  ctaText={t('hero.cta_text', currentLang)}
+  ctaHref={`${basePath}/contact?source=hero-audit`}
+  secondaryCtaText={t('hero.secondary_cta_text', currentLang)}
+  secondaryCtaHref={getProjectsPath(currentLang)}
+  features={[
+    { icon: "📈", title: t('hero.stats.lead_increase', currentLang), description: "287% Average Increase" },
+    { icon: "👥", title: t('hero.stats.new_clients', currentLang), description: "47 New Clients" },
+    { icon: "🎯", title: t('hero.stats.conversion_rate', currentLang), description: "3.4% Average Rate" },
+    { icon: "⏱️", title: t('hero.stats.hours_saved', currentLang), description: "20+ Hours Weekly" }
+  ]}
+/>
+
+<Testimonials items={testimonials} />
+
+<!-- SERVICES SECTION -->
+<section id="services" class="services-section section-padding">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <h2>{t('services.title', currentLang)}</h2>
+      <p class="section-subtitle">{t('services.subtitle', currentLang)}</p>
+    </div>
+
+    <div class="services-grid stagger-children">
+      {services.map((service, index) => (
+        <ServiceCard
+          image={service.image}
+          title={service.title}
+          description={service.description}
+          features={service.features}
+          ctaText={service.ctaText}
+          delay={service.delay}
+          url={service.url}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects-section section-padding bg-light">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <h2>{t('projects.title', currentLang)}</h2>
+      <p class="section-subtitle">{t('projects.subtitle', currentLang)}</p>
+    </div>
+
+    <div class="projects-carousel">
+      <div class="carousel-container" id="carouselContainer">
+        {projects.map((project, index) => (
+          <div class="carousel-slide" data-aos="fade-up" data-aos-delay={index * 200}>
+            <ProjectCard
+              project={project}
+            />
+          </div>
+        ))}
+      </div>
+      
+      <div class="carousel-nav">
+        <button class="carousel-btn" id="prevBtn" aria-label="Previous project">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="carousel-btn" id="nextBtn" aria-label="Next project">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="carousel-dots" id="carouselDots">
+        {projects.map((_, index) => (
+          <div class={`carousel-dot ${index === 0 ? 'active' : ''}`} data-index={index}></div>
+        ))}
+      </div>
+    </div>
+
+    <div class="view-all text-center">
+      <a href={getServicesPath(currentLang)} class="view-all-btn">
+        {t('projects.view_all', currentLang)}
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<BottomCTA 
+  title={t('cta.title', currentLang)}
+  subtitle={t('cta.subtitle', currentLang)}
+  urgencyText={t('cta.urgency', currentLang)}
+  valueProps={[]}
+  primaryButton={{
+    text: t('cta.primary_button', currentLang),
+    href: `${basePath}/contact`
+  }}
+  secondaryButton={{
+    text: t('cta.secondary_button', currentLang),
+    href: `${basePath}/contact`
+  }}
+  securityNote={t('cta.security_note', currentLang)}
+  showValueProps={false}
+/>
+
+<script>
+// CAROUSEL CODE - Reusable script
+document.addEventListener('DOMContentLoaded', function() {
+  const carouselContainer = document.getElementById('carouselContainer');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dots = document.querySelectorAll('.carousel-dot');
+  
+  if (!carouselContainer || !prevBtn || !nextBtn) return;
+  
+  let currentIndex = 0;
+  const totalSlides = document.querySelectorAll('.carousel-slide').length;
+  let autoAdvance: ReturnType<typeof setInterval> | undefined;
+  
+  function updateCarousel() {
+    if (carouselContainer) {
+      carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+    
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentIndex);
+    });
+  }
+  
+  function startAutoAdvance() {
+    autoAdvance = setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    }, 8000);
+  }
+  
+  function stopAutoAdvance() {
+    if (autoAdvance) {
+      clearInterval(autoAdvance);
+    }
+  }
+  
+  prevBtn.addEventListener('click', () => {
+    stopAutoAdvance();
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+    startAutoAdvance();
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    stopAutoAdvance();
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+    startAutoAdvance();
+  });
+  
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      stopAutoAdvance();
+      const index = dot.getAttribute('data-index');
+      if (index !== null) {
+        currentIndex = parseInt(index);
+        updateCarousel();
+        startAutoAdvance();
+      }
+    });
+  });
+  
+  carouselContainer.addEventListener('mouseenter', stopAutoAdvance);
+  carouselContainer.addEventListener('mouseleave', startAutoAdvance);
+  
+  startAutoAdvance();
+});
+</script>
+
