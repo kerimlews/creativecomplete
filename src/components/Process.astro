@@ -1,12 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import { getLanguageFromUrl, t } from '../utils/translations';
-
+import videoCallImage from '../images/call.png';
 const currentLang = getLanguageFromUrl(Astro.url);
-
-// Import a video call image - using one of the hero images as placeholder
-const videoCallImages = import.meta.glob('/src/images/hero/*.{jpg,jpeg,png}', { eager: true });
-const videoCallImage = Object.values(videoCallImages)[0] as any;
 
 export interface Props {
   subtitle?: string;
