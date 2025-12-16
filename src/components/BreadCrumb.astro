@@ -1,7 +1,34 @@
-<nav class="breadcrumb">
-    {Astro.props.items.map((bread: { url: string; name: string }, index) => index === Astro.props.items.length - 1 ? (
-    <span>{bread.name}</span> 
-    ) : (
-    <><a href={bread.url}>{bread.name}</a> / </>
-    ))}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    {Astro.props.items.map((bread: { url: string; name: string }, index) => {
+      const isLast = index === Astro.props.items.length - 1;
+      return (
+        <li 
+          class="breadcrumb-item"
+          itemprop="itemListElement" 
+          itemscope 
+          itemtype="https://schema.org/ListItem"
+        >
+          {isLast ? (
+            <span class="breadcrumb-current" itemprop="name" aria-current="page">
+              {bread.name}
+            </span>
+          ) : (
+            <>
+              <a 
+                href={bread.url} 
+                class="breadcrumb-link"
+                itemprop="item"
+                aria-label={`Navigate to ${bread.name}`}
+              >
+                <span itemprop="name">{bread.name}</span>
+              </a>
+              <span class="breadcrumb-separator" aria-hidden="true">/</span>
+            </>
+          )}
+          <meta itemprop="position" content={String(index + 1)} />
+        </li>
+      );
+    })}
+  </ol>
 </nav>

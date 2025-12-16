@@ -14,6 +14,7 @@
 @import './components/project-card';
 @import './components/consent-modal';
 @import './components/happy-clients';
+@import './components/breadcrumb';
 
 // Sections
 @import './sections/services';
@@ -62,8 +63,9 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
   color: $text-dark;
-  background: $background-light;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .container {
@@ -148,6 +150,12 @@ p {
 
 .text-center {
   text-align: center;
+}
+
+// Background utility classes - all transparent to show root background
+.bg-light,
+.bg-dark {
+  background: transparent !important;
 }
 
 // Scrollbar Styling

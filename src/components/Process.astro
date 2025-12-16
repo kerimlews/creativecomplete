@@ -1,5 +1,8 @@
 ---
 import { Image } from 'astro:assets';
+import { getLanguageFromUrl, t } from '../utils/translations';
+
+const currentLang = getLanguageFromUrl(Astro.url);
 
 // Import a video call image - using one of the hero images as placeholder
 const videoCallImages = import.meta.glob('/src/images/hero/*.{jpg,jpeg,png}', { eager: true });
@@ -17,23 +20,23 @@ export interface Props {
 }
 
 const {
-  subtitle = "STARTING IS EASY",
-  title = "HOW DOES IT WORK?",
+  subtitle = t('process.subtitle', currentLang),
+  title = t('process.title', currentLang),
   steps = [
     {
       number: "STEP 1",
-      title: "You book a free intro call",
-      description: "We learn more about your business and find the best design solution that fits your needs and budget."
+      title: t('process.step1.title', currentLang),
+      description: t('process.step1.description', currentLang)
     },
     {
       number: "STEP 2",
-      title: "We assign an A+ design team",
-      description: "To handle everything product-related, so you can focus on what you do best, growing your business."
+      title: t('process.step2.title', currentLang),
+      description: t('process.step2.description', currentLang)
     },
     {
       number: "STEP 3",
-      title: "We deliver work daily",
-      description: "You'll see daily updates as we work through your backlog. We're your partner every step of the way."
+      title: t('process.step3.title', currentLang),
+      description: t('process.step3.description', currentLang)
     }
   ]
 } = Astro.props;
@@ -224,8 +227,8 @@ const {
               <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
             </svg>
           </div>
-          <h3 class="feature-title">Instant onboarding</h3>
-          <p class="feature-description">Skip the hiring delays. Start seeing results in days, not weeks.</p>
+          <h3 class="feature-title">{t('process.feature1.title', currentLang)}</h3>
+          <p class="feature-description">{t('process.feature1.description', currentLang)}</p>
           <div class="feature-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -240,8 +243,8 @@ const {
               <polyline points="17 6 23 6 23 12"/>
             </svg>
           </div>
-          <h3 class="feature-title">High-impact, low overhead</h3>
-          <p class="feature-description">No full-time salaries or bloated costs - just senior design that delivers.</p>
+          <h3 class="feature-title">{t('process.feature2.title', currentLang)}</h3>
+          <p class="feature-description">{t('process.feature2.description', currentLang)}</p>
           <div class="feature-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -258,8 +261,8 @@ const {
               <line x1="15" y1="9" x2="15.01" y2="9"/>
             </svg>
           </div>
-          <h3 class="feature-title">Stress-free collaboration</h3>
-          <p class="feature-description">We take full ownership of your project, from start to finish.</p>
+          <h3 class="feature-title">{t('process.feature3.title', currentLang)}</h3>
+          <p class="feature-description">{t('process.feature3.description', currentLang)}</p>
         </div>
       </div>
     </div>
@@ -268,8 +271,8 @@ const {
 
 <style>
   .process-section {
-    padding: 8rem 0;
-    background: #1a202c;
+    padding: 0;
+    background: transparent;
     position: relative;
     overflow: hidden;
   }
@@ -438,7 +441,7 @@ const {
   .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 4rem 2rem 0;
     position: relative;
     z-index: 1;
   }

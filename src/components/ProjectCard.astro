@@ -1,6 +1,7 @@
 ---
 // src/components/ProjectCard.astro
 import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import { getProjectUrl } from '../utils/routing';
 import type { Language } from '../utils/translations';
 
@@ -8,65 +9,71 @@ export interface Props {
   project: {
     title: string;
     description: string;
-    image: string;
+    image: ImageMetadata;
     slug: string;
     category: string;
     url?: string;
     featured?: boolean;
+    logo?: string;
     stats?: {
       value: string;
       label: string;
     }[];
     lang?: Language;
   };
+  'data-index'?: number;
 }
 
-const { project } = Astro.props;
+const { project, 'data-index': dataIndex } = Astro.props;
 const projectLang = project.lang || 'en';
 
 ---
 
-<div class="project-card" data-category={project.category?.toLowerCase().replace(/\s+/g, '-')}>
-  <div class="project-image">
-    {project.image ? (
-      <Image src={project.image} alt={project.title} width={800} height={800} />
-    ) : (
-      <div class="image-placeholder">No image available</div>
-    )}
-    {project.featured && <div class="featured-badge">Featured</div>}
-    <div class="category-badge">{project.category}</div>
-  </div>
-  
+<div class="project-card" data-category={project.category?.toLowerCase().replace(/\s+/g, '-')} data-index={dataIndex}>
+  <!-- Left Column: Text Content -->
   <div class="project-content">
-    <h3 class="project-title">{project.title}</h3>
-    <p class="project-description">{project.description}</p>
-    
-    {project.stats && project.stats.length > 0 && (
-      <div class="project-stats">
-        {project.stats.map((stat, index) => (
-          <div class="stat" key={index}>
-            <span class="stat-value">{stat.value}</span>
-            <span class="stat-label">{stat.label}</span>
-          </div>
-        ))}
+    {project.logo && (
+      <div class="project-logo">
+        <img src={project.logo} alt={project.title} loading="lazy" />
       </div>
     )}
     
-    <div class="project-actions">
-      <a href={getProjectUrl(projectLang, project.slug)} class="project-link primary">
-        View Case Study
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+    <div class="project-category">{project.category}</div>
+    
+    <h3 class="project-title">{project.title}</h3>
+    <p class="project-description">{project.description}</p>
+    
+    <a href={getProjectUrl(projectLang, project.slug)} class="project-cta">
+      <span class="cta-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
           <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-      </a>
-      {project.url && (
-        <a href={project.url} target="_blank" rel="noopener noreferrer" class="project-link secondary">
-          Live Site
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      )}
-    </div>
+      </span>
+      Read the case study
+    </a>
+  </div>
+  
+  <!-- Right Column: Image Placeholder with Overlay -->
+  <div class="project-image">
+    {project.image ? (
+      <>
+        <div class="image-placeholder-wrapper">
+          <Image src={project.image} alt={project.title} width={800} height={600} class="project-image-placeholder" />
+          <div class="image-overlay"></div>
+        </div>
+        {project.stats && project.stats.length > 0 && (
+          <div class="project-stats-overlay">
+            {project.stats.slice(0, 2).map((stat, index) => (
+              <div class="stat-card" key={index}>
+                <div class="stat-value">{stat.value}</div>
+                <div class="stat-label">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        )}
+      </>
+    ) : (
+      <div class="image-placeholder">No image available</div>
+    )}
   </div>
 </div>

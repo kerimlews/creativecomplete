@@ -2,385 +2,115 @@
 // CORRECTED DYNAMIC IMAGE IMPORTS FOR PROJECTS
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import Process from '../components/Process.astro';
+import Services from '../components/Services.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import BottomCTA from '../components/BottomCTA.astro';
 import { getCollection } from 'astro:content';
 import Testimonials from '../components/Testimonials.astro';
-import { testimonials } from '../utils/constants';
+import { getProjectImage, getTestimonalImage, testimonials } from '../utils/constants';
+import { t, getLocalizedUrl } from '../utils/translations';
+import { getBasePath } from '../utils/routing';
+import { getHomepageServicesData } from '../utils/homepageData';
+import { getProjectUrl } from '../utils/routing';
 
-// Get service images from content folder
-const servicesImages = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
-const projectsImages = import.meta.glob('/src/images/projects/*.{png,jpg,jpeg,webp}');
-const testImages = import.meta.glob('/src/images/testimonials/*.{png,jpg,jpeg,webp}');
+// Set language to Slovenian
+const currentLang: 'sl' = 'sl';
 
-// Function to get project image by slug
-function getServiceImage(slug: string) {  
-  const imagePath = `/src/images/services/${slug}.png`;  
-  return servicesImages[imagePath]();
-}
+// Best case study for banner - Fitovision: The All-in-One Gym Platform
+const bestCaseStudy = {
+  slug: 'fitovision-gym-saas',
+  title: '⚡ 245% Traffic Boom 🚀',
+  url: getProjectUrl(currentLang, 'fitovision-gym-saas')
+};
 
-function getProjectImage(slug: string) {  
-  const imagePath = `/src/images/projects/${slug}.png`;    
-  return projectsImages[imagePath]();
-}
+// Generate services data based on language
+const SERVICES_DATA = getHomepageServicesData(currentLang);
 
-function getTestimonalImage(slug?: string) {  
-  if (!slug) return null;
-  const imagePath = `/src/images/testimonials/${slug}.png`;    
-  return testImages[imagePath]();
-}
+// Load projects dynamically from content/[lang] based on current language
+const allProjects = await getCollection('projectsSl');
+const projects = allProjects
+  .filter(project => {
+    const parts = project?.filePath ? project.filePath.split('/') : [];
+    const projectLang = parts[3] || 'en';
+    return projectLang === currentLang;
+  })
+  .map((project) => {
+    return {
+      ...project.data,
+      slug: project.data.slug || project.id,
+      image: getProjectImage(project.data.slug || project.id),
+      lang: currentLang
+    };
+  });
 
-// SERVICE DATA WITH CASE STUDY INTEGRATION
-const SERVICES_DATA = [
-  {
-    slug: 'seo',
-    title: "SEO, die echte Einnahmen generiert",
-    description: "Wir verbessern nicht nur Rankings - wir generieren qualifizierte Leads, die konvertieren. Durchschnittlich 287% Steigerung des qualifizierten Traffics innerhalb von 90 Tagen.",
-    features: [
-      "Garantierte erste Seite Rankings für 3-5 Keywords",
-      "Lokale SEO dominiert Google Maps und organisch", 
-      "Wettbewerber-Lückenanalyse und Ausbeutung",
-      "Conversion-optimierte Landing Pages",
-      "Monatliches Performance-Reporting mit klarem ROI"
-    ],
-    ctaText: "Holen Sie sich mein kostenloses SEO-Audit",
-    delay: 100,
-    caseStudy: {
-      slug: "local-seo-case-study-page-5-to-page",
-      results: "47 new clients in 90 days for plumbing company"
-    }
-  },
-  {
-    slug: 'web-design',
-    title: "Web Design, das Besucher zu Kunden konvertiert", 
-    description: "Websites, die rund um die Uhr als Ihr bester Verkäufer arbeiten. Durchschnittlich 217% Steigerung der Lead-Generierung nach dem Launch.",
-    features: [
-      "Mobile-first, conversion-optimiertes Design",
-      "3-Sekunden-Ladezeit-Garantie",
-      "Strategische CTA-Platzierung und Messaging",
-      "Implementierung von Vertrauenssignalen", 
-      "Laufende Leistungsoptimierung"
-    ],
-    ctaText: "Sehen Sie meine Conversion-Score",
-    delay: 200,
-    caseStudy: {
-      slug: "why-your-beautiful-website-isnt-making-sales",
-      results: "15 qualified leads/month vs previous 2"
-    }
-  },
-  {
-    slug: 'automation',
-    title: "KI-Automatisierung spart 20+ Stunden/Woche",
-    description: "Ersetzen Sie sich wiederholende Aufgaben durch intelligente Automatisierung. Typischer ROI innerhalb von 3-6 Monaten mit 95% Fehlerreduzierung.",
-    features: [
-      "Benutzerdefinierte Workflow-Automatisierungsentwicklung",
-      "KI-gesteuerte Kundenkommunikation", 
-      "Dokumentenverarbeitung und -verwaltung",
-      "Integration mit bestehenden Systemen",
-      "Laufende Optimierung und Unterstützung"
-    ],
-    ctaText: "Kostenlose Automatisierungsprüfung", 
-    delay: 300,
-    caseStudy: {
-      slug: "ai-automation-saved-20-hours-weekly",
-      results: "20 hours weekly saved for service business"
-    }
-  },
-  {
-    slug: 'saas-development',
-    title: "Benutzerdefinierte SaaS-Lösungen",
-    description: "Verwandeln Sie Ihre internen Tools in umsatzgenerierende Produkte. Vom MVP zu 10.000 USD MRR in 12 Monaten.",
-    features: [
-      "Full-Stack-SaaS-Entwicklung",
-      "Skalbare Architekturgestaltung",
-      "Abonnement- und Zahlungssysteme", 
-      "White-Label-Lösungen",
-      "Laufende Funktionsentwicklung"
-    ],
-    ctaText: "Erforschen Sie das SaaS-Potenzial",
-    delay: 400,
-    caseStudy: {
-      slug: "from-idea-to-10k-mrr-saas-case-study",
-      results: "$10K MRR from internal tool productization"
-    }
-  },
-  {
-    slug: 'ecommerce',
-    title: "Hochkonvertierende E-Commerce",
-    description: "E-Commerce-Geschäfte, die zu 3-5% konvertieren, gegenüber dem Branchendurchschnitt von 1-2%. Umfassende Plattformoptimierung.",
-    features: [
-      "Konversionsrate-Optimierung",
-      "Mobile Einkaufserlebnis",
-      "Zahlung und Versandoptimierung", 
-      "Integration der Bestandsverwaltung",
-      "Systeme zur Wiederherstellung abgebrochener Warenkorb"
-    ],
-    ctaText: "Erhöhen Sie meine Store-Konversionen",
-    delay: 500,
-    caseStudy: {
-      slug: "why-your-online-store-isnt-converting",
-      results: "185% conversion rate increase for specialty store"
-    }
-  },
-  {
-    slug: 'mobile-development',
-    title: "Umsatzgenerierende Mobile Apps",
-    description: "Mobile Apps, die die Kundenloyalität und Wiederholungsgeschäfte erhöhen. Durchschnittlich 3-faches Umsatzwachstum für Dienstleistungsunternehmen.",
-    features: [
-      "Plattformübergreifende iOS/Android-Entwicklung",
-      "Push-Benachrichtigungsstrategie",
-      "Zahlungs- und Buchungsintegration", 
-      "App-Store-Optimierung",
-      "Leistungsüberwachung"
-    ],
-    ctaText: "Mobile-Strategie besprechen",
-    delay: 600,
-    caseStudy: {
-      slug: "how-mobile-app-3x-revenue-local-business",
-      results: "3X revenue growth for fitness studio"
-    }
+const TESTIMONIALS = testimonials.map(t => ({ ...t, image: t.image ? getTestimonalImage(t.image) : null }));
+
+// Merge testimonials with projects - match by caseStudy slug or create fake project
+const mergedTestimonialsWithProjects = TESTIMONIALS.map((testimonial) => {
+  // Try to find matching project by caseStudy slug
+  const matchingProject = projects.find(p => p.slug === testimonial.caseStudy);
+  
+  if (matchingProject) {
+    return {
+      ...testimonial,
+      project: matchingProject
+    };
   }
-].map(s => ({ ...s, image: getServiceImage(s.caseStudy.slug) }));
-
-const projects = (await getCollection('projects')).map((project) => {
+  
+  // Create fake project with real name if no match found
+  const fakeProject = {
+    title: `How We Engineered ${testimonial.company} Platform`,
+    description: testimonial.text.substring(0, 150) + '...',
+    slug: testimonial.caseStudy || testimonial.company.toLowerCase().replace(/\s+/g, '-'),
+    category: "UI-UX / SEO / CRM / Marketing",
+    image: testimonial.image || null,
+    featured: false,
+    stats: [
+      { value: "287%", label: "Growth" },
+      { value: "90 Days", label: "Results" }
+    ],
+    lang: currentLang
+  };
+  
   return {
-    ...project.data,
-    image: getProjectImage(project.data.slug),
+    ...testimonial,
+    project: fakeProject
   };
 });
 
 ---
 
 <Layout 
-  title="Ergebnisorientierte Digitalagentur - 287% Wachstumgarantie" 
-  description="Wir treiben messbares Geschäftswachstum durch strategische SEO, conversions-optimiertes Webdesign und umsatzorientierte digitale Lösungen. Echte Ergebnisse, keine leeren Versprechungen."
+  title={t('homepage.page_title', currentLang)} 
+  description={t('homepage.page_description', currentLang)}
   canonical="https://creativecomplete.com"
 >
 
 <!-- HERO SECTION - CONVERSION FOCUSED -->
 <Hero 
-  happyClients={{
-      ratingPrefix:"Bewertet mit",
-      rating:"5.0",
-      ratingMiddleText:"von",
-      clientsCount:"30+",
-      ratingPrefix2:"zufriedenen Kunden"
-  }}
-  title="Die Full-Stack Growth Engine für ehrgeizige Marken"
-  subtitle="Von #1 SEO Rankings und KI-gesteuerten Workflows bis zur Social-Media-Dominanz und maximierten Conversion-Raten. Wir gestalten jeden Layer Ihrer digitalen Präsenz, um Kunden zu gewinnen und zu halten."
-  badgeText="Nur 3 Projekte nehmen wir diesen Monat an!"
-  ctaText="Mein maßgeschneidertes Wachstumsprogramm freischalten"
-  heroImageAlt="Kerim Alihodza - CEO / Digital Growth Services"
-  scrollText="Mehr erfahren"
-  ctaHref="/contact/"
-  features={[
-    {
-      icon: "🏆",
-      title: "Lokale Suche dominieren",
-      description: "Auf Google Maps und organisch auf Platz #1 für unsere Kunden",
-      href: "/services/"
-    },
-    {
-      icon: "💻",
-      title: "Hochkonvertiere Web-Designs",
-      description: "Optimiert für SEO, Geschwindigkeit und Verkäufe",
-      href: "/services/"
-    },
-    {
-      icon: "🎬",
-      title: "Professionelles Video-Marketing",
-      description: "Promotional Videos, die Ihre Geschichte erzählen und zu Handlungen führen",
-      href: "/services/"
-    },
-    {
-      icon: "🤖",
-      title: "Effizienz durch KI",
-      description: "Automatisieren Sie wiederkehrende Aufgaben und Workflows",
-      href: "/services/"
-    },
-    {
-      icon: "📱",
-      title: "Custom App-Entwicklung",
-      description: "Nahtlose Web-, Mobile- und Desktop-Erfahrungen",
-      href: "/services/"
-    }
-  ]}
+  bannerText={bestCaseStudy.title}
+  bannerLink={bestCaseStudy.url}
 />
 
-<Testimonials
-  header="Kundenergebnisse durch Daten gestützt"
-  desc="Diese Testimonials enthalten detaillierte Fallstudien aus unseren anspruchsvollsten Projekten mit vollständigen Metriken und Strategien, die zum Erfolg führten."
-  items={testimonials.map(t => ({ ...t, image: getTestimonalImage(t.image) }))}
-/>
+<Process />
 
-<!--   title="Your Business Deserves Better Than Empty Marketing Promises"
-  subtitle="We deliver measurable revenue growth through strategic digital solutions. 287% average increase in qualified leads for our clients."
-  ctaText="Get My Free Growth Audit"
-  ctaHref="/contact?source=hero-audit"
-  secondaryCtaText="See Real Case Studies →"
-  secondaryCtaHref="/projects"
-  stats={[
-    { number: "287%", label: "Avg. Lead Increase" },
-    { number: "47", label: "New Clients in 90 Days" },
-    { number: "3.4%", label: "Avg. Conversion Rate" },
-    { number: "20+", label: "Hours Saved Weekly" }
-  ]} -->
-<!-- SERVICES SECTION -->
-<section id="services" class="services-section section-padding">
-  <div class="container">
-    <div class="section-header text-center" data-aos="fade-up">
-      <h2>Digitale Lösungen, die echte Einnahmen treiben</h2>
-      <p class="section-subtitle">Jeder Service wird durch verifizierte Fallstudien mit messbaren Ergebnissen unterstützt</p>
-    </div>
+<Services />
 
-    <div class="services-grid stagger-children">
-      {SERVICES_DATA.map((service, index) => (
-        <ServiceCard
-          key={service.slug}
-          image={service.image}
-          title={service.title}
-          description={service.description}
-          features={service.features}
-          ctaText={service.ctaText}
-          delay={service.delay}
-          url={`/services/${service.caseStudy.slug}`}
-          caseStudy={service.caseStudy}
-          showResults={true}
-        />
-      ))}
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS SECTION - WITH CORRECT IMAGE PATHS -->
-<section id="projects" class="projects-section section-padding bg-light">
-  <div class="container">
-    <div class="section-header text-center" data-aos="fade-up">
-      <h2>Verifizierte Fallstudien mit echten Metriken</h2>
-      <p class="section-subtitle">Jedes Projekt hat eine detaillierte Fallstudie, die genau zeigt, wie wir diese Ergebnisse erreicht haben</p>
-    </div>
-
-    <div class="projects-carousel">
-      <div class="carousel-container" id="carouselContainer">
-        {projects.map((project, index) => (
-          <div class="carousel-slide" data-aos="fade-up" data-aos-delay={index * 200} key={project.slug}>
-            <ProjectCard
-              project={project}
-              showVerification={true}
-              showCaseStudyLink={true}
-            />
-          </div>
-        ))}
-      </div>
-      
-      <div class="carousel-nav">
-        <button class="carousel-btn" id="prevBtn" aria-label="Vorheriges Projekt">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <button class="carousel-btn" id="nextBtn" aria-label="Nächstes Projekt">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </div>
-      
-      <div class="carousel-dots" id="carouselDots">
-        {projects.map((_, index) => (
-          <div class={`carousel-dot ${index === 0 ? 'active' : ''}`} data-index={index}></div>
-        ))}
-      </div>
-    </div>
-
-    <div class="view-all text-center">
-      <a href="/services/" class="view-all-btn">
-        Alle Fallstudien ansehen
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
+<Testimonials items={mergedTestimonialsWithProjects} />
 
 <!-- FINAL CTA -->
 <BottomCTA 
-  title="Bereit, ähnliche Ergebnisse zu erhalten?"
-  subtitle="Hören Sie auf, sich zu fragen, was möglich ist, und sehen Sie echte Wachstumsmetriken für Ihr Unternehmen"
-  urgencyText="Aktuell akzeptieren wir 3 neue Clients diesen Monat"
+  title={t('cta.title', currentLang)}
+  subtitle={t('cta.subtitle', currentLang)}
+  urgencyText={t('cta.urgency', currentLang)}
   valueProps={[]}
   primaryButton={{
-    text: "Holen Sie sich mein kostenloses Wachstums-Audit",
-    href: "/contact"
+    text: t('cta.primary_button', currentLang),
+    href: getLocalizedUrl('/contact/', currentLang)
   }}
-  secondaryButton={{
-    text: "Strategiegespräch vereinbaren",
-    href: "/contact"
-  }}
-  securityNote="Ihre Informationen sind sicher. Wir machen keinen Spam oder Drucktaktiken."
+  securityNote={t('cta.security_note', currentLang)}
   showValueProps={false}
 />
 </Layout>
-
-<script>
-// CAROUSEL CODE
-document.addEventListener('DOMContentLoaded', function() {
-  const carouselContainer = document.getElementById('carouselContainer');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const dots = document.querySelectorAll('.carousel-dot');
-  
-  let currentIndex = 0;
-  const totalSlides = document.querySelectorAll('.carousel-slide').length;
-  let autoAdvance;
-  
-  function updateCarousel() {
-    carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    
-    dots.forEach((dot, index) => {
-      dot.classList.toggle('active', index === currentIndex);
-    });
-  }
-  
-  function startAutoAdvance() {
-    autoAdvance = setInterval(() => {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateCarousel();
-    }, 8000);
-  }
-  
-  function stopAutoAdvance() {
-    clearInterval(autoAdvance);
-  }
-  
-  prevBtn.addEventListener('click', () => {
-    stopAutoAdvance();
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-    startAutoAdvance();
-  });
-  
-  nextBtn.addEventListener('click', () => {
-    stopAutoAdvance();
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateCarousel();
-    startAutoAdvance();
-  });
-  
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      stopAutoAdvance();
-      currentIndex = parseInt(dot.getAttribute('data-index'));
-      updateCarousel();
-      startAutoAdvance();
-    });
-  });
-  
-  carouselContainer.addEventListener('mouseenter', stopAutoAdvance);
-  carouselContainer.addEventListener('mouseleave', startAutoAdvance);
-  
-  startAutoAdvance();
-});
-</script>

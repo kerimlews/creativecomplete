@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #0f0f1f 0%, #1a1a2e 50%, #16213e 100%);
+  background: transparent;
   padding-top: 100px;
 
   @include mobile {

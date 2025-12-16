@@ -4,8 +4,37 @@ import { Image } from 'astro:assets';
 import logo from '../images/logo-svg.svg';
 import { COMPANY_SOCIAL_MEDIA } from '../utils/constants';
 import { getLanguageFromUrl, t, getLocalizedUrl } from '../utils/translations';
+import { getCollection } from 'astro:content';
+import { getServiceUrl, getProjectUrl } from '../utils/routing';
+import { capitalize } from '../utils/helpers';
 
 const currentLang = getLanguageFromUrl(Astro.url);
+
+// Load services dynamically from content collections (same as Header)
+const allServices = await getCollection(`services${capitalize(currentLang)}` as any);
+
+// Filter by current language and get featured services for footer
+const footerServices = (allServices as any[])
+  .filter((service: any) => {
+    const parts = service?.filePath ? service.filePath.split('/') : [];
+    const serviceLang = parts[3] || 'en';
+    return serviceLang === currentLang;
+  })
+  .filter((service: any) => {
+    // Only show main services in footer (exclude local-seo, use seo instead)
+    const slug = service.data.slug || service.id;
+    return ['seo', 'web-design', 'automation', 'saas-development', 'ecommerce', 'mobile-development'].includes(slug);
+  })
+  .slice(0, 6)
+  .map((service: any) => ({
+    slug: service.data.slug || service.id,
+    title: service.data.title
+  }))
+  .sort((a, b) => {
+    // Sort in a specific order for footer
+    const order = ['seo', 'web-design', 'automation', 'saas-development', 'ecommerce', 'mobile-development'];
+    return order.indexOf(a.slug) - order.indexOf(b.slug);
+  });
 ---
 
 <footer class="footer">
@@ -22,11 +51,14 @@ const currentLang = getLanguageFromUrl(Astro.url);
           10+ years of expertise in driving measurable results.
         </p>
         <div class="social-links">
-          {Object.keys(COMPANY_SOCIAL_MEDIA).map(social => (
-            <a href={COMPANY_SOCIAL_MEDIA[social].url} class="social-link" target="_blank" aria-label={COMPANY_SOCIAL_MEDIA[social].tooltip}>
-              <svg set:html={COMPANY_SOCIAL_MEDIA[social].icon} />
-            </a>
-          ))}
+          {Object.keys(COMPANY_SOCIAL_MEDIA).map(social => {
+            const socialData = COMPANY_SOCIAL_MEDIA[social as keyof typeof COMPANY_SOCIAL_MEDIA];
+            return (
+              <a href={socialData.url} class="social-link" target="_blank" aria-label={socialData.tooltip}>
+                <svg set:html={socialData.icon} />
+              </a>
+            );
+          })}
         </div>
       </div>
 
@@ -34,13 +66,9 @@ const currentLang = getLanguageFromUrl(Astro.url);
       <div class="footer-section">
         <h4 class="footer-heading">{t('nav.services', currentLang)}</h4>
         <ul class="footer-links">
-          <li><a href={getLocalizedUrl('/services/local-seo-case-study-page-5-to-page/', currentLang)}>SEO Strategy</a></li>
-          <li><a href={getLocalizedUrl('/services/why-your-beautiful-website-isnt-making-sales/', currentLang)}>Web Design</a></li>
-          <li><a href={getLocalizedUrl('/services/ai-automation-saved-20-hours-weekly/', currentLang)}>AI Automation</a></li>
-          <li><a href={getLocalizedUrl('/services/from-idea-to-10k-mrr-saas-case-study/', currentLang)}>SaaS Development</a></li>
-          <li><a href={getLocalizedUrl('/services/why-your-online-store-isnt-converting/', currentLang)}>E-commerce</a></li>
-          <li><a href={getLocalizedUrl('/services/how-mobile-app-3x-revenue-local-business/', currentLang)}>Mobile Apps</a></li>
-          <li><a href={getLocalizedUrl('/services/sl/google-maps-optimizacija-slovenija/', currentLang)}>Slovenija Local Business</a></li>
+          {footerServices.map((service) => (
+            <li><a href={getServiceUrl(currentLang, service.slug)}>{service.title}</a></li>
+          ))}
         </ul>
       </div>
 

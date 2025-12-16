@@ -1,0 +1,298 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import { generateAboutPageJsonLd } from '../../utils/jsonld';
+import logo from '../../images/logo-svg.svg';
+import { getLanguageFromUrl, t, getLocalizedUrl } from '../../utils/translations';
+
+const currentLang: 'sl' = 'sl';
+
+// Page metadata
+const pageTitle = 'O nas - Creative Complete | Prilagojena programska oprema in avtomatizacijske rešitve';
+const pageDescription = 'Spoznajte Creative Complete - razvijamo prilagojeno programsko opremo, avtomatiziramo poslovne procese in spodbujamo rast. Ustanovil Kerim Alihodza.';
+
+// Breadcrumbs
+const breadcrumbs = [
+  { name: t('nav.home', currentLang), url: `${Astro.url.origin}${getLocalizedUrl('/', currentLang)}` },
+  { name: t('nav.about', currentLang), url: Astro.url.href }
+];
+
+// JSON-LD structured data
+const aboutStructuredData = generateAboutPageJsonLd({
+  name: 'Creative Complete',
+  description: pageDescription,
+  url: 'https://creativecomplete.com/sl/about',
+  founder: {
+    name: 'Kerim Alihodza',
+    url: 'https://creativecomplete.com/sl/kerim-alihodza'
+  },
+  foundingDate: '2023',
+  services: [
+    'Razvoj prilagojene programske opreme',
+    'Avtomatizacija poslovnih procesov',
+    'Razvoj SaaS',
+    'E-trgovinske rešitve',
+    'Razvoj mobilnih aplikacij',
+    'SEO in digitalni marketing'
+  ]
+});
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  structuredData={aboutStructuredData}
+  breadcrumbs={breadcrumbs}
+  openGraph={{
+    title: pageTitle,
+    description: pageDescription,
+    type: 'website'
+  }}
+  twitterCard={{
+    title: pageTitle,
+    description: pageDescription
+  }}
+  priority={0.8}
+>
+  <div class="about-page">
+    <!-- Hero Section -->
+    <section class="about-hero section-padding">
+      <div class="container">
+        <div class="about-hero-content">
+          <!-- Company Logo -->
+          <div class="company-logo">
+            <Image
+              src={logo}
+              alt="Creative Complete Logo" 
+              width={120} 
+              height={100}
+            />
+            <h1 class="company-name">Creative Complete</h1>
+          </div>
+          
+          <div class="about-intro">
+            <h2>Razvijamo programsko opremo, ki rešuje resnične poslovne probleme</h2>
+            <p class="lead">
+              Od prilagojenih SaaS platform do sistemov za poslovno avtomatizacijo transformiramo kompleksne izzive v elegantne digitalne rešitve, ki spodbujajo rast in učinkovitost.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section section-padding">
+      <div class="container">
+        <div class="founder-content">
+          <div class="founder-header">
+            <h2>Spoznajte našega ustanovitelja</h2>
+            <p class="section-subtitle">Vizija za Creative Complete</p>
+          </div>
+          
+          <div class="founder-profile">
+            <div class="founder-info">
+              <h3>Kerim Alihodza</h3>
+              <p class="founder-title">Ustanovitelj in vodilni razvijalec</p>
+              <div class="founder-bio">
+                <p>
+                  Z več kot desetletjem izkušenj v razvoju programske opreme in digitalni transformaciji 
+                  je Kerim ustanovil Creative Complete, da bi premostil vrzel med kompleksnimi poslovnimi problemi 
+                  in praktičnimi tehnološkimi rešitvami.
+                </p>
+                <p>
+                  Njegova strokovna znanja zajemajo full-stack razvoj, sistemsko arhitekturo in strategijo rasti, 
+                  z dokazano uspešnostjo pri doseganju rezultatov za podjetja v različnih panogah.
+                </p>
+              </div>
+              <div class="founder-cta">
+                <a href={getLocalizedUrl('/kerim-alihodza/', currentLang)} class="cta-button cta-primary cta-md">
+                  Več o Kerimu
+                </a>
+              </div>
+            </div>
+            
+            <div class="founder-stats">
+              <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Let izkušenj</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Dokončanih projektov</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">2M€+</div>
+                <div class="stat-label">Ustvarjenega prihodka</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="services-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Kaj počnemo</h2>
+          <p class="section-subtitle">
+            Specializiramo se za razvoj prilagojenih rešitev, ki avtomatizirajo procese, 
+            optimizirajo delovne tokove in spodbujajo merljivo poslovno rast.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🚀</div>
+            <h3>Razvoj prilagojene programske opreme</h3>
+            <p>
+              Po meri narejene aplikacije, prilagojene vašim edinstvenim poslovnim potrebam, 
+              zgrajene s skalabilno arhitekturo in sodobnimi tehnologijami.
+            </p>
+            <ul class="service-features">
+              <li>SaaS platforme</li>
+              <li>Spletne aplikacije</li>
+              <li>Razvoj API-jev</li>
+              <li>Integracija sistemov</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Avtomatizacija poslovnih procesov</h3>
+            <p>
+              Odpravite ročno delo in zmanjšajte napake z avtomatizacijo ponavljajočih se 
+              nalog in optimizacijo vaših delovnih tokov.
+            </p>
+            <ul class="service-features">
+              <li>Avtomatizacija delovnih tokov</li>
+              <li>Integracija umetne inteligence</li>
+              <li>CRM sistemi</li>
+              <li>Obdelava podatkov</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📈</div>
+            <h3>Rast in optimizacija</h3>
+            <p>
+              Spodbujajte rast prihodkov s strateškim SEO, optimizacijo konverzij 
+              in podatkovno podprtimi marketinškimi strategijami.
+            </p>
+            <ul class="service-features">
+              <li>SEO strategija</li>
+              <li>Optimizacija stopnje konverzij</li>
+              <li>Skaliranje e-trgovine</li>
+              <li>Analitika uspešnosti</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="process-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Naš proces</h2>
+          <p class="section-subtitle">
+            Strukturiran pristop, ki zagotavlja, da dostavimo rešitve, 
+            ki ne le delujejo, temveč tudi ustvarjajo resnično poslovno vrednost.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Odkrivanje in analiza</h3>
+              <p>
+                Poglabljamo se v vaše poslovne izzive, cilje in tehnične 
+                zahteve, da bi natančno razumeli, kako izgleda uspeh za vas.
+              </p>
+              <ul>
+                <li>Analiza poslovnih zahtev</li>
+                <li>Ocena tehnične izvedljivosti</li>
+                <li>Pregled konkurenčnega okolja</li>
+                <li>Definicija meril uspeha</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Strategija in načrtovanje</h3>
+              <p>
+                Ustvarimo podroben projektni načrt z jasnimi mejniki, 
+                časovnimi roki in tehničnimi specifikacijami.
+              </p>
+              <ul>
+                <li>Oblikovanje projektne arhitekture</li>
+                <li>Izbira tehnološkega stacka</li>
+                <li>Časovni načrt razvoja</li>
+                <li>Dodelitev virov</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Razvoj in implementacija</h3>
+              <p>
+                Naša ekipa gradi vašo rešitev z uporabo agilnih metodologij, 
+                z rednimi posodobitvami in možnostmi za povratne informacije.
+              </p>
+              <ul>
+                <li>Agilni razvojni sprinti</li>
+                <li>Redne predstavitve napredka</li>
+                <li>Testiranje kakovosti</li>
+                <li>Nastavitev staging okolja</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h3>Zagon in optimizacija</h3>
+              <p>
+                Razporedimo vašo rešitev in zagotovimo stalno podporo za zagotovitev 
+                optimalne zmogljivosti in kontinuirane izboljšave.
+              </p>
+              <ul>
+                <li>Produkcijska razporeditev</li>
+                <li>Monitoring uspešnosti</li>
+                <li>Usposabljanje uporabnikov in dokumentacija</li>
+                <li>Stalna podpora in vzdrževanje</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta section-padding">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Pripravljeni transformirati vaše podjetje?</h2>
+          <p>
+            Pogovorimo se, kako vam lahko pomagamo avtomatizirati procese, 
+            razviti prilagojeno programsko opremo ali spodbujati rast vašega podjetja.
+          </p>
+          <div class="cta-actions">
+            <a href={getLocalizedUrl('/contact/', currentLang)} class="cta-button cta-primary cta-lg">
+              Začnite s projektom
+            </a>
+            <a href={getLocalizedUrl('/projekti/', currentLang)} class="cta-button cta-secondary cta-lg">
+              Oglejte si naše delo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+

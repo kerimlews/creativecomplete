@@ -1,0 +1,273 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { generateServiceJsonLd } from '../../../utils/jsonld';
+import FAQ from '../../../components/FAQ.astro';
+import { formatAuthorName } from '../../../utils/helpers';
+import BottomCTA from '../../../components/BottomCTA.astro';
+import { Image } from 'astro:assets';
+import BreadCrumb from '../../../components/BreadCrumb.astro';
+import StackedImagesWithPopup from '../../../components/StackedImagesWithPopup.astro';
+import RelatedArticlesSidebar from '../../../components/RelatedArticlesSidebar.astro';
+import HappyClients from '../../../components/HappyClients.astro';
+import { getServicesRouteName, t, getLocalizedUrl } from '../../../utils/translations';
+import { getServiceUrl, getBasePath } from '../../../utils/routing';
+import type { Language } from '../../../utils/translations';
+
+export async function getStaticPaths() {
+  const services = await getCollection('servicesDe');
+  const lang: Language = 'de';
+  
+  return services
+    .filter(service => {
+      // Check if service is in content/[lang]/services/*.md
+      const serviceLang = service?.filePath?.split('/')[3] || 'en';
+      return serviceLang === lang;
+    })
+    .map((service) => {
+      const slug = service.id;
+      return {
+        params: { 
+          slug: slug
+        },
+        props: { service, lang },
+      };
+    });
+}
+
+const { service, lang: routeLang } = Astro.props;
+const currentLang: Language = (routeLang || 'de') as Language;
+const basePath = getBasePath(currentLang);
+
+const structuredData = generateServiceJsonLd(service);
+const servicesPath = `/${currentLang}/${getServicesRouteName(currentLang)}/`;
+const breadcrumbs = [
+  { name: t('nav.home', currentLang), url: `${Astro.url.origin}${basePath}/` },
+  { name: t('nav.services', currentLang), url: `${Astro.url.origin}${servicesPath}` },
+  { name: service.data.title, url: `${Astro.url.href}/` }
+];
+
+const images = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
+
+const serviceImagesResults = await Promise.all(
+  Object.entries(images)
+    .filter(([path]) => {
+      // Extract service name from id (e.g., "de/local-seo" -> "local-seo")
+      const serviceName = service.id.split('/').pop() || service.id;
+      return path.includes(`/src/images/services/${serviceName}`);
+    })
+    .map(async ([path, image]) => {
+      try {
+        const imageModule = await image();
+        // import.meta.glob for images returns { default: ImageMetadata }
+        if (imageModule && typeof imageModule === 'object') {
+          // Extract the actual ImageMetadata - it might be in .default or be the object itself
+          const imageMetadata = ('default' in imageModule && imageModule.default) || imageModule;
+          
+          // Verify it's a valid ImageMetadata object with src property
+          if (imageMetadata && typeof imageMetadata === 'object' && 'src' in imageMetadata) {
+            return {
+              src: imageMetadata,
+              alt: service.data.title
+            };
+          }
+        }
+        return null;
+      } catch (e) {
+        return null;
+      }
+    })
+);
+
+let serviceImages = serviceImagesResults.filter((img): img is { src: any; alt: string } => img !== null);
+
+// If no images found by service name, try to load from frontmatter image field
+if (serviceImages.length === 0 && service.data.image) {
+  const imageName = service.data.image;
+  const extensions = ['png', 'jpg', 'jpeg', 'webp'];
+  const baseName = imageName.replace(/\.(png|jpg|jpeg|webp)$/, '');
+  
+  for (const ext of extensions) {
+    const imagePath = `/src/images/services/${baseName}.${ext}`;
+    if (images[imagePath]) {
+      try {
+        const imageModule = await images[imagePath]();
+        if (imageModule && typeof imageModule === 'object') {
+          const imageMetadata = ('default' in imageModule && imageModule.default) || imageModule;
+          
+          if (imageMetadata && typeof imageMetadata === 'object' && 'src' in imageMetadata) {
+            serviceImages = [{
+              src: imageMetadata,
+              alt: service.data.title
+            }];
+            break;
+          }
+        }
+      } catch (e) {
+        continue;
+      }
+    }
+  }
+}
+
+// Get related articles - check if service has related_articles in frontmatter
+let relatedArticles: any[] = [];
+let relatedArticlesId = 'services';
+
+if (service.data.related_articles && Array.isArray(service.data.related_articles) && service.data.related_articles.length > 0) {
+  // Load related projects from projects collection
+  const langProjects = await getCollection('projectsDe');
+  
+  relatedArticles = service.data.related_articles
+    .map((articleSlug: string) => {
+      const project = langProjects.find(p => p.data.slug === articleSlug);
+      if (project) {
+        return {
+          slug: project.data.slug,
+          title: project.data.title,
+          description: project.data.description,
+          category: project.data.category || 'Case Study',
+          readTime: project.data.readTime || '5 min read'
+        };
+      }
+      return null;
+    })
+    .filter((article): article is NonNullable<typeof article> => article !== null);
+  
+  relatedArticlesId = 'projekte';
+} else {
+  // Fall back to showing other services
+  const allServices = await getCollection('servicesDe');
+  relatedArticles = allServices
+    .filter(s => {
+      const sLang = s?.filePath?.split('/')[3] || 'en';
+      return sLang === currentLang;
+    })
+    .filter(s => s.id !== service.id)
+    .slice(0, 7)
+    .map(service => ({
+      slug: service.data.slug || service.id.split('/').pop() || service.id,
+      title: service.data.title,
+      description: service.data.description,
+      category: service.data.category || 'General',
+      readTime: service.data.readTime || '5 min read'
+    }));
+}
+---
+
+<Layout 
+  title={service.data.title}
+  description={service.data.description}
+  structuredData={structuredData}
+  breadcrumbs={breadcrumbs}
+  openGraph={{
+    title: service.data.title,
+    description: service.data.description,
+  }}
+  service={service}
+  priority={service.data.priority}
+>
+  <article class="service-detail">
+    <header class="service-header">
+      <div class="container">
+        
+        <BreadCrumb items={breadcrumbs} />
+        
+        <!-- Move h1 to full width above the hero content -->
+        <div class="service-title-fullwidth">
+          <h1>{service.data.title}</h1>
+        </div>
+
+        <HappyClients />
+
+        <div class="service-hero">
+          <div class="service-info">
+            <p class="service-subtitle">{service.data.subtitle}</p>
+            <p class="service-description">{service.data.description}</p>
+            
+            <div class="service-meta">
+              <div class="meta-item">
+                <span class="meta-label">Lieferzeit</span>
+                <span class="meta-value">{service.data.delay} Tage</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Priorität</span>
+                <span class="meta-value">{service.data.priority}/10</span>
+              </div>
+              {service.data.featured && (
+                <div class="featured-badge">Ausgewählter Service</div>
+              )}
+              <div class="meta-item">
+                <span class="meta-label">Kategorie</span>
+                <span class="meta-value">{service.data.category}</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Autor</span>
+                <a class="meta-value" href={getLocalizedUrl(`/${service.data.author}/`, currentLang)}>{formatAuthorName(service.data.author)}</a>
+              </div>
+            </div>
+            
+            <div class="service-actions">
+              <a href={getLocalizedUrl('/contact/', currentLang)} class="cta-button cta-primary cta-lg">
+                {service.data.ctaText}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="service-visual">
+            <StackedImagesWithPopup images={serviceImages} service={service} />
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="service-features">
+        <div class="container">
+        <h2>Was ist enthalten</h2>
+        <div class="features-grid">
+          {service.data.features.map((feature: string, index: number) => (
+            <div class="feature-card" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="feature-icon">{index + 1}</div>
+              <h3>{feature}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <div class="service-content">
+      <div class="container">
+        <div class="content-container">
+          <!-- Main Content -->
+          <div class="main-content">
+            <div set:html={service.rendered?.html} />
+          </div>
+
+          <RelatedArticlesSidebar id={relatedArticlesId} items={relatedArticles} />
+
+        </div>
+      </div>
+    </div>
+
+    {service.data.faq && service.data.faq.length > 0 && (
+      <FAQ faq={service.data.faq} />
+    )}
+    <BottomCTA 
+      title={t('cta.title', currentLang)}
+      subtitle={t('cta.subtitle', currentLang)}
+      urgencyText={t('cta.urgency', currentLang)}
+      valueProps={[]}
+      primaryButton={{
+        text: t('cta.primary_button', currentLang),
+        href: getLocalizedUrl('/contact/', currentLang)
+      }}
+      securityNote={t('cta.security_note', currentLang)}
+      showValueProps={false}
+    />
+  </article>
+</Layout>
+

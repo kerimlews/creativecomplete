@@ -1,5 +1,6 @@
 import { glob } from 'astro/loaders';
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, getCollection, z } from 'astro:content';
+import type { Language } from './utils/translations';
 
 // Base schema for common fields
 const baseSchema = {
@@ -87,13 +88,33 @@ const authors = defineCollection({
   //schema: authorSchema,
 });
 
-const projects = defineCollection({
-  loader: glob({ pattern: 'en/**/*.md', base: './src/content/projects' }),
+const projectsEn = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/projects/en' }),
   //schema: projectSchema,
 });
 
-const services = defineCollection({
-  loader: glob({ pattern: 'en/**/*.md', base: './src/content/services' }),
+const projectsDe = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/projects/de' }),
+  //schema: projectSchema,
+});
+
+const projectsSl = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/projects/sl' }),
+  //schema: projectSchema,
+});
+
+const servicesEn = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/services/en' }),
+  //schema: serviceSchema,
+});
+
+const servicesDe = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/services/de' }),
+  //schema: serviceSchema,
+});
+
+const servicesSl = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/services/sl' }),
   //schema: serviceSchema,
 });
 
@@ -108,7 +129,11 @@ const services = defineCollection({
 export const collections = {
   //blogs,
   authors,
-  projects,
-  services,
+  projectsEn,
+  projectsDe,
+  projectsSl,
+  servicesEn,
+  servicesDe,
+  servicesSl,
   //pages,
 };

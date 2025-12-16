@@ -1,4 +1,6 @@
 ---
+import { getLanguageFromUrl, t } from '../utils/translations';
+
 export interface Props {
   starsCount?: number;
   ratingPrefix?: string;
@@ -8,14 +10,20 @@ export interface Props {
   ratingPrefix2?: string;
 }
 
+const currentLang = getLanguageFromUrl(Astro.url);
+
 const {
   starsCount = 5,
-  ratingPrefix = "Rate",
+  ratingPrefix,
   rating = "5.0",
-  ratingMiddleText = "by",
+  ratingMiddleText,
   clientsCount = "30+",
-  ratingPrefix2 = "Happy Clients"
+  ratingPrefix2
 } = Astro.props;
+
+const defaultRatingPrefix = ratingPrefix || t('happy_clients.rate', currentLang);
+const defaultRatingMiddleText = ratingMiddleText || t('happy_clients.by', currentLang);
+const defaultRatingPrefix2 = ratingPrefix2 || t('happy_clients.happy_clients', currentLang);
 
 // Generate stars array
 const stars = Array.from({ length: starsCount }, () => "★");
@@ -27,5 +35,5 @@ const stars = Array.from({ length: starsCount }, () => "★");
       <span class="star">{star}</span>
     ))}
     </div>
-    <span class="rating-text">{ratingPrefix} <strong>{rating}</strong> {ratingMiddleText} <strong>{clientsCount}</strong> {ratingPrefix2}</span>
+    <span class="rating-text">{defaultRatingPrefix} <strong>{rating}</strong> {defaultRatingMiddleText} <strong>{clientsCount}</strong> {defaultRatingPrefix2}</span>
 </div>

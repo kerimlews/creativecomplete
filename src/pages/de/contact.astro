@@ -1,0 +1,266 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getLanguageFromUrl, t, getLocalizedUrl } from '../../utils/translations';
+
+const currentLang: 'de' = 'de';
+
+const { title = t('contact.title', currentLang), subtitle = t('contact.subtitle', currentLang) } = Astro.props;
+---
+
+<Layout title={title} description={subtitle}>
+    <!-- Contact Form Component -->
+    <div class="contact-section section-padding">
+      <div class="container">
+        <div class="contact-content">
+          <!-- Header -->
+          <div class="contact-header text-center">
+            <h2 class="contact-title">{title}</h2>
+            <p class="contact-subtitle">{subtitle}</p>
+          </div>
+    
+          <!-- Contact Form -->
+          <form 
+            class="contact-form" 
+            id="contactForm" 
+            action="https://formspree.io/f/xzzondpe" 
+            method="POST"
+          >
+            <div class="form-grid">
+              <!-- Name Field -->
+              <div class="form-group">
+                <label for="name" class="form-label">Vollständiger Name *</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  class="form-input" 
+                  required 
+                  placeholder="Geben Sie Ihren vollständigen Namen ein"
+                />
+              </div>
+    
+              <!-- Email Field -->
+              <div class="form-group">
+                <label for="email" class="form-label">E-Mail-Adresse *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  required 
+                  placeholder="Geben Sie Ihre E-Mail-Adresse ein"
+                />
+              </div>
+    
+              <!-- Company Field -->
+              <div class="form-group">
+                <label for="company" class="form-label">Unternehmen</label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company" 
+                  class="form-input" 
+                  placeholder="Ihr Firmenname (optional)"
+                />
+              </div>
+    
+              <!-- Phone Field -->
+              <div class="form-group">
+                <label for="phone" class="form-label">Telefonnummer</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  class="form-input" 
+                  placeholder="Ihre Telefonnummer (optional)"
+                />
+              </div>
+    
+              <!-- Service Interest -->
+              <div class="form-group full-width">
+                <label for="service" class="form-label">Service-Interesse</label>
+                <select id="service" name="service" class="form-select">
+                  <option value="">Wählen Sie einen Service</option>
+                  <option value="web-development">Web-Entwicklung</option>
+                  <option value="mobile-app">Mobile App-Entwicklung</option>
+                  <option value="ui-ux">UI/UX Design</option>
+                  <option value="digital-marketing">Digitales Marketing</option>
+                  <option value="branding">Branding</option>
+                  <option value="consultation">Beratung</option>
+                  <option value="other">Andere</option>
+                </select>
+              </div>
+    
+              <!-- Budget -->
+              <div class="form-group full-width">
+                <label for="budget" class="form-label">Projektbudget</label>
+                <select id="budget" name="budget" class="form-select">
+                  <option value="">Wählen Sie einen Budgetbereich</option>
+                  <option value="under-5k">Unter 5.000 €</option>
+                  <option value="5k-15k">5.000 € - 15.000 €</option>
+                  <option value="15k-30k">15.000 € - 30.000 €</option>
+                  <option value="30k-50k">30.000 € - 50.000 €</option>
+                  <option value="over-50k">Über 50.000 €</option>
+                  <option value="not-sure">Noch nicht sicher</option>
+                </select>
+              </div>
+    
+              <!-- Message -->
+              <div class="form-group full-width">
+                <label for="message" class="form-label">Projektdetails *</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  class="form-textarea" 
+                  required 
+                  rows="6" 
+                  placeholder="Erzählen Sie uns von Ihrem Projekt, Zielen, Zeitplan und spezifischen Anforderungen..."
+                ></textarea>
+              </div>
+            </div>
+    
+            <!-- Submit Button -->
+            <div class="form-actions">
+              <button type="submit" class="cta-button primary large full-width">
+                <span class="button-text">Nachricht senden</span>
+                <span class="button-loader" style="display: none;">
+                  <div class="loading-spinner"></div>
+                  Wird gesendet...
+                </span>
+              </button>
+            </div>
+    
+            <!-- Form Status Message -->
+            <div id="formStatus" class="form-status" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+</Layout>
+
+<script>
+  // Client-side form validation and submission
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const buttonText = submitButton.querySelector('.button-text');
+    const buttonLoader = submitButton.querySelector('.button-loader');
+
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Show loading state
+      buttonText.style.display = 'none';
+      buttonLoader.style.display = 'flex';
+      submitButton.disabled = true;
+
+      // Hide previous status messages
+      formStatus.style.display = 'none';
+
+      try {
+        const formData = new FormData(contactForm);
+        
+        // Submit directly to Formspree
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Success
+          showFormStatus('Vielen Dank für Ihre Nachricht! Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.', 'success');
+          contactForm.reset();
+        } else {
+          // Error from Formspree
+          const result = await response.json();
+          showFormStatus(result.error || 'Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.', 'error');
+        }
+      } catch (error) {
+        // Network error
+        showFormStatus('Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.', 'error');
+        console.error('Form submission error:', error);
+      } finally {
+        // Reset button state
+        buttonText.style.display = 'block';
+        buttonLoader.style.display = 'none';
+        submitButton.disabled = false;
+      }
+    });
+
+    function showFormStatus(message, type) {
+      formStatus.textContent = message;
+      formStatus.className = `form-status ${type}`;
+      formStatus.style.display = 'block';
+      
+      // Auto-hide success messages after 5 seconds
+      if (type === 'success') {
+        setTimeout(() => {
+          formStatus.style.display = 'none';
+        }, 5000);
+      }
+    }
+
+    // Real-time validation
+    const inputs = contactForm.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      input.addEventListener('blur', function() {
+        validateField(this);
+      });
+      
+      input.addEventListener('input', function() {
+        // Clear error state when user starts typing
+        if (this.style.borderColor === 'rgb(229, 62, 62)') {
+          this.style.borderColor = '#E2E8F0';
+        }
+      });
+    });
+
+    function validateField(field) {
+      if (field.required && !field.value.trim()) {
+        field.style.borderColor = '#E53E3E';
+        return false;
+      } else if (field.type === 'email' && field.value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(field.value)) {
+          field.style.borderColor = '#E53E3E';
+          return false;
+        } else {
+          field.style.borderColor = '#38A169';
+        }
+      } else {
+        field.style.borderColor = '#E2E8F0';
+      }
+      return true;
+    }
+
+    // Validate entire form before submission
+    function validateForm() {
+      let isValid = true;
+      const requiredFields = contactForm.querySelectorAll('[required]');
+      
+      requiredFields.forEach(field => {
+        if (!validateField(field)) {
+          isValid = false;
+        }
+      });
+      
+      return isValid;
+    }
+
+    // Update form submission to include validation
+    const originalSubmitHandler = contactForm.onsubmit;
+    contactForm.onsubmit = function(e) {
+      if (!validateForm()) {
+        e.preventDefault();
+        showFormStatus('Bitte füllen Sie alle Pflichtfelder korrekt aus.', 'error');
+        return false;
+      }
+      return originalSubmitHandler ? originalSubmitHandler.call(this, e) : true;
+    };
+  });
+</script>
+

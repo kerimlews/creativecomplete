@@ -1,19 +1,67 @@
 ---
 import { Image } from "astro:assets";
 
-const { images } = Astro.props;
+const { images, service } = Astro.props;
 
-const hasMultipleImages = images.length > 1;
-const displayImages = hasMultipleImages ? images.slice(0, 3) : images;
+// Filter out any invalid images
+const validImages = (images || []).filter((img: any) => 
+  img && 
+  img.src && 
+  typeof img.src === 'object' &&
+  img.alt
+);
 
-console.log({images});
+const hasMultipleImages = validImages.length > 1;
+const displayImages = hasMultipleImages ? validImages.slice(0, 3) : validImages;
+
+// Try to load image from service.data.image if no images found
+let fallbackImage: any = null;
+if (validImages.length === 0 && service?.data?.image) {
+  try {
+    const imageName = service.data.image;
+    const extensions = ['png', 'jpg', 'jpeg', 'webp'];
+    const baseName = imageName.replace(/\.(png|jpg|jpeg|webp)$/, '');
+    
+    // Use import.meta.glob to find the image
+    const serviceImages = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}', { eager: false });
+    
+    for (const ext of extensions) {
+      const imagePath = `/src/images/services/${baseName}.${ext}`;
+      if (serviceImages[imagePath]) {
+        try {
+          const imageModule = await serviceImages[imagePath]();
+          if (imageModule && typeof imageModule === 'object') {
+            // import.meta.glob for images returns { default: ImageMetadata }
+            const imageMetadata = ('default' in imageModule && imageModule.default) || imageModule;
+            
+            // Verify it's a valid ImageMetadata object with src property
+            if (imageMetadata && typeof imageMetadata === 'object' && 'src' in imageMetadata) {
+              fallbackImage = {
+                src: imageMetadata,
+                alt: service.data.title || 'Service image'
+              };
+              break;
+            }
+          }
+        } catch (e) {
+          // Continue to next extension
+          continue;
+        }
+      }
+    }
+  } catch (e) {
+    // Image not found, will use animated graphics
+    fallbackImage = null;
+  }
+}
 
 ---
 
-<script src="../scripts/imagePopup.ts"></script>
+<!-- <script src="../scripts/imagePopup.ts"></script> -->
 
 
 <!-- POPUP FOR IMAGES -->
+<!--
 <div class="image-popup" id="imagePopup">
     <div class="popup-content">
         <button class="close-btn" id="closePopup">×</button>
@@ -24,9 +72,92 @@ console.log({images});
     </div>
 </div>
 
-{hasMultipleImages ? (
+<style>
+  :global(.image-popup) {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    z-index: 10000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  :global(.image-popup.active) {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  :global(.image-popup .popup-content) {
+    position: relative !important;
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 300px !important;
+    min-height: 200px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 60px 100px !important;
+    margin: 0 !important;
+  }
+
+  :global(.image-popup .popup-image) {
+    max-width: 100% !important;
+    max-height: calc(90vh - 120px) !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 8px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  :global(.image-popup .popup-image:not([src])),
+  :global(.image-popup .popup-image[src=""]) {
+    display: none !important;
+  }
+</style>
+-->
+
+{validImages.length === 0 && !fallbackImage ? (
+    <div class="service-image-placeholder">
+        <div class="animated-graphics">
+            <div class="graphic-circle graphic-1"></div>
+            <div class="graphic-circle graphic-2"></div>
+            <div class="graphic-circle graphic-3"></div>
+            <div class="graphic-line graphic-line-1"></div>
+            <div class="graphic-line graphic-line-2"></div>
+            <div class="graphic-line graphic-line-3"></div>
+            <div class="graphic-dot graphic-dot-1"></div>
+            <div class="graphic-dot graphic-dot-2"></div>
+            <div class="graphic-dot graphic-dot-3"></div>
+            <div class="graphic-dot graphic-dot-4"></div>
+        </div>
+    </div>
+) : validImages.length === 0 && fallbackImage && fallbackImage.src ? (
+    <div class="service-image">
+        <Image 
+            src={fallbackImage.src} 
+            alt={fallbackImage.alt}
+            width={600}
+            height={500}
+            loading="eager"
+        />
+    </div>
+) : hasMultipleImages ? (
     <div class="stacked-images">
-    {displayImages.map((img, index) => (
+    {displayImages.map((img: any, index: number) => (
         <div class="stacked-item" data-index={index}>
         <Image 
             src={img.src} 
@@ -37,17 +168,17 @@ console.log({images});
         />
         </div>
     ))}
-    {images.length > 3 && (
+    {validImages.length > 3 && (
         <div class="image-counter">
-        +{images.length - 3} more
+        +{validImages.length - 3} more
         </div>
     )}
     </div>
-) : images.length === 1 ? (
+) : validImages.length === 1 ? (
     <div class="service-image">
     <Image 
-        src={images[0].src} 
-        alt={images[0].alt}
+        src={validImages[0].src} 
+        alt={validImages[0].alt}
         width={600}
         height={500}
         loading="eager"

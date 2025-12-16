@@ -1,0 +1,299 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import { generateAboutPageJsonLd } from '../../utils/jsonld';
+import logo from '../../images/logo-svg.svg';
+import { getLanguageFromUrl, t, getLocalizedUrl } from '../../utils/translations';
+
+const currentLang: 'de' = 'de';
+
+// Page metadata
+const pageTitle = 'Über uns - Creative Complete | Individuelle Software & Automatisierungslösungen';
+const pageDescription = 'Erfahren Sie mehr über Creative Complete - wir entwickeln individuelle Software, automatisieren Geschäftsprozesse und treiben Wachstum voran. Gegründet von Kerim Alihodza.';
+
+// Breadcrumbs
+const breadcrumbs = [
+  { name: t('nav.home', currentLang), url: `${Astro.url.origin}${getLocalizedUrl('/', currentLang)}` },
+  { name: t('nav.about', currentLang), url: Astro.url.href }
+];
+
+// JSON-LD structured data
+const aboutStructuredData = generateAboutPageJsonLd({
+  name: 'Creative Complete',
+  description: pageDescription,
+  url: 'https://creativecomplete.com/de/about',
+  founder: {
+    name: 'Kerim Alihodza',
+    url: 'https://creativecomplete.com/de/kerim-alihodza'
+  },
+  foundingDate: '2023',
+  services: [
+    'Individuelle Softwareentwicklung',
+    'Geschäftsprozessautomatisierung',
+    'SaaS-Entwicklung',
+    'E-Commerce-Lösungen',
+    'Mobile App-Entwicklung',
+    'SEO & Digitales Marketing'
+  ]
+});
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  structuredData={aboutStructuredData}
+  breadcrumbs={breadcrumbs}
+  openGraph={{
+    title: pageTitle,
+    description: pageDescription,
+    type: 'website'
+  }}
+  twitterCard={{
+    title: pageTitle,
+    description: pageDescription
+  }}
+  priority={0.8}
+>
+  <div class="about-page">
+    <!-- Hero Section -->
+    <section class="about-hero section-padding">
+      <div class="container">
+        <div class="about-hero-content">
+          <!-- Company Logo -->
+          <div class="company-logo">
+            <Image
+              src={logo}
+              alt="Creative Complete Logo" 
+              width={120} 
+              height={100}
+            />
+            <h1 class="company-name">Creative Complete</h1>
+          </div>
+          
+          <div class="about-intro">
+            <h2>Wir entwickeln Software, die echte Geschäftsprobleme löst</h2>
+            <p class="lead">
+              Von individuellen SaaS-Plattformen bis hin zu Geschäftsautomatisierungssystemen transformieren wir komplexe Herausforderungen in elegante digitale Lösungen, die Wachstum und Effizienz vorantreiben.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section section-padding">
+      <div class="container">
+        <div class="founder-content">
+          <div class="founder-header">
+            <h2>Lernen Sie unseren Gründer kennen</h2>
+            <p class="section-subtitle">Die Vision hinter Creative Complete</p>
+          </div>
+          
+          <div class="founder-profile">
+            <div class="founder-info">
+              <h3>Kerim Alihodza</h3>
+              <p class="founder-title">Gründer & Lead-Entwickler</p>
+              <div class="founder-bio">
+                <p>
+                  Mit über einem Jahrzehnt Erfahrung in Softwareentwicklung und digitaler Transformation 
+                  gründete Kerim Creative Complete, um die Lücke zwischen komplexen Geschäftsproblemen 
+                  und praktischen Technologielösungen zu schließen.
+                </p>
+                <p>
+                  Seine Expertise umfasst Full-Stack-Entwicklung, Systemarchitektur und Wachstumsstrategie, 
+                  mit einer nachgewiesenen Erfolgsbilanz bei der Erzielung von Ergebnissen für Unternehmen 
+                  in verschiedenen Branchen.
+                </p>
+              </div>
+              <div class="founder-cta">
+                <a href={getLocalizedUrl('/kerim-alihodza/', currentLang)} class="cta-button cta-primary cta-md">
+                  Mehr über Kerim erfahren
+                </a>
+              </div>
+            </div>
+            
+            <div class="founder-stats">
+              <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Jahre Erfahrung</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Abgeschlossene Projekte</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">2M€+</div>
+                <div class="stat-label">Generierter Umsatz</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="services-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Was wir tun</h2>
+          <p class="section-subtitle">
+            Wir spezialisieren uns auf die Entwicklung individueller Lösungen, die Prozesse automatisieren, 
+            Abläufe optimieren und messbares Geschäftswachstum vorantreiben.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🚀</div>
+            <h3>Individuelle Softwareentwicklung</h3>
+            <p>
+              Maßgeschneiderte Anwendungen, die auf Ihre einzigartigen Geschäftsanforderungen zugeschnitten sind, 
+              entwickelt mit skalierbarer Architektur und modernen Technologien.
+            </p>
+            <ul class="service-features">
+              <li>SaaS-Plattformen</li>
+              <li>Web-Anwendungen</li>
+              <li>API-Entwicklung</li>
+              <li>Systemintegration</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Geschäftsprozessautomatisierung</h3>
+            <p>
+              Eliminieren Sie manuelle Arbeit und reduzieren Sie Fehler durch Automatisierung repetitiver 
+              Aufgaben und Optimierung Ihrer Arbeitsabläufe.
+            </p>
+            <ul class="service-features">
+              <li>Workflow-Automatisierung</li>
+              <li>KI-Integration</li>
+              <li>CRM-Systeme</li>
+              <li>Datenverarbeitung</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📈</div>
+            <h3>Wachstum & Optimierung</h3>
+            <p>
+              Treiben Sie Umsatzwachstum durch strategisches SEO, Konversionsoptimierung 
+              und datengestützte Marketingstrategien voran.
+            </p>
+            <ul class="service-features">
+              <li>SEO-Strategie</li>
+              <li>Konversionsraten-Optimierung</li>
+              <li>E-Commerce-Skalierung</li>
+              <li>Performance-Analytik</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="process-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Unser Prozess</h2>
+          <p class="section-subtitle">
+            Ein strukturierter Ansatz, der sicherstellt, dass wir Lösungen liefern, 
+            die nicht nur funktionieren, sondern auch echten Geschäftswert schaffen.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Entdeckung & Analyse</h3>
+              <p>
+                Wir tauchen tief in Ihre Geschäftsherausforderungen, Ziele und technischen 
+                Anforderungen ein, um genau zu verstehen, wie Erfolg für Sie aussieht.
+              </p>
+              <ul>
+                <li>Analyse der Geschäftsanforderungen</li>
+                <li>Bewertung der technischen Machbarkeit</li>
+                <li>Überprüfung des Wettbewerbsumfelds</li>
+                <li>Definition von Erfolgsmetriken</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Strategie & Planung</h3>
+              <p>
+                Wir erstellen eine detaillierte Projekt-Roadmap mit klaren Meilensteinen, 
+                Zeitplänen und technischen Spezifikationen.
+              </p>
+              <ul>
+                <li>Design der Projektarchitektur</li>
+                <li>Auswahl des Technologie-Stacks</li>
+                <li>Entwicklungszeitplan</li>
+                <li>Ressourcenzuteilung</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Entwicklung & Implementierung</h3>
+              <p>
+                Unser Team entwickelt Ihre Lösung mit agilen Methoden, 
+                mit regelmäßigen Updates und Möglichkeiten für Feedback.
+              </p>
+              <ul>
+                <li>Agile Entwicklungssprints</li>
+                <li>Regelmäßige Fortschritts-Demos</li>
+                <li>Qualitätssicherungstests</li>
+                <li>Staging-Umgebungseinrichtung</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h3>Launch & Optimierung</h3>
+              <p>
+                Wir stellen Ihre Lösung bereit und bieten kontinuierlichen Support, um 
+                optimale Leistung und kontinuierliche Verbesserung sicherzustellen.
+              </p>
+              <ul>
+                <li>Produktionsbereitstellung</li>
+                <li>Leistungsüberwachung</li>
+                <li>Benutzerschulung & Dokumentation</li>
+                <li>Laufender Support & Wartung</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta section-padding">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Bereit, Ihr Geschäft zu transformieren?</h2>
+          <p>
+            Lassen Sie uns besprechen, wie wir Ihnen helfen können, Prozesse zu automatisieren, 
+            individuelle Software zu entwickeln oder Wachstum für Ihr Unternehmen voranzutreiben.
+          </p>
+          <div class="cta-actions">
+            <a href={getLocalizedUrl('/contact/', currentLang)} class="cta-button cta-primary cta-lg">
+              Starten Sie Ihr Projekt
+            </a>
+            <a href={getLocalizedUrl('/projects/', currentLang)} class="cta-button cta-secondary cta-lg">
+              Unsere Arbeit ansehen
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+

@@ -44,6 +44,23 @@ if (breadcrumbs && !structuredData) {
 const defaultImage = `${siteUrl}/og-default.svg`;
 const ogImage = openGraph.image || service?.data?.featuredImage || defaultImage;
 const twitterImage = twitterCard.image || service?.data?.featuredImage || defaultImage;
+
+// Detect if we're on a homepage (root path or language root)
+const isHomepage = Astro.url.pathname === '/' || 
+                   Astro.url.pathname === '/de' || 
+                   Astro.url.pathname === '/sl' ||
+                   Astro.url.pathname.match(/^\/[a-z]{2}\/?$/);
+
+// Detect if we're on a projects page (for any language)
+// Check for: /projects, /projekte, /projekti (all language variations)
+// Exclude services pages - they should not have white background
+const isProjectsPage = (Astro.url.pathname.includes('/projects') || 
+                       Astro.url.pathname.includes('/projekte') || 
+                       Astro.url.pathname.includes('/projekti')) &&
+                       !Astro.url.pathname.includes('/services') &&
+                       !Astro.url.pathname.includes('/storitve') &&
+                       !Astro.url.pathname.includes('/dienstleistungen') &&
+                       !Astro.url.pathname.includes('/usluge');
 ---
 
 <!DOCTYPE html>
@@ -94,8 +111,6 @@ const twitterImage = twitterCard.image || service?.data?.featuredImage || defaul
     <!-- Organization schema is now handled via structuredData prop -->
   
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
     
     <!-- Icons & Manifest -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -148,7 +163,7 @@ const twitterImage = twitterCard.image || service?.data?.featuredImage || defaul
     </script>
   </head>
   
-  <body>
+  <body class:list={{ 'is-homepage': isHomepage, 'is-projects-page': isProjectsPage }}>
     <div id="page-wrapper">
       <!-- Skip to main content for accessibility -->
       <a href="#main-content" tabindex="-1" class="skip-link">Skip to main content</a>
@@ -210,7 +225,7 @@ const twitterImage = twitterCard.image || service?.data?.featuredImage || defaul
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-background);
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
   color: var(--color-text);
 }
 

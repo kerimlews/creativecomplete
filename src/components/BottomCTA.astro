@@ -33,10 +33,6 @@ const {
     text: "Get Free Service Consultation",
     href: "/contact?source=services-page"
   },
-  secondaryButton = {
-    text: "View Our Projects", 
-    href: "/projects"
-  },
   securityNote = "Your information is secure. No spam, no pressure tactics.",
   showUrgency = true,
   showValueProps = true,
@@ -77,14 +73,6 @@ const {
           variant="primary" 
           size="lg" 
         />
-        {secondaryButton && (
-          <CtaButton 
-            text={secondaryButton.text} 
-            href={secondaryButton.href} 
-            variant="secondary" 
-            size="lg" 
-          />
-        )}
       </div>
       
       {showSecurityNote && (

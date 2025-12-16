@@ -120,3 +120,53 @@ export function getProjectUrl(lang: Language, projectId: string): string {
   const projectsPath = getProjectsPath(lang);
   return `${projectsPath}${projectId}/`;
 }
+
+/**
+ * Detect language from URL pathname
+ * Examples:
+ * - /projects/... -> 'en'
+ * - /de/projekte/... -> 'de'
+ * - /sl/projekti/... -> 'sl'
+ */
+export function detectLanguageFromPath(pathname: string): Language {
+  const segments = pathname.split('/').filter(Boolean);
+  
+  // Check if first segment is a language code
+  if (segments.length > 0 && translationConfig.supportedLanguages.includes(segments[0] as Language)) {
+    return segments[0] as Language;
+  }
+  
+  return 'en'; // Default to English
+}
+
+/**
+ * Filter content collection items by language based on file path
+ * Content files are in format: content/[type]/[lang]/filename.md
+ * Project IDs are in format: [lang]/filename (e.g., "en/careconnect-recruitment-automation")
+ */
+export function filterByLanguage<T extends { id: string; filePath?: string }>(
+  items: T[],
+  lang: Language
+): T[] {
+  return items.filter(item => {
+    const id = item.id || '';
+    const filePath = item.filePath || '';
+    
+    // Check if ID starts with [lang]/ (e.g., "en/careconnect" or "sl/careconnect")
+    if (id.startsWith(`${lang}/`)) {
+      return true;
+    }
+    
+    // Check if filePath includes /[lang]/ (e.g., "src/content/projects/en/file.md")
+    if (filePath.includes(`/${lang}/`)) {
+      return true;
+    }
+    
+    // Check if filePath includes projects/[lang]/ or services/[lang]/
+    if (filePath.includes(`projects/${lang}/`) || filePath.includes(`services/${lang}/`)) {
+      return true;
+    }
+    
+    return false;
+  });
+}

@@ -7,13 +7,14 @@ import { getCollection } from 'astro:content';
 import type { Language } from './translations';
 import { getBasePath } from './routing';
 import { initializeImageGlobs, getServiceImage, getProjectImage, getTestimonialImage } from './images';
+import { capitalize } from './helpers';
 
 /**
  * Load services for homepage
  */
 export async function loadHomepageServices(currentLang: Language, basePath: string) {
   const imageGlobs = initializeImageGlobs();
-  const allServices = await getCollection('services');
+  const allServices = await getCollection(`services${capitalize(currentLang)}`);
   
   const services = (await Promise.all(
     allServices
@@ -68,9 +69,9 @@ export async function loadHomepageServices(currentLang: Language, basePath: stri
 /**
  * Load projects for homepage
  */
-export async function loadHomepageProjects() {
+export async function loadHomepageProjects(lang: Language) {
   const imageGlobs = initializeImageGlobs();
-  const allProjects = await getCollection('projects');
+  const allProjects = await getCollection(`projects${capitalize(lang)}`);
   
   const projects = (await Promise.all(
     allProjects.map(async (project) => {

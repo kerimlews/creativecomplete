@@ -1,6 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import HappyClients from './HappyClients.astro';
+import { getLanguageFromUrl, t, getLocalizedUrl } from '../utils/translations';
+import { getProjectsPath } from '../utils/routing';
+
+const currentLang = getLanguageFromUrl(Astro.url);
 
 // Dynamically import all hero images
 const heroImages = await import.meta.glob('/src/images/hero/*.{png,jpg,jpeg,webp}');
@@ -31,14 +35,14 @@ export interface Props {
 }
 
 const { 
-  title = "YOUR EXPERT DESIGN PARTNER FOR STARTUPS",
-  subtitle = "Ship faster, convert better, and raise more.",
-  ctaText = "Start now",
-  ctaHref = "/contact/",
-  secondaryCtaText = "Message",
+  title = t('hero.default_title', currentLang),
+  subtitle = t('hero.default_subtitle', currentLang),
+  ctaText = t('hero.start_now', currentLang),
+  ctaHref = getLocalizedUrl('/contact/', currentLang),
+  secondaryCtaText = t('hero.message', currentLang),
   secondaryCtaHref = "https://wa.me/387603456771",
-  bannerText = "⚡ We helped Lightdash raise $11M 🚀",
-  bannerLink = "/projects/"
+  bannerText = t('hero.banner.default', currentLang),
+  bannerLink = getProjectsPath(currentLang)
 } = Astro.props;
 
 // Split title to get last word
@@ -137,7 +141,7 @@ const titleWithoutLastWord = titleWords.join(' ');
     align-items: center;
     padding: 6rem 0;
     overflow: hidden;
-    background: #1a202c;
+    background: transparent;
   }
 
   .hero-section::before {
@@ -289,7 +293,7 @@ const titleWithoutLastWord = titleWords.join(' ');
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.875rem 1.5rem;
+    padding: 0.875rem 1.75rem;
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
@@ -297,7 +301,7 @@ const titleWithoutLastWord = titleWords.join(' ');
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    min-width: 140px;
+    min-width: 160px;
     width: auto;
     white-space: nowrap;
   }
@@ -588,10 +592,11 @@ const titleWithoutLastWord = titleWords.join(' ');
 
     .cta-button {
       flex: 1;
-      min-width: 120px;
-      max-width: 160px;
+      min-width: 140px;
+      width: auto;
+      max-width: none;
       justify-content: center;
-      padding: 0.875rem 1.25rem;
+      padding: 0.875rem 1.5rem;
     }
   }
 

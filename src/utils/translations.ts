@@ -311,6 +311,18 @@ export function t(key: string, lang: Language, params: Record<string, string> = 
       de: 'Strategische Erweiterung erfolgreicher Initiativen zur Förderung nachhaltigen langfristigen Wachstums.',
       sl: 'Strateška širitev uspešnih pobud za spodbujanje trajnostne dolgoročne rasti.'
     },
+    'services.no_services': {
+      en: 'No Services Available',
+      hr: 'Nema Dostupnih Usluga',
+      de: 'Keine Dienstleistungen verfügbar',
+      sl: 'Ni na voljo storitev'
+    },
+    'services.no_services_desc': {
+      en: 'Our services are currently being updated. Please check back soon.',
+      hr: 'Naše usluge se trenutno ažuriraju. Molimo provjerite uskoro.',
+      de: 'Unsere Dienstleistungen werden derzeit aktualisiert. Bitte schauen Sie bald wieder vorbei.',
+      sl: 'Naše storitve se trenutno posodabljajo. Prosimo, preverite kmalu.'
+    },
     'services.case_studies_title': {
       en: 'Real Results, Real Clients',
       hr: 'Stvarni Rezultati, Stvarni Klijenti',
@@ -464,8 +476,8 @@ export function t(key: string, lang: Language, params: Record<string, string> = 
       sl: 'Fitnes center je potrojil prihodke in zmanjšal odliv strank za 45% s prilagojeno aplikacijo.'
     },
 
-    // Homepage
-    'services.title': {
+    // Homepage - services section (hero title)
+    'services.homepage.title': {
       en: 'Digital Solutions That Drive Real Revenue',
       hr: 'Digitalne Usluge Koje Daju Stvarne Rezultate',
       de: 'Digitale Dienstleistungen mit messbaren Ergebnissen',
@@ -495,6 +507,36 @@ export function t(key: string, lang: Language, params: Record<string, string> = 
       de: 'Alle Fallstudien erkunden',
       sl: 'Raziščite vse študije primerov'
     },
+    'projects.no_projects': {
+      en: 'No Projects Available',
+      hr: 'Nema Dostupnih Projekata',
+      de: 'Keine Projekte verfügbar',
+      sl: 'Ni na voljo projektov'
+    },
+    'projects.no_projects_desc': {
+      en: 'Our project portfolio is currently being updated. Please check back soon.',
+      hr: 'Naš portfolio projekata se trenutno ažurira. Molimo provjerite uskoro.',
+      de: 'Unser Projektportfolio wird derzeit aktualisiert. Bitte schauen Sie bald wieder vorbei.',
+      sl: 'Naš portfelj projektov se trenutno posodablja. Prosimo, preverite kmalu.'
+    },
+    'projects.description': {
+      en: 'Showcase of successful digital projects including SaaS products, e-commerce platforms, mobile apps, and automation systems with verified results.',
+      hr: 'Prikaz uspješnih digitalnih projekata uključujući SaaS proizvode, e-trgovinske platforme, mobilne aplikacije i automatizacijske sustave s verificiranim rezultatima.',
+      de: 'Präsentation erfolgreicher digitaler Projekte einschließlich SaaS-Produkten, E-Commerce-Plattformen, mobilen Apps und Automatisierungssystemen mit verifizierten Ergebnissen.',
+      sl: 'Predstavitev uspešnih digitalnih projektov, vključno s SaaS izdelki, e-trgovinskimi platformami, mobilnimi aplikacijami in avtomatizacijskimi sistemi z preverjenimi rezultati.'
+    },
+    'projects.view_live': {
+      en: 'View Live Project',
+      hr: 'Pogledaj Živi Projekt',
+      de: 'Live-Projekt ansehen',
+      sl: 'Ogled živega projekta'
+    },
+    'projects.author': {
+      en: 'Author',
+      hr: 'Autor',
+      de: 'Autor',
+      sl: 'Avtor'
+    },
     'cta.title': {
       en: 'Ready to Get Similar Results?',
       hr: 'Spremni za Slične Rezultate?',
@@ -516,13 +558,13 @@ export function t(key: string, lang: Language, params: Record<string, string> = 
     'cta.primary_button': {
       en: 'Get My Free Growth Audit',
       hr: 'Dobij Moj Besplatni Audit Rasta',
-      de: 'Holen Sie sich meine kostenlose Wachstumsanalyse',
+      de: 'Kostenlose Analyse',
       sl: 'Pridobite mojo brezplačno revizijo rasti'
     },
     'cta.secondary_button': {
       en: 'Schedule Strategy Call',
       hr: 'Zakaži Strategijski Poziv',
-      de: 'Strategiegespräch planen',
+      de: 'Strategiegespräch',
       sl: 'Načrtujte strateški klic'
     },
     'cta.security_note': {
@@ -722,6 +764,540 @@ export function t(key: string, lang: Language, params: Record<string, string> = 
       hr: 'Povratak na početnu',
       de: 'Zurück zur Startseite',
       sl: 'Nazaj na domačo stran'
+    },
+
+    // Homepage Services Data
+    'homepage.page_title': {
+      en: 'Results-Driven Digital Agency - 287% Growth Guarantee',
+      hr: 'Agencija Vođena Rezultatima - 287% Garancija Rasta',
+      de: 'Ergebnisorientierte Digitalagentur - 287% Wachstumsgarantie',
+      sl: 'Agencija, ki jo vodijo rezultati - 287% garancija rasti'
+    },
+    'homepage.page_description': {
+      en: 'We drive measurable business growth through strategic SEO, conversion-optimized web design, and revenue-focused digital solutions. Real results, not empty promises.',
+      hr: 'Pokrećemo mjerljiv rast poslovanja kroz strateški SEO, konverzijski optimizirani web dizajn i prihodno fokusirana digitalna rješenja. Stvarni rezultati, ne prazna obećanja.',
+      de: 'Wir treiben messbares Geschäftswachstum durch strategisches SEO, konversionsoptimiertes Webdesign und umsatzorientierte digitale Lösungen voran. Reale Ergebnisse, keine leeren Versprechen.',
+      sl: 'Spodbujamo merljiv poslovni rast s strateškim SEO, konverzijsko optimiziranim spletnim oblikovanjem in prihodkovno usmerjenimi digitalnimi rešitvami. Resnični rezultati, ne praznih obljub.'
+    },
+    'homepage.services.seo.title': {
+      en: 'SEO That Actually Drives Revenue',
+      hr: 'SEO koji stvarno generira prihod',
+      de: 'SEO, die echte Einnahmen generiert',
+      sl: 'SEO, ki dejansko prinaša prihodke'
+    },
+    'homepage.services.seo.description': {
+      en: "We don't just improve rankings - we drive qualified leads that convert. Average 287% increase in qualified traffic within 90 days.",
+      hr: 'Ne samo poboljšavamo rangiranje - generiramo kvalificirane potencijale koji konvertiraju. Prosječno 287% povećanje kvalificiranog prometa unutar 90 dana.',
+      de: 'Wir verbessern nicht nur Rankings - wir generieren qualifizierte Leads, die konvertieren. Durchschnittlich 287% Steigerung des qualifizierten Traffics innerhalb von 90 Tagen.',
+      sl: 'Ne izboljšujemo le uvrstitev - generiramo kvalificirane potencialne stranke, ki se pretvorijo. Povprečno 287% povečanje kvalificiranega prometa v 90 dneh.'
+    },
+    'homepage.services.seo.feature1': {
+      en: 'Guaranteed first-page rankings for 3-5 key terms',
+      hr: 'Zajamčeno rangiranje na prvoj stranici za 3-5 ključnih pojmova',
+      de: 'Garantierte erste Seite Rankings für 3-5 Keywords',
+      sl: 'Zagotovljena uvrstitev na prvo stran za 3-5 ključnih izrazov'
+    },
+    'homepage.services.seo.feature2': {
+      en: 'Local SEO dominating Google Maps + organic',
+      hr: 'Lokalni SEO dominira Google Maps + organski',
+      de: 'Lokale SEO dominiert Google Maps und organisch',
+      sl: 'Lokalni SEO dominira Google Maps + organski'
+    },
+    'homepage.services.seo.feature3': {
+      en: 'Competitor gap analysis and exploitation',
+      hr: 'Analiza i iskorištavanje praznina konkurencije',
+      de: 'Wettbewerber-Lückenanalyse und Ausbeutung',
+      sl: 'Analiza vrzeli konkurentov in izkoriščanje'
+    },
+    'homepage.services.seo.feature4': {
+      en: 'Conversion-optimized landing pages',
+      hr: 'Konverzijski optimizirane odredišne stranice',
+      de: 'Conversion-optimierte Landing Pages',
+      sl: 'Konverzijsko optimizirane ciljne strani'
+    },
+    'homepage.services.seo.feature5': {
+      en: 'Monthly performance reporting with clear ROI',
+      hr: 'Mjesečno izvještavanje o performansama s jasnim ROI',
+      de: 'Monatliches Performance-Reporting mit klarem ROI',
+      sl: 'Mesečno poročanje o uspešnosti z jasnim donosom naložbe'
+    },
+    'homepage.services.seo.cta': {
+      en: 'Get My Free SEO Audit',
+      hr: 'Dobij Moj Besplatni SEO Audit',
+      de: 'Holen Sie sich mein kostenloses SEO-Audit',
+      sl: 'Pridobite mojo brezplačno SEO revizijo'
+    },
+    'homepage.services.web_design.title': {
+      en: 'Web Design That Converts Visitors to Customers',
+      hr: 'Web Dizajn koji Pretvara Posjetitelje u Kupce',
+      de: 'Web Design, das Besucher zu Kunden konvertiert',
+      sl: 'Spletno oblikovanje, ki obiskovalce pretvarja v stranke'
+    },
+    'homepage.services.web_design.description': {
+      en: 'Websites that work 24/7 as your best salesperson. Average 217% increase in lead generation post-launch.',
+      hr: 'Web stranice koje rade 24/7 kao vaš najbolji prodavač. Prosječno 217% povećanje generiranja potencijala nakon pokretanja.',
+      de: 'Websites, die rund um die Uhr als Ihr bester Verkäufer arbeiten. Durchschnittlich 217% Steigerung der Lead-Generierung nach dem Launch.',
+      sl: 'Spletne strani, ki delujejo 24/7 kot vaš najboljši prodajalec. Povprečno 217% povečanje generiranja potencialnih strank po zagonu.'
+    },
+    'homepage.services.web_design.feature1': {
+      en: 'Mobile-first, conversion-optimized design',
+      hr: 'Mobilno-prvo, konverzijski optimizirani dizajn',
+      de: 'Mobile-first, conversion-optimiertes Design',
+      sl: 'Mobilno-prvo, konverzijsko optimizirano oblikovanje'
+    },
+    'homepage.services.web_design.feature2': {
+      en: '3-second load time guarantee',
+      hr: 'Jamstvo vremena učitavanja od 3 sekunde',
+      de: '3-Sekunden-Ladezeit-Garantie',
+      sl: 'Zagotovljen čas nalaganja 3 sekunde'
+    },
+    'homepage.services.web_design.feature3': {
+      en: 'Strategic CTA placement and messaging',
+      hr: 'Strateško postavljanje CTA i poruka',
+      de: 'Strategische CTA-Platzierung und Messaging',
+      sl: 'Strateško postavljanje pozivov k dejanju in sporočil'
+    },
+    'homepage.services.web_design.feature4': {
+      en: 'Trust signal implementation',
+      hr: 'Implementacija signala povjerenja',
+      de: 'Implementierung von Vertrauenssignalen',
+      sl: 'Implementacija signalov zaupanja'
+    },
+    'homepage.services.web_design.feature5': {
+      en: 'Ongoing performance optimization',
+      hr: 'Kontinuirana optimizacija performansi',
+      de: 'Laufende Leistungsoptimierung',
+      sl: 'Nenehna optimizacija uspešnosti'
+    },
+    'homepage.services.web_design.cta': {
+      en: 'See My Conversion Score',
+      hr: 'Vidi Moj Rezultat Konverzije',
+      de: 'Sehen Sie meine Conversion-Score',
+      sl: 'Oglejte si mojo oceno konverzije'
+    },
+    'homepage.services.automation.title': {
+      en: 'AI Automation That Saves 20+ Hours/Week',
+      hr: 'AI Automatizacija koja Štedi 20+ Sat/Tjedan',
+      de: 'KI-Automatisierung, die 20+ Stunden/Woche spart',
+      sl: 'Avtomatizacija z AI, ki prihrani 20+ ur/teden'
+    },
+    'homepage.services.automation.description': {
+      en: 'Replace repetitive tasks with intelligent automation. Typical ROI within 3-6 months with 95% error reduction.',
+      hr: 'Zamijenite repetitivne zadatke inteligentnom automatizacijom. Tipičan ROI unutar 3-6 mjeseci uz 95% smanjenje grešaka.',
+      de: 'Ersetzen Sie repetitive Aufgaben durch intelligente Automatisierung. Typischer ROI innerhalb von 3-6 Monaten mit 95% Fehlerreduzierung.',
+      sl: 'Zamenjajte ponavljajoče se naloge z inteligentno avtomatizacijo. Tipičen donos naložbe v 3-6 mesecih z 95% zmanjšanjem napak.'
+    },
+    'homepage.services.automation.feature1': {
+      en: 'Custom workflow automation development',
+      hr: 'Razvoj prilagođene automatizacije radnog toka',
+      de: 'Entwicklung benutzerdefinierter Workflow-Automatisierung',
+      sl: 'Razvoj prilagojene avtomatizacije delovnih tokov'
+    },
+    'homepage.services.automation.feature2': {
+      en: 'AI-powered customer communication',
+      hr: 'Komunikacija s klijentima pokretana AI-om',
+      de: 'KI-gestützte Kundenkommunikation',
+      sl: 'Komunikacija s strankami, ki jo poganja AI'
+    },
+    'homepage.services.automation.feature3': {
+      en: 'Document processing and management',
+      hr: 'Obrada i upravljanje dokumentima',
+      de: 'Dokumentenverarbeitung und -verwaltung',
+      sl: 'Obdelava in upravljanje dokumentov'
+    },
+    'homepage.services.automation.feature4': {
+      en: 'Integration with existing systems',
+      hr: 'Integracija s postojećim sustavima',
+      de: 'Integration mit bestehenden Systemen',
+      sl: 'Integracija z obstoječimi sistemi'
+    },
+    'homepage.services.automation.feature5': {
+      en: 'Ongoing optimization and support',
+      hr: 'Kontinuirana optimizacija i podrška',
+      de: 'Laufende Optimierung und Support',
+      sl: 'Nenehna optimizacija in podpora'
+    },
+    'homepage.services.automation.cta': {
+      en: 'Get Free Automation Audit',
+      hr: 'Dobij Besplatni Audit Automatizacije',
+      de: 'Holen Sie sich kostenloses Automatisierungs-Audit',
+      sl: 'Pridobite brezplačno revizijo avtomatizacije'
+    },
+    'homepage.services.saas.title': {
+      en: 'Custom SaaS Solutions',
+      hr: 'Prilagođena SaaS Rješenja',
+      de: 'Maßgeschneiderte SaaS-Lösungen',
+      sl: 'Prilagojene SaaS rešitve'
+    },
+    'homepage.services.saas.description': {
+      en: 'Transform your internal tools into revenue-generating products. From MVP to $10K MRR in 12 months.',
+      hr: 'Transformirajte svoje interne alate u proizvode koji generiraju prihod. Od MVP do 10.000 USD MRR u 12 mjeseci.',
+      de: 'Verwandeln Sie Ihre internen Tools in umsatzgenerierende Produkte. Von MVP zu 10.000 USD MRR in 12 Monaten.',
+      sl: 'Preoblikujte svoja notranja orodja v proizvode, ki ustvarjajo prihodke. Od MVP do 10.000 USD MRR v 12 mesecih.'
+    },
+    'homepage.services.saas.feature1': {
+      en: 'Full-stack SaaS development',
+      hr: 'Full-stack SaaS razvoj',
+      de: 'Full-Stack SaaS-Entwicklung',
+      sl: 'Razvoj SaaS z vsemi slojmi'
+    },
+    'homepage.services.saas.feature2': {
+      en: 'Scalable architecture design',
+      hr: 'Dizajn skalabilne arhitekture',
+      de: 'Skalierbare Architektur',
+      sl: 'Oblikovanje skalabilne arhitekture'
+    },
+    'homepage.services.saas.feature3': {
+      en: 'Subscription and payment systems',
+      hr: 'Sustavi pretplate i plaćanja',
+      de: 'Abonnement- und Zahlungssysteme',
+      sl: 'Sistemi naročnin in plačil'
+    },
+    'homepage.services.saas.feature4': {
+      en: 'White-label solutions',
+      hr: 'White-label rješenja',
+      de: 'White-Label-Lösungen',
+      sl: 'Rešitve z belo oznako'
+    },
+    'homepage.services.saas.feature5': {
+      en: 'Ongoing feature development',
+      hr: 'Kontinuirani razvoj značajki',
+      de: 'Laufende Feature-Entwicklung',
+      sl: 'Nenehni razvoj funkcij'
+    },
+    'homepage.services.saas.cta': {
+      en: 'Explore SaaS Potential',
+      hr: 'Istraži SaaS Potencijal',
+      de: 'SaaS-Potenzial erkunden',
+      sl: 'Raziščite potencial SaaS'
+    },
+    'homepage.services.ecommerce.title': {
+      en: 'High-Converting E-commerce',
+      hr: 'Visoko Konvertirajuća E-trgovina',
+      de: 'Hochkonvertierende E-Commerce',
+      sl: 'Visoko konvertirajoča e-trgovina'
+    },
+    'homepage.services.ecommerce.description': {
+      en: 'E-commerce stores that convert at 3-5% vs industry average 1-2%. Comprehensive platform optimization.',
+      hr: 'E-trgovine koje konvertiraju na 3-5% u odnosu na industrijski prosjek od 1-2%. Sveobuhvatna optimizacija platforme.',
+      de: 'E-Commerce-Shops, die mit 3-5% konvertieren, im Vergleich zum Branchendurchschnitt von 1-2%. Umfassende Plattformoptimierung.',
+      sl: 'E-trgovine, ki konvertirajo pri 3-5% v primerjavi s povprečjem v industriji 1-2%. Celovita optimizacija platforme.'
+    },
+    'homepage.services.ecommerce.feature1': {
+      en: 'Conversion rate optimization',
+      hr: 'Optimizacija stope konverzije',
+      de: 'Conversion-Rate-Optimierung',
+      sl: 'Optimizacija stopnje konverzije'
+    },
+    'homepage.services.ecommerce.feature2': {
+      en: 'Mobile shopping experience',
+      hr: 'Mobilno iskustvo kupovine',
+      de: 'Mobile Shopping-Erlebnis',
+      sl: 'Mobilna izkušnja nakupovanja'
+    },
+    'homepage.services.ecommerce.feature3': {
+      en: 'Payment and shipping optimization',
+      hr: 'Optimizacija plaćanja i dostave',
+      de: 'Zahlungs- und Versandoptimierung',
+      sl: 'Optimizacija plačil in pošiljanja'
+    },
+    'homepage.services.ecommerce.feature4': {
+      en: 'Inventory management integration',
+      hr: 'Integracija upravljanja zalihama',
+      de: 'Lagerverwaltungsintegration',
+      sl: 'Integracija upravljanja zalog'
+    },
+    'homepage.services.ecommerce.feature5': {
+      en: 'Abandoned cart recovery systems',
+      hr: 'Sustavi oporavka napuštenih košarica',
+      de: 'Warenkorb-Wiederherstellungssysteme',
+      sl: 'Sistemi za obnovitev opuščenih košaric'
+    },
+    'homepage.services.ecommerce.cta': {
+      en: 'Boost My Store Conversions',
+      hr: 'Povećaj Konverzije Moje Trgovine',
+      de: 'Steigern Sie meine Shop-Konversionen',
+      sl: 'Povečajte konverzije moje trgovine'
+    },
+    'homepage.services.mobile.title': {
+      en: 'Revenue-Driving Mobile Apps',
+      hr: 'Mobilne Aplikacije koje Generiraju Prihod',
+      de: 'Umsatzgenerierende mobile Apps',
+      sl: 'Mobilne aplikacije, ki prinašajo prihodke'
+    },
+    'homepage.services.mobile.description': {
+      en: 'Mobile apps that increase customer loyalty and repeat business. Average 3X revenue growth for service businesses.',
+      hr: 'Mobilne aplikacije koje povećavaju lojalnost kupaca i ponovne poslove. Prosječno 3X rast prihoda za poslovne usluge.',
+      de: 'Mobile Apps, die Kundenbindung und Wiederholungsgeschäfte steigern. Durchschnittlich 3X Umsatzwachstum für Serviceunternehmen.',
+      sl: 'Mobilne aplikacije, ki povečujejo zvestobo strank in ponavljajoče posle. Povprečno 3x rast prihodkov za storitvena podjetja.'
+    },
+    'homepage.services.mobile.feature1': {
+      en: 'Cross-platform iOS/Android development',
+      hr: 'Razvoj za iOS/Android na više platformi',
+      de: 'Plattformübergreifende iOS/Android-Entwicklung',
+      sl: 'Razvoj za iOS/Android na več platformah'
+    },
+    'homepage.services.mobile.feature2': {
+      en: 'Push notification strategy',
+      hr: 'Strategija push obavijesti',
+      de: 'Push-Benachrichtigungsstrategie',
+      sl: 'Strategija potisnih obvestil'
+    },
+    'homepage.services.mobile.feature3': {
+      en: 'Payment and booking integration',
+      hr: 'Integracija plaćanja i rezervacije',
+      de: 'Zahlungs- und Buchungsintegration',
+      sl: 'Integracija plačil in rezervacij'
+    },
+    'homepage.services.mobile.feature4': {
+      en: 'App store optimization',
+      hr: 'Optimizacija trgovine aplikacija',
+      de: 'App Store-Optimierung',
+      sl: 'Optimizacija trgovine z aplikacijami'
+    },
+    'homepage.services.mobile.feature5': {
+      en: 'Performance monitoring',
+      hr: 'Praćenje performansi',
+      de: 'Leistungsüberwachung',
+      sl: 'Spremljanje uspešnosti'
+    },
+    'homepage.services.mobile.cta': {
+      en: 'Discuss Mobile Strategy',
+      hr: 'Razgovaraj o Mobilnoj Strategiji',
+      de: 'Mobile Strategie besprechen',
+      sl: 'Razpravljajte o mobilni strategiji'
+    },
+
+    // Hero Section
+    'hero.default_title': {
+      en: 'YOUR EXPERT DESIGN PARTNER FOR STARTUPS',
+      hr: 'VAŠ STRUČNI PARTNER ZA DIZAJN ZA STARTUPE',
+      de: 'IHR EXPERTEN-DESIGN-PARTNER FÜR STARTUPS',
+      sl: 'VAŠ STRUČNI PARTNER ZA OBLIKOVANJE ZA STARTUPE'
+    },
+    'hero.default_subtitle': {
+      en: 'Ship faster, convert better, and raise more.',
+      hr: 'Brodite brže, konvertirajte bolje i prikupite više.',
+      de: 'Schneller liefern, besser konvertieren und mehr einnehmen.',
+      sl: 'Pošiljajte hitreje, pretvarjajte bolje in zberite več.'
+    },
+    'hero.start_now': {
+      en: 'Start now',
+      hr: 'Započni sada',
+      de: 'Jetzt starten',
+      sl: 'Začnite zdaj'
+    },
+    'hero.message': {
+      en: 'Message',
+      hr: 'Poruka',
+      de: 'Nachricht',
+      sl: 'Sporočilo'
+    },
+    'hero.banner.default': {
+      en: '⚡ 245% Traffic Boom 🚀',
+      hr: '⚡ 245% Boom Prometa 🚀',
+      de: '⚡ 245% Traffic-Boom 🚀',
+      sl: '⚡ 245% Boom Prometa 🚀'
+    },
+
+    // Process Section
+    'process.subtitle': {
+      en: 'STARTING IS EASY',
+      hr: 'POČETAK JE LAK',
+      de: 'DER START IST EINFACH',
+      sl: 'ZAČETEK JE LAHKO'
+    },
+    'process.title': {
+      en: 'HOW DOES IT WORK?',
+      hr: 'KAKO TO FUNKCIONIRA?',
+      de: 'WIE FUNKTIONIERT ES?',
+      sl: 'KAKO DELUJE?'
+    },
+    'process.step1.title': {
+      en: 'You book a free intro call',
+      hr: 'Rezervirate besplatni uvodni poziv',
+      de: 'Sie buchen einen kostenlosen Einführungsanruf',
+      sl: 'Rezervirate brezplačen uvodni klic'
+    },
+    'process.step1.description': {
+      en: 'We learn more about your business and find the best design solution that fits your needs and budget.',
+      hr: 'Saznajemo više o vašem poslovanju i pronalazimo najbolje dizajnersko rješenje koje odgovara vašim potrebama i proračunu.',
+      de: 'Wir erfahren mehr über Ihr Unternehmen und finden die beste Designlösung, die zu Ihren Bedürfnissen und Ihrem Budget passt.',
+      sl: 'Več izvemo o vašem podjetju in poiščemo najboljšo oblikovalsko rešitev, ki ustreza vašim potrebam in proračunu.'
+    },
+    'process.step2.title': {
+      en: 'We assign an A+ design team',
+      hr: 'Dodjeljujemo A+ dizajnerski tim',
+      de: 'Wir weisen ein A+ Design-Team zu',
+      sl: 'Dodelimo A+ oblikovalski tim'
+    },
+    'process.step2.description': {
+      en: 'To handle everything product-related, so you can focus on what you do best, growing your business.',
+      hr: 'Da se bavi svime što se tiče proizvoda, tako da se možete usredotočiti na ono što najbolje radite - rast vašeg poslovanja.',
+      de: 'Um alles Produktbezogene zu übernehmen, damit Sie sich auf das konzentrieren können, was Sie am besten können - das Wachstum Ihres Unternehmens.',
+      sl: 'Za obravnavo vsega, kar je povezano s produktom, tako da se lahko osredotočite na to, kar najbolje počnete - rast vašega podjetja.'
+    },
+    'process.step3.title': {
+      en: 'We deliver work daily',
+      hr: 'Dostavljamo radove dnevno',
+      de: 'Wir liefern täglich Arbeit',
+      sl: 'Dostavljamo delo dnevno'
+    },
+    'process.step3.description': {
+      en: "You'll see daily updates as we work through your backlog. We're your partner every step of the way.",
+      hr: 'Vidjet ćete dnevna ažuriranja dok radimo kroz vašu zaostalu radnu listu. Mi smo vaš partner na svakom koraku.',
+      de: 'Sie sehen tägliche Updates, während wir Ihre Backlog-Arbeiten durchführen. Wir sind Ihr Partner bei jedem Schritt.',
+      sl: 'Videli boste dnevne posodobitve, medtem ko delamo skozi vašo zaostalo delo. Mi smo vaš partner na vsakem koraku.'
+    },
+    'process.feature1.title': {
+      en: 'Instant onboarding',
+      hr: 'Trenutno uključivanje',
+      de: 'Sofortiges Onboarding',
+      sl: 'Takojšnje vključevanje'
+    },
+    'process.feature1.description': {
+      en: 'Skip the hiring delays. Start seeing results in days, not weeks.',
+      hr: 'Preskočite kašnjenja zapošljavanja. Počnite vidjeti rezultate u danima, a ne tjednima.',
+      de: 'Überspringen Sie Einstellungsverzögerungen. Beginnen Sie, Ergebnisse in Tagen statt Wochen zu sehen.',
+      sl: 'Preskočite zamude pri zaposlovanju. Začnite videti rezultate v dneh, ne v tednih.'
+    },
+    'process.feature2.title': {
+      en: 'High-impact, low overhead',
+      hr: 'Visok učinak, niski troškovi',
+      de: 'Hohe Wirkung, niedrige Gemeinkosten',
+      sl: 'Visok učinek, nizki stroški'
+    },
+    'process.feature2.description': {
+      en: 'No full-time salaries or bloated costs - just senior design that delivers.',
+      hr: 'Nema punih radnih vremena ili napuhanih troškova - samo seniorski dizajn koji isporučuje.',
+      de: 'Keine Vollzeitgehälter oder aufgeblähten Kosten - nur Senior-Design, das Ergebnisse liefert.',
+      sl: 'Brez polnih delovnih časov ali napihnjenih stroškov - samo seniorsko oblikovanje, ki prinaša rezultate.'
+    },
+    'process.feature3.title': {
+      en: 'Stress-free',
+      hr: 'Bez stresa',
+      de: 'Stressfrei',
+      sl: 'Brez stresa'
+    },
+    'process.feature3.description': {
+      en: 'We handle the complexity so you can focus on growth.',
+      hr: 'Mi rješavamo složenost tako da se vi možete usredotočiti na rast.',
+      de: 'Wir übernehmen die Komplexität, damit Sie sich auf das Wachstum konzentrieren können.',
+      sl: 'Mi obvladamo kompleksnost, tako da se lahko osredotočite na rast.'
+    },
+
+    // Services Section (Simple)
+    'services.simple.title': {
+      en: 'OUR SERVICES',
+      hr: 'NAŠE USLUGE',
+      de: 'UNSERE DIENSTLEISTUNGEN',
+      sl: 'NAŠE STORITVE'
+    },
+    'services.simple.subtitle': {
+      en: 'What We Offer',
+      hr: 'Što Nudimo',
+      de: 'Was Wir Bieten',
+      sl: 'Kaj Ponujamo'
+    },
+    'services.simple.local_search.title': {
+      en: 'Dominate Local Search',
+      hr: 'Dominirajte Lokalnom Pretragom',
+      de: 'Lokale Suche Dominieren',
+      sl: 'Dominirajte Lokalno Iskanje'
+    },
+    'services.simple.local_search.description': {
+      en: '– Ranked #1 on Google Maps for our clients',
+      hr: '– Rangirani #1 na Google Maps za naše klijente',
+      de: '– Rang #1 auf Google Maps für unsere Kunden',
+      sl: '– Uvrščeni #1 na Google Maps za naše stranke'
+    },
+    'services.simple.web_design.title': {
+      en: 'High-Converting Web Design',
+      hr: 'Visoko Konvertirajući Web Dizajn',
+      de: 'Hochkonvertierendes Webdesign',
+      sl: 'Visoko Konvertirajoče Spletno Oblikovanje'
+    },
+    'services.simple.web_design.description': {
+      en: '– Built for SEO, speed, and sales',
+      hr: '– Izgrađeno za SEO, brzinu i prodaju',
+      de: '– Gebaut für SEO, Geschwindigkeit und Verkäufe',
+      sl: '– Zgrajeno za SEO, hitrost in prodajo'
+    },
+    'services.simple.video.title': {
+      en: 'Professional Video Marketing',
+      hr: 'Profesionalni Video Marketing',
+      de: 'Professionelles Video-Marketing',
+      sl: 'Profesionalni Video Marketing'
+    },
+    'services.simple.video.description': {
+      en: '– Promotional videos that tell your story and drive action',
+      hr: '– Promotivni videozapisi koji pričaju vašu priču i pokreću akciju',
+      de: '– Werbevideos, die Ihre Geschichte erzählen und zum Handeln anregen',
+      sl: '– Promocijski videoposnetki, ki pripovedujejo vašo zgodbo in spodbujajo dejanja'
+    },
+    'services.simple.ai.title': {
+      en: 'Efficiency Through AI',
+      hr: 'Učinkovitost Kroz AI',
+      de: 'Effizienz Durch KI',
+      sl: 'Učinkovitost Z AI'
+    },
+    'services.simple.ai.description': {
+      en: '– Automate repetitive tasks and workflows',
+      hr: '– Automatizirajte ponavljajuće zadatke i radne tokove',
+      de: '– Automatisieren Sie repetitive Aufgaben und Workflows',
+      sl: '– Avtomatizirajte ponavljajoče se naloge in delovne tokove'
+    },
+    'services.simple.app.title': {
+      en: 'Custom App Development',
+      hr: 'Prilagođeni Razvoj Aplikacija',
+      de: 'Maßgeschneiderte App-Entwicklung',
+      sl: 'Prilagojen Razvoj Aplikacij'
+    },
+    'services.simple.app.description': {
+      en: '– Seamless web, mobile, and desktop experiences',
+      hr: '– Besprijekorno web, mobilno i desktop iskustvo',
+      de: '– Nahtlose Web-, Mobile- und Desktop-Erlebnisse',
+      sl: '– Brezhibne spletne, mobilne in namizne izkušnje'
+    },
+
+    // Testimonials Section
+    'testimonials.header': {
+      en: 'MORE CLIENT SUCCESS STORIES',
+      hr: 'VIŠE PRIČA O USPJEHU KLIJENATA',
+      de: 'WEITERE KUNDENERFOLGSGESCHICHTEN',
+      sl: 'VEČ ZGODB O USPEHU STRANK'
+    },
+    'testimonials.desc': {
+      en: 'Hear it from our partners.',
+      hr: 'Čujte to od naših partnera.',
+      de: 'Hören Sie es von unseren Partnern.',
+      sl: 'Slišite to od naših partnerjev.'
+    },
+    'testimonials.view_case_study': {
+      en: 'View Case Study',
+      hr: 'Pogledaj Studiju Slučaja',
+      de: 'Fallstudie Ansehen',
+      sl: 'Ogled Študije Primera'
+    },
+
+    // Happy Clients
+    'happy_clients.rate': {
+      en: 'Rate',
+      hr: 'Ocjena',
+      de: 'Bewertung',
+      sl: 'Ocena'
+    },
+    'happy_clients.by': {
+      en: 'by',
+      hr: 'od',
+      de: 'von',
+      sl: 'od'
+    },
+    'happy_clients.happy_clients': {
+      en: 'Happy Clients',
+      hr: 'Zadovoljnih Klijenata',
+      de: 'Kunden',
+      sl: 'Zadovoljnih Strank'
     }
   };
 
@@ -776,9 +1352,11 @@ export function getBreadcrumbs(path: string, lang: Language): Array<{ name: stri
     let name = segment;
     
     // Translate common segments
-    const translationKey = `nav.${segment}` as keyof typeof translations;
-    if (translations[translationKey]) {
-      name = t(translationKey, lang);
+    const translationKey = `nav.${segment}`;
+    const translated = t(translationKey, lang);
+    // If translation returns the key itself, it means translation doesn't exist
+    if (translated !== translationKey) {
+      name = translated;
     } else {
       // Capitalize and replace hyphens
       name = segment

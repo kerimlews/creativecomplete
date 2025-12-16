@@ -1,57 +1,75 @@
 ---
 import { Image } from 'astro:assets';
+import { getServiceIcon } from '../utils/serviceIcons';
 
 export interface Props {
   title: string;
   description: string;
-  image: any; // Should be ImageMetadata but using any for now
+  image?: any; // Should be ImageMetadata but using any for now - optional
   features: string[];
   ctaText?: string;
   delay?: number;
   url?: string;
+  slug?: string;
+  category?: string;
+  index?: number;
 }
 
-const { title, description, image, features, url, ctaText = "Learn More", delay = 0 } = Astro.props;
+const { title, description, image, features, url, ctaText = "Learn More", delay = 0, slug = '', category = '', index = 0 } = Astro.props;
+
+// Get animated icon based on service type
+const serviceIcon = getServiceIcon(slug || title.toLowerCase(), category, index);
 
 ---
 
-<div class="service-card" data-astro-animate="fadeInUp" data-astro-delay="{delay}">
+<div class="service-card" data-service-card data-card-index={index}>
   <div class="card-glass">
-    <!-- Image on LEFT side -->
-    {image && (
-      <div class="card-image">
-        <Image 
-          src={image}
-          alt={title}
-          class="service-image"
-          loading="lazy"
-          width={500}
-          height={400}
-        />
-        <div class="card-overlay"></div>
-      </div>
-    )}
+    <!-- Animated Icon -->
+    <div class="card-icon-wrapper">
+      <div class="card-icon" set:html={serviceIcon}></div>
+    </div>
 
-    <!-- Content on RIGHT side -->
+    <!-- Content -->
     <div class="card-content">
-      <h3 class="card-title"><a href={url} style="text-decoration: underline;">{title} ↗</a></h3>
+      <h3 class="card-title"><a href={url} style="color: #FFFFFF !important; -webkit-text-fill-color: unset !important; opacity: 1 !important; visibility: visible !important; text-decoration: none !important; text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(255, 255, 255, 0.5) !important;">{title} ↗</a></h3>
       <p class="card-description">{description}</p>
-      
-      <ul class="card-features">
-        {features.map((feature, index) => (
-          <li class="feature-item" data-astro-animate="fadeInRight" data-astro-delay={200 + (index * 100)}>
-            <span class="feature-icon">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      
-      <a href={'/contact/'} class="cta-button magnetic">
-        <span>{ctaText}</span>
-        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none">
-          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
     </div>
   </div>
 </div>
+
+<script>
+  // Scroll animation for service cards
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('[data-service-card]');
+    
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, idx) => {
+        if (entry.isIntersecting) {
+          const card = entry.target as HTMLElement;
+          const cardIndex = parseInt(card.getAttribute('data-card-index') || '0');
+          
+          setTimeout(() => {
+            card.classList.add('card-visible');
+            
+            // Animate icon
+            const icon = card.querySelector('.card-icon');
+            if (icon) {
+              icon.classList.add('icon-animate');
+            }
+          }, cardIndex * 100);
+          
+          cardObserver.unobserve(card);
+        }
+      });
+    }, observerOptions);
+
+    cards.forEach((card) => {
+      cardObserver.observe(card);
+    });
+  });
+</script>

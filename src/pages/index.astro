@@ -9,126 +9,41 @@ import ProjectCard from '../components/ProjectCard.astro';
 import BottomCTA from '../components/BottomCTA.astro';
 import { getCollection } from 'astro:content';
 import Testimonials from '../components/Testimonials.astro';
-import { getProjectImage, getServiceImage, getTestimonalImage, testimonials } from '../utils/constants';
+import { getProjectImage, getTestimonalImage, testimonials } from '../utils/constants';
+import { getLanguageFromUrl, t, getLocalizedUrl } from '../utils/translations';
+import { getBasePath } from '../utils/routing';
+import { getHomepageServicesData } from '../utils/homepageData';
+import { getProjectUrl } from '../utils/routing';
 
-// SERVICE DATA WITH CASE STUDY INTEGRATION
-const SERVICES_DATA = [
-  {
-    slug: 'seo',
-    title: "SEO That Actually Drives Revenue",
-    description: "We don't just improve rankings - we drive qualified leads that convert. Average 287% increase in qualified traffic within 90 days.",
-    features: [
-      "Guaranteed first-page rankings for 3-5 key terms",
-      "Local SEO dominating Google Maps + organic", 
-      "Competitor gap analysis and exploitation",
-      "Conversion-optimized landing pages",
-      "Monthly performance reporting with clear ROI"
-    ],
-    ctaText: "Get My Free SEO Audit",
-    delay: 100,
-    caseStudy: {
-      slug: "local-seo-case-study-page-5-to-page",
-      results: "47 new clients in 90 days for plumbing company"
-    }
-  },
-  {
-    slug: 'web-design',
-    title: "Web Design That Converts Visitors to Customers", 
-    description: "Websites that work 24/7 as your best salesperson. Average 217% increase in lead generation post-launch.",
-    features: [
-      "Mobile-first, conversion-optimized design",
-      "3-second load time guarantee",
-      "Strategic CTA placement and messaging",
-      "Trust signal implementation", 
-      "Ongoing performance optimization"
-    ],
-    ctaText: "See My Conversion Score",
-    delay: 200,
-    caseStudy: {
-      slug: "why-your-beautiful-website-isnt-making-sales",
-      results: "15 qualified leads/month vs previous 2"
-    }
-  },
-  {
-    slug: 'automation',
-    title: "AI Automation That Saves 20+ Hours/Week",
-    description: "Replace repetitive tasks with intelligent automation. Typical ROI within 3-6 months with 95% error reduction.",
-    features: [
-      "Custom workflow automation development",
-      "AI-powered customer communication", 
-      "Document processing and management",
-      "Integration with existing systems",
-      "Ongoing optimization and support"
-    ],
-    ctaText: "Get Free Automation Audit", 
-    delay: 300,
-    caseStudy: {
-      slug: "ai-automation-saved-20-hours-weekly",
-      results: "20 hours weekly saved for service business"
-    }
-  },
-  {
-    slug: 'saas-development',
-    title: "Custom SaaS Solutions",
-    description: "Transform your internal tools into revenue-generating products. From MVP to $10K MRR in 12 months.",
-    features: [
-      "Full-stack SaaS development",
-      "Scalable architecture design",
-      "Subscription and payment systems", 
-      "White-label solutions",
-      "Ongoing feature development"
-    ],
-    ctaText: "Explore SaaS Potential",
-    delay: 400,
-    caseStudy: {
-      slug: "from-idea-to-10k-mrr-saas-case-study",
-      results: "$10K MRR from internal tool productization"
-    }
-  },
-  {
-    slug: 'ecommerce',
-    title: "High-Converting E-commerce",
-    description: "E-commerce stores that convert at 3-5% vs industry average 1-2%. Comprehensive platform optimization.",
-    features: [
-      "Conversion rate optimization",
-      "Mobile shopping experience",
-      "Payment and shipping optimization", 
-      "Inventory management integration",
-      "Abandoned cart recovery systems"
-    ],
-    ctaText: "Boost My Store Conversions",
-    delay: 500,
-    caseStudy: {
-      slug: "why-your-online-store-isnt-converting",
-      results: "185% conversion rate increase for specialty store"
-    }
-  },
-  {
-    slug: 'mobile-development',
-    title: "Revenue-Driving Mobile Apps",
-    description: "Mobile apps that increase customer loyalty and repeat business. Average 3X revenue growth for service businesses.",
-    features: [
-      "Cross-platform iOS/Android development",
-      "Push notification strategy",
-      "Payment and booking integration", 
-      "App store optimization",
-      "Performance monitoring"
-    ],
-    ctaText: "Discuss Mobile Strategy",
-    delay: 600,
-    caseStudy: {
-      slug: "how-mobile-app-3x-revenue-local-business",
-      results: "3X revenue growth for fitness studio"
-    }
-  }
-].map(s => ({ ...s, image: getServiceImage(s.caseStudy.slug) }));
+// Get current language from URL
+const currentLang = 'en';
 
-const projects = (await getCollection('projects')).map((project) => {
-  return {
-    ...project.data,
-    image: getProjectImage(project.data.slug),
-  };
-});
+// Best case study for banner - Fitovision: The All-in-One Gym Platform
+const bestCaseStudy = {
+  slug: 'fitovision-gym-saas',
+  title: '⚡ 245% Traffic Boom 🚀',
+  url: getProjectUrl(currentLang, 'fitovision-gym-saas')
+};
+
+// Generate services data based on language
+const SERVICES_DATA = getHomepageServicesData(currentLang);
+
+// Load projects dynamically from content/[lang] based on current language
+const allProjects = await getCollection('projectsEn');
+const projects = allProjects
+  .filter(project => {
+    const parts = project?.filePath ? project.filePath.split('/') : [];
+    const projectLang = parts[3] || 'en';
+    return projectLang === currentLang;
+  })
+  .map((project) => {
+    return {
+      ...project.data,
+      slug: project.data.slug || project.id,
+      image: getProjectImage(project.data.slug || project.id),
+      lang: currentLang
+    };
+  });
 
 const TESTIMONIALS = testimonials.map(t => ({ ...t, image: t.image ? getTestimonalImage(t.image) : null }));
 
@@ -156,7 +71,7 @@ const mergedTestimonialsWithProjects = TESTIMONIALS.map((testimonial) => {
       { value: "287%", label: "Growth" },
       { value: "90 Days", label: "Results" }
     ],
-    lang: 'en' as const
+    lang: currentLang
   };
   
   return {
@@ -168,13 +83,16 @@ const mergedTestimonialsWithProjects = TESTIMONIALS.map((testimonial) => {
 ---
 
 <Layout 
-  title="Results-Driven Digital Agency - 287% Growth Guarantee" 
-  description="We drive measurable business growth through strategic SEO, conversion-optimized web design, and revenue-focused digital solutions. Real results, not empty promises."
+  title={t('homepage.page_title', currentLang)} 
+  description={t('homepage.page_description', currentLang)}
   canonical="https://creativecomplete.com"
 >
 
 <!-- HERO SECTION - CONVERSION FOCUSED -->
-<Hero  />
+<Hero 
+  bannerText={bestCaseStudy.title}
+  bannerLink={bestCaseStudy.url}
+/>
 
 <Process />
 
@@ -182,45 +100,17 @@ const mergedTestimonialsWithProjects = TESTIMONIALS.map((testimonial) => {
 
 <Testimonials items={mergedTestimonialsWithProjects} />
 
-<section id="services" class="services-section section-padding">
-  <div class="container">
-    <div class="section-header text-center" data-aos="fade-up">
-      <h2>Digital Solutions That Drive Real Revenue</h2>
-      <p class="section-subtitle">Each service is backed by verified case studies with measurable results</p>
-    </div>
-
-    <div class="services-grid stagger-children">
-      {SERVICES_DATA.map((service, index) => (
-        <ServiceCard
-          image={service.image}
-          title={service.title}
-          description={service.description}
-          features={service.features}
-          ctaText={service.ctaText}
-          delay={service.delay}
-          url={`/services/${service.caseStudy.slug}`}
-        />
-      ))}
-    </div>
-  </div>
-</section>
-
-
 <!-- FINAL CTA -->
 <BottomCTA 
-  title="Ready to Get Similar Results?"
-  subtitle="Stop wondering what's possible and start seeing real growth metrics for your business"
-  urgencyText="Currently Accepting 3 New Clients This Month"
+  title={t('cta.title', currentLang)}
+  subtitle={t('cta.subtitle', currentLang)}
+  urgencyText={t('cta.urgency', currentLang)}
   valueProps={[]}
   primaryButton={{
-    text: "Get My Free Growth Audit",
-    href: "/contact"
+    text: t('cta.primary_button', currentLang),
+    href: getLocalizedUrl('/contact/', currentLang)
   }}
-  secondaryButton={{
-    text: "Schedule Strategy Call",
-    href: "/contact"
-  }}
-  securityNote="Your information is secure. We don't do spam or pressure tactics."
+  securityNote={t('cta.security_note', currentLang)}
   showValueProps={false}
 />
 </Layout>

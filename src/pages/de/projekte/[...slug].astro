@@ -1,0 +1,243 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import BottomCTA from '../../../components/BottomCTA.astro';
+import BreadCrumb from '../../../components/BreadCrumb.astro';
+import StackedImagesWithPopup from '../../../components/StackedImagesWithPopup.astro';
+import RelatedArticlesSidebar from '../../../components/RelatedArticlesSidebar.astro';
+import TechnologyIcon from '../../../components/TechnologyIcon.astro';
+import { t, getLocalizedUrl } from '../../../utils/translations';
+import type { Language } from '../../../utils/translations';
+
+export async function getStaticPaths() {
+  const allProjects = await getCollection('projectsDe');
+  const paths: Array<{ params: { slug: string }; props: { project: any; lang: Language } }> = [];
+  const lang = 'de';
+  
+  // All projects in projectsDe collection are already German, no need to filter
+  allProjects.forEach(project => {
+    const slug = project.data.slug;
+
+    if (!slug) throw new Error('Project slug is required for: ' + project.id);
+    
+    paths.push({
+      params: { slug },
+      props: { project, lang }
+    });
+  });
+    
+  return paths;
+}
+
+const { project } = Astro.props;
+const currentLang = 'de';
+
+const breadcrumbs = [
+  { name: t('nav.home', currentLang), url: `${Astro.url.origin}/de/` },
+  { name: t('nav.projects', currentLang), url: `${Astro.url.origin}/de/projekte/` },
+  { name: project.data.title, url: `${Astro.url.href}/` }
+];
+
+// Filter related articles to only show projects in the same language
+const allProjects = await getCollection('projectsDe');
+// All projects in projectsDe collection are already German, no need to filter
+const relatedArticles = allProjects
+  .filter(p => p.id !== project.id)
+  .slice(0, 7)
+  .map(project => ({
+    slug: project.data.slug,
+    title: project.data.title,
+    description: project.data.description,
+    category: project.data.category || 'General',
+    readTime: project.data.readTime || '5 min read'
+  }));
+
+const images = import.meta.glob('/src/images/projects/*.{png,jpg,jpeg,webp}');
+
+const projectImagesResults = await Promise.all(
+  Object.entries(images)
+    .filter(([path]) => {
+      // Extract project name from id (e.g., "de/careconnect-recruitment-automation" -> "careconnect-recruitment-automation")
+      const projectName = project.id.split('/').pop() || project.id;
+      return path.includes(`/src/images/projects/${projectName}`);
+    })
+    .map(async ([path, image]) => {
+      try {
+        const imageModule = await image();
+        // import.meta.glob for images returns { default: ImageMetadata }
+        if (imageModule && typeof imageModule === 'object') {
+          // Extract the actual ImageMetadata - it might be in .default or be the object itself
+          const imageMetadata = ('default' in imageModule && imageModule.default) || imageModule;
+          
+          // Verify it's a valid ImageMetadata object with src property
+          if (imageMetadata && typeof imageMetadata === 'object' && 'src' in imageMetadata) {
+            return {
+              src: imageMetadata,
+              alt: project.data.title
+            };
+          }
+        }
+        return null;
+      } catch (e) {
+        return null;
+      }
+    })
+);
+
+let projectImages = projectImagesResults.filter((img): img is { src: any; alt: string } => img !== null);
+
+// If no images found by project name, try to load from frontmatter image field
+if (projectImages.length === 0 && project.data.image) {
+  const imageName = project.data.image;
+  const extensions = ['png', 'jpg', 'jpeg', 'webp'];
+  const baseName = imageName.replace(/\.(png|jpg|jpeg|webp)$/, '');
+  
+  for (const ext of extensions) {
+    const imagePath = `/src/images/projects/${baseName}.${ext}`;
+    if (images[imagePath]) {
+      try {
+        const imageModule = await images[imagePath]();
+        if (imageModule && typeof imageModule === 'object') {
+          const imageMetadata = ('default' in imageModule && imageModule.default) || imageModule;
+          
+          if (imageMetadata && typeof imageMetadata === 'object' && 'src' in imageMetadata) {
+            projectImages = [{
+              src: imageMetadata,
+              alt: project.data.title
+            }];
+            break;
+          }
+        }
+      } catch (e) {
+        continue;
+      }
+    }
+  }
+}
+
+// Extract year from published date or use current year
+const publishedYear = project.data.published ? new Date(project.data.published).getFullYear() : new Date().getFullYear();
+// Check if duration indicates ongoing project
+const isOngoing = project.data.duration && (
+  project.data.duration.toLowerCase().includes('ongoing') || 
+  project.data.duration.toLowerCase().includes('current')
+);
+const yearDisplay = isOngoing ? `${publishedYear} - ONGOING` : publishedYear.toString();
+---
+
+<Layout 
+  title={project.data.title}
+  description={project.data.description}
+  breadcrumbs={breadcrumbs}
+  openGraph={{
+    title: project.data.title,
+    description: project.data.description,
+  }}
+  service={project}
+>
+  <article class="project-detail">
+    <header class="project-header">
+      <div class="container">
+        <BreadCrumb items={breadcrumbs} />
+        
+        <!-- Two-column layout: Sidebar + Content -->
+        <div class="project-hero-layout">
+          <!-- Left Sidebar: Metadata -->
+          <aside class="project-sidebar">
+            
+            <div class="sidebar-item">
+              <span class="sidebar-label">YEAR</span>
+              <span class="sidebar-value">{yearDisplay}</span>
+            </div>
+            
+            {project.data.services && Array.isArray(project.data.services) && project.data.services.length > 0 && (
+              <div class="sidebar-item">
+                <span class="sidebar-label">SCOPE OF WORK</span>
+                <div class="sidebar-value scope-tags">
+                  {project.data.services.map((service: string) => (
+                    <span class="scope-tag">{service.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {project.data.technologies && Array.isArray(project.data.technologies) && project.data.technologies.length > 0 && (
+              <div class="sidebar-item">
+                <span class="sidebar-label">STACK</span>
+                <div class="sidebar-value stack-icons">
+                  {project.data.technologies.map((tech: string) => (
+                    <div class="stack-icon-wrapper">
+                      <TechnologyIcon name={tech} size={24} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {project.data.category && (
+              <div class="sidebar-item">
+                <span class="sidebar-label">INDUSTRY</span>
+                <div class="sidebar-value industry-tags">
+                  {project.data.category.split(' / ').map((cat: string) => (
+                    <span class="industry-tag">{cat.trim()}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </aside>
+          
+          <!-- Right Content: Title, Description + CTA, Images -->
+          <div class="project-content-main">
+            <h1>{project.data.title.toUpperCase()}</h1>
+            <p class="project-description">{project.data.description}</p>
+            
+            {project.data.url && (
+              <a 
+                href={project.data.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="project-view-live"
+              >
+                <span>View live website</span> →
+              </a>
+            )}
+            
+            <!-- Images Section -->
+            {projectImages.length > 0 && (
+              <section class="project-images-section">
+                <StackedImagesWithPopup images={projectImages} service={project} />
+              </section>
+            )}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Section -->
+    <div class="service-content">
+      <div class="container">
+        <div class="content-container">
+          <!-- Main Content -->
+          <div class="main-content">
+            <div set:html={project.rendered?.html} />
+          </div>
+
+          <RelatedArticlesSidebar id="projects" items={relatedArticles} />
+        </div>
+      </div>
+    </div>
+
+    <BottomCTA 
+      title={t('cta.title', currentLang)}
+      subtitle={t('cta.subtitle', currentLang)}
+      urgencyText={t('cta.urgency', currentLang)}
+      valueProps={[]}
+      primaryButton={{
+        text: t('cta.primary_button', currentLang),
+        href: getLocalizedUrl('/contact/', currentLang)
+      }}
+      securityNote={t('cta.security_note', currentLang)}
+      showValueProps={false}
+    />
+  </article>
+</Layout>

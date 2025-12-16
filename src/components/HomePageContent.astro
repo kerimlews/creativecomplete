@@ -62,30 +62,6 @@ const { currentLang, basePath, services, projects, testimonials } = Astro.props;
 
 <Testimonials items={testimonials} />
 
-<!-- SERVICES SECTION -->
-<section id="services" class="services-section section-padding">
-  <div class="container">
-    <div class="section-header text-center" data-aos="fade-up">
-      <h2>{t('services.title', currentLang)}</h2>
-      <p class="section-subtitle">{t('services.subtitle', currentLang)}</p>
-    </div>
-
-    <div class="services-grid stagger-children">
-      {services.map((service, index) => (
-        <ServiceCard
-          image={service.image}
-          title={service.title}
-          description={service.description}
-          features={service.features}
-          ctaText={service.ctaText}
-          delay={service.delay}
-          url={service.url}
-        />
-      ))}
-    </div>
-  </div>
-</section>
-
 <!-- PROJECTS SECTION -->
 <section id="projects" class="projects-section section-padding bg-light">
   <div class="container">
@@ -144,10 +120,6 @@ const { currentLang, basePath, services, projects, testimonials } = Astro.props;
   valueProps={[]}
   primaryButton={{
     text: t('cta.primary_button', currentLang),
-    href: `${basePath}/contact`
-  }}
-  secondaryButton={{
-    text: t('cta.secondary_button', currentLang),
     href: `${basePath}/contact`
   }}
   securityNote={t('cta.security_note', currentLang)}

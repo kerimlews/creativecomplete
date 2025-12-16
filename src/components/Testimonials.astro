@@ -1,15 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import { getLanguageFromUrl } from '../utils/translations';
+import { getLanguageFromUrl, t } from '../utils/translations';
 import { getProjectUrl } from '../utils/routing';
 
 const {
-  header = "MORE CLIENT SUCCESS STORIES",
-  desc = "Hear it from our partners.",
+  header,
+  desc,
   items = []
 } = Astro.props;
 
 const currentLang = getLanguageFromUrl(Astro.url);
+const defaultHeader = header || t('testimonials.header', currentLang);
+const defaultDesc = desc || t('testimonials.desc', currentLang);
 const testimonials = items;
 ---
 
@@ -17,15 +19,15 @@ const testimonials = items;
 <section id="testimonials" class="testimonials-section">
   <div class="container">
     <div class="testimonials-header">
-      <h2 class="testimonials-title">{header}</h2>
-      <p class="testimonials-subtitle">{desc}</p>
+      <h2 class="testimonials-title">{defaultHeader}</h2>
+      <p class="testimonials-subtitle">{defaultDesc}</p>
     </div>
 
     <div class="testimonials-container">
       <!-- Projects Carousel -->
       <div class="projects-carousel">
         <div class="carousel-container" id="carouselContainer">
-          {testimonials.map((item, index) => (
+          {testimonials.map((item: any, index: number) => (
             <div class="carousel-slide" data-index={index}>
               <div class="unified-card">
 
@@ -63,8 +65,8 @@ const testimonials = items;
                   <!-- Project Stats -->
                   {item.project?.stats && item.project.stats.length > 0 && (
                     <div class="project-stats">
-                      {item.project.stats.map((stat, statIndex) => (
-                        <div class="stat-item" key={statIndex}>
+                      {item.project.stats.map((stat: any, statIndex: number) => (
+                        <div class="stat-item">
                           <span class="stat-value">{stat.value}</span>
                           <span class="stat-label">{stat.label}</span>
                         </div>
@@ -75,7 +77,7 @@ const testimonials = items;
                   <!-- Case Study Link -->
                   {item.project?.slug && (
                     <a href={getProjectUrl(currentLang, item.project.slug)} class="case-study-link">
-                      View Case Study
+                      {t('testimonials.view_case_study', currentLang)}
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
@@ -88,8 +90,8 @@ const testimonials = items;
                   <!-- Testimonial Section -->
                   <div class="testimonial-section">
                     <p class="testimonial-quote">
-                      {item.text.split('**').map((part, i) => 
-                        i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+                      {item.text.split('**').map((part: string, i: number) => 
+                        i % 2 === 1 ? <strong>{part}</strong> : part
                       )}
                     </p>
 
@@ -133,7 +135,7 @@ const testimonials = items;
         </div>
         
         <div class="carousel-dots" id="carouselDots">
-          {testimonials.map((_, index) => (
+          {testimonials.map((_: any, index: number) => (
             <div class={`carousel-dot ${index === 0 ? 'active' : ''}`} data-index={index}></div>
           ))}
         </div>
