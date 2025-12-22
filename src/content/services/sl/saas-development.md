@@ -218,3 +218,5 @@ Večina strank vidi ROI, ko dosežejo 5.000€-10.000€ MRR, kar se običajno z
 2. Določite svoj MVP in načrt razvoja
 3. Začnite graditi svoj SaaS izdelek
 
+
+

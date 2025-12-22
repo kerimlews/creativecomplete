@@ -130,3 +130,5 @@ export const getServiceIcon = (serviceSlug: string, serviceCategory: string = ''
   return icons[iconType] || icons.web;
 };
 
+
+

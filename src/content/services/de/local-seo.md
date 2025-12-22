@@ -235,3 +235,5 @@ Wenn Sie bereit sind, lokale Suche zu dominieren und von Kunden in Ihrer Gegend 
 2. Überprüfen Sie Ihre maßgeschneiderte lokale SEO-Strategie
 3. Beginnen Sie, in Google Maps zu ranken und mehr Kunden zu bekommen
 
+
+

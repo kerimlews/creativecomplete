@@ -235,3 +235,5 @@ Najboljše? Ko se uvrščate v Google Maps, to pozicijo ohranite z neprekinjeno 
 2. Pregledajte svojo prilagojeno strategijo lokalnega SEO
 3. Začnite se uvrščati v Google Maps in dobivati več strank
 
+
+

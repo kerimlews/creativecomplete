@@ -236,3 +236,5 @@ Večina strank vidi ROI v 6-12 mesecih zaradi povečanih prihodkov, zmanjšanega
 2. Določite funkcije in cilje vaše aplikacije
 3. Začnite graditi svojo mobilno aplikacijo, ki generira prihodke
 
+
+

@@ -231,3 +231,5 @@ Najboljše? Izboljšave optimizacije se sčasoma kopičijo in dolgoročno ohrani
 2. Pregledajte svojo strategijo optimizacije
 3. Začnite pretvarjati več obiskovalcev v stranke
 
+
+
