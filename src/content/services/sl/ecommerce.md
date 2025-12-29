@@ -233,3 +233,4 @@ Najboljše? Izboljšave optimizacije se sčasoma kopičijo in dolgoročno ohrani
 
 
 
+

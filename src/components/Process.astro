@@ -280,9 +280,7 @@ const {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 50%, rgba(255, 112, 2, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 50%, rgba(66, 133, 244, 0.1) 0%, transparent 50%);
+    background: transparent;
     pointer-events: none;
   }
 
@@ -298,60 +296,35 @@ const {
   }
 
   .floating-circle {
-    position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(255, 112, 2, 0.2) 0%, rgba(66, 133, 244, 0.2) 100%);
-    filter: blur(40px);
-    animation: float 6s ease-in-out infinite;
+    display: none;
   }
 
   .circle-1 {
-    width: 200px;
-    height: 200px;
-    top: 10%;
-    left: 5%;
-    animation-delay: 0s;
+    display: none;
   }
 
   .circle-2 {
-    width: 150px;
-    height: 150px;
-    top: 60%;
-    right: 10%;
-    animation-delay: 2s;
+    display: none;
   }
 
   .circle-3 {
-    width: 180px;
-    height: 180px;
-    bottom: 20%;
-    left: 15%;
-    animation-delay: 4s;
+    display: none;
   }
 
   .floating-star {
-    position: absolute;
-    font-size: 2rem;
-    opacity: 0.6;
-    animation: twinkle 3s ease-in-out infinite;
+    display: none;
   }
 
   .star-1 {
-    top: 15%;
-    right: 20%;
-    animation-delay: 0s;
+    display: none;
   }
 
   .star-2 {
-    top: 50%;
-    left: 8%;
-    animation-delay: 1s;
+    display: none;
   }
 
   .star-3 {
-    bottom: 30%;
-    right: 15%;
-    animation-delay: 2s;
+    display: none;
   }
 
   @keyframes float {

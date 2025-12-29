@@ -220,3 +220,4 @@ Večina strank vidi ROI, ko dosežejo 5.000€-10.000€ MRR, kar se običajno z
 
 
 
+
