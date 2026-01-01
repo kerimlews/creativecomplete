@@ -6,6 +6,6 @@ export const SITE_CONFIG = {
     linkedin: '#',
     twitter: '#',
     github: '#',
-    whatsapp: 'https://wa.me/387603456771'
+    telegram: 'https://t.me/kerimlews'
   }
 };

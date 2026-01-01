@@ -5,10 +5,10 @@ slug: "kerim-alihodza"
 bio: "10+ years transforming businesses from 'potential' to 'profit' through ruthless digital strategy and engineered growth systems."
 image: "/images/kerim-alihodza.jpg"
 social:
-  linkedin: "https://wa.me/387603456771"
-  twitter: "https://wa.me/387603456771"
-  github: "https://wa.me/387603456771"
-  whatsapp: "https://wa.me/387603456771"
+  linkedin: "https://www.linkedin.com/in/kerim-alihodza-a765aa145/"
+  twitter: "https://x.com/KAlihodza82975"
+  github: "https://github.com/kerimalihodza"
+  telegram: "https://t.me/kerimlews"
 ---
 
 # Kerim Alihodza
