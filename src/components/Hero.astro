@@ -37,8 +37,8 @@ export interface Props {
 const { 
   title = t('hero.default_title', currentLang),
   subtitle = t('hero.default_subtitle', currentLang),
-  ctaText = t('hero.start_now', currentLang),
-  ctaHref = getLocalizedUrl('/contact/', currentLang),
+  ctaText = t('cta.book_intro_call', currentLang),
+  ctaHref = "https://calendar.app.google/VuZK5oq8TXARMwcg8",
   secondaryCtaText = t('hero.message', currentLang),
   secondaryCtaHref = "https://t.me/kerimlews",
   bannerText = t('hero.banner.default', currentLang),
@@ -70,9 +70,16 @@ const titleWithoutLastWord = titleWords.join(' ');
         <p class="hero-description">{subtitle}</p>
 
         <div class="hero-actions">
-          <a href={ctaHref} class="cta-button primary">
-            <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
+          <a href={ctaHref} target="_blank" rel="noopener noreferrer" class="cta-button primary">
+            <svg class="button-icon google-meet-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+              <rect width="16" height="16" x="12" y="16" fill="#fff" transform="rotate(-90 20 24)"></rect>
+              <polygon fill="#1e88e5" points="3,17 3,31 8,32 13,31 13,17 8,16"></polygon>
+              <path fill="#4caf50" d="M37,24v14c0,1.657-1.343,3-3,3H13l-1-5l1-5h14v-7l5-1L37,24z"></path>
+              <path fill="#fbc02d" d="M37,10v14H27v-7H13l-1-5l1-5h21C35.657,7,37,8.343,37,10z"></path>
+              <path fill="#1565c0" d="M13,31v10H6c-1.657,0-3-1.343-3-3v-7H13z"></path>
+              <polygon fill="#e53935" points="13,7 13,17 3,17"></polygon>
+              <polygon fill="#2e7d32" points="38,24 37,32.45 27,24 37,15.55"></polygon>
+              <path fill="#4caf50" d="M46,10.11v27.78c0,0.84-0.98,1.31-1.63,0.78L37,32.45v-16.9l7.37-6.22C45.02,8.8,46,9.27,46,10.11z"></path>
             </svg>
             <span class="button-text">{ctaText}</span>
           </a>
@@ -304,14 +311,15 @@ const titleWithoutLastWord = titleWords.join(' ');
   }
 
   .cta-button.primary {
-    background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
-    color: #ffffff;
+    background: white;
+    color: #1a202c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 
   .cta-button.primary:hover {
-    background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+    background: #f7fafc;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
 
   .cta-button.secondary {
@@ -328,6 +336,12 @@ const titleWithoutLastWord = titleWords.join(' ');
   .button-icon {
     width: 20px;
     height: 20px;
+  }
+  
+  .google-meet-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
   }
 
   .button-text {

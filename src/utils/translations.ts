@@ -207,6 +207,12 @@ export function t(key: string, lang: Language, params: Record<string, string> = 
       de: 'Kostenlose Analyse',
       sl: 'Brezplačna revizija'
     },
+    'cta.book_intro_call': {
+      en: 'Book your intro call',
+      hr: 'Rezervirajte uvodni poziv',
+      de: 'Buchen Sie Ihren Einführungsanruf',
+      sl: 'Rezervirajte uvodni klic'
+    },
 
     // Services Page
     'services.title': {

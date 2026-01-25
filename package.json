@@ -8,14 +8,23 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "create-placeholders": "node create-placeholders.js"
+    "create-placeholders": "node create-placeholders.js",
+    "video": "remotion studio src/remotion/index.ts",
+    "video:render": "remotion render src/remotion/index.ts BookCall out/video.mp4"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.10",
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/sitemap": "^3.6.0",
     "@playform/compress": "^0.2.0",
+    "@remotion/bundler": "^4.0.409",
+    "@remotion/cli": "^4.0.409",
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
     "astro": "^5.15.5",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "remotion": "^4.0.409",
     "sharp": "^0.34.2"
   },
   "devDependencies": {

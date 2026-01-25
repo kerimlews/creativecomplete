@@ -90,6 +90,35 @@
     transform: translateX(3px);
   }
   
+  .google-meet-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover .google-meet-icon {
+    transform: scale(1.1);
+  }
+  
+  // White button variant for book call button
+  &.book-call-btn {
+    background: white !important;
+    color: #1a202c !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    &::before {
+      background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+    }
+    
+    &:hover {
+      background: #f7fafc !important;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+    }
+  }
+  
   // Magnetic effect
   &.magnetic {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
