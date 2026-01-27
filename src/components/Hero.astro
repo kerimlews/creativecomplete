@@ -140,7 +140,7 @@ const titleWithoutLastWord = titleWords.join(' ');
   </div>
 </section>
 
-<style>
+<style lang="scss">
   .hero-section {
     position: relative;
     min-height: 100vh;
@@ -602,7 +602,6 @@ const titleWithoutLastWord = titleWords.join(' ');
     }
 
     .cta-button {
-      flex: 1;
       min-width: 140px;
       width: auto;
       max-width: none;
@@ -657,8 +656,23 @@ const titleWithoutLastWord = titleWords.join(' ');
     }
 
     .cta-button {
-      padding: 0.875rem 1.25rem;
+      padding: 0.475rem 1.25rem;
       font-size: 0.95rem;
+      min-width: unset;
+    }
+
+    .cta-button:nth-child(2) {
+      border-radius: 50% !important;
+      padding: 5px !important;
+      .button-text {
+        display: none;
+      }
+
+      svg {
+        width: 30px !important;
+        height: 30px !important;
+      }
+      
     }
   }
 
