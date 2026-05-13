@@ -1,351 +1,337 @@
+<div id="consent-manager" class="cm">
+  <!-- Main banner -->
+  <div id="cm-modal" class="cm-modal" aria-modal="true" role="dialog" aria-label="Cookie consent">
+    <div class="cm-header">
+      <h3 class="cm-title">Your Privacy Matters</h3>
+      <p class="cm-desc">We use cookies to analyse traffic and improve your experience. Choose your preferences below.</p>
+    </div>
 
-<div id="consent-manager" class="consent-manager">
-  <!-- Main Consent Modal -->
-  <div id="consent-modal" class="consent-modal hidden">
-    <div class="consent-content">
-      <div class="consent-header">
-        <h3>Your Privacy Matters</h3>
-        <p>We use cookies and similar technologies to analyze traffic, personalize content, and improve your experience. Choose your preferences below.</p>
-      </div>
-      
-      <div class="consent-features">
-        <div class="feature-item">Analyze website traffic and usage</div>
-        <div class="feature-item">Personalize your experience</div>
-        <div class="feature-item">Improve our services</div>
-      </div>
-      
-      <div class="consent-actions">
-        <button class="consent-btn accept-all" id="accept-all-btn">
-          Accept All
-        </button>
-        <button class="consent-btn customize" id="customize-btn">
-          Customize
-        </button>
-      </div>
-      
-      <div class="consent-links">
-        <a href="/privacy-policy/" target="_blank">Privacy Policy</a>
-      </div>
+    <div class="cm-features">
+      <span>Analyse website traffic</span>
+      <span>Personalise your experience</span>
+      <span>Improve our services</span>
+    </div>
+
+    <div class="cm-actions">
+      <button id="cm-accept" class="cm-btn cm-btn--primary">Accept All</button>
+      <button id="cm-customize" class="cm-btn cm-btn--ghost">Customize</button>
+    </div>
+
+    <div class="cm-footer">
+      <a href="/privacy-policy/">Privacy Policy</a>
     </div>
   </div>
 
-  <!-- Customization Modal -->
-  <div id="customization-modal" class="consent-customization hidden">
-    <div class="customization-header">
-      <h3>Cookie Preferences</h3>
-      <p>Manage your consent preferences for different types of cookies we use.</p>
-    </div>
-    
-    <div class="consent-options">
-      <div class="consent-option">
-        <div class="option-info">
-          <h4>Essential Cookies</h4>
-          <p>Required for the website to function properly. Cannot be disabled.</p>
+  <!-- Customization panel -->
+  <div id="cm-custom" class="cm-modal cm-custom" aria-modal="true" role="dialog" aria-label="Cookie preferences" hidden>
+    <h3 class="cm-title">Cookie Preferences</h3>
+    <p class="cm-desc" style="margin-bottom:16px">Manage your preferences for each cookie category.</p>
+
+    <div class="cm-options">
+      <div class="cm-option">
+        <div class="cm-option__info">
+          <strong>Essential Cookies</strong>
+          <span>Required for the website to function. Cannot be disabled.</span>
         </div>
-        <div class="option-toggle">
-          <label class="toggle-switch">
-            <input type="checkbox" checked disabled />
-            <span class="slider"></span>
-          </label>
-        </div>
+        <label class="cm-toggle cm-toggle--disabled" aria-label="Essential cookies always on">
+          <input type="checkbox" checked disabled />
+          <span class="cm-track"><span class="cm-thumb"></span></span>
+        </label>
       </div>
-      
-      <div class="consent-option">
-        <div class="option-info">
-          <h4>Analytics Cookies</h4>
-          <p>Help us understand how visitors interact with our website through Google Analytics.</p>
+
+      <div class="cm-option">
+        <div class="cm-option__info">
+          <strong>Analytics Cookies</strong>
+          <span>Help us understand how visitors use our site via Google Analytics.</span>
         </div>
-        <div class="option-toggle">
-          <label class="toggle-switch">
-            <input type="checkbox" id="analytics-toggle" checked />
-            <span class="slider"></span>
-          </label>
-        </div>
+        <label class="cm-toggle" aria-label="Toggle analytics cookies">
+          <input type="checkbox" id="cm-analytics" checked />
+          <span class="cm-track"><span class="cm-thumb"></span></span>
+        </label>
       </div>
-      
-      <div class="consent-option">
-        <div class="option-info">
-          <h4>Marketing Cookies</h4>
-          <p>Used to track visitors across websites for advertising purposes.</p>
+
+      <div class="cm-option">
+        <div class="cm-option__info">
+          <strong>Marketing Cookies</strong>
+          <span>Used to track visitors for advertising purposes.</span>
         </div>
-        <div class="option-toggle">
-          <label class="toggle-switch">
-            <input type="checkbox" id="marketing-toggle" />
-            <span class="slider"></span>
-          </label>
-        </div>
+        <label class="cm-toggle" aria-label="Toggle marketing cookies">
+          <input type="checkbox" id="cm-marketing" />
+          <span class="cm-track"><span class="cm-thumb"></span></span>
+        </label>
       </div>
     </div>
-    
-    <div class="customization-actions">
-      <button class="save-btn" id="save-preferences-btn">
-        Save Preferences
-      </button>
-      <button class="cancel-btn" id="cancel-customization-btn">
-        Cancel
-      </button>
+
+    <div class="cm-actions">
+      <button id="cm-save" class="cm-btn cm-btn--primary">Save Preferences</button>
+      <button id="cm-back" class="cm-btn cm-btn--ghost">Back</button>
     </div>
   </div>
-
-  <!-- Backdrop -->
-  <div id="consent-backdrop" class="consent-backdrop hidden"></div>
 </div>
 
 <script is:inline>
-class ConsentManager {
-  constructor() {
-    this.storageKey = 'creative-complete-consent';
-    this.consentModal = document.getElementById('consent-modal');
-    this.customizationModal = document.getElementById('customization-modal');
-    this.backdrop = document.getElementById('consent-backdrop');
-    this.manager = document.getElementById('consent-manager');
-    
-    this.init();
-  }
+(function () {
+  const KEY = 'cc-consent-v1';
 
-  init() {
-    // Check if consent already given
-    const savedConsent = this.getSavedConsent();
-    
-    console.log({ savedConsent });
-    
-    if (!savedConsent) {
-      // Show consent modal after a short delay
-      setTimeout(() => this.showConsentModal(), 1000);
-    } else {
-      this.applyConsent(savedConsent);
-      this.manager.classList.add('consent-given');
+  function getSaved() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch { return null; }
+  }
+  function save(c) {
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch {}
+  }
+  function applyConsent(c) {
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+      });
     }
-
-    this.bindEvents();
+    window.dispatchEvent(new CustomEvent('consentUpdated', { detail: c }));
   }
 
-  bindEvents() {
-    // Main modal buttons
-    document.getElementById('accept-all-btn')?.addEventListener('click', () => {
-      this.acceptAll();
-    });
+  var manager   = document.getElementById('consent-manager');
+  var modal     = document.getElementById('cm-modal');
+  var custom    = document.getElementById('cm-custom');
+  var btnAccept = document.getElementById('cm-accept');
+  var btnCustom = document.getElementById('cm-customize');
+  var btnSave   = document.getElementById('cm-save');
+  var btnBack   = document.getElementById('cm-back');
 
-    document.getElementById('customize-btn')?.addEventListener('click', () => {
-      this.showCustomizationModal();
-    });
+  function show(el)  { el.removeAttribute('hidden'); el.classList.add('cm-modal--in'); }
+  function hide(el)  { el.classList.remove('cm-modal--in'); setTimeout(function(){ el.setAttribute('hidden', ''); }, 350); }
+  function dismiss() { manager.setAttribute('hidden', ''); }
 
-    // Customization modal buttons
-    document.getElementById('save-preferences-btn')?.addEventListener('click', () => {
-      this.savePreferences();
-    });
-
-    document.getElementById('cancel-customization-btn')?.addEventListener('click', () => {
-      this.hideCustomizationModal();
-    });
-
-    // Backdrop click
-    this.backdrop?.addEventListener('click', () => {
-      this.hideConsentModal();
-      this.hideCustomizationModal();
-    });
+  // Already consented?
+  var saved = getSaved();
+  if (saved) {
+    applyConsent(saved);
+    manager.setAttribute('hidden', '');
+  } else {
+    setTimeout(function () { show(modal); }, 800);
   }
 
-  showConsentModal() {
-    this.consentModal.classList.remove('hidden');
-    this.consentModal.classList.add('visible');
-    this.backdrop.classList.remove('hidden');
-    this.backdrop.classList.add('visible');
-  }
+  btnAccept.addEventListener('click', function () {
+    var c = { essential: true, analytics: true, marketing: true, ts: Date.now() };
+    save(c); applyConsent(c); dismiss();
+  });
 
-  hideConsentModal() {
-    this.consentModal.classList.remove('visible');
-    this.consentModal.classList.add('hidden');
-    this.backdrop.classList.remove('visible');
-    this.backdrop.classList.add('hidden');
-  }
+  btnCustom.addEventListener('click', function () {
+    hide(modal);
+    setTimeout(function () { show(custom); }, 360);
+  });
 
-  showCustomizationModal() {
-    this.hideConsentModal();
-    this.customizationModal.classList.remove('hidden');
-    this.customizationModal.classList.add('visible');
-  }
-
-  hideCustomizationModal() {
-    this.customizationModal.classList.remove('visible');
-    this.customizationModal.classList.add('hidden');
-    this.backdrop.classList.remove('visible');
-    this.backdrop.classList.add('hidden');
-  }
-
-  acceptAll() {
-    const consent = {
+  btnSave.addEventListener('click', function () {
+    var c = {
       essential: true,
-      analytics: true,
-      marketing: true,
-      timestamp: new Date().toISOString()
+      analytics: document.getElementById('cm-analytics').checked,
+      marketing: document.getElementById('cm-marketing').checked,
+      ts: Date.now(),
     };
-    
-    this.saveConsent(consent);
-    this.applyConsent(consent);
-    this.hideConsentModal();
-  }
+    save(c); applyConsent(c); dismiss();
+  });
 
-  savePreferences() {
-    const analyticsToggle = document.getElementById('analytics-toggle');
-    const marketingToggle = document.getElementById('marketing-toggle');
-    
-    const consent = {
-      essential: true, // Always required
-      analytics: analyticsToggle?.checked || false,
-      marketing: marketingToggle?.checked || false,
-      timestamp: new Date().toISOString()
-    };
-    
-    this.saveConsent(consent);
-    this.applyConsent(consent);
-    this.hideCustomizationModal();
-  }
-
-  saveConsent(consent) {
-    try {
-      localStorage.setItem(this.storageKey, JSON.stringify(consent));
-    } catch (e) {
-      console.warn('Could not save consent preferences:', e);
-    }
-  }
-
-  getSavedConsent() {
-    try {
-      const saved = localStorage.getItem(this.storageKey);
-      return saved ? JSON.parse(saved) : null;
-    } catch (e) {
-      return null;
-    }
-  }
-
-  applyConsent(consent) {
-    if (consent.analytics) {
-      // Enable Google Analytics
-      if (typeof updateConsents === 'function') {
-        updateConsents();
-      }
-      
-      // Enable analytics storage
-      if (typeof gtag === 'function') {
-        gtag('consent', 'update', {
-          analytics_storage: 'granted'
-        });
-      }
-    } else {
-      // Keep analytics disabled
-      if (typeof gtag === 'function') {
-        gtag('consent', 'update', {
-          analytics_storage: 'denied'
-        });
-      }
-    }
-
-    // Mark as consent given
-    this.manager.classList.add('consent-given');
-    
-    // Dispatch event for other components
-    window.dispatchEvent(new CustomEvent('consentUpdated', { detail: consent }));
-  }
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => new ConsentManager());
-} else {
-  new ConsentManager();
-}
+  btnBack.addEventListener('click', function () {
+    hide(custom);
+    setTimeout(function () { show(modal); }, 360);
+  });
+})();
 </script>
 
 <style is:global>
-.consent-manager { pointer-events: none; }
-
-.consent-modal {
+.cm {
   position: fixed;
   bottom: 24px;
   left: 24px;
-  right: auto;
-  max-width: 400px;
-  width: calc(100vw - 48px);
-  background: rgba(10,10,20,0.92);
-  backdrop-filter: blur(24px) saturate(1.4);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 24px;
   z-index: 9999;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(99,102,241,0.15);
-  transform: translateY(120px);
-  opacity: 0;
-  transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.4s;
-  pointer-events: auto;
+  width: 380px;
+  max-width: calc(100vw - 48px);
+  pointer-events: none;
 
-  &.visible  { transform: translateY(0); opacity: 1; }
-  &.hidden   { transform: translateY(120px); opacity: 0; pointer-events: none; }
+  &[hidden] { display: none !important; }
 }
 
-.consent-content { display: flex; flex-direction: column; gap: 16px; }
-.consent-header h3 { font-size: 15px; font-weight: 600; color: #fff; margin: 0 0 6px; }
-.consent-header p  { font-size: 12.5px; color: rgba(255,255,255,0.55); margin: 0; line-height: 1.5; }
+.cm-modal {
+  background: rgba(8, 10, 22, 0.94);
+  backdrop-filter: blur(28px) saturate(1.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(99,102,241,0.35);
+  border-radius: 16px;
+  padding: 22px 22px 18px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.65), 0 0 0 1px rgba(99,102,241,0.1);
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.32s ease, transform 0.32s ease;
 
-.consent-features {
-  display: flex; flex-direction: column; gap: 6px;
-  .feature-item {
-    font-size: 12px; color: rgba(255,255,255,0.45);
-    padding-left: 14px; position: relative;
-    &::before { content: '·'; position: absolute; left: 0; color: #6366f1; }
+  &[hidden] { display: none; }
+
+  &.cm-modal--in {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.consent-actions { display: flex; gap: 8px; }
-.consent-btn {
-  flex: 1; height: 38px; border-radius: 8px; border: none;
-  font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity .2s;
-  &:hover { opacity: 0.85; }
-  &.accept-all { background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; }
-  &.customize  { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.12); }
+.cm-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+.cm-desc {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.55;
+  margin: 0;
 }
 
-.consent-links { text-align: center; }
-.consent-links a { font-size: 11px; color: rgba(255,255,255,0.35); text-decoration: underline; }
+.cm-features {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 14px 0;
 
-.consent-customization {
-  position: fixed;
-  bottom: 24px; left: 24px; right: auto;
-  max-width: 400px; width: calc(100vw - 48px);
-  background: rgba(10,10,20,0.95);
-  backdrop-filter: blur(24px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px; padding: 24px; z-index: 9999;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
-  &.hidden { display: none; }
+  span {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.38);
+    padding-left: 12px;
+    position: relative;
+
+    &::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: #6366f1;
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
 }
 
-.customization-header h3 { font-size: 15px; font-weight: 600; color: #fff; margin: 0 0 6px; }
-.customization-header p  { font-size: 12.5px; color: rgba(255,255,255,0.5); margin: 0 0 16px; }
+.cm-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
 
-.consent-option {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+.cm-btn {
+  flex: 1;
+  height: 38px;
+  border-radius: 9px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.18s, transform 0.18s;
+  font-family: inherit;
+
+  &:hover  { opacity: 0.88; transform: translateY(-1px); }
+  &:active { transform: translateY(0); }
+
+  &.cm-btn--primary {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(99,102,241,0.35);
+  }
+
+  &.cm-btn--ghost {
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.65);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+.cm-footer {
+  text-align: center;
+  margin-top: 12px;
+
+  a {
+    font-size: 11px;
+    color: rgba(255,255,255,0.28);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover { color: rgba(255,255,255,0.55); }
+  }
+}
+
+/* Customization panel */
+.cm-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cm-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+
   &:last-child { border-bottom: none; }
 }
-.option-info .option-name { font-size: 13px; font-weight: 500; color: #fff; }
-.option-info .option-desc { font-size: 11.5px; color: rgba(255,255,255,0.4); margin-top: 2px; }
 
-.consent-toggle { position: relative; width: 36px; height: 20px; flex-shrink: 0; }
-.consent-toggle input { opacity: 0; width: 0; height: 0; }
-.toggle-slider {
-  position: absolute; inset: 0; border-radius: 20px;
-  background: rgba(255,255,255,0.15); cursor: pointer; transition: background .2s;
-  &::before {
-    content: ''; position: absolute;
-    width: 14px; height: 14px; border-radius: 50%;
-    background: #fff; left: 3px; top: 3px; transition: transform .2s;
+.cm-option__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+
+  strong {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+  }
+
+  span {
+    font-size: 11px;
+    color: rgba(255,255,255,0.38);
+    line-height: 1.4;
   }
 }
-.consent-toggle input:checked + .toggle-slider { background: #6366f1; }
-.consent-toggle input:checked + .toggle-slider::before { transform: translateX(16px); }
-.consent-toggle input:disabled + .toggle-slider { opacity: 0.5; cursor: not-allowed; }
 
-.customization-actions { display: flex; gap: 8px; margin-top: 16px; }
-.save-preferences { flex: 1; height: 38px; border-radius: 8px; border: none; background: linear-gradient(135deg,#6366f1,#a855f7); color: #fff; font-size: 13px; font-weight: 600; cursor: pointer; }
-.back-btn { height: 38px; padding: 0 16px; border-radius: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); font-size: 13px; cursor: pointer; }
+/* Toggle switch */
+.cm-toggle {
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: block;
+
+  input { position: absolute; opacity: 0; width: 0; height: 0; }
+
+  &.cm-toggle--disabled { cursor: not-allowed; opacity: 0.45; }
+}
+
+.cm-track {
+  display: block;
+  width: 38px;
+  height: 22px;
+  border-radius: 11px;
+  background: rgba(255,255,255,0.12);
+  transition: background 0.2s;
+  position: relative;
+
+  .cm-toggle input:checked ~ & { background: #6366f1; }
+}
+
+.cm-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+
+  .cm-toggle input:checked ~ .cm-track & { transform: translateX(16px); }
+}
+
+@media (max-width: 480px) {
+  .cm { bottom: 16px; left: 16px; right: 16px; width: auto; }
+}
 </style>
