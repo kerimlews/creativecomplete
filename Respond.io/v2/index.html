@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Customer System — #1 Agency for Qualify, Convert & Profit From Every Lead | CreativeComplete</title>
+  <meta name="description" content="AI Customer System that qualifies new leads in under 60 seconds, converts them with AI ad creatives and generates 42.5× ROI from your existing lead database. CreativeComplete is the #1 AI Customer System agency."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/tokens.css"/>
+  <link rel="stylesheet" href="styles/components.css"/>
+</head>
+<body>
+  <div class="v2-page" id="root"></div>
+
+  <!-- React + Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Components -->
+  <script type="text/babel" src="components/components.jsx"></script>
+
+  <!-- App -->
+  <script type="text/babel">
+    const App = () => (
+      <>
+        <V2Nav active="home"/>
+        <main>
+          <V2Hero/>
+          <V2Clients/>
+          <V2Stats/>
+          <V2Services/>
+          <V2Process/>
+          <V2Results/>
+          <V2Testimonials/>
+          <V2FAQ/>
+          <V2CTA/>
+        </main>
+        <V2Footer/>
+      </>
+    );
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+  </script>
+</body>
+</html>

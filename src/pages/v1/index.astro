@@ -1,0 +1,83 @@
+---
+// V1 BACKUP — original orange design
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Process from '../../components/Process.astro';
+import Services from '../../components/Services.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import BottomCTA from '../../components/BottomCTA.astro';
+import { getCollection } from 'astro:content';
+import Testimonials from '../../components/Testimonials.astro';
+import { getProjectImage, getTestimonalImage, testimonials } from '../../utils/constants';
+import { t, getLocalizedUrl } from '../../utils/translations';
+import { getHomepageServicesData } from '../../utils/homepageData';
+import { getProjectUrl } from '../../utils/routing';
+
+const currentLang = 'en';
+
+const bestCaseStudy = {
+  slug: 'fitovision-gym-saas',
+  title: '⚡ 245% Traffic Boom 🚀',
+  url: getProjectUrl(currentLang, 'fitovision-gym-saas')
+};
+
+const SERVICES_DATA = getHomepageServicesData(currentLang);
+
+const allProjects = await getCollection('projectsEn');
+const projects = allProjects
+  .filter(project => {
+    const parts = project?.filePath ? project.filePath.split('/') : [];
+    const projectLang = parts[3] || 'en';
+    return projectLang === currentLang;
+  })
+  .map((project) => ({
+    ...project.data,
+    slug: project.data.slug || project.id,
+    image: getProjectImage(project.data.slug || project.id),
+    lang: currentLang
+  }));
+
+const TESTIMONIALS = testimonials.map(t => ({ ...t, image: t.image ? getTestimonalImage(t.image) : null }));
+
+const mergedTestimonialsWithProjects = TESTIMONIALS.map((testimonial) => {
+  const matchingProject = projects.find(p => p.slug === testimonial.caseStudy);
+  if (matchingProject) return { ...testimonial, project: matchingProject };
+  const fakeProject = {
+    title: `How We Engineered ${testimonial.company} Platform`,
+    description: testimonial.text.substring(0, 150) + '...',
+    slug: testimonial.caseStudy || testimonial.company.toLowerCase().replace(/\s+/g, '-'),
+    category: "UI-UX / SEO / CRM / Marketing",
+    image: testimonial.image || null,
+    featured: false,
+    stats: [{ value: "287%", label: "Growth" }, { value: "90 Days", label: "Results" }],
+    lang: currentLang
+  };
+  return { ...testimonial, project: fakeProject };
+});
+---
+
+<Layout
+  title={t('homepage.page_title', currentLang)}
+  description={t('homepage.page_description', currentLang)}
+  canonical="https://creativecomplete.com/v1/"
+>
+  <Hero
+    bannerText={bestCaseStudy.title}
+    bannerLink={bestCaseStudy.url}
+  />
+  <Process />
+  <Services />
+  <Testimonials items={mergedTestimonialsWithProjects} />
+  <BottomCTA
+    title={t('cta.title', currentLang)}
+    subtitle={t('cta.subtitle', currentLang)}
+    urgencyText={t('cta.urgency', currentLang)}
+    valueProps={[]}
+    primaryButton={{
+      text: t('cta.primary_button', currentLang),
+      href: getLocalizedUrl('/contact/', currentLang)
+    }}
+    securityNote={t('cta.security_note', currentLang)}
+    showValueProps={false}
+  />
+</Layout>

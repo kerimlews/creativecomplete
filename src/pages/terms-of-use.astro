@@ -1,288 +1,390 @@
 ---
-// src/pages/terms-of-use.astro
-import { Image } from 'astro:assets';
-import BottomCTA from '../components/BottomCTA.astro';
-import Layout from '../layouts/Layout.astro';
-import logo from '../images/logo-svg.svg';
-import { getLanguageFromUrl, t, getLocalizedUrl } from '../utils/translations';
-
-const currentLang = getLanguageFromUrl(Astro.url);
-
-const pageTitle = t('terms.title', currentLang);
-const pageDescription = t('terms.description', currentLang);
-const canonicalUrl = getLocalizedUrl('/terms-of-use/', currentLang);
-
-const breadcrumbs = [
-  { name: t('nav.home', currentLang), url: getLocalizedUrl('/', currentLang) },
-  { name: t('terms.header', currentLang), url: getLocalizedUrl('/terms-of-use/', currentLang) }
-];
-
+import LayoutV2 from '../layouts/LayoutV2.astro';
 ---
 
-<Layout 
-  title={pageTitle} 
-  description={pageDescription}
-  canonicalUrl={canonicalUrl}
-  breadcrumbs={breadcrumbs}
+<LayoutV2
+  title="Terms of Use | CreativeComplete AI Agency"
+  description="The terms governing your use of CreativeComplete's AI Customer System services and website."
 >
-  <div class="service-detail">
-    <!-- Header Section -->
-    <section class="service-header">
-      <div class="container">
-        <nav class="breadcrumb">
-          <a href={getLocalizedUrl('/', currentLang)}>{t('nav.home', currentLang)}</a>
-          <span>›</span>
-          <span>{t('terms.header', currentLang)}</span>
-        </nav>
-        
-        <div class="service-hero">
-          <div class="service-info">
-            <h1>{t('terms.header', currentLang)}</h1>
-            <p class="service-description">
-              {t('terms.subtitle', currentLang)}
-            </p>
-            
-            <div class="service-meta">
-              <div class="meta-item">
-                <span class="meta-label">Last Updated</span>
-                <span class="meta-value">December 2024</span>
-              </div>
-              <div class="meta-item">
-                <span class="meta-label">Effective</span>
-                <span class="featured-badge">Immediately</span>
-              </div>
-            </div>
+  <main>
+    <div class="v2-container v2-bc">
+      <a href="/">Home</a><span>/</span><span>Terms of Use</span>
+    </div>
 
-            <div class="service-actions">
-              <a href="#acceptance" class="cta-button primary">Quick Navigation</a>
-              <a href="/contact/" class="cta-button cta-secondary">Questions?</a>
-            </div>
-          </div>
-          
-          <div class="service-visual">
-            <Image
-              src={logo} 
-              alt="Terms and Agreement" 
-              width="400" 
-              height="300"
-              loading="eager"
-            />
-          </div>
+    <section class="pp-hero">
+      <div class="v2-container">
+        <span class="v2-eyebrow">Legal</span>
+        <h1 class="v2-h2" style="margin-top:12px">Terms of Use</h1>
+        <p class="v2-lead" style="margin-top:16px;max-width:56ch">
+          These terms constitute a legally binding agreement between you and CreativeComplete. Please read them carefully before using our services.
+        </p>
+        <div class="pp-meta">
+          <span class="pp-badge">Last updated: May 2026</span>
+          <span class="pp-badge pp-badge--blue">Effective immediately</span>
         </div>
       </div>
     </section>
 
-    <!-- Terms Content -->
-    <section class="service-content">
-      <div class="container">
-        <div class="content-container">
-          <!-- Main Content -->
-          <article class="main-content">
-            <div class="content-section" id="acceptance">
-              <div class="feature-card">
-                <h3>⚠️ Important Notice</h3>
-                <p>These Terms of Use constitute a legally binding agreement between you and Creative Complete. By using our services, you acknowledge that you have read, understood, and agree to be bound by these terms.</p>
-              </div>
+    <section class="pp-body">
+      <div class="v2-container">
+        <div class="pp-grid">
 
-              <h2>1. Acceptance of Terms</h2>
-              <p>Creative Complete ("we," "our," or "us") provides digital agency services subject to the following Terms of Use. By accessing www.creativecomplete.com or using our services, you agree to these terms and our Privacy Policy.</p>
+          <article class="v2-prose pp-article">
+
+            <div class="pp-callout pp-callout--warn" id="acceptance">
+              <strong>⚠ Important notice</strong>
+              <p>These Terms of Use constitute a legally binding agreement between you and CreativeComplete. By using our services, you acknowledge that you have read, understood, and agree to be bound by these terms.</p>
             </div>
 
-            <div class="content-section">
-              <h2>2. Services Description</h2>
-              <p>Creative Complete offers comprehensive digital agency services including but not limited to:</p>
+            <h2>1. Acceptance of Terms</h2>
+            <p>CreativeComplete ("we," "our," or "us") provides AI Customer System services subject to these Terms of Use. By accessing creativecomplete.com or using any of our services, you agree to these terms and our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+
+            <h2>2. Services Description</h2>
+            <p>CreativeComplete provides AI-powered customer acquisition and revenue automation services for agencies, including:</p>
+            <ul>
+              <li>AI Customer System — full managed setup</li>
+              <li>AI Lead Qualification (60-second qualification via WhatsApp &amp; SMS)</li>
+              <li>AI Creative Engine (ad creative generation)</li>
+              <li>Lead Capture across 40+ channels</li>
+              <li>Existing Lead Database Monetization</li>
+              <li>Web design and development</li>
+              <li>SEO and digital marketing consulting</li>
+              <li>Custom software and SaaS development</li>
+            </ul>
+
+            <h2>3. User Responsibilities</h2>
+            <p>When using our services, you agree to:</p>
+            <ul>
+              <li>Provide accurate and complete information in all communications</li>
+              <li>Maintain the confidentiality of any account credentials</li>
+              <li>Not engage in illegal, fraudulent, or prohibited activities</li>
+              <li>Respect intellectual property rights and copyright laws</li>
+              <li>Not interfere with website functionality or security measures</li>
+              <li>Comply with all applicable laws and regulations</li>
+              <li>Not attempt to reverse-engineer or decompile our proprietary systems</li>
+            </ul>
+
+            <h2>4. Intellectual Property</h2>
+            <p>All content on this website — including text, graphics, logos, images, software, and other materials — is the property of CreativeComplete or our content suppliers and is protected by applicable intellectual property laws.</p>
+
+            <h3>4.1 Client Projects and Ownership</h3>
+            <ul>
+              <li>Client retains ownership of all pre-existing intellectual property</li>
+              <li>CreativeComplete retains ownership of proprietary tools, methodologies, AI models, and frameworks</li>
+              <li>Final deliverables are transferred to the client upon full payment completion</li>
+              <li>We reserve the right to display completed work in our portfolio and marketing materials (anonymised where requested)</li>
+              <li>Source code and development materials may be subject to separate licensing agreements as specified in the service contract</li>
+            </ul>
+
+            <h2>5. Privacy and Data Protection</h2>
+            <p>Your use of our services is governed by our <a href="/privacy-policy/">Privacy Policy</a>. We are committed to protecting your privacy and handling your data in accordance with GDPR and applicable law.</p>
+
+            <div class="pp-callout">
+              <strong>Google Analytics &amp; Data Collection</strong>
+              <p>We use Google Analytics with user consent to improve our services. By using our website, you consent to our data practices as described in our Privacy Policy. You can manage your cookie preferences at any time through our consent banner.</p>
+            </div>
+
+            <h2>6. Payments and Refunds</h2>
+            <p>Service-specific payment terms are outlined in individual project agreements. General terms:</p>
+            <ul>
+              <li>A deposit (typically 50%) is required before work begins</li>
+              <li>Final payment is due upon project completion and delivery</li>
+              <li>Refund policies are project-specific and defined in the service agreement</li>
+              <li>Late payments may incur additional charges</li>
+              <li>All prices are quoted in EUR unless otherwise specified</li>
+            </ul>
+
+            <h2>7. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, CreativeComplete shall not be liable for any indirect, incidental, special, or consequential damages resulting from:</p>
+            <ul>
+              <li>Use or inability to use our services</li>
+              <li>Unauthorised access to or alteration of your data</li>
+              <li>Statements or conduct of any third party</li>
+              <li>Business interruption or lost profits</li>
+            </ul>
+            <p>Our total cumulative liability shall not exceed the amount paid by you for the services in the six months preceding the claim.</p>
+
+            <h2>8. Termination</h2>
+            <p>We may terminate or suspend access to our services immediately, without prior notice, for conduct that we believe:</p>
+            <ul>
+              <li>Violates these Terms of Use or applicable laws</li>
+              <li>Creates risk or legal exposure for our business</li>
+              <li>Is harmful to other clients, our reputation, or business interests</li>
+              <li>Involves fraudulent or illegal activities</li>
+            </ul>
+
+            <h2>9. Project Cancellation</h2>
+            <p>For ongoing projects, the following cancellation terms apply:</p>
+            <ul>
+              <li>Cancellation must be provided in writing via email</li>
+              <li>Client is responsible for payment of all work completed to the date of cancellation</li>
+              <li>Deposits may be non-refundable based on work completed and resources already allocated</li>
+              <li>Intellectual property rights transfer only upon full payment</li>
+            </ul>
+
+            <h2>10. Disclaimer of Warranties</h2>
+            <p>Our services are provided "as is" and "as available" without warranties of any kind, express or implied. We do not guarantee that:</p>
+            <ul>
+              <li>Services will meet all your specific requirements</li>
+              <li>Services will be uninterrupted, timely, or error-free</li>
+              <li>Results (lead volumes, conversion rates, revenue figures) will exactly match projections</li>
+              <li>Any errors in the service will be corrected within a specific timeframe</li>
+            </ul>
+
+            <h2>11. Indemnification</h2>
+            <p>You agree to indemnify and hold harmless CreativeComplete, its officers, directors, employees, and agents from any claim or demand — including reasonable legal fees — arising from:</p>
+            <ul>
+              <li>Your use of our services</li>
+              <li>Your violation of these Terms of Use</li>
+              <li>Your violation of any rights of another party</li>
+              <li>Your conduct in connection with our services</li>
+            </ul>
+
+            <h2>12. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of Slovenia, EU, without regard to conflict of law provisions. Any legal action or proceeding shall be brought in the competent courts of Slovenia.</p>
+
+            <h2>13. Changes to Terms</h2>
+            <p>We reserve the right to modify these terms at any time. We will notify users of significant changes by:</p>
+            <ul>
+              <li>Posting the updated Terms on this page with a new "Last Updated" date</li>
+              <li>Sending email notifications to active clients where applicable</li>
+            </ul>
+            <p>Continued use of our services after changes constitutes acceptance of the modified terms.</p>
+
+            <h2>14. Contact Information</h2>
+            <p>For questions about these Terms or our services, please contact us:</p>
+            <div class="pp-callout">
+              <strong>CreativeComplete — Legal</strong>
               <ul>
-                <li>Web design and development</li>
-                <li>Digital marketing and SEO services</li>
-                <li>Brand strategy and visual design</li>
-                <li>Content creation and marketing</li>
-                <li>E-commerce solutions</li>
-                <li>AI automation and integration</li>
-                <li>Custom software development</li>
-                <li>Digital transformation consulting</li>
+                <li>Email: <a href="mailto:info@creativecomplete.com">info@creativecomplete.com</a></li>
+                <li>Website: creativecomplete.com</li>
+                <li>Response time: 2–3 business days</li>
               </ul>
             </div>
 
-            <div class="content-section">
-              <h2>3. User Responsibilities</h2>
-              <p>When using our services, you agree to:</p>
-              <ul>
-                <li>Provide accurate and complete information in all communications</li>
-                <li>Maintain the confidentiality of your account credentials</li>
-                <li>Not engage in illegal, fraudulent, or prohibited activities</li>
-                <li>Respect intellectual property rights and copyright laws</li>
-                <li>Not interfere with website functionality or security measures</li>
-                <li>Comply with all applicable laws and regulations</li>
-                <li>Not attempt to reverse engineer or decompile our services</li>
-              </ul>
-            </div>
+            <h2>15. Severability</h2>
+            <p>If any provision of these Terms is found to be invalid or unenforceable by a court of competent jurisdiction, the remaining provisions will remain in full force and effect. The invalid provision shall be deemed modified to the minimum extent necessary to make it valid and enforceable.</p>
 
-            <div class="content-section">
-              <h2>4. Intellectual Property</h2>
-              <p>All content on this website, including text, graphics, logos, images, software, and other materials, is the property of Creative Complete or our content suppliers and protected by international intellectual property laws.</p>
-              
-              <h3>4.1 Client Projects and Ownership</h3>
-              <p>For client projects, the following ownership terms apply:</p>
-              <ul>
-                <li>Client retains ownership of pre-existing intellectual property</li>
-                <li>Creative Complete retains ownership of proprietary tools, methodologies, and frameworks</li>
-                <li>Final deliverables are transferred to client upon full payment completion</li>
-                <li>We reserve the right to display completed work in our portfolio and marketing materials</li>
-                <li>Source code and development materials may be subject to separate licensing agreements</li>
-              </ul>
-            </div>
+            <h2>16. Entire Agreement</h2>
+            <p>These Terms of Use, together with our <a href="/privacy-policy/">Privacy Policy</a> and any service-specific agreements, constitute the entire agreement between you and CreativeComplete regarding our services and supersede all prior agreements and understandings, whether written or oral.</p>
 
-            <div class="content-section">
-              <h2>5. Privacy and Data Protection</h2>
-              <p>Your use of our services is also governed by our Privacy Policy. We are committed to protecting your privacy and handling your data responsibly.</p>
-              
-              <div class="feature-card">
-                <h4>Google Analytics & Data Collection</h4>
-                <p>We use Google Analytics with user consent to improve our services. By using our website, you consent to our data practices as described in our Privacy Policy. You can manage your cookie preferences at any time through our consent management platform.</p>
-              </div>
-            </div>
-
-            <div class="content-section">
-              <h2>6. Payments and Refunds</h2>
-              <p>Service-specific payment terms will be outlined in individual project agreements and statements of work. General payment terms include:</p>
-              <ul>
-                <li>Deposits typically required to begin work (usually 50%)</li>
-                <li>Final payment due upon project completion and delivery</li>
-                <li>Refund policies are project-specific and outlined in service agreements</li>
-                <li>Late payments may incur additional charges or interest</li>
-                <li>All prices quoted in USD unless otherwise specified</li>
-              </ul>
-            </div>
-
-            <div class="content-section">
-              <h2>7. Limitation of Liability</h2>
-              <p>To the fullest extent permitted by law, Creative Complete shall not be liable for any indirect, incidental, special, or consequential damages resulting from:</p>
-              <ul>
-                <li>Use or inability to use our services</li>
-                <li>Unauthorized access to or alteration of your data</li>
-                <li>Statements or conduct of any third party on our platform</li>
-                <li>Any other matter relating to our services</li>
-                <li>Business interruption or lost profits</li>
-              </ul>
-              <p>Our total cumulative liability shall not exceed the amount paid by you for the services in the six months preceding the claim.</p>
-            </div>
-
-            <div class="content-section">
-              <h2>8. Termination</h2>
-              <p>We may terminate or suspend access to our services immediately, without prior notice, for conduct that we believe:</p>
-              <ul>
-                <li>Violates these Terms of Use or applicable laws</li>
-                <li>Creates risk or possible legal exposure for our business</li>
-                <li>Is harmful to other users, our reputation, or business interests</li>
-                <li>Involves fraudulent or illegal activities</li>
-              </ul>
-            </div>
-
-            <div class="content-section">
-              <h2>9. Project Cancellation</h2>
-              <p>For ongoing projects, the following cancellation terms apply:</p>
-              <ul>
-                <li>Cancellation must be provided in writing via email</li>
-                <li>Client is responsible for payment of all work completed to date</li>
-                <li>Deposits may be non-refundable based on work completed and resources allocated</li>
-                <li>Intellectual property rights transfer only upon full payment</li>
-              </ul>
-            </div>
-
-            <div class="content-section">
-              <h2>10. Disclaimer of Warranties</h2>
-              <p>Our services are provided "as is" and "as available" without warranties of any kind, either express or implied. We do not guarantee that:</p>
-              <ul>
-                <li>Services will meet all your specific requirements</li>
-                <li>Services will be uninterrupted, timely, or error-free</li>
-                <li>Results will be exactly as anticipated or guaranteed</li>
-                <li>Any errors in the service will be corrected</li>
-              </ul>
-            </div>
-
-            <div class="content-section">
-              <h2>11. Indemnification</h2>
-              <p>You agree to indemnify and hold harmless Creative Complete, its officers, directors, employees, and agents from any claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of:</p>
-              <ul>
-                <li>Your use of our services</li>
-                <li>Your violation of these Terms of Use</li>
-                <li>Your violation of any rights of another party</li>
-                <li>Your conduct in connection with our services</li>
-              </ul>
-            </div>
-
-            <div class="content-section">
-              <h2>12. Governing Law</h2>
-              <p>These Terms shall be governed by and construed in accordance with the laws of [Your State/Country], without regard to its conflict of law provisions. Any legal action or proceeding shall be brought in the courts located in [Your City, State/Country].</p>
-            </div>
-
-            <div class="content-section">
-              <h2>13. Changes to Terms</h2>
-              <p>We reserve the right to modify these terms at any time. We will notify users of significant changes by:</p>
-              <ul>
-                <li>Posting the new Terms of Use on this page</li>
-                <li>Sending email notifications to registered users</li>
-                <li>Updating the "Last Updated" date at the top of this page</li>
-              </ul>
-              <p>Continued use of our services after changes constitutes acceptance of the modified terms.</p>
-            </div>
-
-            <div class="content-section">
-              <h2>14. Contact Information</h2>
-              <p>For questions about these Terms of Use or our services, please contact us:</p>
-              
-              <div class="feature-card">
-                <h4>Creative Complete Legal</h4>
-                <ul>
-                  <li>Email: info@creativecomplete.com</li>
-                  <li>Website: www.creativecomplete.com</li>
-                  <li>Response Time: 2-3 business days</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="content-section">
-              <h2>15. Severability</h2>
-              <p>If any provision of these Terms is found to be invalid or unenforceable by a court of competent jurisdiction, the remaining provisions will remain in full force and effect. The invalid or unenforceable provision shall be deemed modified to the extent necessary to make it valid and enforceable.</p>
-            </div>
-
-            <div class="content-section">
-              <h2>16. Entire Agreement</h2>
-              <p>These Terms of Use, together with our Privacy Policy and any service-specific agreements, constitute the entire agreement between you and Creative Complete regarding our services and supersede all prior agreements and understandings, whether written or oral.</p>
-            </div>
           </article>
 
-          <!-- Sidebar -->
-          <aside class="related-articles-sidebar">
-            <div class="sidebar-header">
-              <h3>Legal Documents</h3>
-              <p>Related policies and agreements</p>
+          <aside class="pp-aside">
+            <div class="pp-aside__card">
+              <div class="pp-aside__title">Jump to section</div>
+              <ul class="pp-aside__links">
+                <li><a href="#acceptance">1. Acceptance</a></li>
+                <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="/contact/">Contact us</a></li>
+              </ul>
             </div>
 
-            <div class="related-articles-list">
-              <a href="/privacy-policy/" class="related-article-card">
-                <span class="article-category">Privacy</span>
-                <h4 class="article-title">Privacy Policy</h4>
-                <p class="article-excerpt">Learn how we protect your data and respect your privacy rights.</p>
-                <div class="article-meta">
-                  <span class="read-time">🛡️ Policy</span>
-                  <span class="article-link">Read More</span>
-                </div>
+            <div class="pp-aside__card" style="margin-top:16px">
+              <div class="pp-aside__title">Legal questions?</div>
+              <p class="pp-aside__text">Our team is available to clarify any terms or conditions before you engage.</p>
+              <a href="mailto:info@creativecomplete.com" class="v2-btn v2-btn-primary" style="height:40px;font-size:13px;margin-top:16px;justify-content:center;width:100%">
+                Email legal team
               </a>
             </div>
-
-            <div class="sidebar-cta">
-              <h4>Legal Questions?</h4>
-              <p>Contact our legal team for clarification on any terms or conditions.</p>
-              <a href="mailto:legal@creativecomplete.com" class="cta-button primary">Email Legal Team</a>
-            </div>
           </aside>
+
         </div>
       </div>
     </section>
+  </main>
+</LayoutV2>
 
-    <!-- CTA Section -->
-    <BottomCTA />
-  </div>
+<style lang="scss">
+  .v2-bc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 24px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    font-family: var(--font-mono);
+    color: var(--fg-2);
+    a { color: var(--fg-2); &:hover { color: var(--c1-light); } }
+  }
 
-</Layout>
+  .pp-hero {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .pp-meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+
+  .pp-badge {
+    display: inline-flex;
+    align-items: center;
+    height: 26px;
+    padding: 0 12px;
+    border-radius: 99px;
+    font-size: 11px;
+    font-family: var(--font-mono);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    background: var(--glass);
+    border: 1px solid var(--line);
+    color: var(--fg-2);
+
+    &--green {
+      background: rgba(34,197,94,.08);
+      border-color: rgba(34,197,94,.25);
+      color: #4ade80;
+    }
+
+    &--blue {
+      background: rgba(99,102,241,.08);
+      border-color: rgba(99,102,241,.25);
+      color: var(--c1-light);
+    }
+  }
+
+  .pp-body {
+    padding: 64px 0 96px;
+  }
+
+  .pp-grid {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 64px;
+    align-items: start;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .pp-article {
+    min-width: 0;
+  }
+
+  .v2-prose {
+    color: var(--fg-1);
+    line-height: 1.75;
+
+    h2 {
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 700;
+      color: var(--fg-0);
+      margin: 2.4em 0 .6em;
+      padding-bottom: .5em;
+      border-bottom: 1px solid var(--line);
+
+      &:first-child { margin-top: 0; }
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--fg-0);
+      margin: 1.6em 0 .4em;
+    }
+
+    p { margin: .8em 0; }
+
+    ul {
+      padding-left: 1.4em;
+      margin: .8em 0;
+      li { margin: .3em 0; }
+    }
+
+    a {
+      color: var(--c1-light);
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
+    }
+
+    strong { color: var(--fg-0); }
+  }
+
+  .pp-callout {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--c1);
+    border-radius: var(--r-sm);
+    padding: 20px 24px;
+    margin: 1.4em 0;
+
+    strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--fg-0);
+      margin-bottom: 8px;
+    }
+
+    p, ul { margin: .5em 0; }
+
+    &--warn {
+      border-left-color: #f59e0b;
+    }
+  }
+
+  .pp-aside {
+    position: sticky;
+    top: 96px;
+
+    @media (max-width: 900px) {
+      position: static;
+      order: -1;
+    }
+  }
+
+  .pp-aside__card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: var(--r-xl);
+    padding: 24px;
+  }
+
+  .pp-aside__title {
+    font-size: 11px;
+    font-family: var(--font-mono);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--fg-2);
+    margin-bottom: 14px;
+  }
+
+  .pp-aside__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    a {
+      font-size: 14px;
+      color: var(--fg-1);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      &::before {
+        content: '→';
+        color: var(--c1-light);
+        font-size: 12px;
+      }
+
+      &:hover { color: var(--c1-light); }
+    }
+  }
+
+  .pp-aside__text {
+    font-size: 13px;
+    color: var(--fg-2);
+    line-height: 1.55;
+    margin: 0;
+  }
+</style>

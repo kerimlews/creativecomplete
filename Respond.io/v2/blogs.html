@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Customer System Blog — Case Studies, Tactics & Respond.io Guides | CreativeComplete</title>
+  <meta name="description" content="AI Customer System blog with case studies, Respond.io AI Agent guides, AdCreative.ai tactics and WhatsApp broadcast strategies. The #1 resource for agency lead automation."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/tokens.css"/>
+  <link rel="stylesheet" href="styles/components.css"/>
+  <style>
+    /* Blog-specific layout additions */
+    .v2-blog-hero { border-bottom: 1px solid var(--line); }
+    .v2-blog-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      margin-bottom: 64px;
+    }
+    .v2-blog-featured__img {
+      height: 360px;
+      min-height: 280px;
+      border-radius: 0;
+    }
+    .v2-blog-featured__body {
+      padding: 48px 48px 48px 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .v2-blog-featured__meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .v2-blog-featured__title {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 2.2vw, 32px);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      font-weight: 400;
+      color: var(--fg-0);
+      margin: 16px 0 0;
+    }
+    .v2-blog-featured__excerpt {
+      color: var(--fg-1);
+      font-size: 15px;
+      line-height: 1.65;
+      margin-top: 12px;
+    }
+    .v2-blog-filter {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .v2-blog-filter__btn {
+      height: 34px;
+      padding: 0 16px;
+      border-radius: var(--r-pill);
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--fg-1);
+      cursor: pointer;
+      transition: all .18s ease;
+    }
+    .v2-blog-filter__btn:hover {
+      border-color: var(--line-2);
+      color: var(--fg-0);
+    }
+    .v2-blog-filter__btn.active {
+      background: rgba(99,102,241,0.15);
+      border-color: rgba(99,102,241,0.4);
+      color: var(--c1-light);
+    }
+    .v2-blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .v2-blog-img {
+      border-radius: var(--r-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .v2-blog-card { overflow: hidden; }
+    .v2-blog-card__img { height: 180px; border-radius: var(--r-md) var(--r-md) 0 0; }
+    .v2-blog-card__body { padding: 20px; }
+    .v2-blog-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .v2-blog-card__title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      font-weight: 400;
+      color: var(--fg-0);
+      margin: 0 0 8px;
+    }
+    .v2-blog-card__excerpt {
+      font-size: 13px;
+      color: var(--fg-1);
+      line-height: 1.6;
+      margin: 0 0 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .v2-blog-card__link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--c1-light);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: gap .15s ease;
+    }
+    .v2-blog-card__link:hover { gap: 10px; }
+    .v2-blog-nl { background: var(--bg-card); border-top: 1px solid var(--line); }
+    .v2-blog-nl__card {
+      position: relative;
+      border: 1px solid var(--line-2);
+      border-radius: var(--r-xl);
+      padding: 64px;
+      overflow: hidden;
+      background: var(--glass);
+    }
+    .v2-blog-nl__glow {
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(99,102,241,0.15), transparent 70%);
+      pointer-events: none;
+    }
+    .v2-blog-nl__content { position: relative; z-index: 1; max-width: 560px; }
+    .v2-blog-nl__form {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .v2-blog-nl__input {
+      flex: 1;
+      min-width: 240px;
+      height: 50px;
+      padding: 0 16px;
+      background: var(--bg-elev);
+      border: 1px solid var(--line-2);
+      border-radius: var(--r-pill);
+      font: inherit;
+      font-size: 15px;
+      color: var(--fg-0);
+      outline: none;
+      transition: border-color .2s;
+    }
+    .v2-blog-nl__input:focus { border-color: var(--line-accent); }
+    .v2-blog-nl__input::placeholder { color: var(--fg-2); }
+    .v2-blog-nl__success {
+      margin-top: 20px;
+      padding: 16px 20px;
+      background: rgba(34,211,238,0.08);
+      border: 1px solid rgba(34,211,238,0.25);
+      border-radius: var(--r-md);
+      color: var(--c2);
+      font-size: 15px;
+    }
+    @media (max-width: 900px) {
+      .v2-blog-featured { grid-template-columns: 1fr; }
+      .v2-blog-featured__img { height: 240px; border-radius: var(--r-md) var(--r-md) 0 0; }
+      .v2-blog-featured__body { padding: 28px; }
+      .v2-blog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .v2-blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="v2-page" id="root"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel" src="components/components.jsx"></script>
+  <script type="text/babel" src="components/blog.jsx"></script>
+
+  <script type="text/babel">
+    const App = () => (
+      <>
+        <V2Nav active="blog"/>
+        <main>
+          <V2BlogHero/>
+          <V2BlogGrid/>
+          <V2BlogNewsletter/>
+        </main>
+        <V2Footer/>
+      </>
+    );
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+  </script>
+</body>
+</html>

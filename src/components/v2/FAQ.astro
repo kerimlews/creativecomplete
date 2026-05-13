@@ -1,0 +1,114 @@
+---
+export interface Props {
+  items?: { q: string; a: string }[];
+}
+
+const defaultItems = [
+  {
+    q: "What exactly does CreativeComplete do for us?",
+    a: "We act as your embedded AI Customer System team. We configure, build, and fully manage the infrastructure that captures leads from every channel, qualifies them with AI Agents in under 60 seconds, and runs broadcast sequences on your existing database. You don't get a tool to figure out — you get a specialist team that runs the system end to end. Your team only handles the hot leads that land in your calendar.",
+  },
+  {
+    q: "How does AI qualify leads better than a human team?",
+    a: "AI Agents respond in under 60 seconds, 24/7, across every channel simultaneously. They apply the same BANT qualification logic every time — intent, budget, timeline, authority — without fatigue, inconsistency, or missed follow-ups. Our agency-configured agents achieve 81% lead conversion rates, compared to the industry average of 20–30% for human teams. The difference isn't the AI — it's the setup quality. That's what we own.",
+  },
+  {
+    q: "Which channels does it cover?",
+    a: "40+ channels: WhatsApp Business API, WhatsApp Calling, Instagram DM, TikTok Business Messaging, Facebook Messenger, Facebook Messenger Calls, email (Gmail, Outlook, Yahoo), SMS (Twilio, MessageBird, Vonage), Telegram, Viber, WeChat, LINE, VoIP, and more. Every conversation — regardless of source — flows into one unified team inbox with full source attribution, lead scores, and conversation history. Nothing falls through the cracks.",
+  },
+  {
+    q: "How fast will we see results?",
+    a: "Your AI Agents can be handling inbound leads within 10 days of kickoff. A full system build — qualification flows, nurture sequences, broadcast campaigns, creative production — takes 3–4 weeks. Broadcast campaigns on your existing CRM typically return ROI within the first month. Most clients recoup the full investment within 45 days.",
+  },
+  {
+    q: "Do we need to be technical or hire anyone new?",
+    a: "No. That's the point. We are your AI department. We configure every workflow, connect every integration, write every qualification script, and manage ongoing optimisation. You receive a monthly performance report and a dedicated account manager. The only thing your team does is close the hot leads we route to them.",
+  },
+  {
+    q: "How does the creative side connect to the conversation system?",
+    a: "AI generates 8–12 high-converting ad variants weekly, trained on $35B+ in ad spend data. Creative Scoring AI ranks them before launch — only proven winners go live. Those ads drive leads directly into the conversation system, where AI Agents qualify them instantly. Better creatives bring better leads. Better qualification converts more of them. We manage both loops together so ROAS compounds every week.",
+  },
+  {
+    q: "What ROI can we realistically expect?",
+    a: "Client medians, not outliers: WhatsApp broadcast campaigns average 42.5× ROI. AI-generated creatives deliver 14× more conversions versus manually designed ads. AI qualification achieves 81% lead conversion rates. Most agencies recoup the full investment within 45 days. We share full attribution data monthly so you see exactly where every result comes from.",
+  },
+  {
+    q: "How does it connect to our existing CRM?",
+    a: "Native integrations with HubSpot, Salesforce, Pipedrive, and 50+ CRMs — plus Zapier for everything else. Your existing lead database is imported for broadcast and re-engagement campaigns. Your CRM stays the system of record. We build on top of it without disrupting your current processes.",
+  },
+  {
+    q: "What makes this different from hiring an automation freelancer or using a chatbot tool?",
+    a: "Freelancers set it up and leave. Chatbot tools handle one channel and one step. We are an ongoing, managed specialist team that owns the full lead lifecycle — capture, qualification, creative production, re-engagement — across every channel, continuously optimised. You get the output of a 5-person AI operations team at a fraction of the cost, without the management overhead.",
+  },
+];
+
+const { items = defaultItems } = Astro.props;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": items.map(it => ({
+    "@type": "Question",
+    "name": it.q,
+    "acceptedAnswer": { "@type": "Answer", "text": it.a }
+  }))
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
+
+<section class="v2-faq v2-section" id="faq">
+  <div class="v2-container">
+    <div class="v2-faq__inner">
+      <!-- Left: headline + CTA -->
+      <div class="v2-faq__left" data-m="up">
+        <span class="v2-eyebrow">Common questions</span>
+        <h2 class="v2-h2" style="margin-top:16px">
+          <span class="v2-grad">Questions,</span> answered.
+        </h2>
+        <p class="v2-lead" style="margin-top:16px">
+          Everything agencies ask before bringing us in as their AI team.
+        </p>
+        <a href="javascript:void(0)" class="v2-btn v2-btn-primary" style="margin-top:28px" data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'>
+          Book free audit
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right: accordion -->
+      <ul class="v2-faq__list">
+        {items.map((it, i) => (
+          <li class="v2-faq__item" data-m="left" style={`--m-d:${i * 0.06}s`}>
+            <button class="v2-faq__btn" aria-expanded="false">
+              <span class="v2-faq__num">{String(i + 1).padStart(2, "0")}</span>
+              <span class="v2-faq__q">{it.q}</span>
+              <span class="v2-faq__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="v2-faq__a">{it.a}</div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.v2-faq__btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.v2-faq__item')!;
+      const isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.v2-faq__item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.v2-faq__btn')?.setAttribute('aria-expanded', 'false');
+      });
+      // Open clicked if it was closed
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

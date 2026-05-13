@@ -7,7 +7,7 @@ description: "Nismo zgradili samo še ene fitnes aplikacije. Arhitektirali smo o
 category: "Mobile / Web / SEO / Marketing"
 url: https://fitovision.com/
 logo: https://fitovision.com/uploads/files/5d879733b6b9cdd48a20aec8a096bc49.png
-related_articles: ["paperpile-saas-scaling-case-study", "prepme-automation-saas"]
+related_articles: ["paperpile-saas-scaling-case-study", "prepme-automation-saas", "belags-oberflaechenreinigung-arbon-case-study"]
 slug: "fitovision-gym-saas"
 published: "2025-12-29"
 updated: "2025-12-29"

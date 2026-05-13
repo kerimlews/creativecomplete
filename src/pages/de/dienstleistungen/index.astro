@@ -1,5 +1,5 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import LayoutV2 from '../../../layouts/LayoutV2.astro';
 import ServiceCard from '../../../components/ServiceCard.astro';
 import BreadCrumb from '../../../components/BreadCrumb.astro';
 import { getCollection } from 'astro:content';
@@ -87,7 +87,8 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout 
+<LayoutV2
+  lang="de"
   title={t('services.title', currentLang)}
   description={t('services.description', currentLang)}
   structuredData={structuredData}
@@ -224,7 +225,7 @@ const breadcrumbs = [
       showValueProps={false}
     />
   </div>
-</Layout>
+</LayoutV2>
 
 <script>
 // Scroll animations for service cards

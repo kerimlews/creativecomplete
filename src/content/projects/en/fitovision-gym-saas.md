@@ -7,7 +7,7 @@ description: "New brand on Croatian market with mission to help gym owners set u
 category: "Mobile / Web / SEO / Marketing"
 url: https://fitovision.com/
 logo: https://fitovision.com/uploads/files/5d879733b6b9cdd48a20aec8a096bc49.png
-related_articles: ["paperpile-saas-scaling-case-study", "prepme-automation-saas", "careconnect-recruitment-automation", "nianave-ecommerce-scaling-case-study"]
+related_articles: ["paperpile-saas-scaling-case-study", "prepme-automation-saas", "careconnect-recruitment-automation", "nianave-ecommerce-scaling-case-study", "belags-oberflaechenreinigung-arbon-case-study"]
 slug: "fitovision-gym-saas"
 published: "2025-12-29"
 updated: "2025-12-29"

@@ -1,0 +1,225 @@
+---
+// BookingSection.astro — Full-width inline Cal.com booking
+---
+
+<section class="v2-booking" id="schedule">
+  <div class="v2-booking__top">
+    <div class="v2-container">
+      <div class="v2-booking__head" data-m="up">
+        <span class="v2-eyebrow">Book directly</span>
+        <h2 class="v2-h2" style="margin-top:12px">
+          Pick a time that works.<br/><span class="v2-grad">We'll do the rest.</span>
+        </h2>
+        <p class="v2-lead" style="margin-top:16px;max-width:52ch">
+          30 minutes. We audit your current setup, calculate your revenue leakage,
+          and show you exactly what AI Customer System would generate for your agency.
+        </p>
+
+        <!-- Animated trust icons -->
+        <div class="v2-booking__icons">
+          <div class="v2-bk-pill" style="--bc:#6366f1;--bd:0s">
+            <div class="v2-bk-pill__icon-wrap">
+              <div class="v2-bk-pill__ring"></div>
+              <div class="v2-bk-pill__icon">📅</div>
+            </div>
+            <div class="v2-bk-pill__text">
+              <div class="v2-bk-pill__label">Free audit</div>
+              <div class="v2-bk-pill__sub">30 minutes</div>
+            </div>
+          </div>
+
+          <div class="v2-bk-divider"></div>
+
+          <div class="v2-bk-pill" style="--bc:#22d3ee;--bd:.5s">
+            <div class="v2-bk-pill__icon-wrap">
+              <div class="v2-bk-pill__ring"></div>
+              <div class="v2-bk-pill__icon">⚡</div>
+            </div>
+            <div class="v2-bk-pill__text">
+              <div class="v2-bk-pill__label">Fast response</div>
+              <div class="v2-bk-pill__sub">Within 4 hours</div>
+            </div>
+          </div>
+
+          <div class="v2-bk-divider"></div>
+
+          <div class="v2-bk-pill" style="--bc:#a855f7;--bd:1s">
+            <div class="v2-bk-pill__icon-wrap">
+              <div class="v2-bk-pill__ring"></div>
+              <div class="v2-bk-pill__icon">🛡️</div>
+            </div>
+            <div class="v2-bk-pill__text">
+              <div class="v2-bk-pill__label">No obligation</div>
+              <div class="v2-bk-pill__sub">Cancel anytime</div>
+            </div>
+          </div>
+
+          <div class="v2-bk-divider"></div>
+
+          <div class="v2-bk-pill" style="--bc:#e879f9;--bd:1.5s">
+            <div class="v2-bk-pill__icon-wrap">
+              <div class="v2-bk-pill__ring"></div>
+              <div class="v2-bk-pill__icon">🏢</div>
+            </div>
+            <div class="v2-bk-pill__text">
+              <div class="v2-bk-pill__label">Agencies only</div>
+              <div class="v2-bk-pill__sub">Qualified calls</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="v2-booking__cal">
+    <div id="cal-booking-inline"></div>
+  </div>
+</section>
+
+<script type="text/javascript" is:inline>
+  Cal.ns["30min"]("inline", {
+    elementOrSelector: "#cal-booking-inline",
+    calLink: "kerim-alihodza-7u7w6q/30min",
+    layout: "month_view"
+  });
+</script>
+
+<style lang="scss" is:global>
+.v2-booking {
+  background: var(--bg-page);
+  border-top: 1px solid var(--line);
+}
+
+.v2-booking__top {
+  padding: 80px 0 56px;
+  text-align: center;
+}
+
+.v2-booking__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.v2-booking__trust {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+@keyframes bk-bob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-5px); }
+}
+@keyframes bk-ring {
+  0%, 100% { opacity: .2; transform: scale(1); }
+  50%       { opacity: .5; transform: scale(1.25); }
+}
+
+.v2-booking__icons {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  max-width: 800px;
+  margin: 32px auto 0;
+  border-radius: var(--r-xl);
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(99,102,241,.07);
+}
+
+.v2-bk-divider {
+  width: 1px;
+  background: var(--line);
+  flex-shrink: 0;
+}
+
+.v2-bk-pill {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 16px;
+  position: relative;
+  animation: bk-bob 3s ease-in-out infinite;
+  animation-delay: var(--bd, 0s);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 1.5px;
+    background: linear-gradient(90deg, transparent, var(--bc), transparent);
+    opacity: .6;
+  }
+}
+
+.v2-bk-pill__icon-wrap {
+  position: relative;
+  width: 38px; height: 38px;
+  flex-shrink: 0;
+}
+
+.v2-bk-pill__ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid var(--bc);
+  animation: bk-ring 2.6s ease-in-out infinite;
+  animation-delay: var(--bd, 0s);
+}
+
+.v2-bk-pill__icon {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--bc) 13%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--bc) 28%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.v2-bk-pill__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg-0);
+  line-height: 1.2;
+}
+
+.v2-bk-pill__sub {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--bc);
+  margin-top: 2px;
+  opacity: .85;
+}
+
+@media (max-width: 640px) {
+  .v2-booking__icons { flex-direction: column; }
+  .v2-bk-divider { width: auto; height: 1px; }
+  .v2-bk-pill { padding: 14px 16px; }
+}
+
+.v2-booking__cal {
+  background: var(--bg-page);
+  width: 100%;
+  overflow: hidden;
+
+  #cal-booking-inline {
+    width: 100%;
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 640px) {
+  .v2-booking__top { padding: 56px 0 40px; }
+  .v2-booking__cal #cal-booking-inline { min-height: 800px; }
+}
+</style>

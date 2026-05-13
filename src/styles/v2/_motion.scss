@@ -1,0 +1,376 @@
+// ============================================================
+//  CreativeComplete v2 — Section Motion System
+//  Scroll-reveal + cinematic per-section animations
+//  Holographic / Spider-Verse × Minority Report aesthetic
+// ============================================================
+
+/* ── Core keyframes ──────────────────────────────────────────── */
+
+@keyframes m-up    { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
+@keyframes m-left  { from { opacity:0; transform:translateX(-28px); } to { opacity:1; transform:translateX(0); } }
+@keyframes m-right { from { opacity:0; transform:translateX(28px); } to { opacity:1; transform:translateX(0); } }
+@keyframes m-scale { from { opacity:0; transform:scale(0.86); } to { opacity:1; transform:scale(1); } }
+@keyframes m-fade  { from { opacity:0; } to { opacity:1; } }
+
+@keyframes m-scan-h {
+  from { transform:translateX(-100%); opacity:0; }
+  10%  { opacity:1; }
+  90%  { opacity:1; }
+  to   { transform:translateX(100%); opacity:0; }
+}
+
+@keyframes m-count-glow {
+  0%   { text-shadow:0 0 0 transparent; }
+  40%  { text-shadow:0 0 32px rgba(99,102,241,.7), 0 0 16px rgba(34,211,238,.3); }
+  100% { text-shadow:0 0 14px rgba(99,102,241,.25); }
+}
+
+@keyframes m-underline {
+  from { transform:scaleX(0); }
+  to   { transform:scaleX(1); }
+}
+
+@keyframes m-neon-border {
+  0%,100% { box-shadow:0 0 0 0 transparent; }
+  50%     { box-shadow:0 0 0 1px rgba(99,102,241,.35), 0 0 20px rgba(99,102,241,.1); }
+}
+
+@keyframes m-orb-pulse {
+  0%,100% { transform:scale(1); opacity:.15; }
+  50%     { transform:scale(1.18); opacity:.3; }
+}
+
+@keyframes m-grid-in {
+  from { opacity:0; transform:perspective(600px) rotateX(8deg) translateY(16px); }
+  to   { opacity:1; transform:perspective(600px) rotateX(0deg) translateY(0); }
+}
+
+@keyframes m-rocket {
+  0%   { transform:translateY(0) scale(1); }
+  50%  { transform:translateY(-5px) scale(1.04); }
+  100% { transform:translateY(0) scale(1); }
+}
+
+/* ── Scroll-reveal base ──────────────────────────────────────── */
+/* Elements with [data-m] attribute start invisible */
+
+[data-m] {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+[data-m="up"]    { transform: translateY(32px); }
+[data-m="left"]  { transform: translateX(-28px); }
+[data-m="right"] { transform: translateX(28px); }
+[data-m="scale"] { transform: scale(0.86); }
+[data-m="fade"]  { transform: none; }
+
+/* Trigger class added by IntersectionObserver */
+[data-m].io-in {
+  animation-duration:  var(--m-dur, 0.65s);
+  animation-timing-function: cubic-bezier(0.22, 0.68, 0, 1.1);
+  animation-fill-mode: both;
+  animation-delay:     var(--m-d, 0s);
+}
+[data-m="up"].io-in    { animation-name: m-up; }
+[data-m="left"].io-in  { animation-name: m-left; }
+[data-m="right"].io-in { animation-name: m-right; }
+[data-m="scale"].io-in { animation-name: m-scale; }
+[data-m="fade"].io-in  { animation-name: m-fade; }
+
+/* stagger helper: set on parent, children inherit delays */
+.m-stagger > [data-m]:nth-child(1)  { --m-d: 0.00s; }
+.m-stagger > [data-m]:nth-child(2)  { --m-d: 0.08s; }
+.m-stagger > [data-m]:nth-child(3)  { --m-d: 0.16s; }
+.m-stagger > [data-m]:nth-child(4)  { --m-d: 0.24s; }
+.m-stagger > [data-m]:nth-child(5)  { --m-d: 0.32s; }
+.m-stagger > [data-m]:nth-child(6)  { --m-d: 0.40s; }
+.m-stagger > [data-m]:nth-child(7)  { --m-d: 0.48s; }
+.m-stagger > [data-m]:nth-child(8)  { --m-d: 0.56s; }
+.m-stagger > [data-m]:nth-child(9)  { --m-d: 0.64s; }
+
+/* ── Counter glow trigger ────────────────────────────────────── */
+[data-count].io-in {
+  animation: m-count-glow 1.4s ease-out both;
+  animation-delay: calc(var(--m-d, 0s) + 0.1s);
+}
+
+/* ── Section head reveal ─────────────────────────────────────── */
+.v2-section-head [data-m="up"] { --m-dur: 0.55s; }
+
+
+/* ── CLIENTS — scroll marquee ────────────────────────────────── */
+
+.v2-clients__inner { overflow: hidden; }
+
+.v2-clients__row {
+  display: flex;
+  width: max-content;
+  animation: m-marquee 28s linear infinite;
+}
+
+@keyframes m-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Pause on hover */
+.v2-clients:hover .v2-clients__row { animation-play-state: paused; }
+
+/* ── STATS STRIP — count up + bar ───────────────────────────── */
+
+.v2-stats-strip__n {
+  position: relative;
+  display: inline-block;
+
+  /* underline bar that fills on scroll */
+  &::after {
+    content: "";
+    position: absolute; bottom: -4px; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, var(--c1), var(--c2));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.8s cubic-bezier(0.22, 0.68, 0, 1.1);
+    transition-delay: var(--m-d, 0s);
+  }
+}
+
+.v2-stats-strip__cell.io-in .v2-stats-strip__n::after {
+  transform: scaleX(1);
+}
+
+.v2-stats-strip__cell {
+  position: relative; overflow: hidden;
+
+  /* holographic vertical separator */
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute; top: 20%; right: 0;
+    width: 1px; height: 60%;
+    background: linear-gradient(to bottom, transparent, var(--line-accent), transparent);
+  }
+}
+
+
+/* ── SERVICES — card materialise ─────────────────────────────── */
+
+.v2-service {
+  position: relative; overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
+
+  /* top neon line that sweeps in on scroll */
+  &::before {
+    content: "";
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--c1-light), var(--c2), transparent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.7s cubic-bezier(0.22, 0.68, 0, 1.1);
+    transition-delay: var(--m-d, 0s);
+    z-index: 1;
+  }
+
+  &.io-in::before { transform: scaleX(1); }
+
+  &:hover {
+    border-color: rgba(99,102,241,.4);
+    box-shadow: 0 0 0 1px rgba(99,102,241,.15), 0 20px 40px rgba(0,0,0,.3);
+  }
+}
+
+/* Scan-line inside each service card on reveal */
+.v2-service.io-in::after {
+  content: "";
+  position: absolute; left: 0; right: 0; top: 0; height: 40px;
+  background: linear-gradient(180deg,
+    rgba(99,102,241,.06) 0%, rgba(34,211,238,.03) 50%, transparent 100%);
+  animation: m-scan-h 0.8s ease-out both;
+  animation-delay: calc(var(--m-d, 0s) + 0.2s);
+  pointer-events: none;
+}
+
+/* Icon glow on card reveal */
+.v2-service.io-in .v2-service__icon-wrap {
+  animation: m-rocket 0.7s ease-in-out both;
+  animation-delay: calc(var(--m-d, 0s) + 0.3s);
+}
+
+
+/* ── PROCESS — step reveal + visual enhancement ──────────────── */
+
+/* Steps animate from left */
+.v2-process__step[data-m] { transform: translateX(-24px); }
+
+.v2-process__step.is-active {
+  border-left-color: var(--c2) !important;
+  box-shadow: -3px 0 16px rgba(34,211,238,.2);
+}
+
+/* Visual panel enhanced transitions */
+.v2-pv {
+  transition: opacity 0.35s ease;
+  &.hidden { opacity: 0; pointer-events: none; }
+}
+
+/* Holographic scan on panel show */
+.v2-pv:not(.hidden)::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0; height: 100%;
+  background: linear-gradient(180deg,
+    rgba(34,211,238,.05) 0%, transparent 30%);
+  pointer-events: none;
+  animation: m-fade 0.4s ease both;
+}
+
+/* Score bars in qualify panel animate on reveal */
+.v2-pv[data-visual="qualify"].io-in .v2-pv-score__fill {
+  animation: m-bar-fill 1s ease-out both;
+}
+
+@keyframes m-bar-fill {
+  from { width: 0 !important; }
+}
+
+/* Creative cards in creative panel */
+.v2-pv[data-visual="creative"].io-in .v2-pv-creative {
+  animation: m-scale 0.4s cubic-bezier(0.22, 0.68, 0, 1.2) both;
+  &:nth-child(1) { animation-delay: 0.05s; }
+  &:nth-child(2) { animation-delay: 0.12s; }
+  &:nth-child(3) { animation-delay: 0.19s; }
+  &:nth-child(4) { animation-delay: 0.26s; }
+  &:nth-child(5) { animation-delay: 0.33s; }
+  &:nth-child(6) { animation-delay: 0.40s; }
+}
+
+
+/* ── RESULTS — banner sweep ──────────────────────────────────── */
+
+.v2-results__banner {
+  position: relative; overflow: hidden;
+}
+
+/* Scan line sweeps across the banner on reveal */
+.v2-results__banner.io-in::before {
+  content: "";
+  position: absolute; top: 0; bottom: 0; left: -20%;
+  width: 40%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,.06), transparent);
+  animation: m-scan-h 1.2s ease-out 0.3s both;
+  pointer-events: none; z-index: 1;
+}
+
+.v2-results__n {
+  position: relative; display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute; bottom: -2px; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, var(--c1), var(--c3));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 1s cubic-bezier(0.22, 0.68, 0, 1.1);
+    transition-delay: calc(var(--m-d, 0s) + 0.4s);
+  }
+}
+.v2-results__item.io-in .v2-results__n::after { transform: scaleX(1); }
+
+
+/* ── TESTIMONIALS — 3D card reveal ──────────────────────────── */
+
+.v2-testi__main {
+  transform-style: preserve-3d;
+}
+
+.v2-testi__main[data-m="up"] { transform: translateY(28px); }
+.v2-testi__small[data-m="scale"] { transform: scale(0.88); }
+
+.v2-testi__main.io-in,
+.v2-testi__small.io-in {
+  transition: box-shadow 0.4s ease;
+}
+
+.v2-testi__main:hover,
+.v2-testi__small:hover {
+  box-shadow:
+    0 0 0 1px rgba(99,102,241,.25),
+    0 24px 48px rgba(0,0,0,.3);
+}
+
+/* Holographic star glow on reveal */
+.v2-testi__main.io-in .v2-testi__star,
+.v2-testi__small.io-in .v2-testi__star {
+  animation: m-star-pop 0.4s cubic-bezier(0.22, 0.68, 0, 1.3) both;
+  &:nth-child(1) { animation-delay: calc(var(--m-d, 0s) + 0.3s); }
+  &:nth-child(2) { animation-delay: calc(var(--m-d, 0s) + 0.38s); }
+  &:nth-child(3) { animation-delay: calc(var(--m-d, 0s) + 0.46s); }
+  &:nth-child(4) { animation-delay: calc(var(--m-d, 0s) + 0.54s); }
+  &:nth-child(5) { animation-delay: calc(var(--m-d, 0s) + 0.62s); }
+}
+
+@keyframes m-star-pop {
+  from { opacity: 0; transform: scale(0.4) rotate(-30deg); }
+  to   { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* Stat badge that appears in main testimonial */
+.v2-testi__stat {
+  transition: color 0.3s ease;
+}
+.v2-testi__main.io-in .v2-testi__stat {
+  animation: m-count-glow 1.5s ease-out both;
+  animation-delay: calc(var(--m-d, 0s) + 0.5s);
+}
+
+
+/* ── FAQ — item reveal ───────────────────────────────────────── */
+
+.v2-faq__item[data-m] {
+  transform: translateX(-16px);
+}
+.v2-faq__item[data-m].io-in {
+  animation: m-left 0.5s ease both;
+  animation-delay: var(--m-d, 0s);
+}
+
+.v2-faq__item.open .v2-faq__a {
+  animation: m-fade 0.2s ease both;
+}
+
+
+/* ── CTA — orb pulse + reveal ────────────────────────────────── */
+
+.v2-cta__glow {
+  animation: m-orb-pulse 4s ease-in-out infinite;
+}
+
+.v2-cta__card.io-in .v2-cta__glow {
+  animation: m-orb-pulse 2.5s ease-in-out infinite;
+}
+
+/* Promise items animate in */
+.v2-cta__card.io-in .v2-cta__promise {
+  animation: m-left 0.5s ease both;
+  &:nth-child(1) { animation-delay: 0.5s; }
+  &:nth-child(2) { animation-delay: 0.62s; }
+  &:nth-child(3) { animation-delay: 0.74s; }
+}
+
+/* CTA button gets a neon pulse after card reveals */
+.v2-cta__card.io-in .v2-btn-primary {
+  animation: m-neon-border 3s ease-in-out 1s infinite;
+}
+
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  [data-m],
+  [data-m].io-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .v2-clients__row { animation: none; }
+  .v2-stats-strip__n::after { transform: scaleX(1); }
+  .v2-service::before { transform: scaleX(1); }
+}

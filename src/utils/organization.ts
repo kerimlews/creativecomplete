@@ -4,31 +4,31 @@
  */
 
 export const ORGANIZATION = {
-  name: "Creative Complete",
-  url: "https://creativecomplete.com",
-  logo: "https://creativecomplete.com/logo.png",
-  description: "Results-driven digital agency specializing in SEO, web design, automation, and SaaS development. We deliver measurable business growth with verified case studies.",
+  name: "CreativeComplete",
+  url: "https://www.creativecomplete.com",
+  logo: "https://www.creativecomplete.com/logo-gradient.svg",
+  description: "AI Customer System agency that qualifies leads in 60 seconds, converts them with AI ad creatives, and generates 42.5× ROI from existing lead databases. Fully managed, no headcount added.",
   foundingDate: "2023",
   founder: {
     name: "Kerim Alihodza",
-    url: "https://creativecomplete.com/kerim-alihodza"
+    url: "https://www.creativecomplete.com/kerim-alihodza/"
   },
   contactPoint: {
-    telephone: "+387603456771",
+    telephone: "",
     contactType: "Customer Service",
-    email: "contact@creativecomplete.com"
+    email: "info@creativecomplete.com"
   },
   sameAs: [
-    "https://linkedin.com/in/kerim-alihodza-a765aa145",
-    "https://twitter.com/KAlihodza82975"
+    "https://www.linkedin.com/in/kerim-alihodza-a765aa145/",
+    "https://www.linkedin.com/company/creative-complete/",
+    "https://twitter.com/KAlihodza82975",
+    "https://instagram.com/creative_complete"
   ],
   address: {
     streetAddress: "",
-    addressLocality: "Sarajevo",
-    addressRegion: "Federation of Bosnia and Herzegovina",
+    addressLocality: "Ljubljana",
+    addressRegion: "Ljubljana",
     postalCode: "",
-    addressCountry: "BA"
+    addressCountry: "SI"
   }
 } as const;
-
-

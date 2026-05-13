@@ -1,0 +1,135 @@
+---
+const system = [
+  { label: "AI Lead Qualification",  href: "/#engines"       },
+  { label: "AI Creative Engine",     href: "/#engines"       },
+  { label: "Lead Capture (40+ ch.)", href: "/#engines"       },
+  { label: "Lead Monetization",      href: "/#engines"       },
+  { label: "How it works",           href: "/#how-it-works"  },
+  { label: "Results",                href: "/#results"       },
+];
+
+const services = [
+  { label: "AI Automation",        href: "/services/automation/"          },
+  { label: "Web Design",           href: "/services/web-design/"          },
+  { label: "SEO",                  href: "/services/seo/"                 },
+  { label: "E-commerce",           href: "/services/ecommerce/"           },
+  { label: "Mobile Apps",          href: "/services/mobile-development/"  },
+  { label: "Custom SaaS",          href: "/services/saas-development/"    },
+  { label: "Local SEO",            href: "/services/local-seo/"           },
+];
+
+const company = [
+  { label: "About CreativeComplete", href: "/about/"            },
+  { label: "Meet Kerim",             href: "/kerim-alihodza/"  },
+  { label: "Case Studies",           href: "/projects/"        },
+  { label: "Contact",                href: "/contact"          },
+];
+
+const resources = [
+  { label: "Book Free Audit", cal: true },
+  { label: "Privacy Policy",  href: "/privacy-policy/" },
+  { label: "Terms of Use",    href: "/terms-of-use/"   },
+];
+
+const langs = [
+  { code: "EN", href: "/"     },
+  { code: "SL", href: "/sl/" },
+  { code: "DE", href: "/de/" },
+];
+---
+
+<footer class="v2-footer">
+  <div class="v2-container">
+    <div class="v2-footer__grid">
+      <!-- Brand -->
+      <div class="v2-footer__brand">
+        <a href="/" class="v2-footer__logo">
+          <img src="/logo-gradient.svg" alt="CreativeComplete" class="v2-footer__logo-img" width="20" height="32" />
+          <span class="v2-footer__logo-text">Creative<span class="v2-grad">Complete</span></span>
+        </a>
+        <p class="v2-footer__desc">
+          Your embedded AI Customer System team. We capture every lead, qualify them in 60 seconds,
+          and monetize your existing database, fully managed, no headcount added.
+        </p>
+        <div class="v2-footer__partner-chips">
+          <span class="v2-chip">WhatsApp Business API</span>
+          <span class="v2-chip-cyan">AI Creative Engine</span>
+        </div>
+      </div>
+
+      <!-- System -->
+      <div>
+        <div class="v2-footer__head">AI Customer System</div>
+        <ul>
+          {system.map(l => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <div class="v2-footer__head">Services</div>
+        <ul>
+          {services.map(l => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <div class="v2-footer__head">Company</div>
+        <ul>
+          {company.map(l => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
+
+      <!-- Resources + CTA -->
+      <div>
+        <div class="v2-footer__head">Resources</div>
+        <ul>
+          {resources.map(l => (
+            <li>
+              {l.cal ? (
+                <a
+                  href="javascript:void(0)"
+                  data-cal-link="kerim-alihodza-7u7w6q/30min"
+                  data-cal-namespace="30min"
+                  data-cal-config='{"layout":"month_view","theme":"dark"}'
+                >{l.label}</a>
+              ) : (
+                <a href={l.href}>{l.label}</a>
+              )}
+            </li>
+          ))}
+        </ul>
+        <div style="margin-top:24px">
+          <a
+            href="javascript:void(0)"
+            data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'
+            class="v2-btn v2-btn-primary"
+            style="height:42px;font-size:13px;"
+          >
+            Book free audit
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="v2-hr" style="margin:40px 0 24px" />
+
+    <div class="v2-footer__legal">
+      <div>© 2026 CreativeComplete · AI Customer System Agency</div>
+      <div class="v2-footer__legal-right">
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/terms-of-use/">Terms</a>
+        <a href="/contact/">Contact</a>
+        <div class="v2-footer__langs">
+          {langs.map(l => (
+            <a href={l.href} class="v2-footer__lang">{l.code}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

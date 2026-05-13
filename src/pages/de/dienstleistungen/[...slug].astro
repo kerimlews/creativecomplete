@@ -1,5 +1,5 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import LayoutV2 from '../../../layouts/LayoutV2.astro';
 import { getCollection } from 'astro:content';
 import { generateServiceJsonLd } from '../../../utils/jsonld';
 import FAQ from '../../../components/FAQ.astro';
@@ -155,7 +155,8 @@ if (service.data.related_articles && Array.isArray(service.data.related_articles
 }
 ---
 
-<Layout 
+<LayoutV2
+  lang="de"
   title={service.data.title}
   description={service.data.description}
   structuredData={structuredData}
@@ -269,5 +270,5 @@ if (service.data.related_articles && Array.isArray(service.data.related_articles
       showValueProps={false}
     />
   </article>
-</Layout>
+</LayoutV2>
 

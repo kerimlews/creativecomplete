@@ -7,7 +7,7 @@ description: "Neue Marke auf dem Schweizer Markt mit der Mission, Menschen zu re
 category: "UI-UX / SEO / CRM / Marketing"
 url: https://careconnect.swiss/
 logo: https://careconnect.swiss/logo.svg
-related_articles: ["prepme-automation-saas", "fitovision-gym-saas", "paperpile-saas-scaling-case-study", "nianave-ecommerce-scaling-case-study"]
+related_articles: ["prepme-automation-saas", "fitovision-gym-saas", "paperpile-saas-scaling-case-study", "nianave-ecommerce-scaling-case-study", "belags-oberflaechenreinigung-arbon-case-study"]
 slug: "careconnect-recruitment-automation"
 published: "2025-12-15"
 updated: "2025-12-15"

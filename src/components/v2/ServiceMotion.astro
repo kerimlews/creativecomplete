@@ -1,0 +1,730 @@
+---
+/**
+ * ServiceMotion.astro
+ * Animated mini-demo for each of the 4 AI Customer System engines.
+ * Uses real platform icons (WhatsApp, Instagram, TikTok, Facebook, Meta, Google).
+ * Platform-agnostic — all copy uses generic AI Customer System terminology.
+ */
+import { Image } from 'astro:assets';
+import cv1 from '../../images/homepage/creative-v1.avif';
+import cv2 from '../../images/homepage/creative-v2.avif';
+import cv3 from '../../images/homepage/creative-v3.avif';
+import cv4 from '../../images/homepage/creative-v4.avif';
+import cv5 from '../../images/homepage/creative-v5.avif';
+import cv6 from '../../images/homepage/creative-v6.avif';
+
+export interface Props {
+  service: 'qualify' | 'creative' | 'capture' | 'monetize';
+}
+const { service } = Astro.props;
+
+const creatives = [
+  { img: cv1, score: '▲ 97', win: true,  delay: '.6s'  },
+  { img: cv2, score: '▲ 91', win: true,  delay: '.8s'  },
+  { img: cv3, score: '▲ 89', win: true,  delay: '1.0s' },
+  { img: cv4, score: '▼ 74', win: false, delay: '1.2s' },
+  { img: cv5, score: '▼ 68', win: false, delay: '1.4s' },
+  { img: cv6, score: '▼ 63', win: false, delay: '1.6s' },
+];
+---
+
+<!-- ────────────────────────────────────────────────────────────
+     SHARED PLATFORM ICON SVGS (inlined, reused across panels)
+     ──────────────────────────────────────────────────────────── -->
+<svg style="display:none">
+  <symbol id="ico-wa" viewBox="0 0 28 28">
+    <rect width="28" height="28" rx="7" fill="#25d366"/>
+    <path d="M14 5.5C9.3 5.5 5.5 9.3 5.5 14c0 1.5.4 2.96 1.1 4.2L5.5 22.5l4.4-1.1A8.5 8.5 0 1014 5.5zm.02 15.4A6.9 6.9 0 017.1 14a6.9 6.9 0 016.92-6.9 6.9 6.9 0 016.9 6.9 6.88 6.88 0 01-6.9 6.9zm3.86-5.26c-.2-.1-1.15-.57-1.33-.63-.18-.07-.31-.1-.44.1-.13.2-.5.63-.61.76-.11.13-.22.15-.42.05-.2-.1-.84-.31-1.6-.99A6 6 0 0112.4 13c-.11-.2-.01-.3.09-.4.09-.1.2-.24.3-.36.1-.12.13-.2.2-.33.07-.13.03-.24-.01-.34-.04-.1-.44-1.06-.6-1.44-.16-.38-.32-.33-.44-.34h-.38c-.13 0-.34.05-.52.24-.18.2-.69.67-.69 1.64s.7 1.9.8 2.04c.1.13 1.38 2.1 3.35 2.95.47.2.83.32 1.12.41.47.15.9.13 1.23.08.38-.06 1.16-.47 1.32-.93.17-.46.17-.85.12-.93-.05-.08-.18-.13-.37-.22z" fill="white"/>
+  </symbol>
+  <symbol id="ico-ig" viewBox="0 0 28 28">
+    <defs>
+      <linearGradient id="ig-g" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#f09433"/>
+        <stop offset="35%" stop-color="#dc2743"/>
+        <stop offset="75%" stop-color="#cc2366"/>
+        <stop offset="100%" stop-color="#bc1888"/>
+      </linearGradient>
+    </defs>
+    <rect width="28" height="28" rx="7" fill="url(#ig-g)"/>
+    <rect x="7" y="7" width="14" height="14" rx="3.5" fill="none" stroke="white" stroke-width="1.6"/>
+    <circle cx="14" cy="14" r="4" fill="none" stroke="white" stroke-width="1.6"/>
+    <circle cx="19" cy="9" r="1.1" fill="white"/>
+  </symbol>
+  <symbol id="ico-tt" viewBox="0 0 28 28">
+    <rect width="28" height="28" rx="7" fill="#010101"/>
+    <path d="M19.2 8.14a5.1 5.1 0 01-3.12-3.28H13.5v12.5a2.6 2.6 0 01-2.59 2.38 2.6 2.6 0 01-2.6-2.6 2.6 2.6 0 012.6-2.59c.25 0 .48.04.7.1V12.1a6 6 0 00-.7-.04 6 6 0 00-6 6 6 6 0 006 6 6 6 0 006-6V11a8.3 8.3 0 004.84 1.54v-3.1a5.1 5.1 0 01-2.53-.3z" fill="white"/>
+    <path d="M19.2 8.14a5.1 5.1 0 01-3.12-3.28" fill="none" stroke="#69c9d0" stroke-width="1.2"/>
+    <path d="M16.08 4.86h-2.58v12.5a2.6 2.6 0 01-2.59 2.38" fill="none" stroke="#69c9d0" stroke-width="0.8" opacity="0.5"/>
+  </symbol>
+  <symbol id="ico-fb" viewBox="0 0 28 28">
+    <rect width="28" height="28" rx="7" fill="#1877f2"/>
+    <path d="M16.2 28V17.5h3.5l.52-4H16.2v-2.54c0-1.1.3-1.84 1.94-1.84H20.3V5.63A25.6 25.6 0 0017.18 5.5c-3.1 0-5.22 1.9-5.22 5.37v3.63H8.5v4H11.96V28h4.24z" fill="white"/>
+  </symbol>
+  <symbol id="ico-meta" viewBox="0 0 28 28">
+    <rect width="28" height="28" rx="7" fill="#0668E1"/>
+    <path d="M4.5 16.5C4.5 18.43 5.82 20 7.5 20s3-1.57 3-3.5c0-.57-.1-1.1-.3-1.57l-2.7-4.43-2.7 4.43c-.2.47-.3 1-.3 1.57zM14 12.5l-2 3.5h4l-2-3.5zM20.5 20c1.67 0 3-1.57 3-3.5 0-.57-.1-1.1-.3-1.57l-2.7-4.43-2.7 4.43c-.2.47-.3 1-.3 1.57 0 1.93 1.33 3.5 3 3.5z" fill="white"/>
+  </symbol>
+  <symbol id="ico-em" viewBox="0 0 28 28">
+    <rect width="28" height="28" rx="7" fill="#6366f1"/>
+    <rect x="5" y="8" width="18" height="12" rx="2" fill="none" stroke="white" stroke-width="1.6"/>
+    <polyline points="5,9 14,16 23,9" fill="none" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ico-gg" viewBox="0 0 28 28">
+    <rect width="28" height="28" rx="7" fill="white" opacity="0.1"/>
+    <rect width="28" height="28" rx="7" fill="none" stroke="white" stroke-width="1" opacity="0.3"/>
+    <path d="M23 14.22c0-.67-.06-1.32-.16-1.94H14v3.67h5.04a4.3 4.3 0 01-1.87 2.83v2.35h3.02C21.8 19.5 23 17.06 23 14.22z" fill="#4285f4"/>
+    <path d="M14 23.5c2.52 0 4.64-.84 6.19-2.27l-3.02-2.35c-.84.56-1.91.9-3.17.9-2.44 0-4.5-1.64-5.24-3.85H5.64v2.43C7.18 21.49 10.36 23.5 14 23.5z" fill="#34a853"/>
+    <path d="M8.76 15.93a5.4 5.4 0 01-.28-1.68c0-.58.1-1.15.28-1.68V9.93H5.64A9.5 9.5 0 005 14.25c0 1.53.37 2.97 1.02 4.25l3.74-2.57z" fill="#fbbc05"/>
+    <path d="M14 8.73c1.38 0 2.61.47 3.58 1.4l2.68-2.68C18.63 5.93 16.52 5 14 5 10.36 5 7.18 7 5.64 9.93l3.12 2.43C9.5 10.15 11.56 8.73 14 8.73z" fill="#ea4335"/>
+  </symbol>
+  <symbol id="ico-sms" viewBox="0 0 28 28">
+    <rect width="28" height="28" rx="7" fill="#22d3ee"/>
+    <path d="M6 8h16a1 1 0 011 1v10a1 1 0 01-1 1H9l-4 3V9a1 1 0 011-1z" fill="none" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+
+<!-- ────────────────────────────────────────────────────────────
+     01 — AI LEAD QUALIFICATION
+     WhatsApp AI conversation → score → booked
+     ──────────────────────────────────────────────────────────── -->
+{service === 'qualify' && (
+  <div class="sm sm-q">
+    <!-- Corner brackets -->
+    <span class="sm-corner tl"></span>
+    <span class="sm-corner br"></span>
+    <div class="sm-scan"></div>
+
+    <div class="sm-hdr">
+      <div class="sm-live">
+        <span class="sm-dot"></span>
+        <svg class="sm-pico" style="width:18px;height:18px"><use href="#ico-wa"/></svg>
+        AI Lead Qualification · Live
+      </div>
+      <span class="sm-badge">34s avg response</span>
+    </div>
+
+    <!-- Lead notification -->
+    <div class="sm-notif" style="--d:.1s">
+      <svg class="sm-pico" style="width:20px;height:20px"><use href="#ico-wa"/></svg>
+      <div class="sm-notif-body">
+        <span class="sm-notif-n">Sarah K.</span>
+        <span class="sm-notif-s">New lead · Meta Ad · Agency CEO</span>
+      </div>
+      <span class="sm-tag hot">INCOMING</span>
+    </div>
+
+    <div class="sm-chat">
+      <!-- Lead message -->
+      <div class="sm-msg in" style="--d:.6s">
+        <div class="sm-av" style="background:linear-gradient(135deg,#6366f1,#a855f7)">S</div>
+        <div class="sm-bbl">
+          Hi! Saw your ad. I run an agency, 300 leads/mo, €8k budget. Can you help?
+        </div>
+      </div>
+
+      <!-- AI typing -->
+      <div class="sm-typing" style="--d:1.2s">
+        <span class="sm-td"></span><span class="sm-td"></span><span class="sm-td"></span>
+        <span class="sm-tlbl">AI qualifying · <b style="color:var(--c2)">34s</b></span>
+      </div>
+
+      <!-- AI reply -->
+      <div class="sm-msg out" style="--d:1.9s">
+        <div class="sm-bbl ai">
+          Hi Sarah! To qualify you properly — are you the decision-maker? What's your current lead-to-sale conversion rate?
+          <div class="sm-bbl-tag">AI Agent · Instant response</div>
+        </div>
+      </div>
+
+      <!-- Lead reply -->
+      <div class="sm-msg in" style="--d:2.7s">
+        <div class="sm-av" style="background:linear-gradient(135deg,#6366f1,#a855f7)">S</div>
+        <div class="sm-bbl">Yes, sole decision-maker. ~12% — losing leads at follow-up. Need faster system.</div>
+      </div>
+    </div>
+
+    <!-- Qualification score -->
+    <div class="sm-qualify" style="--d:3.5s">
+      <div class="sm-q-row">
+        <span class="sm-q-n">Sarah K.</span>
+        <div class="sm-q-track"><div class="sm-q-fill" style="--w:94%;--d:3.5s"></div></div>
+        <span class="sm-q-v">94</span>
+      </div>
+      <div class="sm-q-tags">
+        <span class="sm-qtag hot">🔥 HOT LEAD</span>
+        <span class="sm-qtag book">📅 Booked · Fri 2pm</span>
+        <span class="sm-qtag ai">✓ BANT qualified</span>
+      </div>
+    </div>
+  </div>
+)}
+
+
+<!-- ────────────────────────────────────────────────────────────
+     02 — AI CREATIVE ENGINE
+     Brief → 6 scored creatives → META · TIKTOK · GOOGLE launch
+     ──────────────────────────────────────────────────────────── -->
+{service === 'creative' && (
+  <div class="sm sm-c">
+    <span class="sm-corner tl"></span>
+    <span class="sm-corner br"></span>
+    <div class="sm-scan"></div>
+
+    <div class="sm-hdr">
+      <div class="sm-live">
+        <span class="sm-dot" style="background:var(--c3);box-shadow:0 0 8px var(--c3)"></span>
+        AI Creative Engine · Generating
+      </div>
+      <span class="sm-badge">$35B+ trained</span>
+    </div>
+
+    <!-- Brief prompt -->
+    <div class="sm-prompt" style="--d:.1s">
+      <div class="sm-prompt-label">BRIEF</div>
+      <div class="sm-prompt-text">
+        Agency lead generation · CEO audience · €5–10k budget<span class="sm-cur">|</span>
+      </div>
+    </div>
+
+    <!-- 6 creative cards 3x2 — real ad creatives -->
+    <div class="sm-creatives">
+      {creatives.map(cr => (
+        <div class:list={["sm-cr", {win: cr.win}]} style={`--d:${cr.delay}`}>
+          <div class="sm-cr-img">
+            <Image src={cr.img} alt={`AI ad creative scoring ${cr.score}`} width={160} height={90} class="sm-cr-photo" loading="lazy" />
+          </div>
+          <div class="sm-cr-foot">
+            <span class:list={["sm-cr-sc",{win:cr.win}]}>{cr.score}</span>
+            {cr.win && <span class="sm-cr-chip">SCALING</span>}
+          </div>
+          {cr.win && <div class="sm-cr-shim"></div>}
+        </div>
+      ))}
+    </div>
+
+    <!-- Launch bar -->
+    <div class="sm-launch" style="--d:2.0s">
+      <div class="sm-platforms">
+        <div class="sm-plat">
+          <svg class="sm-pico" style="width:20px;height:20px"><use href="#ico-meta"/></svg>
+          META
+        </div>
+        <div class="sm-plat">
+          <svg class="sm-pico" style="width:20px;height:20px"><use href="#ico-tt"/></svg>
+          TIKTOK
+        </div>
+        <div class="sm-plat">
+          <svg class="sm-pico" style="width:20px;height:20px"><use href="#ico-gg"/></svg>
+          GOOGLE
+        </div>
+      </div>
+      <span class="sm-roas">14× ROAS</span>
+    </div>
+  </div>
+)}
+
+
+<!-- ────────────────────────────────────────────────────────────
+     03 — OMNICHANNEL CAPTURE
+     6 platform icons → unified inbox → live lead feed
+     ──────────────────────────────────────────────────────────── -->
+{service === 'capture' && (
+  <div class="sm sm-cap">
+    <span class="sm-corner tl"></span>
+    <span class="sm-corner br"></span>
+    <div class="sm-scan"></div>
+
+    <div class="sm-hdr">
+      <div class="sm-live">
+        <span class="sm-dot"></span>
+        Lead Capture · 40+ channels
+      </div>
+      <span class="sm-badge">247 today</span>
+    </div>
+
+    <!-- Platform icons pulsing + converging -->
+    <div class="sm-channels">
+      {[
+        {id:'wa',d:'.05s'},{id:'ig',d:'.12s'},{id:'tt',d:'.19s'},
+        {id:'fb',d:'.26s'},{id:'em',d:'.33s'},{id:'sms',d:'.40s'},
+      ].map(ch => (
+        <div class="sm-ch" style={`--d:${ch.d}`}>
+          <svg class="sm-pico" style="width:28px;height:28px"><use href={`#ico-${ch.id}`}/></svg>
+          <div class="sm-ch-pulse"></div>
+        </div>
+      ))}
+    </div>
+
+    <div class="sm-unify" style="--d:.7s">
+      <div class="sm-unify-line"></div>
+      <span class="sm-unify-lbl">
+        <span class="sm-dot" style="width:6px;height:6px"></span>
+        unified inbox · all channels · zero missed leads
+      </span>
+    </div>
+
+    <!-- Live lead feed -->
+    <div class="sm-feed">
+      {[
+        {av:'S',grad:'#6366f1,#a855f7',name:'Sarah K.',src:'WhatsApp · Meta Ad',score:'HOT 94',hot:true,d:'1.1s'},
+        {av:'M',grad:'#a855f7,#e879f9',name:'Marc B.',src:'Instagram DM',score:'WARM 74',hot:false,d:'1.6s'},
+        {av:'E',grad:'#06b6d4,#22d3ee',name:'Emma R.',src:'TikTok Lead Gen',score:'WARM 61',hot:false,d:'2.1s'},
+      ].map(l => (
+        <div class="sm-row" style={`--d:${l.d}`}>
+          <div class="sm-av" style={`background:linear-gradient(135deg,${l.grad})`}>{l.av}</div>
+          <div class="sm-row-info">
+            <span class="sm-row-name">{l.name}</span>
+            <span class="sm-row-src">
+              {l.src.includes('WhatsApp') && <svg class="sm-pico-xs"><use href="#ico-wa"/></svg>}
+              {l.src.includes('Instagram') && <svg class="sm-pico-xs"><use href="#ico-ig"/></svg>}
+              {l.src.includes('TikTok') && <svg class="sm-pico-xs"><use href="#ico-tt"/></svg>}
+              {l.src}
+            </span>
+          </div>
+          <span class:list={["sm-score",{hot:l.hot}]}>{l.score}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
+
+<!-- ────────────────────────────────────────────────────────────
+     04 — LEAD MONETIZATION (drip + broadcast sequence)
+     CRM import → 5-step drip timeline → 42.5× ROI
+     ──────────────────────────────────────────────────────────── -->
+{service === 'monetize' && (
+  <div class="sm sm-m">
+    <span class="sm-corner tl"></span>
+    <span class="sm-corner br"></span>
+    <div class="sm-scan"></div>
+
+    <div class="sm-hdr">
+      <div class="sm-live">
+        <span class="sm-dot" style="background:var(--c2);box-shadow:0 0 8px var(--c2)"></span>
+        Drip Sequence · Broadcast Active
+      </div>
+      <span class="sm-badge" style="color:var(--c2);border-color:rgba(34,211,238,.25)">4,000 contacts</span>
+    </div>
+
+    <!-- CRM import badge -->
+    <div class="sm-db" style="--d:.1s">
+      <svg class="sm-pico-sm" viewBox="0 0 18 18" fill="none">
+        <ellipse cx="9" cy="4" rx="7" ry="2.2" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M2 4v4.5c0 1.2 3.1 2.2 7 2.2s7-1 7-2.2V4" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M2 8.5v4.5C2 14.2 5.1 15.2 9 15.2s7-1 7-2.2V8.5" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+      <div>
+        <span class="sm-db-n">4,000</span>
+        <span class="sm-db-l">dormant contacts ready</span>
+      </div>
+      <span class="sm-tag done">IMPORTED</span>
+    </div>
+
+    <!-- 5-step drip timeline -->
+    <div class="sm-drip">
+      {[
+        {ico:'wa', day:'D+0',  title:'Initial AI offer',        sub:'94% open rate',        status:'SENT',   cls:'done', d:'.6s'},
+        {ico:'wa', day:'D+2',  title:'Follow-up message',       sub:'78% open · 22% reply', status:'SENT',   cls:'done', d:'1.0s'},
+        {ico:'ig', day:'D+5',  title:'Case study DM',           sub:'61% open rate',        status:'SENT',   cls:'done', d:'1.4s'},
+        {ico:'em', day:'D+8',  title:'Personalised offer',      sub:'45% open rate',        status:'LIVE',   cls:'live', d:'1.8s'},
+        {ico:'wa', day:'D+12', title:'Final push · scarcity',   sub:'Scheduled',            status:'SCHED',  cls:'sched',d:'2.2s'},
+      ].map(step => (
+        <div class="sm-dstep" style={`--d:${step.d}`}>
+          <div class="sm-dday">{step.day}</div>
+          <svg class="sm-pico" style="width:22px;height:22px;flex-shrink:0"><use href={`#ico-${step.ico}`}/></svg>
+          <div class="sm-dinfo">
+            <span class="sm-dtitle">{step.title}</span>
+            <span class="sm-dsub">{step.sub}</span>
+          </div>
+          <span class:list={["sm-dstatus", step.cls]}>{step.status}</span>
+        </div>
+      ))}
+    </div>
+
+    <!-- ROI card -->
+    <div class="sm-roi" style="--d:2.8s">
+      <div>
+        <div class="sm-roi-l">Revenue from dormant database</div>
+        <div class="sm-roi-s">€0 → €89,000 in 30 days</div>
+      </div>
+      <div class="sm-roi-n">
+        <span class="sm-roi-count" data-target="42.5">0</span>× ROI
+      </div>
+    </div>
+  </div>
+)}
+
+
+<script>
+  // ROI counter for the monetize panel
+  document.querySelectorAll<HTMLElement>('.sm-roi-count').forEach(el => {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        io.unobserve(el);
+        const target = parseFloat(el.dataset.target ?? '42.5');
+        const dur = 2000;
+        const t0 = performance.now();
+        const tick = (now: number) => {
+          const t = Math.min((now - t0) / dur, 1);
+          const ease = 1 - Math.pow(1 - t, 3);
+          el.textContent = (ease * target).toFixed(1);
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        setTimeout(() => requestAnimationFrame(tick), 2900);
+      });
+    }, { threshold: 0.3 });
+    io.observe(el);
+  });
+</script>
+
+
+<style lang="scss">
+
+/* ── Global keyframes ──────────────────────────────────────── */
+@keyframes sm-pulse  { 0%,100%{opacity:1;box-shadow:0 0 6px currentColor}50%{opacity:.6;box-shadow:0 0 18px currentColor,0 0 32px currentColor} }
+@keyframes sm-up     { from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)} }
+@keyframes sm-in     { from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)} }
+@keyframes sm-scale  { from{opacity:0;transform:scale(0.76)}to{opacity:1;transform:scale(1)} }
+@keyframes sm-fill   { from{width:0}to{width:var(--w,80%)} }
+@keyframes sm-fade   { from{opacity:0}to{opacity:1} }
+@keyframes sm-bounce { 0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-3px);opacity:1} }
+@keyframes sm-blink  { 0%,49%{opacity:1}50%,100%{opacity:0} }
+@keyframes sm-shimmer{ from{transform:translateX(-100%)}to{transform:translateX(200%)} }
+@keyframes sm-scan   { 0%{top:0%;opacity:0}4%{opacity:1}88%{opacity:.6}100%{top:100%;opacity:0} }
+@keyframes sm-ch-in  { from{opacity:0;transform:scale(0.4)}to{opacity:1;transform:scale(1)} }
+@keyframes sm-ch-pulse { 0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.6);opacity:0} }
+@keyframes sm-neon   { 0%,100%{box-shadow:0 0 8px rgba(34,211,238,.2)}50%{box-shadow:0 0 24px rgba(34,211,238,.5),0 0 48px rgba(34,211,238,.15)} }
+
+/* ── Container ─────────────────────────────────────────────── */
+.sm {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: var(--r-xl);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,.5);
+
+  &::before {
+    content: "";
+    position: absolute; inset: -1px;
+    border-radius: calc(var(--r-xl) + 1px);
+    background: linear-gradient(135deg,
+      rgba(99,102,241,.45), rgba(168,85,247,.3) 40%, rgba(34,211,238,.2));
+    z-index: -1;
+  }
+
+  /* holographic grid background */
+  &::after {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(rgba(34,211,238,.028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34,211,238,.028) 1px, transparent 1px);
+    background-size: 22px 22px;
+    pointer-events: none;
+  }
+}
+
+/* corner brackets */
+.sm-corner {
+  position: absolute; width: 13px; height: 13px; z-index: 4;
+  &.tl { top:6px; left:6px; border-top:1.5px solid var(--c2); border-left:1.5px solid var(--c2); }
+  &.br { bottom:6px; right:6px; border-bottom:1.5px solid rgba(168,85,247,.7); border-right:1.5px solid rgba(168,85,247,.7); }
+}
+
+/* scan line */
+.sm-scan {
+  position: absolute; left:0; right:0; top:0; height:1px;
+  background: linear-gradient(90deg,transparent,rgba(34,211,238,.6),rgba(232,121,249,.4),transparent);
+  animation: sm-scan 5s ease-in-out infinite;
+  pointer-events: none; z-index: 5;
+}
+
+/* header */
+.sm-hdr {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 11px 16px;
+  background: var(--bg-elev); border-bottom: 1px solid var(--line);
+  position: relative; z-index: 2;
+}
+.sm-live {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 11px; font-weight: 600; color: var(--fg-0);
+  font-family: var(--font-mono);
+}
+.sm-dot {
+  width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+  background: var(--c2); box-shadow: 0 0 8px var(--c2);
+  animation: sm-pulse 1.8s ease-in-out infinite;
+}
+.sm-badge {
+  font-family: var(--font-mono); font-size: 9px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: var(--r-pill);
+  color: var(--c1-light); background: rgba(99,102,241,.1);
+  border: 1px solid rgba(99,102,241,.25);
+}
+.sm-pico { display: inline-block; vertical-align: middle; }
+.sm-pico-xs { width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 3px; }
+.sm-pico-sm { width: 20px; height: 20px; color: var(--c3); flex-shrink: 0; }
+
+/* panel content area */
+.sm-q, .sm-c, .sm-cap, .sm-m { display: flex; flex-direction: column; gap: 10px; padding: 14px 16px 14px; }
+
+/* ─────────────────────────────────────────────────────────────
+   QUALIFY PANEL
+   ───────────────────────────────────────────────────────────── */
+
+/* animation triggers — everything starts hidden */
+.sm-q .sm-notif,
+.sm-q .sm-msg,
+.sm-q .sm-typing,
+.sm-q .sm-qualify { opacity: 0; }
+
+.sm-q .sm-notif  { animation: sm-up    .35s ease both; animation-delay: var(--d,.1s); }
+.sm-q .sm-msg    { animation: sm-up    .35s cubic-bezier(.22,.68,0,1.2) both; animation-delay: var(--d,.6s); }
+.sm-q .sm-typing { animation: sm-fade  .3s ease both; animation-delay: var(--d,1.2s); }
+.sm-q .sm-qualify{ animation: sm-up    .4s ease both; animation-delay: var(--d,3.5s); }
+
+/* notification strip */
+.sm-notif {
+  display: flex; align-items: center; gap: 9px;
+  padding: 8px 11px; border-radius: var(--r-sm);
+  background: rgba(37,211,102,.06); border: 1px solid rgba(37,211,102,.2);
+}
+.sm-notif-body { flex: 1; }
+.sm-notif-n    { font-size: 12px; font-weight: 600; color: var(--fg-0); display: block; }
+.sm-notif-s    { font-size: 10px; color: var(--fg-2); font-family: var(--font-mono); }
+.sm-tag {
+  font-family: var(--font-mono); font-size: 8px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; padding: 2px 7px;
+  border-radius: var(--r-pill); flex-shrink: 0;
+  &.hot  { background: rgba(99,102,241,.15); color: var(--c1-light); border: 1px solid rgba(99,102,241,.3); }
+  &.done { background: rgba(34,211,238,.1);  color: var(--c2);       border: 1px solid rgba(34,211,238,.25); }
+}
+
+/* chat */
+.sm-chat { display: flex; flex-direction: column; gap: 7px; }
+.sm-msg { display: flex; align-items: flex-end; gap: 7px; &.in { flex-direction: row; } &.out { flex-direction: row-reverse; } }
+.sm-av {
+  width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: #fff;
+}
+.sm-bbl {
+  max-width: 82%; padding: 7px 10px; border-radius: 12px;
+  font-size: 11.5px; line-height: 1.5; color: var(--fg-0);
+
+  .sm-msg.in & { background: var(--bg-elev); border: 1px solid var(--line); border-bottom-left-radius: 3px; }
+  &.ai { background: rgba(99,102,241,.1); border: 1px solid rgba(99,102,241,.22); border-bottom-right-radius: 3px; }
+}
+.sm-bbl-tag {
+  margin-top: 4px; font-family: var(--font-mono); font-size: 8px;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--c1-light);
+}
+.sm-typing {
+  display: flex; align-items: center; gap: 4px;
+  padding: 5px 9px; border-radius: 9px; width: fit-content;
+  background: var(--bg-elev); border: 1px solid var(--line); margin-left: 31px;
+}
+.sm-td {
+  width: 5px; height: 5px; border-radius: 50%; background: var(--c2); opacity: .4;
+  animation: sm-bounce .75s ease-in-out infinite;
+  &:nth-child(2) { animation-delay: .15s; }
+  &:nth-child(3) { animation-delay: .3s; }
+}
+.sm-tlbl { font-size: 10px; font-family: var(--font-mono); color: var(--fg-2); padding-left: 2px; }
+
+/* score */
+.sm-qualify {
+  background: rgba(99,102,241,.06); border: 1px solid rgba(99,102,241,.2);
+  border-radius: var(--r-md); padding: 10px 12px; display: flex; flex-direction: column; gap: 8px;
+}
+.sm-q-row { display: grid; grid-template-columns: 54px 1fr 28px; align-items: center; gap: 8px; }
+.sm-q-n { font-size: 11px; font-weight: 600; color: var(--fg-0); }
+.sm-q-track { height: 5px; border-radius: 3px; background: rgba(255,255,255,.06); overflow: hidden; }
+.sm-q-fill {
+  height: 100%; border-radius: 3px;
+  background: linear-gradient(90deg, var(--c1), var(--c3), var(--c2)); width: 0%;
+  .sm-q .sm-qualify & { animation: sm-fill 1.1s ease both; animation-delay: calc(var(--d,3.5s) + .2s); }
+}
+.sm-q-v { font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: var(--c1-light); text-align: right; }
+.sm-q-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+.sm-qtag {
+  font-family: var(--font-mono); font-size: 7.5px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; padding: 2px 7px; border-radius: var(--r-pill);
+  &.hot  { background: rgba(99,102,241,.15); color: var(--c1-light); border: 1px solid rgba(99,102,241,.3); }
+  &.book { background: rgba(34,211,238,.08); color: var(--c2);       border: 1px solid rgba(34,211,238,.2); }
+  &.ai   { background: rgba(168,85,247,.1);  color: var(--c3);       border: 1px solid rgba(168,85,247,.25); }
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   CREATIVE PANEL
+   ───────────────────────────────────────────────────────────── */
+
+.sm-c .sm-prompt,
+.sm-c .sm-cr,
+.sm-c .sm-launch { opacity: 0; }
+
+.sm-c .sm-prompt { animation: sm-fade .35s ease both; animation-delay: var(--d,.1s); }
+.sm-c .sm-cr     { animation: sm-scale .38s cubic-bezier(.22,.68,0,1.2) both; animation-delay: var(--d,.6s); }
+.sm-c .sm-launch { animation: sm-up .4s ease both; animation-delay: var(--d,2.0s); }
+
+.sm-prompt {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 11px; border-radius: var(--r-sm);
+  background: var(--bg-elev); border: 1px solid var(--line);
+}
+.sm-prompt-label {
+  font-family: var(--font-mono); font-size: 8px; font-weight: 700; letter-spacing: .12em;
+  color: var(--c3); padding: 2px 6px; border-radius: 3px;
+  background: rgba(168,85,247,.1); border: 1px solid rgba(168,85,247,.2); flex-shrink: 0;
+}
+.sm-prompt-text { font-size: 11px; font-family: var(--font-mono); color: var(--fg-0); flex: 1; }
+.sm-cur { color: var(--c1-light); font-weight: 700; animation: sm-blink .9s step-end infinite; }
+
+.sm-creatives { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; }
+.sm-cr {
+  border-radius: var(--r-sm); overflow: hidden; border: 1px solid var(--line); position: relative;
+  &.win { border-color: rgba(99,102,241,.45); box-shadow: 0 0 12px rgba(99,102,241,.15); }
+}
+.sm-cr-img {
+  background: var(--bg-elev);
+  position: relative;
+}
+.sm-cr-photo {
+  width: 100%; height: auto; display: block;
+  transition: transform .4s ease;
+  .sm-cr:hover & { transform: scale(1.04); }
+}
+.sm-cr-shim {
+  position: absolute; top:0; left:-100%; width:60%; height:100%;
+  background: linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);
+  .sm-c .sm-cr.win & { animation: sm-shimmer 2.4s ease-in-out infinite; animation-delay: 2s; }
+}
+.sm-cr-foot { display: flex; align-items: center; justify-content: space-between; padding: 4px 6px; background: var(--bg-card); }
+.sm-cr-sc { font-family: var(--font-mono); font-size: 9px; font-weight: 700; color: var(--fg-2); &.win { color: var(--c2); } }
+.sm-cr-chip { font-family: var(--font-mono); font-size: 7px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--c1-light); background: rgba(99,102,241,.1); padding: 1px 5px; border-radius: 3px; }
+
+.sm-launch {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 11px; border-radius: var(--r-sm);
+  background: rgba(34,211,238,.04); border: 1px solid rgba(34,211,238,.18);
+}
+.sm-platforms { display: flex; gap: 6px; }
+.sm-plat {
+  display: flex; align-items: center; gap: 5px;
+  font-family: var(--font-mono); font-size: 8px; font-weight: 700; letter-spacing: .08em;
+  padding: 3px 8px; border-radius: var(--r-pill);
+  background: rgba(255,255,255,.04); border: 1px solid var(--line); color: var(--fg-1);
+}
+.sm-roas {
+  font-family: var(--font-display); font-size: 22px; letter-spacing: -.02em;
+  color: var(--c2); line-height: 1; text-shadow: 0 0 24px rgba(34,211,238,.5);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   CAPTURE PANEL
+   ───────────────────────────────────────────────────────────── */
+
+.sm-cap .sm-ch,
+.sm-cap .sm-unify,
+.sm-cap .sm-row { opacity: 0; }
+
+.sm-cap .sm-ch    { animation: sm-ch-in .35s cubic-bezier(.22,.68,0,1.3) both; animation-delay: var(--d,.05s); }
+.sm-cap .sm-unify { animation: sm-fade .4s ease both; animation-delay: var(--d,.7s); }
+.sm-cap .sm-row   { animation: sm-in .35s cubic-bezier(.22,.68,0,1.2) both; animation-delay: var(--d,1.1s); }
+
+.sm-channels { display: flex; gap: 7px; flex-wrap: wrap; }
+.sm-ch { position: relative; }
+.sm-ch-pulse {
+  position: absolute; inset: -4px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.15);
+  animation: sm-ch-pulse 2s ease-out infinite;
+  animation-delay: calc(var(--d, 0s) * 3);
+}
+
+.sm-unify {
+  display: flex; align-items: center; gap: 8px;
+  padding: 7px 11px; border-radius: var(--r-sm);
+  background: rgba(34,211,238,.05); border: 1px solid rgba(34,211,238,.18);
+  animation: sm-neon 3s ease-in-out infinite;
+}
+.sm-unify-line { flex: 1; height: 1px; background: linear-gradient(90deg,transparent,var(--c2),transparent); }
+.sm-unify-lbl {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 10px; font-family: var(--font-mono); color: var(--c2); letter-spacing: .04em;
+}
+
+.sm-feed { display: flex; flex-direction: column; gap: 5px; }
+.sm-row {
+  display: flex; align-items: center; gap: 8px; padding: 7px 10px;
+  border-radius: var(--r-sm); background: var(--glass); border: 1px solid var(--line);
+}
+.sm-row-info { flex: 1; min-width: 0; }
+.sm-row-name { font-size: 12px; font-weight: 600; color: var(--fg-0); display: block; }
+.sm-row-src { font-size: 10px; color: var(--fg-2); font-family: var(--font-mono); display: flex; align-items: center; }
+.sm-score {
+  font-family: var(--font-mono); font-size: 9px; font-weight: 700; padding: 3px 8px;
+  border-radius: var(--r-pill); flex-shrink: 0;
+  background: rgba(34,211,238,.08); color: var(--c2); border: 1px solid rgba(34,211,238,.2);
+  &.hot { background: rgba(99,102,241,.15); color: var(--c1-light); border-color: rgba(99,102,241,.3); }
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   MONETIZE / DRIP PANEL
+   ───────────────────────────────────────────────────────────── */
+
+.sm-m .sm-db,
+.sm-m .sm-dstep,
+.sm-m .sm-roi { opacity: 0; }
+
+.sm-m .sm-db    { animation: sm-up .4s ease both; animation-delay: var(--d,.1s); }
+.sm-m .sm-dstep { animation: sm-in .35s ease both; animation-delay: var(--d,.6s); }
+.sm-m .sm-roi   { animation: sm-up .45s ease both; animation-delay: var(--d,2.8s); }
+
+.sm-db {
+  display: flex; align-items: center; gap: 10px; padding: 9px 11px;
+  border-radius: var(--r-sm); background: rgba(168,85,247,.06); border: 1px solid rgba(168,85,247,.2);
+}
+.sm-db-n { font-family: var(--font-display); font-size: 20px; letter-spacing: -.02em; color: var(--c3); line-height: 1; display: block; }
+.sm-db-l { font-size: 10px; color: var(--fg-2); font-family: var(--font-mono); }
+
+.sm-drip { display: flex; flex-direction: column; gap: 5px; }
+.sm-dstep {
+  display: flex; align-items: center; gap: 8px; padding: 8px 10px;
+  border-radius: var(--r-sm); background: var(--glass); border: 1px solid var(--line);
+  &:nth-child(4) { background: rgba(99,102,241,.06); border-color: rgba(99,102,241,.28); }
+}
+.sm-dday { font-family: var(--font-mono); font-size: 9px; font-weight: 700; color: var(--c2); letter-spacing: .06em; min-width: 32px; flex-shrink: 0; }
+.sm-dinfo { flex: 1; min-width: 0; }
+.sm-dtitle { font-size: 11px; font-weight: 500; color: var(--fg-0); display: block; }
+.sm-dsub   { font-size: 9px; color: var(--fg-2); font-family: var(--font-mono); }
+.sm-dstatus {
+  font-family: var(--font-mono); font-size: 7.5px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; padding: 2px 7px; border-radius: var(--r-pill); flex-shrink: 0;
+  &.done  { color: var(--c2);       background: rgba(34,211,238,.08);  border: 1px solid rgba(34,211,238,.2); }
+  &.live  { color: var(--c1-light); background: rgba(99,102,241,.12);  border: 1px solid rgba(99,102,241,.3); }
+  &.sched { color: var(--fg-2);     background: var(--glass);          border: 1px solid var(--line); }
+}
+
+.sm-roi {
+  display: flex; align-items: center; justify-content: space-between; padding: 12px 14px;
+  background: rgba(34,211,238,.05); border: 1px solid rgba(34,211,238,.22); border-radius: var(--r-md);
+  position: relative; overflow: hidden;
+  &::before { content:""; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--c2),transparent); }
+}
+.sm-roi-l { font-size: 11px; font-weight: 500; color: var(--fg-0); }
+.sm-roi-s { font-size: 9px; color: var(--fg-2); margin-top: 2px; font-family: var(--font-mono); }
+.sm-roi-n {
+  font-family: var(--font-display); font-size: 28px; letter-spacing: -.02em;
+  color: var(--c2); line-height: 1; flex-shrink: 0; text-shadow: 0 0 24px rgba(34,211,238,.5);
+}
+
+</style>

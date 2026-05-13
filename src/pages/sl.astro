@@ -1,6 +1,6 @@
 ---
 // CORRECTED DYNAMIC IMAGE IMPORTS FOR PROJECTS
-import Layout from '../layouts/Layout.astro';
+import LayoutV2 from '../layouts/LayoutV2.astro';
 import Hero from '../components/Hero.astro';
 import Process from '../components/Process.astro';
 import Services from '../components/Services.astro';
@@ -82,10 +82,11 @@ const mergedTestimonialsWithProjects = TESTIMONIALS.map((testimonial) => {
 
 ---
 
-<Layout 
-  title={t('homepage.page_title', currentLang)} 
+<LayoutV2
+  title={t('homepage.page_title', currentLang)}
   description={t('homepage.page_description', currentLang)}
-  canonical="https://creativecomplete.com"
+  canonicalUrl="https://www.creativecomplete.com/sl/"
+  lang="sl"
 >
 
 <!-- HERO SECTION - CONVERSION FOCUSED -->
@@ -113,4 +114,4 @@ const mergedTestimonialsWithProjects = TESTIMONIALS.map((testimonial) => {
   securityNote={t('cta.security_note', currentLang)}
   showValueProps={false}
 />
-</Layout>
+</LayoutV2>

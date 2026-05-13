@@ -1,0 +1,17 @@
+---
+const tools = [
+  "WhatsApp Business API", "AI Creative Engine",
+  "Meta Ads", "TikTok Ads", "Google Ads", "HubSpot", "Salesforce", "Zapier",
+];
+---
+
+<section class="v2-clients">
+  <div class="v2-container">
+    <div class="v2-clients__inner">
+      <span class="v2-clients__label">Powered by</span>
+      <div class="v2-clients__row">
+        {tools.map(t => <span class="v2-clients__item">{t}</span>)}
+      </div>
+    </div>
+  </div>
+</section>

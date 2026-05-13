@@ -1,0 +1,68 @@
+---
+export interface Props {
+  headline?: string;
+  subline?: string;
+}
+
+const {
+  headline = "Stop Losing Leads<br/><span class=\"v2-grad\">Your Ads Already Paid For.</span>",
+  subline = "Book a free 30-minute audit. We map your current lead flow, calculate your exact revenue leakage, and show you the precise AI configuration for your agency, at no cost, no obligation.",
+} = Astro.props;
+
+const promises = [
+  "No pitch unless you ask",
+  "Custom ROI estimate on the call",
+  "Response within 4 hours",
+  "8 audit slots per month, agencies only",
+];
+---
+
+<section class="v2-cta" id="book">
+  <div class="v2-container">
+    <div class="v2-cta__card" data-m="up">
+      <div class="v2-cta__glow"></div>
+      <div class="v2-cta__content">
+        <span class="v2-eyebrow">#1 AI Customer System Agency · Limited slots</span>
+        <h2 class="v2-h2" style="margin-top:20px" set:html={headline}></h2>
+        <p class="v2-lead" style="margin:20px auto 0;text-align:center;max-width:54ch" set:html={subline}></p>
+
+        <div class="v2-cta__actions">
+          <a
+            href="javascript:void(0)"
+            class="v2-btn v2-btn-primary v2-btn--cta"
+            data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'
+          >
+            Claim My Free Audit, Book Now
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="/projects/" class="v2-btn v2-btn-outline">See client results</a>
+        </div>
+
+        <div class="v2-cta__promises">
+          {promises.map(p => (
+            <div class="v2-cta__promise">
+              <span class="v2-cta__check">✓</span>
+              <span>{p}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss" is:global>
+.v2-btn--cta {
+  font-size: 16px !important;
+  height: 56px !important;
+  padding: 0 32px !important;
+  letter-spacing: -.01em;
+  box-shadow: 0 0 40px rgba(99,102,241,.4), 0 8px 24px rgba(0,0,0,.3) !important;
+  &:hover {
+    box-shadow: 0 0 60px rgba(99,102,241,.6), 0 12px 32px rgba(0,0,0,.4) !important;
+    transform: translateY(-1px);
+  }
+}
+</style>

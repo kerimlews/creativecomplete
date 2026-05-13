@@ -1,241 +1,311 @@
 ---
-// src/pages/kerim-alihodza.astro
-
 import { Image } from 'astro:assets';
-import BaseLayout from '../layouts/Layout.astro';
+import LayoutV2 from '../layouts/LayoutV2.astro';
+import CTA from '../components/v2/CTA.astro';
 import { KERIM_SOCIAL_MEDIA, getActiveSocials } from '../utils/constants';
 import kerim from '../images/hero_org.png';
 
-// Get active social media profiles
 const activeSocials = getActiveSocials(KERIM_SOCIAL_MEDIA);
 
-// JSON-LD Schema (updated with social profiles)
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Kerim Alihodza",
-  "jobTitle": "CEO & Business Mechanic",
-  "description": "10+ years transforming businesses from 'potential' to 'profit' through ruthless digital strategy and engineered growth systems.",
+  "jobTitle": "CEO & AI Customer System Consultant",
+  "description": "10+ years transforming businesses through AI automation and engineered growth systems.",
   "url": "https://creativecomplete.com/kerim-alihodza",
   "image": "https://creativecomplete.com/images/kerim-alihodza.jpg",
-  "sameAs": activeSocials.map(([key, social]) => social.url),
+  "sameAs": activeSocials.map(([, social]) => social.url),
   "knowsAbout": [
+    "AI Customer System",
+    "Lead Qualification Automation",
+    "WhatsApp Business API",
     "Digital Business Transformation",
     "Revenue Growth Strategy",
-    "Business Automation",
-    "SaaS Platform Development",
-    "E-commerce Scaling",
-    "Performance Optimization"
+    "SaaS Platform Development"
   ],
-  "hasOccupation": {
-    "@type": "Occupation",
-    "name": "Business Mechanic",
-    "description": "Engineering revenue machines and growth systems for businesses",
-    "occupationLocation": {
-      "@type": "Country",
-      "name": "Bosnia and Herzegovina"
-    }
-  },
-  "workLocation": {
-    "@type": "Country",
-    "name": "Bosnia and Herzegovina"
-  },
-  "knowsLanguage": [
-    {
-      "@type": "Language",
-      "name": "English"
-    },
-    {
-      "@type": "Language",
-      "name": "Bosnian"
-    }
-  ]
 };
+
+const stats = [
+  { value: "10+", label: "Years in digital" },
+  { value: "60s", label: "Lead qualified" },
+  { value: "40+", label: "Channels captured" },
+  { value: "50+", label: "Agencies served" },
+];
 ---
 
-<BaseLayout title="Kerim Alihodza - CEO & Business Mechanic" description="10+ years transforming businesses from 'potential' to 'profit' through ruthless digital strategy and engineered growth systems.">
-  {/* JSON-LD Schema */}
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-  
-  <div class="kerim-alihodza-page">
-    <!-- Hero Section -->
-    <section class="hero-section astro-immediate">
-      <div class="hero-content">
-        <!-- Profile Image on Top -->
-        <div class="profile-image-container">
-          <Image
-            src={kerim}
-            alt="Kerim Alihodza - CEO & Business Mechanic" 
-            class="profile-image hover-lift"
-            width={1000}
-            height={1000}
-            loading="eager"
-          />
-        </div>
+<LayoutV2
+  title="Kerim Alihodza, AI Customer System Consultant | CreativeComplete"
+  description="Meet Kerim Alihodza, CEO of CreativeComplete. 10+ years engineering AI-powered lead qualification and customer systems for agencies."
+  structuredData={jsonLd}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} slot="head" />
 
-        <!-- Name and Title -->
-        <div class="hero-text">
-          <h1 class="hero-title astro-fadeInUp">
-            Kerim <span class="text-gradient">Alihodza</span>
-          </h1>
-          <h2 class="hero-subtitle astro-fadeInUp">
-            CEO & <span class="text-accent">Business Mechanic</span>
-          </h2>
-          <div class="hero-quote astro-fadeInUp">
-            <blockquote>
+  <main>
+    <!-- Breadcrumb -->
+    <div class="v2-container v2-bc">
+      <a href="/">Home</a><span>/</span><span>Meet Kerim</span>
+    </div>
+
+    <!-- Hero -->
+    <section class="ka-hero">
+      <div class="v2-container">
+        <div class="ka-hero__inner">
+          <!-- Left: text -->
+          <div class="ka-hero__left">
+            <span class="v2-chip-neutral">CEO & Founder</span>
+            <h1 class="v2-h2" style="margin-top:20px">
+              Kerim <span class="v2-grad">Alihodza</span>
+            </h1>
+            <p class="v2-lead" style="margin-top:16px">
+              AI Customer System consultant. I build the infrastructure that captures every lead across 40+ channels, qualifies them in 60 seconds, and monetizes your existing database — fully managed, no headcount added.
+            </p>
+
+            <blockquote class="ka-quote">
               "I don't build pretty websites. I engineer revenue machines that make competitors sweat and clients wonder why they waited so long."
             </blockquote>
+
+            <!-- Stats -->
+            <div class="ka-stats">
+              {stats.map((s) => (
+                <div class="ka-stats__item">
+                  <div class="ka-stats__n">{s.value}</div>
+                  <div class="ka-stats__l">{s.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <!-- CTA -->
+            <div class="ka-actions">
+              <a
+                href="javascript:void(0)"
+                data-cal-link="kerim-alihodza-7u7w6q/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","theme":"dark"}'
+                class="v2-btn v2-btn-primary"
+              >
+                Book a call with Kerim
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+
+              <!-- Socials -->
+              <div class="ka-socials">
+                {activeSocials.map(([key, social]) => (
+                  <a
+                    href={social.url}
+                    class={`ka-social ka-social--${key}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={String(key)}
+                    title={social.tooltip}
+                  >
+                    <span set:html={social.icon} />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: photo -->
+          <div class="ka-hero__img">
+            <Image
+              src={kerim}
+              alt="Kerim Alihodza, CEO of CreativeComplete"
+              width={600}
+              height={700}
+              loading="eager"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Floating Social Elements -->
-    <div class="floating-elements">
-      {activeSocials.map(([key, social]) => (
-        <a 
-          href={social.url} 
-          class={`social-card ${key}`}
-          target="_blank" 
-          rel="noopener noreferrer"
-          data-tooltip={social.tooltip}
-        >
-          <span set:html={social.icon}></span>
-        </a>
-      ))}
-    </div>
-
-    <!-- Rest of your sections remain the same -->
-    <section class="bio-section section-padding">
-      <div class="container">
-        <div class="section-header astro-fadeInUp">
-          <h2>The 10-Year <span class="text-gradient">Reality Check</span></h2>
-        </div>
-        <div class="bio-content">
-          <p class="bio-text astro-fadeInUp">
-            I've spent the last decade in the trenches of digital business transformation. Not in theory. Not in conferences. In the fucking reality of taking businesses from struggling to dominant.
-          </p>
-          <p class="bio-text astro-fadeInUp">
-            Most agencies sell dreams. I deliver measurable outcomes. While others talk about "brand presence," I'm engineering systems that drive 300% revenue growth, automate 80% of manual work, and position businesses as market leaders.
-          </p>
+    <!-- Bio -->
+    <section class="v2-section" style="padding-top:0">
+      <div class="v2-container">
+        <div class="ka-bio">
+          <div class="v2-section-head">
+            <span class="v2-eyebrow">Background</span>
+            <h2 class="v2-h3">The 10-Year <span class="v2-grad">Reality Check</span></h2>
+          </div>
+          <div class="ka-bio__body v2-prose">
+            <p>
+              I've spent the last decade in the trenches of digital business transformation. Not in theory. Not in conferences. In the reality of taking businesses from struggling to dominant.
+            </p>
+            <p>
+              Most agencies sell dreams. I deliver measurable outcomes. While others talk about "brand presence," I'm engineering systems that drive 300% revenue growth, automate 80% of manual work, and position businesses as market leaders.
+            </p>
+            <p>
+              Today, CreativeComplete is the AI Customer System agency I wish had existed when I started. We plug in, capture every lead across 40+ channels, qualify them in 60 seconds via WhatsApp, and continuously monetize your existing database — without adding headcount.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Add other sections here... -->
-  </div>
+    <CTA />
+  </main>
+</LayoutV2>
 
-  <style is:global>
-    /* Floating Social Elements */
-    .floating-elements {
-      position: fixed;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      z-index: 1000;
-      
-      @include mobile {
-        right: 10px;
-        gap: 10px;
-      }
+<style lang="scss">
+  .v2-bc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 24px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    font-family: var(--font-mono);
+    color: var(--fg-2);
+    a { color: var(--fg-2); &:hover { color: var(--c1-light); } }
+  }
+
+  /* Hero */
+  .ka-hero {
+    padding: 48px 0 64px;
+  }
+
+  .ka-hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .ka-hero__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ka-hero__img {
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--glass);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .social-card {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease;
-      position: relative;
-      
-      @include mobile {
-        width: 45px;
-        height: 45px;
-      }
+    @media (max-width: 900px) {
+      max-width: 340px;
+      margin: 0 auto;
+    }
+  }
 
-      .social-icon {
-        width: 24px;
-        height: 24px;
-        transition: all 0.3s ease;
-        
-        @include mobile {
-          width: 20px;
-          height: 20px;
-        }
-      }
+  /* Quote */
+  .ka-quote {
+    margin: 24px 0 0;
+    border-left: 3px solid var(--c1);
+    padding-left: 16px;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--fg-2);
+    line-height: 1.6;
+  }
 
-      &:hover {
-        transform: translateY(-3px) scale(1.1);
-        
-        &::after {
-          content: attr(data-tooltip);
-          position: absolute;
-          right: 100%;
-          top: 50%;
-          transform: translateY(-50%);
-          background: rgba(0, 0, 0, 0.8);
-          color: white;
-          padding: 5px 10px;
-          border-radius: 4px;
-          font-size: 0.75rem;
-          white-space: nowrap;
-          margin-right: 10px;
-          pointer-events: none;
-        }
-      }
+  /* Stats */
+  .ka-stats {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    width: 100%;
+  }
 
-      /* Platform-specific colors */
-      &.linkedin:hover {
-        background: #0077B5;
-        border-color: #0077B5;
-        box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
-      }
+  .ka-stats__n {
+    font-family: var(--font-display);
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    background: var(--grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
 
-      &.twitter:hover {
-        background: #1DA1F2;
-        border-color: #1DA1F2;
-        box-shadow: 0 5px 15px rgba(29, 161, 242, 0.4);
-      }
+  .ka-stats__l {
+    font-size: 11px;
+    font-family: var(--font-mono);
+    color: var(--fg-2);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
 
-      &.github:hover {
-        background: #333;
-        border-color: #333;
-        box-shadow: 0 5px 15px rgba(51, 51, 51, 0.4);
-      }
+  /* Actions row */
+  .ka-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
 
-      &.telegram:hover {
-        background: #0088cc;
-        border-color: #0088cc;
-        box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
-      }
+  /* Social icons */
+  .ka-socials {
+    display: flex;
+    gap: 8px;
+  }
 
-      &.youtube:hover {
-        background: #FF0000;
-        border-color: #FF0000;
-        box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
-      }
+  .ka-social {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--glass);
+    border: 1px solid var(--line);
+    color: var(--fg-1);
+    transition: background .2s, border-color .2s, transform .2s;
 
-      &.instagram:hover {
-        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        border-color: transparent;
-        box-shadow: 0 5px 15px rgba(220, 39, 67, 0.4);
-      }
+    :global(svg) { width: 18px; height: 18px; }
 
-      &.facebook:hover {
-        background: #1877F2;
-        border-color: #1877F2;
-        box-shadow: 0 5px 15px rgba(24, 119, 242, 0.4);
-      }
+    &:hover {
+      transform: translateY(-2px);
+      border-color: var(--line-accent);
+      background: var(--glass-hover);
     }
 
-    /* Rest of your existing styles... */
-  </style>
-</BaseLayout>
+    &.ka-social--linkedin:hover { background: #0077B5; border-color: #0077B5; color: #fff; }
+    &.ka-social--twitter:hover  { background: #1DA1F2; border-color: #1DA1F2; color: #fff; }
+    &.ka-social--github:hover   { background: #333;    border-color: #333;    color: #fff; }
+    &.ka-social--instagram:hover {
+      background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+      border-color: transparent; color: #fff;
+    }
+    &.ka-social--youtube:hover  { background: #FF0000; border-color: #FF0000; color: #fff; }
+    &.ka-social--telegram:hover { background: #0088cc; border-color: #0088cc; color: #fff; }
+    &.ka-social--facebook:hover { background: #1877F2; border-color: #1877F2; color: #fff; }
+  }
+
+  /* Bio */
+  .ka-bio {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .ka-bio__body {
+    color: var(--fg-1);
+    line-height: 1.75;
+    font-size: 16px;
+
+    :global(p) { margin: 0 0 16px; }
+    :global(strong) { color: var(--fg-0); font-weight: 600; }
+  }
+</style>

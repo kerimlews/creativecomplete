@@ -136,7 +136,17 @@ export const testimonials = [
     company: "CareConnect",
     avatar: "AM",
     image: "alisa-murtezi", // Add image path
-    caseStudy: "careconnect-recruitment-automation", 
+    caseStudy: "careconnect-recruitment-automation",
+    verified: true
+  },
+  {
+    text: "Vor der Zusammenarbeit mit Creative Complete war unser Betrieb auf Google praktisch unsichtbar. Heute sind wir die Nr. 1 in Arbon und erhalten täglich neue Anfragen über Google Maps. Die Website, das Google Business Profile und die Videos haben alles verändert. Absolut empfehlenswert.",
+    author: "Ramon Malkoc",
+    role: "Inhaber",
+    company: "Belags-Oberflächenreinigung",
+    avatar: "RM",
+    image: "ramon-malkoc",
+    caseStudy: "belags-oberflaechenreinigung-arbon-case-study",
     verified: true
   }
 ];

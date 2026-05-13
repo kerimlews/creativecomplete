@@ -1,0 +1,324 @@
+/* ============================================================
+   Lumora — Design Tokens
+   Mirrors what would live in src/styles/_tokens.scss in Astro
+   ============================================================ */
+
+:root {
+  /* Brand */
+  --brand-primary: #ff8c42;        /* primary */
+  --brand-primary-2: #ff6a1a;      /* deeper */
+  --brand-primary-soft: #ffb37a;   /* lighter */
+  --brand-glow: rgba(255, 140, 66, 0.35);
+
+  /* Neutrals — warm-tinted dark */
+  --bg-0: #0b0a09;        /* page */
+  --bg-1: #111110;        /* card */
+  --bg-2: #1a1816;        /* elevated */
+  --bg-3: #232120;        /* hover */
+  --line: #2a2725;        /* borders */
+  --line-2: #3a3633;
+
+  --fg-0: #f6f1ea;        /* primary text */
+  --fg-1: #c9c2b8;        /* secondary */
+  --fg-2: #8a847b;        /* muted */
+  --fg-3: #5a544c;        /* disabled */
+
+  /* Accent neutrals (light side, for contrast cards) */
+  --cream: #f6f1ea;
+  --cream-2: #ece5da;
+
+  /* Type */
+  --font-display: "Instrument Serif", "Times New Roman", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Radii */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-2xl: 36px;
+  --r-pill: 999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 0 rgba(255,255,255,0.04) inset, 0 12px 30px rgba(0,0,0,0.35);
+  --shadow-glow: 0 0 0 1px rgba(255,140,66,0.25), 0 20px 60px rgba(255,140,66,0.18);
+
+  /* Spacing scale */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+  --s-32: 128px;
+
+  /* Layout */
+  --container: 1280px;
+  --container-tight: 1080px;
+}
+
+/* ============================================================
+   Reset + base
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-0);
+  color: var(--fg-0);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "cv11";
+  line-height: 1.5;
+}
+img, svg, video { display: block; max-width: 100%; }
+button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+a { color: inherit; text-decoration: none; }
+
+/* Page background grid + glow */
+.page {
+  position: relative;
+  min-height: 100vh;
+  background: var(--bg-0);
+  overflow: hidden;
+}
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 80%);
+  z-index: 0;
+}
+.page::after {
+  content: "";
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 600px;
+  background: radial-gradient(ellipse at center top, rgba(255,140,66,0.22) 0%, rgba(255,140,66,0.08) 30%, transparent 65%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+.page > * { position: relative; z-index: 1; }
+
+/* ============================================================
+   Type
+   ============================================================ */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.eyebrow::before {
+  content: "";
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--brand-primary);
+  box-shadow: 0 0 10px var(--brand-primary);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.98;
+  color: var(--fg-0);
+  margin: 0;
+}
+.h1 { font-size: clamp(48px, 7vw, 104px); }
+.h2 { font-size: clamp(40px, 5vw, 72px); }
+.h3 { font-size: clamp(28px, 3vw, 44px); }
+
+.lead {
+  font-size: clamp(16px, 1.2vw, 19px);
+  color: var(--fg-1);
+  line-height: 1.55;
+  max-width: 60ch;
+}
+
+.italic-accent {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--brand-primary);
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  padding: 0 22px;
+  border-radius: var(--r-pill);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  transition: transform .15s ease, background .15s ease, box-shadow .2s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--brand-primary);
+  color: #1a0d04;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 10px 24px rgba(255,140,66,0.35);
+}
+.btn-primary:hover {
+  background: var(--brand-primary-2);
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  background: rgba(255,255,255,0.04);
+  color: var(--fg-0);
+  border: 1px solid var(--line);
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.08); }
+.btn-light {
+  background: var(--cream);
+  color: #15110d;
+}
+.btn-light:hover { background: #fff; }
+
+.btn .arrow {
+  width: 18px; height: 18px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* ============================================================
+   Cards / surfaces
+   ============================================================ */
+.card {
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  position: relative;
+}
+.card-elev {
+  background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Section */
+.section {
+  padding: 96px 0;
+}
+.section-tight { padding: 64px 0; }
+
+/* Divider */
+.hr {
+  height: 1px;
+  background: var(--line);
+  border: 0;
+  margin: 0;
+}
+
+/* Tags / chips */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: var(--r-pill);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--fg-1);
+  text-transform: uppercase;
+}
+.chip-primary {
+  background: rgba(255,140,66,0.12);
+  border-color: rgba(255,140,66,0.35);
+  color: var(--brand-primary-soft);
+}
+
+/* Stat */
+.stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  margin-top: 8px;
+}
+
+/* Image placeholder (no SVG illustrations — striped placeholders) */
+.img-placeholder {
+  position: relative;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255,255,255,0.03) 0 12px,
+      rgba(255,255,255,0.06) 12px 24px
+    ),
+    var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  overflow: hidden;
+}
+.img-placeholder.cream {
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(0,0,0,0.04) 0 12px,
+      rgba(0,0,0,0.08) 12px 24px
+    ),
+    var(--cream-2);
+  color: #6b6358;
+  border-color: rgba(0,0,0,0.06);
+}
+
+/* Focus ring */
+:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 2px; border-radius: 4px; }
+
+/* Scrollbar polish */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 10px; }
+::-webkit-scrollbar-track { background: transparent; }

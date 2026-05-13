@@ -1,0 +1,163 @@
+---
+const steps = [
+  {
+    id: "capture",
+    kicker: "Step 01 · Any channel",
+    title: "Lead captured across every channel",
+    body: "Every new lead — from WhatsApp, TikTok ad, Instagram DM, Facebook form, or web chat — enters AI Customer System instantly. All conversations appear in one unified inbox with full source attribution.",
+  },
+  {
+    id: "qualify",
+    kicker: "Step 02 · Under 60 seconds",
+    title: "AI scores and routes every lead",
+    body: "AI Agents run BANT qualification: intent, budget, timeline, authority. Hot leads get booked into your sales calendar with full context. Cold leads enter a 90-day AI nurture sequence automatically.",
+  },
+  {
+    id: "creative",
+    kicker: "Step 03 · Weekly production",
+    title: "AI creatives that predict performance",
+    body: "AI Creative Engine generates 8–12 ad variants weekly, trained on $35B+ in spend data. Creative Scoring AI ranks them before launch. Winners get scaled automatically. Your creative ROAS compounds every week.",
+  },
+  {
+    id: "monetize",
+    kicker: "Step 04 · Ongoing revenue",
+    title: "Existing database turned into profit",
+    body: "Your CRM holds leads you already paid for. AI Customer System runs segmented WhatsApp broadcasts and re-engagement flows that average 42.5× ROI. Dormant contacts become your highest-margin revenue stream.",
+  },
+];
+---
+
+<section class="v2-process v2-section" id="process">
+  <div class="v2-container">
+    <div class="v2-section-head">
+      <span class="v2-eyebrow">How it works</span>
+      <h2 class="v2-h2">
+        AI Customer System, <span class="v2-grad">end to end.</span>
+      </h2>
+      <p class="v2-lead">
+        Four loops running in parallel. We configure, run, and optimise everything.
+        You handle the hot leads that land in your calendar.
+      </p>
+    </div>
+
+    <div class="v2-process__inner">
+      <!-- Steps -->
+      <div class="v2-process__steps">
+        {steps.map((s, i) => (
+          <div
+            class:list={["v2-process__step", { "is-active": i === 0 }]}
+            data-step={s.id}
+            data-index={i}
+            data-m="left"
+            style={`--m-d:${i * 0.1}s`}
+          >
+            <div class="v2-process__step-num">{String(i + 1).padStart(2, "0")}</div>
+            <div class="v2-process__step-content">
+              <div class="v2-process__step-kicker">{s.kicker}</div>
+              <div class="v2-process__step-title">{s.title}</div>
+              <div class="v2-process__step-body">{s.body}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Visual panel -->
+      <div class="v2-process__visual" data-m="right" style="--m-d:.2s">
+        <div class="v2-process__visual-inner" id="v2ProcessVisual">
+
+          <!-- Capture visual -->
+          <div class="v2-pv" data-visual="capture">
+            <div class="v2-pv-header">
+              <div class="v2-pv-title">
+                <span class="dot-on"></span> Unified inbox — live
+              </div>
+              <span class="v2-chip" style="font-size:9px">247 today</span>
+            </div>
+            <div class="v2-pv-channels">
+              <div class="v2-pv-channel active"><span class="dot-on"></span><span class="v2-pv-channel__name">WhatsApp Business</span><span class="v2-pv-channel__count">94 leads</span></div>
+              <div class="v2-pv-channel"><span class="dot-ind"></span><span class="v2-pv-channel__name">Instagram DM</span><span class="v2-pv-channel__count">62 leads</span></div>
+              <div class="v2-pv-channel"><span class="dot-ind"></span><span class="v2-pv-channel__name">TikTok Lead Gen</span><span class="v2-pv-channel__count">43 leads</span></div>
+              <div class="v2-pv-channel"><span class="dot-on"></span><span class="v2-pv-channel__name">Facebook Messenger</span><span class="v2-pv-channel__count">31 leads</span></div>
+              <div class="v2-pv-channel"><span class="dot-on"></span><span class="v2-pv-channel__name">Web Chat</span><span class="v2-pv-channel__count">17 leads</span></div>
+            </div>
+          </div>
+
+          <!-- Qualify visual -->
+          <div class="v2-pv hidden" data-visual="qualify">
+            <div class="v2-pv-header">
+              <div class="v2-pv-title">Lead qualification scores</div>
+              <span class="v2-chip-cyan" style="font-size:9px">AI scoring</span>
+            </div>
+            <div class="v2-pv-scores">
+              <div class="v2-pv-score"><span class="v2-pv-score__name">Sarah K.</span><div class="v2-pv-score__bar"><div class="v2-pv-score__fill" style="width:91%"></div></div><span class="v2-pv-score__val">91</span></div>
+              <div class="v2-pv-score-label">HOT · Booked Thu 3pm</div>
+              <div class="v2-pv-score"><span class="v2-pv-score__name">Marc B.</span><div class="v2-pv-score__bar"><div class="v2-pv-score__fill" style="width:74%"></div></div><span class="v2-pv-score__val">74</span></div>
+              <div class="v2-pv-score-label">WARM · Day 3 nurture</div>
+              <div class="v2-pv-score"><span class="v2-pv-score__name">Emma R.</span><div class="v2-pv-score__bar"><div class="v2-pv-score__fill" style="width:62%"></div></div><span class="v2-pv-score__val">62</span></div>
+              <div class="v2-pv-score-label">WARM · Day 1 nurture</div>
+              <div class="v2-pv-score"><span class="v2-pv-score__name">Unknown</span><div class="v2-pv-score__bar"><div class="v2-pv-score__fill" style="width:18%"></div></div><span class="v2-pv-score__val">18</span></div>
+              <div class="v2-pv-score-label">COLD · 30d re-engage</div>
+            </div>
+            <div class="v2-pv-stat-badge"><span style="color:var(--c1-light);font-weight:700">81%</span> qualification rate · Avg. response: 34s</div>
+          </div>
+
+          <!-- Creative visual -->
+          <div class="v2-pv hidden" data-visual="creative">
+            <div class="v2-pv-header">
+              <div class="v2-pv-title">Weekly creative batch</div>
+              <span class="v2-chip-cyan" style="font-size:9px">AI Creative Engine</span>
+            </div>
+            <div class="v2-pv-creatives">
+              <div class="v2-pv-creative win"><div class="v2-pv-creative__img"></div><div class="v2-pv-creative__score">▲ 97</div></div>
+              <div class="v2-pv-creative win"><div class="v2-pv-creative__img"></div><div class="v2-pv-creative__score">▲ 89</div></div>
+              <div class="v2-pv-creative">    <div class="v2-pv-creative__img"></div><div class="v2-pv-creative__score down">▼ 78</div></div>
+              <div class="v2-pv-creative">    <div class="v2-pv-creative__img"></div><div class="v2-pv-creative__score down">▼ 72</div></div>
+              <div class="v2-pv-creative win"><div class="v2-pv-creative__img"></div><div class="v2-pv-creative__score">▲ 91</div></div>
+              <div class="v2-pv-creative">    <div class="v2-pv-creative__img"></div><div class="v2-pv-creative__score down">▼ 65</div></div>
+            </div>
+            <div class="v2-pv-caption">Creative Scoring AI · 3 winners scaling · 3 paused</div>
+          </div>
+
+          <!-- Monetize visual -->
+          <div class="v2-pv hidden" data-visual="monetize">
+            <div class="v2-pv-header">
+              <div class="v2-pv-title">Broadcast campaign</div>
+              <span class="v2-chip-cyan" style="font-size:9px">ROI: 42.5×</span>
+            </div>
+            <div class="v2-pv-broadcast">
+              <div class="v2-pv-brow done"><span class="dot-on"></span><span>CRM audit + segmentation</span><span class="v2-pv-brow__status">DONE</span></div>
+              <div class="v2-pv-brow done"><span class="dot-on"></span><span>WhatsApp broadcast — offer #1</span><span class="v2-pv-brow__status">SENT</span></div>
+              <div class="v2-pv-brow active"><span class="dot-q"></span><span>Re-engagement video + offer #2</span><span class="v2-pv-brow__status active">ACTIVE</span></div>
+              <div class="v2-pv-brow"><span class="dot-s"></span><span>Final broadcast + scarcity hook</span><span class="v2-pv-brow__status sched">SCHED</span></div>
+            </div>
+            <div class="v2-pv-roi-card">
+              <span>Estimated revenue</span>
+              <div class="v2-pv-roi-card__big">42.5× ROI</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const steps = document.querySelectorAll<HTMLElement>('.v2-process__step');
+  const visuals = document.querySelectorAll<HTMLElement>('.v2-pv');
+
+  steps.forEach(step => {
+    step.addEventListener('click', () => {
+      const id = step.dataset.step!;
+
+      steps.forEach(s => s.classList.remove('is-active'));
+      step.classList.add('is-active');
+
+      visuals.forEach(v => {
+        v.classList.toggle('hidden', v.dataset.visual !== id);
+      });
+    });
+  });
+</script>
+
+

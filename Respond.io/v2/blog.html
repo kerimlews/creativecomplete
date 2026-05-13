@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Customer System Blog Post | CreativeComplete</title>
+  <meta name="description" content="AI Customer System article from CreativeComplete — the #1 AI Customer System agency for lead qualification, conversion and ROI from existing databases."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/tokens.css"/>
+  <link rel="stylesheet" href="styles/components.css"/>
+  <style>
+    .v2-post-hero { border-bottom: 1px solid var(--line); }
+    .v2-post-hero__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--fg-2);
+      margin-bottom: 28px;
+    }
+    .v2-post-hero__breadcrumb a { color: var(--fg-1); transition: color .15s; }
+    .v2-post-hero__breadcrumb a:hover { color: var(--c1-light); }
+    .v2-post-hero__head { max-width: 800px; }
+    .v2-post-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--fg-2);
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    .v2-post-hero__dot {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--fg-2);
+    }
+    .v2-post-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .v2-post-toc { position: sticky; top: 88px; }
+    .v2-post-toc__inner {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      padding: 24px;
+    }
+    .v2-post-toc__label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fg-2);
+      margin-bottom: 16px;
+    }
+    .v2-post-toc ul { list-style: none; padding: 0; margin: 0; }
+    .v2-post-toc li { margin: 0; }
+    .v2-post-toc a {
+      display: block;
+      padding: 7px 0;
+      font-size: 13px;
+      color: var(--fg-1);
+      border-left: 2px solid transparent;
+      padding-left: 12px;
+      margin-left: -12px;
+      transition: color .15s, border-color .15s;
+    }
+    .v2-post-toc a:hover {
+      color: var(--c1-light);
+      border-left-color: var(--c1-light);
+    }
+    .v2-post-toc__cta {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+    .v2-post-prose {
+      max-width: 720px;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--fg-1);
+    }
+    .v2-post-prose h2 {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 2vw, 30px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--fg-0);
+      margin: 48px 0 16px;
+      scroll-margin-top: 88px;
+    }
+    .v2-post-prose h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--fg-0);
+      margin: 32px 0 12px;
+    }
+    .v2-post-prose p { margin: 0 0 20px; }
+    .v2-post-prose ul, .v2-post-prose ol {
+      padding-left: 24px;
+      margin: 0 0 20px;
+    }
+    .v2-post-prose li { margin-bottom: 8px; }
+    .v2-post-prose strong { color: var(--fg-0); font-weight: 600; }
+    .v2-post-prose a { color: var(--c1-light); text-decoration: underline; text-underline-offset: 3px; }
+    .v2-post-callout {
+      display: flex;
+      gap: 16px;
+      background: rgba(99,102,241,0.06);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-left: 3px solid var(--c1);
+      border-radius: var(--r-sm);
+      padding: 18px 20px;
+      margin: 24px 0;
+      font-size: 15px;
+      color: var(--fg-0);
+    }
+    .v2-post-callout__icon {
+      color: var(--c1-light);
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .v2-blog-img {
+      border-radius: var(--r-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .v2-blog-card { overflow: hidden; }
+    .v2-blog-card__img { height: 180px; border-radius: var(--r-md) var(--r-md) 0 0; }
+    .v2-blog-card__body { padding: 20px; }
+    .v2-blog-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .v2-blog-card__title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      font-weight: 400;
+      color: var(--fg-0);
+      margin: 0 0 8px;
+    }
+    .v2-blog-card__excerpt {
+      font-size: 13px;
+      color: var(--fg-1);
+      line-height: 1.6;
+      margin: 0 0 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .v2-blog-card__link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--c1-light);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: gap .15s ease;
+    }
+    .v2-blog-card__link:hover { gap: 10px; }
+    .v2-blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 960px) {
+      .v2-post-layout { grid-template-columns: 1fr; }
+      .v2-post-toc { position: static; }
+    }
+    @media (max-width: 600px) {
+      .v2-blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="v2-page" id="root"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel" src="components/components.jsx"></script>
+  <script type="text/babel" src="components/blog.jsx"></script>
+
+  <script type="text/babel">
+    const slug = new URLSearchParams(location.search).get("slug")
+      || "ai-customer-system-qualify-leads";
+
+    const postMeta = POST_BODIES[slug] || POST_BODIES["ai-customer-system-qualify-leads"];
+    const postCard = V2_POSTS.find(p => p.slug === slug) || V2_POSTS[0];
+
+    /* Update page meta */
+    document.title = `${postMeta.title} | CreativeComplete`;
+    document.querySelector('meta[name="description"]').setAttribute(
+      "content",
+      postCard.excerpt
+    );
+
+    const App = () => (
+      <>
+        <V2Nav active="blog"/>
+        <main>
+          <V2PostHero post={postMeta} meta={postMeta}/>
+          <V2PostBody post={postMeta} meta={postMeta}/>
+          <V2PostInlineCTA/>
+          <V2RelatedPosts currentSlug={slug}/>
+        </main>
+        <V2Footer/>
+      </>
+    );
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+  </script>
+</body>
+</html>

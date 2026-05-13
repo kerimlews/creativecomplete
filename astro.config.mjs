@@ -50,17 +50,13 @@ export default defineConfig({
   integrations: [
 	partytown({ config: { forward: ['dataLayer.push'] } }),
 	sitemap({
-      filter: (page) => {
-        // Filter out any unwanted pages
-        return !page.includes('/de/') && !page.includes('/hr/'); // Remove German and Croatian for now, focus on EN/SL
-      },
+      filter: (page) => !page.includes('/hr/') && !page.includes('/v1/'),
       i18n: {
         defaultLocale: 'en',
         locales: {
           en: 'en-US',
           sl: 'sl-SI',
           de: 'de-DE',
-          hr: 'hr-HR',
         },
       },
   }),

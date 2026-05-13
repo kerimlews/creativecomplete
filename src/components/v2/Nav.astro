@@ -1,0 +1,65 @@
+---
+export interface Props {
+  active?: 'home' | 'services' | 'process' | 'results' | 'projects';
+}
+const { active = 'home' } = Astro.props;
+
+const links = [
+  { id: 'home',     label: 'Home',         href: '/' },
+  { id: 'engines', label: 'Engines',     href: '/#engines' },
+  { id: 'process',  label: 'How it works', href: '/#how-it-works' },
+  { id: 'results',  label: 'Results',      href: '/#results' },
+  { id: 'projects', label: 'Projects',     href: '/projects/' },
+];
+---
+
+<nav class="v2-nav">
+  <div class="v2-container">
+    <div class="v2-nav__inner">
+      <!-- Logo -->
+      <a href="/" class="v2-nav__logo">
+        <img src="/logo-gradient.svg" alt="CreativeComplete" class="v2-nav__logo-img" width="22" height="36" />
+        <span class="v2-nav__logo-text">Creative<span class="v2-grad">Complete</span></span>
+      </a>
+
+      <!-- Links -->
+      <ul class="v2-nav__links" id="v2NavLinks">
+        {links.map(l => (
+          <li>
+            <a href={l.href} class:list={[{ active: active === l.id }]}>{l.label}</a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- Right -->
+      <div class="v2-nav__right">
+        <span class="v2-nav__badge">🏆 #1 AI Agency</span>
+        <a href="javascript:void(0)" class="v2-btn v2-btn-primary" style="height:40px;padding:0 18px;font-size:14px;" data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'>
+          Free audit
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile burger -->
+      <button class="v2-nav__menu" id="v2NavMenu" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('v2NavMenu');
+  const links = document.getElementById('v2NavLinks');
+  btn?.addEventListener('click', () => {
+    const open = links?.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+
+  const nav = document.querySelector('.v2-nav') as HTMLElement;
+  window.addEventListener('scroll', () => {
+    nav?.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+</script>

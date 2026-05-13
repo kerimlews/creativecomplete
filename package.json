@@ -10,7 +10,14 @@
     "astro": "astro",
     "create-placeholders": "node create-placeholders.js",
     "video": "remotion studio src/remotion/index.ts",
-    "video:render": "remotion render src/remotion/index.ts BookCall out/video.mp4"
+    "video:render": "remotion render src/remotion/index.ts BookCall out/video.mp4",
+    "video:hero": "remotion render src/remotion/index.ts HeroVideo public/videos/hero.mp4 --codec=h264",
+    "video:services": "remotion render src/remotion/index.ts ServicesVideo public/videos/services.mp4 --codec=h264",
+    "video:process": "remotion render src/remotion/index.ts ProcessVideo public/videos/process.mp4 --codec=h264",
+    "video:results": "remotion render src/remotion/index.ts ResultsVideo public/videos/results.mp4 --codec=h264",
+    "video:service-engines": "remotion render src/remotion/index.ts ServiceEnginesLoop public/videos/service-engines.webm --codec=vp8 && remotion render src/remotion/index.ts ServiceEnginesLoop public/videos/service-engines.mp4 --codec=h264",
+    "video:booking-icons": "remotion render src/remotion/index.ts BookingIconsLoop public/videos/booking-icons.webm --codec=vp8 && remotion render src/remotion/index.ts BookingIconsLoop public/videos/booking-icons.mp4 --codec=h264",
+    "video:all": "npm run video:hero && npm run video:services && npm run video:process && npm run video:results && npm run video:booking-icons"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.10",

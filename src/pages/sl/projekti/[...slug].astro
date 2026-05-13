@@ -1,243 +1,216 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import { Image, getImage } from 'astro:assets';
+import LayoutV2 from '../../../layouts/LayoutV2.astro';
+import CTA from '../../../components/v2/CTA.astro';
+import AuthorBadge from '../../../components/v2/AuthorBadge.astro';
 import { getCollection } from 'astro:content';
-import BottomCTA from '../../../components/BottomCTA.astro';
-import BreadCrumb from '../../../components/BreadCrumb.astro';
-import StackedImagesWithPopup from '../../../components/StackedImagesWithPopup.astro';
-import RelatedArticlesSidebar from '../../../components/RelatedArticlesSidebar.astro';
-import TechnologyIcon from '../../../components/TechnologyIcon.astro';
-import { t, getLocalizedUrl } from '../../../utils/translations';
-import type { Language } from '../../../utils/translations';
+import { getProjectImage } from '../../../utils/constants';
+import { getProjectUrl } from '../../../utils/routing';
 
 export async function getStaticPaths() {
-  const allProjects = await getCollection('projectsSl');
-  const paths: Array<{ params: { slug: string }; props: { project: any; lang: Language } }> = [];
-  const lang = 'sl';
-  
-  // All projects in projectsSl collection are already Slovenian, no need to filter
-  allProjects.forEach(project => {
-    const slug = project.data.slug;
-
-    if (!slug) throw new Error('Project slug is required for: ' + project.id);
-    
-    paths.push({
-      params: { slug },
-      props: { project, lang }
-    });
-  });
-    
-  return paths;
+  const all = await getCollection('projectsSl');
+  return all.map((p) => ({
+    params: { slug: p.data.slug as string },
+    props: { projectId: p.id },
+  }));
 }
 
-const { project } = Astro.props;
+const { projectId } = Astro.props;
 const currentLang = 'sl';
 
-const breadcrumbs = [
-  { name: t('nav.home', currentLang), url: `${Astro.url.origin}/sl/` },
-  { name: t('nav.projects', currentLang), url: `${Astro.url.origin}/sl/projekti/` },
-  { name: project.data.title, url: `${Astro.url.href}/` }
-];
-
-// Filter related articles to only show projects in the same language
-const allProjects = await getCollection('projectsSl');
-// All projects in projectsSl collection are already Slovenian, no need to filter
-const relatedArticles = allProjects
-  .filter(p => p.id !== project.id)
-  .slice(0, 7)
-  .map(project => ({
-    slug: project.data.slug,
-    title: project.data.title,
-    description: project.data.description,
-    category: project.data.category || 'General',
-    readTime: project.data.readTime || '5 min read'
-  }));
-
-const images = import.meta.glob('/src/images/projects/*.{png,jpg,jpeg,webp}');
-
-const projectImagesResults = await Promise.all(
-  Object.entries(images)
-    .filter(([path]) => {
-      // Extract project name from id (e.g., "sl/careconnect-recruitment-automation" -> "careconnect-recruitment-automation")
-      const projectName = project.id.split('/').pop() || project.id;
-      return path.includes(`/src/images/projects/${projectName}`);
-    })
-    .map(async ([path, image]) => {
-      try {
-        const imageModule = await image();
-        // import.meta.glob for images returns { default: ImageMetadata }
-        if (imageModule && typeof imageModule === 'object') {
-          // Extract the actual ImageMetadata - it might be in .default or be the object itself
-          const imageMetadata = ('default' in imageModule && imageModule.default) || imageModule;
-          
-          // Verify it's a valid ImageMetadata object with src property
-          if (imageMetadata && typeof imageMetadata === 'object' && 'src' in imageMetadata) {
-            return {
-              src: imageMetadata,
-              alt: project.data.title
-            };
-          }
-        }
-        return null;
-      } catch (e) {
-        return null;
-      }
-    })
+const project = await getCollection('projectsSl').then(
+  (ps) => ps.find((p) => p.id === projectId)
 );
+if (!project) throw new Error(`Project not found: ${projectId}`);
 
-let projectImages = projectImagesResults.filter((img): img is { src: any; alt: string } => img !== null);
+const imgMod = project.data.image ? await getProjectImage(project.data.image as string) : null;
+const heroImg = imgMod ? (imgMod as any).default ?? imgMod : null;
 
-// If no images found by project name, try to load from frontmatter image field
-if (projectImages.length === 0 && project.data.image) {
-  const imageName = project.data.image;
-  const extensions = ['png', 'jpg', 'jpeg', 'webp'];
-  const baseName = imageName.replace(/\.(png|jpg|jpeg|webp)$/, '');
-  
-  for (const ext of extensions) {
-    const imagePath = `/src/images/projects/${baseName}.${ext}`;
-    if (images[imagePath]) {
-      try {
-        const imageModule = await images[imagePath]();
-        if (imageModule && typeof imageModule === 'object') {
-          const imageMetadata = ('default' in imageModule && imageModule.default) || imageModule;
-          
-          if (imageMetadata && typeof imageMetadata === 'object' && 'src' in imageMetadata) {
-            projectImages = [{
-              src: imageMetadata,
-              alt: project.data.title
-            }];
-            break;
-          }
-        }
-      } catch (e) {
-        continue;
-      }
-    }
-  }
+let ogImage: string | undefined;
+if (heroImg) {
+  try {
+    const optimized = await getImage({ src: heroImg, width: 1200, height: 630, format: 'webp' });
+    ogImage = Astro.url.origin + optimized.src;
+  } catch { ogImage = undefined; }
 }
 
-// Extract year from published date or use current year
-const publishedYear = project.data.published ? new Date(project.data.published).getFullYear() : new Date().getFullYear();
-// Check if duration indicates ongoing project
-const isOngoing = project.data.duration && (
-  project.data.duration.toLowerCase().includes('ongoing') || 
-  project.data.duration.toLowerCase().includes('current')
-);
-const yearDisplay = isOngoing ? `${publishedYear} - ONGOING` : publishedYear.toString();
+const slug = (project.data.slug ?? project.id) as string;
+const canonicalUrl = `${Astro.url.origin}/sl/projekti/${slug}/`;
+
+const all = await getCollection('projectsSl');
+const related = all
+  .filter((p) => p.id !== project.id)
+  .slice(0, 4)
+  .map((p) => ({
+    title: p.data.title as string,
+    category: (p.data.category ?? '') as string,
+    url: getProjectUrl(currentLang, (p.data.slug ?? p.id) as string),
+  }));
+
+const publishedYear = project.data.published
+  ? new Date(project.data.published as string).getFullYear()
+  : new Date().getFullYear();
+
+const services: string[] = (project.data.services as string[] | undefined) ?? [];
+const technologies: string[] = (project.data.technologies as string[] | undefined) ?? [];
+const duration = (project.data.duration as string | undefined) ?? '';
+const liveUrl = (project.data.url as string | undefined) ?? '';
+const stats: { value: string; label: string }[] = (project.data.stats as any) ?? [];
 ---
 
-<Layout 
-  title={project.data.title}
-  description={project.data.description}
-  breadcrumbs={breadcrumbs}
-  openGraph={{
-    title: project.data.title,
-    description: project.data.description,
-  }}
-  service={project}
+<LayoutV2
+  title={project.data.title as string}
+  description={project.data.description as string}
+  canonicalUrl={canonicalUrl}
+  ogImage={ogImage}
+  lang="sl"
+  navActive="results"
 >
-  <article class="project-detail">
-    <header class="project-header">
-      <div class="container">
-        <BreadCrumb items={breadcrumbs} />
-        
-        <!-- Two-column layout: Sidebar + Content -->
-        <div class="project-hero-layout">
-          <!-- Left Sidebar: Metadata -->
-          <aside class="project-sidebar">
-            
-            <div class="sidebar-item">
-              <span class="sidebar-label">YEAR</span>
-              <span class="sidebar-value">{yearDisplay}</span>
-            </div>
-            
-            {project.data.services && Array.isArray(project.data.services) && project.data.services.length > 0 && (
-              <div class="sidebar-item">
-                <span class="sidebar-label">SCOPE OF WORK</span>
-                <div class="sidebar-value scope-tags">
-                  {project.data.services.map((service: string) => (
-                    <span class="scope-tag">{service.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())}</span>
-                  ))}
-                </div>
-              </div>
-            )}
-            
-            {project.data.technologies && Array.isArray(project.data.technologies) && project.data.technologies.length > 0 && (
-              <div class="sidebar-item">
-                <span class="sidebar-label">STACK</span>
-                <div class="sidebar-value stack-icons">
-                  {project.data.technologies.map((tech: string) => (
-                    <div class="stack-icon-wrapper">
-                      <TechnologyIcon name={tech} size={24} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-            
-            {project.data.category && (
-              <div class="sidebar-item">
-                <span class="sidebar-label">INDUSTRY</span>
-                <div class="sidebar-value industry-tags">
-                  {project.data.category.split(' / ').map((cat: string) => (
-                    <span class="industry-tag">{cat.trim()}</span>
-                  ))}
-                </div>
-              </div>
-            )}
-          </aside>
-          
-          <!-- Right Content: Title, Description + CTA, Images -->
-          <div class="project-content-main">
-            <h1>{project.data.title.toUpperCase()}</h1>
-            <p class="project-description">{project.data.description}</p>
-            
-            {project.data.url && (
-              <a 
-                href={project.data.url} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="project-view-live"
-              >
-                <span>View live website</span> →
-              </a>
-            )}
-            
-            <!-- Images Section -->
-            {projectImages.length > 0 && (
-              <section class="project-images-section">
-                <StackedImagesWithPopup images={projectImages} service={project} />
-              </section>
-            )}
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Content Section -->
-    <div class="service-content">
-      <div class="container">
-        <div class="content-container">
-          <!-- Main Content -->
-          <div class="main-content">
-            <div set:html={project.rendered?.html} />
-          </div>
-
-          <RelatedArticlesSidebar id="projects" items={relatedArticles} />
-        </div>
-      </div>
+  <main>
+    <div class="v2-container v2-breadcrumb">
+      <a href="/sl/">Domov</a><span>/</span>
+      <a href="/sl/projekti/">Projekti</a><span>/</span>
+      <span>{project.data.title as string}</span>
     </div>
 
-    <BottomCTA 
-      title={t('cta.title', currentLang)}
-      subtitle={t('cta.subtitle', currentLang)}
-      urgencyText={t('cta.urgency', currentLang)}
-      valueProps={[]}
-      primaryButton={{
-        text: t('cta.primary_button', currentLang),
-        href: getLocalizedUrl('/contact/', currentLang)
-      }}
-      securityNote={t('cta.security_note', currentLang)}
-      showValueProps={false}
-    />
-  </article>
-</Layout>
+    <section class="v2-proj-hero">
+      <div class="v2-container">
+        <div class="v2-proj-hero__inner">
+          <div class="v2-proj-hero__left">
+            <span class="v2-chip-neutral">{project.data.category as string}</span>
+            <h1 class="v2-h2" style="margin-top:20px">{project.data.title as string}</h1>
+            <p class="v2-lead" style="margin-top:16px">{project.data.description as string}</p>
+            <div class="v2-proj-meta">
+              <div class="v2-proj-meta__item">
+                <span class="v2-proj-meta__label">Leto</span>
+                <span class="v2-proj-meta__val">{publishedYear}</span>
+              </div>
+              {duration && (
+                <div class="v2-proj-meta__item">
+                  <span class="v2-proj-meta__label">Trajanje</span>
+                  <span class="v2-proj-meta__val">{duration}</span>
+                </div>
+              )}
+            </div>
+            {services.length > 0 && (
+              <div class="v2-proj-tags">
+                <span class="v2-proj-tags__label">Storitve</span>
+                <div class="v2-proj-tags__list">
+                  {services.map((s) => (
+                    <span class="v2-chip-neutral">{s.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+            {technologies.length > 0 && (
+              <div class="v2-proj-tags" style="margin-top:12px">
+                <span class="v2-proj-tags__label">Stack</span>
+                <div class="v2-proj-tags__list">
+                  {technologies.map((t) => <span class="v2-chip">{t}</span>)}
+                </div>
+              </div>
+            )}
+            <AuthorBadge
+              name="Kerim Alihodza"
+              role="CEO & Business Mechanic"
+              publishedYear={publishedYear}
+            />
+
+            {stats.length > 0 && (
+              <div class="v2-proj-stats">
+                {stats.map((s) => (
+                  <div class="v2-proj-stats__item">
+                    <div class="v2-proj-stats__n">{s.value}</div>
+                    <div class="v2-proj-stats__l">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+            {liveUrl && (
+              <a href={liveUrl} target="_blank" rel="noopener noreferrer" class="v2-btn v2-btn-primary" style="margin-top:24px;width:fit-content">
+                Oglej si živo spletno stran
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            )}
+          </div>
+          {heroImg && (
+            <div class="v2-proj-hero__img">
+              <Image src={heroImg} alt={project.data.title as string} width={700} height={420} />
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section" style="padding-top:0">
+      <div class="v2-container">
+        <div class="v2-proj-content">
+          <div class="v2-prose" set:html={project.rendered?.html} />
+          {related.length > 0 && (
+            <aside class="v2-proj-aside">
+              <div class="v2-proj-aside__head">Več študij primerov</div>
+              <ul>
+                {related.map((r) => (
+                  <li>
+                    <a href={r.url} class="v2-proj-aside__link">
+                      <span class="v2-proj-aside__cat">{r.category}</span>
+                      <span class="v2-proj-aside__title">{r.title}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </main>
+</LayoutV2>
+
+<style lang="scss">
+  .v2-breadcrumb {
+    display: flex; align-items: center; gap: 8px; padding-top: 24px; padding-bottom: 8px;
+    font-size: 13px; font-family: var(--font-mono); color: var(--fg-2);
+    a { color: var(--fg-2); transition: color .15s; &:hover { color: var(--c1-light); } }
+  }
+  .v2-proj-hero { padding: 48px 0 64px; }
+  .v2-proj-hero__inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+    @media (max-width: 900px) { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .v2-proj-hero__left { display: flex; flex-direction: column; align-items: flex-start; }
+  .v2-proj-hero__img { border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--line); img { width: 100%; height: auto; display: block; } }
+  .v2-proj-meta { display: flex; gap: 32px; margin-top: 24px; }
+  .v2-proj-meta__item { display: flex; flex-direction: column; gap: 4px; }
+  .v2-proj-meta__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-2); }
+  .v2-proj-meta__val { font-size: 15px; font-weight: 500; color: var(--fg-0); }
+  .v2-proj-tags { margin-top: 20px; }
+  .v2-proj-tags__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-2); display: block; margin-bottom: 8px; }
+  .v2-proj-tags__list { display: flex; gap: 6px; flex-wrap: wrap; }
+  .v2-proj-stats { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); width: 100%; }
+  .v2-proj-stats__n { font-family: var(--font-display); font-size: 32px; letter-spacing: -0.02em; background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+  .v2-proj-stats__l { font-size: 12px; font-family: var(--font-mono); color: var(--fg-2); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px; }
+  .v2-proj-content { display: grid; grid-template-columns: 1fr 300px; gap: 64px; align-items: start; @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 48px; } }
+  .v2-prose {
+    color: var(--fg-1); line-height: 1.75; font-size: 16px; max-width: 72ch;
+    :global(h2) { font-family: var(--font-display); font-size: clamp(22px, 2.2vw, 32px); letter-spacing: -0.015em; font-weight: 400; color: var(--fg-0); margin: 48px 0 16px; }
+    :global(h3) { font-family: var(--font-display); font-size: clamp(18px, 1.6vw, 24px); letter-spacing: -0.01em; font-weight: 400; color: var(--fg-0); margin: 32px 0 12px; }
+    :global(p) { margin: 0 0 16px; }
+    :global(ul), :global(ol) { padding-left: 1.5em; margin: 0 0 16px; display: flex; flex-direction: column; gap: 6px; }
+    :global(strong) { color: var(--fg-0); font-weight: 600; }
+    :global(a) { color: var(--c1-light); text-decoration: underline; text-underline-offset: 3px; &:hover { color: var(--fg-0); } }
+    :global(code) { font-family: var(--font-mono); font-size: 0.88em; background: var(--glass-hover); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; color: var(--c2); }
+    :global(blockquote) { border-left: 3px solid var(--c1); padding-left: 20px; margin: 24px 0; font-style: italic; }
+    :global(hr) { border: 0; height: 1px; background: var(--line); margin: 32px 0; }
+  }
+  .v2-proj-aside { position: sticky; top: 88px; @media (max-width: 1024px) { position: static; } }
+  .v2-proj-aside__head { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-2); margin-bottom: 16px; }
+  .v2-proj-aside ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; }
+  .v2-proj-aside__link { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: var(--r-sm); border: 1px solid var(--line); text-decoration: none; transition: border-color .15s, background .15s; &:hover { border-color: var(--line-accent); background: var(--glass); } }
+  .v2-proj-aside__cat { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c1-light); }
+  .v2-proj-aside__title { font-size: 13px; font-weight: 500; color: var(--fg-0); line-height: 1.4; }
+</style>

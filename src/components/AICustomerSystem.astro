@@ -1,0 +1,491 @@
+---
+/**
+ * AICustomerSystem.astro
+ * Reusable section component for the AI Customer System service.
+ * Main keyword: AI Customer System
+ * Extracted from Respond.io/AICustomerSystem.html design prototype.
+ *
+ * Usage:
+ *   import AICustomerSystem from '@/components/AICustomerSystem.astro';
+ *   <AICustomerSystem lang="en" />
+ */
+
+export interface Props {
+  lang?: 'en' | 'hr' | 'sl' | 'de' | 'fr';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const t = {
+  en: {
+    eyebrow: '#1 AI Customer System Agency',
+    h1_1: 'AI Customer System',
+    h1_2: 'that qualifies, converts',
+    h1_3: '& profits.',
+    lead: 'AI Customer System that qualifies new leads in under 60 seconds, converts them with AI-generated creatives, and turns your existing lead database into ongoing revenue. Powered by Respond.io + AdCreative.ai — configured and managed by us.',
+    cta_primary: 'Get your free system audit',
+    cta_secondary: 'See how it works',
+    proof: 'Trusted by 50+ agencies worldwide',
+    proof_sub: 'From boutique consultancies to enterprise teams',
+    stat1_n: '81%', stat1_l: 'Lead conversion rate', stat1_c: 'With Respond.io AI Agents',
+    stat2_n: '60%', stat2_l: 'Faster sales cycles', stat2_c: 'vs. manual qualification',
+    stat3_n: '42.5×', stat3_l: 'ROI on broadcast campaigns', stat3_c: 'From existing lead database',
+    stat4_n: '14×', stat4_l: 'More ad conversions', stat4_c: 'With AdCreative.ai creatives',
+    services_eyebrow: 'Our services',
+    services_h2_1: 'AI Customer System:',
+    services_h2_2: 'four engines, one machine.',
+    faq_eyebrow: 'Agency FAQ',
+    faq_h2: 'AI Customer System: questions answered.',
+    cta_eyebrow: '#1 AI Customer System Agency · Limited slots',
+    cta_h2_1: 'AI Customer System:',
+    cta_h2_2: 'your leads are waiting.',
+    cta_lead: 'Book a free 30-minute system audit. We\'ll map your current lead flow, identify every leaking stage, and show you exactly what an AI Customer System would generate for your agency.',
+    book: 'Book free audit',
+  },
+  hr: {
+    eyebrow: '#1 AI sustav za kupce — Agencija',
+    h1_1: 'AI sustav za kupce',
+    h1_2: 'koji kvalificira, konvertira',
+    h1_3: 'i donosi profit.',
+    lead: 'AI sustav za kupce koji kvalificira nove potencijalne kupce za manje od 60 sekundi, konvertira ih AI kreativima i pretvara vašu postojeću bazu kontakata u stalni prihod. Pokrenut Respond.io + AdCreative.ai.',
+    cta_primary: 'Besplatna revizija sustava',
+    cta_secondary: 'Kako funkcionira',
+    proof: 'Povjerenje 50+ agencija širom svijeta',
+    proof_sub: 'Od boutique konzultanata do enterprise timova',
+    stat1_n: '81%', stat1_l: 'Stopa konverzije leadova', stat1_c: 'S Respond.io AI agentima',
+    stat2_n: '60%', stat2_l: 'Brži prodajni ciklusi', stat2_c: 'vs. ručna kvalifikacija',
+    stat3_n: '42.5×', stat3_l: 'ROI broadcast kampanja', stat3_c: 'Iz postojeće baze leadova',
+    stat4_n: '14×', stat4_l: 'Više konverzija oglasa', stat4_c: 'S AdCreative.ai kreativima',
+    services_eyebrow: 'Naše usluge',
+    services_h2_1: 'AI sustav za kupce:',
+    services_h2_2: 'četiri motora, jedan stroj.',
+    faq_eyebrow: 'Česta pitanja agencija',
+    faq_h2: 'AI sustav za kupce: odgovori na pitanja.',
+    cta_eyebrow: '#1 AI sustav za kupce — Ograničeni kapaciteti',
+    cta_h2_1: 'AI sustav za kupce:',
+    cta_h2_2: 'vaši leadovi čekaju.',
+    cta_lead: 'Rezervirajte besplatnu 30-minutnu reviziju. Mapiramo vaš tok leadova i pokazujemo točno što bi AI sustav za kupce generirao za vašu agenciju.',
+    book: 'Rezerviraj besplatnu reviziju',
+  },
+  sl: {
+    eyebrow: '#1 AI sistem za stranke — Agencija',
+    h1_1: 'AI sistem za stranke',
+    h1_2: 'ki kvalificira, konvertira',
+    h1_3: 'in ustvarja dobiček.',
+    lead: 'AI sistem za stranke, ki kvalificira nove potencialne stranke v manj kot 60 sekundah, jih konvertira z AI-generiranimi oglasi in vaše obstoječe kontakte pretvori v prihodek. Powered by Respond.io + AdCreative.ai.',
+    cta_primary: 'Brezplačna revizija sistema',
+    cta_secondary: 'Kako deluje',
+    proof: 'Zaupanje 50+ agencij po svetu',
+    proof_sub: 'Od boutique svetovalnic do enterprise ekip',
+    stat1_n: '81%', stat1_l: 'Stopnja konverzije leadov', stat1_c: 'Z Respond.io AI agenti',
+    stat2_n: '60%', stat2_l: 'Hitrejši prodajni cikli', stat2_c: 'vs. ročna kvalifikacija',
+    stat3_n: '42.5×', stat3_l: 'ROI broadcast kampanj', stat3_c: 'Iz obstoječe baze leadov',
+    stat4_n: '14×', stat4_l: 'Več konverzij oglasov', stat4_c: 'Z AdCreative.ai kreativami',
+    services_eyebrow: 'Naše storitve',
+    services_h2_1: 'AI sistem za stranke:',
+    services_h2_2: 'štirje motorji, en stroj.',
+    faq_eyebrow: 'Pogosta vprašanja agencij',
+    faq_h2: 'AI sistem za stranke: odgovori na vprašanja.',
+    cta_eyebrow: '#1 AI sistem za stranke — Omejene zmogljivosti',
+    cta_h2_1: 'AI sistem za stranke:',
+    cta_h2_2: 'vaše stranke čakajo.',
+    cta_lead: 'Rezervirajte brezplačni 30-minutni pregled. Naredimo mapo vašega toka leadov in pokažemo točno, kar bi AI sistem za stranke ustvaril za vašo agencijo.',
+    book: 'Rezerviraj brezplačni pregled',
+  },
+  de: {
+    eyebrow: '#1 KI-Kundensystem — Agentur',
+    h1_1: 'KI-Kundensystem',
+    h1_2: 'das qualifiziert, konvertiert',
+    h1_3: 'und Gewinn generiert.',
+    lead: 'KI-Kundensystem das neue Leads in unter 60 Sekunden qualifiziert, mit KI-generierten Creatives konvertiert und Ihre bestehende Lead-Datenbank in laufende Einnahmen umwandelt. Powered by Respond.io + AdCreative.ai.',
+    cta_primary: 'Kostenloses System-Audit',
+    cta_secondary: 'So funktioniert es',
+    proof: 'Vertrauen von 50+ Agenturen weltweit',
+    proof_sub: 'Von Boutique-Beratungen bis zu Enterprise-Teams',
+    stat1_n: '81%', stat1_l: 'Lead-Konversionsrate', stat1_c: 'Mit Respond.io KI-Agenten',
+    stat2_n: '60%', stat2_l: 'Schnellere Verkaufszyklen', stat2_c: 'vs. manuelle Qualifizierung',
+    stat3_n: '42.5×', stat3_l: 'ROI bei Broadcast-Kampagnen', stat3_c: 'Aus bestehender Lead-Datenbank',
+    stat4_n: '14×', stat4_l: 'Mehr Ad-Konversionen', stat4_c: 'Mit AdCreative.ai Creatives',
+    services_eyebrow: 'Unsere Leistungen',
+    services_h2_1: 'KI-Kundensystem:',
+    services_h2_2: 'vier Motoren, eine Maschine.',
+    faq_eyebrow: 'Häufige Fragen von Agenturen',
+    faq_h2: 'KI-Kundensystem: Fragen beantwortet.',
+    cta_eyebrow: '#1 KI-Kundensystem Agentur · Begrenzte Kapazität',
+    cta_h2_1: 'KI-Kundensystem:',
+    cta_h2_2: 'Ihre Leads warten.',
+    cta_lead: 'Buchen Sie ein kostenloses 30-minütiges System-Audit. Wir analysieren Ihren aktuellen Lead-Flow und zeigen genau, was ein KI-Kundensystem für Ihre Agentur generieren würde.',
+    book: 'Kostenloses Audit buchen',
+  },
+  fr: {
+    eyebrow: '#1 Système client IA — Agence',
+    h1_1: 'Système client IA',
+    h1_2: 'qui qualifie, convertit',
+    h1_3: 'et génère des profits.',
+    lead: 'Système client IA qui qualifie les nouveaux prospects en moins de 60 secondes, les convertit avec des créatifs générés par IA, et transforme votre base de prospects existante en revenus récurrents. Propulsé par Respond.io + AdCreative.ai.',
+    cta_primary: 'Audit système gratuit',
+    cta_secondary: 'Comment ça marche',
+    proof: 'Confiance de 50+ agences dans le monde',
+    proof_sub: 'Des consultances boutique aux équipes enterprise',
+    stat1_n: '81%', stat1_l: 'Taux de conversion des leads', stat1_c: 'Avec les agents IA Respond.io',
+    stat2_n: '60%', stat2_l: 'Cycles de vente plus rapides', stat2_c: 'vs. qualification manuelle',
+    stat3_n: '42.5×', stat3_l: 'ROI des campagnes broadcast', stat3_c: 'De la base de leads existante',
+    stat4_n: '14×', stat4_l: 'Plus de conversions publicitaires', stat4_c: 'Avec les créatifs AdCreative.ai',
+    services_eyebrow: 'Nos services',
+    services_h2_1: 'Système client IA :',
+    services_h2_2: 'quatre moteurs, une machine.',
+    faq_eyebrow: 'FAQ des agences',
+    faq_h2: 'Système client IA : questions répondues.',
+    cta_eyebrow: '#1 Agence Système client IA · Places limitées',
+    cta_h2_1: 'Système client IA :',
+    cta_h2_2: 'vos prospects attendent.',
+    cta_lead: 'Réservez un audit système gratuit de 30 minutes. Nous cartographions votre flux de prospects et vous montrons exactement ce qu\'un système client IA générerait pour votre agence.',
+    book: 'Réserver l\'audit gratuit',
+  },
+}[lang];
+
+const stats = [
+  { n: t.stat1_n, l: t.stat1_l, c: t.stat1_c },
+  { n: t.stat2_n, l: t.stat2_l, c: t.stat2_c },
+  { n: t.stat3_n, l: t.stat3_l, c: t.stat3_c },
+  { n: t.stat4_n, l: t.stat4_l, c: t.stat4_c },
+];
+
+const services = {
+  en: [
+    { tag: '01', icon: '🤖', title: 'AI Lead Qualification', body: 'AI Customer System qualifies every inbound lead 24/7 using Respond.io AI Agents. Intent, budget, timeline — scored in under 60 seconds across WhatsApp, Instagram, TikTok, Facebook, and 8+ more channels.', bullets: ['AI Agents on Respond.io handle first touch', 'BANT-style qualification in every language', 'Hot leads routed to sales · Cold leads nurtured', '80% of routine inquiries automated'] },
+    { tag: '02', icon: '🎨', title: 'AI Ad Creative Engine', body: 'AI Customer System generates high-converting ad creatives using AdCreative.ai — trained on $35B+ in ad spend data. New variants every week. 90%+ accuracy Creative Scoring predicts performance before you spend.', bullets: ['AI-generated creatives in minutes, not days', 'Trained on $35B+ in ad spend data', 'Creative Scoring AI — 90%+ accuracy', 'Multi-platform: Meta, TikTok, Google, LinkedIn'] },
+    { tag: '03', icon: '📱', title: 'Omnichannel Lead Capture', body: 'AI Customer System unifies every customer touchpoint — WhatsApp, Instagram, TikTok, Facebook, email, SMS, web chat — into one team inbox. No lead falls through the cracks, ever.', bullets: ['Unified inbox across 40+ channels', 'WhatsApp Business API integration', 'Conversation-Led Growth™ framework', 'Real-time routing and context handoff'] },
+    { tag: '04', icon: '💰', title: 'Existing Lead Monetization', body: 'AI Customer System mines your existing CRM for profit. Broadcast campaigns, re-engagement sequences, and AI-powered nurture flows turn dormant contacts into revenue — averaging 42.5x ROI.', bullets: ['WhatsApp broadcast campaigns (42.5x ROI)', 'Dormant database re-engagement flows', 'Behavior-triggered personalized sequences', 'Segment by intent, lifecycle stage, value'] },
+  ],
+  de: [
+    { tag: '01', icon: '🤖', title: 'KI-Lead-Qualifizierung', body: 'KI-Kundensystem qualifiziert jeden eingehenden Lead 24/7 mit Respond.io KI-Agenten. Intent, Budget, Timeline — bewertet in unter 60 Sekunden über WhatsApp, Instagram, TikTok, Facebook und 8+ weiteren Kanälen.', bullets: ['KI-Agenten auf Respond.io übernehmen den ersten Kontakt', 'BANT-Qualifizierung in jeder Sprache', 'Heiße Leads an Vertrieb · Kalte Leads in Nurture', '80% der Routine-Anfragen automatisiert'] },
+    { tag: '02', icon: '🎨', title: 'KI-Ad-Creative-Engine', body: 'KI-Kundensystem generiert hochkonvertierende Werbemittel mit AdCreative.ai — trainiert auf $35Mrd+ Werbeausgaben-Daten. Neue Varianten jede Woche.', bullets: ['KI-Creatives in Minuten statt Tagen', 'Trainiert auf $35Mrd+ Werbeausgaben-Daten', 'Creative Scoring KI — 90%+ Genauigkeit', 'Multi-Plattform: Meta, TikTok, Google, LinkedIn'] },
+    { tag: '03', icon: '📱', title: 'Omnichannel Lead-Erfassung', body: 'KI-Kundensystem vereint alle Kundenkontaktpunkte — WhatsApp, Instagram, TikTok, Facebook, E-Mail, SMS — in einem Team-Posteingang.', bullets: ['Unified Inbox über 40+ Kanäle', 'WhatsApp Business API Integration', 'Conversation-Led Growth™ Framework', 'Echtzeit-Routing und Kontext-Übergabe'] },
+    { tag: '04', icon: '💰', title: 'Monetarisierung bestehender Leads', body: 'KI-Kundensystem erschließt Ihr bestehendes CRM als Gewinnquelle. Broadcast-Kampagnen, Re-Engagement-Sequenzen und KI-gesteuerte Nurture-Flows verwandeln ruhende Kontakte in Umsatz — mit durchschnittlich 42,5× ROI.', bullets: ['WhatsApp Broadcast-Kampagnen (42.5× ROI)', 'Re-Engagement-Flows für inaktive Kontakte', 'Verhaltensgesteuerte personalisierte Sequenzen', 'Segmentierung nach Intent, Lifecycle, Wert'] },
+  ],
+  sl: [
+    { tag: '01', icon: '🤖', title: 'Kvalifikacija leadov z AI', body: 'AI sistem za stranke kvalificira vsak vhodni lead 24/7 z Respond.io AI agenti. Namera, proračun, časovnica — ocenjeno v manj kot 60 sekundah prek WhatsApp, Instagram, TikTok, Facebook in 8+ kanalov.', bullets: ['AI agenti na Respond.io prevzamejo prvi stik', 'BANT kvalifikacija v vsakem jeziku', 'Vroči leadi → prodaja · Hladni leadi → negovanje', '80% rutinskih poizvedb je avtomatiziranih'] },
+    { tag: '02', icon: '🎨', title: 'AI motor za oglasne kreative', body: 'AI sistem za stranke generira visoko konvertirajoče oglasne kreative z AdCreative.ai — naučen na $35 mld+ podatkov o oglaševalski porabi.', bullets: ['AI kreative v minutah, ne dneh', 'Naučen na $35 mld+ podatkih o oglasih', 'AI ocenjevanje kreativov — 90%+ natančnost', 'Multi-platforma: Meta, TikTok, Google, LinkedIn'] },
+    { tag: '03', icon: '📱', title: 'Omnikanalsko zajemanje leadov', body: 'AI sistem za stranke združi vse stike s strankami — WhatsApp, Instagram, TikTok, Facebook, e-pošta, SMS — v eno ekipno mapo.', bullets: ['Enotna mapa prek 40+ kanalov', 'Integracija WhatsApp Business API', 'Okvir Conversation-Led Growth™', 'Usmerjanje v realnem času'] },
+    { tag: '04', icon: '💰', title: 'Monetizacija obstoječih leadov', body: 'AI sistem za stranke izkoristi vaš obstoječi CRM za dobiček. Broadcast kampanje in AI toki negovanja pretvorijo mirne kontakte v prihodek — povprečni ROI 42,5×.', bullets: ['WhatsApp broadcast kampanje (42.5× ROI)', 'Tokovi ponovnega vključevanja', 'Personalizirane sekvence na podlagi vedenja', 'Segmentacija po nameri, fazi, vrednosti'] },
+  ],
+  hr: [
+    { tag: '01', icon: '🤖', title: 'AI kvalifikacija potencijalnih kupaca', body: 'AI sustav za kupce kvalificira svaki dolazni lead 24/7 Respond.io AI agentima. Namjera, budžet, rok — ocijenjeno za manje od 60 sekundi na WhatsApp, Instagram, TikTok, Facebook i 8+ kanala.', bullets: ['AI agenti na Respond.io preuzimaju prvi kontakt', 'BANT kvalifikacija na svakom jeziku', 'Vrući leadi → prodaja · Hladni leadi → nurture', '80% rutinskih upita je automatizirano'] },
+    { tag: '02', icon: '🎨', title: 'AI motor za oglasne kreative', body: 'AI sustav za kupce generira visoko-konvertirajuće oglasne kreative koristeći AdCreative.ai — naučen na $35mlrd+ podataka o potrošnji na oglase.', bullets: ['AI kreative za minute, ne dane', 'Naučen na $35mlrd+ podataka o oglasima', 'AI ocjena kreativa — 90%+ točnost', 'Multi-platforma: Meta, TikTok, Google, LinkedIn'] },
+    { tag: '03', icon: '📱', title: 'Omnikanalsko hvatanje leadova', body: 'AI sustav za kupce ujedinjuje sve dodirne točke s klijentima — WhatsApp, Instagram, TikTok, Facebook, e-pošta, SMS — u jedan timski inbox.', bullets: ['Ujedinjeni inbox na 40+ kanala', 'Integracija WhatsApp Business API', 'Conversation-Led Growth™ okvir', 'Usmjeravanje i kontekst u realnom vremenu'] },
+    { tag: '04', icon: '💰', title: 'Monetizacija postojećih leadova', body: 'AI sustav za kupce iskorištava vaš postojeći CRM za profit. Broadcast kampanje i AI tokovi negovanja pretvaraju mirne kontakte u prihod — prosječni ROI 42,5×.', bullets: ['WhatsApp broadcast kampanje (42.5× ROI)', 'Tokovi ponovnog angažmana', 'Personalizirani nizovi na temelju ponašanja', 'Segmentacija po namjeri, fazi, vrijednosti'] },
+  ],
+  fr: [
+    { tag: '01', icon: '🤖', title: 'Qualification IA des leads', body: 'Système client IA qualifie chaque lead entrant 24/7 avec les agents IA Respond.io. Intention, budget, délai — scoré en moins de 60 secondes sur WhatsApp, Instagram, TikTok, Facebook et 8+ canaux.', bullets: ['Agents IA Respond.io pour le premier contact', 'Qualification BANT dans chaque langue', 'Leads chauds → ventes · Leads froids → nurturing', '80% des demandes routinières automatisées'] },
+    { tag: '02', icon: '🎨', title: 'Moteur créatif publicitaire IA', body: 'Système client IA génère des créatifs publicitaires hautement convertissants avec AdCreative.ai — formé sur $35Mds+ de données de dépenses publicitaires.', bullets: ['Créatifs IA en minutes, pas en jours', 'Formé sur $35Mds+ de données publicitaires', 'IA de scoring créatif — 90%+ de précision', 'Multi-plateforme : Meta, TikTok, Google, LinkedIn'] },
+    { tag: '03', icon: '📱', title: 'Capture omnicanale des leads', body: 'Système client IA unifie tous les points de contact client — WhatsApp, Instagram, TikTok, Facebook, email, SMS — dans une boîte de réception d\'équipe.', bullets: ['Boîte de réception unifiée sur 40+ canaux', 'Intégration WhatsApp Business API', 'Framework Conversation-Led Growth™', 'Routage en temps réel et transfert de contexte'] },
+    { tag: '04', icon: '💰', title: 'Monétisation des leads existants', body: 'Système client IA exploite votre CRM existant pour générer des profits. Campagnes broadcast, séquences de réengagement et flux de nurturing IA convertissent les contacts dormants en revenus — ROI moyen 42,5×.', bullets: ['Campagnes broadcast WhatsApp (ROI 42,5×)', 'Flux de réengagement des contacts inactifs', 'Séquences personnalisées déclenchées par le comportement', 'Segmentation par intention, étape, valeur'] },
+  ],
+}[lang] ?? services['en'];
+
+const faqItems = {
+  en: [
+    { q: 'What is an AI Customer System?', a: 'AI Customer System is a fully managed lead qualification and conversion engine combining Respond.io (omnichannel AI conversation) and AdCreative.ai (AI-generated ad creatives). It qualifies new leads automatically, converts them, and generates profit from your existing lead database — without adding headcount.' },
+    { q: 'How quickly can we expect results?', a: 'Most agencies see their first AI-qualified leads within 10 days. A full system build takes 3–4 weeks. Broadcast campaigns for existing leads typically generate ROI within the first month.' },
+    { q: 'Which channels does it support?', a: 'AI Customer System connects to 40+ channels: WhatsApp Business API, Instagram DM, TikTok, Facebook Messenger, email, SMS, web chat, Telegram, Viber, and more. All conversations flow into one Respond.io inbox.' },
+    { q: 'What ROI can agencies expect?', a: 'WhatsApp broadcast campaigns average 42.5x ROI. AI-generated creatives deliver 14x more conversions. AI qualification achieves 81% lead conversion rates. Most agencies recoup investment in under 45 days.' },
+    { q: 'Can we white-label this for our clients?', a: 'Yes. We configure and manage the entire AI Customer System infrastructure under your brand. You focus on client relationships. Ask about our agency partner program on the strategy call.' },
+    { q: 'How does it integrate with our existing CRM?', a: 'AI Customer System integrates natively with HubSpot, Salesforce, Pipedrive, and 50+ CRMs through Respond.io\'s native integrations and Zapier. Your CRM stays the system of record.' },
+  ],
+  de: [
+    { q: 'Was ist ein KI-Kundensystem?', a: 'KI-Kundensystem ist eine vollständig verwaltete Lead-Qualifizierungs- und Konversionsmaschine, die Respond.io (omnichannel KI-Kommunikation) und AdCreative.ai (KI-generierte Werbemittel) kombiniert. Es qualifiziert automatisch, konvertiert und generiert Gewinn aus Ihrer bestehenden Lead-Datenbank.' },
+    { q: 'Wie schnell können wir Ergebnisse erwarten?', a: 'Die meisten Agenturen sehen ihre ersten KI-qualifizierten Leads innerhalb von 10 Tagen. Ein vollständiger System-Aufbau dauert 3–4 Wochen. Broadcast-Kampagnen für bestehende Leads generieren typischerweise innerhalb des ersten Monats ROI.' },
+    { q: 'Welche Kanäle werden unterstützt?', a: 'KI-Kundensystem verbindet 40+ Kanäle: WhatsApp Business API, Instagram DM, TikTok, Facebook Messenger, E-Mail, SMS, Web-Chat, Telegram, Viber und mehr.' },
+    { q: 'Welchen ROI können Agenturen erwarten?', a: 'WhatsApp Broadcast-Kampagnen erzielen durchschnittlich 42,5× ROI. KI-generierte Creatives liefern 14× mehr Konversionen. KI-Qualifizierung erreicht 81% Lead-Konversionsraten. Die meisten Agenturen amortisieren ihre Investition in unter 45 Tagen.' },
+    { q: 'Können wir dies für unsere Kunden white-labeln?', a: 'Ja. Wir konfigurieren und verwalten die gesamte KI-Kundensystem-Infrastruktur unter Ihrer Marke. Fragen Sie nach unserem Agenturpartnerprogramm beim Strategiegespräch.' },
+    { q: 'Wie lässt es sich in unser bestehendes CRM integrieren?', a: 'KI-Kundensystem integriert sich nativ mit HubSpot, Salesforce, Pipedrive und 50+ CRMs über die nativen Integrationen von Respond.io und Zapier.' },
+  ],
+  sl: [
+    { q: 'Kaj je AI sistem za stranke?', a: 'AI sistem za stranke je v celoti upravljan motor za kvalifikacijo in konverzijo leadov, ki združuje Respond.io in AdCreative.ai. Samodejno kvalificira nove leade, jih konvertira in ustvarja dobiček iz obstoječe baze leadov.' },
+    { q: 'Kako hitro lahko pričakujemo rezultate?', a: 'Večina agencij vidi prve AI-kvalificirane leade v 10 dneh. Celoten sistem potrebuje 3–4 tedne. Broadcast kampanje za obstoječe leade tipično ustvarijo ROI v prvem mesecu.' },
+    { q: 'Katere kanale podpira?', a: 'AI sistem za stranke se poveže s 40+ kanali: WhatsApp Business API, Instagram DM, TikTok, Facebook Messenger, e-pošta, SMS, spletni klepet, Telegram, Viber in več.' },
+    { q: 'Kakšen ROI lahko pričakujejo agencije?', a: 'WhatsApp broadcast kampanje dosegajo povprečni ROI 42,5×. AI kreative dosegajo 14× več konverzij. AI kvalifikacija doseže 81% stopnjo konverzije leadov.' },
+    { q: 'Ali lahko to ponujamo pod svojo blagovno znamko?', a: 'Da. Konfiguriramo in upravljamo celotno infrastrukturo AI sistema za stranke pod vašo blagovno znamko. Vprašajte o partnerskem programu za agencije.' },
+    { q: 'Kako se integrira z obstoječim CRM?', a: 'AI sistem za stranke se nativno integrira s HubSpot, Salesforce, Pipedrive in 50+ CRM-ji prek Respond.io integracij in Zapier.' },
+  ],
+  hr: [
+    { q: 'Što je AI sustav za kupce?', a: 'AI sustav za kupce je potpuno upravljani motor za kvalifikaciju i konverziju leadova koji kombinira Respond.io i AdCreative.ai. Automatski kvalificira nove leade, konvertira ih i generira profit iz postojeće baze.' },
+    { q: 'Koliko brzo možemo očekivati rezultate?', a: 'Većina agencija vidi prve AI-kvalificirane leade unutar 10 dana. Potpuni sustav zahtijeva 3–4 tjedna. Broadcast kampanje za postojeće leade tipično generiraju ROI unutar prvog mjeseca.' },
+    { q: 'Koje kanale podržava?', a: 'AI sustav za kupce povezuje 40+ kanala: WhatsApp Business API, Instagram DM, TikTok, Facebook Messenger, e-pošta, SMS, web chat, Telegram, Viber i više.' },
+    { q: 'Kakav ROI agencije mogu očekivati?', a: 'WhatsApp broadcast kampanje prosječno postižu 42,5× ROI. AI kreative donose 14× više konverzija. AI kvalifikacija postiže 81% stopu konverzije leadova.' },
+    { q: 'Možemo li ovo white-labelirati za naše klijente?', a: 'Da. Konfiguriramo i upravljamo cjelokupnom infrastrukturom AI sustava za kupce pod vašim brendom. Upitajte o agencijskom partnerskom programu.' },
+    { q: 'Kako se integrira s postojećim CRM-om?', a: 'AI sustav za kupce integrira se nativno s HubSpot, Salesforce, Pipedrive i 50+ CRM-ova putem Respond.io integracija i Zapier.' },
+  ],
+  fr: [
+    { q: 'Qu\'est-ce qu\'un Système client IA ?', a: 'Système client IA est un moteur de qualification et de conversion de leads entièrement géré, combinant Respond.io et AdCreative.ai. Il qualifie automatiquement, convertit et génère des profits depuis votre base de leads existante.' },
+    { q: 'Combien de temps pour voir des résultats ?', a: 'La plupart des agences voient leurs premiers leads qualifiés par IA en 10 jours. La construction complète du système prend 3 à 4 semaines. Les campagnes broadcast génèrent généralement un ROI dès le premier mois.' },
+    { q: 'Quels canaux sont pris en charge ?', a: 'Système client IA se connecte à 40+ canaux : WhatsApp Business API, Instagram DM, TikTok, Facebook Messenger, email, SMS, chat web, Telegram, Viber et plus.' },
+    { q: 'Quel ROI les agences peuvent-elles attendre ?', a: 'Les campagnes broadcast WhatsApp affichent en moyenne 42,5× de ROI. Les créatifs générés par IA livrent 14× plus de conversions. La qualification IA atteint 81% de taux de conversion des leads.' },
+    { q: 'Peut-on white-labéliser pour nos clients ?', a: 'Oui. Nous configurons et gérons toute l\'infrastructure du Système client IA sous votre marque. Renseignez-vous sur notre programme partenaire agence.' },
+    { q: 'Comment s\'intègre-t-il avec notre CRM existant ?', a: 'Système client IA s\'intègre nativement avec HubSpot, Salesforce, Pipedrive et 50+ CRMs via les intégrations Respond.io et Zapier.' },
+  ],
+}[lang] ?? faqItems['en'];
+---
+
+<section class="aic-wrap">
+
+  <!-- Hero -->
+  <div class="aic-hero">
+    <span class="aic-eyebrow">🏆 {t.eyebrow}</span>
+    <h1 class="aic-h1">
+      {t.h1_1}<br/>
+      <em class="aic-accent">{t.h1_2}</em><br/>
+      {t.h1_3}
+    </h1>
+    <p class="aic-lead">{t.lead}</p>
+    <div class="aic-actions">
+      <a href="#book" class="aic-btn aic-btn--primary">{t.cta_primary} →</a>
+      <a href="#process" class="aic-btn aic-btn--ghost">{t.cta_secondary}</a>
+    </div>
+    <p class="aic-proof"><strong>{t.proof}</strong> — {t.proof_sub}</p>
+  </div>
+
+  <!-- Stats -->
+  <div class="aic-stats" id="stats">
+    {stats.map(s => (
+      <div class="aic-stat">
+        <div class="aic-stat__num">{s.n}</div>
+        <div class="aic-stat__label">{s.l}</div>
+        <div class="aic-stat__caption">{s.c}</div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Services -->
+  <div class="aic-services" id="engines">
+    <div class="aic-section-head">
+      <span class="aic-eyebrow">{t.services_eyebrow}</span>
+      <h2 class="aic-h2">
+        {t.services_h2_1} <em class="aic-accent">{t.services_h2_2}</em>
+      </h2>
+    </div>
+    <div class="aic-services__grid">
+      {services.map(s => (
+        <div class="aic-service-card">
+          <span class="aic-service-card__icon">{s.icon}</span>
+          <span class="aic-service-card__tag">{s.tag}</span>
+          <h3 class="aic-service-card__title">{s.title}</h3>
+          <p class="aic-service-card__body">{s.body}</p>
+          <ul class="aic-service-card__bullets">
+            {s.bullets.map(b => <li>{b}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="aic-faq" id="faq">
+    <div class="aic-section-head">
+      <span class="aic-eyebrow">{t.faq_eyebrow}</span>
+      <h2 class="aic-h2">{t.faq_h2}</h2>
+    </div>
+    <div class="aic-faq__list">
+      {faqItems.map((item, i) => (
+        <details class="aic-faq__item">
+          <summary class="aic-faq__q">
+            <span class="aic-faq__num">{String(i + 1).padStart(2, '0')}</span>
+            {item.q}
+          </summary>
+          <div class="aic-faq__a">{item.a}</div>
+        </details>
+      ))}
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="aic-cta" id="book">
+    <span class="aic-eyebrow">{t.cta_eyebrow}</span>
+    <h2 class="aic-h2">
+      {t.cta_h2_1} <em class="aic-accent">{t.cta_h2_2}</em>
+    </h2>
+    <p class="aic-lead">{t.cta_lead}</p>
+    <a href="/contact/" class="aic-btn aic-btn--primary">{t.book} →</a>
+  </div>
+
+</section>
+
+<style lang="scss">
+  @import '../styles/utils/variables';
+  @import '../styles/utils/mixins';
+
+  .aic-wrap {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    color: var(--fg-0, #f6f1ea);
+    container-type: inline-size;
+  }
+
+  /* Shared */
+  .aic-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; font-family: var(--font-mono, monospace);
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--fg-2, #8a847b);
+  }
+  .aic-accent { font-style: italic; color: var(--brand-primary, #ff8c42); }
+  .aic-h1 {
+    font-family: var(--font-display, serif);
+    font-size: clamp(40px, 6vw, 88px);
+    line-height: 1; letter-spacing: -0.02em; font-weight: 400; margin: 16px 0;
+  }
+  .aic-h2 {
+    font-family: var(--font-display, serif);
+    font-size: clamp(32px, 4vw, 60px);
+    line-height: 1.05; letter-spacing: -0.02em; font-weight: 400; margin: 16px 0;
+  }
+  .aic-lead {
+    font-size: clamp(15px, 1.2vw, 18px);
+    color: var(--fg-1, #c9c2b8); line-height: 1.6; max-width: 60ch;
+  }
+
+  /* Buttons */
+  .aic-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    height: 48px; padding: 0 22px; border-radius: 999px;
+    font-size: 15px; font-weight: 500; text-decoration: none;
+    transition: transform .15s, background .15s;
+  }
+  .aic-btn--primary {
+    background: var(--brand-primary, #ff8c42); color: #1a0d04;
+    box-shadow: 0 10px 24px rgba(255,140,66,0.35);
+    &:hover { transform: translateY(-1px); }
+  }
+  .aic-btn--ghost {
+    background: rgba(255,255,255,0.04); color: var(--fg-0, #f6f1ea);
+    border: 1px solid var(--line, #2a2725);
+    &:hover { background: rgba(255,255,255,0.08); }
+  }
+
+  /* Hero */
+  .aic-hero {
+    padding: 80px 0 64px; text-align: center;
+  }
+  .aic-actions {
+    display: flex; gap: 12px; justify-content: center;
+    margin-top: 32px; flex-wrap: wrap;
+  }
+  .aic-proof {
+    margin-top: 28px; font-size: 14px; color: var(--fg-2, #8a847b);
+  }
+
+  /* Stats */
+  .aic-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--line, #2a2725);
+    border-radius: 14px; overflow: hidden;
+    background: var(--line, #2a2725); gap: 1px;
+    margin-bottom: 96px;
+  }
+  .aic-stat {
+    background: var(--bg-1, #111110); padding: 36px 28px; text-align: center;
+  }
+  .aic-stat__num {
+    font-family: var(--font-display, serif);
+    font-size: clamp(36px, 4vw, 56px);
+    line-height: 1; color: var(--brand-primary, #ff8c42);
+  }
+  .aic-stat__label { font-weight: 600; margin-top: 10px; font-size: 14px; }
+  .aic-stat__caption { font-size: 12px; color: var(--fg-2, #8a847b); margin-top: 4px; }
+
+  /* Section head */
+  .aic-section-head {
+    text-align: center; margin-bottom: 56px;
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+  }
+
+  /* Services */
+  .aic-services { margin-bottom: 96px; }
+  .aic-services__grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+  }
+  .aic-service-card {
+    background: linear-gradient(180deg, var(--bg-2, #1a1816), var(--bg-1, #111110));
+    border: 1px solid var(--line, #2a2725);
+    border-radius: 14px; padding: 32px;
+  }
+  .aic-service-card__icon { font-size: 28px; display: block; margin-bottom: 8px; }
+  .aic-service-card__tag {
+    font-family: var(--font-mono, monospace); font-size: 11px;
+    color: var(--fg-3, #5a544c); letter-spacing: 0.1em;
+  }
+  .aic-service-card__title {
+    font-family: var(--font-display, serif);
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-weight: 400; margin: 8px 0 12px;
+  }
+  .aic-service-card__body {
+    font-size: 14px; color: var(--fg-1, #c9c2b8); line-height: 1.6; margin-bottom: 16px;
+  }
+  .aic-service-card__bullets {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 8px;
+    li {
+      font-size: 13px; color: var(--fg-1, #c9c2b8);
+      padding-left: 16px; position: relative;
+      &::before {
+        content: ''; position: absolute; left: 0; top: 7px;
+        width: 5px; height: 5px; border-radius: 50%;
+        background: var(--brand-primary, #ff8c42);
+      }
+    }
+  }
+
+  /* FAQ */
+  .aic-faq { margin-bottom: 96px; }
+  .aic-faq__list { max-width: 760px; margin: 0 auto; }
+  .aic-faq__item {
+    border-bottom: 1px solid var(--line, #2a2725);
+    &:first-child { border-top: 1px solid var(--line, #2a2725); }
+  }
+  .aic-faq__q {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 20px 0; cursor: pointer; list-style: none;
+    font-weight: 500; font-size: 15px; color: var(--fg-0, #f6f1ea);
+    &::-webkit-details-marker { display: none; }
+    &:hover { color: var(--brand-primary, #ff8c42); }
+  }
+  .aic-faq__num {
+    font-family: var(--font-mono, monospace); font-size: 11px;
+    color: var(--fg-3, #5a544c); flex-shrink: 0; padding-top: 3px;
+    letter-spacing: 0.1em;
+  }
+  .aic-faq__a {
+    padding: 0 0 20px 36px;
+    font-size: 14px; color: var(--fg-1, #c9c2b8); line-height: 1.65;
+  }
+
+  /* CTA */
+  .aic-cta {
+    background: linear-gradient(180deg, var(--bg-2, #1a1816), var(--bg-1, #111110));
+    border: 1px solid var(--line, #2a2725);
+    border-radius: 28px; padding: 64px 72px;
+    text-align: center; margin-bottom: 64px;
+    position: relative; overflow: hidden;
+    &::before {
+      content: ''; position: absolute;
+      top: -120px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 300px;
+      background: radial-gradient(ellipse at center top, rgba(255,140,66,0.22) 0%, transparent 65%);
+      filter: blur(40px); pointer-events: none;
+    }
+    .aic-eyebrow, .aic-h2, .aic-lead, .aic-btn { position: relative; z-index: 1; }
+    .aic-lead { margin: 16px auto 32px; }
+  }
+
+  /* Responsive */
+  @container (max-width: 960px) {
+    .aic-stats { grid-template-columns: repeat(2, 1fr); }
+    .aic-services__grid { grid-template-columns: 1fr; }
+    .aic-cta { padding: 48px 32px; }
+  }
+  @container (max-width: 600px) {
+    .aic-stats { grid-template-columns: 1fr 1fr; }
+    .aic-cta { padding: 36px 20px; border-radius: 16px; }
+  }
+</style>

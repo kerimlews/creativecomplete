@@ -1,0 +1,1005 @@
+---
+// HeroMotion.astro — AI Customer System live dashboard
+// 3 phases: Lead Capture → AI Qualify → Campaign Launch
+// Social integrations orbit around the dashboard card
+---
+
+<div class="v2-hm" id="v2Hm">
+
+  <!-- ── Orbiting integration icons ────────────────────────── -->
+  <div class="v2-hm__orbs" aria-hidden="true">
+
+    <!-- WhatsApp — left top -->
+    <div class="v2-hm__orb wa" style="--d:0s">
+      <svg width="30" height="30" viewBox="0 0 30 30">
+        <rect width="30" height="30" rx="8" fill="#25d366"/>
+        <path d="M15 5C9.48 5 5 9.48 5 15c0 1.85.5 3.59 1.38 5.08L5 25l5.04-1.35A10 10 0 1015 5zm0 18.2A8.2 8.2 0 116.8 15c0 1.5.41 2.9 1.12 4.1l.7 1.14-1.1.29 1.22-.04.75.75A8.18 8.18 0 0015 23.2zm4.6-5.86c-.24-.12-1.4-.69-1.62-.77-.21-.08-.37-.12-.52.12-.16.24-.6.77-.74.93-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2a7.3 7.3 0 01-1.34-1.67c-.14-.24-.01-.37.1-.49.1-.1.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4h-.45c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16z" fill="white"/>
+      </svg>
+      <span class="v2-hm__orb-ring"></span>
+    </div>
+
+    <!-- Instagram — right top -->
+    <div class="v2-hm__orb ig" style="--d:.45s">
+      <svg width="30" height="30" viewBox="0 0 30 30">
+        <defs><linearGradient id="hig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="35%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs>
+        <rect width="30" height="30" rx="8" fill="url(#hig)"/>
+        <rect x="7" y="7" width="16" height="16" rx="4.5" fill="none" stroke="white" stroke-width="1.8"/>
+        <circle cx="15" cy="15" r="4.5" fill="none" stroke="white" stroke-width="1.8"/>
+        <circle cx="21.5" cy="8.5" r="1.3" fill="white"/>
+      </svg>
+      <span class="v2-hm__orb-ring"></span>
+    </div>
+
+    <!-- TikTok — left mid -->
+    <div class="v2-hm__orb tt" style="--d:.9s">
+      <svg width="30" height="30" viewBox="0 0 30 30">
+        <rect width="30" height="30" rx="8" fill="#010101"/>
+        <path d="M20.4 8.4a5.6 5.6 0 01-3.4-3.6h-2.8v13.7a2.84 2.84 0 01-2.83 2.6 2.84 2.84 0 01-2.84-2.84 2.84 2.84 0 012.84-2.84c.27 0 .53.04.77.11v-2.9a6.56 6.56 0 00-.77-.05 6.56 6.56 0 00-6.56 6.56 6.56 6.56 0 006.56 6.56 6.56 6.56 0 006.56-6.56V11.3a9.1 9.1 0 005.3 1.68V10.1a5.6 5.6 0 01-2.77-.33z" fill="white"/>
+      </svg>
+      <span class="v2-hm__orb-ring"></span>
+    </div>
+
+    <!-- Facebook — right mid -->
+    <div class="v2-hm__orb fb" style="--d:1.35s">
+      <svg width="30" height="30" viewBox="0 0 30 30">
+        <rect width="30" height="30" rx="8" fill="#1877f2"/>
+        <path d="M17.5 30V19h3.8l.57-4.4H17.5v-2.78c0-1.2.33-2.02 2.12-2.02H22V6.17A28.2 28.2 0 0018.8 6c-3.4 0-5.72 2.08-5.72 5.9v3.7H9.3V20h3.78V30h4.42z" fill="white"/>
+      </svg>
+      <span class="v2-hm__orb-ring"></span>
+    </div>
+
+    <!-- Meta Ads — top center -->
+    <div class="v2-hm__orb meta" style="--d:1.8s">
+      <svg width="30" height="30" viewBox="0 0 30 30">
+        <rect width="30" height="30" rx="8" fill="#0668E1"/>
+        <path d="M5 17.5C5 19.7 6.5 21.5 8.5 21.5s3.5-1.8 3.5-4c0-.65-.12-1.26-.34-1.8l-3.16-5.2-3.16 5.2c-.22.54-.34 1.15-.34 1.8zM15 13l-2.3 4h4.6L15 13zm6.5 8.5c1.93 0 3.5-1.8 3.5-4 0-.65-.12-1.26-.34-1.8l-3.16-5.2-3.16 5.2c-.22.54-.34 1.15-.34 1.8 0 2.2 1.57 4 3.5 4z" fill="white"/>
+      </svg>
+      <span class="v2-hm__orb-ring"></span>
+    </div>
+
+    <!-- Google Ads — bottom right -->
+    <div class="v2-hm__orb gg" style="--d:2.25s">
+      <svg width="30" height="30" viewBox="0 0 30 30">
+        <rect width="30" height="30" rx="8" fill="#1a1a2e" opacity=".8"/>
+        <rect width="30" height="30" rx="8" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+        <path d="M24.5 15.24c0-.73-.07-1.44-.18-2.13H15v4.03h5.55a4.73 4.73 0 01-2.06 3.1v2.58h3.32C23.6 21.1 24.5 18.4 24.5 15.24z" fill="#4285f4"/>
+        <path d="M15 25c2.77 0 5.1-.92 6.81-2.5l-3.32-2.58c-.92.62-2.1.98-3.49.98-2.68 0-4.95-1.81-5.76-4.24H5.84v2.67C7.53 22.56 11.07 25 15 25z" fill="#34a853"/>
+        <path d="M9.24 16.66a5.94 5.94 0 01-.31-1.84c0-.64.11-1.26.31-1.84V10.1H5.84A10.44 10.44 0 005 14.82c0 1.68.4 3.27 1.12 4.67l3.12-2.83z" fill="#fbbc05"/>
+        <path d="M15 9.14c1.52 0 2.88.52 3.95 1.54l2.95-2.95C20.09 6.08 17.77 5 15 5c-3.93 0-7.47 2.44-9.16 6.1l3.4 2.64C10.05 10.95 12.32 9.14 15 9.14z" fill="#ea4335"/>
+      </svg>
+      <span class="v2-hm__orb-ring"></span>
+    </div>
+
+    <!-- Email — left bottom -->
+    <div class="v2-hm__orb em" style="--d:2.7s">
+      <svg width="30" height="30" viewBox="0 0 30 30">
+        <rect width="30" height="30" rx="8" fill="#6366f1"/>
+        <rect x="5" y="9" width="20" height="13" rx="2" fill="none" stroke="white" stroke-width="1.8"/>
+        <polyline points="5,10.5 15,17.5 25,10.5" fill="none" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+      </svg>
+      <span class="v2-hm__orb-ring"></span>
+    </div>
+
+    <!-- SMS — bottom center -->
+    <div class="v2-hm__orb sms" style="--d:3.15s">
+      <svg width="30" height="30" viewBox="0 0 30 30">
+        <rect width="30" height="30" rx="8" fill="#22d3ee"/>
+        <path d="M6 8h18a1 1 0 011 1v11a1 1 0 01-1 1H10l-5 4V9a1 1 0 011-1z" fill="none" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M10 14h10M10 11h7" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <span class="v2-hm__orb-ring"></span>
+    </div>
+
+  </div>
+
+  <!-- ── Sci-fi corner brackets ─────────────────────────────── -->
+  <span class="v2-hm__corner tl" aria-hidden="true"></span>
+  <span class="v2-hm__corner tr" aria-hidden="true"></span>
+  <span class="v2-hm__corner bl" aria-hidden="true"></span>
+  <span class="v2-hm__corner br" aria-hidden="true"></span>
+  <div class="v2-hm__scan"       aria-hidden="true"></div>
+
+  <!-- ── Header ─────────────────────────────────────────────── -->
+  <div class="v2-hm__hdr">
+    <div class="v2-hm__live">
+      <span class="v2-hm__live-dot"></span>
+      AI Customer System
+    </div>
+    <nav class="v2-hm__tabs">
+      <button class="v2-hm__tab on" data-p="0">01 Capture</button>
+      <button class="v2-hm__tab"    data-p="1">02 Qualify</button>
+      <button class="v2-hm__tab"    data-p="2">03 Campaign</button>
+    </nav>
+  </div>
+
+  <!-- ── Progress bar ───────────────────────────────────────── -->
+  <div class="v2-hm__prog-track">
+    <div class="v2-hm__prog-fill" id="v2HmProg"></div>
+  </div>
+
+  <!-- ── 3-column body ──────────────────────────────────────── -->
+  <div class="v2-hm__body">
+
+    <!-- Sidebar icon nav -->
+    <nav class="v2-hm__sb">
+      <div class="v2-hm__sb-i on">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M1.5 2.5h13v9h-13zM1.5 11.5l3.5-3.5M14.5 11.5l-3.5-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="v2-hm__sb-i">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="6" r="3" stroke="currentColor" stroke-width="1.3"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </div>
+      <div class="v2-hm__sb-i">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2" y="10" width="3" height="4" rx=".5" fill="currentColor" opacity=".35"/><rect x="6.5" y="7" width="3" height="7" rx=".5" fill="currentColor" opacity=".6"/><rect x="11" y="3" width="3" height="11" rx=".5" fill="currentColor"/></svg>
+      </div>
+      <div class="v2-hm__sb-i">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 3h10v7H9.5L7 13V10H3z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="v2-hm__sb-badge" id="v2SbN">80</span>
+    </nav>
+
+    <!-- Inbox panel -->
+    <div class="v2-hm__inbox">
+
+      <div class="v2-hm__in-hdr">
+        <span class="v2-hm__in-title">Inbox</span>
+        <span class="v2-hm__in-count" id="v2InC">80</span>
+      </div>
+
+      <!-- AI Agents -->
+      <div class="v2-hm__grp-lbl">AI Agents <span>▲</span></div>
+      <div class="v2-hm__agent-row">
+        <div class="v2-hm__av-sm">A</div>
+        <span class="v2-hm__agent-name">AI Sales Agent</span>
+        <span class="v2-hm__n-badge">50</span>
+      </div>
+
+      <!-- Lifecycle -->
+      <div class="v2-hm__grp-lbl">Lifecycle <span>▲</span></div>
+      <div class="v2-hm__lc-list">
+        <div class="v2-hm__lc">
+          <svg width="10" height="10" viewBox="0 0 10 10"><rect width="10" height="10" rx="2" fill="rgba(99,102,241,.25)"/><path d="M2 3.5h6M2 5h4.5M2 6.5h3" stroke="#818cf8" stroke-width="1" stroke-linecap="round"/></svg>
+          New Lead<span class="v2-hm__n" id="v2NL">13</span>
+        </div>
+        <div class="v2-hm__lc hot" id="v2LcHot">
+          🔥 Hot Lead<span class="v2-hm__n hot" id="v2HL">2</span>
+        </div>
+        <div class="v2-hm__lc">
+          <svg width="10" height="10" viewBox="0 0 10 10"><rect width="10" height="10" rx="2" fill="rgba(34,211,238,.15)"/><path d="M5 2v6M2.5 4.5L5 2l2.5 2.5" stroke="#22d3ee" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Payment<span class="v2-hm__n">2</span>
+        </div>
+        <div class="v2-hm__lc">
+          <svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="rgba(168,85,247,.2)"/><path d="M3 5l1.5 1.5L7 3" stroke="#a855f7" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Customer
+        </div>
+        <div class="v2-hm__lc">
+          <svg width="10" height="10" viewBox="0 0 10 10"><rect width="10" height="10" rx="2" fill="rgba(34,211,238,.1)"/><path d="M2 5l2 2 4-4" stroke="#22d3ee" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Closed · Won
+        </div>
+      </div>
+
+      <!-- Contact rows (JS-populated) -->
+      <div class="v2-hm__contacts" id="v2Ct"></div>
+
+    </div>
+
+    <!-- Right: phase panels -->
+    <div class="v2-hm__right">
+
+      <!-- ═══ Phase 0 — CAPTURE ═══ -->
+      <div class="v2-hm__panel on" id="v2P0" data-p="0">
+
+        <div class="v2-hm__p-eye">
+          <span class="v2-hm__live-dot"></span>
+          40+ channels · capturing now
+        </div>
+
+        <!-- Channel tags appear one by one -->
+        <div class="v2-hm__ch-grid">
+          <span class="v2-hm__chtag wa"  style="--d:.1s">WA</span>
+          <span class="v2-hm__chtag ig"  style="--d:.25s">IG</span>
+          <span class="v2-hm__chtag tt"  style="--d:.4s">TT</span>
+          <span class="v2-hm__chtag fb"  style="--d:.55s">FB</span>
+          <span class="v2-hm__chtag em"  style="--d:.7s">EMAIL</span>
+          <span class="v2-hm__chtag sms" style="--d:.85s">SMS</span>
+        </div>
+
+        <!-- Unify strip -->
+        <div class="v2-hm__unify" style="--d:1.1s">
+          <div class="v2-hm__unify-line"></div>
+          <span class="v2-hm__unify-txt">
+            <span class="v2-hm__live-dot" style="width:5px;height:5px"></span>
+            all channels · zero missed leads
+          </span>
+        </div>
+
+        <!-- Live lead feed -->
+        <div class="v2-hm__feed">
+          <div class="v2-hm__frow" style="--d:1.5s">
+            <div class="v2-hm__av ind">K</div>
+            <div class="v2-hm__frow-info">
+              <span class="v2-hm__frow-name">Kara Finley</span>
+              <span class="v2-hm__frow-src">WhatsApp · Meta Ad</span>
+            </div>
+            <span class="v2-hm__fscore hot">HOT 94</span>
+          </div>
+          <div class="v2-hm__frow" style="--d:2.0s">
+            <div class="v2-hm__av vio">M</div>
+            <div class="v2-hm__frow-info">
+              <span class="v2-hm__frow-name">Marc B.</span>
+              <span class="v2-hm__frow-src">Instagram DM</span>
+            </div>
+            <span class="v2-hm__fscore warm">WARM 74</span>
+          </div>
+          <div class="v2-hm__frow" style="--d:2.5s">
+            <div class="v2-hm__av cyn">E</div>
+            <div class="v2-hm__frow-info">
+              <span class="v2-hm__frow-name">Emma R.</span>
+              <span class="v2-hm__frow-src">TikTok Lead Gen</span>
+            </div>
+            <span class="v2-hm__fscore warm">WARM 61</span>
+          </div>
+        </div>
+
+        <!-- Score bar -->
+        <div class="v2-hm__q-bar" style="--d:3.2s">
+          <div class="v2-hm__q-row">
+            <span class="v2-hm__q-name">Kara F.</span>
+            <div class="v2-hm__q-track">
+              <div class="v2-hm__q-fill" style="--w:94%;--d:3.2s"></div>
+            </div>
+            <span class="v2-hm__q-val">94</span>
+          </div>
+          <div class="v2-hm__q-tags">
+            <span class="v2-hm__qtag hot">🔥 HOT LEAD</span>
+            <span class="v2-hm__qtag booked">📅 Booked · Thu 3pm</span>
+            <span class="v2-hm__qtag ai">AI · 34s</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ═══ Phase 1 — QUALIFY ═══ -->
+      <div class="v2-hm__panel" id="v2P1" data-p="1">
+
+        <div class="v2-hm__conv-hdr">
+          <div class="v2-hm__av ind">K</div>
+          <div class="v2-hm__conv-meta">
+            <span class="v2-hm__conv-name">Kara Finley</span>
+            <span class="v2-hm__conv-src">WhatsApp · Meta Ad</span>
+          </div>
+          <span class="v2-hm__hot-tag">🔥 Hot Lead</span>
+          <button class="v2-hm__close-btn">Close</button>
+        </div>
+
+        <!-- Messages -->
+        <div class="v2-hm__msgs" id="v2Msgs">
+
+          <div class="v2-hm__msg in" style="--d:.2s">
+            <div class="v2-hm__av-xs ind">K</div>
+            <div class="v2-hm__bbl">Hi! Saw your ad. Agency owner — 300 leads/mo, €8k budget. Can you help?</div>
+          </div>
+
+          <div class="v2-hm__typing" style="--d:.9s">
+            <span class="v2-hm__td"></span><span class="v2-hm__td"></span><span class="v2-hm__td"></span>
+            <span class="v2-hm__typing-lbl">AI qualifying · <b style="color:var(--c2)">34s</b></span>
+          </div>
+
+          <div class="v2-hm__msg out" style="--d:1.8s">
+            <div class="v2-hm__bbl ai">
+              Hi Kara! Are you the decision-maker? What's your current lead-to-sale conversion rate?
+              <div class="v2-hm__bbl-tag">AI Agent · Instant</div>
+            </div>
+          </div>
+
+          <div class="v2-hm__sys" style="--d:2.5s">
+            Lifecycle Stage <b>New Lead → Hot Lead</b> · AI Sales Agent
+          </div>
+
+          <div class="v2-hm__msg in" style="--d:3.1s">
+            <div class="v2-hm__av-xs ind">K</div>
+            <div class="v2-hm__bbl">Yes, sole decision-maker. ~12% — losing leads at follow-up.</div>
+          </div>
+
+          <div class="v2-hm__msg out" style="--d:3.9s">
+            <div class="v2-hm__bbl ai">
+              We have a slot in 30 minutes. Would you be available?
+              <div class="v2-hm__bbl-tag">AI Agent</div>
+            </div>
+          </div>
+
+          <div class="v2-hm__msg in" style="--d:4.7s">
+            <div class="v2-hm__av-xs ind">K</div>
+            <div class="v2-hm__bbl">Yes, I am free.</div>
+          </div>
+
+          <div class="v2-hm__sys confirmed" style="--d:5.4s">
+            @Sales team — <b>appointment confirmed</b> · Thu 3pm
+          </div>
+
+        </div>
+
+        <!-- Compose -->
+        <div class="v2-hm__compose">
+          <div class="v2-hm__comp-left">
+            <svg width="13" height="13" viewBox="0 0 30 30"><rect width="30" height="30" rx="7" fill="#25d366"/><path d="M15 5.5C9.8 5.5 5.5 9.8 5.5 15c0 1.7.45 3.3 1.24 4.67L5.5 24.5l4.97-1.22A9.5 9.5 0 1015 5.5z" fill="white"/></svg>
+            WhatsApp ▾
+          </div>
+          <div class="v2-hm__comp-ai">✨ AI Assist</div>
+        </div>
+
+      </div>
+
+      <!-- ═══ Phase 2 — CAMPAIGN ═══ -->
+      <div class="v2-hm__panel" id="v2P2" data-p="2">
+
+        <div class="v2-hm__p2-hdr">
+          <span class="v2-hm__p-eye" style="--dot-c:var(--c3);--dot-s:var(--c3)">
+            <span class="v2-hm__live-dot" style="background:var(--c3);box-shadow:0 0 8px var(--c3)"></span>
+            AI Creative Engine · Generating
+          </span>
+          <span class="v2-hm__chip-vio">4,000 contacts</span>
+        </div>
+
+        <!-- Brief prompt -->
+        <div class="v2-hm__brief" style="--d:.15s">
+          <span class="v2-hm__brief-lbl">BRIEF</span>
+          <span class="v2-hm__brief-txt">Agency lead gen · CEO audience · €5–10k<span class="v2-hm__cur">|</span></span>
+        </div>
+
+        <!-- 6 creative cards -->
+        <div class="v2-hm__cre-grid">
+          <div class="v2-hm__cre win" style="--d:.5s">
+            <div class="v2-hm__cre-img win"></div>
+            <div class="v2-hm__cre-foot"><span class="v2-hm__cre-sc win">▲ 97</span><span class="v2-hm__cre-chip">SCALING</span></div>
+            <div class="v2-hm__cre-shim"></div>
+          </div>
+          <div class="v2-hm__cre win" style="--d:.7s">
+            <div class="v2-hm__cre-img win"></div>
+            <div class="v2-hm__cre-foot"><span class="v2-hm__cre-sc win">▲ 91</span><span class="v2-hm__cre-chip">SCALING</span></div>
+            <div class="v2-hm__cre-shim"></div>
+          </div>
+          <div class="v2-hm__cre win" style="--d:.9s">
+            <div class="v2-hm__cre-img win"></div>
+            <div class="v2-hm__cre-foot"><span class="v2-hm__cre-sc win">▲ 89</span><span class="v2-hm__cre-chip">SCALING</span></div>
+            <div class="v2-hm__cre-shim"></div>
+          </div>
+          <div class="v2-hm__cre" style="--d:1.1s">
+            <div class="v2-hm__cre-img"></div>
+            <div class="v2-hm__cre-foot"><span class="v2-hm__cre-sc">▼ 74</span></div>
+          </div>
+          <div class="v2-hm__cre" style="--d:1.3s">
+            <div class="v2-hm__cre-img"></div>
+            <div class="v2-hm__cre-foot"><span class="v2-hm__cre-sc">▼ 68</span></div>
+          </div>
+          <div class="v2-hm__cre" style="--d:1.5s">
+            <div class="v2-hm__cre-img"></div>
+            <div class="v2-hm__cre-foot"><span class="v2-hm__cre-sc">▼ 63</span></div>
+          </div>
+        </div>
+
+        <!-- Drip sequence preview -->
+        <div class="v2-hm__drip" style="--d:2.0s">
+          <div class="v2-hm__drip-row done"  style="--d:2.0s"><span class="v2-hm__drip-d">D+0</span>  <span class="v2-hm__drip-t">AI offer · WhatsApp blast</span>    <span class="v2-hm__drip-s done">SENT</span></div>
+          <div class="v2-hm__drip-row done"  style="--d:2.4s"><span class="v2-hm__drip-d">D+2</span>  <span class="v2-hm__drip-t">Follow-up + case study</span>        <span class="v2-hm__drip-s done">SENT</span></div>
+          <div class="v2-hm__drip-row live"  style="--d:2.8s"><span class="v2-hm__drip-d">D+5</span>  <span class="v2-hm__drip-t">Personalised offer · IG + WA</span> <span class="v2-hm__drip-s live">LIVE</span></div>
+          <div class="v2-hm__drip-row sched" style="--d:3.2s"><span class="v2-hm__drip-d">D+12</span> <span class="v2-hm__drip-t">Final push · scarcity hook</span>   <span class="v2-hm__drip-s sched">SCHED</span></div>
+        </div>
+
+        <!-- Launch bar -->
+        <div class="v2-hm__launch" style="--d:3.8s">
+          <div class="v2-hm__launch-plats">
+            <span class="v2-hm__bplat meta">META</span>
+            <span class="v2-hm__bplat tt">TIKTOK</span>
+            <span class="v2-hm__bplat gg">GOOGLE</span>
+          </div>
+          <div class="v2-hm__launch-roi">
+            <span class="v2-hm__roi-n" id="v2RoiN">0</span>× ROI
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+  (() => {
+    const DURATION = 6800;
+    const root = document.getElementById('v2Hm');
+    if (!root) return;
+
+    const tabs   = [...root.querySelectorAll<HTMLElement>('.v2-hm__tab')];
+    const panels = [...root.querySelectorAll<HTMLElement>('.v2-hm__panel')];
+    const prog   = root.querySelector<HTMLElement>('.v2-hm__prog-fill');
+    let cur = 0, autoId: ReturnType<typeof setInterval>;
+
+    // Contacts data
+    const contacts = [
+      { av:'K', grad:'#6366f1,#a855f7', name:'Kara Finley', src:'WhatsApp', time:'Now',    hot:true  },
+      { av:'M', grad:'#a855f7,#e879f9', name:'Marc B.',     src:'Instagram', time:'2m',    hot:false },
+      { av:'E', grad:'#06b6d4,#22d3ee', name:'Emma R.',     src:'TikTok',    time:'5m',    hot:false },
+      { av:'L', grad:'#f59e0b,#f97316', name:'Lee',          src:'Facebook',  time:'Oct 8', hot:false },
+      { av:'S', grad:'#6366f1,#22d3ee', name:'Shanny',       src:'WhatsApp',  time:'Oct 6', hot:false },
+    ];
+
+    function buildContacts() {
+      const ct = document.getElementById('v2Ct');
+      if (!ct) return;
+      ct.innerHTML = contacts.map((c, i) => `
+        <div class="v2-hm__ct" style="--d:${0.3 + i * 0.18}s">
+          <div class="v2-hm__av-xs" style="background:linear-gradient(135deg,${c.grad})">${c.av}</div>
+          <div class="v2-hm__ct-info">
+            <span class="v2-hm__ct-name">${c.name}</span>
+            <span class="v2-hm__ct-src">${c.src}</span>
+          </div>
+          <span class="v2-hm__ct-time">${c.time}</span>
+          ${c.hot ? '<span class="v2-hm__ct-hot">🔥</span>' : ''}
+        </div>
+      `).join('');
+    }
+
+    function animateCounter(el: HTMLElement | null, from: number, to: number, dur: number) {
+      if (!el) return;
+      const t0 = performance.now();
+      const tick = (now: number) => {
+        const t = Math.min((now - t0) / dur, 1);
+        const e = 1 - Math.pow(1 - t, 3);
+        el.textContent = String(Math.round(from + (to - from) * e));
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }
+
+    function go(idx: number) {
+      tabs.forEach(t  => t.classList.remove('on'));
+      panels.forEach(p => { p.classList.remove('on'); void p.offsetWidth; });
+
+      cur = idx;
+      tabs[idx]?.classList.add('on');
+      panels[idx]?.classList.add('on');
+
+      if (prog) {
+        prog.style.transition = 'none';
+        prog.style.width = '0%';
+        void prog.offsetWidth;
+        prog.style.transition = `width ${DURATION}ms linear`;
+        prog.style.width = '100%';
+      }
+
+      // Phase-specific animations
+      if (idx === 0) {
+        buildContacts();
+        animateCounter(document.getElementById('v2InC'),  80, 83, 2400);
+        animateCounter(document.getElementById('v2SbN'),  80, 83, 2400);
+      }
+
+      if (idx === 1) {
+        animateCounter(document.getElementById('v2HL'),  2, 3, 900);
+      }
+
+      if (idx === 2) {
+        setTimeout(() => {
+          const roi = document.getElementById('v2RoiN');
+          if (!roi) return;
+          roi.textContent = '0';
+          const dur2 = 1800;
+          const t0 = performance.now();
+          const tick = (now: number) => {
+            const t = Math.min((now - t0) / dur2, 1);
+            const e = 1 - Math.pow(1 - t, 3);
+            roi.textContent = (e * 42.5).toFixed(1);
+            if (t < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        }, 4000);
+      }
+    }
+
+    function restart() {
+      clearInterval(autoId);
+      autoId = setInterval(() => go((cur + 1) % 3), DURATION);
+    }
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => { go(i); restart(); });
+    });
+
+    go(0);
+    restart();
+  })();
+</script>
+
+
+<style lang="scss">
+
+/* ── Keyframes ─────────────────────────────────────────────────── */
+@keyframes hm-pulse    { 0%,100%{box-shadow:0 0 6px var(--c2);opacity:1}50%{box-shadow:0 0 18px var(--c2),0 0 40px rgba(34,211,238,.3);opacity:.8} }
+@keyframes hm-up       { from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)} }
+@keyframes hm-in       { from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)} }
+@keyframes hm-scale    { from{opacity:0;transform:scale(.76)}to{opacity:1;transform:scale(1)} }
+@keyframes hm-fade     { from{opacity:0}to{opacity:1} }
+@keyframes hm-fill     { from{width:0}to{width:var(--w,80%)} }
+@keyframes hm-bounce   { 0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-3px);opacity:1} }
+@keyframes hm-blink    { 0%,49%{opacity:1}50%,100%{opacity:0} }
+@keyframes hm-shimmer  { from{transform:translateX(-100%)}to{transform:translateX(220%)} }
+@keyframes hm-scan     { 0%{top:0%;opacity:0}5%{opacity:1}90%{opacity:.7}100%{top:100%;opacity:0} }
+@keyframes hm-orb-float{ 0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)} }
+@keyframes hm-orb-ring { 0%{transform:scale(1);opacity:.5}100%{transform:scale(2.2);opacity:0} }
+
+/* ── Card ──────────────────────────────────────────────────────── */
+.v2-hm {
+  width: 100%; max-width: 500px; position: relative;
+  background: var(--bg-card);
+  border-radius: var(--r-xl); overflow: visible;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-glow), 0 60px 100px rgba(0,0,0,.6);
+
+  &::before {
+    content:""; position:absolute; inset:-1px;
+    border-radius:calc(var(--r-xl) + 1px);
+    background:linear-gradient(135deg,rgba(99,102,241,.55),rgba(168,85,247,.35) 40%,rgba(34,211,238,.25) 80%,rgba(232,121,249,.15));
+    z-index:-1;
+  }
+
+  /* holographic grid inside card */
+  &::after {
+    content:""; position:absolute; inset:0; border-radius:var(--r-xl);
+    background:
+      linear-gradient(rgba(34,211,238,.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34,211,238,.022) 1px, transparent 1px);
+    background-size:22px 22px; pointer-events:none; z-index:0;
+  }
+}
+
+/* ── Orbit icons ───────────────────────────────────────────────── */
+.v2-hm__orbs { position:absolute; inset:0; pointer-events:none; z-index:6; }
+
+.v2-hm__orb {
+  position: absolute;
+  animation: hm-orb-float 3.5s ease-in-out infinite;
+  animation-delay: var(--d, 0s);
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.5));
+
+  svg { display: block; border-radius: 8px; }
+
+  /* Pulsing ring */
+  .v2-hm__orb-ring {
+    position: absolute; inset: -4px; border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.2);
+    animation: hm-orb-ring 2.5s ease-out infinite;
+    animation-delay: var(--d, 0s);
+  }
+
+  /* Icon positions around the card */
+  &.wa   { left: -42px; top: 55px; }
+  &.ig   { right: -42px; top: 55px; }
+  &.tt   { left: -42px; top: 165px; }
+  &.fb   { right: -42px; top: 165px; }
+  &.meta { left: 50%; top: -42px; transform: translateX(-50%); }
+  &.gg   { right: -42px; top: 275px; }
+  &.em   { left: -42px; top: 275px; }
+  &.sms  { left: 50%; bottom: -42px; transform: translateX(-50%); }
+
+  /* Connection lines from orbs to card edge */
+  &.wa::after,  &.tt::after,  &.em::after  {
+    content: ""; position: absolute; top: 50%; left: 100%;
+    width: 12px; height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,.15), transparent);
+    transform: translateY(-50%);
+  }
+  &.ig::after, &.fb::after, &.gg::after {
+    content: ""; position: absolute; top: 50%; right: 100%;
+    width: 12px; height: 1px;
+    background: linear-gradient(270deg, rgba(255,255,255,.15), transparent);
+    transform: translateY(-50%);
+  }
+}
+
+/* ── Corner brackets ───────────────────────────────────────────── */
+.v2-hm__corner {
+  position:absolute; width:14px; height:14px; z-index:4; pointer-events:none;
+  &.tl { top:6px;  left:6px;  border-top:1.5px solid var(--c2); border-left:1.5px solid var(--c2); }
+  &.tr { top:6px;  right:6px; border-top:1.5px solid var(--c2); border-right:1.5px solid var(--c2); }
+  &.bl { bottom:6px; left:6px;  border-bottom:1.5px solid rgba(168,85,247,.8); border-left:1.5px solid rgba(168,85,247,.8); }
+  &.br { bottom:6px; right:6px; border-bottom:1.5px solid rgba(168,85,247,.8); border-right:1.5px solid rgba(168,85,247,.8); }
+}
+
+/* ── Scan line ─────────────────────────────────────────────────── */
+.v2-hm__scan {
+  position:absolute; left:0; right:0; top:0; height:1px;
+  background:linear-gradient(90deg,transparent 0%,rgba(34,211,238,.6) 40%,rgba(168,85,247,.4) 60%,transparent);
+  animation:hm-scan 6s ease-in-out infinite; pointer-events:none; z-index:3;
+}
+
+/* ── Header ────────────────────────────────────────────────────── */
+.v2-hm__hdr {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:11px 16px; gap:10px;
+  background:var(--bg-elev); border-bottom:1px solid var(--line);
+  position:relative; z-index:2;
+}
+.v2-hm__live {
+  display:flex; align-items:center; gap:8px;
+  font-size:11px; font-weight:600; color:var(--fg-0); white-space:nowrap;
+}
+.v2-hm__live-dot {
+  width:7px; height:7px; border-radius:50%; flex-shrink:0;
+  background:var(--c2); box-shadow:0 0 8px var(--c2);
+  animation:hm-pulse 1.8s ease-in-out infinite;
+}
+.v2-hm__tabs { display:flex; gap:2px; }
+.v2-hm__tab {
+  padding:4px 8px; border-radius:var(--r-pill);
+  font-size:9px; font-family:var(--font-mono);
+  letter-spacing:.07em; text-transform:uppercase; font-weight:600;
+  color:var(--fg-2); background:transparent; border:1px solid transparent;
+  cursor:pointer; transition:color .15s,background .15s,border-color .15s;
+  &:hover { color:var(--fg-1); }
+  &.on { color:var(--c2); background:rgba(34,211,238,.08); border-color:rgba(34,211,238,.3); text-shadow:0 0 12px rgba(34,211,238,.5); }
+}
+
+/* ── Progress ──────────────────────────────────────────────────── */
+.v2-hm__prog-track { height:2px; background:rgba(255,255,255,.05); position:relative; z-index:2; }
+.v2-hm__prog-fill  { height:100%; width:0%; background:linear-gradient(90deg,var(--c1),var(--c3),var(--c2)); }
+
+/* ── Body: 3 columns ───────────────────────────────────────────── */
+.v2-hm__body {
+  display:grid; grid-template-columns:30px 148px 1fr;
+  position:relative; z-index:1;
+  border-radius:0 0 var(--r-xl) var(--r-xl); overflow:hidden;
+}
+
+/* ── Sidebar ───────────────────────────────────────────────────── */
+.v2-hm__sb {
+  display:flex; flex-direction:column; align-items:center;
+  gap:4px; padding:10px 0;
+  background:var(--bg-elev); border-right:1px solid var(--line);
+  position:relative;
+}
+.v2-hm__sb-i {
+  width:26px; height:26px; border-radius:var(--r-sm); display:flex; align-items:center; justify-content:center;
+  color:var(--fg-2); cursor:pointer; transition:background .15s,color .15s;
+  &:hover { background:var(--glass-hover); color:var(--fg-1); }
+  &.on  { background:rgba(99,102,241,.12); color:var(--c1-light); }
+}
+.v2-hm__sb-badge {
+  position:absolute; bottom:10px; left:50%; transform:translateX(-50%);
+  font-family:var(--font-mono); font-size:8px; font-weight:700;
+  background:rgba(99,102,241,.9); color:#fff;
+  padding:2px 5px; border-radius:var(--r-pill); white-space:nowrap;
+  min-width:20px; text-align:center;
+}
+
+/* ── Inbox panel ───────────────────────────────────────────────── */
+.v2-hm__inbox {
+  display:flex; flex-direction:column; gap:0;
+  background:var(--bg-card); border-right:1px solid var(--line);
+  overflow:hidden;
+}
+.v2-hm__in-hdr {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:9px 10px 6px; flex-shrink:0;
+}
+.v2-hm__in-title { font-size:12px; font-weight:600; color:var(--fg-0); }
+.v2-hm__in-count {
+  font-family:var(--font-mono); font-size:9px; font-weight:700;
+  padding:2px 6px; border-radius:var(--r-pill);
+  background:rgba(99,102,241,.12); color:var(--c1-light);
+  border:1px solid rgba(99,102,241,.25);
+}
+.v2-hm__grp-lbl {
+  font-family:var(--font-mono); font-size:8.5px; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--fg-2);
+  padding:5px 10px 3px; display:flex; justify-content:space-between;
+  span { opacity:.6; }
+}
+.v2-hm__agent-row {
+  display:flex; align-items:center; gap:6px; padding:5px 10px 6px;
+}
+.v2-hm__av-sm {
+  width:20px; height:20px; border-radius:50%; flex-shrink:0;
+  background:linear-gradient(135deg,var(--c1),var(--c3));
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-mono); font-size:8px; font-weight:700; color:#fff;
+}
+.v2-hm__agent-name { font-size:10px; font-weight:500; color:var(--fg-0); flex:1; }
+.v2-hm__n-badge {
+  font-family:var(--font-mono); font-size:8px; font-weight:700;
+  padding:1px 5px; border-radius:var(--r-pill);
+  background:rgba(99,102,241,.1); color:var(--c1-light);
+  border:1px solid rgba(99,102,241,.22);
+}
+
+/* Lifecycle list */
+.v2-hm__lc-list { display:flex; flex-direction:column; gap:1px; padding:0 6px 6px; }
+.v2-hm__lc {
+  display:flex; align-items:center; gap:5px; padding:3px 4px; border-radius:5px;
+  font-size:9.5px; color:var(--fg-1); cursor:pointer; transition:background .12s;
+  svg { flex-shrink:0; }
+  &:hover { background:var(--glass-hover); }
+  &.hot { color:var(--fg-0); background:rgba(99,102,241,.07); }
+}
+.v2-hm__n {
+  margin-left:auto; font-family:var(--font-mono); font-size:8.5px;
+  padding:1px 5px; border-radius:var(--r-pill);
+  background:var(--glass); color:var(--fg-2); border:1px solid var(--line);
+  &.hot { background:rgba(99,102,241,.12); color:var(--c1-light); border-color:rgba(99,102,241,.25); }
+}
+
+/* Contact rows */
+.v2-hm__contacts { display:flex; flex-direction:column; overflow:hidden; flex:1; }
+.v2-hm__ct {
+  display:flex; align-items:center; gap:6px; padding:6px 10px;
+  border-top:1px solid var(--line);
+  opacity:0; animation:hm-in .3s ease both; animation-delay:var(--d,.3s);
+  cursor:pointer; transition:background .12s;
+  &:hover { background:var(--glass-hover); }
+}
+.v2-hm__av-xs {
+  width:22px; height:22px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-mono); font-size:9px; font-weight:700; color:#fff;
+}
+.v2-hm__ct-info { flex:1; min-width:0; }
+.v2-hm__ct-name { font-size:10px; font-weight:500; color:var(--fg-0); display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.v2-hm__ct-src  { font-size:8.5px; color:var(--fg-2); font-family:var(--font-mono); }
+.v2-hm__ct-time { font-size:8px; color:var(--fg-2); font-family:var(--font-mono); flex-shrink:0; }
+.v2-hm__ct-hot  { font-size:10px; flex-shrink:0; }
+
+/* ── Right panel ───────────────────────────────────────────────── */
+.v2-hm__right {
+  position:relative; overflow:hidden;
+  background:linear-gradient(rgba(34,211,238,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.025) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+.v2-hm__panel { display:none; flex-direction:column; gap:8px; padding:12px 13px; min-height:360px; &.on { display:flex; } }
+
+/* ── Eyebrow ───────────────────────────────────────────────────── */
+.v2-hm__p-eye {
+  display:inline-flex; align-items:center; gap:6px;
+  font-family:var(--font-mono); font-size:8.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--c2);
+}
+
+/* ── CAPTURE PANEL ─────────────────────────────────────────────── */
+.v2-hm__panel .v2-hm__ch-grid,
+.v2-hm__panel .v2-hm__unify,
+.v2-hm__panel .v2-hm__frow,
+.v2-hm__panel .v2-hm__q-bar { opacity:0; }
+
+.v2-hm__panel.on .v2-hm__chtag { animation:hm-scale .3s cubic-bezier(.22,.68,0,1.3) both; animation-delay:var(--d,.1s); }
+.v2-hm__panel.on .v2-hm__unify { animation:hm-fade .3s ease both; animation-delay:var(--d,1.1s); }
+.v2-hm__panel.on .v2-hm__frow  { animation:hm-in .3s ease both; animation-delay:var(--d,1.5s); }
+.v2-hm__panel.on .v2-hm__q-bar { animation:hm-up .35s ease both; animation-delay:var(--d,3.2s); }
+.v2-hm__ch-grid { display:flex; flex-wrap:wrap; gap:4px; }
+
+.v2-hm__chtag {
+  font-family:var(--font-mono); font-size:8px; font-weight:700; letter-spacing:.1em;
+  padding:3px 7px; border-radius:var(--r-pill);
+  &.wa  { background:rgba(37,211,102,.1);  color:#25d366; border:1px solid rgba(37,211,102,.3); }
+  &.ig  { background:rgba(232,121,249,.1); color:#e879f9; border:1px solid rgba(232,121,249,.3); }
+  &.tt  { background:rgba(255,0,80,.1);    color:#ff0050; border:1px solid rgba(255,0,80,.3); }
+  &.fb  { background:rgba(24,119,242,.1);  color:#1877f2; border:1px solid rgba(24,119,242,.3); }
+  &.em  { background:rgba(99,102,241,.1);  color:var(--c1-light); border:1px solid rgba(99,102,241,.3); }
+  &.sms { background:rgba(34,211,238,.1);  color:var(--c2); border:1px solid rgba(34,211,238,.3); }
+}
+
+.v2-hm__unify {
+  display:flex; align-items:center; gap:7px;
+  padding:6px 9px; border-radius:var(--r-sm);
+  background:rgba(34,211,238,.05); border:1px solid rgba(34,211,238,.18);
+}
+.v2-hm__unify-line { flex:1; height:1px; background:linear-gradient(90deg,transparent,var(--c2),transparent); }
+.v2-hm__unify-txt { display:flex; align-items:center; gap:5px; font-size:9px; font-family:var(--font-mono); color:var(--c2); letter-spacing:.04em; }
+
+.v2-hm__feed { display:flex; flex-direction:column; gap:4px; }
+.v2-hm__frow {
+  display:flex; align-items:center; gap:7px; padding:6px 9px;
+  border-radius:var(--r-sm); background:var(--glass); border:1px solid var(--line);
+}
+.v2-hm__frow-info { flex:1; min-width:0; }
+.v2-hm__frow-name { font-size:11px; font-weight:600; color:var(--fg-0); display:block; }
+.v2-hm__frow-src  { font-size:9px; color:var(--fg-2); font-family:var(--font-mono); }
+.v2-hm__fscore {
+  font-family:var(--font-mono); font-size:8.5px; font-weight:700;
+  padding:2px 7px; border-radius:var(--r-pill); flex-shrink:0;
+  &.hot  { background:rgba(99,102,241,.15); color:var(--c1-light); border:1px solid rgba(99,102,241,.3); }
+  &.warm { background:rgba(34,211,238,.08); color:var(--c2); border:1px solid rgba(34,211,238,.2); }
+}
+
+.v2-hm__av { width:26px; height:26px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:10px; font-weight:700; color:#fff;
+  &.ind { background:linear-gradient(135deg,#6366f1,#a855f7); box-shadow:0 0 10px rgba(99,102,241,.4); }
+  &.vio { background:linear-gradient(135deg,#a855f7,#e879f9); box-shadow:0 0 10px rgba(168,85,247,.4); }
+  &.cyn { background:linear-gradient(135deg,#06b6d4,#22d3ee); box-shadow:0 0 10px rgba(34,211,238,.4); }
+}
+
+.v2-hm__q-bar {
+  background:rgba(99,102,241,.06); border:1px solid rgba(99,102,241,.2);
+  border-radius:var(--r-md); padding:9px 11px; display:flex; flex-direction:column; gap:7px;
+}
+.v2-hm__q-row { display:grid; grid-template-columns:44px 1fr 24px; align-items:center; gap:7px; }
+.v2-hm__q-name { font-size:10px; font-weight:600; color:var(--fg-0); }
+.v2-hm__q-track { height:4px; border-radius:2px; background:rgba(255,255,255,.06); overflow:hidden; }
+.v2-hm__q-fill {
+  height:100%; border-radius:2px;
+  background:linear-gradient(90deg,var(--c1),var(--c3),var(--c2)); width:0%;
+  .v2-hm__panel.on & { animation:hm-fill 1s ease both; animation-delay:calc(var(--d,3.2s) + .15s); }
+}
+.v2-hm__q-val { font-family:var(--font-mono); font-size:12px; font-weight:700; color:var(--c1-light); text-align:right; }
+.v2-hm__q-tags { display:flex; gap:4px; flex-wrap:wrap; }
+.v2-hm__qtag {
+  font-family:var(--font-mono); font-size:7.5px; font-weight:700;
+  letter-spacing:.07em; text-transform:uppercase; padding:2px 6px; border-radius:var(--r-pill);
+  &.hot    { background:rgba(99,102,241,.15); color:var(--c1-light); border:1px solid rgba(99,102,241,.3); }
+  &.booked { background:rgba(34,211,238,.08); color:var(--c2); border:1px solid rgba(34,211,238,.2); }
+  &.ai     { background:rgba(168,85,247,.1);  color:var(--c3); border:1px solid rgba(168,85,247,.25); }
+}
+
+/* ── QUALIFY PANEL ─────────────────────────────────────────────── */
+.v2-hm__panel .v2-hm__msg,
+.v2-hm__panel .v2-hm__typing,
+.v2-hm__panel .v2-hm__sys { opacity:0; }
+
+.v2-hm__panel.on .v2-hm__msg    { animation:hm-up .3s ease both; animation-delay:var(--d,.2s); }
+.v2-hm__panel.on .v2-hm__typing { animation:hm-fade .25s ease both; animation-delay:var(--d,.9s); }
+.v2-hm__panel.on .v2-hm__sys    { animation:hm-fade .3s ease both; animation-delay:var(--d,2.5s); }
+
+.v2-hm__conv-hdr {
+  display:flex; align-items:center; gap:7px;
+  padding:8px 0 8px; border-bottom:1px solid var(--line); flex-shrink:0;
+}
+.v2-hm__conv-meta { flex:1; min-width:0; }
+.v2-hm__conv-name { font-size:11px; font-weight:600; color:var(--fg-0); display:block; }
+.v2-hm__conv-src  { font-size:8.5px; color:var(--fg-2); font-family:var(--font-mono); }
+.v2-hm__hot-tag {
+  font-family:var(--font-mono); font-size:8px; font-weight:700; letter-spacing:.06em;
+  padding:2px 7px; border-radius:var(--r-pill); flex-shrink:0;
+  background:rgba(99,102,241,.15); color:var(--c1-light); border:1px solid rgba(99,102,241,.3);
+}
+.v2-hm__close-btn {
+  font-family:var(--font-mono); font-size:8px; font-weight:700;
+  padding:2px 8px; border-radius:var(--r-pill); flex-shrink:0;
+  background:var(--glass); color:var(--fg-2); border:1px solid var(--line); cursor:pointer;
+}
+
+.v2-hm__msgs { display:flex; flex-direction:column; gap:6px; flex:1; overflow:hidden; padding:4px 0; }
+.v2-hm__msg {
+  display:flex; align-items:flex-end; gap:6px;
+  &.in { flex-direction:row; }
+  &.out { flex-direction:row-reverse; }
+}
+.v2-hm__bbl {
+  max-width:84%; padding:6px 9px; border-radius:10px;
+  font-size:10.5px; line-height:1.55; color:var(--fg-0);
+  .v2-hm__msg.in & { background:var(--bg-elev); border:1px solid var(--line); border-bottom-left-radius:2px; }
+  &.ai { background:rgba(99,102,241,.1); border:1px solid rgba(99,102,241,.22); border-bottom-right-radius:2px; }
+}
+.v2-hm__bbl-tag {
+  margin-top:3px; font-family:var(--font-mono); font-size:7.5px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--c1-light);
+}
+.v2-hm__typing {
+  display:flex; align-items:center; gap:4px;
+  padding:5px 8px; border-radius:8px; width:fit-content;
+  background:var(--bg-elev); border:1px solid var(--line); margin-left:28px;
+}
+.v2-hm__td {
+  width:4px; height:4px; border-radius:50%; background:var(--c2); opacity:.4;
+  animation:hm-bounce .75s ease-in-out infinite;
+  &:nth-child(2) { animation-delay:.15s; }
+  &:nth-child(3) { animation-delay:.3s; }
+}
+.v2-hm__typing-lbl { font-size:9px; font-family:var(--font-mono); color:var(--fg-2); padding-left:2px; }
+.v2-hm__sys {
+  font-size:9px; color:var(--fg-2); font-family:var(--font-mono); letter-spacing:.02em;
+  padding:4px 8px; border-radius:5px; text-align:center;
+  background:var(--glass); border:1px solid var(--line);
+  b { color:var(--c1-light); }
+  &.confirmed { border-color:rgba(34,211,238,.2); background:rgba(34,211,238,.05); b { color:var(--c2); } }
+}
+
+.v2-hm__compose {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:7px 9px; background:var(--bg-elev); border-top:1px solid var(--line);
+  border-radius:0 0 var(--r-xl) 0; flex-shrink:0;
+}
+.v2-hm__comp-left {
+  display:flex; align-items:center; gap:5px;
+  font-size:10px; font-family:var(--font-mono); color:var(--fg-1);
+}
+.v2-hm__comp-ai {
+  font-size:9px; font-family:var(--font-mono); color:var(--c1-light);
+  padding:2px 8px; border-radius:var(--r-pill);
+  background:rgba(99,102,241,.08); border:1px solid rgba(99,102,241,.2);
+}
+
+/* ── CAMPAIGN PANEL ────────────────────────────────────────────── */
+.v2-hm__panel .v2-hm__brief,
+.v2-hm__panel .v2-hm__cre,
+.v2-hm__panel .v2-hm__drip-row,
+.v2-hm__panel .v2-hm__launch { opacity:0; }
+
+.v2-hm__panel.on .v2-hm__brief    { animation:hm-fade .3s ease both; animation-delay:var(--d,.15s); }
+.v2-hm__panel.on .v2-hm__cre      { animation:hm-scale .32s cubic-bezier(.22,.68,0,1.2) both; animation-delay:var(--d,.5s); }
+.v2-hm__panel.on .v2-hm__drip-row { animation:hm-in .3s ease both; animation-delay:var(--d,2.0s); }
+.v2-hm__panel.on .v2-hm__launch   { animation:hm-up .35s ease both; animation-delay:var(--d,3.8s); }
+
+.v2-hm__p2-hdr { display:flex; align-items:center; justify-content:space-between; }
+.v2-hm__chip-vio {
+  font-family:var(--font-mono); font-size:8px; font-weight:700; letter-spacing:.08em;
+  padding:2px 7px; border-radius:var(--r-pill);
+  background:rgba(168,85,247,.1); color:var(--c3); border:1px solid rgba(168,85,247,.25);
+}
+
+.v2-hm__brief {
+  display:flex; align-items:center; gap:7px;
+  padding:6px 9px; border-radius:var(--r-sm);
+  background:var(--bg-elev); border:1px solid var(--line);
+}
+.v2-hm__brief-lbl {
+  font-family:var(--font-mono); font-size:7.5px; font-weight:700; letter-spacing:.12em;
+  color:var(--c3); padding:1px 5px; border-radius:3px;
+  background:rgba(168,85,247,.1); border:1px solid rgba(168,85,247,.2); flex-shrink:0;
+}
+.v2-hm__brief-txt { font-size:10px; font-family:var(--font-mono); color:var(--fg-0); flex:1; }
+.v2-hm__cur { color:var(--c1-light); font-weight:700; animation:hm-blink .9s step-end infinite; }
+
+.v2-hm__cre-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:5px; }
+.v2-hm__cre {
+  border-radius:var(--r-sm); overflow:hidden; border:1px solid var(--line); position:relative;
+  &.win { border-color:rgba(99,102,241,.45); box-shadow:0 0 10px rgba(99,102,241,.15); }
+}
+.v2-hm__cre-img {
+  height:48px;
+  background:repeating-linear-gradient(135deg,rgba(99,102,241,.05) 0 8px,rgba(99,102,241,.02) 8px 16px);
+  &.win { background:linear-gradient(135deg,rgba(99,102,241,.22),rgba(168,85,247,.14),rgba(34,211,238,.08)); }
+}
+.v2-hm__cre-shim {
+  position:absolute; top:0; left:-100%; width:60%; height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);
+  .v2-hm__panel.on .v2-hm__cre.win & { animation:hm-shimmer 2.2s ease-in-out infinite; animation-delay:1.8s; }
+}
+.v2-hm__cre-foot { display:flex; align-items:center; justify-content:space-between; padding:3px 5px; background:var(--bg-card); }
+.v2-hm__cre-sc { font-family:var(--font-mono); font-size:8.5px; font-weight:700; color:var(--fg-2); &.win { color:var(--c2); } }
+.v2-hm__cre-chip { font-family:var(--font-mono); font-size:6.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--c1-light); background:rgba(99,102,241,.1); padding:1px 4px; border-radius:3px; }
+
+/* Drip sequence */
+.v2-hm__drip { display:flex; flex-direction:column; gap:3px; }
+.v2-hm__drip-row {
+  display:flex; align-items:center; gap:6px;
+  padding:5px 8px; border-radius:var(--r-sm);
+  background:var(--glass); border:1px solid var(--line);
+  &.live { background:rgba(99,102,241,.06); border-color:rgba(99,102,241,.25); }
+}
+.v2-hm__drip-d { font-family:var(--font-mono); font-size:8.5px; font-weight:700; color:var(--c2); letter-spacing:.05em; min-width:28px; flex-shrink:0; }
+.v2-hm__drip-t { font-size:9.5px; color:var(--fg-0); flex:1; }
+.v2-hm__drip-s {
+  font-family:var(--font-mono); font-size:7px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  padding:2px 6px; border-radius:var(--r-pill); flex-shrink:0;
+  &.done  { color:var(--c2); background:rgba(34,211,238,.08); border:1px solid rgba(34,211,238,.2); }
+  &.live  { color:var(--c1-light); background:rgba(99,102,241,.12); border:1px solid rgba(99,102,241,.3); }
+  &.sched { color:var(--fg-2); background:var(--glass); border:1px solid var(--line); }
+}
+
+/* Launch bar */
+.v2-hm__launch {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:7px 9px; border-radius:var(--r-sm);
+  background:rgba(34,211,238,.04); border:1px solid rgba(34,211,238,.18);
+}
+.v2-hm__launch-plats { display:flex; gap:4px; }
+.v2-hm__bplat {
+  font-family:var(--font-mono); font-size:7.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  padding:2px 6px; border-radius:var(--r-pill);
+  &.meta { background:rgba(24,119,242,.12); color:#1877f2; border:1px solid rgba(24,119,242,.3); }
+  &.tt   { background:rgba(255,0,80,.1);    color:#ff0050; border:1px solid rgba(255,0,80,.25); }
+  &.gg   { background:rgba(234,67,53,.1);   color:#ea4335; border:1px solid rgba(234,67,53,.25); }
+}
+.v2-hm__launch-roi {
+  font-family:var(--font-display); font-size:18px; letter-spacing:-.02em;
+  color:var(--c2); line-height:1; text-shadow:0 0 20px rgba(34,211,238,.5);
+}
+.v2-hm__roi-n { font-size:22px; }
+
+</style>

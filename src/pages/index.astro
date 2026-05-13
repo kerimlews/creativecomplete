@@ -1,116 +1,42 @@
 ---
-// CORRECTED DYNAMIC IMAGE IMPORTS FOR PROJECTS
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Process from '../components/Process.astro';
-import Services from '../components/Services.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import BottomCTA from '../components/BottomCTA.astro';
-import { getCollection } from 'astro:content';
-import Testimonials from '../components/Testimonials.astro';
-import { getProjectImage, getTestimonalImage, testimonials } from '../utils/constants';
-import { getLanguageFromUrl, t, getLocalizedUrl } from '../utils/translations';
-import { getBasePath } from '../utils/routing';
-import { getHomepageServicesData } from '../utils/homepageData';
-import { getProjectUrl } from '../utils/routing';
+import LayoutV2 from '../layouts/LayoutV2.astro';
+import Hero from '../components/v2/Hero.astro';
+import Clients from '../components/v2/Clients.astro';
+import Stats from '../components/v2/Stats.astro';
+import Services from '../components/v2/Services.astro';
+import Results from '../components/v2/Results.astro';
+import Testimonials from '../components/v2/Testimonials.astro';
+import FAQ from '../components/v2/FAQ.astro';
+import Track from '../components/v2/Track.astro';
+import EndToEnd from '../components/v2/EndToEnd.astro';
+import CTA from '../components/v2/CTA.astro';
+import BookingSection from '../components/v2/BookingSection.astro';
+import { generateOrganizationJsonLd, generateWebSiteJsonLd } from '../utils/jsonld';
 
-// Get current language from URL
-const currentLang = 'en';
-
-// Best case study for banner - Fitovision: The All-in-One Gym Platform
-const bestCaseStudy = {
-  slug: 'fitovision-gym-saas',
-  title: '⚡ 245% Traffic Boom 🚀',
-  url: getProjectUrl(currentLang, 'fitovision-gym-saas')
-};
-
-// Generate services data based on language
-const SERVICES_DATA = getHomepageServicesData(currentLang);
-
-// Load projects dynamically from content/[lang] based on current language
-const allProjects = await getCollection('projectsEn');
-const projects = allProjects
-  .filter(project => {
-    const parts = project?.filePath ? project.filePath.split('/') : [];
-    const projectLang = parts[3] || 'en';
-    return projectLang === currentLang;
-  })
-  .map((project) => {
-    return {
-      ...project.data,
-      slug: project.data.slug || project.id,
-      image: getProjectImage(project.data.slug || project.id),
-      lang: currentLang
-    };
-  });
-
-const TESTIMONIALS = testimonials.map(t => ({ ...t, image: t.image ? getTestimonalImage(t.image) : null }));
-
-// Merge testimonials with projects - match by caseStudy slug or create fake project
-const mergedTestimonialsWithProjects = TESTIMONIALS.map((testimonial) => {
-  // Try to find matching project by caseStudy slug
-  const matchingProject = projects.find(p => p.slug === testimonial.caseStudy);
-  
-  if (matchingProject) {
-    return {
-      ...testimonial,
-      project: matchingProject
-    };
-  }
-  
-  // Create fake project with real name if no match found
-  const fakeProject = {
-    title: `How We Engineered ${testimonial.company} Platform`,
-    description: testimonial.text.substring(0, 150) + '...',
-    slug: testimonial.caseStudy || testimonial.company.toLowerCase().replace(/\s+/g, '-'),
-    category: "UI-UX / SEO / CRM / Marketing",
-    image: testimonial.image || null,
-    featured: false,
-    stats: [
-      { value: "287%", label: "Growth" },
-      { value: "90 Days", label: "Results" }
-    ],
-    lang: currentLang
-  };
-  
-  return {
-    ...testimonial,
-    project: fakeProject
-  };
-});
-
+const siteUrl = Astro.url.origin;
+const structuredData = [
+  generateOrganizationJsonLd(),
+  generateWebSiteJsonLd(siteUrl, ['en', 'sl', 'de']),
+];
 ---
 
-<Layout 
-  title={t('homepage.page_title', currentLang)} 
-  description={t('homepage.page_description', currentLang)}
-  canonical="https://creativecomplete.com"
+<LayoutV2
+  title="AI Customer System — #1 Agency for Lead Qualification & Conversion | CreativeComplete"
+  description="AI Customer System that qualifies new leads in under 60 seconds, converts them with AI-generated creatives, and generates 42.5× ROI from your existing lead database. CreativeComplete is the #1 AI Customer System agency."
+  navActive="home"
+  structuredData={structuredData}
 >
-
-<!-- HERO SECTION - CONVERSION FOCUSED -->
-<Hero 
-  bannerText={bestCaseStudy.title}
-  bannerLink={bestCaseStudy.url}
-/>
-
-<Process />
-
-<Services />
-
-<Testimonials items={mergedTestimonialsWithProjects} />
-
-<!-- FINAL CTA -->
-<BottomCTA 
-  title={t('cta.title', currentLang)}
-  subtitle={t('cta.subtitle', currentLang)}
-  urgencyText={t('cta.urgency', currentLang)}
-  valueProps={[]}
-  primaryButton={{
-    text: t('cta.primary_button', currentLang),
-    href: getLocalizedUrl('/contact/', currentLang)
-  }}
-  securityNote={t('cta.security_note', currentLang)}
-  showValueProps={false}
-/>
-</Layout>
+  <main>
+    <Hero />
+    <Track />
+    <Clients />
+    <Stats />
+    <EndToEnd />
+    <Services />
+    <Results />
+    <Testimonials />
+    <FAQ />
+    <CTA />
+    <BookingSection />
+  </main>
+</LayoutV2>

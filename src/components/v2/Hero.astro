@@ -1,0 +1,205 @@
+---
+import LeadJourneyMotion from './LeadJourneyMotion.astro';
+---
+
+<section class="v2-hero">
+  <div class="v2-container">
+
+    <!-- Centered headline -->
+    <div class="v2-hero__top">
+      <div class="v2-hero__badge">
+        <span class="v2-hero__badge-dot"></span>
+        <span class="v2-hero__badge-text">AI Customer System, Live</span>
+      </div>
+      <h1 class="v2-h1">
+        Maximize Every Lead's Potential <br/>
+        <span class="v2-grad">Without Scaling Your Team</span>
+      </h1>
+      <p class="v2-hero__subtitle">
+        We build, run, and own the AI ad-to-chat campaign. You just get results.
+      </p>
+    </div>
+
+    <!-- Two columns: YT video | dashboard motion -->
+    <div class="v2-hero__inner">
+      <div class="v2-hero__left">
+        <div class="v2-hero__yt">
+          <iframe
+            id="hero-vimeo"
+            src="https://player.vimeo.com/video/1191978034?title=0&byline=0&portrait=0&badge=0&autopause=0&autoplay=1&player_id=0&app_id=58479"
+            title="AI Customer System in action"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div class="v2-hero__right">
+        <LeadJourneyMotion />
+      </div>
+    </div>
+
+    <!-- CTAs + trust below the grid -->
+    <div class="v2-hero__below">
+      <div class="v2-hero__actions">
+        <a
+          href="javascript:void(0)"
+          class="v2-btn v2-btn-primary"
+          data-cal-link="kerim-alihodza-7u7w6q/30min"
+          data-cal-namespace="30min"
+          data-cal-config='{"layout":"month_view","theme":"dark"}'
+        >
+          Get free system audit
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#how-it-works" class="v2-btn v2-btn-outline">See how it works</a>
+      </div>
+
+      <div class="v2-hero__trust">
+        <div class="v2-hero__logos">
+          <div class="v2-hero__logo-pill">
+            <img src="/images/logos/only-tourism.svg" alt="Only Tourism" height="22" loading="lazy" />
+          </div>
+        </div>
+        <span class="v2-hero__trust-sep" aria-hidden="true"></span>
+        <span class="v2-hero__trust-text">
+          trust AI Customer System
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var tag = document.createElement('script');
+    tag.src = 'https://player.vimeo.com/api/player.js';
+    tag.onload = function () {
+      var iframe = document.getElementById('hero-vimeo');
+      if (!iframe) return;
+      var player = new Vimeo.Player(iframe);
+      player.ready().then(function () {
+        player.setPlaybackRate(1.25);
+        player.setVolume(1);
+      });
+    };
+    document.head.appendChild(tag);
+  })();
+</script>
+
+<style lang="scss">
+.v2-hero__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  margin-bottom: 48px;
+
+  .v2-h1 { font-size: clamp(36px, 5.5vw, 80px); }
+}
+
+.v2-hero__subtitle {
+  font-size: clamp(16px, 1.4vw, 20px);
+  color: var(--fg-1);
+  max-width: 52ch;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.v2-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch;
+  margin-bottom: 48px;
+}
+
+.v2-hero__left { display: flex; align-items: stretch; }
+
+.v2-hero__yt {
+  width: 100%;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px var(--line);
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.v2-hero__below {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.v2-hero__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.v2-hero__trust {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.v2-hero__logos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.v2-hero__logo-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 99px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+
+  img {
+    display: block;
+    height: 20px;
+    width: auto;
+    filter: brightness(0) invert(0.65);
+    transition: filter .2s;
+  }
+
+  &:hover img { filter: brightness(0) invert(0.85); }
+}
+
+.v2-hero__trust-sep {
+  width: 1px;
+  height: 16px;
+  background: var(--line);
+  flex-shrink: 0;
+}
+
+.v2-hero__trust-text {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  letter-spacing: .05em;
+  color: var(--fg-2);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .v2-hero__inner { grid-template-columns: 1fr; gap: 32px; }
+}
+</style>

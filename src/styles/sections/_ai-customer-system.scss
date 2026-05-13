@@ -1,0 +1,381 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/responsive';
+
+/* ============================================================
+   AI Customer System — Section styles
+   Main keyword: AI Customer System
+   Used by: src/components/AICustomerSystem.astro
+   ============================================================ */
+
+.aic-wrap {
+  padding: 0 $space-xl;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 $space-md;
+  }
+}
+
+/* --- Shared typography --------------------------------------- */
+.aic-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  font-size: 11px;
+  font-family: $font-mono;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $text-lighter;
+  margin-bottom: $space-md;
+
+  &::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $primary-color;
+    box-shadow: 0 0 10px $primary-color;
+    flex-shrink: 0;
+  }
+}
+
+.aic-accent {
+  font-style: italic;
+  color: $primary-color;
+}
+
+.aic-h1 {
+  font-family: $font-display;
+  font-size: clamp(40px, 7vw, 96px);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  margin: $space-md 0 $space-lg;
+  color: $text-primary;
+}
+
+.aic-h2 {
+  font-family: $font-display;
+  font-size: clamp(32px, 5vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  margin: $space-sm 0 $space-lg;
+  color: $text-primary;
+}
+
+.aic-lead {
+  font-size: clamp(15px, 1.2vw, 18px);
+  color: $text-secondary;
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+/* --- Buttons ------------------------------------------------- */
+.aic-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  height: 48px;
+  padding: 0 22px;
+  border-radius: $radius-full;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+
+  &--primary {
+    background: $primary-color;
+    color: #1a0d04;
+    box-shadow: 0 10px 24px rgba(255, 140, 66, 0.35);
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 32px rgba(255, 140, 66, 0.45);
+    }
+  }
+
+  &--ghost {
+    background: rgba(255, 255, 255, 0.04);
+    color: $text-primary;
+    border: 1px solid $border-color;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+}
+
+/* --- Hero ---------------------------------------------------- */
+.aic-hero {
+  padding: 80px 0 64px;
+  text-align: center;
+  position: relative;
+}
+
+.aic-actions {
+  display: flex;
+  gap: $space-md;
+  justify-content: center;
+  margin-top: $space-xl;
+  flex-wrap: wrap;
+}
+
+.aic-proof {
+  margin-top: $space-xl;
+  font-size: 14px;
+  color: $text-lighter;
+}
+
+/* --- Stats --------------------------------------------------- */
+.aic-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  background: $border-color;
+  gap: 1px;
+  margin-bottom: $space-3xl;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.aic-stat {
+  background: $bg-card;
+  padding: 36px 28px;
+  text-align: center;
+  transition: background 0.2s;
+
+  &:hover {
+    background: $bg-elevated;
+  }
+}
+
+.aic-stat__num {
+  font-family: $font-display;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: $primary-color;
+}
+
+.aic-stat__label {
+  font-weight: 600;
+  margin-top: $space-sm;
+  font-size: 14px;
+  color: $text-primary;
+}
+
+.aic-stat__caption {
+  font-size: 12px;
+  color: $text-lighter;
+  margin-top: 4px;
+}
+
+/* --- Section head ------------------------------------------- */
+.aic-section-head {
+  text-align: center;
+  margin-bottom: $space-3xl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Services ----------------------------------------------- */
+.aic-services {
+  margin-bottom: $space-3xl;
+}
+
+.aic-services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-lg;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aic-service-card {
+  background: linear-gradient(180deg, $bg-elevated 0%, $bg-card 100%);
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  padding: $space-2xl;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: rgba(255, 140, 66, 0.3);
+  }
+}
+
+.aic-service-card__icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: $space-sm;
+}
+
+.aic-service-card__tag {
+  font-family: $font-mono;
+  font-size: 11px;
+  color: $text-disabled;
+  letter-spacing: 0.1em;
+}
+
+.aic-service-card__title {
+  font-family: $font-display;
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 400;
+  margin: $space-sm 0 $space-md;
+  color: $text-primary;
+}
+
+.aic-service-card__body {
+  font-size: 14px;
+  color: $text-secondary;
+  line-height: 1.65;
+  margin-bottom: $space-md;
+}
+
+.aic-service-card__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  li {
+    font-size: 13px;
+    color: $text-secondary;
+    padding-left: $space-md;
+    position: relative;
+    line-height: 1.5;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $primary-color;
+    }
+  }
+}
+
+/* --- FAQ ---------------------------------------------------- */
+.aic-faq {
+  margin-bottom: $space-3xl;
+}
+
+.aic-faq__list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.aic-faq__item {
+  border-bottom: 1px solid $border-color;
+
+  &:first-child {
+    border-top: 1px solid $border-color;
+  }
+
+  &[open] .aic-faq__q {
+    color: $text-primary;
+  }
+}
+
+.aic-faq__q {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-md;
+  padding: $space-lg 0;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 500;
+  font-size: 15px;
+  color: $text-primary;
+  transition: color 0.15s;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.aic-faq__num {
+  font-family: $font-mono;
+  font-size: 11px;
+  color: $text-disabled;
+  flex-shrink: 0;
+  padding-top: 3px;
+  letter-spacing: 0.1em;
+}
+
+.aic-faq__a {
+  padding: 0 0 $space-lg $space-2xl;
+  font-size: 14px;
+  color: $text-secondary;
+  line-height: 1.65;
+}
+
+/* --- CTA ---------------------------------------------------- */
+.aic-cta {
+  background: linear-gradient(180deg, $bg-elevated 0%, $bg-card 100%);
+  border: 1px solid $border-color;
+  border-radius: $radius-xl;
+  padding: $space-3xl $space-2xl * 2;
+  text-align: center;
+  margin-bottom: $space-3xl;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse at center top, rgba(255, 140, 66, 0.2) 0%, transparent 65%);
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .aic-eyebrow,
+  .aic-h2,
+  .aic-lead,
+  .aic-btn {
+    position: relative;
+    z-index: 1;
+  }
+
+  .aic-lead {
+    margin: $space-md auto $space-xl;
+  }
+
+  @include tablet {
+    padding: $space-2xl $space-xl;
+    border-radius: $radius-lg;
+  }
+
+  @include mobile {
+    padding: $space-xl $space-md;
+  }
+}

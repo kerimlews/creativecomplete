@@ -1,295 +1,459 @@
 ---
-import { Image } from 'astro:assets';
-import Layout from '../layouts/Layout.astro';
-import { generateAboutPageJsonLd } from '../utils/jsonld';
-import logo from '../images/logo-svg.svg';
-
-// Page metadata
-const pageTitle = 'About Us - Creative Complete | Custom Software & Automation Solutions';
-const pageDescription = 'Learn about Creative Complete - we build custom software, automate business processes, and drive growth. Founded by Kerim Alihodza.';
-
-// Breadcrumbs
-const breadcrumbs = [
-  { name: 'Home', url: `${Astro.url.origin}/` },
-  { name: 'About', url: Astro.url.href }
-];
-
-// JSON-LD structured data
-const aboutStructuredData = generateAboutPageJsonLd({
-  name: 'Creative Complete',
-  description: pageDescription,
-  url: 'https://creativecomplete.com/about',
-  founder: {
-    name: 'Kerim Alihodza',
-    url: 'https://creativecomplete.com/kerim-alihodza'
-  },
-  foundingDate: '2023',
-  services: [
-    'Custom Software Development',
-    'Business Process Automation',
-    'SaaS Development',
-    'E-commerce Solutions',
-    'Mobile App Development',
-    'SEO & Digital Marketing'
-  ]
-});
-
+import LayoutV2 from '../layouts/LayoutV2.astro';
+import AuthorBadge from '../components/v2/AuthorBadge.astro';
+import CTA from '../components/v2/CTA.astro';
 ---
 
-<Layout 
-  title={pageTitle}
-  description={pageDescription}
-  structuredData={aboutStructuredData}
-  breadcrumbs={breadcrumbs}
-  openGraph={{
-    title: pageTitle,
-    description: pageDescription,
-    type: 'website'
-  }}
-  twitterCard={{
-    title: pageTitle,
-    description: pageDescription
-  }}
-  priority={0.8}
+<LayoutV2
+  title="About CreativeComplete | AI Customer System Agency"
+  description="CreativeComplete is focused on building and managing AI Customer Systems for agencies — the infrastructure that qualifies leads in 60 seconds, generates creatives automatically, and monetizes existing contact databases."
 >
-  <div class="about-page">
-    <!-- Hero Section -->
-    <section class="about-hero section-padding">
-      <div class="container">
-        <div class="about-hero-content">
-          <!-- Company Logo -->
-          <div class="company-logo">
-            <Image
-              src={logo}
-              alt="Creative Complete Logo" 
-              width={70} 
-              height={100}
+  <main>
+    <div class="v2-container v2-bc">
+      <a href="/">Home</a><span>/</span><span>About</span>
+    </div>
+
+    <!-- Hero -->
+    <section class="ab-hero">
+      <div class="v2-container">
+        <span class="v2-eyebrow">About us</span>
+        <h1 class="v2-h2" style="margin-top:14px;max-width:18ch">
+          We build AI Customer Systems.<br/>
+          <span class="v2-grad">For agencies that want results.</span>
+        </h1>
+        <p class="v2-lead" style="margin-top:20px;max-width:58ch">
+          CreativeComplete started as a full-service digital agency. Today, our primary focus
+          is a single product: the <strong>AI Customer System</strong> — the end-to-end infrastructure
+          that captures leads across 40+ channels, qualifies them in 60 seconds, converts them
+          with AI-generated creatives, and monetizes your existing contact database at 42.5× ROI.
+        </p>
+        <AuthorBadge publishedYear={2026} />
+      </div>
+    </section>
+
+    <!-- Primary focus -->
+    <section class="ab-focus">
+      <div class="v2-container">
+        <div class="ab-focus__grid">
+          <div class="ab-focus__text">
+            <span class="v2-eyebrow">Our primary focus</span>
+            <h2 class="v2-h3" style="margin-top:12px">AI Customer System</h2>
+            <p style="margin-top:16px;color:var(--fg-1);line-height:1.7">
+              After 10+ years building digital products for clients across Europe and the US,
+              we identified the single biggest revenue leak every agency has: leads that cost
+              money to acquire but never get properly qualified, nurtured, or re-engaged.
+            </p>
+            <p style="margin-top:12px;color:var(--fg-1);line-height:1.7">
+              AI Customer System closes that leak. We configure, integrate, and manage the entire
+              infrastructure — omnichannel AI conversation, creative production, broadcast campaigns —
+              so agencies can stop losing revenue to slow response times and stale ad creatives.
+            </p>
+            <p style="margin-top:12px;color:var(--fg-1);line-height:1.7">
+              This is not a tool you buy and set up yourself. It is a fully managed system,
+              tuned across 50+ agency deployments, run by us on your behalf.
+            </p>
+          </div>
+
+          <div class="ab-focus__stats">
+            <div class="ab-stat">
+              <div class="ab-stat__n">81%</div>
+              <div class="ab-stat__l">Lead qualification rate</div>
+            </div>
+            <div class="ab-stat">
+              <div class="ab-stat__n">60s</div>
+              <div class="ab-stat__l">First response time</div>
+            </div>
+            <div class="ab-stat">
+              <div class="ab-stat__n">42.5×</div>
+              <div class="ab-stat__l">ROI from existing leads</div>
+            </div>
+            <div class="ab-stat">
+              <div class="ab-stat__n">50+</div>
+              <div class="ab-stat__l">Agency deployments</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What the system does -->
+    <section class="ab-pillars">
+      <div class="v2-container">
+        <div class="v2-section-head" style="text-align:center">
+          <span class="v2-eyebrow">The system, in four layers</span>
+          <h2 class="v2-h3" style="margin-top:12px">How AI Customer System works</h2>
+        </div>
+        <div class="ab-pillars__grid">
+          <div class="ab-pillar">
+            <div class="ab-pillar__num">01</div>
+            <h3 class="ab-pillar__title">AI Lead Qualification</h3>
+            <p class="ab-pillar__desc">
+              Responds to every new lead in under 60 seconds, 24/7, across WhatsApp, Instagram,
+              TikTok, Facebook, SMS, and 6+ more channels. Qualifies by intent, budget, and urgency
+              without a single human touch.
+            </p>
+          </div>
+          <div class="ab-pillar">
+            <div class="ab-pillar__num">02</div>
+            <h3 class="ab-pillar__title">AI Creative Engine</h3>
+            <p class="ab-pillar__desc">
+              Produces 8–12 ad creative variants per week, trained on $35B+ of real ad spend data.
+              Creative Scoring AI predicts performance before you spend a single euro. Feeds better
+              leads into the qualification layer.
+            </p>
+          </div>
+          <div class="ab-pillar">
+            <div class="ab-pillar__num">03</div>
+            <h3 class="ab-pillar__title">Lead Capture (40+ channels)</h3>
+            <p class="ab-pillar__desc">
+              Unifies every lead source — paid, organic, referral, form fills — into a single
+              omnichannel inbox with full source attribution. No lead falls through the cracks.
+            </p>
+          </div>
+          <div class="ab-pillar">
+            <div class="ab-pillar__num">04</div>
+            <h3 class="ab-pillar__title">Existing Lead Monetization</h3>
+            <p class="ab-pillar__desc">
+              Runs segmented WhatsApp broadcast campaigns to your existing contact database.
+              Agencies with 3,000–15,000 dormant contacts typically generate €50K–€200K in new
+              revenue from the first campaign cycle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supporting services -->
+    <section class="ab-services">
+      <div class="v2-container">
+        <div class="ab-services__inner">
+          <div class="ab-services__head">
+            <span class="v2-eyebrow">Supporting services</span>
+            <h2 class="v2-h3" style="margin-top:12px">We still build everything else — when it matters</h2>
+            <p style="margin-top:16px;color:var(--fg-1);line-height:1.7;max-width:52ch">
+              AI Customer System is our primary focus, but we haven't stopped building websites,
+              running SEO campaigns, or developing custom software. If a client needs these services
+              alongside their AI Customer System — or as a standalone engagement — we deliver them
+              to the same standard we always have.
+            </p>
+          </div>
+          <div class="ab-services__list">
+            {[
+              { icon: '🌐', label: 'Web Design', desc: 'High-converting landing pages and full websites built around your sales funnel.' },
+              { icon: '📈', label: 'SEO', desc: 'Organic growth strategies that compound over time and reduce cost-per-lead.' },
+              { icon: '⚙️', label: 'AI Automation', desc: 'Custom workflow automation that eliminates manual work across your operation.' },
+              { icon: '🛒', label: 'E-commerce', desc: 'Shopify and custom e-commerce builds optimised for conversion and AOV.' },
+              { icon: '📱', label: 'Mobile Apps', desc: 'Native and cross-platform apps for agencies that need a client-facing product.' },
+              { icon: '💻', label: 'Custom SaaS', desc: 'Full-stack SaaS platforms built to spec, from MVP to scale.' },
+            ].map(s => (
+              <div class="ab-svc">
+                <span class="ab-svc__icon">{s.icon}</span>
+                <div>
+                  <div class="ab-svc__label">{s.label}</div>
+                  <div class="ab-svc__desc">{s.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kerim -->
+    <section class="ab-founder">
+      <div class="v2-container">
+        <div class="ab-founder__inner">
+          <div class="ab-founder__text">
+            <span class="v2-eyebrow">The founder</span>
+            <h2 class="v2-h3" style="margin-top:12px">Kerim Alihodza</h2>
+            <p class="ab-founder__role">CEO & Business Mechanic · 10+ years</p>
+            <p style="margin-top:16px;color:var(--fg-1);line-height:1.7">
+              I've spent 10+ years building digital systems for businesses across Europe and the US.
+              I've seen every version of the same problem: agencies acquire leads, then lose them
+              to slow response, inconsistent qualification, and creatives that go stale.
+            </p>
+            <p style="margin-top:12px;color:var(--fg-1);line-height:1.7">
+              AI Customer System is the answer I built from the ground up — and now deploy and
+              manage for agencies that are serious about fixing their revenue infrastructure,
+              not just adding another tool to the stack.
+            </p>
+            <a href="/kerim-alihodza/" class="v2-btn v2-btn-primary" style="margin-top:28px;width:fit-content">
+              Full profile
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          <div class="ab-founder__photo">
+            <img
+              src="/images/kerim-alihodza.png"
+              alt="Kerim Alihodza"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
             />
-            <h1 class="company-name">Creative Complete</h1>
-          </div>
-          
-          <div class="about-intro">
-            <h2>We Build Software That Solves Real Business Problems</h2>
-            <p class="lead">
-              From custom SaaS platforms to business automation systems, we transform complex challenges into elegant digital solutions that drive growth and efficiency.
-            </p>
+            <div class="ab-founder__initials" aria-hidden="true">KA</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Founder Section -->
-    <section class="founder-section section-padding">
-      <div class="container">
-        <div class="founder-content">
-          <div class="founder-header">
-            <h2>Meet Our Founder</h2>
-            <p class="section-subtitle">The vision behind Creative Complete</p>
-          </div>
-          
-          <div class="founder-profile">
-            <div class="founder-info">
-              <h3>Kerim Alihodza</h3>
-              <p class="founder-title">Founder & Lead Developer</p>
-              <div class="founder-bio">
-                <p>
-                  With over a decade of experience in software development and digital transformation, 
-                  Kerim founded Creative Complete to bridge the gap between complex business problems 
-                  and practical technology solutions.
-                </p>
-                <p>
-                  His expertise spans full-stack development, system architecture, and growth strategy, 
-                  with a proven track record of delivering results for businesses across multiple industries.
-                </p>
-              </div>
-              <div class="founder-cta">
-                <a href="/kerim-alihodza/" class="cta-button cta-primary cta-md">
-                  Learn More About Kerim
-                </a>
-              </div>
-            </div>
-            
-            <div class="founder-stats">
-              <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Years Experience</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Projects Delivered</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">$2M+</div>
-                <div class="stat-label">Revenue Generated</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <CTA />
+  </main>
+</LayoutV2>
 
-    <!-- What We Do Section -->
-    <section class="services-section section-padding">
-      <div class="container">
-        <div class="section-header">
-          <h2>What We Do</h2>
-          <p class="section-subtitle">
-            We specialize in building custom solutions that automate processes, 
-            streamline operations, and drive measurable business growth.
-          </p>
-        </div>
+<style lang="scss">
+  .v2-bc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 24px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    font-family: var(--font-mono);
+    color: var(--fg-2);
+    a { color: var(--fg-2); &:hover { color: var(--c1-light); } }
+  }
 
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">🚀</div>
-            <h3>Custom Software Development</h3>
-            <p>
-              Bespoke applications tailored to your unique business needs, 
-              built with scalable architecture and modern technologies.
-            </p>
-            <ul class="service-features">
-              <li>SaaS Platforms</li>
-              <li>Web Applications</li>
-              <li>API Development</li>
-              <li>System Integration</li>
-            </ul>
-          </div>
+  /* ── Hero ── */
+  .ab-hero {
+    padding: 56px 0 64px;
+    border-bottom: 1px solid var(--line);
 
-          <div class="service-card">
-            <div class="service-icon">⚡</div>
-            <h3>Business Process Automation</h3>
-            <p>
-              Eliminate manual work and reduce errors by automating repetitive 
-              tasks and streamlining your workflows.
-            </p>
-            <ul class="service-features">
-              <li>Workflow Automation</li>
-              <li>AI Integration</li>
-              <li>CRM Systems</li>
-              <li>Data Processing</li>
-            </ul>
-          </div>
+    strong { color: var(--fg-0); }
+  }
 
-          <div class="service-card">
-            <div class="service-icon">📈</div>
-            <h3>Growth & Optimization</h3>
-            <p>
-              Drive revenue growth through strategic SEO, conversion optimization, 
-              and data-driven marketing strategies.
-            </p>
-            <ul class="service-features">
-              <li>SEO Strategy</li>
-              <li>Conversion Rate Optimization</li>
-              <li>E-commerce Scaling</li>
-              <li>Performance Analytics</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+  /* ── Primary focus ── */
+  .ab-focus {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--line);
+  }
 
-    <!-- Our Process Section -->
-    <!-- <section class="process-section section-padding">
-      <div class="container">
-        <div class="section-header">
-          <h2>Our Process</h2>
-          <p class="section-subtitle">
-            A structured approach that ensures we deliver solutions that 
-            not only work but drive real business value.
-          </p>
-        </div>
+  .ab-focus__grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 64px;
+    align-items: start;
 
-        <div class="process-steps">
-          <div class="process-step">
-            <div class="step-number">01</div>
-            <div class="step-content">
-              <h3>Discovery & Analysis</h3>
-              <p>
-                We dive deep into your business challenges, goals, and technical 
-                requirements to understand exactly what success looks like for you.
-              </p>
-              <ul>
-                <li>Business requirements analysis</li>
-                <li>Technical feasibility assessment</li>
-                <li>Competitive landscape review</li>
-                <li>Success metrics definition</li>
-              </ul>
-            </div>
-          </div>
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
 
-          <div class="process-step">
-            <div class="step-number">02</div>
-            <div class="step-content">
-              <h3>Strategy & Planning</h3>
-              <p>
-                We create a detailed project roadmap with clear milestones, 
-                timelines, and technical specifications.
-              </p>
-              <ul>
-                <li>Project architecture design</li>
-                <li>Technology stack selection</li>
-                <li>Development timeline</li>
-                <li>Resource allocation</li>
-              </ul>
-            </div>
-          </div>
+  .ab-focus__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
 
-          <div class="process-step">
-            <div class="step-number">03</div>
-            <div class="step-content">
-              <h3>Development & Implementation</h3>
-              <p>
-                Our team builds your solution using agile methodologies, 
-                with regular updates and opportunities for feedback.
-              </p>
-              <ul>
-                <li>Agile development sprints</li>
-                <li>Regular progress demos</li>
-                <li>Quality assurance testing</li>
-                <li>Staging environment setup</li>
-              </ul>
-            </div>
-          </div>
+  .ab-stat {
+    background: var(--bg-card);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
 
-          <div class="process-step">
-            <div class="step-number">04</div>
-            <div class="step-content">
-              <h3>Launch & Optimization</h3>
-              <p>
-                We deploy your solution and provide ongoing support to ensure 
-                optimal performance and continuous improvement.
-              </p>
-              <ul>
-                <li>Production deployment</li>
-                <li>Performance monitoring</li>
-                <li>User training & documentation</li>
-                <li>Ongoing support & maintenance</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+  .ab-stat__n {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    background: var(--grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
 
-    <!-- CTA Section -->
-    <section class="about-cta section-padding">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Ready to Transform Your Business?</h2>
-          <p>
-            Let's discuss how we can help you automate processes, 
-            build custom software, or drive growth for your business.
-          </p>
-          <div class="cta-actions">
-            <a href="/contact/" class="cta-button cta-primary cta-lg">
-              Start Your Project
-            </a>
-            <a href="/projects/" class="cta-button cta-secondary cta-lg">
-              View Our Work
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-</Layout>
+  .ab-stat__l {
+    font-size: 11px;
+    font-family: var(--font-mono);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--fg-2);
+  }
+
+  /* ── Pillars ── */
+  .ab-pillars {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .ab-pillars__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 48px;
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    border: 1px solid var(--line);
+
+    @media (max-width: 1024px) { grid-template-columns: 1fr 1fr; }
+    @media (max-width: 560px)  { grid-template-columns: 1fr; }
+  }
+
+  .ab-pillar {
+    background: var(--bg-card);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad-text);
+      opacity: 0.6;
+    }
+  }
+
+  .ab-pillar__num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .12em;
+    color: var(--c1-light);
+    text-transform: uppercase;
+  }
+
+  .ab-pillar__title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--fg-0);
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .ab-pillar__desc {
+    font-size: 13px;
+    color: var(--fg-2);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* ── Supporting services ── */
+  .ab-services {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .ab-services__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .ab-services__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .ab-svc {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 20px;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--line);
+    background: var(--bg-card);
+    transition: border-color .15s;
+
+    &:hover { border-color: var(--line-accent); }
+  }
+
+  .ab-svc__icon {
+    font-size: 18px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .ab-svc__label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--fg-0);
+    line-height: 1.3;
+  }
+
+  .ab-svc__desc {
+    font-size: 12px;
+    color: var(--fg-2);
+    line-height: 1.55;
+    margin-top: 2px;
+  }
+
+  /* ── Founder ── */
+  .ab-founder {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .ab-founder__inner {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 64px;
+    align-items: center;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .ab-founder__role {
+    font-size: 12px;
+    font-family: var(--font-mono);
+    color: var(--c1-light);
+    letter-spacing: .05em;
+    margin-top: 4px;
+  }
+
+  .ab-founder__photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    border: 1px solid var(--line);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .ab-founder__initials {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--c1) 0%, var(--c3) 100%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    font-weight: 700;
+    color: #fff;
+    font-family: var(--font-display);
+    letter-spacing: .04em;
+  }
+
+  @media (max-width: 900px) {
+    .ab-founder__photo {
+      max-width: 240px;
+      aspect-ratio: 1;
+    }
+  }
+</style>

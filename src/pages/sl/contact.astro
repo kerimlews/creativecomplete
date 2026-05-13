@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import LayoutV2 from '../../layouts/LayoutV2.astro';
 import { getLanguageFromUrl, t, getLocalizedUrl } from '../../utils/translations';
 
 const currentLang: 'sl' = 'sl';
@@ -7,7 +7,7 @@ const currentLang: 'sl' = 'sl';
 const { title = t('contact.title', currentLang), subtitle = t('contact.subtitle', currentLang) } = Astro.props;
 ---
 
-<Layout title={title} description={subtitle}>
+<LayoutV2 title={title} description={subtitle} lang="sl">
     <!-- Contact Form Component -->
     <div class="contact-section section-padding">
       <div class="container">
@@ -136,7 +136,7 @@ const { title = t('contact.title', currentLang), subtitle = t('contact.subtitle'
         </div>
       </div>
     </div>
-</Layout>
+</LayoutV2>
 
 <script>
   // Client-side form validation and submission

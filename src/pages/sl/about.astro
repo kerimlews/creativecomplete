@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import Layout from '../../layouts/Layout.astro';
+import LayoutV2 from '../../layouts/LayoutV2.astro';
 import { generateAboutPageJsonLd } from '../../utils/jsonld';
 import logo from '../../images/logo-svg.svg';
 import { getLanguageFromUrl, t, getLocalizedUrl } from '../../utils/translations';
@@ -38,7 +38,8 @@ const aboutStructuredData = generateAboutPageJsonLd({
 });
 ---
 
-<Layout 
+<LayoutV2
+  lang="sl"
   title={pageTitle}
   description={pageDescription}
   structuredData={aboutStructuredData}
@@ -294,7 +295,7 @@ const aboutStructuredData = generateAboutPageJsonLd({
       </div>
     </section>
   </div>
-</Layout>
+</LayoutV2>
 
 
 

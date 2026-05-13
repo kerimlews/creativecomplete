@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.adcreative.ai)",
+      "Bash(npx astro *)",
+      "Read(//home/kerim/.nvm/versions/node/**)",
+      "Read(//usr/local/bin/**)",
+      "Bash(nvm list *)",
+      "Bash(grep -n 'primary\\\\|orange\\\\|$c1\\\\|$primary' /home/kerim/Documents/astro-creativecomplete-landing/src/styles/_variables.scss)",
+      "Bash(grep -n 'primary-gradient\\\\|orange-gradient\\\\|$primary\\\\|$orange' /home/kerim/Documents/astro-creativecomplete-landing/src/styles/global.scss)",
+      "Bash(grep -n 'primary\\\\|orange\\\\|$c1\\\\|primary-gradient\\\\|orange-gradient' /home/kerim/Documents/astro-creativecomplete-landing/src/styles/utils/variables.scss)",
+      "Bash(npm run *)",
+      "Bash(nvm use *)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3)",
+      "Bash(sed -i 's/Lead Capture · 12 channels/Lead Capture · 40+ channels/g' /home/kerim/Documents/astro-creativecomplete-landing/src/components/v2/LeadJourneyMotion.astro /home/kerim/Documents/astro-creativecomplete-landing/src/components/v2/ServiceMotion.astro)",
+      "Bash(sed -i 's/12 channels · capturing now/40+ channels · capturing now/g' /home/kerim/Documents/astro-creativecomplete-landing/src/components/v2/HeroMotion.astro)",
+      "Bash(sed -i 's/12+ Kanäle/40+ Kanäle/g;    s/Unified Inbox über 12+ Kanäle/Unified Inbox über 40+ Kanäle/g;    s/verbindet 12+ Kanäle/verbindet 40+ Kanäle/g;    s/12+ kanalov/40+ kanalov/g;    s/Enotna mapa prek 12+ kanalov/Enotna mapa prek 40+ kanalov/g;    s/poveže s 12+ kanali/poveže s 40+ kanali/g;    s/12+ kanala/40+ kanala/g;    s/Ujedinjeni inbox na 12+ kanala/Ujedinjeni inbox na 40+ kanala/g;    s/povezuje 12+ kanala/povezuje 40+ kanala/g;    s/12+ canaux/40+ canaux/g;    s/Boîte de réception unifiée sur 12+ canaux/Boîte de réception unifiée sur 40+ canaux/g;    s/connecte à 12+ canaux/connecte à 40+ canaux/g' /home/kerim/Documents/astro-creativecomplete-landing/src/components/AICustomerSystem.astro)",
+      "Bash(sed -i 's/12+ channels/40+ channels/g' /home/kerim/Documents/astro-creativecomplete-landing/src/remotion/compositions/ServicesVideo.tsx)",
+      "Bash(grep -n \"^  </div>$\" /home/kerim/Documents/astro-creativecomplete-landing/src/components/v2/EndToEnd.astro)",
+      "WebSearch",
+      "WebFetch(domain:support.google.com)",
+      "WebFetch(domain:workspace.google.com)",
+      "WebFetch(domain:developers.google.com)",
+      "WebFetch(domain:www.silvermine.ai)",
+      "WebFetch(domain:nightwolf.dev)",
+      "WebFetch(domain:www.clrn.org)",
+      "Bash(python3 -)",
+      "Bash(grep -n 'primary\\\\|--primary\\\\|$primary\\\\|color:' /home/kerim/Documents/astro-creativecomplete-landing/src/styles/utils/_variables.scss)",
+      "Bash(grep -rn \"h1\\\\s*{,h2\\\\s*{,h3\\\\s*{\\\\|^h1\\\\|^h2\\\\|^h3\\\\|color.*#FF\\\\|color.*primary\\\\|text-gradient\\\\|\\\\.text-gradient\" /home/kerim/Documents/astro-creativecomplete-landing/src/styles/pages/_services.scss)",
+      "Bash(find /home/kerim -name \"kerim-alihodza.jpg\" 2>/dev/null | head -5)",
+      "Read(//home/kerim/**)",
+      "Bash(curl -sL \"https://onlytourism.com/wp-content/uploads/2025/03/OT-Name-only-Logo-Blue.svg\" -o /home/kerim/Documents/astro-creativecomplete-landing/public/images/logos/only-tourism.svg)",
+      "Bash(identify /home/kerim/Documents/astro-creativecomplete-landing/public/favicon-32x32.png)"
+    ]
+  }
+}

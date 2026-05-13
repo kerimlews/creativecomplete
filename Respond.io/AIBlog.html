@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <!-- SEO: title starts with keyword — dynamic, set by JS below -->
+  <title>AI Customer System: How to Qualify 300+ Agency Leads Daily Without Hiring</title>
+  <!-- SEO: description starts with keyword + description -->
+  <meta name="description" content="AI Customer System powered by Respond.io AI Agents qualifies every inbound lead in under 60 seconds — 24/7, across 12 channels. The exact setup top agencies use to achieve 81% conversion rates."/>
+  <meta name="keywords" content="AI Customer System, AI lead qualification, Respond.io AI agents, 81% conversion rate, omnichannel lead qualification, WhatsApp qualification, AI customer qualification, lead scoring automation"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/tokens.css"/>
+  <link rel="stylesheet" href="styles/ai-components.css"/>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="components/ai-system.jsx"></script>
+  <script type="text/babel" src="components/ai-blog.jsx"></script>
+  <script type="text/babel" data-presets="env,react">
+    const slug = new URLSearchParams(location.search).get("slug") || "ai-customer-system-qualify-300-leads";
+    const post = AI_POSTS.find(p => p.slug === slug) || AI_POSTS[0];
+
+    const App = () => (
+      <div className="page" data-screen-label={`AI Customer System Blog — ${post.slug}`}>
+        <AINav active="blogs"/>
+        <AIBlogPostHero post={post}/>
+        <AIBlogPostBody/>
+        <AIRelatedPosts/>
+        <AINewsletter/>
+        <AIFooter/>
+      </div>
+    );
+    ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+  </script>
+</body>
+</html>

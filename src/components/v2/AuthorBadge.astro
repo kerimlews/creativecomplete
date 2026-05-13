@@ -1,0 +1,108 @@
+---
+interface Props {
+  name?: string;
+  role?: string;
+  href?: string;
+  publishedYear?: number | string;
+}
+
+const {
+  name = 'Kerim Alihodza',
+  role = 'CEO & Business Mechanic',
+  href = '/kerim-alihodza/',
+  publishedYear,
+} = Astro.props;
+---
+
+<a href={href} class="v2-author" aria-label={`Author: ${name}`}>
+  <div class="v2-author__avatar">
+    <img
+      src="/images/kerim-alihodza.png"
+      alt={name}
+      width="40"
+      height="40"
+      loading="lazy"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+    />
+    <span class="v2-author__initials" aria-hidden="true">KA</span>
+  </div>
+  <div class="v2-author__info">
+    <span class="v2-author__name">{name}</span>
+    <span class="v2-author__role">
+      {role}{publishedYear ? ` · ${publishedYear}` : ''}
+    </span>
+  </div>
+</a>
+
+<style lang="scss">
+  .v2-author {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+    padding: 10px 14px;
+    border-radius: var(--r-xl);
+    border: 1px solid var(--line);
+    background: var(--bg-card);
+    text-decoration: none;
+    transition: border-color .15s, background .15s;
+
+    &:hover {
+      border-color: var(--line-accent);
+      background: var(--glass);
+    }
+  }
+
+  .v2-author__avatar {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+  }
+
+  .v2-author__initials {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--c1) 0%, var(--c3) 100%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: .04em;
+    font-family: var(--font-display);
+  }
+
+  .v2-author__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .v2-author__name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--fg-0);
+    line-height: 1.2;
+  }
+
+  .v2-author__role {
+    font-size: 11px;
+    font-family: var(--font-mono);
+    letter-spacing: .05em;
+    color: var(--fg-2);
+    line-height: 1.2;
+  }
+</style>

@@ -1,0 +1,39 @@
+---
+const results = [
+  { n: "81%",   l: "Lead conversion rate",  c: "AI Agents qualifying 24/7" },
+  { n: "60%",   l: "Faster sales cycles",    c: "vs. manual qualification" },
+  { n: "42.5×", l: "Average broadcast ROI",  c: "From existing lead database" },
+  { n: "14×",   l: "More ad conversions",    c: "AI creatives vs. manual design" },
+];
+---
+
+<section class="v2-results" id="results">
+  <div class="v2-container">
+    <div class="v2-results__banner">
+      <div class="v2-section-head center" style="margin:0">
+        <span class="v2-eyebrow" data-m="fade">Proven results</span>
+        <h2 class="v2-h2" data-m="up" style="--m-d:.1s">
+          Numbers that <span class="v2-grad">speak for themselves.</span>
+        </h2>
+      </div>
+      <div class="v2-results__grid m-stagger">
+        {results.map((r, i) => (
+          <div class="v2-results__item" data-m="up" style={`--m-d:${i * 0.1}s`}>
+            <div class="v2-results__n" data-count={r.n}>{r.n}</div>
+            <div class="v2-results__l">{r.l}</div>
+            <div class="v2-results__c">{r.c}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="v2-sc" data-m="up" style="--m-d:.45s">
+      <a href="/projects/" class="v2-sc__btn">
+        See the case studies →
+      </a>
+      <a href="javascript:void(0)" class="v2-sc__btn primary" style="margin-left:12px"
+         data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'>
+        I want these results →
+      </a>
+    </div>
+  </div>
+</section>
