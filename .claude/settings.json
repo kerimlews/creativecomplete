@@ -31,7 +31,8 @@
       "Bash(find /home/kerim -name \"kerim-alihodza.jpg\" 2>/dev/null | head -5)",
       "Read(//home/kerim/**)",
       "Bash(curl -sL \"https://onlytourism.com/wp-content/uploads/2025/03/OT-Name-only-Logo-Blue.svg\" -o /home/kerim/Documents/astro-creativecomplete-landing/public/images/logos/only-tourism.svg)",
-      "Bash(identify /home/kerim/Documents/astro-creativecomplete-landing/public/favicon-32x32.png)"
+      "Bash(identify /home/kerim/Documents/astro-creativecomplete-landing/public/favicon-32x32.png)",
+      "Bash(xargs ls -la)"
     ]
   }
 }
