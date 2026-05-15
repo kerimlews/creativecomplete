@@ -1,0 +1,71 @@
+<svg width="800" height="420" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0f1f"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6366f1" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <!-- Eyebrow -->
+  <text x="400" y="36" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" letter-spacing="0.18em" fill="#6366f1" font-weight="600">02 — ROUND ROBIN ROUTING</text>
+
+  <!-- Center queue -->
+  <ellipse cx="400" cy="210" rx="90" ry="90" fill="url(#center-glow)"/>
+  <circle cx="400" cy="210" r="56" fill="rgba(99,102,241,0.1)" stroke="rgba(99,102,241,0.3)" stroke-width="1.5"/>
+  <text x="400" y="204" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" letter-spacing="0.1em" fill="rgba(255,255,255,0.4)">LEAD QUEUE</text>
+  <text x="400" y="222" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="700" fill="#a5b4fc">47</text>
+  <text x="400" y="238" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="rgba(255,255,255,0.3)" letter-spacing="0.06em">INCOMING</text>
+
+  <!-- Circular arrow -->
+  <path d="M 344 154 A 74 74 0 1 1 344 266" fill="none" stroke="rgba(99,102,241,0.3)" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+
+  <!-- Agent cards at 4 positions: top, right, bottom, left -->
+
+  <!-- Top: Agent A -->
+  <rect x="320" y="58" width="160" height="72" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <circle cx="352" cy="88" r="16" fill="rgba(99,102,241,0.15)"/>
+  <text x="352" y="94" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)" font-weight="600">AR</text>
+  <text x="374" y="84" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.75)">Ana R.</text>
+  <text x="374" y="100" font-family="ui-monospace,monospace" font-size="10" fill="#a5b4fc">12 leads</text>
+  <rect x="330" y="112" width="60" height="10" rx="5" fill="rgba(99,102,241,0.15)"/>
+  <rect x="330" y="112" width="60" height="10" rx="5" fill="rgba(99,102,241,0.4)"/>
+
+  <!-- Right: Agent B -->
+  <rect x="576" y="172" width="160" height="72" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <circle cx="608" cy="202" r="16" fill="rgba(99,102,241,0.15)"/>
+  <text x="608" y="208" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)" font-weight="600">BK</text>
+  <text x="630" y="198" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.75)">Ben K.</text>
+  <text x="630" y="214" font-family="ui-monospace,monospace" font-size="10" fill="#a5b4fc">12 leads</text>
+  <rect x="586" y="226" width="60" height="10" rx="5" fill="rgba(99,102,241,0.15)"/>
+  <rect x="586" y="226" width="60" height="10" rx="5" fill="rgba(99,102,241,0.4)"/>
+
+  <!-- Bottom: Agent C (NEXT - highlighted) -->
+  <rect x="310" y="296" width="180" height="76" rx="10" fill="rgba(99,102,241,0.1)" stroke="rgba(99,102,241,0.4)" stroke-width="1.5"/>
+  <circle cx="344" cy="328" r="16" fill="rgba(99,102,241,0.2)"/>
+  <text x="344" y="334" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#a5b4fc" font-weight="600">CT</text>
+  <text x="366" y="321" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.85)">Clara T.</text>
+  <text x="366" y="337" font-family="ui-monospace,monospace" font-size="10" fill="#a5b4fc">11 leads</text>
+  <rect x="366" y="346" width="48" height="14" rx="7" fill="rgba(99,102,241,0.2)" stroke="rgba(99,102,241,0.45)" stroke-width="1"/>
+  <text x="390" y="357" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#a5b4fc" letter-spacing="0.1em">NEXT ↑</text>
+
+  <!-- Left: Agent D -->
+  <rect x="64" y="172" width="160" height="72" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <circle cx="96" cy="202" r="16" fill="rgba(99,102,241,0.15)"/>
+  <text x="96" y="208" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)" font-weight="600">DM</text>
+  <text x="118" y="198" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.75)">Dan M.</text>
+  <text x="118" y="214" font-family="ui-monospace,monospace" font-size="10" fill="#a5b4fc">12 leads</text>
+  <rect x="74" y="226" width="60" height="10" rx="5" fill="rgba(99,102,241,0.15)"/>
+  <rect x="74" y="226" width="60" height="10" rx="5" fill="rgba(99,102,241,0.4)"/>
+
+  <!-- Equal label -->
+  <text x="400" y="400" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.35)">Every agent gets equal volume · No burnout · No favoritism</text>
+</svg>

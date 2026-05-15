@@ -78,10 +78,10 @@ const authorSchema = z.object({
 });
 
 // Define collections
-// const blogs = defineCollection({
-//   loader: glob({ pattern: '**/*.md', base: './src/content/blogs' }),
-//   schema: blogSchema,
-// });
+const blogs = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/blogs' }),
+  //schema: blogSchema,
+});
 
 const authors = defineCollection({
   loader: glob({ pattern: 'en/**/*.md', base: './src/content/authors' }),
@@ -127,7 +127,7 @@ const servicesSl = defineCollection({
 // });
 
 export const collections = {
-  //blogs,
+  blogs,
   authors,
   projectsEn,
   projectsDe,

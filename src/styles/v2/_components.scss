@@ -5,9 +5,9 @@
 
 /* === Nav ==================================================== */
 .v2-nav {
-  position: sticky; top: 12px; z-index: 100;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   background: transparent;
-  padding: 0 16px;
+  padding: 12px 16px 0;
 
   > .v2-container { padding: 0; }
 }

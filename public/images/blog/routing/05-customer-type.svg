@@ -1,0 +1,78 @@
+<svg width="800" height="420" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0f1f"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <marker id="arr-g" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#22c55e" opacity="0.7"/>
+    </marker>
+    <marker id="arr-i" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6366f1" opacity="0.7"/>
+    </marker>
+    <marker id="arr-o" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <!-- Eyebrow -->
+  <text x="400" y="36" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" letter-spacing="0.18em" fill="#f59e0b" font-weight="600">05 — CUSTOMER-TYPE ROUTING</text>
+
+  <!-- Column headers -->
+  <text x="200" y="64" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)" letter-spacing="0.14em">INCOMING</text>
+  <text x="600" y="64" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)" letter-spacing="0.14em">DESTINATION</text>
+
+  <!-- Divider line -->
+  <line x1="400" y1="58" x2="400" y2="370" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- ── Row 1: NEW LEAD ──────────────────────── -->
+  <!-- Lead pill -->
+  <rect x="60" y="90" width="280" height="64" rx="12" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.25)" stroke-width="1.5"/>
+  <circle cx="96" cy="122" r="20" fill="rgba(34,197,94,0.15)"/>
+  <text x="96" y="128" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#4ade80">★</text>
+  <text x="124" y="116" font-family="ui-monospace,monospace" font-size="9" fill="#4ade80" letter-spacing="0.12em" font-weight="700">NEW LEAD</text>
+  <text x="124" y="132" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.6)">First time visitor</text>
+
+  <!-- Arrow -->
+  <path d="M 340 122 L 460 122" stroke="#22c55e" stroke-width="1.5" stroke-opacity="0.6" stroke-dasharray="6,4" marker-end="url(#arr-g)"/>
+
+  <!-- Destination -->
+  <rect x="460" y="90" width="280" height="64" rx="12" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.2)" stroke-width="1"/>
+  <text x="496" y="116" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.8)">Acquisition Team</text>
+  <text x="496" y="132" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.38)">Intro specialists · Onboarding flow</text>
+
+  <!-- ── Row 2: RETURNING ──────────────────────── -->
+  <rect x="60" y="178" width="280" height="64" rx="12" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.25)" stroke-width="1.5"/>
+  <circle cx="96" cy="210" r="20" fill="rgba(99,102,241,0.15)"/>
+  <text x="96" y="216" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#a5b4fc">↩</text>
+  <text x="124" y="204" font-family="ui-monospace,monospace" font-size="9" fill="#a5b4fc" letter-spacing="0.12em" font-weight="700">RETURNING</text>
+  <text x="124" y="220" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.6)">Previous customer</text>
+
+  <!-- Arrow -->
+  <path d="M 340 210 L 460 210" stroke="#6366f1" stroke-width="1.5" stroke-opacity="0.6" stroke-dasharray="6,4" marker-end="url(#arr-i)"/>
+
+  <!-- Destination -->
+  <rect x="460" y="178" width="280" height="64" rx="12" fill="rgba(99,102,241,0.06)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/>
+  <text x="496" y="204" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.8)">Customer Success</text>
+  <text x="496" y="220" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.38)">Context-aware reps · History loaded</text>
+
+  <!-- ── Row 3: VIP ──────────────────────── -->
+  <rect x="60" y="266" width="280" height="64" rx="12" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.3)" stroke-width="1.5"/>
+  <circle cx="96" cy="298" r="20" fill="rgba(245,158,11,0.15)"/>
+  <text x="96" y="304" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#fbbf24">♛</text>
+  <text x="124" y="292" font-family="ui-monospace,monospace" font-size="9" fill="#fbbf24" letter-spacing="0.12em" font-weight="700">VIP CLIENT</text>
+  <text x="124" y="308" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.6)">High-value account</text>
+
+  <!-- Arrow -->
+  <path d="M 340 298 L 460 298" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.6" stroke-dasharray="6,4" marker-end="url(#arr-o)"/>
+
+  <!-- Destination -->
+  <rect x="460" y="266" width="280" height="64" rx="12" fill="rgba(245,158,11,0.06)" stroke="rgba(245,158,11,0.25)" stroke-width="1"/>
+  <text x="496" y="292" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.85)">VIP Desk</text>
+  <text x="496" y="308" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.38)">Senior closers · White-glove service</text>
+
+  <!-- Result -->
+  <text x="400" y="376" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.35)">Every relationship gets handled at the level it deserves · Higher LTV</text>
+</svg>

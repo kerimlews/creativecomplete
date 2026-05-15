@@ -1,0 +1,175 @@
+---
+const article = {
+  eyebrow: "From the blog",
+  tag: "Lead Management",
+  title: "Automated Lead Distribution: Close 100% More Deals",
+  desc: "The 7 routing rules top sales teams use to hit 94% faster resolution and 200% more customers — without adding headcount.",
+  stats: [
+    { n: "200%", l: "More customers" },
+    { n: "94%",  l: "Faster resolution" },
+    { n: "93%",  l: "CSAT score" },
+  ],
+  href: "/blog/automated-lead-distribution/",
+};
+---
+
+<section class="v2-fa">
+  <div class="v2-container">
+    <a href={article.href} class="v2-fa__card" data-m="up" aria-label={article.title}>
+      <div class="v2-fa__glow"></div>
+
+      <div class="v2-fa__left">
+        <div class="v2-fa__meta">
+          <span class="v2-eyebrow" style="margin:0">{article.eyebrow}</span>
+          <span class="v2-fa__tag">{article.tag}</span>
+        </div>
+        <h3 class="v2-fa__title">{article.title}</h3>
+        <p class="v2-fa__desc">{article.desc}</p>
+        <span class="v2-fa__link">
+          Read the guide
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <path d="M2.5 10.5L10.5 2.5M10.5 2.5H4.5M10.5 2.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </div>
+
+      <div class="v2-fa__right">
+        {article.stats.map(s => (
+          <div class="v2-fa__stat">
+            <div class="v2-fa__stat-n">{s.n}</div>
+            <div class="v2-fa__stat-l">{s.l}</div>
+          </div>
+        ))}
+      </div>
+    </a>
+  </div>
+</section>
+
+<style lang="scss">
+.v2-fa {
+  padding: 0 0 80px;
+}
+
+.v2-fa__card {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  position: relative;
+  padding: 40px 48px;
+  border-radius: 20px;
+  border: 1px solid rgba(99,102,241,0.2);
+  background: rgba(99,102,241,0.05);
+  text-decoration: none;
+  overflow: hidden;
+  transition: border-color .25s, background .25s, transform .25s;
+
+  &:hover {
+    border-color: rgba(99,102,241,0.4);
+    background: rgba(99,102,241,0.09);
+    transform: translateY(-2px);
+
+    .v2-fa__glow { opacity: 1; }
+    .v2-fa__link { color: #a5b4fc; gap: 8px; }
+  }
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 28px 24px;
+  }
+}
+
+.v2-fa__glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 10% 50%, rgba(99,102,241,0.12) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity .35s;
+  pointer-events: none;
+}
+
+.v2-fa__left {
+  flex: 1;
+  min-width: 0;
+}
+
+.v2-fa__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.v2-fa__tag {
+  font-family: ui-monospace, monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  background: rgba(99,102,241,0.12);
+  border: 1px solid rgba(99,102,241,0.25);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.v2-fa__title {
+  font-size: clamp(17px, 2.2vw, 22px);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.3;
+  color: rgba(255,255,255,0.92);
+  margin: 0 0 10px;
+}
+
+.v2-fa__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.45);
+  margin: 0 0 20px;
+  max-width: 52ch;
+}
+
+.v2-fa__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6366f1;
+  transition: color .2s, gap .2s;
+}
+
+.v2-fa__right {
+  display: flex;
+  gap: 32px;
+  flex-shrink: 0;
+
+  @media (max-width: 680px) {
+    gap: 24px;
+  }
+}
+
+.v2-fa__stat {
+  text-align: center;
+}
+
+.v2-fa__stat-n {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.v2-fa__stat-l {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+</style>

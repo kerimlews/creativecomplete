@@ -1,0 +1,82 @@
+<svg width="800" height="420" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0f1f"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <radialGradient id="glow-v" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arr-v" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#a855f7" opacity="0.8"/>
+    </marker>
+    <marker id="arr-dim" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="rgba(255,255,255,0.12)"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <!-- Eyebrow -->
+  <text x="400" y="36" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" letter-spacing="0.18em" fill="#a855f7" font-weight="600">03 — SKILL-BASED ROUTING</text>
+
+  <!-- Lead card with skill tag -->
+  <rect x="270" y="58" width="260" height="80" rx="12" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.3)" stroke-width="1.5"/>
+  <text x="316" y="88" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.5)">Incoming inquiry:</text>
+  <text x="316" y="106" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.88)">"API integration failing on prod..."</text>
+  <rect x="284" y="118" width="96" height="14" rx="7" fill="rgba(168,85,247,0.2)" stroke="rgba(168,85,247,0.4)" stroke-width="1"/>
+  <text x="332" y="129" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8.5" fill="#d8b4fe" letter-spacing="0.1em" font-weight="600">TECHNICAL QUERY</text>
+
+  <!-- Branch lines -->
+  <line x1="290" y1="138" x2="130" y2="222" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="5,4" marker-end="url(#arr-dim)"/>
+  <line x1="400" y1="138" x2="400" y2="218" stroke="#a855f7" stroke-width="2" stroke-opacity="0.75" marker-end="url(#arr-v)"/>
+  <line x1="510" y1="138" x2="670" y2="222" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="5,4" marker-end="url(#arr-dim)"/>
+
+  <!-- Agent card 1: Sales (no match) -->
+  <rect x="44" y="224" width="172" height="130" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <circle cx="88" cy="262" r="20" fill="rgba(255,255,255,0.04)"/>
+  <text x="88" y="268" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="rgba(255,255,255,0.2)" font-weight="500">SK</text>
+  <text x="116" y="258" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.28)" font-weight="500">Sarah K.</text>
+  <rect x="54" y="280" width="64" height="14" rx="7" fill="rgba(255,255,255,0.04)"/>
+  <text x="86" y="291" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="0.08em">SALES</text>
+  <rect x="54" y="302" width="72" height="14" rx="7" fill="rgba(255,255,255,0.04)"/>
+  <text x="90" y="313" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="0.06em">ONBOARDING</text>
+  <!-- X mark -->
+  <circle cx="200" cy="248" r="12" fill="rgba(239,68,68,0.08)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="200" y="253" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="rgba(239,68,68,0.5)">✕</text>
+  <text x="130" y="346" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.2)">No match</text>
+
+  <!-- Agent card 2: Technical (MATCH) -->
+  <rect x="308" y="220" width="184" height="140" rx="12" fill="rgba(168,85,247,0.1)" stroke="rgba(168,85,247,0.45)" stroke-width="1.5"/>
+  <rect x="308" y="220" width="184" height="140" rx="12" fill="url(#glow-v)"/>
+  <circle cx="356" cy="262" r="22" fill="rgba(168,85,247,0.18)"/>
+  <text x="356" y="269" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="rgba(255,255,255,0.88)" font-weight="600">MC</text>
+  <text x="388" y="258" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.85)" font-weight="600">Mike C.</text>
+  <rect x="316" y="280" width="82" height="14" rx="7" fill="rgba(168,85,247,0.2)" stroke="rgba(168,85,247,0.4)" stroke-width="1"/>
+  <text x="357" y="291" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#d8b4fe" letter-spacing="0.08em" font-weight="600">TECHNICAL</text>
+  <rect x="316" y="300" width="82" height="14" rx="7" fill="rgba(168,85,247,0.12)" stroke="rgba(168,85,247,0.25)" stroke-width="1"/>
+  <text x="357" y="311" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#d8b4fe" letter-spacing="0.06em">INTEGRATIONS</text>
+  <!-- Check -->
+  <circle cx="476" cy="248" r="13" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="1.5"/>
+  <text x="476" y="254" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#4ade80">✓</text>
+  <rect x="320" y="328" width="100" height="18" rx="9" fill="rgba(168,85,247,0.15)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="370" y="341" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8.5" fill="#d8b4fe" letter-spacing="0.12em" font-weight="700">MATCHED ✓</text>
+
+  <!-- Agent card 3: Billing (no match) -->
+  <rect x="584" y="224" width="172" height="130" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <circle cx="628" cy="262" r="20" fill="rgba(255,255,255,0.04)"/>
+  <text x="628" y="268" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="rgba(255,255,255,0.2)" font-weight="500">LR</text>
+  <text x="656" y="258" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.28)" font-weight="500">Lisa R.</text>
+  <rect x="594" y="280" width="54" height="14" rx="7" fill="rgba(255,255,255,0.04)"/>
+  <text x="621" y="291" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="0.08em">BILLING</text>
+  <rect x="594" y="302" width="70" height="14" rx="7" fill="rgba(255,255,255,0.04)"/>
+  <text x="629" y="313" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="0.06em">ACCOUNT MGT</text>
+  <!-- X mark -->
+  <circle cx="740" cy="248" r="12" fill="rgba(239,68,68,0.08)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="740" y="253" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="rgba(239,68,68,0.5)">✕</text>
+  <text x="670" y="346" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.2)">No match</text>
+
+  <!-- Result -->
+  <text x="400" y="398" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.35)">Expert handles every query · 94% faster resolution · Fewer escalations</text>
+</svg>

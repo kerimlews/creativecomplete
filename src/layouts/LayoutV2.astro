@@ -137,8 +137,8 @@ if (breadcrumbs && !structuredData) {
   <!-- GTM noscript -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7G6QHT9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+  <Nav active={navActive} />
   <div class="v2-page">
-    <Nav active={navActive} />
     <slot />
     <Footer />
   </div>
@@ -242,6 +242,7 @@ if (breadcrumbs && !structuredData) {
     background: var(--bg-page);
     position: relative;
     overflow-x: hidden;
+    padding-top: 88px;
 
     &::before {
       content: "";
