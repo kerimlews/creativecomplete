@@ -285,8 +285,10 @@ const showRoutingMotion = tags.includes('automated lead distribution') || slug =
   gap: 64px;
   align-items: center;
   @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 40px; }
+  > * { min-width: 0; }
 }
 .blog-hero__left { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.blog-hero__right { overflow: hidden; }
 .blog-category { align-self: flex-start; }
 .blog-h1 { margin: 0; }
 .blog-lead { margin: 0; }

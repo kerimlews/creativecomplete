@@ -184,6 +184,9 @@
 
 .lrm {
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   background: rgba(8, 10, 22, 0.7);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 20px;
@@ -342,12 +345,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
+  min-width: 0;
 }
 .lrm__rule {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 7px 9px;
+  min-width: 0;
   background: rgba(255,255,255,0.025);
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 9px;
