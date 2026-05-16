@@ -1,0 +1,315 @@
+---
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blogs');
+
+const posts = allPosts
+  .map(post => {
+    const wordCount = (post.body ?? '').split(/\s+/).length;
+    return {
+      slug:        (post.data.slug ?? post.id) as string,
+      title:       post.data.title as string,
+      description: post.data.description as string,
+      category:    (post.data.category ?? 'Blog') as string,
+      tags:        (post.data.tags as string[] | undefined) ?? [],
+      published:   post.data.published as string,
+      priority:    (post.data.priority as number | undefined) ?? 0,
+      readMinutes: Math.max(1, Math.round(wordCount / 200)),
+    };
+  })
+  .sort((a, b) => {
+    if (b.priority !== a.priority) return b.priority - a.priority;
+    return new Date(b.published).getTime() - new Date(a.published).getTime();
+  });
+---
+
+<section class="bs">
+  <div class="v2-container">
+    <div class="bs__head" data-m="up">
+      <div class="bs__head-left">
+        <span class="v2-eyebrow">From the blog</span>
+        <h2 class="v2-h3 bs__title">Guides that <span class="v2-grad">close deals.</span></h2>
+      </div>
+      <a href="/blog/" class="bs__see-all">
+        All articles
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+          <path d="M2.5 10.5L10.5 2.5M10.5 2.5H4.5M10.5 2.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Full-bleed scroll track -->
+  <div class="bs__track-wrap">
+    <div class="bs__track" id="bs-track">
+      {posts.map((post, i) => {
+        const date = new Date(post.published).toLocaleDateString('en-US', {
+          month: 'short', day: 'numeric', year: 'numeric',
+        });
+        return (
+          <a
+            href={`/blog/${post.slug}/`}
+            class="bs__card"
+            data-m="up"
+            style={`--m-d:${i * 0.07}s`}
+          >
+            <div class="bs__card-top">
+              <span class="bs__cat">{post.category}</span>
+              <span class="bs__meta">{post.readMinutes} min</span>
+            </div>
+            <h3 class="bs__card-title">{post.title}</h3>
+            <p class="bs__card-desc">{post.description}</p>
+            <div class="bs__card-foot">
+              <span class="bs__date">{date}</span>
+              <span class="bs__arrow">
+                Read
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+                  <path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+          </a>
+        );
+      })}
+
+      <!-- "See all" end card -->
+      <a href="/blog/" class="bs__card bs__card--all">
+        <span class="bs__all-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="bs__all-label">View all articles</span>
+      </a>
+    </div>
+
+    <!-- Scroll fade edges -->
+    <div class="bs__fade bs__fade--left"  aria-hidden="true"></div>
+    <div class="bs__fade bs__fade--right" aria-hidden="true"></div>
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById('bs-track');
+  if (track) {
+    // Drag-to-scroll
+    let isDown = false, startX = 0, scrollLeft = 0;
+
+    track.addEventListener('mousedown', e => {
+      isDown = true;
+      track.classList.add('grabbing');
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+    document.addEventListener('mouseup', () => {
+      isDown = false;
+      track.classList.remove('grabbing');
+    });
+    track.addEventListener('mouseleave', () => {
+      isDown = false;
+      track.classList.remove('grabbing');
+    });
+    track.addEventListener('mousemove', e => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      track.scrollLeft = scrollLeft - (x - startX) * 1.4;
+    });
+  }
+</script>
+
+<style lang="scss">
+.bs {
+  padding: 0 0 96px;
+}
+
+.bs__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.bs__head-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bs__title { margin: 0; }
+
+.bs__see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(99,102,241,0.8);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color .15s, gap .15s;
+  &:hover { color: #a5b4fc; gap: 8px; }
+}
+
+/* Scroll container — bleeds past v2-container */
+.bs__track-wrap {
+  position: relative;
+}
+
+.bs__track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+  padding: 4px 24px 20px;
+
+  /* Pull left edge flush with container padding (matches v2-container ~24px) */
+  @media (min-width: 768px) { padding-left: calc((100vw - min(1200px, 100% - 48px)) / 2); }
+
+  &::-webkit-scrollbar { display: none; }
+  &.grabbing { cursor: grabbing; }
+}
+
+/* Fade edges */
+.bs__fade {
+  position: absolute;
+  top: 0; bottom: 20px;
+  width: 80px;
+  pointer-events: none;
+  z-index: 2;
+}
+.bs__fade--left {
+  left: 0;
+  background: linear-gradient(to right, var(--bg, #030712), transparent);
+}
+.bs__fade--right {
+  right: 0;
+  background: linear-gradient(to left, var(--bg, #030712), transparent);
+}
+
+/* Card */
+.bs__card {
+  flex-shrink: 0;
+  width: 300px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  text-decoration: none;
+  transition: border-color .2s, background .2s, transform .2s;
+  user-select: none;
+
+  &:hover {
+    border-color: rgba(99,102,241,0.35);
+    background: rgba(99,102,241,0.05);
+    transform: translateY(-2px);
+    .bs__arrow { color: #a5b4fc; gap: 6px; }
+  }
+
+  &--all {
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    border-style: dashed;
+    border-color: rgba(255,255,255,0.1);
+    gap: 16px;
+
+    &:hover {
+      border-color: rgba(99,102,241,0.4);
+      border-style: solid;
+      .bs__all-icon { transform: translateX(4px); }
+    }
+  }
+}
+
+.bs__card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.bs__cat {
+  font-family: ui-monospace, monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  background: rgba(99,102,241,0.12);
+  border: 1px solid rgba(99,102,241,0.22);
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.bs__meta {
+  font-family: ui-monospace, monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.22);
+  white-space: nowrap;
+}
+.bs__card-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.35;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+}
+.bs__card-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.38);
+  margin: 0;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.bs__card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 4px;
+}
+.bs__date {
+  font-family: ui-monospace, monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.2);
+}
+.bs__arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(99,102,241,0.7);
+  transition: color .15s, gap .15s;
+}
+
+/* "See all" end card internals */
+.bs__all-icon {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(99,102,241,0.1);
+  border: 1px solid rgba(99,102,241,0.25);
+  display: flex; align-items: center; justify-content: center;
+  color: #a5b4fc;
+  transition: transform .2s;
+}
+.bs__all-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+}
+</style>

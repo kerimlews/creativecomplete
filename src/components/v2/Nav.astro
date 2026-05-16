@@ -1,6 +1,6 @@
 ---
 export interface Props {
-  active?: 'home' | 'services' | 'process' | 'results' | 'projects';
+  active?: 'home' | 'services' | 'process' | 'results' | 'projects' | 'blog';
 }
 const { active = 'home' } = Astro.props;
 
@@ -10,6 +10,7 @@ const links = [
   { id: 'process',  label: 'How it works', href: '/#how-it-works' },
   { id: 'results',  label: 'Results',      href: '/#results' },
   { id: 'projects', label: 'Projects',     href: '/projects/' },
+  { id: 'blog',     label: 'Blog',         href: '/blog/' },
 ];
 ---
 

@@ -4,6 +4,7 @@ import LayoutV2 from '../../layouts/LayoutV2.astro';
 import CTA from '../../components/v2/CTA.astro';
 import AuthorBadge from '../../components/v2/AuthorBadge.astro';
 import LeadRoutingMotion from '../../components/v2/LeadRoutingMotion.astro';
+import AICreativeMotion from '../../components/v2/AICreativeMotion.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -88,6 +89,7 @@ const structuredData = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSch
 
 // Detect which motion graphic to show based on category/tags
 const showRoutingMotion = tags.includes('automated lead distribution') || slug === 'automated-lead-distribution';
+const showCreativeMotion = tags.includes('AI ad creatives') || slug === 'ai-ad-creatives';
 ---
 
 <LayoutV2
@@ -150,6 +152,7 @@ const showRoutingMotion = tags.includes('automated lead distribution') || slug =
           <!-- Right: motion graphic -->
           <div class="blog-hero__right">
             {showRoutingMotion && <LeadRoutingMotion />}
+            {showCreativeMotion && <AICreativeMotion />}
           </div>
         </div>
       </div>
@@ -204,6 +207,26 @@ const showRoutingMotion = tags.includes('automated lead distribution') || slug =
                     'Language-Based',
                     'Skill-Based',
                     'Function-Based',
+                  ].map((r, i) => (
+                    <li>
+                      <span class="blog-rules-list__n">{String(i + 1).padStart(2, '0')}</span>
+                      <span>{r}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {showCreativeMotion && (
+              <div class="blog-aside__card">
+                <div class="blog-aside__head">6 Creative Systems</div>
+                <ul class="blog-rules-list">
+                  {[
+                    'Performance Scoring',
+                    'Variant Generation',
+                    'Multi-Platform Export',
+                    'A/B Testing Automation',
+                    'Brand-Locked Output',
+                    'Retargeting Creatives',
                   ].map((r, i) => (
                     <li>
                       <span class="blog-rules-list__n">{String(i + 1).padStart(2, '0')}</span>
