@@ -1,11 +1,11 @@
 ---
 const system = [
-  { label: "AI Lead Qualification",  href: "/#engines"       },
-  { label: "AI Creative Engine",     href: "/#engines"       },
-  { label: "Lead Capture (40+ ch.)", href: "/#engines"       },
-  { label: "Lead Monetization",      href: "/#engines"       },
-  { label: "How it works",           href: "/#how-it-works"  },
-  { label: "Results",                href: "/#results"       },
+  { label: "AI Lead Qualification",       href: "/services/ai-lead-qualification/"         },
+  { label: "AI Ad Creative Engine",       href: "/services/ai-ad-creative-engine/"         },
+  { label: "Speed to Lead System",        href: "/services/speed-to-lead-system/"          },
+  { label: "WhatsApp Monetization",       href: "/services/whatsapp-database-monetization/" },
+  { label: "How it works",               href: "/#how-it-works"                           },
+  { label: "Results",                    href: "/#results"                                },
 ];
 
 const services = [
@@ -18,10 +18,20 @@ const services = [
   { label: "Local SEO",            href: "/services/local-seo/"           },
 ];
 
+const blog = [
+  { label: "Speed to Lead",               href: "/blog/speed-to-lead/"                  },
+  { label: "AI Lead Qualification",       href: "/blog/ai-lead-qualification/"          },
+  { label: "WhatsApp Broadcasts",         href: "/blog/whatsapp-broadcast-campaigns/"   },
+  { label: "AI Ad Creatives",            href: "/blog/ai-ad-creatives/"               },
+  { label: "AI Sales Agents",            href: "/blog/ai-sales-agents/"               },
+  { label: "CRM Automation",             href: "/blog/crm-automation/"                },
+];
+
 const company = [
   { label: "About CreativeComplete", href: "/about/"            },
   { label: "Meet Kerim",             href: "/kerim-alihodza/"  },
   { label: "Case Studies",           href: "/projects/"        },
+  { label: "Blog",                   href: "/blog/"            },
   { label: "Contact",                href: "/contact"          },
 ];
 
@@ -70,6 +80,14 @@ const langs = [
         <div class="v2-footer__head">Services</div>
         <ul>
           {services.map(l => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
+
+      <!-- Blog -->
+      <div>
+        <div class="v2-footer__head">Blog</div>
+        <ul>
+          {blog.map(l => <li><a href={l.href}>{l.label}</a></li>)}
         </ul>
       </div>
 

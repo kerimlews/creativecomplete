@@ -1,0 +1,72 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const canonicalUrl = 'https://creativecomplete.com/services/ai-ad-creative-engine/';
+
+const faqItems = [
+  { name: "What is the AI Ad Creative Engine?", answer: "It's a system that generates multiple ad creative variants — headlines, visuals, copy angles — and systematically tests them to find the highest-performing combinations. Instead of a single creative running until it fatigues, you always have 4–8 tested variants, with winners scaling automatically and losers killed before they drain budget." },
+  { name: "Which ad platforms does this cover?", answer: "Meta (Facebook and Instagram), Google Display, YouTube pre-roll, and TikTok. Each platform gets platform-native formats — vertical video for Reels, static for Feed, responsive for Display — generated and sized automatically." },
+  { name: "How long before I see results?", answer: "The first test cycle typically takes 72 hours. By day 7 you have a statistically significant winner. By day 30 your cost-per-lead is typically 40–60% lower than your baseline from before the engine was installed." },
+  { name: "How is this different from just split testing manually?", answer: "Manual split testing tests one variable at a time, takes weeks to reach significance, and requires a human to monitor and act on the results. The AI Creative Engine tests multiple angles simultaneously, reaches 95% statistical confidence automatically, and scales winners or kills losers without waiting for a human decision." },
+  { name: "What input do you need from us?", answer: "Your brand guidelines, 2–3 sentences about your core offer, and access to your ad account. We handle creative generation, testing structure, monitoring, and scaling. You approve direction at the start; we run the engine from there." },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "AI Ad Creative Engine",
+      "description": "AI-generated multi-variant ad creatives tested automatically across Meta and Google. Cut cost-per-lead by 40–60% without manual creative work.",
+      "url": canonicalUrl,
+      "provider": { "@type": "Organization", "name": "CreativeComplete", "url": "https://creativecomplete.com/" },
+      "serviceType": "AI Ad Creative Optimization",
+      "areaServed": "Worldwide",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://creativecomplete.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://creativecomplete.com/services/" },
+        { "@type": "ListItem", "position": 3, "name": "AI Ad Creative Engine", "item": canonicalUrl },
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqItems.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.answer } }))
+    }
+  ]
+};
+---
+
+<ServiceLayout
+  title="AI Ad Creative Engine — Cut CPL 40–60% With Automated Creative Testing | CreativeComplete"
+  description="AI-generated multi-variant ad creatives tested automatically across Meta and Google. Winners scale. Losers die. Cost-per-lead drops 40–60% in 30 days."
+  {canonicalUrl}
+  {structuredData}
+  h1="AI Ad Creative Engine: Cut CPL 40–60% in 30 Days"
+  h1Grad="Cut CPL 40–60% in 30 Days"
+  lead="Stop guessing which ad will work. Our AI generates dozens of creative variants — headlines, hooks, formats — and tests them simultaneously across Meta and Google. Winners scale automatically. Losers are killed before they drain budget. You get lower CPL without touching the ad account."
+  blogHref="/blog/ai-ad-creatives/"
+  blogLabel="Read the full playbook →"
+  metrics={[
+    { value: '14×', label: 'Conversion lift (best case)' },
+    { value: '40–60%', label: 'CPL reduction in 30 days' },
+    { value: '72h', label: 'Time to first winner' },
+    { value: '95%', label: 'Statistical confidence threshold' },
+  ]}
+  steps={[
+    { n: '01', title: 'Generate Variants', desc: 'AI creates 6–12 creative variants from your brief — different hooks, headlines, visual styles, and copy angles. All platform-native and brand-compliant.' },
+    { n: '02', title: 'Structure the Test', desc: 'Variants are loaded into a controlled A/B structure. Each variable is isolated so we learn what specifically drives performance — not just which ad won.' },
+    { n: '03', title: 'Monitor to Significance', desc: 'Real-time performance monitoring tracks CTR, CPL, and conversion rate. The system waits for 95% statistical confidence before acting — no gut-feel decisions.' },
+    { n: '04', title: 'Scale Winners, Kill Losers', desc: 'Budget shifts automatically to the winning variant. Losers are paused. A new generation of variants is spawned from the winner\'s winning elements. The loop continues.' },
+  ]}
+  problemTitle="Your Ad Creative Is Dying and You Don't Know It"
+  problemBody={[
+    "Every ad creative fatigues. Audiences see it, ignore it, scroll past it. Your CPL climbs 20%, then 40%, then you're paying twice as much per lead as you were 60 days ago — and you're still running the same creative because testing new ones is manual, slow, and uncertain.",
+    "Most ad accounts run 1–3 creatives and call it testing. Real creative testing means running 8–12 variants simultaneously, isolating each variable, and reaching statistical significance before making a scaling decision. That's not possible to do manually with the speed the algorithm demands.",
+    "The AI Ad Creative Engine runs this process on autopilot. It generates variants, structures tests, monitors performance, and acts on results — all without a creative team meeting or a campaign manager's gut instinct. You get a continuously optimising creative layer that always has a fresh winner in rotation.",
+  ]}
+  {faqItems}
+  breadcrumbs={[{ label: 'AI Ad Creative Engine' }]}
+/>

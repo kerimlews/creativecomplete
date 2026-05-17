@@ -1,0 +1,88 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#030712"/><stop offset="100%" stop-color="#0a0e1c"/>
+  </linearGradient>
+  <linearGradient id="glow1" x1="0" y1="0" x2="600" y2="630" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#25d166" stop-opacity="0.2"/><stop offset="100%" stop-color="#25d166" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="glow2" x1="1200" y1="0" x2="700" y2="630" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#25d166" stop-opacity="0.12"/><stop offset="100%" stop-color="#25d166" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="logoGrad" x1="0" y1="0" x2="120" y2="200" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#6366f1"/><stop offset="48%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#a855f7"/>
+  </linearGradient>
+  <linearGradient id="titleGrad" x1="0" y1="0" x2="680" y2="0" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#ffffff"/><stop offset="55%" stop-color="#e0e7ff"/><stop offset="100%" stop-color="#4ade80"/>
+  </linearGradient>
+  <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.04)"/>
+  </pattern>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<ellipse cx="200" cy="220" rx="520" ry="380" fill="url(#glow1)"/>
+<ellipse cx="1060" cy="420" rx="440" ry="340" fill="url(#glow2)"/>
+<rect width="1200" height="630" fill="url(#dots)"/>
+<rect x="1" y="1" width="1198" height="628" stroke="rgba(255,255,255,0.06)" stroke-width="2" fill="none"/>
+<g transform="translate(64,64) scale(0.356)">
+  <path d="M336.43 0C331.565 13.7255 325.71 26.9815 320.325 40.5105L291 114.126C271.59 162.354 252.72 212.039 232.685 259.822C208.98 257.893 177.76 265.064 157.315 276.896C141.012 286.331 137.408 292.086 125.311 303.849C103.831 324.733 89.9641 340.976 81.9786 371.132C72.6896 406.287 76.3066 446.387 94.9946 477.952C105.738 496.097 124.617 512.337 139.637 527.302C149.738 537.367 171.96 548.472 186.275 552.157L186.34 554.112C147.872 547.787 129.936 533.292 102.992 507.482L68.1636 473.847C56.7396 462.857 38.6242 446.937 28.5157 435.702C8.51015 413.162 -1.67286 383.57 0.224638 353.491C1.45614 330.686 9.39964 308.753 23.0566 290.448C31.8246 278.772 49.4141 263.961 60.7766 253.63L115.831 203.133L232.335 95.9955C266.34 64.463 301.825 30.633 336.43 0Z" fill="url(#logoGrad)"/>
+  <path d="M286.424 322.545C290.604 322.309 293.349 322.365 297.479 323.347C306.039 325.411 313.399 330.848 317.884 338.421C322.489 346.111 323.869 355.312 321.714 364.013C319.514 372.496 314.069 379.773 306.549 384.277C289.584 394.367 270.204 388.272 260.419 371.477C246.079 372.505 224.584 371.848 209.884 371.781C198.969 383.877 183.994 398.612 172.284 410.332C184.339 422.207 196.254 434.227 208.019 446.392C226.039 446.307 244.059 446.317 262.079 446.427C264.374 440.542 267.244 436.017 272.199 432.032C279.349 426.277 288.524 423.662 297.629 424.782C307.954 426.037 314.924 431.002 321.109 439.017C326.034 446.577 327.819 455.757 326.084 464.607C324.489 473.272 319.419 480.912 312.059 485.752C304.414 490.782 295.084 492.567 286.124 490.712C276.634 488.732 269.989 483.457 264.734 475.522C247.039 475.822 229.224 475.367 211.539 475.542C197.554 475.682 195.629 475.037 186.029 464.882C178.744 457.177 170.464 449.692 162.92 442.157C150.603 431.182 153.295 399.117 157.59 385.266C158.983 380.771 194.344 345.129 198.864 344.278C217.259 340.815 240.469 341.954 259.224 342.385C265.294 330.215 272.959 324.624 286.424 322.545Z" fill="url(#logoGrad)"/>
+  <path d="M286.764 342.734C294.024 341.13 301.204 345.753 302.749 353.03C304.294 360.307 299.614 367.449 292.324 368.935C285.119 370.403 278.079 365.787 276.549 358.593C275.024 351.4 279.579 344.321 286.764 342.734Z" fill="white"/>
+  <path d="M289.724 445.282C296.804 443.217 304.219 447.272 306.309 454.342C308.399 461.417 304.379 468.847 297.314 470.967C290.209 473.097 282.729 469.047 280.624 461.932C278.524 454.822 282.604 447.357 289.724 445.282Z" fill="white"/>
+</g>
+<text x="184" y="116" font-family="Georgia,serif" font-size="27" fill="rgba(255,255,255,0.88)" letter-spacing="-0.3">Creative<tspan fill="#4ade80">Complete</tspan></text>
+<rect x="64" y="148" width="108.4" height="27" rx="13" fill="rgba(37,209,102,0.1)" stroke="rgba(37,209,102,0.35)" stroke-width="1"/>
+<circle cx="81" cy="162" r="4" fill="#25d166"/>
+<text x="95" y="166" font-family="monospace" font-size="10" fill="#4ade80" letter-spacing="1.8">WHATSAPP</text>
+<text x="64" y="248" font-family="Georgia,serif" font-size="62" fill="url(#titleGrad)" letter-spacing="-1.5">WhatsApp Lead</text>
+<text x="64" y="324" font-family="Georgia,serif" font-size="62" fill="url(#titleGrad)" letter-spacing="-1.5">Generation</text>
+<text x="64" y="374" font-family="-apple-system,sans-serif" font-size="16" fill="rgba(255,255,255,0.42)">Turn every DM into a qualified lead with conversational AI.</text>
+<rect x="64" y="400" width="160" height="72" rx="12" fill="rgba(37,209,102,0.1)" stroke="rgba(37,209,102,0.25)" stroke-width="1"/>
+<text x="144" y="437" font-family="Georgia,serif" font-size="26" fill="#4ade80" text-anchor="middle">12.2%</text>
+<text x="144" y="458" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="1">CONVERSION RATE</text>
+<rect x="790" y="56" width="350" height="518" rx="20" fill="rgba(255,255,255,0.022)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <rect x="790" y="56" width="350" height="52" rx="20" fill="rgba(37,209,102,0.07)"/>
+  <rect x="790" y="84" width="350" height="24" fill="rgba(37,209,102,0.07)"/>
+  <circle cx="814" cy="82" r="5" fill="#25d166" opacity="0.9"/>
+  <text x="828" y="87" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.55)">Funnel Comparison · WA vs Traditional</text>
+  <text x="810" y="126" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.25)" letter-spacing="0.8">CHANNEL</text>
+  <text x="965" y="126" font-family="monospace" font-size="9" fill="rgba(37,209,102,0.7)" letter-spacing="0.8" text-anchor="middle">WHATSAPP</text>
+  <text x="1120" y="126" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.25)" letter-spacing="0.8" text-anchor="end">TRADITIONAL</text>
+  <line x1="810" y1="133" x2="1120" y2="133" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="810" y="158" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.45)">Open rate</text>
+  <text x="965" y="158" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="middle">98%</text>
+  <text x="1120" y="158" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.35)" text-anchor="end">18%</text>
+  <line x1="810" y1="168" x2="1120" y2="168" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="810" y="193" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.45)">Response rate</text>
+  <text x="965" y="193" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="middle">45%</text>
+  <text x="1120" y="193" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.35)" text-anchor="end">6%</text>
+  <line x1="810" y1="203" x2="1120" y2="203" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="810" y="228" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.45)">Lead conversion</text>
+  <text x="965" y="228" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="middle">12.2%</text>
+  <text x="1120" y="228" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.35)" text-anchor="end">1.6%</text>
+  <line x1="810" y1="238" x2="1120" y2="238" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="810" y="263" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.45)">Speed to qualify</text>
+  <text x="965" y="263" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="middle">60s</text>
+  <text x="1120" y="263" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.35)" text-anchor="end">4–6 hours</text>
+  <line x1="810" y1="273" x2="1120" y2="273" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="810" y="298" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.45)">Cost per lead</text>
+  <text x="965" y="298" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="middle">60% lower</text>
+  <text x="1120" y="298" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.35)" text-anchor="end">baseline</text>
+  <line x1="810" y1="308" x2="1120" y2="308" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="810" y="340" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.2)" letter-spacing="0.8">ENTRY POINTS</text>
+  <text x="810" y="366" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.38)">Meta Click-to-WhatsApp Ads</text>
+  <text x="1120" y="366" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="end">Active</text>
+  <line x1="810" y1="376" x2="1120" y2="376" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="810" y="406" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.38)">Website WhatsApp Widget</text>
+  <text x="1120" y="406" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="end">Active</text>
+  <line x1="810" y1="416" x2="1120" y2="416" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="810" y="446" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.38)">Instagram DM Automation</text>
+  <text x="1120" y="446" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="end">Active</text>
+  <line x1="810" y1="456" x2="1120" y2="456" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="810" y="486" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.38)">QR Code (offline)</text>
+  <text x="1120" y="486" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="end">Active</text>
+  <line x1="810" y1="496" x2="1120" y2="496" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+<text x="64" y="607" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.18)" letter-spacing="0.3">creativecomplete.com/blog/whatsapp-lead-generation/</text>
+<rect x="0" y="618" width="1200" height="12" fill="url(#logoGrad)" opacity="0.5"/>
+</svg>

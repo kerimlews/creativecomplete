@@ -25,7 +25,7 @@ faq:
 
 Every sales team has a lead distribution problem. Most just don't know it yet.
 
-Leads sit in a shared inbox while three reps scroll past them assuming someone else will respond. A French-speaking prospect gets routed to a rep who doesn't speak French. An enterprise inquiry lands in the queue next to a cold contact from six months ago. Your best closer is offline when your hottest lead of the week arrives.
+Leads sit in a shared inbox while three reps scroll past them assuming someone else will respond. A French-speaking prospect gets routed to a rep who doesn't speak French. An enterprise inquiry lands in the queue next to a cold contact from six months ago. Your best closer is offline when your [hottest lead](/blog/ai-lead-qualification/) of the week arrives.
 
 This is what manual lead distribution looks like at scale. It's not a people problem — it's a system problem. And automated lead distribution is the fix.
 
@@ -65,7 +65,7 @@ Round robin also surfaces performance data faster. When every rep gets roughly t
 
 Not all leads are equal, and not all agents are equally suited for every lead. Skill-based routing matches the complexity and topic of the inquiry to the agent best equipped to handle it.
 
-Technical product questions go to technical specialists. Pricing and contract conversations route to senior closers. Onboarding inquiries go to customer success. The lead gets the right answer from the right person on the first contact — which is exactly why skill-based routing is the primary driver of that **94% faster resolution rate**.
+Technical product questions go to technical specialists. Pricing and contract conversations route to [senior closers](/blog/ai-sales-agents/). Onboarding inquiries go to customer success. The lead gets the right answer from the right person on the first contact — which is exactly why skill-based routing is the primary driver of that **94% faster resolution rate**.
 
 ### 4. Language-Based Routing
 
@@ -115,7 +115,7 @@ The aggregate data across teams running automated lead distribution tells a cons
 
 ## The Omnichannel Reality
 
-One detail that separates automated lead distribution from simple CRM assignment rules: it has to work across every channel simultaneously.
+One detail that separates automated lead distribution from simple [CRM](/blog/crm-automation/) assignment rules: it has to work across every channel simultaneously.
 
 Your leads aren't coming from one place. WhatsApp, Instagram DM, TikTok, Facebook Messenger, email, web chat, SMS — they're all active, often at the same time. Manual routing fails fastest when volume spikes across channels simultaneously, because no human router can triage at that speed.
 

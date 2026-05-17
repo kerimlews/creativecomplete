@@ -51,7 +51,7 @@ The most common creative testing mistakes — and why they produce bad data:
 
 The test starts with volume. Before launching a single ad, the goal is to have 15–30 creative variants ready — different images, different headlines, different angles on the same core message.
 
-AI creative generation makes this feasible without a proportional increase in production cost. One brief — brand, copy direction, target audience, platform — produces 20+ variants in minutes, each pre-scored for predicted performance.
+[AI creative generation](/blog/ai-ad-creatives/) makes this feasible without a proportional increase in production cost. One brief — brand, copy direction, target audience, platform — produces 20+ variants in minutes, each pre-scored for predicted performance.
 
 Pre-scoring doesn't eliminate testing. It does eliminate the worst performers before they spend any budget. If the AI predicts 8 variants will underperform based on patterns from comparable campaigns, you can launch the top 12 and skip the budget waste on the bottom 8.
 
@@ -92,7 +92,7 @@ The iterative nature of this process means each cycle starts from a better posit
 
 A client who enters with a 3-variant ad account and moves to a 20-variant systematic testing framework typically sees:
 
-- **40–60% reduction** in cost-per-lead within the first 90 days
+- **40–60% reduction** in [cost-per-lead](/blog/whatsapp-lead-generation/) within the first 90 days
 - **3–5× increase** in the number of profitable creative concepts running simultaneously
 - **Predictable creative pipeline** — always have tested variants ready to replace fatiguing ads
 

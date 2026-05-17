@@ -81,15 +81,15 @@ The AI Agent runs the conversation through a natural exchange that surfaces:
 
 The entire exchange takes 3–7 minutes of the lead's time. They experience a helpful, knowledgeable conversation — not a form or an interrogation.
 
-At the end, the lead is scored. Hot leads are immediately connected to a sales rep with full context. Warm leads enter a 7–14 day nurture sequence. Cold leads are tagged for long-term follow-up.
+At the end, the lead is scored. Hot leads are immediately connected to a sales rep with full context. Warm leads enter a 7–14 day nurture sequence. Cold leads are tagged for long-term [follow-up](/blog/ai-sales-agents/).
 
 ## What Businesses Get Wrong with WhatsApp Lead Generation
 
 Three common mistakes that kill conversion:
 
-**Responding slowly.** The same speed principle that applies to any lead applies here — intent decays fast. An AI Agent responds in seconds; a human rep responding in hours loses the window completely.
+**Responding slowly.** The same [speed principle](/blog/speed-to-lead/) that applies to any lead applies here — intent decays fast. An AI Agent responds in seconds; a human rep responding in hours loses the window completely.
 
-**Using WhatsApp as a one-way broadcast channel.** WhatsApp is a conversation medium. Leads who receive promotional messages without any attempt to understand their needs convert at a fraction of the rate of leads who experience a genuine exchange.
+**Using WhatsApp as a one-way [broadcast channel](/blog/whatsapp-broadcast-campaigns/).** WhatsApp is a conversation medium. Leads who receive promotional messages without any attempt to understand their needs convert at a fraction of the rate of leads who experience a genuine exchange.
 
 **Not qualifying before routing to a rep.** Reps who receive every WhatsApp lead — regardless of quality — spend most of their time on people who aren't ready to buy. The right system surfaces only qualified leads with full context.
 

@@ -66,7 +66,7 @@ An AI Agent responds within seconds of a lead inquiry. It acknowledges the speci
 By the time a sales rep sees the lead in their queue, they already have:
 
 - A lead score (0–100)
-- A qualification summary (budget confirmed, timeline stated, decision authority identified)
+- A [qualification summary](/blog/ai-lead-qualification/) (budget confirmed, timeline stated, decision authority identified)
 - The lead's stated need and any specific questions they raised
 - A routing recommendation: close now, nurture, or disqualify
 
@@ -76,7 +76,7 @@ The rep doesn't need to research, qualify, or re-introduce the company. They wal
 
 ![Lead routing — hot leads go to closers immediately, cold leads enter nurture sequences, unqualified leads are filtered out](/images/blog/speed-to-lead/03-lead-routing.svg)
 
-Not all leads are equal. A hot lead who has budget, timeline, and decision authority needs to reach a closing rep immediately. A cold lead who is "just researching" needs to enter a nurture sequence — not consume a rep's time.
+Not all leads are equal. A hot lead who has budget, timeline, and decision authority needs to reach a closing rep immediately. A cold lead who is "just researching" needs to enter a [nurture sequence](/blog/whatsapp-broadcast-campaigns/) — not consume a rep's time.
 
 Routing logic sorts leads by score and matches them to the right team member based on availability, skill set, and lead type. The right rep gets the right lead at the right time, with full context delivered before they pick up the phone.
 
@@ -100,7 +100,7 @@ The output isn't just speed — it's a rep who shows up to every conversation in
 
 The business case for Speed to Lead is not complicated. If you're spending money on ads, you're paying for every lead. A lead that goes cold because your response took 3 hours costs the same as a lead that converts — the difference is entirely in what happened in the first 5 minutes.
 
-At **CreativeComplete**, we build Speed to Lead as the first layer of the AI Customer System. Every new lead — from any channel — gets an AI response in under 60 seconds, a qualification score before a human sees it, and a routing decision that puts it in front of the right rep with full context.
+At **CreativeComplete**, we build Speed to Lead as the first layer of the AI Customer System. Every new lead — from any channel — gets an AI response in under 60 seconds, a qualification score before a human sees it, and a [routing decision](/blog/automated-lead-distribution/) that puts it in front of the right rep with full context.
 
 Most clients go live in **5 days**.
 

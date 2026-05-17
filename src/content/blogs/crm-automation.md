@@ -45,7 +45,7 @@ A rep checking their morning queue doesn't start the day by creating contact rec
 
 Deal stages in most CRMs are manually updated. A rep has a qualifying call, decides the lead is promising, and then opens the CRM to drag the lead from "New" to "Qualified." That action happens sometimes, when the rep remembers, between other tasks.
 
-Automated stage progression moves the lead based on defined triggers. A lead who completes the qualification conversation moves from "New" to "Qualified" automatically. A lead who books a demo moves to "Demo Scheduled" the moment the calendar event is created. A lead who doesn't respond for 14 days moves to "Needs Follow-up" and triggers a task for the assigned rep.
+Automated stage progression moves the lead based on defined triggers. A lead who completes the [qualification conversation](/blog/ai-lead-qualification/) moves from "New" to "Qualified" automatically. A lead who books a demo moves to "Demo Scheduled" the moment the calendar event is created. A lead who doesn't respond for 14 days moves to "Needs Follow-up" and triggers a task for the assigned rep.
 
 The pipeline reflects reality in real time without anyone manually maintaining it.
 
@@ -53,14 +53,14 @@ The pipeline reflects reality in real time without anyone manually maintaining i
 
 ![CRM automation trigger system — events (conversation, time elapsed, stage change) trigger automated follow-up actions](/images/blog/crm-automation/02-trigger-system.svg)
 
-The most common reason deals stall is that the follow-up didn't happen. Not because the rep decided not to follow up — because they got busy, the task got buried, and the lead waited until they either found a competitor or forgot they were interested.
+The most common reason deals stall is that the follow-up didn't happen. Not because the rep decided not to follow up — because they got busy, the task got buried, and the lead waited until they either [found a competitor](/blog/speed-to-lead/) or forgot they were interested.
 
 Trigger-based follow-up eliminates this by defining what happens automatically when a deal sits inactive:
 
 - **Day 3 of inactivity:** Rep receives a follow-up task with the last conversation summary
 - **Day 7 of inactivity:** AI Agent sends a re-engagement message to the lead
 - **Day 14 of inactivity:** Lead moves to a long-term nurture sequence
-- **Day 30 of inactivity:** Broadcast re-activation message sent to the lead's WhatsApp
+- **Day 30 of inactivity:** [Broadcast](/blog/whatsapp-broadcast-campaigns/) re-activation message sent to the lead's WhatsApp
 
 Every deal in your pipeline has a defined action plan that executes without anyone needing to remember.
 

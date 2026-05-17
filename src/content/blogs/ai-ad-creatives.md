@@ -79,7 +79,7 @@ One brief. Every platform. Zero manual resizing.
 
 ![A/B Testing at Scale — run 20 simultaneous tests and auto-scale the winner](/images/blog/creatives/04-ab-testing.svg)
 
-Running a proper A/B test manually means setting up two ad sets, monitoring both, deciding when there's statistical significance, pausing the loser, and scaling the winner — all manually, all taking time that performance is bleeding through.
+Running a proper [A/B test](/blog/ad-creative-testing/) manually means setting up two ad sets, monitoring both, deciding when there's statistical significance, pausing the loser, and scaling the winner — all manually, all taking time that performance is bleeding through.
 
 AI A/B testing runs all of this automatically. You launch 20 variants simultaneously. The system monitors performance in real time, pauses underperforming creatives when they hit statistical significance thresholds, and reallocates budget toward the winner — without any manual intervention.
 
@@ -101,7 +101,7 @@ The result is that you can hand creative generation to any team member and the o
 
 Most brands run the same creative to cold audiences and retargeting audiences. This is one of the most common reasons retargeting underperforms — the message is wrong for where the prospect is in the decision process.
 
-Cold audiences need problem-aware, broad-reach creatives that introduce the category. Warm audiences need social proof and urgency. Hot audiences — cart abandoners and high-intent visitors — need a direct offer with a hard CTA.
+Cold audiences need problem-aware, broad-reach creatives that introduce the category. Warm audiences need social proof and urgency. Hot audiences — cart abandoners and [high-intent visitors](/blog/speed-to-lead/) — need a direct offer with a hard CTA.
 
 AI creative generation builds separate creative sets for each funnel stage automatically. The brief specifies the audience temperature, and the system adjusts creative style, copy tone, and visual hierarchy accordingly. Every prospect sees the right message for where they are in the decision process.
 
@@ -119,7 +119,7 @@ The difference isn't the tool. It's the combination of volume, speed, scoring, a
 
 The implementation path is straightforward: brand kit upload, copy brief structure, platform selection, scoring threshold configuration.
 
-At **CreativeComplete**, we set this up as part of our AI Customer System — integrated with your ad accounts, CRM, and lead routing so that every creative variant is tied to downstream conversion data, not just top-of-funnel click metrics. You see which creative generated which lead, which lead converted, and what the lifetime value was.
+At **CreativeComplete**, we set this up as part of our AI Customer System — integrated with your ad accounts, CRM, and lead routing so that every creative variant is tied to downstream conversion data, not just top-of-funnel click metrics. You see which creative generated which [lead](/blog/whatsapp-lead-generation/), which lead converted, and what the lifetime value was.
 
 Most clients have their first scored creative batch live within **5 days**.
 

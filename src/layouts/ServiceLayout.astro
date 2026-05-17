@@ -1,0 +1,309 @@
+---
+import LayoutV2 from './LayoutV2.astro';
+import CTA from '../components/v2/CTA.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonicalUrl: string;
+  structuredData: any;
+  eyebrow?: string;
+  h1: string;
+  h1Grad?: string;
+  lead: string;
+  blogHref: string;
+  blogLabel: string;
+  metrics: { value: string; label: string }[];
+  steps: { n: string; title: string; desc: string }[];
+  problemTitle: string;
+  problemBody: string[];
+  faqItems: { name: string; answer: string }[];
+  breadcrumbs?: { label: string; href?: string }[];
+}
+
+const {
+  title, description, canonicalUrl, structuredData,
+  eyebrow = 'Service', h1, h1Grad, lead,
+  blogHref, blogLabel,
+  metrics, steps, problemTitle, problemBody, faqItems,
+  breadcrumbs = [],
+} = Astro.props;
+---
+
+<LayoutV2 {title} {description} {canonicalUrl} {structuredData}>
+  <main>
+    <div class="v2-container v2-bc">
+      <a href="/">Home</a><span>/</span><a href="/services/">Services</a><span>/</span>
+      {breadcrumbs.map((b, i) => b.href
+        ? <><a href={b.href}>{b.label}</a>{i < breadcrumbs.length - 1 && <span>/</span>}</>
+        : <span>{b.label}</span>
+      )}
+    </div>
+
+    <section class="svc-hero">
+      <div class="v2-container">
+        <span class="v2-eyebrow">{eyebrow}</span>
+        <h1 class="v2-h1 svc-h1">
+          {h1Grad
+            ? <Fragment set:html={h1.replace(h1Grad, `<span class="v2-grad">${h1Grad}</span>`)} />
+            : h1}
+        </h1>
+        <p class="v2-lead svc-lead">{lead}</p>
+        <div class="svc-hero-actions">
+          <a href="javascript:void(0)" data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}' class="v2-btn v2-btn-primary">
+            See it in action
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href={blogHref} class="v2-btn v2-btn-ghost">{blogLabel}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section svc-metrics-section">
+      <div class="v2-container">
+        <div class="svc-metrics">
+          {metrics.map(m => (
+            <div class="svc-metric">
+              <div class="svc-metric__n">{m.value}</div>
+              <div class="svc-metric__l">{m.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section">
+      <div class="v2-container">
+        <div class="v2-section-head">
+          <span class="v2-eyebrow">The Problem</span>
+          <h2 class="v2-h3">{problemTitle}</h2>
+        </div>
+        <div class="svc-prose">
+          {problemBody.map(p => <p>{p}</p>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section" style="padding-top:0">
+      <div class="v2-container">
+        <div class="v2-section-head">
+          <span class="v2-eyebrow">How It Works</span>
+          <h2 class="v2-h3">Step by Step</h2>
+        </div>
+        <div class="svc-steps">
+          {steps.map(s => (
+            <div class="svc-step">
+              <div class="svc-step__n">{s.n}</div>
+              <div class="svc-step__body">
+                <h3 class="svc-step__title">{s.title}</h3>
+                <p class="svc-step__desc">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section" style="padding-top:0">
+      <div class="v2-container">
+        <div class="v2-section-head">
+          <span class="v2-eyebrow">FAQ</span>
+          <h2 class="v2-h3">Common Questions</h2>
+        </div>
+        <div class="svc-faq">
+          {faqItems.map(item => (
+            <details class="svc-faq__item">
+              <summary class="svc-faq__q">{item.name}</summary>
+              <p class="svc-faq__a">{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </main>
+</LayoutV2>
+
+<style lang="scss" is:global>
+  .v2-bc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 24px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    font-family: var(--font-mono);
+    color: var(--fg-2);
+    a { color: var(--fg-2); text-decoration: none; &:hover { color: var(--c1-light); } }
+  }
+
+  .svc-hero {
+    padding: 52px 0 64px;
+  }
+
+  .svc-h1 {
+    margin-top: 16px;
+    max-width: 760px;
+  }
+
+  .svc-lead {
+    max-width: 640px;
+    margin-top: 20px;
+  }
+
+  .svc-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+
+  .svc-metrics-section {
+    padding-top: 0;
+    padding-bottom: 64px;
+  }
+
+  .svc-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+  }
+
+  .svc-metric {
+    background: var(--bg-card);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .svc-metric__n {
+    font-family: var(--font-display);
+    font-size: 40px;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    background: var(--grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .svc-metric__l {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--fg-2);
+  }
+
+  .svc-prose {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--fg-1);
+  }
+
+  .svc-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 760px;
+  }
+
+  .svc-step {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+
+    &:last-child { border-bottom: none; }
+  }
+
+  .svc-step__n {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .1em;
+    color: var(--c1-light);
+    background: rgba(99,102,241,0.1);
+    border: 1px solid rgba(99,102,241,0.2);
+    border-radius: 6px;
+    padding: 4px 8px;
+    align-self: flex-start;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .svc-step__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--fg-0);
+    margin: 0 0 6px;
+  }
+
+  .svc-step__desc {
+    font-size: 15px;
+    color: var(--fg-2);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .svc-faq {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .svc-faq__item {
+    border-bottom: 1px solid var(--line);
+    padding: 20px 0;
+
+    &:first-child { border-top: 1px solid var(--line); }
+
+    &[open] .svc-faq__q { color: var(--fg-0); }
+  }
+
+  .svc-faq__q {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--fg-1);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+
+    &::-webkit-details-marker { display: none; }
+
+    &::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--fg-2);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+
+    details[open] &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  .svc-faq__a {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--fg-2);
+  }
+</style>

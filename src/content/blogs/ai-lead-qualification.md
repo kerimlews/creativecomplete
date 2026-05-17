@@ -25,7 +25,7 @@ faq:
 
 Sales teams spend 70% of their time on leads that will never convert.
 
-Not because they're choosing the wrong prospects to call. Because they have no way to know which leads are worth their time before they pick up the phone. Every lead looks the same in a CRM row — a name, a phone number, maybe a source. The only way to know if it's worth pursuing is to call it.
+Not because they're choosing the wrong prospects to call. Because they have no way to know which leads are worth their time before they pick up the phone. Every lead looks the same in a [CRM](/blog/crm-automation/) row — a name, a phone number, maybe a source. The only way to know if it's worth pursuing is to call it.
 
 So reps call everything. And 70% of those calls are wasted on people who have no budget, no timeline, no decision authority, or no real need.
 
@@ -35,7 +35,7 @@ AI lead qualification changes this by running the qualification process before a
 
 ![AI lead qualification flow — inbound lead enters, AI conducts BANT conversation, lead receives score 0-100, routing decision made automatically](/images/blog/ai-lead-qualification/01-qualification-flow.svg)
 
-When a new lead comes in — from an ad, a DM, a web form, or any other channel — an AI Agent initiates a conversational exchange within seconds. The conversation is natural, not scripted. The lead doesn't experience a form or a survey. They experience a responsive, knowledgeable entity that seems to understand their situation.
+When a new lead comes in — from an ad, a DM, a web form, or any other channel — an AI Agent initiates a conversational exchange [within seconds](/blog/speed-to-lead/). The conversation is natural, not scripted. The lead doesn't experience a form or a survey. They experience a responsive, knowledgeable entity that seems to understand their situation.
 
 Through that conversation, the AI is systematically working through a qualification framework:
 
@@ -89,6 +89,6 @@ Your reps still own the relationship. They just own it from a much stronger star
 
 At **CreativeComplete**, AI lead qualification is built into the second phase of our AI Customer System. Every inbound lead gets qualified before it touches your team — regardless of where it came from, what time it arrived, or how many came in at once.
 
-The system scales with your volume. If you run a campaign tomorrow and 400 leads come in over the weekend, every one of them is qualified, scored, and routed by Monday morning.
+The system scales with your volume. If you run a campaign tomorrow and 400 leads come in over the weekend, every one of them is qualified, scored, and [routed](/blog/automated-lead-distribution/) by Monday morning.
 
 Most clients are live in **5 days**.

@@ -39,9 +39,9 @@ The scope of what it handles:
 
 **First response (< 60 seconds):** Every new lead gets a response within seconds of their inquiry. Before your reps check their morning messages, the AI has already introduced your company, started qualifying the lead, and identified their core need.
 
-**BANT qualification:** Through a conversational exchange, the AI surfaces budget, decision authority, specific need, and timeline. The lead experiences a helpful conversation, not an interrogation. The AI records every signal and builds a qualification summary.
+**[BANT qualification](/blog/ai-lead-qualification/):** Through a conversational exchange, the AI surfaces budget, decision authority, specific need, and timeline. The lead experiences a helpful conversation, not an interrogation. The AI records every signal and builds a qualification summary.
 
-**Follow-up sequences:** A lead who doesn't respond to the first message gets a follow-up at Day 1, Day 3, Day 7, and Day 14 — automatically. The message content adapts to the lead's last known position in the conversation. Leads who were warm but went quiet receive a re-engagement prompt. Leads who raised a specific objection receive content that addresses it.
+**[Follow-up sequences](/blog/whatsapp-broadcast-campaigns/):** A lead who doesn't respond to the first message gets a follow-up at Day 1, Day 3, Day 7, and Day 14 — automatically. The message content adapts to the lead's last known position in the conversation. Leads who were warm but went quiet receive a re-engagement prompt. Leads who raised a specific objection receive content that addresses it.
 
 **Objection surfacing:** When a lead hesitates or raises a concern, the AI is trained to surface and address it rather than skip past it. A price objection gets a value reframe. A timing objection gets an urgency prompt or a "let's schedule for next quarter" path. The objection handling uses your best-performing responses, applied consistently.
 
@@ -78,6 +78,6 @@ Most leads don't buy on the first conversation. They buy on the third, fifth, or
 
 AI agents run the follow-up systematically: the right message, at the right interval, based on where the lead is in the conversation. No leads fall through the cracks because a rep was too busy, too forgetful, or too uncomfortable with persistent follow-up.
 
-At **CreativeComplete**, AI Sales Agents are configured as part of the AI Customer System's Convert phase — integrated with every lead channel, your CRM, and your rep's calendar. The system is built, trained, and tested within 5 days.
+At **CreativeComplete**, AI Sales Agents are configured as part of the AI Customer System's Convert phase — integrated with every lead channel, your [CRM](/blog/crm-automation/), and your rep's calendar. The system is built, trained, and tested within 5 days.
 
 If your close rate is lower than it should be, the most likely explanation isn't your product or your pitch. It's the leads that went cold between first contact and first conversation.

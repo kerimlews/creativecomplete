@@ -26,11 +26,38 @@ const posts = allPosts
   });
 
 const categories = ['All', ...Array.from(new Set(posts.map(p => p.category)))];
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Blog — AI Customer Systems & Sales Automation",
+  "description": "Practical guides on automated lead distribution, AI customer systems, and sales automation. Real numbers from real client builds.",
+  "url": "https://creativecomplete.com/blog/",
+  "author": {
+    "@type": "Person",
+    "name": "Kerim Alihodza",
+    "url": "https://creativecomplete.com/kerim-alihodza/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CreativeComplete",
+    "url": "https://creativecomplete.com/"
+  },
+  "hasPart": posts.map(p => ({
+    "@type": "BlogPosting",
+    "headline": p.title,
+    "description": p.description,
+    "url": `https://creativecomplete.com/blog/${p.slug}/`,
+    "datePublished": p.published,
+  }))
+};
 ---
 
 <LayoutV2
   title="Blog — AI Customer Systems, Lead Management & Sales Automation | CreativeComplete"
   description="Practical guides on automated lead distribution, AI customer systems, and sales automation. Real numbers from real client builds."
+  canonicalUrl="https://creativecomplete.com/blog/"
+  structuredData={collectionSchema}
   navActive="blog"
 >
   <main>

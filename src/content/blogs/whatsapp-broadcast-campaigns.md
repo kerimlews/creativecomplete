@@ -23,7 +23,7 @@ faq:
     answer: "With an existing opted-in contact list, a broadcast campaign can be configured, approved, and sent within 48–72 hours. If you need to build the opt-in list first, timeline is 5–10 days depending on your current channels. We handle Meta template approval, segmentation logic, message writing, and send scheduling."
 ---
 
-You have a CRM full of people who already know you, already considered buying from you, and in many cases already bought from you once.
+You have a [CRM](/blog/crm-automation/) full of people who already know you, already considered buying from you, and in many cases already bought from you once.
 
 That database is worth far more than you're extracting from it.
 
@@ -69,7 +69,7 @@ Expected response rate: **8–18%**
 
 ### Segment 3: Unconverted Leads
 
-Every business has leads who expressed interest, went through part of the qualification process, and then went cold. These are not dead leads — they're delayed decisions.
+Every business has [leads](/blog/whatsapp-lead-generation/) who expressed interest, went through part of the qualification process, and then went cold. These are not dead leads — they're delayed decisions.
 
 A broadcast to this segment reactivates consideration. The message references what they were looking at, addresses the most common reason for delay (timing, budget, uncertainty), and gives them a clear path back in. A limited-time offer or a free consultation lowers the friction to re-engage.
 
@@ -94,7 +94,7 @@ This is not a theoretical projection. It's a real campaign structure producing r
 
 The broadcast opens a conversation. That conversation needs to be managed — which is where most businesses lose the revenue they've just unlocked.
 
-An AI Agent handles the replies in real time, continuing the qualification conversation, answering product questions, and routing hot responders to a sales rep or a booking link. Leads that respond but aren't ready to buy immediately are tagged for follow-up sequences.
+An AI Agent handles the replies in real time, continuing the qualification conversation, answering product questions, and routing [hot responders](/blog/ai-lead-qualification/) to a sales rep or a booking link. Leads that respond but aren't ready to buy immediately are tagged for follow-up sequences.
 
 The broadcast isn't a one-time event. It's the opening move in an ongoing monetization system. Each campaign produces revenue, data on what resonates, and a refined segment list for the next one.
 

@@ -1,0 +1,72 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const canonicalUrl = 'https://creativecomplete.com/services/speed-to-lead-system/';
+
+const faqItems = [
+  { name: "What is a Speed to Lead system?", answer: "A Speed to Lead system ensures every new lead — from any channel — receives an AI response within seconds of their inquiry, 24 hours a day. The AI acknowledges their specific interest, starts a qualification conversation, and routes the lead based on score before any human is involved. This compresses the standard 4–6 hour response window to under 60 seconds." },
+  { name: "Why does speed to lead matter so much?", answer: "The MIT Lead Response Management Study found that contacting a lead within 5 minutes makes you 9× more likely to qualify them versus waiting 30 minutes, and 21× more likely versus waiting 24 hours. The majority of businesses respond in over an hour. The first business to respond meaningfully wins the lead in most categories." },
+  { name: "What happens to leads outside business hours?", answer: "The AI operates 24/7/365. A lead that submits at 11pm on Sunday gets the same quality of immediate response as one that comes in on Tuesday morning. After-hours leads — which typically represent 40% of total volume — are fully captured, qualified, and routed rather than sitting in an inbox until morning." },
+  { name: "How does this integrate with our existing tools?", answer: "We integrate with your existing CRM (HubSpot, Salesforce, Pipedrive, and others), your WhatsApp Business API, and your lead capture forms. Setup typically takes 5–7 business days. Your team sees qualified leads appear in the CRM just as they do today — they just arrive faster, pre-qualified, and with full context." },
+  { name: "What channels does Speed to Lead cover?", answer: "All 40+ capture channels: web forms, WhatsApp, Instagram DMs, Facebook Lead Ads, Google click-to-message, phone call triggers, QR codes, live chat, and more. Every entry point connects to the same instant-response engine." },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Speed to Lead System",
+      "description": "AI-powered lead response system that contacts every new lead within 60 seconds across 40+ channels, 24/7. The first 5 minutes decide every sale — we make sure you always win them.",
+      "url": canonicalUrl,
+      "provider": { "@type": "Organization", "name": "CreativeComplete", "url": "https://creativecomplete.com/" },
+      "serviceType": "Lead Response Automation",
+      "areaServed": "Worldwide",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://creativecomplete.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://creativecomplete.com/services/" },
+        { "@type": "ListItem", "position": 3, "name": "Speed to Lead System", "item": canonicalUrl },
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqItems.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.answer } }))
+    }
+  ]
+};
+---
+
+<ServiceLayout
+  title="Speed to Lead System — Respond to Every Lead in 60 Seconds, 24/7 | CreativeComplete"
+  description="AI-powered lead response system that contacts every new lead within 60 seconds across 40+ channels, 24/7. Stop losing hot leads to slower competitors."
+  {canonicalUrl}
+  {structuredData}
+  h1="Speed to Lead System: Respond in 60 Seconds, 24/7"
+  h1Grad="Respond in 60 Seconds, 24/7"
+  lead="The first business to respond to a lead wins it. Most businesses take 4–6 hours. We install an AI layer that responds within 60 seconds of every inquiry — across every channel, around the clock — so your competitors never get a window to step in."
+  blogHref="/blog/speed-to-lead/"
+  blogLabel="Why the first 5 minutes decide every sale →"
+  metrics={[
+    { value: '60s', label: 'Max response time' },
+    { value: '40+', label: 'Channels covered' },
+    { value: '9×', label: 'More likely to qualify (vs 30min wait)' },
+    { value: '24/7', label: 'Always on, no gaps' },
+  ]}
+  steps={[
+    { n: '01', title: 'Connect Every Channel', desc: 'WhatsApp, web forms, Instagram DMs, Facebook Lead Ads, Google click-to-message, live chat — every lead entry point feeds into a single response engine.' },
+    { n: '02', title: 'Instant AI Response', desc: 'Within seconds of an inquiry, the AI acknowledges the lead by name, references the specific thing they expressed interest in, and opens a qualification conversation.' },
+    { n: '03', title: 'Qualify While Fresh', desc: 'The AI runs BANT qualification while the lead is still engaged — budget, authority, need, timeline — and scores them 0–100 before the conversation ends.' },
+    { n: '04', title: 'Route with Context', desc: 'Hot leads reach the right rep instantly with a full qualification summary. Cold leads enter nurture. Reps never start a cold call — they step into a warm, contexted conversation.' },
+  ]}
+  problemTitle="You're Losing Leads to Competitors Who Reply Faster"
+  problemBody={[
+    "A lead submits a form, sends a DM, or clicks your ad. In that moment, they're at peak intent — curious, interested, evaluating. You have a window measured in minutes, not hours. After 30 minutes, their attention has moved. After an hour, they've probably already spoken to someone else.",
+    "The average business responds in 4–6 hours. Some take a day. By then, the lead has either lost interest, forgotten why they reached out, or booked a call with a competitor who called them back in 3 minutes.",
+    "Speed to Lead isn't about being fast for its own sake. It's about being first. First to acknowledge. First to qualify. First to book the call. The business that contacts a lead within 5 minutes is 9× more likely to qualify them than the one that waits 30 minutes, and 21× more likely than the one that waits until the next morning.",
+  ]}
+  {faqItems}
+  breadcrumbs={[{ label: 'Speed to Lead System' }]}
+/>

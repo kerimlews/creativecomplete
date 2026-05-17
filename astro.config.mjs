@@ -51,6 +51,29 @@ export default defineConfig({
 	partytown({ config: { forward: ['dataLayer.push'] } }),
 	sitemap({
       filter: (page) => !page.includes('/hr/') && !page.includes('/v1/'),
+      serialize(item) {
+        // Homepage
+        if (item.url === 'https://www.creativecomplete.com/') {
+          return { ...item, priority: 1.0, changefreq: 'weekly' };
+        }
+        // Blog posts
+        if (item.url.includes('/blog/') && item.url !== 'https://www.creativecomplete.com/blog/') {
+          return { ...item, priority: 0.9, changefreq: 'monthly' };
+        }
+        // Blog index
+        if (item.url === 'https://www.creativecomplete.com/blog/') {
+          return { ...item, priority: 0.8, changefreq: 'weekly' };
+        }
+        // Service pages
+        if (item.url.includes('/services/')) {
+          return { ...item, priority: 0.85, changefreq: 'monthly' };
+        }
+        // Author page
+        if (item.url.includes('/kerim-alihodza')) {
+          return { ...item, priority: 0.7, changefreq: 'monthly' };
+        }
+        return { ...item, priority: 0.6, changefreq: 'monthly' };
+      },
       i18n: {
         defaultLocale: 'en',
         locales: {
