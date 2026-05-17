@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import LayoutV2 from '../layouts/LayoutV2.astro';
 import CTA from '../components/v2/CTA.astro';
 import { KERIM_SOCIAL_MEDIA, getActiveSocials } from '../utils/constants';
@@ -7,23 +8,53 @@ import kerim from '../images/hero_org.png';
 
 const activeSocials = getActiveSocials(KERIM_SOCIAL_MEDIA);
 
+const allPosts = await getCollection('blogs');
+const blogPosts = allPosts
+  .sort((a, b) => (b.data.priority ?? 0) - (a.data.priority ?? 0));
+
+const canonicalUrl = 'https://creativecomplete.com/kerim-alihodza/';
+
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Kerim Alihodza",
-  "jobTitle": "CEO & AI Customer System Consultant",
-  "description": "10+ years transforming businesses through AI automation and engineered growth systems.",
-  "url": "https://creativecomplete.com/kerim-alihodza",
-  "image": "https://creativecomplete.com/images/kerim-alihodza.jpg",
-  "sameAs": activeSocials.map(([, social]) => social.url),
-  "knowsAbout": [
-    "AI Customer System",
-    "Lead Qualification Automation",
-    "WhatsApp Business API",
-    "Digital Business Transformation",
-    "Revenue Growth Strategy",
-    "SaaS Platform Development"
-  ],
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": canonicalUrl,
+      "url": canonicalUrl,
+      "name": "Kerim Alihodza — AI Customer System Consultant",
+      "description": "10+ years transforming businesses through AI automation and engineered growth systems.",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": canonicalUrl + "#person",
+        "name": "Kerim Alihodza",
+        "jobTitle": "CEO & AI Customer System Consultant",
+        "description": "10+ years transforming businesses through AI automation and engineered growth systems.",
+        "url": canonicalUrl,
+        "image": "https://creativecomplete.com/images/kerim-alihodza.jpg",
+        "sameAs": activeSocials.map(([, social]) => social.url),
+        "worksFor": {
+          "@type": "Organization",
+          "name": "CreativeComplete",
+          "url": "https://creativecomplete.com/"
+        },
+        "knowsAbout": [
+          "AI Customer System",
+          "Lead Qualification Automation",
+          "WhatsApp Business API",
+          "Digital Business Transformation",
+          "Revenue Growth Strategy",
+          "Ad Creative Optimization"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://creativecomplete.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Kerim Alihodza", "item": canonicalUrl }
+      ]
+    }
+  ]
 };
 
 const stats = [
@@ -32,19 +63,55 @@ const stats = [
   { value: "40+", label: "Channels captured" },
   { value: "50+", label: "Agencies served" },
 ];
+
+const expertise = [
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L12.4 7.6L18 8.2L14 12.1L15.1 18L10 15.2L4.9 18L6 12.1L2 8.2L7.6 7.6L10 2Z" stroke="#6366f1" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
+    title: "AI Lead Qualification",
+    desc: "BANT scoring via WhatsApp in under 60 seconds. Hot leads reach reps, cold leads enter nurture."
+  },
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="#6366f1" stroke-width="1.5"/><path d="M6 9h8M6 12h5" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/></svg>`,
+    title: "WhatsApp Business API",
+    desc: "Broadcast campaigns, automated follow-ups, and two-way conversations at scale — 98% open rate."
+  },
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 14l4-4 3 3 4-5 3 2" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="2" width="16" height="16" rx="2" stroke="#6366f1" stroke-width="1.5"/></svg>`,
+    title: "Ad Creative Optimization",
+    desc: "AI-generated multi-variant creative testing across Meta and Google — cut CPL by 40–60%."
+  },
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#6366f1" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round"/></svg>`,
+    title: "CRM Automation",
+    desc: "Pipeline visibility, trigger-based follow-up, and automated handoffs — without manual data entry."
+  },
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16V8l6-4 6 4v8" stroke="#6366f1" stroke-width="1.5" stroke-linejoin="round"/><rect x="8" y="11" width="4" height="5" rx="1" stroke="#6366f1" stroke-width="1.5"/></svg>`,
+    title: "Revenue Systems",
+    desc: "End-to-end AI Customer System deployments — from first ad click to closed deal and retention."
+  },
+];
+
+const credentials = [
+  "10+ years building digital revenue systems",
+  "50+ agencies and SMBs served across EU and US markets",
+  "Certified WhatsApp Business Solution Partner",
+  "Meta & Google Ads advanced certified",
+  "Built CreativeComplete AI Customer System from scratch",
+  "Published author: 9 in-depth playbooks on AI sales infrastructure",
+];
 ---
 
 <LayoutV2
   title="Kerim Alihodza, AI Customer System Consultant | CreativeComplete"
-  description="Meet Kerim Alihodza, CEO of CreativeComplete. 10+ years engineering AI-powered lead qualification and customer systems for agencies."
+  description="Meet Kerim Alihodza, CEO of CreativeComplete. 10+ years engineering AI-powered lead qualification, WhatsApp automation, and customer systems for agencies."
   structuredData={jsonLd}
+  canonicalUrl={canonicalUrl}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} slot="head" />
-
   <main>
     <!-- Breadcrumb -->
     <div class="v2-container v2-bc">
-      <a href="/">Home</a><span>/</span><span>Meet Kerim</span>
+      <a href="/">Home</a><span>/</span><span>Kerim Alihodza</span>
     </div>
 
     <!-- Hero -->
@@ -53,11 +120,25 @@ const stats = [
         <div class="ka-hero__inner">
           <!-- Left: text -->
           <div class="ka-hero__left">
-            <span class="v2-chip-neutral">CEO & Founder</span>
+            <span class="v2-chip-neutral">CEO & Founder · CreativeComplete</span>
             <h1 class="v2-h2" style="margin-top:20px">
               Kerim <span class="v2-grad">Alihodza</span>
             </h1>
-            <p class="v2-lead" style="margin-top:16px">
+
+            <!-- LinkedIn prominent link -->
+            <a
+              href="https://www.linkedin.com/in/kerim-alihodza/"
+              class="ka-linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              Connect on LinkedIn
+            </a>
+
+            <p class="v2-lead" style="margin-top:20px">
               AI Customer System consultant. I build the infrastructure that captures every lead across 40+ channels, qualifies them in 60 seconds, and monetizes your existing database — fully managed, no headcount added.
             </p>
 
@@ -108,15 +189,21 @@ const stats = [
             </div>
           </div>
 
-          <!-- Right: photo -->
-          <div class="ka-hero__img">
-            <Image
-              src={kerim}
-              alt="Kerim Alihodza, CEO of CreativeComplete"
-              width={600}
-              height={700}
-              loading="eager"
-            />
+          <!-- Right: photo + available badge -->
+          <div class="ka-hero__photo-wrap">
+            <div class="ka-available">
+              <span class="ka-available__dot"></span>
+              Available for new clients
+            </div>
+            <div class="ka-hero__img">
+              <Image
+                src={kerim}
+                alt="Kerim Alihodza, CEO of CreativeComplete"
+                width={600}
+                height={700}
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -141,6 +228,74 @@ const stats = [
               Today, CreativeComplete is the AI Customer System agency I wish had existed when I started. We plug in, capture every lead across 40+ channels, qualify them in 60 seconds via WhatsApp, and continuously monetize your existing database — without adding headcount.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials -->
+    <section class="v2-section" style="padding-top:0">
+      <div class="v2-container">
+        <div class="v2-section-head" style="margin-bottom:32px">
+          <span class="v2-eyebrow">Credentials</span>
+          <h2 class="v2-h3">Why <span class="v2-grad">Trust This?</span></h2>
+        </div>
+        <ul class="ka-creds">
+          {credentials.map(c => (
+            <li class="ka-cred">
+              <svg class="ka-cred__check" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                <circle cx="9" cy="9" r="8.5" stroke="rgba(99,102,241,0.4)"/>
+                <path d="M5.5 9L7.8 11.5L12.5 6.5" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              {c}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- Expertise -->
+    <section class="v2-section" style="padding-top:0">
+      <div class="v2-container">
+        <div class="v2-section-head" style="margin-bottom:32px">
+          <span class="v2-eyebrow">Areas of Expertise</span>
+          <h2 class="v2-h3">What I <span class="v2-grad">Actually Build</span></h2>
+        </div>
+        <div class="ka-expertise">
+          {expertise.map(e => (
+            <div class="ka-expertise__card">
+              <span class="ka-expertise__icon" set:html={e.icon} />
+              <h3 class="ka-expertise__title">{e.title}</h3>
+              <p class="ka-expertise__desc">{e.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog posts by Kerim -->
+    <section class="v2-section" style="padding-top:0">
+      <div class="v2-container">
+        <div class="v2-section-head" style="margin-bottom:32px">
+          <span class="v2-eyebrow">Published Playbooks</span>
+          <h2 class="v2-h3">Kerim's <span class="v2-grad">In-Depth Guides</span></h2>
+          <p class="v2-lead" style="margin-top:12px;max-width:600px">
+            Each guide is built from real deployments — not recycled theory. These are the systems I install for clients every week.
+          </p>
+        </div>
+        <div class="ka-posts">
+          {blogPosts.map(post => (
+            <a href={`/blog/${post.data.slug ?? post.id}/`} class="ka-post">
+              <span class="ka-post__cat">{post.data.category}</span>
+              <h3 class="ka-post__title">{post.data.title}</h3>
+              <p class="ka-post__desc">{post.data.description}</p>
+              <span class="ka-post__read">
+                Read playbook
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          ))}
         </div>
       </div>
     </section>
@@ -171,7 +326,7 @@ const stats = [
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 64px;
-    align-items: center;
+    align-items: start;
 
     @media (max-width: 900px) {
       grid-template-columns: 1fr;
@@ -185,11 +340,53 @@ const stats = [
     align-items: flex-start;
   }
 
+  .ka-hero__photo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    @media (max-width: 900px) {
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  .ka-available {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: rgba(34,197,94,0.1);
+    border: 1px solid rgba(34,197,94,0.25);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: .08em;
+    color: #4ade80;
+    text-transform: uppercase;
+  }
+
+  .ka-available__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 8px #22c55e;
+    animation: ka-blink 1.4s ease-in-out infinite;
+  }
+
+  @keyframes ka-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.25; }
+  }
+
   .ka-hero__img {
     border-radius: var(--r-xl);
     overflow: hidden;
     border: 1px solid var(--line);
     background: var(--glass);
+    width: 100%;
 
     img {
       width: 100%;
@@ -200,6 +397,30 @@ const stats = [
     @media (max-width: 900px) {
       max-width: 340px;
       margin: 0 auto;
+    }
+  }
+
+  /* LinkedIn link */
+  .ka-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background: rgba(0,119,181,0.1);
+    border: 1px solid rgba(0,119,181,0.25);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #60a5fa;
+    text-decoration: none;
+    transition: background .2s, border-color .2s;
+
+    svg { color: #0077B5; flex-shrink: 0; }
+
+    &:hover {
+      background: rgba(0,119,181,0.2);
+      border-color: rgba(0,119,181,0.4);
     }
   }
 
@@ -307,5 +528,148 @@ const stats = [
 
     :global(p) { margin: 0 0 16px; }
     :global(strong) { color: var(--fg-0); font-weight: 600; }
+  }
+
+  /* Credentials */
+  .ka-creds {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 640px;
+  }
+
+  .ka-cred {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--fg-1);
+    line-height: 1.5;
+  }
+
+  .ka-cred__check {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* Expertise */
+  .ka-expertise {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .ka-expertise__card {
+    background: var(--glass);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color .2s, background .2s;
+
+    &:hover {
+      border-color: rgba(99,102,241,0.3);
+      background: rgba(99,102,241,0.04);
+    }
+  }
+
+  .ka-expertise__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(99,102,241,0.1);
+    border: 1px solid rgba(99,102,241,0.2);
+    flex-shrink: 0;
+
+    :global(svg) { display: block; }
+  }
+
+  .ka-expertise__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--fg-0);
+    margin: 0;
+  }
+
+  .ka-expertise__desc {
+    font-size: 13px;
+    color: var(--fg-2);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Blog posts grid */
+  .ka-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .ka-post {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    background: var(--glass);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    text-decoration: none;
+    transition: border-color .2s, background .2s, transform .2s;
+
+    &:hover {
+      border-color: rgba(99,102,241,0.3);
+      background: rgba(99,102,241,0.04);
+      transform: translateY(-2px);
+    }
+  }
+
+  .ka-post__cat {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--c1-light);
+    background: rgba(99,102,241,0.1);
+    border: 1px solid rgba(99,102,241,0.2);
+    border-radius: 4px;
+    padding: 2px 7px;
+    align-self: flex-start;
+  }
+
+  .ka-post__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--fg-0);
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .ka-post__desc {
+    font-size: 13px;
+    color: var(--fg-2);
+    line-height: 1.55;
+    margin: 0;
+    flex: 1;
+  }
+
+  .ka-post__read {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--c1-light);
+    margin-top: 4px;
+    transition: gap .2s;
+
+    .ka-post:hover & { gap: 8px; }
   }
 </style>
