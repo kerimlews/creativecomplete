@@ -48,7 +48,7 @@ export default defineConfig({
   },
 
   integrations: [
-	partytown({ config: { forward: ['dataLayer.push'] } }),
+	partytown({ config: { forward: ['dataLayer.push', '_uxa', '_uxa.push'] } }),
 	sitemap({
       filter: (page) => !page.includes('/hr/') && !page.includes('/v1/'),
       serialize(item) {

@@ -118,6 +118,8 @@ import LeadJourneyMotion from './LeadJourneyMotion.astro';
   gap: 48px;
   align-items: stretch;
   margin-bottom: 48px;
+  /* Reserve space so dynamic motion card doesn't shift layout (CLS fix) */
+  min-height: 420px;
 }
 
 .v2-hero__left { display: flex; align-items: stretch; }
