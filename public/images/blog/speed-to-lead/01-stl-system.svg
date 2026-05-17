@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0a0f1e"/>
+    </linearGradient>
+    <linearGradient id="gindigo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="gcyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.03" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="60" x2="800" y2="60"/>
+    <line x1="0" y1="120" x2="800" y2="120"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="240" x2="800" y2="240"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="100" y1="0" x2="100" y2="420"/>
+    <line x1="200" y1="0" x2="200" y2="420"/>
+    <line x1="300" y1="0" x2="300" y2="420"/>
+    <line x1="400" y1="0" x2="400" y2="420"/>
+    <line x1="500" y1="0" x2="500" y2="420"/>
+    <line x1="600" y1="0" x2="600" y2="420"/>
+    <line x1="700" y1="0" x2="700" y2="420"/>
+  </g>
+
+  <!-- Label -->
+  <text x="400" y="44" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#6366f1" letter-spacing="3" opacity="0.7">SPEED TO LEAD SYSTEM</text>
+
+  <!-- Step 1: Capture -->
+  <rect x="60" y="90" width="200" height="240" rx="16" fill="rgba(99,102,241,0.06)" stroke="#6366f1" stroke-width="1" stroke-opacity="0.35"/>
+  <ellipse cx="160" cy="90" rx="80" ry="40" fill="url(#glow1)" opacity="0.5"/>
+  <rect x="80" y="110" width="160" height="2" rx="1" fill="url(#gindigo)" opacity="0.7"/>
+  <text x="160" y="144" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#6366f1" letter-spacing="2" opacity="0.8">STEP 01</text>
+  <text x="160" y="168" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="16" font-weight="700" fill="#e0e7ff">Instant Capture</text>
+  <text x="160" y="188" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">All channels unified</text>
+
+  <!-- Channels icons -->
+  <g transform="translate(100,210)">
+    <rect width="36" height="20" rx="5" fill="rgba(37,211,102,0.12)" stroke="rgba(37,211,102,0.3)" stroke-width="1"/>
+    <text x="18" y="14" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#25d166" font-weight="700">WA</text>
+  </g>
+  <g transform="translate(142,210)">
+    <rect width="36" height="20" rx="5" fill="rgba(168,85,247,0.12)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+    <text x="18" y="14" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#a855f7" font-weight="700">IG</text>
+  </g>
+  <g transform="translate(184,210)">
+    <rect width="36" height="20" rx="5" fill="rgba(99,102,241,0.12)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+    <text x="18" y="14" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#818cf8" font-weight="700">FB</text>
+  </g>
+  <g transform="translate(100,238)">
+    <rect width="36" height="20" rx="5" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.3)" stroke-width="1"/>
+    <text x="18" y="14" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#fb923c" font-weight="700">TT</text>
+  </g>
+  <g transform="translate(142,238)">
+    <rect width="36" height="20" rx="5" fill="rgba(34,211,238,0.12)" stroke="rgba(34,211,238,0.3)" stroke-width="1"/>
+    <text x="18" y="14" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#22d3ee" font-weight="700">WEB</text>
+  </g>
+  <g transform="translate(184,238)">
+    <rect width="36" height="20" rx="5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="18" y="14" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="rgba(255,255,255,0.4)" font-weight="700">+37</text>
+  </g>
+
+  <rect x="90" y="278" width="140" height="32" rx="8" fill="rgba(99,102,241,0.1)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+  <circle cx="110" cy="294" r="4" fill="#22d3ee"/>
+  <text x="126" y="298" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.5)">0 missed leads</text>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(280,195)">
+    <line x1="0" y1="15" x2="60" y2="15" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+    <polygon points="60,10 70,15 60,20" fill="#6366f1" opacity="0.8"/>
+    <circle cx="8" cy="15" r="3" fill="#6366f1" opacity="0.6"/>
+    <circle cx="28" cy="15" r="2" fill="#6366f1" opacity="0.4"/>
+    <circle cx="48" cy="15" r="2" fill="#6366f1" opacity="0.6"/>
+    <text x="35" y="8" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#6366f1" opacity="0.8">60s</text>
+  </g>
+
+  <!-- Step 2: AI Response -->
+  <rect x="300" y="90" width="200" height="240" rx="16" fill="rgba(168,85,247,0.06)" stroke="#a855f7" stroke-width="1" stroke-opacity="0.35"/>
+  <ellipse cx="400" cy="90" rx="80" ry="40" fill="url(#glow2)" opacity="0.5"/>
+  <rect x="320" y="110" width="160" height="2" rx="1" fill="linear-gradient(90deg,#a855f7,#6366f1)" opacity="0.7"/>
+  <rect x="320" y="110" width="160" height="2" rx="1" fill="#a855f7" opacity="0.7"/>
+  <text x="400" y="144" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#a855f7" letter-spacing="2" opacity="0.8">STEP 02</text>
+  <text x="400" y="168" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="16" font-weight="700" fill="#ede9fe">AI First Response</text>
+  <text x="400" y="188" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">Under 60 seconds</text>
+
+  <!-- AI conversation preview -->
+  <rect x="320" y="204" width="160" height="28" rx="7" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <circle cx="335" cy="218" r="5" fill="rgba(168,85,247,0.3)" stroke="rgba(168,85,247,0.5)" stroke-width="1"/>
+  <text x="346" y="222" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.6)">Hi! Interested in your service</text>
+
+  <rect x="320" y="238" width="160" height="28" rx="7" fill="rgba(168,85,247,0.1)" stroke="rgba(168,85,247,0.25)" stroke-width="1"/>
+  <text x="336" y="256" font-family="-apple-system,sans-serif" font-size="10" fill="#d8b4fe">✨ AI: What's your budget range?</text>
+
+  <rect x="320" y="272" width="160" height="28" rx="7" fill="rgba(168,85,247,0.06)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <text x="336" y="284" font-family="ui-monospace,monospace" font-size="8" fill="#a855f7" opacity="0.7">BANT score: 92/100</text>
+  <text x="336" y="294" font-family="ui-monospace,monospace" font-size="8" fill="rgba(255,255,255,0.35)">→ HOT LEAD</text>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(520,195)">
+    <line x1="0" y1="15" x2="60" y2="15" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+    <polygon points="60,10 70,15 60,20" fill="#22d3ee" opacity="0.8"/>
+    <circle cx="8" cy="15" r="3" fill="#22d3ee" opacity="0.6"/>
+    <circle cx="28" cy="15" r="2" fill="#22d3ee" opacity="0.4"/>
+    <circle cx="48" cy="15" r="2" fill="#22d3ee" opacity="0.6"/>
+    <text x="35" y="8" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#22d3ee" opacity="0.8">instant</text>
+  </g>
+
+  <!-- Step 3: Route -->
+  <rect x="540" y="90" width="200" height="240" rx="16" fill="rgba(34,211,238,0.06)" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.35"/>
+  <ellipse cx="640" cy="90" rx="80" ry="40" fill="url(#glow3)" opacity="0.5"/>
+  <rect x="560" y="110" width="160" height="2" rx="1" fill="#22d3ee" opacity="0.7"/>
+  <text x="640" y="144" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#22d3ee" letter-spacing="2" opacity="0.8">STEP 03</text>
+  <text x="640" y="168" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="16" font-weight="700" fill="#cffafe">Smart Routing</text>
+  <text x="640" y="188" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">Right rep, right time</text>
+
+  <!-- Hot lead -->
+  <rect x="560" y="204" width="160" height="34" rx="8" fill="rgba(249,115,22,0.1)" stroke="rgba(249,115,22,0.35)" stroke-width="1"/>
+  <text x="575" y="220" font-family="ui-monospace,monospace" font-size="8" fill="#fb923c" font-weight="700">🔥 HOT LEAD</text>
+  <text x="575" y="232" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.55)">→ Sarah (Closer)</text>
+
+  <!-- Warm lead -->
+  <rect x="560" y="246" width="160" height="34" rx="8" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.25)" stroke-width="1"/>
+  <text x="575" y="262" font-family="ui-monospace,monospace" font-size="8" fill="#818cf8" font-weight="700">WARM LEAD</text>
+  <text x="575" y="274" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">→ 14-day nurture</text>
+
+  <!-- Cold -->
+  <rect x="560" y="288" width="160" height="24" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="575" y="304" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.3)">Cold → Long-term drip</text>
+
+  <!-- Bottom label -->
+  <text x="400" y="396" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.2)">Every lead captured, qualified, and routed before your team starts their day</text>
+</svg>

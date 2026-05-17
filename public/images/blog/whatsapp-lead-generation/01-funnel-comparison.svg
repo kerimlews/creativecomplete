@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0a0f1e"/>
+    </linearGradient>
+    <linearGradient id="tradg" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="wag" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#25d166" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#25d166" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <text x="400" y="38" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#6366f1" letter-spacing="3" opacity="0.7">LEAD FUNNEL: TRADITIONAL VS WHATSAPP</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="55" x2="400" y2="400" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Labels -->
+  <text x="200" y="66" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="2">TRADITIONAL FUNNEL</text>
+  <text x="600" y="66" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="#25d166" letter-spacing="2">WHATSAPP FUNNEL</text>
+
+  <!-- TRADITIONAL funnel stages (left) -->
+  <!-- Ad click: 1000 -->
+  <rect x="50" y="80" width="300" height="44" rx="8" fill="rgba(99,102,241,0.12)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+  <text x="90" y="107" font-family="-apple-system,sans-serif" font-size="13" fill="rgba(255,255,255,0.7)">Ad Click</text>
+  <text x="336" y="107" text-anchor="end" font-family="ui-monospace,monospace" font-size="13" fill="#818cf8" font-weight="700">1,000</text>
+
+  <!-- Landing page: 220 (lost 78%) -->
+  <rect x="90" y="138" width="220" height="36" rx="7" fill="rgba(99,102,241,0.09)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/>
+  <text x="116" y="160" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.55)">Landing page view</text>
+  <text x="296" y="160" text-anchor="end" font-family="ui-monospace,monospace" font-size="11" fill="#818cf8">220</text>
+  <text x="200" y="176" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="rgba(239,68,68,0.6)">-78% dropped off</text>
+
+  <!-- Form fill: 44 (lost another 80%) -->
+  <rect x="120" y="190" width="160" height="32" rx="6" fill="rgba(99,102,241,0.07)" stroke="rgba(99,102,241,0.15)" stroke-width="1"/>
+  <text x="140" y="211" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Form submitted</text>
+  <text x="266" y="211" text-anchor="end" font-family="ui-monospace,monospace" font-size="11" fill="#818cf8">44</text>
+  <text x="200" y="228" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="rgba(239,68,68,0.6)">-80% dropped off</text>
+
+  <!-- Wait 47h -->
+  <rect x="140" y="236" width="120" height="28" rx="6" fill="rgba(239,68,68,0.05)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="200" y="254" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#f87171">Wait 2–47 hours</text>
+
+  <!-- Qualify: 16 -->
+  <rect x="150" y="276" width="100" height="28" rx="5" fill="rgba(99,102,241,0.06)" stroke="rgba(99,102,241,0.12)" stroke-width="1"/>
+  <text x="200" y="294" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Qualified: 16</text>
+
+  <!-- Total conversion: 1.6% -->
+  <rect x="90" y="320" width="220" height="40" rx="8" fill="rgba(239,68,68,0.08)" stroke="rgba(239,68,68,0.25)" stroke-width="1"/>
+  <text x="200" y="340" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#f87171" letter-spacing="1">TOTAL CONVERSION</text>
+  <text x="200" y="354" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="16" font-weight="800" fill="#f87171">~1.6%</text>
+
+  <!-- WHATSAPP funnel (right) -->
+  <!-- Ad click: 1000 -->
+  <rect x="450" y="80" width="300" height="44" rx="8" fill="rgba(37,209,102,0.1)" stroke="rgba(37,209,102,0.3)" stroke-width="1"/>
+  <text x="490" y="107" font-family="-apple-system,sans-serif" font-size="13" fill="rgba(255,255,255,0.7)">Ad Click</text>
+  <text x="736" y="107" text-anchor="end" font-family="ui-monospace,monospace" font-size="13" fill="#25d166" font-weight="700">1,000</text>
+
+  <!-- WA opens: 820 (20% drop) -->
+  <rect x="460" y="138" width="280" height="36" rx="7" fill="rgba(37,209,102,0.09)" stroke="rgba(37,209,102,0.25)" stroke-width="1"/>
+  <text x="490" y="160" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.65)">WA conversation opens</text>
+  <text x="726" y="160" text-anchor="end" font-family="ui-monospace,monospace" font-size="11" fill="#25d166">820</text>
+  <text x="600" y="176" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="rgba(34,197,94,0.6)">-18% drop (pre-intent filter)</text>
+
+  <!-- AI qualifies: 738 -->
+  <rect x="470" y="190" width="260" height="32" rx="6" fill="rgba(37,209,102,0.08)" stroke="rgba(37,209,102,0.2)" stroke-width="1"/>
+  <text x="495" y="211" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">AI qualifies in 60s</text>
+  <text x="716" y="211" text-anchor="end" font-family="ui-monospace,monospace" font-size="11" fill="#25d166">738</text>
+
+  <!-- Scored: 200 hot -->
+  <rect x="490" y="236" width="220" height="28" rx="6" fill="rgba(37,209,102,0.1)" stroke="rgba(37,209,102,0.25)" stroke-width="1"/>
+  <text x="600" y="254" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.7)">Hot leads: 140 (17%)</text>
+
+  <!-- Rep close: 122 -->
+  <rect x="510" y="276" width="180" height="28" rx="5" fill="rgba(37,209,102,0.12)" stroke="rgba(37,209,102,0.3)" stroke-width="1"/>
+  <text x="600" y="294" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#4ade80">Closed: 122</text>
+
+  <!-- Total conversion: 12.2% -->
+  <rect x="470" y="320" width="260" height="40" rx="8" fill="rgba(37,209,102,0.1)" stroke="rgba(37,209,102,0.4)" stroke-width="1.5"/>
+  <text x="600" y="340" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#25d166" letter-spacing="1">TOTAL CONVERSION</text>
+  <text x="600" y="354" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="16" font-weight="800" fill="#25d166">~12.2%</text>
+
+  <text x="400" y="398" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.18)">Same ad spend · 7.6× more qualified leads from WhatsApp</text>
+</svg>

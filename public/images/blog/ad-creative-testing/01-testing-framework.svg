@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0a0f1e"/>
+    </linearGradient>
+    <linearGradient id="winbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <text x="400" y="38" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#a855f7" letter-spacing="3" opacity="0.7">4-PHASE CREATIVE TESTING FRAMEWORK</text>
+
+  <!-- Phase boxes -->
+  <!-- Phase 1: Generate -->
+  <rect x="24" y="62" width="170" height="300" rx="14" fill="rgba(168,85,247,0.06)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <rect x="24" y="62" width="170" height="4" rx="2" fill="#a855f7" opacity="0.6"/>
+  <text x="109" y="90" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#a855f7" letter-spacing="2">PHASE 1</text>
+  <text x="109" y="108" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.85)">Generate</text>
+  <text x="109" y="124" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.35)">Variants</text>
+  <line x1="44" y1="140" x2="174" y2="140" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <!-- Mini variant grid -->
+  <rect x="40" y="152" width="50" height="38" rx="5" fill="rgba(168,85,247,0.15)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="65" y="175" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#d8b4fe">V1</text>
+  <rect x="96" y="152" width="50" height="38" rx="5" fill="rgba(168,85,247,0.12)" stroke="rgba(168,85,247,0.25)" stroke-width="1"/>
+  <text x="121" y="175" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#d8b4fe">V2</text>
+  <rect x="152" y="152" width="26" height="38" rx="5" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.18)" stroke-width="1"/>
+  <text x="165" y="175" text-anchor="middle" font-family="ui-monospace,monospace" font-size="7" fill="#d8b4fe">V3</text>
+  <rect x="40" y="196" width="50" height="38" rx="5" fill="rgba(168,85,247,0.1)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <text x="65" y="219" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#d8b4fe">V4</text>
+  <rect x="96" y="196" width="50" height="38" rx="5" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.18)" stroke-width="1"/>
+  <text x="121" y="219" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#d8b4fe">V5</text>
+  <rect x="152" y="196" width="26" height="38" rx="5" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="165" y="219" text-anchor="middle" font-family="ui-monospace,monospace" font-size="7" fill="rgba(255,255,255,0.3)">+20</text>
+  <text x="109" y="260" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#a855f7" opacity="0.7">AI pre-scores all</text>
+  <text x="109" y="276" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)">Remove bottom 30%</text>
+  <text x="109" y="310" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">15–30 variants</text>
+  <text x="109" y="328" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">in minutes</text>
+
+  <!-- Arrow 1→2 -->
+  <polygon points="204,212 220,205 220,219" fill="#a855f7" opacity="0.6"/>
+  <line x1="194" y1="212" x2="220" y2="212" stroke="#a855f7" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Phase 2: Structure -->
+  <rect x="220" y="62" width="170" height="300" rx="14" fill="rgba(99,102,241,0.06)" stroke="rgba(99,102,241,0.25)" stroke-width="1"/>
+  <rect x="220" y="62" width="170" height="4" rx="2" fill="#6366f1" opacity="0.6"/>
+  <text x="305" y="90" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#818cf8" letter-spacing="2">PHASE 2</text>
+  <text x="305" y="108" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.85)">Structure</text>
+  <text x="305" y="124" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.35)">the Test</text>
+  <line x1="240" y1="140" x2="370" y2="140" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="305" y="165" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.4)">Equal budget</text>
+  <text x="305" y="181" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.4)">per variant</text>
+  <text x="305" y="210" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.55)">Same audience</text>
+  <text x="305" y="228" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.55)">Same objective</text>
+  <text x="305" y="246" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.55)">One variable only</text>
+  <rect x="240" y="270" width="130" height="28" rx="6" fill="rgba(99,102,241,0.1)" stroke="rgba(99,102,241,0.25)" stroke-width="1"/>
+  <text x="305" y="289" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#818cf8">Test 8–15 at once</text>
+  <text x="305" y="318" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.3)">One variable</text>
+  <text x="305" y="334" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.3)">per experiment</text>
+
+  <!-- Arrow 2→3 -->
+  <polygon points="400,212 416,205 416,219" fill="#6366f1" opacity="0.6"/>
+  <line x1="390" y1="212" x2="416" y2="212" stroke="#6366f1" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Phase 3: Monitor -->
+  <rect x="416" y="62" width="170" height="300" rx="14" fill="rgba(34,211,238,0.05)" stroke="rgba(34,211,238,0.22)" stroke-width="1"/>
+  <rect x="416" y="62" width="170" height="4" rx="2" fill="#22d3ee" opacity="0.6"/>
+  <text x="501" y="90" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#22d3ee" letter-spacing="2">PHASE 3</text>
+  <text x="501" y="108" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.85)">Monitor</text>
+  <text x="501" y="124" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.35)">for Significance</text>
+  <line x1="436" y1="140" x2="566" y2="140" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <!-- Confidence thresholds -->
+  <text x="436" y="162" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.4)">80% conf → 30 conv</text>
+  <text x="436" y="180" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.4)">90% conf → 50 conv</text>
+  <text x="436" y="198" font-family="ui-monospace,monospace" font-size="9" fill="#22d3ee">95% conf → 100 conv</text>
+  <text x="501" y="232" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">Auto-pause</text>
+  <text x="501" y="248" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">underperformers</text>
+  <text x="501" y="280" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#22d3ee">7–14 days</text>
+  <text x="501" y="296" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)">typical test window</text>
+
+  <!-- Arrow 3→4 -->
+  <polygon points="596,212 612,205 612,219" fill="#22d3ee" opacity="0.6"/>
+  <line x1="586" y1="212" x2="612" y2="212" stroke="#22d3ee" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Phase 4: Scale -->
+  <rect x="612" y="62" width="164" height="300" rx="14" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.25)" stroke-width="1"/>
+  <rect x="612" y="62" width="164" height="4" rx="2" fill="#22c55e" opacity="0.6"/>
+  <text x="694" y="90" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#22c55e" letter-spacing="2">PHASE 4</text>
+  <text x="694" y="108" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.85)">Scale &amp;</text>
+  <text x="694" y="124" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.35)">Iterate</text>
+  <line x1="632" y1="140" x2="756" y2="140" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <!-- Winner bar -->
+  <text x="694" y="164" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#22c55e">WINNER ▲</text>
+  <rect x="632" y="172" width="124" height="16" rx="4" fill="rgba(34,197,94,0.1)"/>
+  <rect x="632" y="172" width="112" height="16" rx="4" fill="url(#winbar)" opacity="0.8"/>
+  <text x="694" y="204" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Scale 2–3× budget</text>
+  <text x="694" y="222" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Extract winning</text>
+  <text x="694" y="238" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">element</text>
+  <text x="694" y="260" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Generate 5 more</text>
+  <text x="694" y="276" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">variations</text>
+  <text x="694" y="306" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#22c55e">−40–60% CPL</text>
+  <text x="694" y="322" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)">within 90 days</text>
+
+  <text x="400" y="400" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.18)">Each cycle starts from a better position than the last — compounding creative performance</text>
+</svg>

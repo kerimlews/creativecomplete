@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0a0f1e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <text x="400" y="38" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#25d166" letter-spacing="3" opacity="0.7">THREE-SEGMENT BROADCAST STRATEGY</text>
+
+  <!-- CRM database -->
+  <rect x="24" y="140" width="170" height="140" rx="14" fill="rgba(99,102,241,0.07)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+  <text x="109" y="168" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#818cf8" letter-spacing="2">CRM DATABASE</text>
+  <text x="109" y="196" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="28" font-weight="800" fill="#a5b4fc">8,000</text>
+  <text x="109" y="216" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">contacts</text>
+  <line x1="49" y1="232" x2="169" y2="232" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="109" y="252" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)">Segmented by</text>
+  <text x="109" y="266" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)">lifecycle stage</text>
+
+  <!-- Arrows from CRM to segments -->
+  <line x1="194" y1="175" x2="250" y2="150" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="194" y1="210" x2="250" y2="210" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="194" y1="245" x2="250" y2="275" stroke="#f97316" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+
+  <!-- Segment 1: Recent customers -->
+  <rect x="250" y="78" width="175" height="140" rx="14" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.35)" stroke-width="1.5"/>
+  <text x="337" y="104" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#22c55e" letter-spacing="2">SEGMENT 1</text>
+  <text x="337" y="122" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" font-weight="700" fill="rgba(255,255,255,0.85)">Recent Buyers</text>
+  <text x="337" y="138" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)">0–90 days · 1,400</text>
+  <line x1="270" y1="150" x2="405" y2="150" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="337" y="168" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">Complementary offer</text>
+  <text x="337" y="184" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">Upsell / cross-sell</text>
+  <text x="337" y="200" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#22c55e">12–25% response</text>
+
+  <!-- Segment 2: Dormant high-value -->
+  <rect x="250" y="148" width="175" height="140" rx="14" fill="rgba(99,102,241,0.07)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+  <text x="337" y="174" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#818cf8" letter-spacing="2">SEGMENT 2</text>
+  <text x="337" y="192" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" font-weight="700" fill="rgba(255,255,255,0.85)">Dormant High-Value</text>
+  <text x="337" y="208" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)">91–365 days · 2,200</text>
+  <line x1="270" y1="220" x2="405" y2="220" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="337" y="238" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">Re-engagement offer</text>
+  <text x="337" y="254" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">Seasonal/new product</text>
+  <text x="337" y="272" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#818cf8">8–18% response</text>
+
+  <!-- Segment 3: Unconverted leads -->
+  <rect x="250" y="218" width="175" height="140" rx="14" fill="rgba(249,115,22,0.06)" stroke="rgba(249,115,22,0.25)" stroke-width="1"/>
+  <text x="337" y="244" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#f97316" letter-spacing="2">SEGMENT 3</text>
+  <text x="337" y="262" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" font-weight="700" fill="rgba(255,255,255,0.85)">Unconverted Leads</text>
+  <text x="337" y="278" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)">Interested · 4,400</text>
+  <line x1="270" y1="290" x2="405" y2="290" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <text x="337" y="308" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">Re-activation offer</text>
+  <text x="337" y="324" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">Address hesitation</text>
+  <text x="337" y="342" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#f97316">5–12% response</text>
+
+  <!-- Arrows to results -->
+  <line x1="425" y1="148" x2="490" y2="148" stroke="#22c55e" stroke-width="1.5" opacity="0.5"/>
+  <line x1="425" y1="218" x2="490" y2="218" stroke="#6366f1" stroke-width="1.5" opacity="0.5"/>
+  <line x1="425" y1="288" x2="490" y2="288" stroke="#f97316" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Results column -->
+  <rect x="490" y="78" width="280" height="284" rx="14" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="630" y="102" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)" letter-spacing="2">CAMPAIGN RESULTS</text>
+
+  <!-- Result 1 -->
+  <rect x="506" y="114" width="248" height="60" rx="8" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.2)" stroke-width="1"/>
+  <text x="520" y="136" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">1,400 sent → 252 replies → 87 sales</text>
+  <text x="520" y="154" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">@€380 avg</text>
+  <text x="726" y="154" text-anchor="end" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#22c55e">€33,060</text>
+  <text x="726" y="168" text-anchor="end" font-family="ui-monospace,monospace" font-size="8" fill="#22c55e" opacity="0.6">Seg 1 revenue</text>
+
+  <!-- Result 2 -->
+  <rect x="506" y="184" width="248" height="60" rx="8" fill="rgba(99,102,241,0.06)" stroke="rgba(99,102,241,0.18)" stroke-width="1"/>
+  <text x="520" y="206" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">2,200 sent → 242 replies → 58 sales</text>
+  <text x="520" y="224" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">@€520 avg</text>
+  <text x="726" y="224" text-anchor="end" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#818cf8">€30,160</text>
+  <text x="726" y="238" text-anchor="end" font-family="ui-monospace,monospace" font-size="8" fill="#818cf8" opacity="0.6">Seg 2 revenue</text>
+
+  <!-- Result 3 -->
+  <rect x="506" y="254" width="248" height="60" rx="8" fill="rgba(249,115,22,0.06)" stroke="rgba(249,115,22,0.18)" stroke-width="1"/>
+  <text x="520" y="276" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">4,400 sent → 308 replies → 43 sales</text>
+  <text x="520" y="294" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">@€280 avg</text>
+  <text x="726" y="294" text-anchor="end" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#f97316">€12,040</text>
+  <text x="726" y="308" text-anchor="end" font-family="ui-monospace,monospace" font-size="8" fill="#f97316" opacity="0.6">Seg 3 revenue</text>
+
+  <!-- Total -->
+  <rect x="490" y="375" width="280" height="34" rx="8" fill="rgba(37,209,102,0.1)" stroke="rgba(37,209,102,0.4)" stroke-width="1.5"/>
+  <text x="516" y="397" font-family="ui-monospace,monospace" font-size="10" fill="rgba(255,255,255,0.5)">Total · €1,200 investment</text>
+  <text x="756" y="397" text-anchor="end" font-family="-apple-system,sans-serif" font-size="16" font-weight="800" fill="#25d166">€75,260 · 62.7×</text>
+</svg>

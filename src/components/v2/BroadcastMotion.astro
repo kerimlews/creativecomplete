@@ -1,0 +1,365 @@
+---
+// BroadcastMotion.astro — animated WhatsApp broadcast campaign visualization
+---
+
+<div class="bm" aria-label="WhatsApp broadcast campaign diagram">
+
+  <!-- Database header -->
+  <div class="bm__db">
+    <span class="bm__db-live"><span class="bm__db-dot"></span>Sending broadcast</span>
+    <div class="bm__db-stats">
+      <div class="bm__db-stat">
+        <span class="bm__db-n">8,000</span>
+        <span class="bm__db-l">contacts</span>
+      </div>
+      <div class="bm__db-stat">
+        <span class="bm__db-n">3</span>
+        <span class="bm__db-l">segments</span>
+      </div>
+      <div class="bm__db-stat">
+        <span class="bm__db-n">98%</span>
+        <span class="bm__db-l">open rate</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message preview -->
+  <div class="bm__msg">
+    <div class="bm__msg-head">
+      <div class="bm__msg-avatar">CC</div>
+      <div class="bm__msg-meta">
+        <span class="bm__msg-name">CreativeComplete</span>
+        <span class="bm__msg-time">now</span>
+      </div>
+    </div>
+    <div class="bm__msg-bubble">
+      <p>Hi <strong>Maria</strong> 👋 It's been 30 days since your first campaign. Ready to 10× your results this month?</p>
+      <span class="bm__msg-cta">Reply YES to learn more →</span>
+    </div>
+  </div>
+
+  <!-- Sending progress -->
+  <div class="bm__progress">
+    <div class="bm__progress-bar">
+      <div class="bm__progress-fill"></div>
+    </div>
+    <div class="bm__progress-meta">
+      <span class="bm__progress-sent">Sent: <strong>4,821</strong> / 8,000</span>
+      <span class="bm__progress-pct">60%</span>
+    </div>
+  </div>
+
+  <!-- Reply stream -->
+  <div class="bm__replies">
+    {[
+      { name: 'Maria L.', msg: 'YES, interested!', delay: '0s', hot: true },
+      { name: 'Carlos M.', msg: 'How much does it cost?', delay: '0.4s', hot: true },
+      { name: 'Anna T.', msg: 'YES! Call me today', delay: '0.8s', hot: true },
+      { name: 'James K.', msg: 'Not now, maybe later', delay: '1.2s', hot: false },
+      { name: 'Sofia B.', msg: 'YES, book me in', delay: '1.6s', hot: true },
+    ].map(r => (
+      <div class:list={['bm__reply', { 'bm__reply--hot': r.hot }]} style={`--rd:${r.delay}`}>
+        <div class="bm__reply-avatar">{r.name[0]}</div>
+        <div class="bm__reply-body">
+          <span class="bm__reply-name">{r.name}</span>
+          <span class="bm__reply-msg">{r.msg}</span>
+        </div>
+        {r.hot && <span class="bm__reply-badge">🔥 HOT</span>}
+      </div>
+    ))}
+  </div>
+
+  <!-- ROI result -->
+  <div class="bm__result">
+    <div class="bm__result-dot"></div>
+    <div class="bm__result-text">
+      <span>Campaign ROI</span>
+      <strong>42.5× return</strong>
+    </div>
+    <span class="bm__result-time">48h</span>
+  </div>
+
+</div>
+
+<style lang="scss">
+@keyframes bm-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+@keyframes bm-fill {
+  from { width: 0; }
+  to   { width: 60%; }
+}
+@keyframes bm-slide {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes bm-result {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.bm {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: rgba(8,10,22,0.7);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -60px; left: 50%; transform: translateX(-50%);
+    width: 280px; height: 200px;
+    background: radial-gradient(ellipse at center top, rgba(37,209,102,0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+}
+
+/* Database header */
+.bm__db {
+  background: rgba(37,209,102,0.07);
+  border: 1px solid rgba(37,209,102,0.2);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bm__db-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(37,209,102,0.8);
+  align-self: flex-start;
+}
+.bm__db-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #25d166;
+  box-shadow: 0 0 8px #25d166;
+  animation: bm-blink 1.4s ease-in-out infinite;
+}
+.bm__db-stats {
+  display: flex;
+  gap: 20px;
+}
+.bm__db-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.bm__db-n {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  line-height: 1;
+}
+.bm__db-l {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+}
+
+/* Message preview */
+.bm__msg {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bm__msg-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bm__msg-avatar {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: rgba(37,209,102,0.2);
+  border: 1px solid rgba(37,209,102,0.4);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 700; color: #25d166;
+  flex-shrink: 0;
+}
+.bm__msg-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.bm__msg-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.8);
+}
+.bm__msg-time {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: rgba(255,255,255,0.3);
+}
+.bm__msg-bubble {
+  background: rgba(37,209,102,0.08);
+  border-radius: 10px;
+  padding: 8px 10px;
+  p {
+    font-size: 11px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.65);
+    margin: 0 0 6px;
+    strong { color: rgba(255,255,255,0.85); }
+  }
+}
+.bm__msg-cta {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  color: #25d166;
+  letter-spacing: .08em;
+}
+
+/* Progress */
+.bm__progress { display: flex; flex-direction: column; gap: 4px; }
+.bm__progress-bar {
+  height: 6px; border-radius: 3px;
+  background: rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+.bm__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #25d166, #22d3ee);
+  border-radius: 3px;
+  width: 0;
+  animation: bm-fill 2s ease-out 0.3s forwards;
+}
+.bm__progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: rgba(255,255,255,0.3);
+  strong { color: rgba(255,255,255,0.6); }
+}
+.bm__progress-pct { color: #25d166; }
+
+/* Reply stream */
+.bm__replies {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.bm__reply {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  opacity: 0;
+  animation: bm-slide .35s ease calc(var(--rd, 0s) + 1.5s) both;
+
+  &--hot {
+    background: rgba(37,209,102,0.06);
+    border-color: rgba(37,209,102,0.2);
+  }
+}
+.bm__reply-avatar {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8px; font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  flex-shrink: 0;
+}
+.bm__reply--hot .bm__reply-avatar {
+  background: rgba(37,209,102,0.15);
+  color: #25d166;
+}
+.bm__reply-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+.bm__reply-name {
+  font-size: 9px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.45);
+  font-family: var(--font-mono);
+}
+.bm__reply-msg {
+  font-size: 10px;
+  color: rgba(255,255,255,0.55);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bm__reply--hot .bm__reply-msg { color: rgba(255,255,255,0.75); }
+.bm__reply-badge {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  color: #f97316;
+  flex-shrink: 0;
+}
+
+/* ROI result */
+.bm__result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 13px;
+  background: rgba(37,209,102,0.07);
+  border: 1px solid rgba(37,209,102,0.25);
+  border-radius: 10px;
+  animation: bm-result .4s ease 3.5s both;
+}
+.bm__result-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #25d166;
+  box-shadow: 0 0 10px #25d166;
+  flex-shrink: 0;
+  animation: bm-blink 1.2s ease-in-out infinite;
+}
+.bm__result-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  span {
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+  }
+  strong {
+    font-size: 13px;
+    font-weight: 700;
+    color: #4ade80;
+  }
+}
+.bm__result-time {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: #22d3ee;
+}
+</style>

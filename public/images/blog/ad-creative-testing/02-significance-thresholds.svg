@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0a0f1e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <text x="400" y="38" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#a855f7" letter-spacing="3" opacity="0.7">STATISTICAL SIGNIFICANCE THRESHOLDS</text>
+
+  <!-- Left: confidence levels explained -->
+  <rect x="30" y="65" width="340" height="300" rx="14" fill="rgba(168,85,247,0.04)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+  <text x="200" y="90" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#a855f7" letter-spacing="2">CONFIDENCE REQUIREMENTS</text>
+
+  <!-- 80% -->
+  <rect x="50" y="104" width="300" height="62" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="66" y="126" font-family="-apple-system,sans-serif" font-size="16" font-weight="800" fill="rgba(255,255,255,0.6)">80%</text>
+  <text x="116" y="122" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">confidence</text>
+  <text x="116" y="138" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)">~30 conversions per variant</text>
+  <text x="66" y="156" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.3)">Low-stakes decisions · short tests</text>
+
+  <!-- 90% -->
+  <rect x="50" y="176" width="300" height="62" rx="8" fill="rgba(99,102,241,0.06)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/>
+  <text x="66" y="198" font-family="-apple-system,sans-serif" font-size="16" font-weight="800" fill="#818cf8">90%</text>
+  <text x="116" y="194" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.55)">confidence</text>
+  <text x="116" y="210" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.4)">~50 conversions per variant</text>
+  <text x="66" y="228" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">Standard · most scaling decisions</text>
+
+  <!-- 95% -->
+  <rect x="50" y="248" width="300" height="62" rx="8" fill="rgba(34,211,238,0.06)" stroke="rgba(34,211,238,0.25)" stroke-width="1"/>
+  <text x="66" y="270" font-family="-apple-system,sans-serif" font-size="16" font-weight="800" fill="#22d3ee">95%</text>
+  <text x="116" y="266" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.7)">confidence</text>
+  <text x="116" y="282" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.5)">~100 conversions per variant</text>
+  <text x="66" y="300" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.45)">High-stakes · significant budget moves</text>
+
+  <text x="200" y="346" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.2)">Do not make scaling decisions before</text>
+  <text x="200" y="362" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.2)">reaching your confidence threshold</text>
+
+  <!-- Right: performance comparison visual -->
+  <rect x="390" y="65" width="380" height="300" rx="14" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="580" y="90" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)" letter-spacing="2">CREATIVE PERFORMANCE COMPARISON</text>
+
+  <!-- Variant performance bars -->
+  <text x="406" y="116" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.4)">V1</text>
+  <rect x="424" y="105" width="330" height="18" rx="4" fill="rgba(255,255,255,0.04)"/>
+  <rect x="424" y="105" width="248" height="18" rx="4" fill="rgba(99,102,241,0.4)"/>
+  <text x="748" y="119" text-anchor="end" font-family="ui-monospace,monospace" font-size="9" fill="#818cf8">CTR 3.2%</text>
+
+  <text x="406" y="144" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.4)">V2</text>
+  <rect x="424" y="133" width="330" height="18" rx="4" fill="rgba(255,255,255,0.04)"/>
+  <rect x="424" y="133" width="305" height="18" rx="4" fill="rgba(168,85,247,0.5)"/>
+  <text x="748" y="147" text-anchor="end" font-family="ui-monospace,monospace" font-size="9" fill="#d8b4fe">CTR 3.9%</text>
+
+  <text x="406" y="172" font-family="ui-monospace,monospace" font-size="9" fill="#22d3ee">V3 ★</text>
+  <rect x="424" y="161" width="330" height="18" rx="4" fill="rgba(255,255,255,0.04)"/>
+  <rect x="424" y="161" width="330" height="18" rx="4" fill="rgba(34,211,238,0.5)"/>
+  <text x="748" y="175" text-anchor="end" font-family="ui-monospace,monospace" font-size="9" fill="#22d3ee" font-weight="700">CTR 5.8% ← WINNER</text>
+
+  <text x="406" y="200" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.4)">V4</text>
+  <rect x="424" y="189" width="330" height="18" rx="4" fill="rgba(255,255,255,0.04)"/>
+  <rect x="424" y="189" width="152" height="18" rx="4" fill="rgba(99,102,241,0.25)"/>
+  <text x="748" y="203" text-anchor="end" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)">CTR 1.9% ↓ PAUSED</text>
+
+  <text x="406" y="228" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.4)">V5</text>
+  <rect x="424" y="217" width="330" height="18" rx="4" fill="rgba(255,255,255,0.04)"/>
+  <rect x="424" y="217" width="110" height="18" rx="4" fill="rgba(99,102,241,0.2)"/>
+  <text x="748" y="231" text-anchor="end" font-family="ui-monospace,monospace" font-size="9" fill="rgba(255,255,255,0.3)">CTR 1.4% ↓ PAUSED</text>
+
+  <!-- Results -->
+  <rect x="410" y="254" width="340" height="90" rx="10" fill="rgba(34,211,238,0.06)" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <text x="580" y="278" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#22d3ee" letter-spacing="2">SCALING DECISION</text>
+  <text x="580" y="302" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.8)">V3 gets 100% of budget</text>
+  <text x="580" y="320" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">After 95% confidence reached at 103 conv.</text>
+  <text x="580" y="338" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#4ade80">Result: −44% CPL in first week of scaling</text>
+
+  <text x="400" y="400" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.18)">Never make scaling decisions before reaching statistical significance — the data before is noise</text>
+</svg>

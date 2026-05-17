@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0a0f1e"/>
+    </linearGradient>
+    <linearGradient id="budgetg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="authg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="needg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="timeg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <text x="400" y="40" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#6366f1" letter-spacing="3" opacity="0.7">BANT LEAD SCORING MODEL</text>
+
+  <!-- BANT bars -->
+  <!-- Budget -->
+  <text x="60" y="100" font-family="ui-monospace,monospace" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="1">BUDGET</text>
+  <text x="740" y="100" text-anchor="end" font-family="ui-monospace,monospace" font-size="10" fill="#818cf8" font-weight="700">28 / 30</text>
+  <rect x="60" y="108" width="680" height="24" rx="6" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.15)" stroke-width="1"/>
+  <rect x="60" y="108" width="634" height="24" rx="6" fill="url(#budgetg)" opacity="0.7"/>
+  <text x="80" y="125" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="600">€15k+ confirmed · matches offering</text>
+
+  <!-- Authority -->
+  <text x="60" y="162" font-family="ui-monospace,monospace" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="1">AUTHORITY</text>
+  <text x="740" y="162" text-anchor="end" font-family="ui-monospace,monospace" font-size="10" fill="#c084fc" font-weight="700">22 / 25</text>
+  <rect x="60" y="170" width="680" height="24" rx="6" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.15)" stroke-width="1"/>
+  <rect x="60" y="170" width="598" height="24" rx="6" fill="url(#authg)" opacity="0.7"/>
+  <text x="80" y="187" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.9)" font-weight="600">CEO · sole decision-maker confirmed</text>
+
+  <!-- Need -->
+  <text x="60" y="224" font-family="ui-monospace,monospace" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="1">NEED</text>
+  <text x="740" y="224" text-anchor="end" font-family="ui-monospace,monospace" font-size="10" fill="#22d3ee" font-weight="700">24 / 25</text>
+  <rect x="60" y="232" width="680" height="24" rx="6" fill="rgba(34,211,238,0.06)" stroke="rgba(34,211,238,0.15)" stroke-width="1"/>
+  <rect x="60" y="232" width="653" height="24" rx="6" fill="url(#needg)" opacity="0.7"/>
+  <text x="80" y="249" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(0,0,0,0.7)" font-weight="600">Lead gen system · exact fit confirmed</text>
+
+  <!-- Timeline -->
+  <text x="60" y="286" font-family="ui-monospace,monospace" font-size="10" fill="rgba(255,255,255,0.5)" letter-spacing="1">TIMELINE</text>
+  <text x="740" y="286" text-anchor="end" font-family="ui-monospace,monospace" font-size="10" fill="#34d399" font-weight="700">18 / 20</text>
+  <rect x="60" y="294" width="680" height="24" rx="6" fill="rgba(16,185,129,0.06)" stroke="rgba(16,185,129,0.15)" stroke-width="1"/>
+  <rect x="60" y="294" width="612" height="24" rx="6" fill="url(#timeg)" opacity="0.7"/>
+  <text x="80" y="311" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(0,0,0,0.7)" font-weight="600">Ready to start within 2 weeks</text>
+
+  <!-- Total score -->
+  <rect x="240" y="344" width="320" height="50" rx="12" fill="rgba(249,115,22,0.1)" stroke="rgba(249,115,22,0.4)" stroke-width="1.5"/>
+  <text x="330" y="375" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="rgba(255,255,255,0.5)">Total Score</text>
+  <text x="470" y="378" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="22" font-weight="800" fill="#fb923c">92 / 100 · 🔥 HOT</text>
+
+  <!-- Side annotation -->
+  <text x="400" y="405" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.2)">Weighted model calibrated to your closed/won deal profile</text>
+</svg>

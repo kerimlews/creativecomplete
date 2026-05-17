@@ -17,6 +17,8 @@ const services = [
     color: 'var(--c1)',
     text: "#fff",
     cta: 'Qualify my leads with AI →',
+    blogHref: '/blog/ai-lead-qualification/',
+    blogLabel: 'How AI qualification works →',
   },
   {
     motionKey: 'creative' as const,
@@ -33,6 +35,8 @@ const services = [
     color: 'var(--c3)',
     text: "#fff",
     cta: 'Generate winning creatives →',
+    blogHref: '/blog/ai-ad-creatives/',
+    blogLabel: 'The 6 AI creative systems →',
   },
   {
     motionKey: 'capture' as const,
@@ -49,6 +53,8 @@ const services = [
     color: 'var(--c2)',
     text: "#464040",
     cta: 'Capture every lead →',
+    blogHref: '/blog/speed-to-lead/',
+    blogLabel: 'Why speed to lead decides every sale →',
   },
   {
     motionKey: 'monetize' as const,
@@ -65,6 +71,8 @@ const services = [
     color: 'var(--c2)',
     text: "#464040",
     cta: 'Monetize my existing database →',
+    blogHref: '/blog/whatsapp-broadcast-campaigns/',
+    blogLabel: 'The 42.5× broadcast playbook →',
   },
 ];
 ---
@@ -181,6 +189,9 @@ const services = [
                  style={`--svc-color:${s.color}; color:${s.text} !important;`}
                  data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'>
                 {s.cta}
+              </a>
+              <a href={s.blogHref} class="v2-svc-blog-link" style={`color:${s.color}`}>
+                {s.blogLabel}
               </a>
             </div>
           </div>
@@ -474,6 +485,20 @@ const services = [
 /* ── Row CTA ────────────────────────────────────── */
 .v2-svc-row-cta {
   margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+.v2-svc-blog-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity .15s;
+  &:hover { opacity: 1; }
 }
 
 .v2-svc-cta-btn {

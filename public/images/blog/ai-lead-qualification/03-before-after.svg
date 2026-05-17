@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0a0f1e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <text x="400" y="40" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#6366f1" letter-spacing="3" opacity="0.7">BEFORE VS AFTER AI QUALIFICATION</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="60" x2="400" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- BEFORE label -->
+  <text x="200" y="74" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="rgba(255,255,255,0.25)" letter-spacing="2">BEFORE</text>
+
+  <!-- AFTER label -->
+  <text x="600" y="74" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#22d3ee" letter-spacing="2">AFTER</text>
+
+  <!-- BEFORE side: all leads go to reps -->
+  <!-- Pile of leads -->
+  <rect x="40" y="95" width="310" height="200" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- Lead rows showing waste -->
+  <g transform="translate(56,110)">
+    <rect width="278" height="22" rx="5" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/>
+    <circle cx="12" cy="11" r="4" fill="rgba(249,115,22,0.6)"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.55)">Lead #1 · No budget · Rep calls anyway</text>
+  </g>
+  <g transform="translate(56,138)">
+    <rect width="278" height="22" rx="5" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/>
+    <circle cx="12" cy="11" r="4" fill="rgba(249,115,22,0.6)"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.55)">Lead #2 · Just browsing · Rep calls</text>
+  </g>
+  <g transform="translate(56,166)">
+    <rect width="278" height="22" rx="5" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/>
+    <circle cx="12" cy="11" r="4" fill="rgba(249,115,22,0.6)"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.55)">Lead #3 · Wrong company size · Rep calls</text>
+  </g>
+  <g transform="translate(56,194)">
+    <rect width="278" height="22" rx="5" fill="rgba(34,211,238,0.08)" stroke="rgba(34,211,238,0.25)" stroke-width="1"/>
+    <circle cx="12" cy="11" r="4" fill="#22d3ee"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">Lead #4 · READY TO BUY · Rep calls (maybe)</text>
+  </g>
+  <g transform="translate(56,222)">
+    <rect width="278" height="22" rx="5" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/>
+    <circle cx="12" cy="11" r="4" fill="rgba(249,115,22,0.6)"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.55)">Lead #5 · No timeline · Rep calls</text>
+  </g>
+  <g transform="translate(56,250)">
+    <rect width="278" height="22" rx="5" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/>
+    <circle cx="12" cy="11" r="4" fill="rgba(249,115,22,0.6)"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.55)">Lead #6 · Competitor evaluating · Rep calls</text>
+  </g>
+
+  <!-- Before metric -->
+  <rect x="40" y="308" width="310" height="54" rx="10" fill="rgba(239,68,68,0.06)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+  <text x="195" y="330" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="rgba(239,68,68,0.7)" letter-spacing="2">REP TIME WASTED</text>
+  <text x="195" y="352" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="20" font-weight="700" fill="#f87171">70% on unqualified leads</text>
+
+  <!-- AFTER side: only hot leads reach reps -->
+  <rect x="450" y="95" width="310" height="200" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- AI filters out unqualified -->
+  <g transform="translate(466,110)">
+    <rect width="278" height="22" rx="5" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.2)">Lead #1 · Scored 22 · → Nurture sequence</text>
+  </g>
+  <g transform="translate(466,138)">
+    <rect width="278" height="22" rx="5" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.2)">Lead #2 · Scored 18 · → Archive</text>
+  </g>
+  <g transform="translate(466,166)">
+    <rect width="278" height="22" rx="5" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.2)">Lead #3 · Scored 31 · → 30-day drip</text>
+  </g>
+  <g transform="translate(466,194)">
+    <rect width="278" height="22" rx="5" fill="rgba(34,211,238,0.1)" stroke="rgba(34,211,238,0.35)" stroke-width="1"/>
+    <circle cx="12" cy="11" r="4" fill="#22d3ee"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.85)" font-weight="600">Lead #4 · Score 94 · → REP NOW + full brief</text>
+  </g>
+  <g transform="translate(466,222)">
+    <rect width="278" height="22" rx="5" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.2)">Lead #5 · Scored 44 · → 14-day sequence</text>
+  </g>
+  <g transform="translate(466,250)">
+    <rect width="278" height="22" rx="5" fill="rgba(249,115,22,0.08)" stroke="rgba(249,115,22,0.25)" stroke-width="1"/>
+    <circle cx="12" cy="11" r="4" fill="#f97316"/>
+    <text x="26" y="15" font-family="-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">Lead #6 · Score 81 · → REP queue + context</text>
+  </g>
+
+  <!-- After metric -->
+  <rect x="450" y="308" width="310" height="54" rx="10" fill="rgba(34,211,238,0.06)" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <text x="605" y="330" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#22d3ee" letter-spacing="2" opacity="0.8">REP TIME EFFICIENCY</text>
+  <text x="605" y="352" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="20" font-weight="700" fill="#67e8f9">100% on qualified leads</text>
+
+  <text x="400" y="396" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.18)">Same team, same lead volume — 2.4× higher close rate</text>
+</svg>

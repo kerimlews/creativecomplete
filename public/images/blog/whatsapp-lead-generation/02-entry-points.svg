@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0a0f1e"/>
+    </linearGradient>
+    <radialGradient id="waglow" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#25d166" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#25d166" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <text x="400" y="38" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="#25d166" letter-spacing="3" opacity="0.7">WHATSAPP LEAD ENTRY POINTS</text>
+
+  <!-- Center: WA inbox -->
+  <ellipse cx="400" cy="220" rx="120" ry="60" fill="url(#waglow)"/>
+  <rect x="330" y="182" width="140" height="76" rx="16" fill="rgba(37,209,102,0.1)" stroke="rgba(37,209,102,0.5)" stroke-width="2"/>
+  <text x="400" y="214" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="#25d166">WhatsApp</text>
+  <text x="400" y="232" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Unified Inbox</text>
+  <circle cx="400" cy="248" r="4" fill="#25d166" opacity="0.8"/>
+
+  <!-- Entry point 1: Click-to-WA Ads (top-left) -->
+  <rect x="24" y="60" width="210" height="110" rx="14" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.3)" stroke-width="1"/>
+  <text x="129" y="86" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#a855f7" letter-spacing="2">01 · ADS</text>
+  <text x="129" y="106" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.85)">Click-to-WhatsApp</text>
+  <text x="129" y="124" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Facebook · Instagram</text>
+  <text x="129" y="140" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Ads → direct WA chat</text>
+  <text x="129" y="158" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#a855f7">12–22% click-to-lead</text>
+  <!-- Arrow -->
+  <line x1="234" y1="130" x2="328" y2="200" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+  <polygon points="325,196 335,204 323,206" fill="#a855f7" opacity="0.7"/>
+
+  <!-- Entry point 2: Website Widget (top-right) -->
+  <rect x="566" y="60" width="210" height="110" rx="14" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+  <text x="671" y="86" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#818cf8" letter-spacing="2">02 · WEBSITE</text>
+  <text x="671" y="106" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.85)">WA Widget</text>
+  <text x="671" y="124" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Chat opens in WA app</text>
+  <text x="671" y="140" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Thread survives browser close</text>
+  <text x="671" y="158" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#818cf8">3–7% of site visitors</text>
+  <!-- Arrow -->
+  <line x1="566" y1="130" x2="472" y2="200" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+  <polygon points="477,196 467,204 475,207" fill="#818cf8" opacity="0.7"/>
+
+  <!-- Entry point 3: QR Codes (bottom-left) -->
+  <rect x="24" y="260" width="210" height="110" rx="14" fill="rgba(34,211,238,0.07)" stroke="rgba(34,211,238,0.25)" stroke-width="1"/>
+  <text x="129" y="286" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#22d3ee" letter-spacing="2">03 · OFFLINE</text>
+  <text x="129" y="306" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.85)">QR Codes</text>
+  <text x="129" y="324" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Retail · Events · Print</text>
+  <text x="129" y="340" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Pre-filled message opens</text>
+  <text x="129" y="358" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#22d3ee">Zero friction capture</text>
+  <!-- Arrow -->
+  <line x1="234" y1="310" x2="328" y2="245" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+  <polygon points="325,249 335,243 333,256" fill="#22d3ee" opacity="0.7"/>
+
+  <!-- Entry point 4: Social DMs (bottom-right) -->
+  <rect x="566" y="260" width="210" height="110" rx="14" fill="rgba(249,115,22,0.07)" stroke="rgba(249,115,22,0.25)" stroke-width="1"/>
+  <text x="671" y="286" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#f97316" letter-spacing="2">04 · SOCIAL</text>
+  <text x="671" y="306" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.85)">DM Flows</text>
+  <text x="671" y="324" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Comment → DM → WA</text>
+  <text x="671" y="340" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Highest-intent leads</text>
+  <text x="671" y="358" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#f97316">Engages content fans</text>
+  <!-- Arrow -->
+  <line x1="566" y1="310" x2="472" y2="245" stroke="#f97316" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+  <polygon points="477,249 467,243 475,257" fill="#f97316" opacity="0.7"/>
+
+  <text x="400" y="400" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.18)">All 4 entry points feed one unified inbox — AI qualifies every lead within 60 seconds</text>
+</svg>
