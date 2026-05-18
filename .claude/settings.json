@@ -32,7 +32,13 @@
       "Read(//home/kerim/**)",
       "Bash(curl -sL \"https://onlytourism.com/wp-content/uploads/2025/03/OT-Name-only-Logo-Blue.svg\" -o /home/kerim/Documents/astro-creativecomplete-landing/public/images/logos/only-tourism.svg)",
       "Bash(identify /home/kerim/Documents/astro-creativecomplete-landing/public/favicon-32x32.png)",
-      "Bash(xargs ls -la)"
+      "Bash(xargs ls -la)",
+      "Bash(sed -i 's|]\\(/blog/|]\\(/de/blog/|g' /home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/de/*.md && echo \"DE done\")",
+      "Bash(sed -i 's|]\\(/blog/|]\\(/sl/blog/|g' /home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/sl/*.md && echo \"SL done\")"
+    ],
+    "additionalDirectories": [
+      "/home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/de",
+      "/home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/sl"
     ]
   }
 }

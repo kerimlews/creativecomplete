@@ -1,162 +1,76 @@
 ---
 import ServiceMotion from './ServiceMotion.astro';
+import getV2Content from '../../utils/v2i18n';
+import type { Lang } from '../../utils/v2i18n';
 
-const services = [
-  {
-    motionKey: 'qualify' as const,
-    tag: '01',
-    kicker: 'Under 60 seconds · 24/7',
-    title: 'AI Lead Qualification',
-    body: 'AI Customer System qualifies every inbound lead automatically using AI Agents, scoring intent, budget, and timeline in under 60 seconds across WhatsApp, Instagram, TikTok, Facebook, and 8+ more channels.',
-    list: [
-      'AI Agents handle first touch 24/7',
-      'BANT qualification in every language',
-      'Hot leads → sales calendar instantly',
-      '80% of routine inquiries automated',
-    ],
-    color: 'var(--c1)',
-    text: "#fff",
-    cta: 'Qualify my leads with AI →',
-    blogHref: '/blog/ai-lead-qualification/',
-    blogLabel: 'How AI qualification works →',
-  },
-  {
-    motionKey: 'creative' as const,
-    tag: '02',
-    kicker: '$35B+ trained · Weekly production',
-    title: 'AI Ad Creative Engine',
-    body: 'AI Customer System generates high-converting ad creatives trained on $35B+ in ad spend data. Creative Scoring AI predicts winners with 90%+ accuracy before you spend a single cent.',
-    list: [
-      'Creatives in minutes, not days',
-      'Trained on $35B+ real ad spend data',
-      'Creative Scoring AI, 90%+ accuracy',
-      'Meta, TikTok, Google, LinkedIn',
-    ],
-    color: 'var(--c3)',
-    text: "#fff",
-    cta: 'Generate winning creatives →',
-    blogHref: '/blog/ai-ad-creatives/',
-    blogLabel: 'The 6 AI creative systems →',
-  },
-  {
-    motionKey: 'capture' as const,
-    tag: '03',
-    kicker: '40+ channels · Zero missed leads',
-    title: 'Lead Capture & Conversion',
-    body: 'AI Customer System unifies WhatsApp, Instagram, TikTok, Facebook, email, SMS, and web chat into one inbox. Capture every lead, convert them with AI, retain them with smart sequences.',
-    list: [
-      'Unified inbox: 40+ channels',
-      'WhatsApp Business API integration',
-      'Conversation-Led Growth™ framework',
-      'Real-time routing with full context',
-    ],
-    color: 'var(--c2)',
-    text: "#464040",
-    cta: 'Capture every lead →',
-    blogHref: '/blog/speed-to-lead/',
-    blogLabel: 'Why speed to lead decides every sale →',
-  },
-  {
-    motionKey: 'monetize' as const,
-    tag: '04',
-    kicker: 'Ongoing revenue · Avg. 42.5×',
-    title: 'Existing Lead Monetization',
-    body: 'AI Customer System mines your existing CRM for profit. WhatsApp broadcast campaigns and AI-powered re-engagement sequences turn dormant contacts into revenue, averaging 42.5× ROI on the first campaign.',
-    list: [
-      'WhatsApp broadcasts (avg. 42.5× ROI)',
-      'Dormant CRM re-engagement flows',
-      'Behavior-triggered sequences',
-      'Segment by intent, lifecycle, value',
-    ],
-    color: 'var(--c2)',
-    text: "#464040",
-    cta: 'Monetize my existing database →',
-    blogHref: '/blog/whatsapp-broadcast-campaigns/',
-    blogLabel: 'The 42.5× broadcast playbook →',
-  },
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'en' } = Astro.props;
+const c = getV2Content(lang).services;
+
+const motionKeys = ['qualify', 'creative', 'capture', 'monetize'] as const;
+const colors = ['var(--c1)', 'var(--c3)', 'var(--c2)', 'var(--c2)'];
+const texts  = ['#fff', '#fff', '#464040', '#464040'];
+const blogBase = lang === 'de' ? '/de/blog' : lang === 'sl' ? '/sl/blog' : '/blog';
+const blogHrefs = [
+  `${blogBase}/ai-lead-qualification/`,
+  `${blogBase}/ai-ad-creatives/`,
+  `${blogBase}/speed-to-lead/`,
+  `${blogBase}/whatsapp-broadcast-campaigns/`,
 ];
+const engColors = ['#6366f1', '#a855f7', '#22d3ee', '#e879f9'];
+const engMetrics = ['60s', '90%+', '40+', '42.5×'];
+const engDelays = ['0s', '.45s', '.9s', '1.35s'];
+const engEmojis = ['🤖', '🎨', '📡', '💰'];
+
+const services = c.services.map((s, i) => ({
+  ...s,
+  motionKey: motionKeys[i],
+  color: colors[i],
+  text: texts[i],
+  blogHref: blogHrefs[i],
+  engColor: engColors[i],
+  engMetric: engMetrics[i],
+  engDelay: engDelays[i],
+  engEmoji: engEmojis[i],
+}));
 ---
 
 <section class="v2-services v2-section" id="engines">
   <div class="v2-container">
 
     <div class="v2-section-head center">
-      <span class="v2-eyebrow" data-m="fade">What we do</span>
+      <span class="v2-eyebrow" data-m="fade">{c.eyebrow}</span>
       <h2 class="v2-h2" data-m="up" style="--m-d:.1s">
-        <span class="v2-grad">Four engines.</span>
+        <span class="v2-grad">{c.title}</span>
       </h2>
       <p class="v2-lead" data-m="up" style="--m-d:.2s">
-        We capture every lead, convert them with AI, and retain them with automated follow-ups.
-        Most agencies handle each stage separately. We own the full lifecycle.
+        {c.lead}
       </p>
 
       <!-- Animated engine cards -->
       <div class="v2-eng-strip" data-m="up" style="--m-d:.3s">
-        <div class="v2-eng-card" style="--ec:#6366f1;--bd:0s">
-          <div class="v2-eng-card__top">
-            <span class="v2-eng-num">01</span>
-            <div class="v2-eng-icon-wrap">
-              <div class="v2-eng-ring"></div>
-              <div class="v2-eng-icon">🤖</div>
+        {services.map((s, i) => (
+          <>
+            {i > 0 && <div class="v2-eng-divider"></div>}
+            <div class="v2-eng-card" style={`--ec:${s.engColor};--bd:${s.engDelay}`}>
+              <div class="v2-eng-card__top">
+                <span class="v2-eng-num">{s.tag}</span>
+                <div class="v2-eng-icon-wrap">
+                  <div class="v2-eng-ring"></div>
+                  <div class="v2-eng-icon">{s.engEmoji}</div>
+                </div>
+              </div>
+              <div class="v2-eng-title">{s.engTitle}</div>
+              <div class="v2-eng-metric-row">
+                <div class="v2-eng-metric">{s.engMetric}</div>
+                <div class="v2-eng-metric-l">{s.engMetricLabel}</div>
+              </div>
             </div>
-          </div>
-          <div class="v2-eng-title">AI Lead Qualification</div>
-          <div class="v2-eng-metric-row">
-            <div class="v2-eng-metric">60s</div>
-            <div class="v2-eng-metric-l">avg qualify time</div>
-          </div>
-        </div>
-
-        <div class="v2-eng-divider"></div>
-
-        <div class="v2-eng-card" style="--ec:#a855f7;--bd:.45s">
-          <div class="v2-eng-card__top">
-            <span class="v2-eng-num">02</span>
-            <div class="v2-eng-icon-wrap">
-              <div class="v2-eng-ring"></div>
-              <div class="v2-eng-icon">🎨</div>
-            </div>
-          </div>
-          <div class="v2-eng-title">AI Creative Engine</div>
-          <div class="v2-eng-metric-row">
-            <div class="v2-eng-metric">90%+</div>
-            <div class="v2-eng-metric-l">prediction accuracy</div>
-          </div>
-        </div>
-
-        <div class="v2-eng-divider"></div>
-
-        <div class="v2-eng-card" style="--ec:#22d3ee;--bd:.9s">
-          <div class="v2-eng-card__top">
-            <span class="v2-eng-num">03</span>
-            <div class="v2-eng-icon-wrap">
-              <div class="v2-eng-ring"></div>
-              <div class="v2-eng-icon">📡</div>
-            </div>
-          </div>
-          <div class="v2-eng-title">Lead Capture</div>
-          <div class="v2-eng-metric-row">
-            <div class="v2-eng-metric">40+</div>
-            <div class="v2-eng-metric-l">channels unified</div>
-          </div>
-        </div>
-
-        <div class="v2-eng-divider"></div>
-
-        <div class="v2-eng-card" style="--ec:#e879f9;--bd:1.35s">
-          <div class="v2-eng-card__top">
-            <span class="v2-eng-num">04</span>
-            <div class="v2-eng-icon-wrap">
-              <div class="v2-eng-ring"></div>
-              <div class="v2-eng-icon">💰</div>
-            </div>
-          </div>
-          <div class="v2-eng-title">Lead Monetization</div>
-          <div class="v2-eng-metric-row">
-            <div class="v2-eng-metric">42.5×</div>
-            <div class="v2-eng-metric-l">avg ROI</div>
-          </div>
-        </div>
+          </>
+        ))}
       </div>
     </div>
 
@@ -207,7 +121,7 @@ const services = [
 
     <div class="v2-sc" data-m="up" style="--m-d:.4s">
       <a href="javascript:void(0)" class="v2-sc__btn" data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'>
-        Activate all 4 engines →
+        {c.bottomCta}
       </a>
     </div>
 

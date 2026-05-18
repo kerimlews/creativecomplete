@@ -1,307 +1,530 @@
 ---
-import { Image } from 'astro:assets';
 import LayoutV2 from '../../layouts/LayoutV2.astro';
-import { generateAboutPageJsonLd } from '../../utils/jsonld';
-import logo from '../../images/logo-svg.svg';
-import { getLanguageFromUrl, t, getLocalizedUrl } from '../../utils/translations';
 
-const currentLang: 'de' = 'de';
+const siteUrl = 'https://www.creativecomplete.com';
+const canonicalUrl = `${siteUrl}/de/about/`;
 
-// Page metadata
-const pageTitle = 'Über uns - Creative Complete | Individuelle Software & Automatisierungslösungen';
-const pageDescription = 'Erfahren Sie mehr über Creative Complete - wir entwickeln individuelle Software, automatisieren Geschäftsprozesse und treiben Wachstum voran. Gegründet von Kerim Alihodza.';
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Über CreativeComplete — KI Customer System Agentur",
+  "url": canonicalUrl,
+  "description": "CreativeComplete ist die führende KI Customer System Agentur im DACH-Raum. Wir bauen, betreiben und optimieren das vollständige KI-System für Leadqualifizierung, Werbemittel und WhatsApp-Monetarisierung.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "CreativeComplete",
+    "url": siteUrl,
+    "foundingDate": "2023",
+    "founder": {
+      "@type": "Person",
+      "name": "Kerim Alihodza",
+      "url": `${siteUrl}/kerim-alihodza/`
+    },
+    "areaServed": ["DE", "AT", "CH"],
+    "serviceType": "KI Customer System",
+    "description": "KI Customer System Agentur — Leadqualifizierung in unter 60 Sekunden, KI-Werbemittel und WhatsApp-Broadcast-Kampagnen mit Ø 42.5× ROI."
+  }
+};
 
-// Breadcrumbs
 const breadcrumbs = [
-  { name: t('nav.home', currentLang), url: `${Astro.url.origin}${getLocalizedUrl('/', currentLang)}` },
-  { name: t('nav.about', currentLang), url: Astro.url.href }
+  { name: "Home", url: `${siteUrl}/de/` },
+  { name: "Über uns", url: canonicalUrl }
 ];
 
-// JSON-LD structured data
-const aboutStructuredData = generateAboutPageJsonLd({
-  name: 'Creative Complete',
-  description: pageDescription,
-  url: 'https://creativecomplete.com/de/about',
-  founder: {
-    name: 'Kerim Alihodza',
-    url: 'https://creativecomplete.com/kerim-alihodza'
+const engines = [
+  {
+    num: "01",
+    color: "var(--c1)",
+    icon: "🤖",
+    title: "KI-Leadqualifizierung",
+    body: "Jeder eingehende Lead wird in unter 60 Sekunden automatisch qualifiziert — rund um die Uhr, auf WhatsApp, Instagram, TikTok, Facebook und 40+ weiteren Kanälen.",
+    metric: "81 %",
+    metricLabel: "Lead-Conversion-Rate",
   },
-  foundingDate: '2023',
-  services: [
-    'Individuelle Softwareentwicklung',
-    'Geschäftsprozessautomatisierung',
-    'SaaS-Entwicklung',
-    'E-Commerce-Lösungen',
-    'Mobile App-Entwicklung',
-    'SEO & Digitales Marketing'
-  ]
-});
+  {
+    num: "02",
+    color: "var(--c3)",
+    icon: "🎨",
+    title: "KI-Werbemittel",
+    body: "KI-generierte Anzeigen, trainiert auf $35 Mrd.+ Werbedaten. Creative Scoring KI prognostiziert Gewinner mit 90 %+ Genauigkeit — bevor Sie einen Cent ausgeben.",
+    metric: "14×",
+    metricLabel: "mehr Conversions",
+  },
+  {
+    num: "03",
+    color: "var(--c2)",
+    icon: "📡",
+    title: "Lead-Erfassung & Konversion",
+    body: "Einheitlicher Posteingang für 40+ Kanäle. Kein Lead geht verloren. Leads werden mit KI konvertiert und mit automatisierten Follow-up-Sequenzen weiterbetreut.",
+    metric: "40+",
+    metricLabel: "Kanäle unified",
+  },
+  {
+    num: "04",
+    color: "#e879f9",
+    icon: "💰",
+    title: "Lead-Monetarisierung",
+    body: "WhatsApp-Broadcast-Kampagnen und KI-gestützte Re-Engagement-Sequenzen verwandeln inaktive CRM-Kontakte in Umsatz — durchschnittlich 42.5× ROI in der ersten Kampagne.",
+    metric: "42.5×",
+    metricLabel: "Ø ROI",
+  },
+];
+
+const facts = [
+  { n: "81 %",   l: "Lead-Conversion-Rate", c: "Ø unserer Kunden" },
+  { n: "60s",    l: "Erste Antwortzeit",     c: "Rund um die Uhr, 24/7" },
+  { n: "42.5×",  l: "Broadcast-ROI",         c: "Erste Kampagne" },
+  { n: "14×",    l: "Mehr Conversions",      c: "KI vs. manuelle Werbemittel" },
+];
 ---
 
 <LayoutV2
   lang="de"
-  title={pageTitle}
-  description={pageDescription}
-  structuredData={aboutStructuredData}
+  title="Über CreativeComplete — KI Customer System Agentur DACH"
+  description="CreativeComplete ist Ihre eingebettete KI Customer System Agentur. Wir qualifizieren Leads in 60 Sekunden, generieren KI-Werbemittel und monetarisieren Ihre bestehende Lead-Datenbank mit Ø 42.5× ROI."
+  canonicalUrl={canonicalUrl}
+  structuredData={structuredData}
   breadcrumbs={breadcrumbs}
-  openGraph={{
-    title: pageTitle,
-    description: pageDescription,
-    type: 'website'
-  }}
-  twitterCard={{
-    title: pageTitle,
-    description: pageDescription
-  }}
   priority={0.8}
 >
-  <div class="about-page">
-    <!-- Hero Section -->
-    <section class="about-hero section-padding">
-      <div class="container">
-        <div class="about-hero-content">
-          <!-- Company Logo -->
-          <div class="company-logo">
-            <Image
-              src={logo}
-              alt="Creative Complete Logo" 
-              width={70} 
-              height={100}
-            />
-            <h1 class="company-name">Creative Complete</h1>
-          </div>
-          
-          <div class="about-intro">
-            <h2>Wir entwickeln Software, die echte Geschäftsprobleme löst</h2>
-            <p class="lead">
-              Von individuellen SaaS-Plattformen bis hin zu Geschäftsautomatisierungssystemen transformieren wir komplexe Herausforderungen in elegante digitale Lösungen, die Wachstum und Effizienz vorantreiben.
-            </p>
-          </div>
+
+<main class="about-de">
+
+  <!-- ── Hero ──────────────────────────────────────────────────── -->
+  <section class="ab-hero">
+    <div class="v2-container">
+      <div class="ab-hero__inner">
+        <span class="v2-eyebrow">KI Customer System Agentur · DACH</span>
+        <h1 class="v2-h1" style="margin-top:16px">
+          Wir sind Ihre<br/>
+          <span class="v2-grad">eingebettete KI-Abteilung</span>
+        </h1>
+        <p class="v2-lead" style="margin-top:20px;max-width:58ch">
+          CreativeComplete baut, betreibt und optimiert das vollständige KI Customer System für Agenturen im DACH-Raum — von der Lead-Erfassung über die Qualifizierung bis zur Monetarisierung bestehender Kontakte. Vollständig gemanagt. Eine monatliche Pauschale. Kein zusätzliches Personal.
+        </p>
+        <div class="ab-hero__ctas">
+          <a
+            href="javascript:void(0)"
+            class="v2-btn v2-btn-primary"
+            data-cal-link="kerim-alihodza-7u7w6q/30min"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","theme":"dark"}'
+          >
+            Kostenloses System-Audit sichern
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="/de/projekte/" class="v2-btn v2-btn-outline">Kundenergebnisse ansehen</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Founder Section -->
-    <section class="founder-section section-padding">
-      <div class="container">
-        <div class="founder-content">
-          <div class="founder-header">
-            <h2>Lernen Sie unseren Gründer kennen</h2>
-            <p class="section-subtitle">Die Vision hinter Creative Complete</p>
+  <!-- ── Stats strip ────────────────────────────────────────────── -->
+  <section class="ab-stats">
+    <div class="v2-container">
+      <div class="ab-stats__grid">
+        {facts.map((f, i) => (
+          <div class="ab-stats__cell" style={`--d:${i * 0.08}s`}>
+            <div class="ab-stats__n">{f.n}</div>
+            <div class="ab-stats__l">{f.l}</div>
+            <div class="ab-stats__c">{f.c}</div>
           </div>
-          
-          <div class="founder-profile">
-            <div class="founder-info">
-              <h3>Kerim Alihodza</h3>
-              <p class="founder-title">Gründer & Lead-Entwickler</p>
-              <div class="founder-bio">
-                <p>
-                  Mit über einem Jahrzehnt Erfahrung in Softwareentwicklung und digitaler Transformation 
-                  gründete Kerim Creative Complete, um die Lücke zwischen komplexen Geschäftsproblemen 
-                  und praktischen Technologielösungen zu schließen.
-                </p>
-                <p>
-                  Seine Expertise umfasst Full-Stack-Entwicklung, Systemarchitektur und Wachstumsstrategie, 
-                  mit einer nachgewiesenen Erfolgsbilanz bei der Erzielung von Ergebnissen für Unternehmen 
-                  in verschiedenen Branchen.
-                </p>
-              </div>
-              <div class="founder-cta">
-                <a href={'/kerim-alihodza/'} class="cta-button cta-primary cta-md">
-                  Mehr über Kerim erfahren
-                </a>
-              </div>
-            </div>
-            
-            <div class="founder-stats">
-              <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Jahre Erfahrung</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Abgeschlossene Projekte</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">2M€+</div>
-                <div class="stat-label">Generierter Umsatz</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- What We Do Section -->
-    <section class="services-section section-padding">
-      <div class="container">
-        <div class="section-header">
-          <h2>Was wir tun</h2>
-          <p class="section-subtitle">
-            Wir spezialisieren uns auf die Entwicklung individueller Lösungen, die Prozesse automatisieren, 
-            Abläufe optimieren und messbares Geschäftswachstum vorantreiben.
+  <!-- ── What is AI Customer System ────────────────────────────── -->
+  <section class="ab-what">
+    <div class="v2-container">
+      <div class="ab-what__head">
+        <span class="v2-eyebrow">Was ist das KI Customer System?</span>
+        <h2 class="v2-h2" style="margin-top:14px">
+          <span class="v2-grad">Vier Motoren.</span> Ein vollständiges System.
+        </h2>
+        <p class="v2-lead" style="margin-top:16px;max-width:60ch">
+          Wir erfassen jeden Lead, konvertieren ihn mit KI und behalten ihn durch automatisierte Follow-up-Sequenzen — alles in einem vollständig verwalteten System.
+        </p>
+      </div>
+
+      <div class="ab-engines">
+        {engines.map((e, i) => (
+          <div class="ab-engine" style={`--ec:${e.color};--d:${i * 0.08}s`} data-m="up">
+            <div class="ab-engine__top">
+              <span class="ab-engine__num">{e.num}</span>
+              <span class="ab-engine__icon">{e.icon}</span>
+            </div>
+            <h3 class="ab-engine__title">{e.title}</h3>
+            <p class="ab-engine__body">{e.body}</p>
+            <div class="ab-engine__metric">
+              <span class="ab-engine__n">{e.metric}</span>
+              <span class="ab-engine__l">{e.metricLabel}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why managed ────────────────────────────────────────────── -->
+  <section class="ab-why">
+    <div class="v2-container">
+      <div class="ab-why__grid">
+        <div class="ab-why__copy" data-m="up">
+          <span class="v2-eyebrow">Warum gemanagt?</span>
+          <h2 class="v2-h2" style="margin-top:14px">
+            Kein Tool kaufen.<br/>
+            <span class="v2-grad">Ein Team engagieren.</span>
+          </h2>
+          <p class="v2-lead" style="margin-top:16px">
+            KI-Tools zu kaufen ist einfach. Sie richtig zu konfigurieren, zu integrieren und täglich zu optimieren erfordert Fachwissen, das die meisten Agenturen intern nicht haben.
           </p>
-        </div>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">🚀</div>
-            <h3>Individuelle Softwareentwicklung</h3>
-            <p>
-              Maßgeschneiderte Anwendungen, die auf Ihre einzigartigen Geschäftsanforderungen zugeschnitten sind, 
-              entwickelt mit skalierbarer Architektur und modernen Technologien.
-            </p>
-            <ul class="service-features">
-              <li>SaaS-Plattformen</li>
-              <li>Web-Anwendungen</li>
-              <li>API-Entwicklung</li>
-              <li>Systemintegration</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">⚡</div>
-            <h3>Geschäftsprozessautomatisierung</h3>
-            <p>
-              Eliminieren Sie manuelle Arbeit und reduzieren Sie Fehler durch Automatisierung repetitiver 
-              Aufgaben und Optimierung Ihrer Arbeitsabläufe.
-            </p>
-            <ul class="service-features">
-              <li>Workflow-Automatisierung</li>
-              <li>KI-Integration</li>
-              <li>CRM-Systeme</li>
-              <li>Datenverarbeitung</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">📈</div>
-            <h3>Wachstum & Optimierung</h3>
-            <p>
-              Treiben Sie Umsatzwachstum durch strategisches SEO, Konversionsoptimierung 
-              und datengestützte Marketingstrategien voran.
-            </p>
-            <ul class="service-features">
-              <li>SEO-Strategie</li>
-              <li>Konversionsraten-Optimierung</li>
-              <li>E-Commerce-Skalierung</li>
-              <li>Performance-Analytik</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Process Section -->
-    <!-- <section class="process-section section-padding">
-      <div class="container">
-        <div class="section-header">
-          <h2>Unser Prozess</h2>
-          <p class="section-subtitle">
-            Ein strukturierter Ansatz, der sicherstellt, dass wir Lösungen liefern, 
-            die nicht nur funktionieren, sondern auch echten Geschäftswert schaffen.
+          <p class="v2-lead" style="margin-top:12px">
+            CreativeComplete ist Ihre vollständige KI-Abteilung — wir bauen das System, führen es und optimieren es kontinuierlich. Sie bekommen die Ergebnisse, ohne den Aufwand.
           </p>
-        </div>
-
-        <div class="process-steps">
-          <div class="process-step">
-            <div class="step-number">01</div>
-            <div class="step-content">
-              <h3>Entdeckung & Analyse</h3>
-              <p>
-                Wir tauchen tief in Ihre Geschäftsherausforderungen, Ziele und technischen 
-                Anforderungen ein, um genau zu verstehen, wie Erfolg für Sie aussieht.
-              </p>
-              <ul>
-                <li>Analyse der Geschäftsanforderungen</li>
-                <li>Bewertung der technischen Machbarkeit</li>
-                <li>Überprüfung des Wettbewerbsumfelds</li>
-                <li>Definition von Erfolgsmetriken</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="process-step">
-            <div class="step-number">02</div>
-            <div class="step-content">
-              <h3>Strategie & Planung</h3>
-              <p>
-                Wir erstellen eine detaillierte Projekt-Roadmap mit klaren Meilensteinen, 
-                Zeitplänen und technischen Spezifikationen.
-              </p>
-              <ul>
-                <li>Design der Projektarchitektur</li>
-                <li>Auswahl des Technologie-Stacks</li>
-                <li>Entwicklungszeitplan</li>
-                <li>Ressourcenzuteilung</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="process-step">
-            <div class="step-number">03</div>
-            <div class="step-content">
-              <h3>Entwicklung & Implementierung</h3>
-              <p>
-                Unser Team entwickelt Ihre Lösung mit agilen Methoden, 
-                mit regelmäßigen Updates und Möglichkeiten für Feedback.
-              </p>
-              <ul>
-                <li>Agile Entwicklungssprints</li>
-                <li>Regelmäßige Fortschritts-Demos</li>
-                <li>Qualitätssicherungstests</li>
-                <li>Staging-Umgebungseinrichtung</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="process-step">
-            <div class="step-number">04</div>
-            <div class="step-content">
-              <h3>Launch & Optimierung</h3>
-              <p>
-                Wir stellen Ihre Lösung bereit und bieten kontinuierlichen Support, um 
-                optimale Leistung und kontinuierliche Verbesserung sicherzustellen.
-              </p>
-              <ul>
-                <li>Produktionsbereitstellung</li>
-                <li>Leistungsüberwachung</li>
-                <li>Benutzerschulung & Dokumentation</li>
-                <li>Laufender Support & Wartung</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- CTA Section -->
-    <section class="about-cta section-padding">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Bereit, Ihr Geschäft zu transformieren?</h2>
-          <p>
-            Lassen Sie uns besprechen, wie wir Ihnen helfen können, Prozesse zu automatisieren, 
-            individuelle Software zu entwickeln oder Wachstum für Ihr Unternehmen voranzutreiben.
-          </p>
-          <div class="cta-actions">
-            <a href={getLocalizedUrl('/contact/', currentLang)} class="cta-button cta-primary cta-lg">
-              Starten Sie Ihr Projekt
+          <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+            <a
+              href="javascript:void(0)"
+              class="v2-btn v2-btn-primary"
+              data-cal-link="kerim-alihodza-7u7w6q/30min"
+              data-cal-namespace="30min"
+              data-cal-config='{"layout":"month_view","theme":"dark"}'
+            >
+              Kostenloses Audit →
             </a>
-            <a href={getLocalizedUrl('/projects/', currentLang)} class="cta-button cta-secondary cta-lg">
-              Unsere Arbeit ansehen
+            <a href="/de/dienstleistungen/" class="v2-btn v2-btn-outline">Alle Dienstleistungen</a>
+          </div>
+        </div>
+
+        <div class="ab-why__list" data-m="up" style="--m-d:.12s">
+          {[
+            { icon: "✓", text: "Konfiguration und Aufbau — komplett von uns" },
+            { icon: "✓", text: "Laufende Optimierung und monatliche Reports" },
+            { icon: "✓", text: "Native CRM-Integration (HubSpot, Salesforce, Pipedrive)" },
+            { icon: "✓", text: "WhatsApp Business API — offiziell zertifiziert" },
+            { icon: "✓", text: "Ihr Team schließt nur heiße Leads ab" },
+            { icon: "✓", text: "Investition amortisiert sich Ø in 45 Tagen" },
+          ].map(item => (
+            <div class="ab-check">
+              <span class="ab-check__icon">{item.icon}</span>
+              <span class="ab-check__text">{item.text}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Founder ────────────────────────────────────────────────── -->
+  <section class="ab-founder">
+    <div class="v2-container">
+      <div class="ab-founder__grid">
+        <div class="ab-founder__copy" data-m="up">
+          <span class="v2-eyebrow">Wer steckt dahinter?</span>
+          <h2 class="v2-h2" style="margin-top:14px">Kerim Alihodza</h2>
+          <p class="ab-founder__role">Gründer · KI Customer System Architekt</p>
+          <p class="v2-lead" style="margin-top:16px">
+            Kerim hat CreativeComplete gegründet, nachdem er erkannt hatte, dass Agenturen täglich Leads verschwenden — nicht weil die Leads schlecht sind, sondern weil niemand schnell genug antwortet und kein System die Qualifizierung übernimmt.
+          </p>
+          <p class="v2-lead" style="margin-top:12px">
+            Er entwickelte das KI Customer System als vollständig verwaltete Infrastruktur: Lead-Erfassung, KI-Qualifizierung, kreative Produktion und WhatsApp-Monetarisierung — alles aus einer Hand, für eine monatliche Pauschale.
+          </p>
+          <div style="margin-top:24px">
+            <a href="/kerim-alihodza/" class="v2-btn v2-btn-outline">
+              Kerim's vollständiges Profil →
             </a>
           </div>
         </div>
+
+        <div class="ab-founder__stats" data-m="up" style="--m-d:.1s">
+          {[
+            { n: "10+", l: "Jahre Erfahrung" },
+            { n: "50+", l: "Abgeschlossene Projekte" },
+            { n: "2M€+", l: "Umsatz generiert" },
+            { n: "42.5×", l: "Ø Broadcast-ROI" },
+          ].map(s => (
+            <div class="ab-founder__stat">
+              <div class="ab-founder__stat-n">{s.n}</div>
+              <div class="ab-founder__stat-l">{s.l}</div>
+            </div>
+          ))}
+        </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────────── -->
+  <section class="ab-cta">
+    <div class="v2-container">
+      <div class="ab-cta__card" data-m="up">
+        <div class="ab-cta__glow"></div>
+        <span class="v2-eyebrow">#1 KI Customer System Agentur · Begrenzte Plätze</span>
+        <h2 class="v2-h2" style="margin-top:20px">
+          Bereit, jeden Lead zu <span class="v2-grad">maximieren?</span>
+        </h2>
+        <p class="v2-lead" style="margin-top:16px;max-width:52ch">
+          Buchen Sie ein kostenloses 30-minütiges System-Audit. Wir analysieren Ihren Lead-Flow, berechnen Ihre genaue Umsatzlücke und zeigen Ihnen die optimale KI-Konfiguration für Ihre Agentur.
+        </p>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+          <a
+            href="javascript:void(0)"
+            class="v2-btn v2-btn-primary"
+            data-cal-link="kerim-alihodza-7u7w6q/30min"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","theme":"dark"}'
+          >
+            Kostenloses System-Audit buchen
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="/de/projekte/" class="v2-btn v2-btn-outline">Fallstudien ansehen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 </LayoutV2>
 
+<style lang="scss">
+.about-de { overflow-x: hidden; }
 
+/* Hero */
+.ab-hero {
+  padding: 80px 0 72px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+.ab-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ab-hero__ctas {
+  margin-top: 32px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+/* Stats */
+.ab-stats {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--line);
+}
+.ab-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  @media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); }
+}
+.ab-stats__cell {
+  padding: 24px;
+  text-align: center;
+  border-right: 1px solid var(--line);
+  animation: fadeUp .5s ease both;
+  animation-delay: var(--d, 0s);
+  &:last-child { border-right: none; }
+}
+.ab-stats__n {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 42px);
+  letter-spacing: -.03em;
+  color: var(--c1-light);
+}
+.ab-stats__l {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg-0);
+  margin-top: 4px;
+}
+.ab-stats__c {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--fg-3);
+  margin-top: 2px;
+}
 
+/* What / Engines */
+.ab-what { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.ab-what__head { text-align: center; margin-bottom: 56px; }
+.ab-engines {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 560px) { grid-template-columns: 1fr; }
+}
+.ab-engine {
+  padding: 28px 24px;
+  border-right: 1px solid var(--line);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background .2s;
+  &:last-child { border-right: none; }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--ec);
+    opacity: .6;
+  }
+  &:hover { background: color-mix(in srgb, var(--ec) 4%, transparent); }
+  @media (max-width: 900px) {
+    border-bottom: 1px solid var(--line);
+    &:nth-child(2n) { border-right: none; }
+    &:nth-last-child(-n+2) { border-bottom: none; }
+  }
+  @media (max-width: 560px) { border-right: none !important; border-bottom: 1px solid var(--line) !important; &:last-child { border-bottom: none !important; } }
+}
+.ab-engine__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ab-engine__num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--ec);
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--ec) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ec) 25%, transparent);
+}
+.ab-engine__icon { font-size: 18px; }
+.ab-engine__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fg-0);
+  line-height: 1.3;
+}
+.ab-engine__body {
+  font-size: 13px;
+  color: var(--fg-2);
+  line-height: 1.6;
+  flex: 1;
+}
+.ab-engine__metric {
+  padding-top: 12px;
+  border-top: 1px solid color-mix(in srgb, var(--ec) 18%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ab-engine__n {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--ec);
+  letter-spacing: -.03em;
+}
+.ab-engine__l {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
 
+/* Why managed */
+.ab-why { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.ab-why__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  @media (max-width: 768px) { grid-template-columns: 1fr; gap: 40px; }
+}
+.ab-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  &:last-child { border-bottom: none; }
+}
+.ab-check__icon {
+  color: var(--c1-light);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ab-check__text { font-size: 14px; color: var(--fg-1); line-height: 1.5; }
 
+/* Founder */
+.ab-founder { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.ab-founder__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  @media (max-width: 768px) { grid-template-columns: 1fr; gap: 40px; }
+}
+.ab-founder__role {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: var(--c1-light);
+  margin-top: 6px;
+}
+.ab-founder__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+}
+.ab-founder__stat {
+  padding: 28px 24px;
+  background: var(--bg-card);
+}
+.ab-founder__stat-n {
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: -.03em;
+  color: var(--c1-light);
+}
+.ab-founder__stat-l {
+  font-size: 12px;
+  color: var(--fg-2);
+  margin-top: 4px;
+}
 
+/* CTA */
+.ab-cta { padding: 80px 0; }
+.ab-cta__card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  background: var(--bg-card);
+  padding: 64px 48px;
+  text-align: center;
+  box-shadow: 0 0 80px rgba(99,102,241,.08);
+}
+.ab-cta__glow {
+  position: absolute;
+  inset: -60px;
+  background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(99,102,241,.1) 0%, transparent 70%);
+  pointer-events: none;
+}
 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+</style>

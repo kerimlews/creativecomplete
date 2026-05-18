@@ -1,0 +1,68 @@
+---
+import LayoutV2 from '../../layouts/LayoutV2.astro';
+import Hero from '../../components/v2/Hero.astro';
+import Clients from '../../components/v2/Clients.astro';
+import Stats from '../../components/v2/Stats.astro';
+import Services from '../../components/v2/Services.astro';
+import Results from '../../components/v2/Results.astro';
+import BlogScroll from '../../components/v2/BlogScroll.astro';
+import Testimonials from '../../components/v2/Testimonials.astro';
+import FAQ from '../../components/v2/FAQ.astro';
+import Track from '../../components/v2/Track.astro';
+import EndToEnd from '../../components/v2/EndToEnd.astro';
+import CTA from '../../components/v2/CTA.astro';
+import BookingSection from '../../components/v2/BookingSection.astro';
+
+const siteUrl = 'https://www.creativecomplete.com';
+const canonicalUrl = `${siteUrl}/sl/`;
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteUrl}#organization`,
+    "name": "CreativeComplete",
+    "url": siteUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/favicon.svg`
+    },
+    "description": "AI Customer System agencija — kvalifikacija leadov, AI oglaševalski kreativni sistem in WhatsApp broadcast kampanje za agencije v slovenskem in hrvaškem trgu.",
+    "areaServed": ["SI", "HR"],
+    "inLanguage": "sl"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/sl/#website`,
+    "url": canonicalUrl,
+    "name": "CreativeComplete",
+    "inLanguage": "sl",
+    "publisher": { "@id": `${siteUrl}#organization` }
+  }
+];
+---
+
+<LayoutV2
+  lang="sl"
+  title="AI Customer System — Kvalifikacija leadov & Conversion agencija | CreativeComplete"
+  description="AI Customer System, ki kvalificira nove leade v manj kot 60 sekundah, jih konvertira z AI ustvarjenimi kreativami in generira 42.5× ROI iz vaše obstoječe baze leadov. CreativeComplete je #1 AI Customer System agencija."
+  canonicalUrl={canonicalUrl}
+  navActive="home"
+  structuredData={structuredData}
+>
+  <main>
+    <Hero lang="sl" />
+    <Track lang="sl" />
+    <Clients lang="sl" />
+    <Stats lang="sl" />
+    <EndToEnd lang="sl" />
+    <Services lang="sl" />
+    <Results lang="sl" />
+    <BlogScroll lang="sl" />
+    <Testimonials lang="sl" />
+    <FAQ lang="sl" />
+    <CTA lang="sl" />
+    <BookingSection lang="sl" />
+  </main>
+</LayoutV2>

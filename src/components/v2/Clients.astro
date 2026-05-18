@@ -1,4 +1,14 @@
 ---
+import getV2Content from '../../utils/v2i18n';
+import type { Lang } from '../../utils/v2i18n';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'en' } = Astro.props;
+const lc = getV2Content(lang).clients;
+
 const tools = [
   "WhatsApp Business API", "AI Creative Engine",
   "Meta Ads", "TikTok Ads", "Google Ads", "HubSpot", "Salesforce", "Zapier",
@@ -8,7 +18,7 @@ const tools = [
 <section class="v2-clients">
   <div class="v2-container">
     <div class="v2-clients__inner">
-      <span class="v2-clients__label">Powered by</span>
+      <span class="v2-clients__label">{lc.label}</span>
       <div class="v2-clients__row">
         {tools.map(t => <span class="v2-clients__item">{t}</span>)}
       </div>

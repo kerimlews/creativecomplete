@@ -1,274 +1,242 @@
 ---
 import LayoutV2 from '../../../layouts/LayoutV2.astro';
+import CTA from '../../../components/v2/CTA.astro';
 import { getCollection } from 'astro:content';
-import { generateServiceJsonLd } from '../../../utils/jsonld';
-import FAQ from '../../../components/FAQ.astro';
-import { formatAuthorName } from '../../../utils/helpers';
-import BottomCTA from '../../../components/BottomCTA.astro';
-import { Image } from 'astro:assets';
-import BreadCrumb from '../../../components/BreadCrumb.astro';
-import StackedImagesWithPopup from '../../../components/StackedImagesWithPopup.astro';
-import RelatedArticlesSidebar from '../../../components/RelatedArticlesSidebar.astro';
-import HappyClients from '../../../components/HappyClients.astro';
-import { getServicesRouteName, t, getLocalizedUrl } from '../../../utils/translations';
-import { getServiceUrl, getBasePath } from '../../../utils/routing';
-import type { Language } from '../../../utils/translations';
 
 export async function getStaticPaths() {
   const services = await getCollection('servicesDe');
-  const lang: Language = 'de';
-  
-  return services
-    .filter(service => {
-      // Check if service is in content/[lang]/services/*.md
-      const serviceLang = service?.filePath?.split('/')[3] || 'en';
-      return serviceLang === lang;
-    })
-    .map((service) => {
-      const slug = service.id;
-      return {
-        params: { 
-          slug: slug
-        },
-        props: { service, lang },
-      };
-    });
+  return services.map((service) => ({
+    params: { slug: service.data.slug ?? service.id },
+    props: { service },
+  }));
 }
 
-const { service, lang: routeLang } = Astro.props;
-const currentLang: Language = (routeLang || 'de') as Language;
-const basePath = getBasePath(currentLang);
+const { service } = Astro.props;
 
-const structuredData = generateServiceJsonLd(service);
-const servicesPath = `/${currentLang}/${getServicesRouteName(currentLang)}/`;
-const breadcrumbs = [
-  { name: t('nav.home', currentLang), url: `${Astro.url.origin}${basePath}/` },
-  { name: t('nav.services', currentLang), url: `${Astro.url.origin}${servicesPath}` },
-  { name: service.data.title, url: `${Astro.url.href}/` }
-];
+const title       = service.data.title as string;
+const description = service.data.description as string;
+const slug        = (service.data.slug ?? service.id) as string;
+const category    = (service.data.category ?? 'Service') as string;
+const features    = (service.data.features as string[] | undefined) ?? [];
+const ctaText     = (service.data.ctaText ?? 'Kostenloses Audit') as string;
+const faqItems    = (service.data.faq as { question: string; answer: string }[] | undefined) ?? [];
 
-const images = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
+const canonicalUrl = `https://www.creativecomplete.com/de/dienstleistungen/${slug}/`;
 
-const serviceImagesResults = await Promise.all(
-  Object.entries(images)
-    .filter(([path]) => {
-      // Extract service name from id (e.g., "de/local-seo" -> "local-seo")
-      const serviceName = service.id.split('/').pop() || service.id;
-      return path.includes(`/src/images/services/${serviceName}`);
-    })
-    .map(async ([path, image]) => {
-      try {
-        const imageModule = await image();
-        // import.meta.glob for images returns { default: ImageMetadata }
-        if (imageModule && typeof imageModule === 'object') {
-          // Extract the actual ImageMetadata - it might be in .default or be the object itself
-          const imageMetadata = ('default' in imageModule && imageModule.default) || imageModule;
-          
-          // Verify it's a valid ImageMetadata object with src property
-          if (imageMetadata && typeof imageMetadata === 'object' && 'src' in imageMetadata) {
-            return {
-              src: imageMetadata,
-              alt: service.data.title
-            };
-          }
-        }
-        return null;
-      } catch (e) {
-        return null;
-      }
-    })
-);
-
-let serviceImages = serviceImagesResults.filter((img): img is { src: any; alt: string } => img !== null);
-
-// If no images found by service name, try to load from frontmatter image field
-if (serviceImages.length === 0 && service.data.image) {
-  const imageName = service.data.image;
-  const extensions = ['png', 'jpg', 'jpeg', 'webp'];
-  const baseName = imageName.replace(/\.(png|jpg|jpeg|webp)$/, '');
-  
-  for (const ext of extensions) {
-    const imagePath = `/src/images/services/${baseName}.${ext}`;
-    if (images[imagePath]) {
-      try {
-        const imageModule = await images[imagePath]();
-        if (imageModule && typeof imageModule === 'object') {
-          const imageMetadata = ('default' in imageModule && imageModule.default) || imageModule;
-          
-          if (imageMetadata && typeof imageMetadata === 'object' && 'src' in imageMetadata) {
-            serviceImages = [{
-              src: imageMetadata,
-              alt: service.data.title
-            }];
-            break;
-          }
-        }
-      } catch (e) {
-        continue;
-      }
-    }
-  }
-}
-
-// Get related articles - check if service has related_articles in frontmatter
-let relatedArticles: any[] = [];
-let relatedArticlesId = 'services';
-
-if (service.data.related_articles && Array.isArray(service.data.related_articles) && service.data.related_articles.length > 0) {
-  // Load related projects from projects collection
-  const langProjects = await getCollection('projectsDe');
-  
-  relatedArticles = service.data.related_articles
-    .map((articleSlug: string) => {
-      const project = langProjects.find(p => p.data.slug === articleSlug);
-      if (project) {
-        return {
-          slug: project.data.slug,
-          title: project.data.title,
-          description: project.data.description,
-          category: project.data.category || 'Case Study',
-          readTime: project.data.readTime || '5 min read'
-        };
-      }
-      return null;
-    })
-    .filter((article): article is NonNullable<typeof article> => article !== null);
-  
-  relatedArticlesId = 'projekte';
-} else {
-  // Fall back to showing other services
-  const allServices = await getCollection('servicesDe');
-  relatedArticles = allServices
-    .filter(s => {
-      const sLang = s?.filePath?.split('/')[3] || 'en';
-      return sLang === currentLang;
-    })
-    .filter(s => s.id !== service.id)
-    .slice(0, 7)
-    .map(service => ({
-      slug: service.data.slug || service.id.split('/').pop() || service.id,
-      title: service.data.title,
-      description: service.data.description,
-      category: service.data.category || 'General',
-      readTime: service.data.readTime || '5 min read'
-    }));
-}
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": title,
+  "description": description,
+  "url": canonicalUrl,
+  "provider": { "@type": "Organization", "name": "CreativeComplete", "url": "https://www.creativecomplete.com/" },
+  "areaServed": ["DE", "AT", "CH"],
+};
 ---
 
 <LayoutV2
   lang="de"
-  title={service.data.title}
-  description={service.data.description}
+  title={`${title} | CreativeComplete`}
+  description={description}
+  canonicalUrl={canonicalUrl}
   structuredData={structuredData}
-  breadcrumbs={breadcrumbs}
-  openGraph={{
-    title: service.data.title,
-    description: service.data.description,
-  }}
-  service={service}
-  priority={service.data.priority}
 >
-  <article class="service-detail">
-    <header class="service-header">
-      <div class="container">
-        
-        <BreadCrumb items={breadcrumbs} />
-        
-        <!-- Move h1 to full width above the hero content -->
-        <div class="service-title-fullwidth">
-          <h1>{service.data.title}</h1>
-        </div>
+  <main>
 
-        <HappyClients />
+    <div class="v2-container svc-breadcrumb">
+      <a href="/de/">Home</a><span>/</span>
+      <a href="/de/dienstleistungen/">Dienstleistungen</a><span>/</span>
+      <span>{title}</span>
+    </div>
 
-        <div class="service-hero">
-          <div class="service-info">
-            <p class="service-subtitle">{service.data.subtitle}</p>
-            <p class="service-description">{service.data.description}</p>
-            
-            <div class="service-meta">
-              <div class="meta-item">
-                <span class="meta-label">Lieferzeit</span>
-                <span class="meta-value">{service.data.delay} Tage</span>
-              </div>
-              <div class="meta-item">
-                <span class="meta-label">Priorität</span>
-                <span class="meta-value">{service.data.priority}/10</span>
-              </div>
-              {service.data.featured && (
-                <div class="featured-badge">Ausgewählter Service</div>
-              )}
-              <div class="meta-item">
-                <span class="meta-label">Kategorie</span>
-                <span class="meta-value">{service.data.category}</span>
-              </div>
-              <div class="meta-item">
-                <span class="meta-label">Autor</span>
-                <a class="meta-value" href={getLocalizedUrl(`/${service.data.author}/`, currentLang)}>{formatAuthorName(service.data.author)}</a>
-              </div>
-            </div>
-            
-            <div class="service-actions">
-              <a href={getLocalizedUrl('/contact/', currentLang)} class="cta-button cta-primary cta-lg">
-                {service.data.ctaText}
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          
-          <div class="service-visual">
-            <StackedImagesWithPopup images={serviceImages} service={service} />
-          </div>
-        </div>
-      </div>
-    </header>
-
-
-    <section class="service-features">
-        <div class="container">
-        <h2>Was ist enthalten</h2>
-        <div class="features-grid">
-          {service.data.features.map((feature: string, index: number) => (
-            <div class="feature-card" style={`animation-delay: ${index * 0.1}s`}>
-              <div class="feature-icon">{index + 1}</div>
-              <h3>{feature}</h3>
-            </div>
-          ))}
+    <section class="svc-hero">
+      <div class="v2-container">
+        <span class="v2-eyebrow">{category}</span>
+        <h1 class="v2-h1 svc-h1">{title}</h1>
+        <p class="v2-lead svc-lead">{description}</p>
+        <div class="svc-hero-actions">
+          <a
+            href="javascript:void(0)"
+            class="v2-btn v2-btn-primary"
+            data-cal-link="kerim-alihodza-7u7w6q/30min"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","theme":"dark"}'
+          >
+            {ctaText}
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <div class="service-content">
-      <div class="container">
-        <div class="content-container">
-          <!-- Main Content -->
-          <div class="main-content">
-            <div set:html={service.rendered?.html} />
+    {features.length > 0 && (
+      <section class="svc-features v2-section">
+        <div class="v2-container">
+          <div class="v2-section-head">
+            <span class="v2-eyebrow">Was ist enthalten</span>
+            <h2 class="v2-h3">Leistungsumfang</h2>
           </div>
-
-          <RelatedArticlesSidebar id={relatedArticlesId} items={relatedArticles} />
-
+          <div class="svc-features-grid">
+            {features.map((f, i) => (
+              <div class="svc-feature-card">
+                <span class="svc-feature-n">{String(i + 1).padStart(2, '0')}</span>
+                <span class="svc-feature-text">{f}</span>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
-
-    {service.data.faq && service.data.faq.length > 0 && (
-      <FAQ faq={service.data.faq} />
+      </section>
     )}
-    <BottomCTA 
-      title={t('cta.title', currentLang)}
-      subtitle={t('cta.subtitle', currentLang)}
-      urgencyText={t('cta.urgency', currentLang)}
-      valueProps={[]}
-      primaryButton={{
-        text: t('cta.primary_button', currentLang),
-        href: getLocalizedUrl('/contact/', currentLang)
-      }}
-      securityNote={t('cta.security_note', currentLang)}
-      showValueProps={false}
-    />
-  </article>
+
+    <section class="v2-section">
+      <div class="v2-container">
+        <div class="svc-prose v2-prose" set:html={service.rendered?.html} />
+      </div>
+    </section>
+
+    {faqItems.length > 0 && (
+      <section class="v2-section svc-faq-section">
+        <div class="v2-container svc-faq-container">
+          <div class="svc-faq-head">
+            <span class="v2-eyebrow">FAQ</span>
+            <h2 class="v2-h3">{title} — Häufige Fragen</h2>
+          </div>
+          <div class="svc-faq-list">
+            {faqItems.map((item, i) => (
+              <details class="svc-faq-item">
+                <summary class="svc-faq-q">
+                  <span class="svc-faq-n">{String(i + 1).padStart(2, '0')}</span>
+                  {item.question}
+                  <svg class="svc-faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </summary>
+                <div class="svc-faq-a">{item.answer}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <CTA lang="de" />
+  </main>
 </LayoutV2>
 
+<style lang="scss">
+.svc-breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  padding-top: 24px; padding-bottom: 8px;
+  font-size: 13px; font-family: var(--font-mono); color: var(--fg-2); flex-wrap: wrap;
+  a { color: var(--fg-2); transition: color .15s; &:hover { color: var(--c1-light); } }
+}
+
+.svc-hero { padding: 48px 0 64px; }
+.svc-h1 { margin-top: 16px; max-width: 22ch; }
+.svc-lead { margin-top: 20px; max-width: 58ch; }
+.svc-hero-actions { margin-top: 32px; }
+
+.svc-features { padding-top: 0; }
+.svc-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 40px;
+}
+.svc-feature-card {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+.svc-feature-n {
+  font-family: var(--font-mono); font-size: 10px; font-weight: 700;
+  letter-spacing: .1em; color: var(--c1-light); flex-shrink: 0; padding-top: 2px;
+}
+.svc-feature-text {
+  font-size: 14px; color: var(--fg-0); line-height: 1.45;
+}
+
+.svc-prose {
+  max-width: 780px;
+  color: var(--fg-1); line-height: 1.8; font-size: 16px;
+
+  :global(h2) {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 2.2vw, 32px);
+    letter-spacing: -0.015em; font-weight: 400;
+    color: var(--fg-0); margin: 52px 0 16px; line-height: 1.15;
+  }
+  :global(h3) {
+    font-family: var(--font-display);
+    font-size: clamp(18px, 1.6vw, 24px);
+    letter-spacing: -0.01em; font-weight: 400;
+    color: var(--fg-0); margin: 36px 0 12px;
+  }
+  :global(p) { margin: 0 0 18px; }
+  :global(ul), :global(ol) {
+    padding-left: 1.4em; margin: 0 0 18px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  :global(li) { color: var(--fg-1); }
+  :global(strong) { color: var(--fg-0); font-weight: 600; }
+  :global(a) {
+    color: var(--c1-light); text-decoration: underline; text-underline-offset: 3px;
+    &:hover { color: var(--fg-0); }
+  }
+  :global(blockquote) {
+    border-left: 3px solid var(--c1); padding-left: 20px;
+    margin: 28px 0; font-style: italic; color: var(--fg-1);
+  }
+  :global(hr) { border: 0; height: 1px; background: var(--line); margin: 36px 0; }
+  :global(img) { display: block; width: 100%; height: auto; border-radius: var(--r-lg); margin: 28px 0; }
+  :global(table) {
+    width: 100%; border-collapse: collapse; margin: 28px 0;
+    font-size: 14px; border-radius: 10px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  :global(thead) { background: rgba(99,102,241,0.1); }
+  :global(th) {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em;
+    text-transform: uppercase; color: rgba(255,255,255,0.5); font-weight: 600;
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid rgba(99,102,241,0.2); white-space: nowrap;
+  }
+  :global(td) {
+    padding: 10px 14px; color: var(--fg-1);
+    border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: top; line-height: 1.5;
+  }
+  :global(tbody tr:last-child td) { border-bottom: none; }
+  :global(tbody tr:nth-child(even)) { background: rgba(255,255,255,0.02); }
+  :global(tbody tr:hover) { background: rgba(99,102,241,0.05); }
+}
+
+.svc-faq-section { padding-top: 0; }
+.svc-faq-container { max-width: 860px; }
+.svc-faq-head {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+  margin-bottom: 36px;
+}
+.svc-faq-list { display: flex; flex-direction: column; gap: 0; }
+.svc-faq-item {
+  border-bottom: 1px solid var(--line);
+  &:first-child { border-top: 1px solid var(--line); }
+}
+.svc-faq-q {
+  display: flex; align-items: center; gap: 12px;
+  padding: 18px 0; cursor: pointer; list-style: none;
+  font-weight: 500; font-size: 15px; color: var(--fg-0); transition: color .15s;
+  &::-webkit-details-marker { display: none; }
+  &:hover { color: var(--c1-light); }
+  .svc-faq-arrow { margin-left: auto; flex-shrink: 0; color: var(--fg-2); transition: transform .2s; }
+}
+details[open] .svc-faq-arrow { transform: rotate(180deg); }
+.svc-faq-n {
+  font-family: var(--font-mono); font-size: 10px; color: var(--c1-light);
+  flex-shrink: 0; letter-spacing: 0.1em;
+}
+.svc-faq-a { padding: 0 0 20px 30px; font-size: 14.5px; color: var(--fg-1); line-height: 1.7; }
+</style>

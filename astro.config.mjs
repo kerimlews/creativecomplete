@@ -50,7 +50,16 @@ export default defineConfig({
   integrations: [
 	partytown({ config: { forward: ['dataLayer.push', '_uxa', '_uxa.push'] } }),
 	sitemap({
-      filter: (page) => !page.includes('/hr/') && !page.includes('/v1/'),
+      filter: (page) => {
+        if (page.includes('/hr/')) return false;
+        if (page.includes('/v1/')) return false;
+        // Exclude old (non-AI) service slugs from de and sl
+        const oldDeSlugs = ['/de/dienstleistungen/automation/', '/de/dienstleistungen/ecommerce/', '/de/dienstleistungen/local-seo/', '/de/dienstleistungen/mobile-development/', '/de/dienstleistungen/saas-development/', '/de/dienstleistungen/seo/', '/de/dienstleistungen/web-design/'];
+        const oldSlSlugs = ['/sl/storitve/automation/', '/sl/storitve/ecommerce/', '/sl/storitve/local-seo/', '/sl/storitve/mobile-development/', '/sl/storitve/saas-development/', '/sl/storitve/seo/', '/sl/storitve/web-design/'];
+        if (oldDeSlugs.some(s => page.includes(s))) return false;
+        if (oldSlSlugs.some(s => page.includes(s))) return false;
+        return true;
+      },
       serialize(item) {
         // Homepage
         if (item.url === 'https://www.creativecomplete.com/') {

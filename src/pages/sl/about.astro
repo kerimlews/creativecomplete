@@ -1,306 +1,374 @@
 ---
-import { Image } from 'astro:assets';
 import LayoutV2 from '../../layouts/LayoutV2.astro';
-import { generateAboutPageJsonLd } from '../../utils/jsonld';
-import logo from '../../images/logo-svg.svg';
-import { getLanguageFromUrl, t, getLocalizedUrl } from '../../utils/translations';
 
-const currentLang: 'sl' = 'sl';
+const siteUrl = 'https://www.creativecomplete.com';
+const canonicalUrl = `${siteUrl}/sl/about/`;
 
-// Page metadata
-const pageTitle = 'O nas - Creative Complete | Prilagojena programska oprema in avtomatizacijske rešitve';
-const pageDescription = 'Spoznajte Creative Complete - razvijamo prilagojeno programsko opremo, avtomatiziramo poslovne procese in spodbujamo rast. Ustanovil Kerim Alihodza.';
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "O CreativeComplete — AI Customer System agencija",
+  "url": canonicalUrl,
+  "description": "CreativeComplete je vodilna AI Customer System agencija za slovensko in hrvaško tržišče. Gradimo, upravljamo in optimiziramo celoten AI sistem za kvalifikacijo leadov, oglaševalske kreative in WhatsApp monetizacijo.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "CreativeComplete",
+    "url": siteUrl,
+    "foundingDate": "2023",
+    "founder": {
+      "@type": "Person",
+      "name": "Kerim Alihodza",
+      "url": `${siteUrl}/kerim-alihodza/`
+    },
+    "areaServed": ["SI", "HR"],
+    "serviceType": "AI Customer System",
+    "description": "AI Customer System agencija — kvalifikacija leadov v pod 60 sekundah, AI oglaševalski kreativni sistem in WhatsApp broadcast kampanje s povprečnim 42.5× ROI."
+  }
+};
 
-// Breadcrumbs
 const breadcrumbs = [
-  { name: t('nav.home', currentLang), url: `${Astro.url.origin}${getLocalizedUrl('/', currentLang)}` },
-  { name: t('nav.about', currentLang), url: Astro.url.href }
+  { name: "Domov", url: `${siteUrl}/sl/` },
+  { name: "O nas", url: canonicalUrl }
 ];
 
-// JSON-LD structured data
-const aboutStructuredData = generateAboutPageJsonLd({
-  name: 'Creative Complete',
-  description: pageDescription,
-  url: 'https://creativecomplete.com/sl/about',
-  founder: {
-    name: 'Kerim Alihodza',
-    url: 'https://creativecomplete.com/sl/kerim-alihodza'
+const engines = [
+  {
+    num: "01",
+    color: "var(--c1)",
+    icon: "🤖",
+    title: "AI kvalifikacija leadov",
+    body: "Vsak dohodni lead je samodejno kvalificiran v manj kot 60 sekundah — neprekinjeno, na WhatsAppu, Instagramu, TikToku, Facebooku in 40+ kanalih.",
+    metric: "81 %",
+    metricLabel: "stopnja konverzije leadov",
   },
-  foundingDate: '2023',
-  services: [
-    'Razvoj prilagojene programske opreme',
-    'Avtomatizacija poslovnih procesov',
-    'Razvoj SaaS',
-    'E-trgovinske rešitve',
-    'Razvoj mobilnih aplikacij',
-    'SEO in digitalni marketing'
-  ]
-});
+  {
+    num: "02",
+    color: "var(--c3)",
+    icon: "🎨",
+    title: "AI oglaševalski kreativni sistem",
+    body: "AI-generirani oglasi, usposobljeni na $35 mrd.+ oglaševalskih podatkih. Creative Scoring AI napoveduje zmagovalce z 90 %+ natančnostjo — preden porabite cent.",
+    metric: "14×",
+    metricLabel: "več konverzij",
+  },
+  {
+    num: "03",
+    color: "var(--c2)",
+    icon: "📡",
+    title: "Zajem in konverzija leadov",
+    body: "Enotna mapa za 40+ kanalov. Noben lead ne ostane brez odgovora. Leadi se konvertirajo z AI in negujejo z avtomatiziranimi follow-up zaporedji.",
+    metric: "40+",
+    metricLabel: "kanalov v enem sistemu",
+  },
+  {
+    num: "04",
+    color: "#e879f9",
+    icon: "💰",
+    title: "Monetizacija obstoječe baze",
+    body: "WhatsApp broadcast kampanje in AI re-engagement zaporedja pretvorijo neaktivne CRM kontakte v prihodek — povprečno 42.5× ROI v prvi kampanji.",
+    metric: "42.5×",
+    metricLabel: "povprečni ROI",
+  },
+];
+
+const facts = [
+  { n: "81 %",   l: "Stopnja konverzije",   c: "Povprečje naših strank" },
+  { n: "60s",    l: "Čas prvega odgovora",   c: "Neprekinjeno, 24/7" },
+  { n: "42.5×",  l: "Broadcast ROI",         c: "Prva kampanja" },
+  { n: "14×",    l: "Več konverzij",          c: "AI vs. ročni kreativci" },
+];
 ---
 
 <LayoutV2
   lang="sl"
-  title={pageTitle}
-  description={pageDescription}
-  structuredData={aboutStructuredData}
+  title="O CreativeComplete — AI Customer System agencija za Slovenijo in Hrvaško"
+  description="CreativeComplete je vaša vgrajena AI Customer System agencija. Kvalificiramo leade v 60 sekundah, generiramo AI oglaševalske kreative in monetiziramo vašo obstoječo bazo leadov s povprečnim 42.5× ROI."
+  canonicalUrl={canonicalUrl}
+  structuredData={structuredData}
   breadcrumbs={breadcrumbs}
-  openGraph={{
-    title: pageTitle,
-    description: pageDescription,
-    type: 'website'
-  }}
-  twitterCard={{
-    title: pageTitle,
-    description: pageDescription
-  }}
   priority={0.8}
 >
-  <div class="about-page">
-    <!-- Hero Section -->
-    <section class="about-hero section-padding">
-      <div class="container">
-        <div class="about-hero-content">
-          <!-- Company Logo -->
-          <div class="company-logo">
-            <Image
-              src={logo}
-              alt="Creative Complete Logo" 
-              width={70} 
-              height={100}
-            />
-            <h1 class="company-name">Creative Complete</h1>
-          </div>
-          
-          <div class="about-intro">
-            <h2>Razvijamo programsko opremo, ki rešuje resnične poslovne probleme</h2>
-            <p class="lead">
-              Od prilagojenih SaaS platform do sistemov za poslovno avtomatizacijo transformiramo kompleksne izzive v elegantne digitalne rešitve, ki spodbujajo rast in učinkovitost.
-            </p>
-          </div>
+
+<main class="about-sl">
+
+  <!-- ── Hero ──────────────────────────────────────────────────── -->
+  <section class="ab-hero">
+    <div class="v2-container">
+      <div class="ab-hero__inner">
+        <span class="v2-eyebrow">AI Customer System agencija · Slovenija & Hrvaška</span>
+        <h1 class="v2-h1" style="margin-top:16px">
+          Smo vaša<br/>
+          <span class="v2-grad">vgrajena AI ekipa</span>
+        </h1>
+        <p class="v2-lead" style="margin-top:20px;max-width:58ch">
+          CreativeComplete gradi, upravlja in optimizira celoten AI Customer System za agencije na slovenskem in hrvaškem trgu — od zajema leadov prek kvalifikacije do monetizacije obstoječih kontaktov. Popolnoma upravljano. Ena mesečna pavšalna cena. Brez novih zaposlitev.
+        </p>
+        <div class="ab-hero__ctas">
+          <a
+            href="javascript:void(0)"
+            class="v2-btn v2-btn-primary"
+            data-cal-link="kerim-alihodza-7u7w6q/30min"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","theme":"dark"}'
+          >
+            Rezerviraj brezplačni sistemski audit
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="/sl/projekti/" class="v2-btn v2-btn-outline">Oglej si rezultate strank</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Founder Section -->
-    <section class="founder-section section-padding">
-      <div class="container">
-        <div class="founder-content">
-          <div class="founder-header">
-            <h2>Spoznajte našega ustanovitelja</h2>
-            <p class="section-subtitle">Vizija za Creative Complete</p>
+  <!-- ── Stats strip ────────────────────────────────────────────── -->
+  <section class="ab-stats">
+    <div class="v2-container">
+      <div class="ab-stats__grid">
+        {facts.map((f, i) => (
+          <div class="ab-stats__cell" style={`--d:${i * 0.08}s`}>
+            <div class="ab-stats__n">{f.n}</div>
+            <div class="ab-stats__l">{f.l}</div>
+            <div class="ab-stats__c">{f.c}</div>
           </div>
-          
-          <div class="founder-profile">
-            <div class="founder-info">
-              <h3>Kerim Alihodza</h3>
-              <p class="founder-title">Ustanovitelj in vodilni razvijalec</p>
-              <div class="founder-bio">
-                <p>
-                  Z več kot desetletjem izkušenj v razvoju programske opreme in digitalni transformaciji 
-                  je Kerim ustanovil Creative Complete, da bi premostil vrzel med kompleksnimi poslovnimi problemi 
-                  in praktičnimi tehnološkimi rešitvami.
-                </p>
-                <p>
-                  Njegova strokovna znanja zajemajo full-stack razvoj, sistemsko arhitekturo in strategijo rasti, 
-                  z dokazano uspešnostjo pri doseganju rezultatov za podjetja v različnih panogah.
-                </p>
-              </div>
-              <div class="founder-cta">
-                <a href={'/kerim-alihodza/'} class="cta-button cta-primary cta-md">
-                  Več o Kerimu
-                </a>
-              </div>
-            </div>
-            
-            <div class="founder-stats">
-              <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Let izkušenj</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Dokončanih projektov</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">2M€+</div>
-                <div class="stat-label">Ustvarjenega prihodka</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- What We Do Section -->
-    <section class="services-section section-padding">
-      <div class="container">
-        <div class="section-header">
-          <h2>Kaj počnemo</h2>
-          <p class="section-subtitle">
-            Specializiramo se za razvoj prilagojenih rešitev, ki avtomatizirajo procese, 
-            optimizirajo delovne tokove in spodbujajo merljivo poslovno rast.
+  <!-- ── What is AI Customer System ────────────────────────────── -->
+  <section class="ab-what">
+    <div class="v2-container">
+      <div class="ab-what__head">
+        <span class="v2-eyebrow">Kaj je AI Customer System?</span>
+        <h2 class="v2-h2" style="margin-top:14px">
+          <span class="v2-grad">Štirje sistemi.</span> En celoten proces.
+        </h2>
+        <p class="v2-lead" style="margin-top:16px;max-width:60ch">
+          Zajamemo vsak lead, ga konvertiramo z AI in ga obdržimo z avtomatiziranimi follow-up zaporedji — vse v enem popolnoma upravljanem sistemu.
+        </p>
+      </div>
+
+      <div class="ab-engines">
+        {engines.map((e, i) => (
+          <div class="ab-engine" style={`--ec:${e.color};--d:${i * 0.08}s`} data-m="up">
+            <div class="ab-engine__top">
+              <span class="ab-engine__num">{e.num}</span>
+              <span class="ab-engine__icon">{e.icon}</span>
+            </div>
+            <h3 class="ab-engine__title">{e.title}</h3>
+            <p class="ab-engine__body">{e.body}</p>
+            <div class="ab-engine__metric">
+              <span class="ab-engine__n">{e.metric}</span>
+              <span class="ab-engine__l">{e.metricLabel}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why managed ────────────────────────────────────────────── -->
+  <section class="ab-why">
+    <div class="v2-container">
+      <div class="ab-why__grid">
+        <div class="ab-why__copy" data-m="up">
+          <span class="v2-eyebrow">Zakaj upravljana rešitev?</span>
+          <h2 class="v2-h2" style="margin-top:14px">
+            Ne kupuj orodja.<br/>
+            <span class="v2-grad">Angažiraj ekipo.</span>
+          </h2>
+          <p class="v2-lead" style="margin-top:16px">
+            Kupiti AI orodja je enostavno. Pravilno jih konfigurirati, integrirati in dnevno optimizirati zahteva strokovno znanje, ki ga večina agencij nima interno.
           </p>
-        </div>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">🚀</div>
-            <h3>Razvoj prilagojene programske opreme</h3>
-            <p>
-              Po meri narejene aplikacije, prilagojene vašim edinstvenim poslovnim potrebam, 
-              zgrajene s skalabilno arhitekturo in sodobnimi tehnologijami.
-            </p>
-            <ul class="service-features">
-              <li>SaaS platforme</li>
-              <li>Spletne aplikacije</li>
-              <li>Razvoj API-jev</li>
-              <li>Integracija sistemov</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">⚡</div>
-            <h3>Avtomatizacija poslovnih procesov</h3>
-            <p>
-              Odpravite ročno delo in zmanjšajte napake z avtomatizacijo ponavljajočih se 
-              nalog in optimizacijo vaših delovnih tokov.
-            </p>
-            <ul class="service-features">
-              <li>Avtomatizacija delovnih tokov</li>
-              <li>Integracija umetne inteligence</li>
-              <li>CRM sistemi</li>
-              <li>Obdelava podatkov</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">📈</div>
-            <h3>Rast in optimizacija</h3>
-            <p>
-              Spodbujajte rast prihodkov s strateškim SEO, optimizacijo konverzij 
-              in podatkovno podprtimi marketinškimi strategijami.
-            </p>
-            <ul class="service-features">
-              <li>SEO strategija</li>
-              <li>Optimizacija stopnje konverzij</li>
-              <li>Skaliranje e-trgovine</li>
-              <li>Analitika uspešnosti</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Process Section -->
-    <!-- <section class="process-section section-padding">
-      <div class="container">
-        <div class="section-header">
-          <h2>Naš proces</h2>
-          <p class="section-subtitle">
-            Strukturiran pristop, ki zagotavlja, da dostavimo rešitve, 
-            ki ne le delujejo, temveč tudi ustvarjajo resnično poslovno vrednost.
+          <p class="v2-lead" style="margin-top:12px">
+            CreativeComplete je vaša celotna AI ekipa — mi zgradimo sistem, ga vodimo in ga neprestano optimiziramo. Vi dobite rezultate brez kompleksnosti.
           </p>
-        </div>
-
-        <div class="process-steps">
-          <div class="process-step">
-            <div class="step-number">01</div>
-            <div class="step-content">
-              <h3>Odkrivanje in analiza</h3>
-              <p>
-                Poglabljamo se v vaše poslovne izzive, cilje in tehnične 
-                zahteve, da bi natančno razumeli, kako izgleda uspeh za vas.
-              </p>
-              <ul>
-                <li>Analiza poslovnih zahtev</li>
-                <li>Ocena tehnične izvedljivosti</li>
-                <li>Pregled konkurenčnega okolja</li>
-                <li>Definicija meril uspeha</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="process-step">
-            <div class="step-number">02</div>
-            <div class="step-content">
-              <h3>Strategija in načrtovanje</h3>
-              <p>
-                Ustvarimo podroben projektni načrt z jasnimi mejniki, 
-                časovnimi roki in tehničnimi specifikacijami.
-              </p>
-              <ul>
-                <li>Oblikovanje projektne arhitekture</li>
-                <li>Izbira tehnološkega stacka</li>
-                <li>Časovni načrt razvoja</li>
-                <li>Dodelitev virov</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="process-step">
-            <div class="step-number">03</div>
-            <div class="step-content">
-              <h3>Razvoj in implementacija</h3>
-              <p>
-                Naša ekipa gradi vašo rešitev z uporabo agilnih metodologij, 
-                z rednimi posodobitvami in možnostmi za povratne informacije.
-              </p>
-              <ul>
-                <li>Agilni razvojni sprinti</li>
-                <li>Redne predstavitve napredka</li>
-                <li>Testiranje kakovosti</li>
-                <li>Nastavitev staging okolja</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="process-step">
-            <div class="step-number">04</div>
-            <div class="step-content">
-              <h3>Zagon in optimizacija</h3>
-              <p>
-                Razporedimo vašo rešitev in zagotovimo stalno podporo za zagotovitev 
-                optimalne zmogljivosti in kontinuirane izboljšave.
-              </p>
-              <ul>
-                <li>Produkcijska razporeditev</li>
-                <li>Monitoring uspešnosti</li>
-                <li>Usposabljanje uporabnikov in dokumentacija</li>
-                <li>Stalna podpora in vzdrževanje</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- CTA Section -->
-    <section class="about-cta section-padding">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Pripravljeni transformirati vaše podjetje?</h2>
-          <p>
-            Pogovorimo se, kako vam lahko pomagamo avtomatizirati procese, 
-            razviti prilagojeno programsko opremo ali spodbujati rast vašega podjetja.
-          </p>
-          <div class="cta-actions">
-            <a href={getLocalizedUrl('/contact/', currentLang)} class="cta-button cta-primary cta-lg">
-              Začnite s projektom
+          <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+            <a
+              href="javascript:void(0)"
+              class="v2-btn v2-btn-primary"
+              data-cal-link="kerim-alihodza-7u7w6q/30min"
+              data-cal-namespace="30min"
+              data-cal-config='{"layout":"month_view","theme":"dark"}'
+            >
+              Brezplačni audit →
             </a>
-            <a href={getLocalizedUrl('/projekti/', currentLang)} class="cta-button cta-secondary cta-lg">
-              Oglejte si naše delo
+            <a href="/sl/storitve/" class="v2-btn v2-btn-outline">Vse storitve</a>
+          </div>
+        </div>
+
+        <div class="ab-why__list" data-m="up" style="--m-d:.12s">
+          {[
+            { icon: "✓", text: "Konfiguracija in vzpostavitev — v celoti naša naloga" },
+            { icon: "✓", text: "Stalna optimizacija in mesečna poročila" },
+            { icon: "✓", text: "Integracija z obstoječim CRM (HubSpot, Salesforce, Pipedrive)" },
+            { icon: "✓", text: "WhatsApp Business API — uradno certificirano" },
+            { icon: "✓", text: "Vaša ekipa se ukvarja le s kvalificiranimi leadi" },
+            { icon: "✓", text: "Investicija se povrne v povprečno 45 dneh" },
+          ].map(item => (
+            <div class="ab-check">
+              <span class="ab-check__icon">{item.icon}</span>
+              <span class="ab-check__text">{item.text}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Founder ────────────────────────────────────────────────── -->
+  <section class="ab-founder">
+    <div class="v2-container">
+      <div class="ab-founder__grid">
+        <div class="ab-founder__copy" data-m="up">
+          <span class="v2-eyebrow">Kdo stoji za tem?</span>
+          <h2 class="v2-h2" style="margin-top:14px">Kerim Alihodza</h2>
+          <p class="ab-founder__role">Ustanovitelj · AI Customer System arhitekt</p>
+          <p class="v2-lead" style="margin-top:16px">
+            Kerim je ustanovil CreativeComplete, ko je ugotovil, da agencije vsak dan izgubijo leade — ne zato, ker leadi niso dobri, temveč ker nihče ne odgovori dovolj hitro in nobeden sistem ne prevzame kvalifikacije.
+          </p>
+          <p class="v2-lead" style="margin-top:12px">
+            Razvil je AI Customer System kot popolnoma upravljano infrastrukturo: zajem leadov, AI kvalifikacija, kreativna produkcija in WhatsApp monetizacija — vse iz ene roke, za mesečno pavšalno ceno.
+          </p>
+          <div style="margin-top:24px">
+            <a href="/kerim-alihodza/" class="v2-btn v2-btn-outline">
+              Kerimov celoten profil →
             </a>
           </div>
         </div>
+
+        <div class="ab-founder__stats" data-m="up" style="--m-d:.1s">
+          {[
+            { n: "10+", l: "Let izkušenj" },
+            { n: "50+", l: "Zaključenih projektov" },
+            { n: "2M€+", l: "Ustvarjenega prihodka" },
+            { n: "42.5×", l: "Povprečni broadcast ROI" },
+          ].map(s => (
+            <div class="ab-founder__stat">
+              <div class="ab-founder__stat-n">{s.n}</div>
+              <div class="ab-founder__stat-l">{s.l}</div>
+            </div>
+          ))}
+        </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────────── -->
+  <section class="ab-cta">
+    <div class="v2-container">
+      <div class="ab-cta__card" data-m="up">
+        <div class="ab-cta__glow"></div>
+        <span class="v2-eyebrow">#1 AI Customer System agencija · Omejeno število mest</span>
+        <h2 class="v2-h2" style="margin-top:20px">
+          Pripravljen maksimizirati <span class="v2-grad">vsak lead?</span>
+        </h2>
+        <p class="v2-lead" style="margin-top:16px;max-width:52ch">
+          Rezervirajte brezplačni 30-minutni sistemski audit. Analiziramo vaš tok leadov, izračunamo točno izgubo prihodka in vam pokažemo optimalno AI konfiguracijo za vašo agencijo.
+        </p>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+          <a
+            href="javascript:void(0)"
+            class="v2-btn v2-btn-primary"
+            data-cal-link="kerim-alihodza-7u7w6q/30min"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view","theme":"dark"}'
+          >
+            Rezerviraj brezplačni audit
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="/sl/projekti/" class="v2-btn v2-btn-outline">Primeri iz prakse</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 </LayoutV2>
 
+<style lang="scss">
+.about-sl { overflow-x: hidden; }
 
+.ab-hero { padding: 80px 0 72px; border-bottom: 1px solid var(--line); text-align: center; }
+.ab-hero__inner { display: flex; flex-direction: column; align-items: center; }
+.ab-hero__ctas { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 
+.ab-stats { padding: 48px 0; border-bottom: 1px solid var(--line); }
+.ab-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); }
+}
+.ab-stats__cell {
+  padding: 24px;
+  text-align: center;
+  border-right: 1px solid var(--line);
+  animation: fadeUp .5s ease both;
+  animation-delay: var(--d, 0s);
+  &:last-child { border-right: none; }
+}
+.ab-stats__n { font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px); letter-spacing: -.03em; color: var(--c1-light); }
+.ab-stats__l { font-size: 13px; font-weight: 600; color: var(--fg-0); margin-top: 4px; }
+.ab-stats__c { font-size: 11px; font-family: var(--font-mono); color: var(--fg-3); margin-top: 2px; }
 
+.ab-what { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.ab-what__head { text-align: center; margin-bottom: 56px; }
+.ab-engines {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 560px) { grid-template-columns: 1fr; }
+}
+.ab-engine {
+  padding: 28px 24px;
+  border-right: 1px solid var(--line);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background .2s;
+  &:last-child { border-right: none; }
+  &::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--ec); opacity: .6; }
+  &:hover { background: color-mix(in srgb, var(--ec) 4%, transparent); }
+  @media (max-width: 900px) { border-bottom: 1px solid var(--line); &:nth-child(2n) { border-right: none; } &:nth-last-child(-n+2) { border-bottom: none; } }
+  @media (max-width: 560px) { border-right: none !important; border-bottom: 1px solid var(--line) !important; &:last-child { border-bottom: none !important; } }
+}
+.ab-engine__top { display: flex; align-items: center; gap: 10px; }
+.ab-engine__num { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .12em; color: var(--ec); padding: 2px 6px; border-radius: 4px; background: color-mix(in srgb, var(--ec) 12%, transparent); border: 1px solid color-mix(in srgb, var(--ec) 25%, transparent); }
+.ab-engine__icon { font-size: 18px; }
+.ab-engine__title { font-size: 15px; font-weight: 700; color: var(--fg-0); line-height: 1.3; }
+.ab-engine__body { font-size: 13px; color: var(--fg-2); line-height: 1.6; flex: 1; }
+.ab-engine__metric { padding-top: 12px; border-top: 1px solid color-mix(in srgb, var(--ec) 18%, transparent); display: flex; flex-direction: column; gap: 2px; }
+.ab-engine__n { font-family: var(--font-display); font-size: 24px; color: var(--ec); letter-spacing: -.03em; }
+.ab-engine__l { font-family: var(--font-mono); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3); }
 
+.ab-why { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.ab-why__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; @media (max-width: 768px) { grid-template-columns: 1fr; gap: 40px; } }
+.ab-check { display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); &:last-child { border-bottom: none; } }
+.ab-check__icon { color: var(--c1-light); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+.ab-check__text { font-size: 14px; color: var(--fg-1); line-height: 1.5; }
 
+.ab-founder { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.ab-founder__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; @media (max-width: 768px) { grid-template-columns: 1fr; gap: 40px; } }
+.ab-founder__role { font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; color: var(--c1-light); margin-top: 6px; }
+.ab-founder__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-xl); overflow: hidden; }
+.ab-founder__stat { padding: 28px 24px; background: var(--bg-card); }
+.ab-founder__stat-n { font-family: var(--font-display); font-size: 32px; letter-spacing: -.03em; color: var(--c1-light); }
+.ab-founder__stat-l { font-size: 12px; color: var(--fg-2); margin-top: 4px; }
 
+.ab-cta { padding: 80px 0; }
+.ab-cta__card { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: var(--r-xl); background: var(--bg-card); padding: 64px 48px; text-align: center; box-shadow: 0 0 80px rgba(99,102,241,.08); }
+.ab-cta__glow { position: absolute; inset: -60px; background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(99,102,241,.1) 0%, transparent 70%); pointer-events: none; }
 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+</style>

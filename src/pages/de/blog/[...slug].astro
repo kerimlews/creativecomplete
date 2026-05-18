@@ -1,0 +1,496 @@
+---
+import LayoutV2 from '../../../layouts/LayoutV2.astro';
+import CTA from '../../../components/v2/CTA.astro';
+import AuthorBadge from '../../../components/v2/AuthorBadge.astro';
+import LeadRoutingMotion from '../../../components/v2/LeadRoutingMotion.astro';
+import AICreativeMotion from '../../../components/v2/AICreativeMotion.astro';
+import BroadcastMotion from '../../../components/v2/BroadcastMotion.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const all = await getCollection('blogsDe');
+  return all.map((post) => ({
+    params: { slug: post.data.slug as string },
+    props: { postId: post.id },
+  }));
+}
+
+const { postId } = Astro.props;
+const post = await getCollection('blogsDe').then(ps => ps.find(p => p.id === postId));
+if (!post) throw new Error(`DE blog post not found: ${postId}`);
+
+const slug        = (post.data.slug ?? post.id) as string;
+const title       = post.data.title as string;
+const description = post.data.description as string;
+const category    = (post.data.category ?? 'Blog') as string;
+const tags        = (post.data.tags as string[] | undefined) ?? [];
+const faqItems    = (post.data.faq as { question: string; answer: string }[] | undefined) ?? [];
+const published   = post.data.published as string;
+const updated     = (post.data.updated ?? published) as string;
+
+const publishedDate = new Date(published);
+const publishedYear = publishedDate.getFullYear();
+const publishedFmt  = publishedDate.toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const canonicalUrl = `https://www.creativecomplete.com/de/blog/${slug}/`;
+const ogImage = `${Astro.url.origin}/images/og/${slug}.svg`;
+
+const serviceLinkDe: Record<string, { href: string; label: string }> = {
+  'speed-to-lead':               { href: '/de/dienstleistungen/speed-to-lead-system/',          label: 'Speed-to-Lead System' },
+  'ai-lead-qualification':       { href: '/de/dienstleistungen/ai-lead-qualification/',         label: 'KI-Leadqualifizierung' },
+  'automated-lead-distribution': { href: '/de/dienstleistungen/ai-lead-qualification/',         label: 'KI-Leadqualifizierung' },
+  'whatsapp-broadcast-campaigns':{ href: '/de/dienstleistungen/whatsapp-datenbank-monetarisierung/', label: 'WhatsApp-Monetarisierung' },
+  'whatsapp-lead-generation':    { href: '/de/dienstleistungen/whatsapp-datenbank-monetarisierung/', label: 'WhatsApp-Monetarisierung' },
+  'ai-ad-creatives':             { href: '/de/dienstleistungen/ai-ad-creative-engine/',         label: 'KI-Werbemittel' },
+  'ad-creative-testing':         { href: '/de/dienstleistungen/ai-ad-creative-engine/',         label: 'KI-Werbemittel' },
+  'ai-sales-agents':             { href: '/de/dienstleistungen/ai-lead-qualification/',         label: 'KI-Leadqualifizierung' },
+  'crm-automation':              { href: '/de/dienstleistungen/ai-lead-qualification/',         label: 'KI-Leadqualifizierung' },
+};
+const relatedService = serviceLinkDe[slug];
+
+const wordCount = (post.rendered?.html ?? '').replace(/<[^>]+>/g, '').split(/\s+/).length;
+const readMinutes = Math.max(1, Math.round(wordCount / 200));
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "url": canonicalUrl,
+  "datePublished": published,
+  "dateModified": updated,
+  "inLanguage": "de",
+  "author": {
+    "@type": "Person",
+    "name": "Kerim Alihodza",
+    "url": `${Astro.url.origin}/kerim-alihodza/`,
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CreativeComplete",
+    "url": Astro.url.origin,
+  },
+  "keywords": tags.join(', '),
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
+};
+
+const faqSchema = faqItems.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": { "@type": "Answer", "text": item.answer },
+  })),
+} : null;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": `${Astro.url.origin}/de/` },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${Astro.url.origin}/de/blog/` },
+    { "@type": "ListItem", "position": 3, "name": title, "item": canonicalUrl },
+  ],
+};
+
+const structuredData = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])];
+
+const showRoutingMotion = ['automated-lead-distribution','speed-to-lead','ai-lead-qualification','ai-sales-agents'].includes(slug);
+const showCreativeMotion = ['ai-ad-creatives','ad-creative-testing'].includes(slug);
+const showBroadcastMotion = ['whatsapp-broadcast-campaigns','whatsapp-lead-generation'].includes(slug);
+
+const allPosts = await getCollection('blogsDe');
+const relatedPosts = allPosts
+  .filter(p => (p.data.category ?? 'Blog') === category && (p.data.slug ?? p.id) !== slug)
+  .map(p => ({
+    slug: (p.data.slug ?? p.id) as string,
+    title: p.data.title as string,
+    description: p.data.description as string,
+    category: (p.data.category ?? 'Blog') as string,
+    priority: (p.data.priority as number | undefined) ?? 0,
+    readMinutes: Math.max(1, Math.round(((p.body ?? '').split(/\s+/).length) / 200)),
+  }))
+  .sort((a, b) => b.priority - a.priority)
+  .slice(0, 3);
+---
+
+<LayoutV2
+  lang="de"
+  title={title}
+  description={description}
+  canonicalUrl={canonicalUrl}
+  ogImage={ogImage}
+  structuredData={structuredData}
+  navActive="results"
+>
+  <main>
+
+    <div class="v2-container blog-breadcrumb">
+      <a href="/de/">Home</a><span>/</span>
+      <a href="/de/blog/">Blog</a><span>/</span>
+      <span>{title}</span>
+    </div>
+
+    <section class="blog-hero">
+      <div class="v2-container">
+        <div class="blog-hero__inner">
+          <div class="blog-hero__left">
+            <span class="v2-chip-neutral blog-category">{category}</span>
+            <h1 class="v2-h2 blog-h1">{title}</h1>
+            <p class="v2-lead blog-lead">{description}</p>
+
+            <div class="blog-meta">
+              <div class="blog-meta__item">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span>{readMinutes} Min. Lesezeit</span>
+              </div>
+              <div class="blog-meta__item">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span>{publishedFmt}</span>
+              </div>
+            </div>
+
+            <div class="blog-tags">
+              {tags.map((t) => <span class="v2-chip">{t}</span>)}
+            </div>
+
+            <AuthorBadge
+              name="Kerim Alihodza"
+              role="CEO & Business Mechanic"
+              publishedYear={publishedYear}
+            />
+          </div>
+
+          <div class="blog-hero__right">
+            {showRoutingMotion && <LeadRoutingMotion />}
+            {showCreativeMotion && <AICreativeMotion />}
+            {showBroadcastMotion && <BroadcastMotion />}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section" style="padding-top: 0">
+      <div class="v2-container">
+        <div class="blog-layout">
+
+          <article class="blog-prose v2-prose" set:html={post.rendered?.html} />
+
+          <aside class="blog-aside">
+
+            {relatedService && (
+              <a href={relatedService.href} class="blog-aside__service-link">
+                <span class="blog-aside__service-eyebrow">Dieser Artikel ist Teil unseres</span>
+                <span class="blog-aside__service-name">{relatedService.label}</span>
+                <span class="blog-aside__service-cta">
+                  Vollständigen Service ansehen
+                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                    <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+            )}
+
+            <div class="blog-aside__cta">
+              <div class="blog-aside__cta-glow" aria-hidden="true"></div>
+              <p class="blog-aside__cta-text">Bereit, Ihr KI Customer System aufzubauen?</p>
+              <a
+                href="javascript:void(0)"
+                class="v2-btn v2-btn-primary blog-aside__cta-btn"
+                data-cal-link="kerim-alihodza-7u7w6q/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","theme":"dark"}'
+              >
+                Kostenloses System-Audit
+                <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    {faqItems.length > 0 && (
+      <section class="v2-section blog-faq-section">
+        <div class="v2-container blog-faq-container">
+          <div class="blog-faq-head">
+            <span class="v2-eyebrow">FAQ</span>
+            <h2 class="v2-h3 blog-faq-title">{title} — Häufige Fragen</h2>
+          </div>
+          <div class="blog-faq-list">
+            {faqItems.map((item, i) => (
+              <details class="blog-faq-item">
+                <summary class="blog-faq-q">
+                  <span class="blog-faq-n">{String(i + 1).padStart(2, '0')}</span>
+                  {item.question}
+                  <svg class="blog-faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </summary>
+                <div class="blog-faq-a">{item.answer}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {relatedPosts.length > 0 && (
+      <section class="blog-related v2-section">
+        <div class="v2-container">
+          <div class="blog-related__head">
+            <span class="v2-eyebrow">Als nächstes lesen</span>
+            <h2 class="v2-h3 blog-related__title">Mehr zu: {category}</h2>
+          </div>
+          <div class="blog-related__grid">
+            {relatedPosts.map(p => (
+              <a href={`/de/blog/${p.slug}/`} class="blog-related__card">
+                <span class="blog-related__cat">{p.category}</span>
+                <h3 class="blog-related__card-title">{p.title}</h3>
+                <p class="blog-related__card-desc">{p.description}</p>
+                <span class="blog-related__read">
+                  {p.readMinutes} Min. Lesezeit
+                  <svg width="10" height="10" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+                    <path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <CTA lang="de" />
+  </main>
+</LayoutV2>
+
+<style lang="scss">
+.blog-breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  padding-top: 24px; padding-bottom: 8px;
+  font-size: 13px; font-family: var(--font-mono); color: var(--fg-2);
+  flex-wrap: wrap;
+  a { color: var(--fg-2); transition: color .15s; &:hover { color: var(--c1-light); } }
+}
+
+.blog-hero { padding: 48px 0 56px; }
+.blog-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: center;
+  @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 40px; }
+  > * { min-width: 0; }
+}
+.blog-hero__left { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.blog-hero__right { overflow: hidden; }
+.blog-category { align-self: flex-start; }
+.blog-h1 { margin: 0; }
+.blog-lead { margin: 0; }
+
+.blog-meta {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+.blog-meta__item {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 12px; font-family: var(--font-mono);
+  color: var(--fg-2); letter-spacing: 0.04em;
+  svg { color: var(--c1-light); }
+}
+
+.blog-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 64px;
+  align-items: start;
+  @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 48px; }
+}
+
+.blog-prose {
+  color: var(--fg-1); line-height: 1.8; font-size: 16px;
+
+  :global(h2) {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 2.2vw, 32px);
+    letter-spacing: -0.015em; font-weight: 400;
+    color: var(--fg-0); margin: 52px 0 16px; line-height: 1.15;
+  }
+  :global(h3) {
+    font-family: var(--font-display);
+    font-size: clamp(18px, 1.6vw, 24px);
+    letter-spacing: -0.01em; font-weight: 400;
+    color: var(--fg-0); margin: 36px 0 12px;
+  }
+  :global(p) { margin: 0 0 18px; }
+  :global(ul), :global(ol) {
+    padding-left: 1.4em; margin: 0 0 18px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  :global(li) { color: var(--fg-1); }
+  :global(strong) { color: var(--fg-0); font-weight: 600; }
+  :global(a) {
+    color: var(--c1-light); text-decoration: underline; text-underline-offset: 3px;
+    &:hover { color: var(--fg-0); }
+  }
+  :global(blockquote) {
+    border-left: 3px solid var(--c1); padding-left: 20px;
+    margin: 28px 0; font-style: italic; color: var(--fg-1);
+  }
+  :global(hr) { border: 0; height: 1px; background: var(--line); margin: 36px 0; }
+  :global(img) {
+    display: block; width: 100%; height: auto;
+    border-radius: var(--r-lg); margin: 28px 0;
+  }
+  :global(table) {
+    width: 100%; border-collapse: collapse; margin: 28px 0;
+    font-size: 14px; border-radius: 10px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  :global(thead) { background: rgba(99,102,241,0.1); }
+  :global(th) {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em;
+    text-transform: uppercase; color: rgba(255,255,255,0.5); font-weight: 600;
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid rgba(99,102,241,0.2); white-space: nowrap;
+  }
+  :global(td) {
+    padding: 10px 14px; color: var(--fg-1);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    vertical-align: top; line-height: 1.5;
+  }
+  :global(tbody tr:last-child td) { border-bottom: none; }
+  :global(tbody tr:nth-child(even)) { background: rgba(255,255,255,0.02); }
+  :global(tbody tr:hover) { background: rgba(99,102,241,0.05); }
+}
+
+.blog-aside {
+  position: sticky; top: 100px;
+  display: flex; flex-direction: column; gap: 16px;
+  @media (max-width: 1024px) { position: static; }
+}
+
+.blog-aside__service-link {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 14px 16px;
+  background: rgba(99,102,241,0.07);
+  border: 1px solid rgba(99,102,241,0.22);
+  border-radius: var(--r-lg); text-decoration: none;
+  transition: border-color .2s, background .2s;
+  &:hover { border-color: rgba(99,102,241,0.4); background: rgba(99,102,241,0.12); }
+}
+.blog-aside__service-eyebrow {
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.3);
+}
+.blog-aside__service-name {
+  font-size: 13px; font-weight: 700; color: var(--fg-0); line-height: 1.3;
+}
+.blog-aside__service-cta {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: var(--font-mono); font-size: 10px; color: var(--c1-light); margin-top: 4px;
+}
+
+.blog-aside__cta {
+  position: relative;
+  background: var(--bg-card); border: 1px solid var(--line-accent);
+  border-radius: var(--r-lg); padding: 22px 20px; overflow: hidden;
+  display: flex; flex-direction: column; gap: 16px; align-items: flex-start;
+}
+.blog-aside__cta-glow {
+  position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
+  width: 180px; height: 100px;
+  background: radial-gradient(ellipse at center, rgba(99,102,241,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+.blog-aside__cta-text {
+  position: relative; font-size: 14px; font-weight: 500;
+  color: var(--fg-0); line-height: 1.5; margin: 0;
+}
+.blog-aside__cta-btn {
+  position: relative; height: 42px; padding: 0 18px; font-size: 13px;
+  width: 100%; justify-content: center;
+}
+
+.blog-faq-section { padding-top: 0; }
+.blog-faq-container { max-width: 860px; }
+.blog-faq-head {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+  margin-bottom: 36px;
+}
+.blog-faq-title { margin: 0; }
+.blog-faq-list { display: flex; flex-direction: column; gap: 0; }
+.blog-faq-item {
+  border-bottom: 1px solid var(--line);
+  &:first-child { border-top: 1px solid var(--line); }
+}
+.blog-faq-q {
+  display: flex; align-items: center; gap: 12px;
+  padding: 18px 0; cursor: pointer; list-style: none;
+  font-weight: 500; font-size: 15px; color: var(--fg-0); transition: color .15s;
+  &::-webkit-details-marker { display: none; }
+  &:hover { color: var(--c1-light); }
+  .blog-faq-arrow { margin-left: auto; flex-shrink: 0; color: var(--fg-2); transition: transform .2s; }
+}
+details[open] .blog-faq-arrow { transform: rotate(180deg); }
+.blog-faq-n {
+  font-family: var(--font-mono); font-size: 10px; color: var(--c1-light);
+  flex-shrink: 0; letter-spacing: 0.1em;
+}
+.blog-faq-a { padding: 0 0 20px 30px; font-size: 14.5px; color: var(--fg-1); line-height: 1.7; }
+
+.blog-related { padding-top: 0; }
+.blog-related__head {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+  margin-bottom: 32px;
+}
+.blog-related__title { margin: 0; }
+.blog-related__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.blog-related__card {
+  display: flex; flex-direction: column; gap: 10px; padding: 22px;
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; text-decoration: none;
+  transition: border-color .2s, background .2s, transform .2s;
+  &:hover {
+    border-color: rgba(99,102,241,0.35); background: rgba(99,102,241,0.05);
+    transform: translateY(-2px);
+    .blog-related__read { color: #a5b4fc; gap: 6px; }
+  }
+}
+.blog-related__cat {
+  font-family: var(--font-mono); font-size: 9px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase; color: #a5b4fc;
+  background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.22);
+  padding: 2px 8px; border-radius: 20px; align-self: flex-start; white-space: nowrap;
+}
+.blog-related__card-title {
+  font-size: 15px; font-weight: 700; letter-spacing: -.02em;
+  line-height: 1.35; color: rgba(255,255,255,0.88); margin: 0;
+}
+.blog-related__card-desc {
+  font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.38);
+  margin: 0; flex: 1;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.blog-related__read {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 600; color: rgba(99,102,241,0.7);
+  margin-top: auto; transition: color .15s, gap .15s;
+}
+</style>

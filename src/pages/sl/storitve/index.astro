@@ -1,324 +1,350 @@
 ---
 import LayoutV2 from '../../../layouts/LayoutV2.astro';
-import ServiceCard from '../../../components/ServiceCard.astro';
-import BreadCrumb from '../../../components/BreadCrumb.astro';
-import { getCollection } from 'astro:content';
-import BottomCTA from '../../../components/BottomCTA.astro';
-import { t, getLocalizedUrl } from '../../../utils/translations';
-import { getServiceUrl, getBasePath, detectLanguageFromPath } from '../../../utils/routing';
-import type { Language } from '../../../utils/translations';
+import CTA from '../../../components/v2/CTA.astro';
 
-// Detect language from URL
-const currentLang: Language = detectLanguageFromPath(Astro.url.pathname);
-const basePath = getBasePath(currentLang);
+// ── New AI services (featured, hardcoded links) ───────────────────────────────
+const aiServices = [
+  {
+    title: "AI kvalifikacija leadov v 60 sekundah",
+    description: "AI agenti samodejno kvalificirajo vsak dohodni lead v manj kot 60 sekundah — 24/7, na 40+ kanalih. 81 % stopnja konverzije leadov.",
+    href: "/sl/storitve/ai-kvalifikacija-leadov/",
+    tag: "AI Avtomatizacija",
+    metric: "81 % konverzija",
+  },
+  {
+    title: "AI oglaševalski sistem: CPL nižji za 40–60%",
+    description: "AI ustvarjeni oglaševalski kreativni materiali, trenirani na $35 mrd.+ oglaševalskih podatkih. AI za ocenjevanje kreativ napove zmagovalce z 90 %+ natančnostjo.",
+    href: "/sl/storitve/ai-oglasevalski-kreativni-sistem/",
+    tag: "AI Oglaševanje",
+    metric: "14× več konverzij",
+  },
+  {
+    title: "Hitrost do leada: odgovor v 60 sekundah, 24/7",
+    description: "Vsak lead prejme kvalificiran odgovor v 60 sekundah — 24/7, na 40+ kanalih. 60 % krajši prodajni cikli.",
+    href: "/sl/storitve/hitrost-do-leada/",
+    tag: "Upravljanje leadov",
+    metric: "60s odzivni čas",
+  },
+  {
+    title: "WhatsApp monetizacija baze: 42× ROI",
+    description: "WhatsApp broadcast kampanje in AI zaporedja za reaktivacijo pretvorijo neaktivne stike v prihodke — povprečno 42.5× ROI.",
+    href: "/sl/storitve/whatsapp-monetizacija-baze/",
+    tag: "WhatsApp Marketing",
+    metric: "Povp. 42.5× ROI",
+  },
+];
 
-const images = await import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
-
-// Function to get service image by slug
-async function getImage(slug: string) {
-  if (!slug) return null;
-  
-  // Try different extensions and path variations
-  const extensions = ['png', 'jpg', 'jpeg', 'webp'];
-  const baseName = slug.replace(/\.(png|jpg|jpeg|webp)$/, ''); // Remove extension if present
-  
-  for (const ext of extensions) {
-    const imagePath = `/src/images/services/${baseName}.${ext}`;
-    if (images[imagePath]) {
-      try {
-        const imageModule = await images[imagePath]() as any;
-        // Handle default export (import.meta.glob returns { default: ImageMetadata })
-        const imageData = imageModule.default || imageModule;
-        
-        // Validate it's a proper ImageMetadata object
-        if (imageData && typeof imageData === 'object' && 'src' in imageData) {
-          return imageData;
-        }
-      } catch (e) {
-        // Continue to next extension
-        continue;
-      }
-    }
-  }
-  
-  return null;
-}
-
-// Get all services and filter by language
-const langServices = await getCollection('servicesSl');
-const services = await Promise.all(langServices.map(async s => {
-  const serviceName = s.id.split('/').pop() || s.id;
-  // Use service.data.image if it exists, otherwise try the service name
-  const imageSlug = s.data.image || serviceName;
-  const image = await getImage(imageSlug);
-  return { ...s, image };
-}));
-
-// Sort services by priority (highest first) then featured
-const sortedServices = services.toSorted((a, b) => {
-  if (a.data.featured && !b.data.featured) return -1;
-  if (!a.data.featured && b.data.featured) return 1;
-  return (b.data.priority || 5) - (a.data.priority || 5);
-});
-
-// Generate JSON-LD for services page
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": t('services.title', currentLang),
-  "description": t('services.description', currentLang),
-  "numberOfItems": services.length,
-  "itemListElement": services.map((service, index) => ({
+  "name": "AI Customer System Storitve — CreativeComplete",
+  "description": "AI kvalifikacija leadov, AI oglaševalski sistem, hitrost do leada in WhatsApp monetizacija za agencije na slovenskem in hrvaškem trgu.",
+  "numberOfItems": aiServices.length,
+  "itemListElement": aiServices.map((s, i) => ({
     "@type": "ListItem",
-    "position": index + 1,
+    "position": i + 1,
     "item": {
       "@type": "Service",
-      "name": service.data.title,
-      "description": service.data.description,
-      "url": `${Astro.url.origin}${getServiceUrl(currentLang, service.data.slug || service.id)}`,
-      "serviceType": service.data.category
+      "name": s.title,
+      "description": s.description,
+      "url": `https://www.creativecomplete.com${s.href}`,
     }
   }))
 };
 
-const breadcrumbs = [
-  { name: t('nav.home', currentLang), url: `${Astro.url.origin}${basePath}/` },
-  { name: t('nav.services', currentLang), url: Astro.url.href }
-];
 ---
 
 <LayoutV2
   lang="sl"
-  title={t('services.title', currentLang)}
-  description={t('services.description', currentLang)}
+  title="AI Customer System Storitve — Agencija | CreativeComplete"
+  description="AI kvalifikacija leadov, AI oglaševalski kreativni sistem, hitrost do leada in WhatsApp monetizacija baze. CreativeComplete zgradi in upravlja celoten AI Customer System za agencije v Sloveniji in na Hrvaškem."
+  canonicalUrl="https://www.creativecomplete.com/sl/storitve/"
   structuredData={structuredData}
-  breadcrumbs={breadcrumbs}
-  openGraph={{
-    title: t('services.hero_title', currentLang).replace(/<[^>]*>/g, ''),
-    description: t('services.hero_subtitle', currentLang),
-  }}
   priority={9}
 >
-  <div class="services-page">
-    <!-- Hero Section -->
-    <section class="services-hero section-padding">
-      <div class="container">
-        <div class="hero-content text-center">
-          <BreadCrumb items={breadcrumbs} />
-          
-          <h1 class="hero-title">
-            Digital Services That Deliver <span class="text-gradient">Real Results</span>
+  <div class="svc-page">
+
+    <!-- ── Hero ────────────────────────────────────────────── -->
+    <section class="svc-hero">
+      <div class="v2-container">
+        <div class="svc-bc"><a href="/sl/">Domov</a><span>/</span><span>Storitve</span></div>
+        <div class="svc-hero__inner">
+          <span class="v2-eyebrow">AI Customer System · Slovenija</span>
+          <h1 class="v2-h1" style="margin-top:16px">
+            AI storitve, ki <span class="v2-grad">prinašajo resnične rezultate</span>
           </h1>
-          <p class="hero-subtitle">
-            {t('services.hero_subtitle', currentLang)}
+          <p class="v2-lead" style="margin-top:20px;max-width:58ch">
+            Zgradimo, upravljamo in optimiziramo celoten AI Customer System — od zajema leadov do monetizacije obstoječih stikov. Popolno upravljanje, fiksna mesečna cena.
+          </p>
+          <div class="svc-hero__cta">
+            <a
+              href="javascript:void(0)"
+              class="v2-btn v2-btn-primary"
+              data-cal-link="kerim-alihodza-7u7w6q/30min"
+              data-cal-namespace="30min"
+              data-cal-config='{"layout":"month_view","theme":"dark"}'
+            >
+              Pridobite brezplačen sistemski pregled
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── AI Services Grid ─────────────────────────────────── -->
+    <section class="svc-grid-section">
+      <div class="v2-container">
+        <div class="svc-section-head">
+          <span class="v2-eyebrow">AI Customer System</span>
+          <h2 class="v2-h2" style="margin-top:12px">
+            <span class="v2-grad">Štirje motorji.</span> En sistem.
+          </h2>
+          <p class="v2-lead" style="margin-top:12px">
+            Vsak motor je na voljo posamezno — ali aktivirajte vse štiri za maksimalen učinek.
           </p>
         </div>
+
+        <div class="svc-ai-grid">
+          {aiServices.map((s, i) => (
+            <a href={s.href} class="svc-ai-card" data-m="up" style={`--m-d:${i * 0.08}s`}>
+              <div class="svc-ai-card__top">
+                <span class="svc-ai-tag">{String(i + 1).padStart(2, '0')}</span>
+                <span class="svc-ai-category">{s.tag}</span>
+                <span class="svc-ai-metric">{s.metric}</span>
+              </div>
+              <h3 class="svc-ai-title">{s.title}</h3>
+              <p class="svc-ai-desc">{s.description}</p>
+              <div class="svc-ai-cta">
+                Izvedi več
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M1.5 10.5L10.5 1.5M10.5 1.5H4.5M10.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
 
-    <!-- Services Grid -->
-    <section class="services-grid-section section-padding">
-      <div class="container">
-        <!-- Services Grid -->
-        <div class="services-grid services-grid-row" id="servicesGrid">
-          {sortedServices.map((service, index) => {
-            const serviceSlug = service.data.slug || service.id.split('/').pop() || service.id;
-            // Only pass image if it exists and is a valid ImageMetadata object
-            const hasValidImage = service.image && 
-                                  typeof service.image === 'object' && 
-                                  service.image !== null &&
-                                  'src' in service.image;
-            
-            // Build props object conditionally
-            const cardProps: any = {
-              title: service.data.title,
-              description: service.data.description,
-              features: service.data.features,
-              ctaText: service.data.ctaText,
-              delay: service.data.delay,
-              url: getServiceUrl(currentLang, serviceSlug),
-              slug: serviceSlug,
-              category: service.data.category || '',
-              index: index
-            };
-            
-            // Only add image prop if it's valid
-            if (hasValidImage) {
-              cardProps.image = service.image;
-            }
-            
-            return (
-              <ServiceCard {...cardProps} />
-            );
-          })}
-        </div>
-
-        <!-- Empty State -->
-        {services.length === 0 && (
-          <div class="empty-state text-center">
-            <h3>{t('services.no_services', currentLang)}</h3>
-            <p>{t('services.no_services_desc', currentLang)}</p>
-            <a href={getLocalizedUrl('/contact/', currentLang)} class="cta-button cta-primary">{t('nav.contact', currentLang)}</a>
+    <!-- ── Why managed ─────────────────────────────────────── -->
+    <section class="svc-why">
+      <div class="v2-container">
+        <div class="svc-why__inner">
+          <div class="svc-why__copy">
+            <span class="v2-eyebrow">Zakaj upravljano?</span>
+            <h2 class="v2-h2" style="margin-top:16px">
+              Ni orodja. <span class="v2-grad">Je ekipa.</span>
+            </h2>
+            <p class="v2-lead" style="margin-top:16px">
+              Kupiti AI orodje je enostavno. Konfigurirati ga, optimizirati in upravljati 24/7 zahteva mesece in interno znanje, ki ga večina agencij nima.
+            </p>
+            <p class="v2-lead" style="margin-top:12px">
+              CreativeComplete je vaš popoln AI oddelek — za fiksno mesečno ceno brez presenečenj.
+            </p>
+            <a
+              href="javascript:void(0)"
+              class="v2-btn v2-btn-primary"
+              style="margin-top:28px"
+              data-cal-link="kerim-alihodza-7u7w6q/30min"
+              data-cal-namespace="30min"
+              data-cal-config='{"layout":"month_view","theme":"dark"}'
+            >
+              Brezplačno svetovanje →
+            </a>
           </div>
-        )}
-      </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process-section section-padding bg-light">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>{t('services.process_title', currentLang)}</h2>
-          <p class="section-subtitle">{t('services.process_subtitle', currentLang)}</p>
-        </div>
-
-        <div class="process-steps">
-          <div class="process-step" data-step="1">
-            <div class="step-icon-wrapper">
-              <div class="step-number">01</div>
-              <div class="step-icon">🔍</div>
-            </div>
-            <h3>{t('services.discovery_title', currentLang)}</h3>
-            <p>{t('services.discovery_desc', currentLang)}</p>
-            <div class="step-connector"></div>
-          </div>
-          <div class="process-step" data-step="2">
-            <div class="step-icon-wrapper">
-              <div class="step-number">02</div>
-              <div class="step-icon">⚡</div>
-            </div>
-            <h3>{t('services.implementation_title', currentLang)}</h3>
-            <p>{t('services.implementation_desc', currentLang)}</p>
-            <div class="step-connector"></div>
-          </div>
-          <div class="process-step" data-step="3">
-            <div class="step-icon-wrapper">
-              <div class="step-number">03</div>
-              <div class="step-icon">📈</div>
-            </div>
-            <h3>{t('services.optimization_title', currentLang)}</h3>
-            <p>{t('services.optimization_desc', currentLang)}</p>
-            <div class="step-connector"></div>
-          </div>
-          <div class="process-step" data-step="4">
-            <div class="step-icon-wrapper">
-              <div class="step-number">04</div>
-              <div class="step-icon">🚀</div>
-            </div>
-            <h3>{t('services.scale_title', currentLang)}</h3>
-            <p>{t('services.scale_desc', currentLang)}</p>
+          <div class="svc-why__stats">
+            {[
+              { n: "81 %", l: "Stopnja konverzije leadov" },
+              { n: "42.5×", l: "ROI broadcastov" },
+              { n: "14×", l: "Več konverzij iz oglasov" },
+              { n: "60s", l: "Čas odziva AI" },
+            ].map(stat => (
+              <div class="svc-why__stat">
+                <div class="svc-why__stat-n">{stat.n}</div>
+                <div class="svc-why__stat-l">{stat.l}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
 
-    <BottomCTA 
-      title={t('cta.title', currentLang)}
-      subtitle={t('cta.subtitle', currentLang)}
-      urgencyText={t('cta.urgency', currentLang)}
-      valueProps={[]}
-      primaryButton={{
-        text: t('cta.primary_button', currentLang),
-        href: getLocalizedUrl('/contact/', currentLang)
-      }}
-      securityNote={t('cta.security_note', currentLang)}
-      showValueProps={false}
-    />
+    <CTA lang="sl" />
   </div>
 </LayoutV2>
 
-<script>
-// Scroll animations for service cards
-document.addEventListener('DOMContentLoaded', function() {
-  const servicesGrid = document.getElementById('servicesGrid') as HTMLElement | null;
-  
-  if (!servicesGrid) return;
-  
-  // Scroll animations for service cards
-  const serviceCards = servicesGrid.querySelectorAll('.service-card') as NodeListOf<HTMLElement>;
-  
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+<style lang="scss">
+.svc-page { min-height: 100vh; }
 
-  const cardObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        const target = entry.target as HTMLElement;
-        setTimeout(() => {
-          target.style.opacity = '1';
-          target.style.transform = 'translateY(0)';
-        }, index * 100);
-        cardObserver.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+.svc-bc {
+  display: flex; align-items: center; gap: 8px;
+  padding: 20px 0 0;
+  font-size: 13px; font-family: var(--font-mono); color: var(--fg-2);
+  a { color: var(--fg-2); transition: color .15s; &:hover { color: var(--c1-light); } }
+}
 
-  serviceCards.forEach((card: HTMLElement) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    cardObserver.observe(card);
-  });
+.svc-hero {
+  padding: 64px 0 80px;
+  border-bottom: 1px solid var(--line);
+}
+.svc-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+}
+.svc-hero__cta { margin-top: 32px; }
 
-  // Scroll animations for process steps
-  const processSteps = document.querySelectorAll('.process-step') as NodeListOf<HTMLElement>;
-  
-  const stepObserverOptions = {
-    threshold: 0.2,
-    rootMargin: '0px 0px -100px 0px'
-  };
+/* ── AI grid ── */
+.svc-grid-section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line);
+}
+.svc-section-head {
+  margin-bottom: 48px;
+}
 
-  const stepObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting && entry.target instanceof HTMLElement) {
-        const step = entry.target;
-        const stepNumber = step.getAttribute('data-step');
-        
-        setTimeout(() => {
-          step.classList.add('animate-in');
-          
-          // Animate icon
-          const iconWrapper = step.querySelector('.step-icon-wrapper');
-          if (iconWrapper) {
-            iconWrapper.classList.add('pulse');
-          }
-        }, index * 200);
-        
-        stepObserver.unobserve(entry.target);
-      }
-    });
-  }, stepObserverOptions);
+.svc-ai-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 
-  processSteps.forEach((step: HTMLElement) => {
-    step.style.opacity = '0';
-    step.style.transform = 'scale(0.8) translateY(50px)';
-    step.style.transition = 'all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)';
-    stepObserver.observe(step);
-  });
-});
-</script>
+  @media (max-width: 720px) { grid-template-columns: 1fr; }
+}
 
-<style>
-  .hero-title .text-gradient {
-    background: linear-gradient(135deg, #ff7002 0%, #ffc2ae 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.svc-ai-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  text-decoration: none;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+
+  &:hover {
+    border-color: rgba(99,102,241,.35);
+    box-shadow: 0 16px 48px rgba(0,0,0,.25);
+    transform: translateY(-2px);
+
+    .svc-ai-cta { gap: 8px; color: #a5b4fc; }
   }
-  
-  .services-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1rem !important;
+}
+
+.svc-ai-card__top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.svc-ai-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--c1-light);
+  background: rgba(99,102,241,.1);
+  border: 1px solid rgba(99,102,241,.25);
+  border-radius: var(--r-pill);
+  padding: 2px 7px;
+}
+.svc-ai-category {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+.svc-ai-metric {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--c2);
+  background: rgba(34,211,238,.08);
+  border: 1px solid rgba(34,211,238,.2);
+  border-radius: var(--r-pill);
+  padding: 2px 8px;
+}
+.svc-ai-title {
+  font-family: var(--font-display);
+  font-size: clamp(17px, 1.5vw, 22px);
+  font-weight: 400;
+  letter-spacing: -.01em;
+  line-height: 1.25;
+  color: var(--fg-0);
+  margin: 0;
+}
+.svc-ai-desc {
+  font-size: 13.5px;
+  color: var(--fg-1);
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+.svc-ai-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  color: rgba(99,102,241,.7);
+  margin-top: auto;
+  transition: gap .15s, color .15s;
+}
+
+/* ── Why section ── */
+.svc-why {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line);
+}
+.svc-why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-  
-  @media (max-width: 767px) {
-    .services-grid {
-      grid-template-columns: 1fr !important;
-      gap: 0.75rem !important;
-    }
-  }
+}
+.svc-why__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.svc-why__stat {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  text-align: center;
+}
+.svc-why__stat-n {
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: -.03em;
+  line-height: 1;
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.svc-why__stat-l {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  margin-top: 6px;
+}
 </style>
-

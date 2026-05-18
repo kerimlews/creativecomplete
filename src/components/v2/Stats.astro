@@ -1,16 +1,19 @@
 ---
-const stats = [
-  { n: "81%",   l: "Lead conversion rate",      c: "With AI Agents qualifying 24/7" },
-  { n: "60%",   l: "Faster sales cycles",        c: "vs. manual qualification" },
-  { n: "42.5×", l: "Broadcast campaign ROI",     c: "From existing lead database" },
-  { n: "14×",   l: "More ad conversions",        c: "AI creatives vs. manual design" },
-];
+import getV2Content from '../../utils/v2i18n';
+import type { Lang } from '../../utils/v2i18n';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'en' } = Astro.props;
+const c = getV2Content(lang).stats;
 ---
 
 <section class="v2-stats-strip">
   <div class="v2-container">
     <div class="v2-stats-strip__grid">
-      {stats.map((s, i) => (
+      {c.items.map((s, i) => (
         <div class="v2-stats-strip__cell" style={`--m-d:${i * 0.1}s`}>
           <div class="v2-stats-strip__n" data-count={s.n}>{s.n}</div>
           <div class="v2-stats-strip__l">{s.l}</div>
@@ -21,7 +24,7 @@ const stats = [
     <div class="v2-sc" data-m="up" style="--m-d:.45s">
       <a href="javascript:void(0)" class="v2-sc__btn"
          data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'>
-        Get these numbers for my agency →
+        {c.cta}
       </a>
     </div>
   </div>

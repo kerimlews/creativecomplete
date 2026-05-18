@@ -1,6 +1,15 @@
 ---
 import { Image } from 'astro:assets';
 import { testimonials, getTestimonalImage } from '../../utils/constants';
+import getV2Content from '../../utils/v2i18n';
+import type { Lang } from '../../utils/v2i18n';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'en' } = Astro.props;
+const lc = getV2Content(lang).testimonials;
 
 // Resolve image promises
 const resolved = await Promise.all(
@@ -25,7 +34,7 @@ const stats: Record<string, string> = {
 <section class="v2-testi v2-section">
   <div class="v2-container">
     <div class="v2-section-head">
-      <span class="v2-eyebrow">Client results</span>
+      <span class="v2-eyebrow">{lc.eyebrow}</span>
       <h2 class="v2-h2">
         <span class="v2-grad">Testimonials</span>
       </h2>
@@ -58,7 +67,7 @@ const stats: Record<string, string> = {
             <div class="v2-testi__role">{main.role}, {main.company}</div>
           </div>
         </div>
-        <div class="v2-testi__read">Read case study →</div>
+        <div class="v2-testi__read">{lc.readCaseStudy}</div>
       </a>
 
       <!-- Small testimonials -->
@@ -88,13 +97,13 @@ const stats: Record<string, string> = {
               <div class="v2-testi__role">{t.role}, {t.company}</div>
             </div>
           </div>
-          <div class="v2-testi__read">Read case study →</div>
+          <div class="v2-testi__read">{lc.readCaseStudy}</div>
         </a>
       ))}
     </div>
     <div class="v2-sc" data-m="up" style="--m-d:.3s">
       <a href="javascript:void(0)" class="v2-sc__btn primary" data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'>
-        Join us →
+        {lc.joinCta}
       </a>
       
     </div>

@@ -4,13 +4,26 @@ export interface Props {
 }
 const { active = 'home' } = Astro.props;
 
+const seg = Astro.url.pathname.split('/').filter(Boolean)[0];
+const lang = (seg === 'de' || seg === 'sl') ? seg : 'en';
+const base = lang === 'en' ? '' : `/${lang}`;
+
+const navContent: Record<string, { home: string; engines: string; howItWorks: string; results: string; projects: string; blog: string; audit: string }> = {
+  en: { home: 'Home', engines: 'Engines', howItWorks: 'How it works', results: 'Results', projects: 'Projects', blog: 'Blog', audit: 'Free audit' },
+  de: { home: 'Home', engines: 'Engines', howItWorks: 'So funktioniert\'s', results: 'Ergebnisse', projects: 'Projekte', blog: 'Blog', audit: 'Kostenloses Audit' },
+  sl: { home: 'Home', engines: 'Sistemi', howItWorks: 'Kako deluje', results: 'Rezultati', projects: 'Projekti', blog: 'Blog', audit: 'Brezplačni audit' },
+};
+const n = navContent[lang];
+
+const projectsHref = lang === 'de' ? '/de/projekte/' : lang === 'sl' ? '/sl/projekti/' : '/projects/';
+
 const links = [
-  { id: 'home',     label: 'Home',         href: '/' },
-  { id: 'engines', label: 'Engines',     href: '/#engines' },
-  { id: 'process',  label: 'How it works', href: '/#how-it-works' },
-  { id: 'results',  label: 'Results',      href: '/#results' },
-  { id: 'projects', label: 'Projects',     href: '/projects/' },
-  { id: 'blog',     label: 'Blog',         href: '/blog/' },
+  { id: 'home',     label: n.home,        href: `${base}/` },
+  { id: 'engines',  label: n.engines,     href: `${base}/#engines` },
+  { id: 'process',  label: n.howItWorks,  href: `${base}/#how-it-works` },
+  { id: 'results',  label: n.results,     href: `${base}/#results` },
+  { id: 'projects', label: n.projects,    href: projectsHref },
+  { id: 'blog',     label: n.blog,        href: `${base}/blog/` },
 ];
 ---
 
@@ -18,7 +31,7 @@ const links = [
   <div class="v2-container">
     <div class="v2-nav__inner">
       <!-- Logo -->
-      <a href="/" class="v2-nav__logo">
+      <a href={`${base}/`} class="v2-nav__logo">
         <img src="/logo-gradient.svg" alt="CreativeComplete" class="v2-nav__logo-img" width="22" height="36" />
         <span class="v2-nav__logo-text">Creative<span class="v2-grad">Complete</span></span>
       </a>
@@ -36,7 +49,7 @@ const links = [
       <div class="v2-nav__right">
         <span class="v2-nav__badge">🏆 #1 AI Agency</span>
         <a href="javascript:void(0)" class="v2-btn v2-btn-primary" style="height:40px;padding:0 18px;font-size:14px;" data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'>
-          Free audit
+          {n.audit}
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>

@@ -1,7 +1,20 @@
 ---
 import { getCollection } from 'astro:content';
+import getV2Content from '../../utils/v2i18n';
+import type { Lang } from '../../utils/v2i18n';
 
-const allPosts = await getCollection('blogs');
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'en' } = Astro.props;
+const lc = getV2Content(lang).blogScroll;
+
+const collectionName = lang === 'de' ? 'blogsDe' : lang === 'sl' ? 'blogsSl' : 'blogs';
+const blogBase = lang === 'de' ? '/de/blog' : lang === 'sl' ? '/sl/blog' : '/blog';
+const dateLocale = lang === 'de' ? 'de-DE' : lang === 'sl' ? 'sl-SI' : 'en-US';
+
+const allPosts = await getCollection(collectionName);
 
 const posts = allPosts
   .map(post => {
@@ -27,11 +40,11 @@ const posts = allPosts
   <div class="v2-container">
     <div class="bs__head" data-m="up">
       <div class="bs__head-left">
-        <span class="v2-eyebrow">From the blog</span>
-        <h2 class="v2-h3 bs__title">Guides that <span class="v2-grad">close deals.</span></h2>
+        <span class="v2-eyebrow">{lc.eyebrow}</span>
+        <h2 class="v2-h3 bs__title">{lc.title} <span class="v2-grad">{lc.titleGrad}</span></h2>
       </div>
-      <a href="/blog/" class="bs__see-all">
-        All articles
+      <a href={`${blogBase}/`} class="bs__see-all">
+        {lc.seeAll}
         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
           <path d="M2.5 10.5L10.5 2.5M10.5 2.5H4.5M10.5 2.5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -43,12 +56,12 @@ const posts = allPosts
   <div class="bs__track-wrap">
     <div class="bs__track" id="bs-track">
       {posts.map((post, i) => {
-        const date = new Date(post.published).toLocaleDateString('en-US', {
+        const date = new Date(post.published).toLocaleDateString(dateLocale, {
           month: 'short', day: 'numeric', year: 'numeric',
         });
         return (
           <a
-            href={`/blog/${post.slug}/`}
+            href={`${blogBase}/${post.slug}/`}
             class="bs__card"
             data-m="up"
             style={`--m-d:${i * 0.07}s`}
@@ -62,7 +75,7 @@ const posts = allPosts
             <div class="bs__card-foot">
               <span class="bs__date">{date}</span>
               <span class="bs__arrow">
-                Read
+                {lc.readLabel}
                 <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
                   <path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -73,13 +86,13 @@ const posts = allPosts
       })}
 
       <!-- "See all" end card -->
-      <a href="/blog/" class="bs__card bs__card--all">
+      <a href={`${blogBase}/`} class="bs__card bs__card--all">
         <span class="bs__all-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
-        <span class="bs__all-label">View all articles</span>
+        <span class="bs__all-label">{lc.viewAll}</span>
       </a>
     </div>
 

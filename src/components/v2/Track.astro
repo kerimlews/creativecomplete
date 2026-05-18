@@ -1,87 +1,54 @@
 ---
 // Track.astro — Onboarding flow: Schedule → Questions → Price → Setup → You Win
+import getV2Content from '../../utils/v2i18n';
+import type { Lang } from '../../utils/v2i18n';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'en' } = Astro.props;
+const c = getV2Content(lang).track as any;
+
+const stepIcons = [
+  `<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>`,
+  `<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>`,
+  `<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>`,
+  `<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>`,
+  `<path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/>`,
+];
 ---
 
 <section class="v2-track" id="how-it-works">
   <div class="v2-container">
 
     <div class="v2-track__head">
-      <span class="v2-eyebrow" data-m="fade">How we start</span>
+      <span class="v2-eyebrow" data-m="fade">{c.eyebrow}</span>
       <h2 class="v2-track__title" data-m="up" style="--m-d:.08s">
-        From first call to <span class="v2-grad">live system</span> in days, not months.
+        {c.title} <span class="v2-grad">{c.titleGrad}</span>{c.titleSuffix}
       </h2>
     </div>
 
     <div class="v2-track__steps">
 
-      <div class="v2-track__step" data-m="up" style="--m-d:.05s">
-        <div class="v2-track__num">01</div>
-        <div class="v2-track__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
-          </svg>
+      {c.steps.map((step: any, i: number) => (
+        <div class:list={['v2-track__step', { win: i === 4 }]} data-m="up" style={`--m-d:${0.05 + i * 0.08}s`}>
+          <div class:list={['v2-track__num', { win: i === 4 }]}>{String(i + 1).padStart(2, '0')}</div>
+          <div class:list={['v2-track__icon', { win: i === 4 }]}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" set:html={stepIcons[i]} />
+          </div>
+          <div class:list={['v2-track__label', { win: i === 4 }]}>{step.label}</div>
+          <div class="v2-track__desc">{step.desc}</div>
+          {i < 4 && <div class="v2-track__connector" aria-hidden="true"></div>}
         </div>
-        <div class="v2-track__label">Schedule a Call</div>
-        <div class="v2-track__desc">Book a free system audit — 30 minutes, no pressure.</div>
-        <div class="v2-track__connector" aria-hidden="true"></div>
-      </div>
-
-      <div class="v2-track__step" data-m="up" style="--m-d:.13s">
-        <div class="v2-track__num">02</div>
-        <div class="v2-track__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-          </svg>
-        </div>
-        <div class="v2-track__label">Answer Questions</div>
-        <div class="v2-track__desc">We learn your business, channels, goals, and current lead flow.</div>
-        <div class="v2-track__connector" aria-hidden="true"></div>
-      </div>
-
-      <div class="v2-track__step" data-m="up" style="--m-d:.21s">
-        <div class="v2-track__num">03</div>
-        <div class="v2-track__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-          </svg>
-        </div>
-        <div class="v2-track__label">Set Monthly Price</div>
-        <div class="v2-track__desc">One fixed monthly fee. No surprises, no hidden costs, no per-seat pricing.</div>
-        <div class="v2-track__connector" aria-hidden="true"></div>
-      </div>
-
-      <div class="v2-track__step" data-m="up" style="--m-d:.29s">
-        <div class="v2-track__num">04</div>
-        <div class="v2-track__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
-        </div>
-        <div class="v2-track__label">System Setup</div>
-        <div class="v2-track__desc">We build, connect, and deploy the full AI Customer System. You do nothing.</div>
-        <div class="v2-track__connector" aria-hidden="true"></div>
-      </div>
-
-      <div class="v2-track__step win" data-m="up" style="--m-d:.37s">
-        <div class="v2-track__num win">05</div>
-        <div class="v2-track__icon win">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/>
-            <path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
-            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
-            <path d="M18 2H6v7a6 6 0 0012 0V2z"/>
-          </svg>
-        </div>
-        <div class="v2-track__label win">You Winning</div>
-        <div class="v2-track__desc">Leads qualify themselves. Hot leads book. Your CRM converts on autopilot.</div>
-      </div>
+      ))}
 
     </div>
 
     <div class="v2-sc" data-m="up" style="--m-d:.45s">
       <a href="javascript:void(0)" class="v2-sc__btn primary"
          data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'>
-        Book my strategy call →
+        {c.cta}
       </a>
     </div>
 

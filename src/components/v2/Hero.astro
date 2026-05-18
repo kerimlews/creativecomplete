@@ -1,5 +1,14 @@
 ---
 import LeadJourneyMotion from './LeadJourneyMotion.astro';
+import getV2Content from '../../utils/v2i18n';
+import type { Lang } from '../../utils/v2i18n';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'en' } = Astro.props;
+const c = getV2Content(lang).hero;
 ---
 
 <section class="v2-hero">
@@ -9,14 +18,14 @@ import LeadJourneyMotion from './LeadJourneyMotion.astro';
     <div class="v2-hero__top">
       <div class="v2-hero__badge">
         <span class="v2-hero__badge-dot"></span>
-        <span class="v2-hero__badge-text">AI Customer System, Live</span>
+        <span class="v2-hero__badge-text">{c.badge}</span>
       </div>
       <h1 class="v2-h1">
-        Maximize Every Lead's Potential <br/>
-        <span class="v2-grad">Without Scaling Your Team</span>
+        {c.h1Line1} <br/>
+        <span class="v2-grad">{c.h1Line2}</span>
       </h1>
       <p class="v2-hero__subtitle">
-        We build, run, and own the AI ad-to-chat campaign. You just get results.
+        {c.subtitle}
       </p>
     </div>
 
@@ -51,12 +60,12 @@ import LeadJourneyMotion from './LeadJourneyMotion.astro';
           data-cal-namespace="30min"
           data-cal-config='{"layout":"month_view","theme":"dark"}'
         >
-          Get free system audit
+          {c.ctaPrimary}
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
-        <a href="#how-it-works" class="v2-btn v2-btn-outline">See how it works</a>
+        <a href="#how-it-works" class="v2-btn v2-btn-outline">{c.ctaSecondary}</a>
       </div>
 
       <div class="v2-hero__trust">
@@ -67,7 +76,7 @@ import LeadJourneyMotion from './LeadJourneyMotion.astro';
         </div>
         <span class="v2-hero__trust-sep" aria-hidden="true"></span>
         <span class="v2-hero__trust-text">
-          trust AI Customer System
+          {c.trustText}
         </span>
       </div>
     </div>

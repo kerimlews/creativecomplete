@@ -1,45 +1,168 @@
 ---
-const system = [
-  { label: "AI Lead Qualification",       href: "/services/ai-lead-qualification/"         },
-  { label: "AI Ad Creative Engine",       href: "/services/ai-ad-creative-engine/"         },
-  { label: "Speed to Lead System",        href: "/services/speed-to-lead-system/"          },
-  { label: "WhatsApp Monetization",       href: "/services/whatsapp-database-monetization/" },
-  { label: "How it works",               href: "/#how-it-works"                           },
-  { label: "Results",                    href: "/#results"                                },
-];
+const seg = Astro.url.pathname.split('/').filter(Boolean)[0];
+const lang = (seg === 'de' || seg === 'sl') ? seg : 'en';
+const base = lang === 'en' ? '' : `/${lang}`;
 
-const services = [
-  { label: "AI Automation",        href: "/services/automation/"          },
-  { label: "Web Design",           href: "/services/web-design/"          },
-  { label: "SEO",                  href: "/services/seo/"                 },
-  { label: "E-commerce",           href: "/services/ecommerce/"           },
-  { label: "Mobile Apps",          href: "/services/mobile-development/"  },
-  { label: "Custom SaaS",          href: "/services/saas-development/"    },
-  { label: "Local SEO",            href: "/services/local-seo/"           },
-];
+// ── Link maps per language ──────────────────────────────────────────────────
+type FooterLink = { label: string; href: string; cal?: undefined } | { label: string; cal: true; href?: undefined };
 
-const blog = [
-  { label: "Speed to Lead",               href: "/blog/speed-to-lead/"                  },
-  { label: "AI Lead Qualification",       href: "/blog/ai-lead-qualification/"          },
-  { label: "WhatsApp Broadcasts",         href: "/blog/whatsapp-broadcast-campaigns/"   },
-  { label: "AI Ad Creatives",            href: "/blog/ai-ad-creatives/"               },
-  { label: "AI Sales Agents",            href: "/blog/ai-sales-agents/"               },
-  { label: "CRM Automation",             href: "/blog/crm-automation/"                },
-];
+const systemLinks: Record<string, FooterLink[]> = {
+  en: [
+    { label: "AI Lead Qualification",  href: "/services/ai-lead-qualification/"          },
+    { label: "AI Ad Creative Engine",  href: "/services/ai-ad-creative-engine/"          },
+    { label: "Speed to Lead System",   href: "/services/speed-to-lead-system/"           },
+    { label: "WhatsApp Monetization",  href: "/services/whatsapp-database-monetization/" },
+    { label: "How it works",           href: "/#how-it-works"                            },
+    { label: "Results",                href: "/#results"                                 },
+  ],
+  de: [
+    { label: "KI-Leadqualifizierung",      href: "/de/dienstleistungen/ai-lead-qualification/"          },
+    { label: "KI-Werbemittel",             href: "/de/dienstleistungen/ai-ad-creative-engine/"          },
+    { label: "Speed-to-Lead System",       href: "/de/dienstleistungen/speed-to-lead-system/"           },
+    { label: "WhatsApp-Monetarisierung",   href: "/de/dienstleistungen/whatsapp-datenbank-monetarisierung/" },
+    { label: "So funktioniert's",          href: "/de/#how-it-works"                                    },
+    { label: "Ergebnisse",                 href: "/de/#results"                                          },
+  ],
+  sl: [
+    { label: "AI kvalifikacija leadov",    href: "/sl/storitve/ai-kvalifikacija-leadov/"          },
+    { label: "AI oglaševalski sistem",     href: "/sl/storitve/ai-oglasevalski-kreativni-sistem/" },
+    { label: "Hitrost do leada",           href: "/sl/storitve/hitrost-do-leada/"                 },
+    { label: "WhatsApp monetizacija",      href: "/sl/storitve/whatsapp-monetizacija-baze/"       },
+    { label: "Kako deluje",                href: "/sl/#how-it-works"                              },
+    { label: "Rezultati",                  href: "/sl/#results"                                   },
+  ],
+};
 
-const company = [
-  { label: "About CreativeComplete", href: "/about/"            },
-  { label: "Meet Kerim",             href: "/kerim-alihodza/"  },
-  { label: "Case Studies",           href: "/projects/"        },
-  { label: "Blog",                   href: "/blog/"            },
-  { label: "Contact",                href: "/contact"          },
-];
+const serviceLinks: Record<string, FooterLink[]> = {
+  en: [
+    { label: "AI Automation",   href: "/services/automation/"         },
+    { label: "Web Design",      href: "/services/web-design/"         },
+    { label: "SEO",             href: "/services/seo/"                },
+    { label: "E-commerce",      href: "/services/ecommerce/"          },
+    { label: "Mobile Apps",     href: "/services/mobile-development/" },
+    { label: "Custom SaaS",     href: "/services/saas-development/"   },
+    { label: "Local SEO",       href: "/services/local-seo/"          },
+  ],
+  de: [
+    { label: "KI-Automatisierung", href: "/de/dienstleistungen/automation/"         },
+    { label: "Webdesign",          href: "/de/dienstleistungen/web-design/"         },
+    { label: "SEO",                href: "/de/dienstleistungen/seo/"                },
+    { label: "E-Commerce",         href: "/de/dienstleistungen/ecommerce/"          },
+    { label: "Mobile Apps",        href: "/de/dienstleistungen/mobile-development/" },
+    { label: "Custom SaaS",        href: "/de/dienstleistungen/saas-development/"   },
+    { label: "Lokales SEO",        href: "/de/dienstleistungen/local-seo/"          },
+  ],
+  sl: [
+    { label: "AI avtomatizacija",  href: "/sl/storitve/automation/"         },
+    { label: "Spletno oblikovanje",href: "/sl/storitve/web-design/"         },
+    { label: "SEO",                href: "/sl/storitve/seo/"                },
+    { label: "E-commerce",         href: "/sl/storitve/ecommerce/"          },
+    { label: "Mobilne aplikacije", href: "/sl/storitve/mobile-development/" },
+    { label: "SaaS razvoj",        href: "/sl/storitve/saas-development/"   },
+    { label: "Lokalni SEO",        href: "/sl/storitve/local-seo/"          },
+  ],
+};
 
-const resources = [
-  { label: "Book Free Audit", cal: true },
-  { label: "Privacy Policy",  href: "/privacy-policy/" },
-  { label: "Terms of Use",    href: "/terms-of-use/"   },
-];
+const blogLinksMap: Record<string, FooterLink[]> = {
+  en: [
+    { label: "Speed to Lead",         href: "/blog/speed-to-lead/"                },
+    { label: "AI Lead Qualification", href: "/blog/ai-lead-qualification/"        },
+    { label: "WhatsApp Broadcasts",   href: "/blog/whatsapp-broadcast-campaigns/" },
+    { label: "AI Ad Creatives",       href: "/blog/ai-ad-creatives/"              },
+    { label: "AI Sales Agents",       href: "/blog/ai-sales-agents/"              },
+    { label: "CRM Automation",        href: "/blog/crm-automation/"               },
+  ],
+  de: [
+    { label: "Speed to Lead",             href: "/de/blog/speed-to-lead/"                },
+    { label: "KI-Leadqualifizierung",     href: "/de/blog/ai-lead-qualification/"        },
+    { label: "WhatsApp-Broadcasts",       href: "/de/blog/whatsapp-broadcast-campaigns/" },
+    { label: "KI-Werbemittel",            href: "/de/blog/ai-ad-creatives/"              },
+    { label: "KI-Vertriebsagenten",       href: "/de/blog/ai-sales-agents/"              },
+    { label: "CRM-Automatisierung",       href: "/de/blog/crm-automation/"               },
+  ],
+  sl: [
+    { label: "Hitrost do leada",          href: "/sl/blog/speed-to-lead/"                },
+    { label: "AI kvalifikacija leadov",   href: "/sl/blog/ai-lead-qualification/"        },
+    { label: "WhatsApp broadcast",        href: "/sl/blog/whatsapp-broadcast-campaigns/" },
+    { label: "AI oglaševalski kreativci", href: "/sl/blog/ai-ad-creatives/"              },
+    { label: "AI prodajni agenti",        href: "/sl/blog/ai-sales-agents/"              },
+    { label: "Avtomatizacija CRM",        href: "/sl/blog/crm-automation/"               },
+  ],
+};
+const blogLinks = blogLinksMap[lang];
+
+const companyLinks: Record<string, FooterLink[]> = {
+  en: [
+    { label: "About CreativeComplete", href: "/about/"           },
+    { label: "Meet Kerim",             href: "/kerim-alihodza/" },
+    { label: "Case Studies",           href: "/projects/"       },
+    { label: "Blog",                   href: "/blog/"           },
+    { label: "Contact",                href: "/contact/"        },
+  ],
+  de: [
+    { label: "Über CreativeComplete", href: "/de/about/"       },
+    { label: "Kerim kennenlernen",    href: "/kerim-alihodza/" },
+    { label: "Fallstudien",           href: "/de/projekte/"    },
+    { label: "Blog",                  href: "/de/blog/"        },
+    { label: "Kontakt",               href: "/de/contact/"     },
+  ],
+  sl: [
+    { label: "O CreativeComplete",    href: "/sl/about/"       },
+    { label: "Spoznaj Kerima",        href: "/kerim-alihodza/" },
+    { label: "Primeri iz prakse",     href: "/sl/projekti/"    },
+    { label: "Blog",                  href: "/sl/blog/"        },
+    { label: "Kontakt",               href: "/sl/contact/"     },
+  ],
+};
+
+const resourceLinks: Record<string, FooterLink[]> = {
+  en: [
+    { label: "Book Free Audit", cal: true },
+    { label: "Privacy Policy",  href: "/privacy-policy/" },
+    { label: "Terms of Use",    href: "/terms-of-use/"   },
+  ],
+  de: [
+    { label: "Kostenloses Audit buchen", cal: true },
+    { label: "Datenschutz",              href: "/privacy-policy/" },
+    { label: "Nutzungsbedingungen",      href: "/terms-of-use/"   },
+  ],
+  sl: [
+    { label: "Rezerviraj brezplačni audit", cal: true },
+    { label: "Zasebnost",                   href: "/privacy-policy/" },
+    { label: "Pogoji uporabe",              href: "/terms-of-use/"   },
+  ],
+};
+
+const footerDesc: Record<string, string> = {
+  en: "Your embedded AI Customer System team. We capture every lead, qualify them in 60 seconds, and monetize your existing database, fully managed, no headcount added.",
+  de: "Ihr eingebettetes KI Customer System Team. Wir erfassen jeden Lead, qualifizieren ihn in 60 Sekunden und monetarisieren Ihre bestehende Datenbank — vollständig gemanagt, kein zusätzliches Personal.",
+  sl: "Vaša vgrajena ekipa AI Customer System. Zajemamo vsak lead, ga kvalificiramo v 60 sekundah in monetiziramo vašo obstoječo bazo — popolnoma upravljano, brez novih zaposlitev.",
+};
+
+const auditLabel: Record<string, string> = {
+  en: "Book free audit",
+  de: "Kostenloses Audit buchen",
+  sl: "Rezerviraj brezplačni audit",
+};
+
+const colHeads: Record<string, { system: string; services: string; blog: string; company: string; resources: string }> = {
+  en: { system: "AI Customer System", services: "Services",        blog: "Blog", company: "Company",    resources: "Resources"  },
+  de: { system: "KI Customer System", services: "Dienstleistungen", blog: "Blog", company: "Unternehmen", resources: "Ressourcen" },
+  sl: { system: "AI Customer System", services: "Storitve",         blog: "Blog", company: "Podjetje",    resources: "Viri"       },
+};
+
+const legalLabel: Record<string, { copyright: string; privacy: string; terms: string; contact: string }> = {
+  en: { copyright: "© 2026 CreativeComplete · AI Customer System Agency", privacy: "Privacy", terms: "Terms",       contact: "Contact" },
+  de: { copyright: "© 2026 CreativeComplete · KI Customer System Agentur", privacy: "Datenschutz", terms: "AGB",   contact: "Kontakt" },
+  sl: { copyright: "© 2026 CreativeComplete · AI Customer System agencija", privacy: "Zasebnost", terms: "Pogoji", contact: "Kontakt" },
+};
+
+const system   = systemLinks[lang];
+const services = serviceLinks[lang];
+const company  = companyLinks[lang];
+const resources = resourceLinks[lang];
+const heads    = colHeads[lang];
+const legal    = legalLabel[lang];
 
 const langs = [
   { code: "EN", href: "/"     },
@@ -53,14 +176,11 @@ const langs = [
     <div class="v2-footer__grid">
       <!-- Brand -->
       <div class="v2-footer__brand">
-        <a href="/" class="v2-footer__logo">
+        <a href={`${base}/`} class="v2-footer__logo">
           <img src="/logo-gradient.svg" alt="CreativeComplete" class="v2-footer__logo-img" width="20" height="32" />
           <span class="v2-footer__logo-text">Creative<span class="v2-grad">Complete</span></span>
         </a>
-        <p class="v2-footer__desc">
-          Your embedded AI Customer System team. We capture every lead, qualify them in 60 seconds,
-          and monetize your existing database, fully managed, no headcount added.
-        </p>
+        <p class="v2-footer__desc">{footerDesc[lang]}</p>
         <div class="v2-footer__partner-chips">
           <span class="v2-chip">WhatsApp Business API</span>
           <span class="v2-chip-cyan">AI Creative Engine</span>
@@ -69,7 +189,7 @@ const langs = [
 
       <!-- System -->
       <div>
-        <div class="v2-footer__head">AI Customer System</div>
+        <div class="v2-footer__head">{heads.system}</div>
         <ul>
           {system.map(l => <li><a href={l.href}>{l.label}</a></li>)}
         </ul>
@@ -77,23 +197,23 @@ const langs = [
 
       <!-- Services -->
       <div>
-        <div class="v2-footer__head">Services</div>
+        <div class="v2-footer__head">{heads.services}</div>
         <ul>
           {services.map(l => <li><a href={l.href}>{l.label}</a></li>)}
         </ul>
       </div>
 
-      <!-- Blog -->
+      <!-- Blog (always EN) -->
       <div>
-        <div class="v2-footer__head">Blog</div>
+        <div class="v2-footer__head">{heads.blog}</div>
         <ul>
-          {blog.map(l => <li><a href={l.href}>{l.label}</a></li>)}
+          {blogLinks.map(l => <li><a href={l.href}>{l.label}</a></li>)}
         </ul>
       </div>
 
       <!-- Company -->
       <div>
-        <div class="v2-footer__head">Company</div>
+        <div class="v2-footer__head">{heads.company}</div>
         <ul>
           {company.map(l => <li><a href={l.href}>{l.label}</a></li>)}
         </ul>
@@ -101,7 +221,7 @@ const langs = [
 
       <!-- Resources + CTA -->
       <div>
-        <div class="v2-footer__head">Resources</div>
+        <div class="v2-footer__head">{heads.resources}</div>
         <ul>
           {resources.map(l => (
             <li>
@@ -125,7 +245,7 @@ const langs = [
             class="v2-btn v2-btn-primary"
             style="height:42px;font-size:13px;"
           >
-            Book free audit
+            {auditLabel[lang]}
             <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
               <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -137,14 +257,14 @@ const langs = [
     <hr class="v2-hr" style="margin:40px 0 24px" />
 
     <div class="v2-footer__legal">
-      <div>© 2026 CreativeComplete · AI Customer System Agency</div>
+      <div>{legal.copyright}</div>
       <div class="v2-footer__legal-right">
-        <a href="/privacy-policy/">Privacy</a>
-        <a href="/terms-of-use/">Terms</a>
-        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">{legal.privacy}</a>
+        <a href="/terms-of-use/">{legal.terms}</a>
+        <a href={`${base}/contact/`}>{legal.contact}</a>
         <div class="v2-footer__langs">
           {langs.map(l => (
-            <a href={l.href} class="v2-footer__lang">{l.code}</a>
+            <a href={l.href} class:list={['v2-footer__lang', { active: l.href === `${base}/` || (l.href === '/' && lang === 'en') }]}>{l.code}</a>
           ))}
         </div>
       </div>

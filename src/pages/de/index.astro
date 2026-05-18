@@ -1,0 +1,68 @@
+---
+import LayoutV2 from '../../layouts/LayoutV2.astro';
+import Hero from '../../components/v2/Hero.astro';
+import Clients from '../../components/v2/Clients.astro';
+import Stats from '../../components/v2/Stats.astro';
+import Services from '../../components/v2/Services.astro';
+import Results from '../../components/v2/Results.astro';
+import BlogScroll from '../../components/v2/BlogScroll.astro';
+import Testimonials from '../../components/v2/Testimonials.astro';
+import FAQ from '../../components/v2/FAQ.astro';
+import Track from '../../components/v2/Track.astro';
+import EndToEnd from '../../components/v2/EndToEnd.astro';
+import CTA from '../../components/v2/CTA.astro';
+import BookingSection from '../../components/v2/BookingSection.astro';
+
+const siteUrl = 'https://www.creativecomplete.com';
+const canonicalUrl = `${siteUrl}/de/`;
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteUrl}#organization`,
+    "name": "CreativeComplete",
+    "url": siteUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/favicon.svg`
+    },
+    "description": "KI Customer System Agentur — Leadqualifizierung, KI-Werbemittel und WhatsApp-Broadcast-Kampagnen für Agenturen im DACH-Raum.",
+    "areaServed": ["DE", "AT", "CH"],
+    "inLanguage": "de"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/de/#website`,
+    "url": canonicalUrl,
+    "name": "CreativeComplete",
+    "inLanguage": "de",
+    "publisher": { "@id": `${siteUrl}#organization` }
+  }
+];
+---
+
+<LayoutV2
+  lang="de"
+  title="KI Customer System — Leadqualifizierung & Conversion-Agentur | CreativeComplete"
+  description="KI Customer System, das neue Leads in unter 60 Sekunden qualifiziert, mit KI-generierten Werbemitteln konvertiert und 42.5× ROI aus Ihrer bestehenden Lead-Datenbank generiert. CreativeComplete ist die #1 KI Customer System Agentur."
+  canonicalUrl={canonicalUrl}
+  navActive="home"
+  structuredData={structuredData}
+>
+  <main>
+    <Hero lang="de" />
+    <Track lang="de" />
+    <Clients lang="de" />
+    <Stats lang="de" />
+    <EndToEnd lang="de" />
+    <Services lang="de" />
+    <Results lang="de" />
+    <BlogScroll lang="de" />
+    <Testimonials lang="de" />
+    <FAQ lang="de" />
+    <CTA lang="de" />
+    <BookingSection lang="de" />
+  </main>
+</LayoutV2>
