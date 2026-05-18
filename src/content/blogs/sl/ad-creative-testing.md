@@ -1,7 +1,7 @@
 ---
 title: "Testiranje oglasnih kreativ: kako najti zmagovalce brez kurjenja proračuna"
 description: "Večina oglasnih računov testira 2–3 različice in upa, da bo ena delovala. Zmagovalne kampanje testirajo 20–30 sistematično. Tukaj je okvir, ki znižuje stroške na lead in skalira porabo."
-slug: ad-creative-testing
+slug: testiranje-oglasnih-kreativ
 author: kerim-alihodza
 published: "2026-05-17"
 updated: "2026-05-17"
@@ -51,7 +51,7 @@ Najpogostejše napake pri testiranju kreativ — in zakaj proizvajajo slabe poda
 
 Test se začne z obsegom. Preden lansirate en sam oglas, je cilj imeti 15–30 različic kreativ pripravljenih — različne slike, različni naslovi, različni koti na isto osnovno sporočilo.
 
-[AI generiranje kreativ](/sl/blog/ai-ad-creatives/) to omogoča brez sorazmernega povečanja produkcijskih stroškov. En brief — znamka, smer copyja, ciljno občinstvo, platforma — proizvede 20+ različic v minutah, vsako vnaprej ocenjeno za napovedano zmogljivost.
+[AI generiranje kreativ](/sl/blog/ai-oglasne-kreative/) to omogoča brez sorazmernega povečanja produkcijskih stroškov. En brief — znamka, smer copyja, ciljno občinstvo, platforma — proizvede 20+ različic v minutah, vsako vnaprej ocenjeno za napovedano zmogljivost.
 
 Vnaprejšnje ocenjevanje ne odpravi testiranja. Odpravi pa najslabše izvajalce, preden porabijo kakršen koli proračun. Če AI napove, da bo 8 različic slabo delovalo na podlagi vzorcev primerljivih kampanj, lahko lansirate top 12 in preskočite zapravljanje proračuna na spodnjih 8.
 
@@ -92,7 +92,7 @@ Iterativna narava tega procesa pomeni, da vsak cikel začne z boljšega položaj
 
 Stranka, ki vstopi s 3-variantnim oglasnim računom in se premakne na 20-variantni sistematski testni okvir, običajno vidi:
 
-- **40–60% zmanjšanje** [stroškov na lead](/sl/blog/whatsapp-lead-generation/) v prvih 90 dneh
+- **40–60% zmanjšanje** [stroškov na lead](/sl/blog/whatsapp-pridobivanje-leadov/) v prvih 90 dneh
 - **3–5× povečanje** števila dobičkonosnih kreativnih konceptov, ki tečejo hkrati
 - **Predvidljiva kreativna cev** — vedno imate pripravljene testirane različice za zamenjavo utrujenih oglasov
 

@@ -1,7 +1,7 @@
 ---
 title: "Automatisierte Lead-Verteilung: 100% mehr Abschlüsse"
 description: "Automatisierte Lead-Verteilung verhindert, dass Leads in Postfächern sterben. Erfahren Sie die 7 Routing-Regeln für 94% schnellere Auflösung und 200% mehr Kunden — ohne Neueinstellungen."
-slug: automated-lead-distribution
+slug: automatisierte-lead-verteilung
 author: kerim-alihodza
 published: "2026-05-15"
 updated: "2026-05-15"
@@ -25,7 +25,7 @@ faq:
 
 Jedes Vertriebsteam hat ein Lead-Verteilungs-Problem. Die meisten wissen es nur noch nicht.
 
-Leads liegen in einem geteilten Postfach, während drei Reps daran vorbeiscrollen und annehmen, dass jemand anderes antwortet. Ein französischsprachiger Prospect wird an einen Rep geroutet, der kein Französisch spricht. Eine Enterprise-Anfrage landet in der Queue direkt neben einem kalten Kontakt von vor sechs Monaten. Ihr bester Closer ist offline, wenn der [heißeste Lead](/de/blog/ai-lead-qualification/) der Woche ankommt.
+Leads liegen in einem geteilten Postfach, während drei Reps daran vorbeiscrollen und annehmen, dass jemand anderes antwortet. Ein französischsprachiger Prospect wird an einen Rep geroutet, der kein Französisch spricht. Eine Enterprise-Anfrage landet in der Queue direkt neben einem kalten Kontakt von vor sechs Monaten. Ihr bester Closer ist offline, wenn der [heißeste Lead](/de/blog/ki-lead-qualifizierung/) der Woche ankommt.
 
 So sieht manuelle Lead-Verteilung in Skalierung aus. Es ist kein Menschen-Problem — es ist ein System-Problem. Und automatisierte Lead-Verteilung ist die Lösung.
 
@@ -65,7 +65,7 @@ Round Robin macht auch Performance-Daten schneller sichtbar. Wenn jeder Rep unge
 
 Nicht alle Leads sind gleich, und nicht alle Agents sind gleich gut für jeden Lead geeignet. Skill-basiertes Routing matcht die Komplexität und das Thema der Anfrage mit dem Agent, der am besten geeignet ist.
 
-Technische Produktfragen gehen an technische Spezialisten. Preis- und Vertragsgespräche routen zu [Senior-Closern](/de/blog/ai-sales-agents/). Onboarding-Anfragen gehen an Customer Success. Der Lead bekommt die richtige Antwort von der richtigen Person beim Erstkontakt — genau deshalb ist Skill-basiertes Routing der primäre Treiber dieser **94% schnelleren Auflösung**.
+Technische Produktfragen gehen an technische Spezialisten. Preis- und Vertragsgespräche routen zu [Senior-Closern](/de/blog/ki-verkaufsagenten/). Onboarding-Anfragen gehen an Customer Success. Der Lead bekommt die richtige Antwort von der richtigen Person beim Erstkontakt — genau deshalb ist Skill-basiertes Routing der primäre Treiber dieser **94% schnelleren Auflösung**.
 
 ### 4. Sprachbasiertes Routing
 
@@ -115,7 +115,7 @@ Die aggregierten Daten über Teams mit automatisierter Lead-Verteilung erzählen
 
 ## Die Omnichannel-Realität
 
-Ein Detail, das automatisierte Lead-Verteilung von einfachen [CRM](/de/blog/crm-automation/)-Zuweisungsregeln trennt: Sie muss über jeden Kanal gleichzeitig funktionieren.
+Ein Detail, das automatisierte Lead-Verteilung von einfachen [CRM](/de/blog/crm-automatisierung/)-Zuweisungsregeln trennt: Sie muss über jeden Kanal gleichzeitig funktionieren.
 
 Ihre Leads kommen nicht aus einer Quelle. WhatsApp, Instagram DM, TikTok, Facebook Messenger, E-Mail, Web-Chat, SMS — alle aktiv, oft gleichzeitig. Manuelles Routing scheitert am schnellsten, wenn Volumen über Kanäle gleichzeitig spitzt, weil kein menschlicher Router in diesem Tempo triagieren kann.
 

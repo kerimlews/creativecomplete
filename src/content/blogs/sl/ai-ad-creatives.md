@@ -1,7 +1,7 @@
 ---
 title: "AI oglasne kreative: ustvarite oglase, ki konvertirajo 14× bolje"
 description: "Ročna produkcija ubije kampanje, preden se začnejo. Spoznajte 6 AI sistemov, ki generirajo ocenjene, znamki skladne različice v sekundah — in zakaj konvertirajo 14× bolje kot kar koli ročnega."
-slug: ai-ad-creatives
+slug: ai-oglasne-kreative
 author: kerim-alihodza
 published: "2026-05-15"
 updated: "2026-05-15"
@@ -79,7 +79,7 @@ En brief. Vsaka platforma. Nič ročnega spreminjanja velikosti.
 
 ![A/B testiranje v velikem obsegu — zaženite 20 hkratnih testov in samodejno skalirajte zmagovalca](/images/blog/creatives/04-ab-testing.svg)
 
-Pravilno izvajanje [A/B testa](/sl/blog/ad-creative-testing/) ročno pomeni nastavitev dveh oglasnih nizov, spremljanje obeh, odločanje, kdaj je statistična značilnost, ustavitev poraženca in skaliranje zmagovalca — vse ročno, vse zahteva čas, skozi katerega zmogljivost izteka.
+Pravilno izvajanje [A/B testa](/sl/blog/testiranje-oglasnih-kreativ/) ročno pomeni nastavitev dveh oglasnih nizov, spremljanje obeh, odločanje, kdaj je statistična značilnost, ustavitev poraženca in skaliranje zmagovalca — vse ročno, vse zahteva čas, skozi katerega zmogljivost izteka.
 
 AI A/B testiranje vse to izvaja samodejno. Zaženete 20 različic hkrati. Sistem spremlja zmogljivost v realnem času, ustavi slabo izvajajoče kreative, ko dosežejo prage statistične značilnosti, in prerazporedi proračun proti zmagovalcu — brez kakršnega koli ročnega posega.
 
@@ -101,7 +101,7 @@ Rezultat je, da lahko generiranje kreativ predate kateremu koli članu ekipe in 
 
 Večina znamk teče iste kreative hladnim občinstvom in retargeting občinstvom. To je eden najpogostejših razlogov, zakaj retargeting slabo deluje — sporočilo je napačno za to, kje je potencialna stranka v odločitvenem procesu.
 
-Hladna občinstva potrebujejo problemu zavedajoče se kreative širokega dosega, ki uvedejo kategorijo. Topla občinstva potrebujejo družbeni dokaz in nujnost. Vroča občinstva — opuščevalci košarice in [obiskovalci z visoko namero](/sl/blog/speed-to-lead/) — potrebujejo neposredno ponudbo s trdim CTA.
+Hladna občinstva potrebujejo problemu zavedajoče se kreative širokega dosega, ki uvedejo kategorijo. Topla občinstva potrebujejo družbeni dokaz in nujnost. Vroča občinstva — opuščevalci košarice in [obiskovalci z visoko namero](/sl/blog/hitrost-do-leada/) — potrebujejo neposredno ponudbo s trdim CTA.
 
 AI generiranje kreativ samodejno zgradi ločene komplete kreativ za vsako stopnjo lijaka. Brief določa temperaturo občinstva, sistem pa ustrezno prilagodi kreativni slog, ton copyja in vizualno hierarhijo. Vsaka potencialna stranka vidi pravo sporočilo za to, kje je v odločitvenem procesu.
 
@@ -119,7 +119,7 @@ Razlika ni v orodju. Je v kombinaciji obsega, hitrosti, ocenjevanja in usklajeno
 
 Pot implementacije je preprosta: nalaganje brand kita, struktura copy briefinga, izbira platforme, konfiguracija praga ocenjevanja.
 
-Pri **CreativeComplete** to nastavimo kot del našega AI Customer Systema — integrirano z vašimi oglasnimi računi, CRM in usmerjanjem leadov, tako da je vsaka kreativna različica vezana na nadaljnje konverzijske podatke, ne le na metrike klikov na vrhu lijaka. Vidite, katera kreativa je generirala kateri [lead](/sl/blog/whatsapp-lead-generation/), kateri lead je konvertiral in kakšna je bila življenjska vrednost.
+Pri **CreativeComplete** to nastavimo kot del našega AI Customer Systema — integrirano z vašimi oglasnimi računi, CRM in usmerjanjem leadov, tako da je vsaka kreativna različica vezana na nadaljnje konverzijske podatke, ne le na metrike klikov na vrhu lijaka. Vidite, katera kreativa je generirala kateri [lead](/sl/blog/whatsapp-pridobivanje-leadov/), kateri lead je konvertiral in kakšna je bila življenjska vrednost.
 
 Večina strank ima svoj prvi ocenjeni batch kreativ v živo v **5 dneh**.
 

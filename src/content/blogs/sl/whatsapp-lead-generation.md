@@ -1,7 +1,7 @@
 ---
 title: "WhatsApp pridobivanje leadov: kako DM-e spremeniti v kvalificirane leade"
 description: "WhatsApp ima 2 milijardi aktivnih uporabnikov in 98% stopnjo odprtja. Večina podjetij ga še vedno uporablja kot telefonsko linijo. Tukaj je sistem, ki samodejno zajame, kvalificira in pretvori vsak DM."
-slug: whatsapp-lead-generation
+slug: whatsapp-pridobivanje-leadov
 author: kerim-alihodza
 published: "2026-05-17"
 updated: "2026-05-17"
@@ -81,15 +81,15 @@ AI agent vodi pogovor skozi naravno izmenjavo, ki izpostavi:
 
 Celotna izmenjava traja 3–7 minut leadovega časa. Doživijo koristen, sposoben pogovor — ne obrazec ali zaslišanje.
 
-Na koncu je lead ocenjen. Vroči leadi so takoj povezani s prodajnim predstavnikom s polnim kontekstom. Topli leadi vstopijo v 7–14 dnevno zaporedje negovanja. Hladni leadi so označeni za dolgoročno [sledenje](/sl/blog/ai-sales-agents/).
+Na koncu je lead ocenjen. Vroči leadi so takoj povezani s prodajnim predstavnikom s polnim kontekstom. Topli leadi vstopijo v 7–14 dnevno zaporedje negovanja. Hladni leadi so označeni za dolgoročno [sledenje](/sl/blog/ai-prodajni-agenti/).
 
 ## Kaj podjetja narobe počnejo z WhatsApp pridobivanjem leadov
 
 Tri pogoste napake, ki ubijejo konverzijo:
 
-**Počasno odzivanje.** Isto [načelo hitrosti](/sl/blog/speed-to-lead/), ki velja za vsak lead, velja tudi tukaj — namera hitro razpada. AI agent se odzove v sekundah; človeški predstavnik, ki se odzove v urah, popolnoma izgubi okno.
+**Počasno odzivanje.** Isto [načelo hitrosti](/sl/blog/hitrost-do-leada/), ki velja za vsak lead, velja tudi tukaj — namera hitro razpada. AI agent se odzove v sekundah; človeški predstavnik, ki se odzove v urah, popolnoma izgubi okno.
 
-**Uporaba WhatsAppa kot enosmernega [broadcast kanala](/sl/blog/whatsapp-broadcast-campaigns/).** WhatsApp je konverzacijski medij. Leadi, ki prejmejo promocijska sporočila brez kakršnega koli poskusa razumevanja njihovih potreb, konvertirajo pri delčku stopnje leadov, ki doživijo pristno izmenjavo.
+**Uporaba WhatsAppa kot enosmernega [broadcast kanala](/sl/blog/whatsapp-broadcast-kampanje/).** WhatsApp je konverzacijski medij. Leadi, ki prejmejo promocijska sporočila brez kakršnega koli poskusa razumevanja njihovih potreb, konvertirajo pri delčku stopnje leadov, ki doživijo pristno izmenjavo.
 
 **Brez kvalifikacije pred usmerjanjem k predstavniku.** Predstavniki, ki prejmejo vsak WhatsApp lead — ne glede na kakovost — porabijo večino časa za ljudi, ki niso pripravljeni kupiti. Pravi sistem izpostavi samo kvalificirane leade s polnim kontekstom.
 

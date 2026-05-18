@@ -1,7 +1,7 @@
 ---
 title: "Avtomatizirana distribucija leadov: zaključite 100% več poslov"
 description: "Avtomatizirana distribucija leadov prepreči, da bi leadi umrli v poštnih predalih. Spoznajte 7 pravil usmerjanja za 94% hitrejšo razrešitev in 200% več strank — brez zaposlovanja."
-slug: automated-lead-distribution
+slug: avtomatizirana-distribucija-leadov
 author: kerim-alihodza
 published: "2026-05-15"
 updated: "2026-05-15"
@@ -25,7 +25,7 @@ faq:
 
 Vsaka prodajna ekipa ima problem distribucije leadov. Večina tega še ne ve.
 
-Leadi sedijo v skupni pošti, medtem ko trije predstavniki skrolajo mimo njih in predvidevajo, da bo odgovoril nekdo drug. Francosko govoreča potencialna stranka je usmerjena k predstavniku, ki ne govori francosko. Enterprise poizvedba pristane v vrsti poleg hladnega kontakta izpred šestih mesecev. Vaš najboljši closer je offline, ko prispe [najbolj vroč lead](/sl/blog/ai-lead-qualification/) tedna.
+Leadi sedijo v skupni pošti, medtem ko trije predstavniki skrolajo mimo njih in predvidevajo, da bo odgovoril nekdo drug. Francosko govoreča potencialna stranka je usmerjena k predstavniku, ki ne govori francosko. Enterprise poizvedba pristane v vrsti poleg hladnega kontakta izpred šestih mesecev. Vaš najboljši closer je offline, ko prispe [najbolj vroč lead](/sl/blog/ai-kvalifikacija-leadov/) tedna.
 
 Tako izgleda ročna distribucija leadov pri skali. To ni problem ljudi — je problem sistema. In avtomatizirana distribucija leadov je rešitev.
 
@@ -65,7 +65,7 @@ Round Robin tudi hitreje izpostavi podatke o zmogljivosti. Ko vsak predstavnik d
 
 Niso vsi leadi enaki, in niso vsi agenti enako primerni za vsak lead. Usmerjanje na podlagi veščin ujema kompleksnost in temo poizvedbe z agentom, ki je najbolje opremljen za obravnavo.
 
-Tehnična vprašanja o produktih gredo tehničnim specialistom. Pogovori o cenah in pogodbah se usmerjajo k [seniornim closerjem](/sl/blog/ai-sales-agents/). Poizvedbe o onboardingu gredo Customer Successu. Lead dobi pravi odgovor od prave osebe pri prvem stiku — kar je natanko zakaj je usmerjanje na podlagi veščin primarni gonilnik te **94% hitrejše stopnje razrešitve**.
+Tehnična vprašanja o produktih gredo tehničnim specialistom. Pogovori o cenah in pogodbah se usmerjajo k [seniornim closerjem](/sl/blog/ai-prodajni-agenti/). Poizvedbe o onboardingu gredo Customer Successu. Lead dobi pravi odgovor od prave osebe pri prvem stiku — kar je natanko zakaj je usmerjanje na podlagi veščin primarni gonilnik te **94% hitrejše stopnje razrešitve**.
 
 ### 4. Usmerjanje na podlagi jezika
 
@@ -115,7 +115,7 @@ Skupni podatki preko ekip, ki izvajajo avtomatizirano distribucijo, pripovedujej
 
 ## Omnichannel realnost
 
-Ena podrobnost, ki loči avtomatizirano distribucijo leadov od preprostih pravil dodelitve v [CRM](/sl/blog/crm-automation/): mora delovati preko vsakega kanala hkrati.
+Ena podrobnost, ki loči avtomatizirano distribucijo leadov od preprostih pravil dodelitve v [CRM](/sl/blog/crm-avtomatizacija/): mora delovati preko vsakega kanala hkrati.
 
 Vaši leadi ne prihajajo z enega mesta. WhatsApp, Instagram DM, TikTok, Facebook Messenger, e-mail, spletni klepet, SMS — vsi so aktivni, pogosto hkrati. Ročno usmerjanje najhitreje propade, ko obseg skoči preko kanalov hkrati, ker noben človeški usmerjevalnik ne more triažirati pri tej hitrosti.
 

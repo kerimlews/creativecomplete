@@ -1,7 +1,7 @@
 ---
 title: "AI kvalifikacija leadov: ocenite vsak lead, preden ga vaša ekipa vidi"
 description: "Prodajne ekipe zapravijo 70% časa na leadih, ki ne bodo nikoli konvertirali. AI kvalifikacija oceni vsak inbound lead v manj kot 60 sekundah z BANT — preden človek sploh sodeluje."
-slug: ai-lead-qualification
+slug: ai-kvalifikacija-leadov
 author: kerim-alihodza
 published: "2026-05-17"
 updated: "2026-05-17"
@@ -25,7 +25,7 @@ faq:
 
 Prodajne ekipe porabijo 70% časa za leade, ki ne bodo nikoli konvertirali.
 
-Ne zato, ker izbirajo napačne potencialne stranke za klic. Ker nimajo načina, da bi vedeli, kateri leadi so vredni njihovega časa, preden dvignejo telefon. V [CRM](/sl/blog/crm-automation/) vrstici vsak lead izgleda enako — ime, telefonska številka, morda vir. Edini način, da ugotovite, ali je vreden zasledovanja, je, da pokličete.
+Ne zato, ker izbirajo napačne potencialne stranke za klic. Ker nimajo načina, da bi vedeli, kateri leadi so vredni njihovega časa, preden dvignejo telefon. V [CRM](/sl/blog/crm-avtomatizacija/) vrstici vsak lead izgleda enako — ime, telefonska številka, morda vir. Edini način, da ugotovite, ali je vreden zasledovanja, je, da pokličete.
 
 Tako predstavniki pokličejo vse. In 70% teh klicev je zapravljenih za ljudi, ki nimajo proračuna, časovnice, odločevalske avtoritete ali prave potrebe.
 
@@ -35,7 +35,7 @@ AI kvalifikacija leadov to spremeni s tem, da izvaja proces kvalifikacije, prede
 
 ![AI kvalifikacija leadov flow — inbound lead vstopi, AI izvede BANT pogovor, lead prejme oceno 0–100, odločitev usmerjanja samodejno](/images/blog/ai-lead-qualification/01-qualification-flow.svg)
 
-Ko pride nov lead — iz oglasa, DM, spletnega obrazca ali drugega kanala — AI agent začne pogovorno izmenjavo [v sekundah](/sl/blog/speed-to-lead/). Pogovor je naraven, ne skriptiran. Lead ne doživi obrazca ali ankete. Doživi odzivnega, sposobnega sogovornika, ki se zdi, da razume njihovo situacijo.
+Ko pride nov lead — iz oglasa, DM, spletnega obrazca ali drugega kanala — AI agent začne pogovorno izmenjavo [v sekundah](/sl/blog/hitrost-do-leada/). Pogovor je naraven, ne skriptiran. Lead ne doživi obrazca ali ankete. Doživi odzivnega, sposobnega sogovornika, ki se zdi, da razume njihovo situacijo.
 
 Skozi ta pogovor AI sistematično dela skozi okvir kvalifikacije:
 
@@ -89,6 +89,6 @@ Vaši predstavniki še vedno lastnijo odnos. Le da ga lastnijo iz veliko močnej
 
 Pri **CreativeComplete** je AI kvalifikacija leadov vgrajena v drugo fazo našega AI Customer Systema. Vsak inbound lead je kvalificiran, preden se dotakne vaše ekipe — ne glede na to, od kod je prišel, kdaj je prispel ali koliko jih je prišlo hkrati.
 
-Sistem skalira z vašim obsegom. Če jutri zaženete kampanjo in čez vikend pride 400 leadov, so vsi do ponedeljka zjutraj kvalificirani, ocenjeni in [usmerjeni](/sl/blog/automated-lead-distribution/).
+Sistem skalira z vašim obsegom. Če jutri zaženete kampanjo in čez vikend pride 400 leadov, so vsi do ponedeljka zjutraj kvalificirani, ocenjeni in [usmerjeni](/sl/blog/avtomatizirana-distribucija-leadov/).
 
 Večina strank je v živo v **5 dneh**.

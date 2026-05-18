@@ -1,7 +1,7 @@
 ---
 title: "KI-Leadqualifizierung: Jeder Lead in 60 Sekunden bewertet"
 description: "KI-Agenten qualifizieren jeden eingehenden Lead automatisch in unter 60 Sekunden — rund um die Uhr, auf 40+ Kanälen. 81 % Lead-Conversion-Rate. Vollständig verwaltet von CreativeComplete."
-slug: "ai-lead-qualification"
+slug: "ki-lead-qualifizierung"
 category: "KI-Automatisierung"
 features:
   - "KI-Agenten übernehmen den Erstkontakt 24/7"

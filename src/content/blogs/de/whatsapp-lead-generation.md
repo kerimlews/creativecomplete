@@ -1,7 +1,7 @@
 ---
 title: "WhatsApp Lead-Generierung: Aus DMs qualifizierte Leads machen"
 description: "WhatsApp hat 2 Milliarden aktive Nutzer und 98% Öffnungsrate. Die meisten Unternehmen nutzen es wie eine Telefonleitung. Hier ist das WhatsApp-Lead-System, das jede DM automatisch erfasst, qualifiziert und konvertiert."
-slug: whatsapp-lead-generation
+slug: whatsapp-lead-generierung
 author: kerim-alihodza
 published: "2026-05-17"
 updated: "2026-05-17"
@@ -81,15 +81,15 @@ Der AI Agent fährt die Konversation durch einen natürlichen Austausch, der sur
 
 Der gesamte Austausch dauert 3–7 Minuten der Lead-Zeit. Er erlebt eine hilfreiche, sachkundige Konversation — kein Formular, kein Verhör.
 
-Am Ende ist der Lead gescort. Heiße Leads werden sofort mit vollem Kontext an einen Vertriebsrep verbunden. Warme Leads kommen in eine 7–14-tägige Nurture-Sequenz. Kalte Leads werden für [Langzeit-Follow-up](/de/blog/ai-sales-agents/) getaggt.
+Am Ende ist der Lead gescort. Heiße Leads werden sofort mit vollem Kontext an einen Vertriebsrep verbunden. Warme Leads kommen in eine 7–14-tägige Nurture-Sequenz. Kalte Leads werden für [Langzeit-Follow-up](/de/blog/ki-verkaufsagenten/) getaggt.
 
 ## Was Unternehmen bei WhatsApp Lead-Gen falsch machen
 
 Drei häufige Fehler, die Konversion killen:
 
-**Zu langsam antworten.** Dasselbe [Geschwindigkeitsprinzip](/de/blog/speed-to-lead/), das für jeden Lead gilt, gilt hier — Absicht verfällt schnell. Ein AI Agent antwortet in Sekunden; ein menschlicher Rep, der in Stunden antwortet, verliert das Fenster komplett.
+**Zu langsam antworten.** Dasselbe [Geschwindigkeitsprinzip](/de/blog/reaktionszeit/), das für jeden Lead gilt, gilt hier — Absicht verfällt schnell. Ein AI Agent antwortet in Sekunden; ein menschlicher Rep, der in Stunden antwortet, verliert das Fenster komplett.
 
-**WhatsApp als Einbahn-[Broadcast-Kanal](/de/blog/whatsapp-broadcast-campaigns/) nutzen.** WhatsApp ist ein Konversations-Medium. Leads, die Werbenachrichten ohne Versuch des Bedarfsverständnisses bekommen, konvertieren zu einem Bruchteil der Rate von Leads, die echten Austausch erleben.
+**WhatsApp als Einbahn-[Broadcast-Kanal](/de/blog/whatsapp-broadcast-kampagnen/) nutzen.** WhatsApp ist ein Konversations-Medium. Leads, die Werbenachrichten ohne Versuch des Bedarfsverständnisses bekommen, konvertieren zu einem Bruchteil der Rate von Leads, die echten Austausch erleben.
 
 **Vor dem Routing nicht qualifizieren.** Reps, die jeden WhatsApp-Lead bekommen — unabhängig von der Qualität — verbringen die meiste Zeit mit Leuten, die nicht kaufbereit sind. Das richtige System surfacet nur qualifizierte Leads mit vollem Kontext.
 

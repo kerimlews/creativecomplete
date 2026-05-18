@@ -36,15 +36,15 @@ const canonicalUrl = `https://www.creativecomplete.com/sl/blog/${slug}/`;
 const ogImage = `${Astro.url.origin}/images/og/${slug}.svg`;
 
 const serviceLinkSl: Record<string, { href: string; label: string }> = {
-  'speed-to-lead':               { href: '/sl/storitve/hitrost-do-leada/',                   label: 'Hitrost do leada' },
-  'ai-lead-qualification':       { href: '/sl/storitve/ai-kvalifikacija-leadov/',             label: 'AI kvalifikacija leadov' },
-  'automated-lead-distribution': { href: '/sl/storitve/ai-kvalifikacija-leadov/',             label: 'AI kvalifikacija leadov' },
-  'whatsapp-broadcast-campaigns':{ href: '/sl/storitve/whatsapp-monetizacija-baze/',          label: 'WhatsApp monetizacija' },
-  'whatsapp-lead-generation':    { href: '/sl/storitve/whatsapp-monetizacija-baze/',          label: 'WhatsApp monetizacija' },
-  'ai-ad-creatives':             { href: '/sl/storitve/ai-oglasevalski-kreativni-sistem/',    label: 'AI oglaševalski sistem' },
-  'ad-creative-testing':         { href: '/sl/storitve/ai-oglasevalski-kreativni-sistem/',    label: 'AI oglaševalski sistem' },
-  'ai-sales-agents':             { href: '/sl/storitve/ai-kvalifikacija-leadov/',             label: 'AI kvalifikacija leadov' },
-  'crm-automation':              { href: '/sl/storitve/ai-kvalifikacija-leadov/',             label: 'AI kvalifikacija leadov' },
+  'hitrost-do-leada':                 { href: '/sl/storitve/hitrost-do-leada/',                   label: 'Hitrost do leada' },
+  'ai-kvalifikacija-leadov':          { href: '/sl/storitve/ai-kvalifikacija-leadov/',             label: 'AI kvalifikacija leadov' },
+  'avtomatizirana-distribucija-leadov':{ href: '/sl/storitve/ai-kvalifikacija-leadov/',            label: 'AI kvalifikacija leadov' },
+  'whatsapp-broadcast-kampanje':      { href: '/sl/storitve/whatsapp-monetizacija-baze/',          label: 'WhatsApp monetizacija' },
+  'whatsapp-pridobivanje-leadov':     { href: '/sl/storitve/whatsapp-monetizacija-baze/',          label: 'WhatsApp monetizacija' },
+  'ai-oglasne-kreative':              { href: '/sl/storitve/ai-oglasevalski-kreativni-sistem/',    label: 'AI oglaševalski sistem' },
+  'testiranje-oglasnih-kreativ':      { href: '/sl/storitve/ai-oglasevalski-kreativni-sistem/',    label: 'AI oglaševalski sistem' },
+  'ai-prodajni-agenti':               { href: '/sl/storitve/ai-kvalifikacija-leadov/',             label: 'AI kvalifikacija leadov' },
+  'crm-avtomatizacija':               { href: '/sl/storitve/ai-kvalifikacija-leadov/',             label: 'AI kvalifikacija leadov' },
 };
 const relatedService = serviceLinkSl[slug];
 
@@ -96,9 +96,22 @@ const breadcrumbSchema = {
 
 const structuredData = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])];
 
-const showRoutingMotion = ['automated-lead-distribution','speed-to-lead','ai-lead-qualification','ai-sales-agents'].includes(slug);
-const showCreativeMotion = ['ai-ad-creatives','ad-creative-testing'].includes(slug);
-const showBroadcastMotion = ['whatsapp-broadcast-campaigns','whatsapp-lead-generation'].includes(slug);
+const showRoutingMotion = ['avtomatizirana-distribucija-leadov','hitrost-do-leada','ai-kvalifikacija-leadov','ai-prodajni-agenti'].includes(slug);
+const showCreativeMotion = ['ai-oglasne-kreative','testiranje-oglasnih-kreativ'].includes(slug);
+const showBroadcastMotion = ['whatsapp-broadcast-kampanje','whatsapp-pridobivanje-leadov'].includes(slug);
+
+const caseStudyLinkSl: Record<string, { href: string; label: string; cat: string }> = {
+  'hitrost-do-leada':                 { href: '/sl/projekti/parcel-daily-conversion-boost/',      label: 'Parcel Daily: 60% več konverzij',       cat: 'Logistika · AI' },
+  'ai-kvalifikacija-leadov':          { href: '/sl/projekti/imotorbike-ai-lead-qualification/',   label: 'iMotorbike: 2× dnevna kapaciteta',      cat: 'Avtomobilizem · AI' },
+  'avtomatizirana-distribucija-leadov':{ href: '/sl/projekti/imotorbike-ai-lead-qualification/',  label: 'iMotorbike: 2× dnevna kapaciteta',      cat: 'Avtomobilizem · AI' },
+  'whatsapp-broadcast-kampanje':      { href: '/sl/projekti/only-tourism-ai-visa-automation/',    label: 'Only Tourism: 6× mesečni leadi',        cat: 'Turizem · AI' },
+  'whatsapp-pridobivanje-leadov':     { href: '/sl/projekti/only-tourism-ai-visa-automation/',    label: 'Only Tourism: 6× mesečni leadi',        cat: 'Turizem · AI' },
+  'ai-oglasne-kreative':              { href: '/sl/projekti/parcel-daily-conversion-boost/',      label: 'Parcel Daily: 60% več konverzij',       cat: 'Logistika · AI' },
+  'testiranje-oglasnih-kreativ':      { href: '/sl/projekti/nianave-ecommerce-scaling-case-study/', label: 'Nianave: $30k → $120k/mesec',        cat: 'E-Commerce · Marketing' },
+  'ai-prodajni-agenti':               { href: '/sl/projekti/only-tourism-ai-visa-automation/',    label: 'Only Tourism: 6× mesečni leadi',        cat: 'Turizem · AI' },
+  'crm-avtomatizacija':               { href: '/sl/projekti/prepme-automation-saas/',             label: 'PrepMe: 280 ur/mesec prihranjenega časa', cat: 'SaaS · Avtomatizacija' },
+};
+const relatedCaseStudy = caseStudyLinkSl[slug];
 
 const allPosts = await getCollection('blogsSl');
 const relatedPosts = allPosts
@@ -177,6 +190,31 @@ const relatedPosts = allPosts
       </div>
     </section>
 
+    <!-- Stats bar -->
+    <section class="blog-stats" aria-label="Ključni rezultati">
+      <div class="v2-container">
+        <div class="blog-stats__inner">
+          <div class="blog-stats__item" data-m>
+            <div class="blog-stats__n" data-count="200">0%</div>
+            <div class="blog-stats__label">Več strank</div>
+            <div class="blog-stats__sub">Optimizacija razdelitve leadov za večji obseg klepetov</div>
+          </div>
+          <div class="blog-stats__divider" aria-hidden="true"></div>
+          <div class="blog-stats__item" data-m>
+            <div class="blog-stats__n" data-count="94">0%</div>
+            <div class="blog-stats__label">Hitrejše reševanje</div>
+            <div class="blog-stats__sub">Usmerjanje leadov k pravemu agentu za točne odgovore</div>
+          </div>
+          <div class="blog-stats__divider" aria-hidden="true"></div>
+          <div class="blog-stats__item" data-m>
+            <div class="blog-stats__n" data-count="93">0%</div>
+            <div class="blog-stats__label">CSAT ocena</div>
+            <div class="blog-stats__sub">Hitri strokovni odgovori za izjemne izkušnje strank</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="v2-section" style="padding-top: 0">
       <div class="v2-container">
         <div class="blog-layout">
@@ -184,6 +222,88 @@ const relatedPosts = allPosts
           <article class="blog-prose v2-prose" set:html={post.rendered?.html} />
 
           <aside class="blog-aside">
+
+            {showRoutingMotion && slug === 'avtomatizirana-distribucija-leadov' && (
+              <div class="blog-aside__card">
+                <div class="blog-aside__head">7 pravil usmerjanja</div>
+                <ul class="blog-rules-list">
+                  {['Razpoložljivost agenta','Round Robin','Tip stranke','Izmenska razporeditev','Jezikovna usmeritev','Specializacija','Funkcijska usmeritev'].map((r, i) => (
+                    <li>
+                      <span class="blog-rules-list__n">{String(i + 1).padStart(2, '0')}</span>
+                      <span>{r}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {showRoutingMotion && slug === 'hitrost-do-leada' && (
+              <div class="blog-aside__card">
+                <div class="blog-aside__head">Sistem Hitrost do leada</div>
+                <ul class="blog-rules-list">
+                  {['Zajem leada (vsi kanali)','AI prvi odgovor (&lt;60s)','BANT kvalifikacija','Lead score (0–100)','Pametno usmerjanje','Predaja vroče lead','Follow-up zaporedja'].map((r, i) => (
+                    <li>
+                      <span class="blog-rules-list__n">{String(i + 1).padStart(2, '0')}</span>
+                      <span set:html={r} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {showRoutingMotion && ['ai-kvalifikacija-leadov','ai-prodajni-agenti'].includes(slug) && (
+              <div class="blog-aside__card">
+                <div class="blog-aside__head">BANT okvir</div>
+                <ul class="blog-rules-list">
+                  {[
+                    { label: 'Budget', desc: 'Finančna zmogljivost potrjena' },
+                    { label: 'Authority', desc: 'Odločevalec identificiran' },
+                    { label: 'Need', desc: 'Ujemanje problem-rešitev potrjeno' },
+                    { label: 'Timeline', desc: 'Aktivno nakupno okno' },
+                  ].map((r, i) => (
+                    <li>
+                      <span class="blog-rules-list__n">{String.fromCharCode(66 + i)}</span>
+                      <span><strong style="color:var(--fg-0)">{r.label}</strong> — {r.desc}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {showCreativeMotion && (
+              <div class="blog-aside__card">
+                <div class="blog-aside__head">6 kreativnih sistemov</div>
+                <ul class="blog-rules-list">
+                  {[
+                    'Ocenjevanje zmogljivosti',
+                    'Generiranje variant',
+                    'Izvoz za platforme',
+                    'Avtomatizacija A/B testov',
+                    'Zaščitena podoba blagovne znamke',
+                    'Retargeting kreative',
+                  ].map((r, i) => (
+                    <li>
+                      <span class="blog-rules-list__n">{String(i + 1).padStart(2, '0')}</span>
+                      <span>{r}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {showBroadcastMotion && (
+              <div class="blog-aside__card">
+                <div class="blog-aside__head">3 broadcast segmenti</div>
+                <ul class="blog-rules-list">
+                  {[
+                    { label: 'Nedavni kupci', desc: '0–90 dni · 12–25% odziv' },
+                    { label: 'Neaktivni visoko-vredni', desc: '91–365 dni · 8–18% odziv' },
+                    { label: 'Nekonvertirani leadi', desc: 'Topel interes · 5–12% odziv' },
+                  ].map((r, i) => (
+                    <li>
+                      <span class="blog-rules-list__n">{String(i + 1).padStart(2, '0')}</span>
+                      <span><strong style="color:var(--fg-0)">{r.label}</strong> — {r.desc}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {relatedService && (
               <a href={relatedService.href} class="blog-aside__service-link">
@@ -195,6 +315,15 @@ const relatedPosts = allPosts
                     <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </span>
+              </a>
+            )}
+
+            {relatedCaseStudy && (
+              <a href={relatedCaseStudy.href} class="blog-aside__case-link">
+                <span class="blog-aside__case-eyebrow">Videno v praksi</span>
+                <span class="blog-aside__case-cat">{relatedCaseStudy.cat}</span>
+                <span class="blog-aside__case-title">{relatedCaseStudy.label}</span>
+                <span class="blog-aside__case-read">Preberi primer →</span>
               </a>
             )}
 
@@ -311,6 +440,36 @@ const relatedPosts = allPosts
 
 .blog-tags { display: flex; gap: 6px; flex-wrap: wrap; }
 
+/* Stats */
+.blog-stats { padding: 0 0 48px; }
+.blog-stats__inner {
+  display: flex; align-items: stretch;
+  background: var(--bg-card); border: 1px solid var(--line);
+  border-radius: var(--r-xl); overflow: hidden;
+}
+.blog-stats__item {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  padding: 36px 24px; text-align: center;
+  opacity: 0; transition: opacity .3s;
+  &.io-in { opacity: 1; }
+}
+.blog-stats__divider {
+  width: 1px; background: var(--line); flex-shrink: 0;
+  @media (max-width: 640px) { display: none; }
+}
+.blog-stats__n {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 60px);
+  letter-spacing: -0.02em;
+  background: var(--grad-text); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text; line-height: 1;
+}
+.blog-stats__label { font-size: 13px; font-weight: 600; color: var(--fg-0); margin-top: 8px; }
+.blog-stats__sub { font-size: 11.5px; color: var(--fg-2); line-height: 1.5; margin-top: 6px; max-width: 22ch; }
+@media (max-width: 640px) {
+  .blog-stats__inner { flex-direction: column; }
+  .blog-stats__item { border-bottom: 1px solid var(--line); &:last-child { border-bottom: none; } }
+}
+
 .blog-layout {
   display: grid;
   grid-template-columns: 1fr 300px;
@@ -401,6 +560,48 @@ const relatedPosts = allPosts
 .blog-aside__service-cta {
   display: inline-flex; align-items: center; gap: 4px;
   font-family: var(--font-mono); font-size: 10px; color: var(--c1-light); margin-top: 4px;
+}
+
+.blog-aside__case-link {
+  display: flex; flex-direction: column; gap: 3px;
+  padding: 14px 16px; background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--r-lg); text-decoration: none;
+  transition: border-color .2s, background .2s;
+  &:hover { border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.045); }
+}
+.blog-aside__case-eyebrow {
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: .1em;
+  text-transform: uppercase; color: rgba(255,255,255,0.25);
+}
+.blog-aside__case-cat {
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: .07em;
+  color: var(--c2); margin-top: 2px;
+}
+.blog-aside__case-title { font-size: 12px; font-weight: 600; color: var(--fg-1); line-height: 1.4; margin-top: 2px; }
+.blog-aside__case-read { font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.35); margin-top: 6px; }
+
+.blog-aside__card {
+  background: var(--bg-card); border: 1px solid var(--line);
+  border-radius: var(--r-lg); padding: 20px;
+}
+.blog-aside__head {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--fg-2); margin-bottom: 14px;
+}
+.blog-rules-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 2px;
+  li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 10px; border-radius: 8px; font-size: 12px; color: var(--fg-1);
+    transition: background .15s;
+    &:hover { background: var(--glass); color: var(--fg-0); }
+  }
+}
+.blog-rules-list__n {
+  font-family: var(--font-mono); font-size: 10px;
+  color: var(--c1-light); flex-shrink: 0; width: 18px;
 }
 
 .blog-aside__cta {

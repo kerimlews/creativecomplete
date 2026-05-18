@@ -1,7 +1,7 @@
 ---
 title: "WhatsApp Broadcast-Kampagnen: Aus Ihrer Datenbank Umsatz machen"
 description: "Ihr CRM sitzt auf ungenutztem Umsatz. WhatsApp Broadcast-Kampagnen erreichen 98% Öffnungsrate und durchschnittlich 42,5× ROI — durch die richtige Nachricht ans richtige Segment zur richtigen Zeit."
-slug: whatsapp-broadcast-campaigns
+slug: whatsapp-broadcast-kampagnen
 author: kerim-alihodza
 published: "2026-05-17"
 updated: "2026-05-17"
@@ -23,7 +23,7 @@ faq:
     answer: "Mit einer bestehenden Opt-in-Kontaktliste kann eine Broadcast-Kampagne in 48–72 Stunden konfiguriert, freigegeben und versendet werden. Müssen Sie die Opt-in-Liste erst bauen, sind es 5–10 Tage je nach aktuellen Kanälen. Wir übernehmen Meta-Template-Freigabe, Segmentierungslogik, Message-Texten und Send-Scheduling."
 ---
 
-Sie haben ein [CRM](/de/blog/crm-automation/) voller Menschen, die Sie schon kennen, schon überlegt haben, bei Ihnen zu kaufen, und in vielen Fällen schon einmal gekauft haben.
+Sie haben ein [CRM](/de/blog/crm-automatisierung/) voller Menschen, die Sie schon kennen, schon überlegt haben, bei Ihnen zu kaufen, und in vielen Fällen schon einmal gekauft haben.
 
 Diese Datenbank ist weit mehr wert, als Sie aktuell daraus ziehen.
 
@@ -69,7 +69,7 @@ Erwartete Antwortrate: **8–18%**
 
 ### Segment 3: Unbekehrte Leads
 
-Jedes Unternehmen hat [Leads](/de/blog/whatsapp-lead-generation/), die Interesse zeigten, Teile der Qualifizierung durchliefen und dann kalt wurden. Das sind keine toten Leads — es sind verzögerte Entscheidungen.
+Jedes Unternehmen hat [Leads](/de/blog/whatsapp-lead-generierung/), die Interesse zeigten, Teile der Qualifizierung durchliefen und dann kalt wurden. Das sind keine toten Leads — es sind verzögerte Entscheidungen.
 
 Ein Broadcast an dieses Segment reaktiviert Überlegung. Die Nachricht referenziert, wonach sie schauten, adressiert den häufigsten Grund für Verzögerung (Timing, Budget, Unsicherheit) und gibt einen klaren Weg zurück. Ein zeitlich begrenztes Angebot oder eine kostenlose Beratung senkt die Reaktivierungs-Friktion.
 
@@ -94,7 +94,7 @@ Das ist keine theoretische Projektion. Es ist eine reale Kampagnenstruktur, die 
 
 Der Broadcast öffnet ein Gespräch. Dieses Gespräch muss gemanagt werden — und genau hier verlieren die meisten Unternehmen den Umsatz, den sie gerade freigeschaltet haben.
 
-Ein AI Agent handhabt die Antworten in Echtzeit, setzt die Qualifizierungs-Konversation fort, beantwortet Produktfragen und routet [heiße Antworter](/de/blog/ai-lead-qualification/) zu einem Vertriebsrep oder Buchungs-Link. Leads, die antworten, aber noch nicht kaufbereit sind, werden für Follow-up-Sequenzen getaggt.
+Ein AI Agent handhabt die Antworten in Echtzeit, setzt die Qualifizierungs-Konversation fort, beantwortet Produktfragen und routet [heiße Antworter](/de/blog/ki-lead-qualifizierung/) zu einem Vertriebsrep oder Buchungs-Link. Leads, die antworten, aber noch nicht kaufbereit sind, werden für Follow-up-Sequenzen getaggt.
 
 Der Broadcast ist kein einmaliges Event. Es ist der Eröffnungszug in einem laufenden Monetarisierungs-System. Jede Kampagne produziert Umsatz, Daten darüber, was resoniert, und eine verfeinerte Segmentliste für die nächste.
 

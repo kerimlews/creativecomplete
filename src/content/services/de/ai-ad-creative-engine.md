@@ -1,7 +1,7 @@
 ---
 title: "KI-Werbemittel: CPL in 30 Tagen um 40–60% senken"
 description: "KI-generierte Werbemittel, trainiert auf $35 Mrd.+ realen Werbedaten. Creative Scoring KI prognostiziert Gewinner mit 90 %+ Genauigkeit. Wöchentliche Produktion, vollständig verwaltet von CreativeComplete."
-slug: "ai-ad-creative-engine"
+slug: "ki-werbemittel-system"
 category: "KI-Werbung"
 features:
   - "Creatives in Minuten, nicht Tagen"

@@ -1,7 +1,7 @@
 ---
 title: "Speed to Lead: Warum die ersten 5 Minuten jeden Verkauf entscheiden"
 description: "78% der Käufer wählen den ersten Anbieter, der antwortet. Die meisten Firmen brauchen 47 Stunden. Hier ist das 3-teilige Speed-to-Lead-System, das Leads in unter 60 Sekunden qualifiziert und kontaktiert."
-slug: speed-to-lead
+slug: reaktionszeit
 author: kerim-alihodza
 published: "2026-05-16"
 updated: "2026-05-16"
@@ -66,7 +66,7 @@ Ein AI Agent antwortet innerhalb von Sekunden auf eine Lead-Anfrage. Er bestäti
 Wenn ein Vertriebsrep den Lead in seiner Queue sieht, hat er bereits:
 
 - Einen Lead-Score (0–100)
-- Eine [Qualifizierungs-Zusammenfassung](/de/blog/ai-lead-qualification/) (Budget bestätigt, Timeline genannt, Entscheidungsautorität identifiziert)
+- Eine [Qualifizierungs-Zusammenfassung](/de/blog/ki-lead-qualifizierung/) (Budget bestätigt, Timeline genannt, Entscheidungsautorität identifiziert)
 - Den genannten Bedarf des Leads und seine konkreten Fragen
 - Eine Routing-Empfehlung: jetzt schließen, nurturen oder disqualifizieren
 
@@ -76,7 +76,7 @@ Der Rep muss nicht recherchieren, qualifizieren oder die Firma neu vorstellen. E
 
 ![Lead Routing — heiße Leads gehen sofort an Closer, kalte Leads in Nurture-Sequenzen, unqualifizierte Leads werden gefiltert](/images/blog/speed-to-lead/03-lead-routing.svg)
 
-Nicht alle Leads sind gleich. Ein heißer Lead mit Budget, Timeline und Entscheidungsautorität muss sofort zu einem Closing-Rep. Ein kalter Lead, der "nur recherchiert", muss in eine [Nurture-Sequenz](/de/blog/whatsapp-broadcast-campaigns/) — nicht Rep-Zeit verbrauchen.
+Nicht alle Leads sind gleich. Ein heißer Lead mit Budget, Timeline und Entscheidungsautorität muss sofort zu einem Closing-Rep. Ein kalter Lead, der "nur recherchiert", muss in eine [Nurture-Sequenz](/de/blog/whatsapp-broadcast-kampagnen/) — nicht Rep-Zeit verbrauchen.
 
 Routing-Logik sortiert Leads nach Score und matcht sie auf das richtige Team-Mitglied basierend auf Verfügbarkeit, Skill-Set und Lead-Typ. Der richtige Rep bekommt den richtigen Lead zur richtigen Zeit, mit vollem Kontext, bevor er zum Hörer greift.
 
@@ -100,7 +100,7 @@ Der Output ist nicht nur Geschwindigkeit — es ist ein Rep, der zu jedem Gespr�
 
 Der Business Case für Speed to Lead ist nicht kompliziert. Wenn Sie Geld für Ads ausgeben, zahlen Sie für jeden Lead. Ein Lead, der kalt wird, weil Ihre Antwort 3 Stunden brauchte, kostet das Gleiche wie einer, der konvertiert — der Unterschied liegt komplett in den ersten 5 Minuten.
 
-Bei **CreativeComplete** bauen wir Speed to Lead als erste Schicht des AI Customer Systems. Jeder neue Lead — von jedem Kanal — bekommt eine KI-Antwort in unter 60 Sekunden, einen Qualifizierungs-Score, bevor ein Mensch ihn sieht, und eine [Routing-Entscheidung](/de/blog/automated-lead-distribution/), die ihn mit vollem Kontext vor den richtigen Rep stellt.
+Bei **CreativeComplete** bauen wir Speed to Lead als erste Schicht des AI Customer Systems. Jeder neue Lead — von jedem Kanal — bekommt eine KI-Antwort in unter 60 Sekunden, einen Qualifizierungs-Score, bevor ein Mensch ihn sieht, und eine [Routing-Entscheidung](/de/blog/automatisierte-lead-verteilung/), die ihn mit vollem Kontext vor den richtigen Rep stellt.
 
 Die meisten Kunden sind in **5 Tagen** live.
 

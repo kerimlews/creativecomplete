@@ -13,13 +13,26 @@ const c = getV2Content(lang).services;
 const motionKeys = ['qualify', 'creative', 'capture', 'monetize'] as const;
 const colors = ['var(--c1)', 'var(--c3)', 'var(--c2)', 'var(--c2)'];
 const texts  = ['#fff', '#fff', '#464040', '#464040'];
-const blogBase = lang === 'de' ? '/de/blog' : lang === 'sl' ? '/sl/blog' : '/blog';
-const blogHrefs = [
-  `${blogBase}/ai-lead-qualification/`,
-  `${blogBase}/ai-ad-creatives/`,
-  `${blogBase}/speed-to-lead/`,
-  `${blogBase}/whatsapp-broadcast-campaigns/`,
-];
+const blogHrefs = lang === 'de'
+  ? [
+      '/de/blog/ki-lead-qualifizierung/',
+      '/de/blog/ki-werbemittel/',
+      '/de/blog/reaktionszeit/',
+      '/de/blog/whatsapp-broadcast-kampagnen/',
+    ]
+  : lang === 'sl'
+  ? [
+      '/sl/blog/ai-kvalifikacija-leadov/',
+      '/sl/blog/ai-oglasne-kreative/',
+      '/sl/blog/hitrost-do-leada/',
+      '/sl/blog/whatsapp-broadcast-kampanje/',
+    ]
+  : [
+      '/blog/ai-lead-qualification/',
+      '/blog/ai-ad-creatives/',
+      '/blog/speed-to-lead/',
+      '/blog/whatsapp-broadcast-campaigns/',
+    ];
 const engColors = ['#6366f1', '#a855f7', '#22d3ee', '#e879f9'];
 const engMetrics = ['60s', '90%+', '40+', '42.5×'];
 const engDelays = ['0s', '.45s', '.9s', '1.35s'];

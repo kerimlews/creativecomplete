@@ -11,7 +11,26 @@ export interface Props {
 const { lang = 'en' } = Astro.props;
 const c = getV2Content(lang).endToEnd;
 
-const blogBase = lang === 'de' ? '/de/blog' : lang === 'sl' ? '/sl/blog' : '/blog';
+const e2eBlogLinks = lang === 'de'
+  ? {
+      creative: '/de/blog/ki-werbemittel/',
+      whatsappLead: '/de/blog/whatsapp-lead-generierung/',
+      salesAgents: '/de/blog/ki-verkaufsagenten/',
+      broadcasts: '/de/blog/whatsapp-broadcast-kampagnen/',
+    }
+  : lang === 'sl'
+  ? {
+      creative: '/sl/blog/ai-oglasne-kreative/',
+      whatsappLead: '/sl/blog/whatsapp-pridobivanje-leadov/',
+      salesAgents: '/sl/blog/ai-prodajni-agenti/',
+      broadcasts: '/sl/blog/whatsapp-broadcast-kampanje/',
+    }
+  : {
+      creative: '/blog/ai-ad-creatives/',
+      whatsappLead: '/blog/whatsapp-lead-generation/',
+      salesAgents: '/blog/ai-sales-agents/',
+      broadcasts: '/blog/whatsapp-broadcast-campaigns/',
+    };
 
 // Phase CSS class keys
 const phaseClasses = ['create', 'capture', 'convert', 'retain'];
@@ -98,7 +117,7 @@ const phaseIconStyles = [
           ))}
         </ul>
 
-        <a href={`${blogBase}/ai-ad-creatives/`} class="e2e__blog-link">
+        <a href={e2eBlogLinks.creative} class="e2e__blog-link">
           {c.phases[0].blogLabel}
           <svg width="10" height="10" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -141,7 +160,7 @@ const phaseIconStyles = [
           ))}
         </ul>
 
-        <a href={`${blogBase}/whatsapp-lead-generation/`} class="e2e__blog-link">
+        <a href={e2eBlogLinks.whatsappLead} class="e2e__blog-link">
           {c.phases[1].blogLabel}
           <svg width="10" height="10" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -181,7 +200,7 @@ const phaseIconStyles = [
           ))}
         </ul>
 
-        <a href={`${blogBase}/ai-sales-agents/`} class="e2e__blog-link">
+        <a href={e2eBlogLinks.salesAgents} class="e2e__blog-link">
           {c.phases[2].blogLabel}
           <svg width="10" height="10" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -216,7 +235,7 @@ const phaseIconStyles = [
           ))}
         </ul>
 
-        <a href={`${blogBase}/whatsapp-broadcast-campaigns/`} class="e2e__blog-link">
+        <a href={e2eBlogLinks.broadcasts} class="e2e__blog-link">
           {c.phases[3].blogLabel}
           <svg width="10" height="10" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>

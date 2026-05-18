@@ -1,7 +1,7 @@
 ---
 title: "Speed to Lead: zakaj prvih 5 minut odloča vsako prodajo"
 description: "78% kupcev izbere prvega ponudnika, ki se odzove. Večina podjetij potrebuje 47 ur. Tukaj je 3-delni sistem Speed to Lead, ki kvalificira in kontaktira nove leade v manj kot 60 sekundah."
-slug: speed-to-lead
+slug: hitrost-do-leada
 author: kerim-alihodza
 published: "2026-05-16"
 updated: "2026-05-16"
@@ -66,7 +66,7 @@ AI agent se odzove v sekundah na poizvedbo leada. Potrdi konkretno stvar, za kat
 Do trenutka, ko prodajni predstavnik vidi lead v svoji vrsti, že ima:
 
 - Oceno leada (0–100)
-- [Povzetek kvalifikacije](/sl/blog/ai-lead-qualification/) (proračun potrjen, časovnica navedena, odločevalska avtoriteta identificirana)
+- [Povzetek kvalifikacije](/sl/blog/ai-kvalifikacija-leadov/) (proračun potrjen, časovnica navedena, odločevalska avtoriteta identificirana)
 - Navedeno potrebo leada in vsa konkretna vprašanja, ki jih je postavil
 - Priporočilo usmerjanja: zaključi zdaj, neguj ali diskvalificiraj
 
@@ -76,7 +76,7 @@ Predstavnik ne potrebuje raziskave, kvalifikacije ali ponovne predstavitve podje
 
 ![Usmerjanje leadov — vroči leadi gredo takoj k closerjem, hladni leadi v zaporedja negovanja, nekvalificirani leadi so filtrirani ven](/images/blog/speed-to-lead/03-lead-routing.svg)
 
-Niso vsi leadi enaki. Vroč lead s proračunom, časovnico in odločevalsko avtoriteto mora takoj doseči zaključno predstavnika. Hladen lead, ki "samo raziskuje", mora vstopiti v [zaporedje negovanja](/sl/blog/whatsapp-broadcast-campaigns/) — ne porabiti časa predstavnika.
+Niso vsi leadi enaki. Vroč lead s proračunom, časovnico in odločevalsko avtoriteto mora takoj doseči zaključno predstavnika. Hladen lead, ki "samo raziskuje", mora vstopiti v [zaporedje negovanja](/sl/blog/whatsapp-broadcast-kampanje/) — ne porabiti časa predstavnika.
 
 Logika usmerjanja razvrsti leade po oceni in jih ujema s pravim članom ekipe na podlagi razpoložljivosti, nabora veščin in tipa leada. Pravi predstavnik dobi pravi lead ob pravem času, s polnim kontekstom, dostavljenim, preden dvigne telefon.
 
@@ -100,7 +100,7 @@ Izhod ni le hitrost — je predstavnik, ki se prikaže na vsakem pogovoru inform
 
 Poslovni primer za Speed to Lead ni zapleten. Če porabljate denar za oglase, plačujete za vsak lead. Lead, ki gre hladen, ker je vaš odziv trajal 3 ure, stane enako kot lead, ki konvertira — razlika je v celoti v tem, kaj se je zgodilo v prvih 5 minutah.
 
-Pri **CreativeComplete** gradimo Speed to Lead kot prvo plast AI Customer Systema. Vsak nov lead — iz katerega koli kanala — dobi AI odziv v manj kot 60 sekundah, oceno kvalifikacije, preden ga vidi človek, in [odločitev usmerjanja](/sl/blog/automated-lead-distribution/), ki ga postavi pred pravega predstavnika s polnim kontekstom.
+Pri **CreativeComplete** gradimo Speed to Lead kot prvo plast AI Customer Systema. Vsak nov lead — iz katerega koli kanala — dobi AI odziv v manj kot 60 sekundah, oceno kvalifikacije, preden ga vidi človek, in [odločitev usmerjanja](/sl/blog/avtomatizirana-distribucija-leadov/), ki ga postavi pred pravega predstavnika s polnim kontekstom.
 
 Večina strank gre v živo v **5 dneh**.
 

@@ -1,7 +1,7 @@
 ---
 title: "KI Lead-Qualifizierung: Jeden Lead bewerten, bevor Ihr Team ihn sieht"
 description: "Vertriebsteams verschwenden 70% ihrer Zeit auf Leads, die nie konvertieren. KI-Lead-Qualifizierung scort jeden Inbound-Lead in unter 60 Sekunden via BANT — bevor ein Mensch eingreift."
-slug: ai-lead-qualification
+slug: ki-lead-qualifizierung
 author: kerim-alihodza
 published: "2026-05-17"
 updated: "2026-05-17"
@@ -25,7 +25,7 @@ faq:
 
 Vertriebsteams verbringen 70% ihrer Zeit mit Leads, die nie konvertieren.
 
-Nicht weil sie die falschen Prospects anrufen. Sondern weil sie keine Möglichkeit haben zu wissen, welche Leads ihre Zeit wert sind, bevor sie zum Hörer greifen. In einer [CRM](/de/blog/crm-automation/)-Zeile sieht jeder Lead gleich aus — Name, Telefonnummer, vielleicht eine Quelle. Der einzige Weg herauszufinden, ob es sich lohnt, ist anzurufen.
+Nicht weil sie die falschen Prospects anrufen. Sondern weil sie keine Möglichkeit haben zu wissen, welche Leads ihre Zeit wert sind, bevor sie zum Hörer greifen. In einer [CRM](/de/blog/crm-automatisierung/)-Zeile sieht jeder Lead gleich aus — Name, Telefonnummer, vielleicht eine Quelle. Der einzige Weg herauszufinden, ob es sich lohnt, ist anzurufen.
 
 Also rufen die Reps alles an. Und 70% dieser Anrufe sind verschwendet — an Leute ohne Budget, ohne Timeline, ohne Entscheidungsautorität oder ohne echten Bedarf.
 
@@ -35,7 +35,7 @@ KI-Lead-Qualifizierung ändert das, indem sie den Qualifizierungsprozess durchf�
 
 ![KI Lead-Qualifizierungs-Flow — Inbound-Lead kommt rein, KI führt BANT-Gespräch, Lead bekommt Score 0–100, Routing-Entscheidung automatisch](/images/blog/ai-lead-qualification/01-qualification-flow.svg)
 
-Wenn ein neuer Lead reinkommt — aus einer Ad, einer DM, einem Webformular oder einem anderen Kanal — startet ein AI Agent [in Sekunden](/de/blog/speed-to-lead/) einen konversationellen Austausch. Die Konversation wirkt natürlich, nicht skriptmäßig. Der Lead erlebt kein Formular und keine Umfrage. Er erlebt ein reaktives, sachkundiges Gegenüber, das seine Situation zu verstehen scheint.
+Wenn ein neuer Lead reinkommt — aus einer Ad, einer DM, einem Webformular oder einem anderen Kanal — startet ein AI Agent [in Sekunden](/de/blog/reaktionszeit/) einen konversationellen Austausch. Die Konversation wirkt natürlich, nicht skriptmäßig. Der Lead erlebt kein Formular und keine Umfrage. Er erlebt ein reaktives, sachkundiges Gegenüber, das seine Situation zu verstehen scheint.
 
 Während dieser Konversation arbeitet die KI systematisch durch ein Qualifizierungs-Framework:
 
@@ -89,6 +89,6 @@ Ihre Reps besitzen weiterhin die Beziehung. Sie besitzen sie nur aus einer viel 
 
 Bei **CreativeComplete** ist KI-Lead-Qualifizierung in die zweite Phase unseres AI Customer Systems eingebaut. Jeder Inbound-Lead wird qualifiziert, bevor er Ihr Team berührt — egal woher er kam, wann er ankam oder wie viele gleichzeitig reinkamen.
 
-Das System skaliert mit Ihrem Volumen. Wenn Sie morgen eine Kampagne starten und am Wochenende 400 Leads reinkommen, sind alle bis Montagmorgen qualifiziert, gescort und [geroutet](/de/blog/automated-lead-distribution/).
+Das System skaliert mit Ihrem Volumen. Wenn Sie morgen eine Kampagne starten und am Wochenende 400 Leads reinkommen, sind alle bis Montagmorgen qualifiziert, gescort und [geroutet](/de/blog/automatisierte-lead-verteilung/).
 
 Die meisten Kunden sind in **5 Tagen** live.

@@ -1,7 +1,7 @@
 ---
 title: "CRM avtomatizacija: nehajte z administracijo, začnite zaključevati"
 description: "Prodajni predstavniki porabijo 65% časa za neprodajne aktivnosti. CRM avtomatizacija odpravi ročno vnašanje podatkov, načrtovanje follow-upov in upravljanje pipelinea — vaša ekipa zaključuje namesto da bi administrirala."
-slug: crm-automation
+slug: crm-avtomatizacija
 author: kerim-alihodza
 published: "2026-05-17"
 updated: "2026-05-17"
@@ -45,7 +45,7 @@ Predstavnik, ki preverja svojo jutranjo vrsto, ne začne dneva z ustvarjanjem ko
 
 Faze poslov v večini CRM se ročno posodabljajo. Predstavnik ima kvalifikacijski klic, odloči, da je lead obetaven, in nato odpre CRM, da povleče lead iz "Nov" v "Kvalificiran". Ta akcija se zgodi včasih, ko se predstavnik spomni, med drugimi nalogami.
 
-Avtomatizirano napredovanje faz premika lead na podlagi definiranih sprožilcev. Lead, ki dokonča [kvalifikacijski pogovor](/sl/blog/ai-lead-qualification/), se samodejno premakne iz "Nov" v "Kvalificiran". Lead, ki rezervira demo, se premakne v "Demo načrtovan" v trenutku, ko je ustvarjen koledarski dogodek. Lead, ki se ne odzove 14 dni, se premakne v "Potrebuje follow-up" in sproži nalogo za dodeljenega predstavnika.
+Avtomatizirano napredovanje faz premika lead na podlagi definiranih sprožilcev. Lead, ki dokonča [kvalifikacijski pogovor](/sl/blog/ai-kvalifikacija-leadov/), se samodejno premakne iz "Nov" v "Kvalificiran". Lead, ki rezervira demo, se premakne v "Demo načrtovan" v trenutku, ko je ustvarjen koledarski dogodek. Lead, ki se ne odzove 14 dni, se premakne v "Potrebuje follow-up" in sproži nalogo za dodeljenega predstavnika.
 
 Pipeline odraža resničnost v realnem času, ne da bi ga kdor koli ročno vzdrževal.
 
@@ -53,14 +53,14 @@ Pipeline odraža resničnost v realnem času, ne da bi ga kdor koli ročno vzdr�
 
 ![CRM avtomatizacija sprožilni sistem — dogodki (pogovor, pretečeni čas, sprememba faze) sprožijo avtomatizirane akcije follow-upa](/images/blog/crm-automation/02-trigger-system.svg)
 
-Najpogostejši razlog za zastoj poslov je, da se follow-up ni zgodil. Ne zato, ker se predstavnik ne bi odločil za follow-up — ker je postal zaposlen, naloga je bila pokopana, in lead je čakal, dokler ni ali [našel konkurenta](/sl/blog/speed-to-lead/) ali pozabil, da je bil zainteresiran.
+Najpogostejši razlog za zastoj poslov je, da se follow-up ni zgodil. Ne zato, ker se predstavnik ne bi odločil za follow-up — ker je postal zaposlen, naloga je bila pokopana, in lead je čakal, dokler ni ali [našel konkurenta](/sl/blog/hitrost-do-leada/) ali pozabil, da je bil zainteresiran.
 
 Follow-up na podlagi sprožilcev to odpravi z definiranjem, kaj se zgodi samodejno, ko posel sedi nedejaven:
 
 - **Dan 3 nedejavnosti:** Predstavnik prejme follow-up nalogo s povzetkom zadnjega pogovora
 - **Dan 7 nedejavnosti:** AI agent pošlje ponovno aktivacijsko sporočilo leadu
 - **Dan 14 nedejavnosti:** Lead se premakne v dolgoročno zaporedje negovanja
-- **Dan 30 nedejavnosti:** [Broadcast](/sl/blog/whatsapp-broadcast-campaigns/) reaktivacijsko sporočilo poslano na WhatsApp leada
+- **Dan 30 nedejavnosti:** [Broadcast](/sl/blog/whatsapp-broadcast-kampanje/) reaktivacijsko sporočilo poslano na WhatsApp leada
 
 Vsak posel v vašem pipelineu ima definiran akcijski načrt, ki se izvede, ne da bi se moral kdor koli spomniti.
 

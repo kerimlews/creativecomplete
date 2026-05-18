@@ -1,7 +1,7 @@
 ---
 title: "CRM Automation: Schluss mit Admin, ran ans Closing"
 description: "Vertriebsreps verbringen 65% ihrer Zeit mit Nicht-Verkaufsaktivitäten. CRM-Automation eliminiert manuelle Dateneingabe, Follow-up-Planung und Pipeline-Pflege — Ihr Team schließt ab statt zu verwalten."
-slug: crm-automation
+slug: crm-automatisierung
 author: kerim-alihodza
 published: "2026-05-17"
 updated: "2026-05-17"
@@ -45,7 +45,7 @@ Ein Rep, der morgens seine Queue checkt, startet den Tag nicht mit dem Anlegen v
 
 Deal-Stufen werden in den meisten CRMs manuell aktualisiert. Ein Rep führt ein Qualifizierungsgespräch, entscheidet, dass der Lead vielversprechend ist, und öffnet dann das CRM, um den Lead von "Neu" auf "Qualifiziert" zu ziehen. Diese Aktion passiert manchmal — wenn der Rep daran denkt, zwischen anderen Tasks.
 
-Automatisierte Stufen-Progression verschiebt den Lead basierend auf definierten Triggern. Ein Lead, der die [Qualifizierungs-Konversation](/de/blog/ai-lead-qualification/) abschließt, wandert automatisch von "Neu" auf "Qualifiziert". Ein Lead, der eine Demo bucht, wandert auf "Demo Geplant" in dem Moment, in dem das Kalender-Event erstellt wird. Ein Lead, der 14 Tage nicht antwortet, wandert auf "Follow-up Nötig" und triggert einen Task für den zugewiesenen Rep.
+Automatisierte Stufen-Progression verschiebt den Lead basierend auf definierten Triggern. Ein Lead, der die [Qualifizierungs-Konversation](/de/blog/ki-lead-qualifizierung/) abschließt, wandert automatisch von "Neu" auf "Qualifiziert". Ein Lead, der eine Demo bucht, wandert auf "Demo Geplant" in dem Moment, in dem das Kalender-Event erstellt wird. Ein Lead, der 14 Tage nicht antwortet, wandert auf "Follow-up Nötig" und triggert einen Task für den zugewiesenen Rep.
 
 Die Pipeline spiegelt die Realität in Echtzeit, ohne dass jemand sie manuell pflegt.
 
@@ -53,14 +53,14 @@ Die Pipeline spiegelt die Realität in Echtzeit, ohne dass jemand sie manuell pf
 
 ![CRM-Automation Trigger-System — Ereignisse (Konversation, Zeitablauf, Stufenwechsel) triggern automatisierte Follow-up-Aktionen](/images/blog/crm-automation/02-trigger-system.svg)
 
-Der häufigste Grund, warum Deals stagnieren: Das Follow-up ist nicht passiert. Nicht weil der Rep sich gegen Follow-up entschieden hat — sondern weil er beschäftigt war, der Task untergegangen ist und der Lead gewartet hat, bis er entweder [einen Wettbewerber fand](/de/blog/speed-to-lead/) oder vergaß, dass er interessiert war.
+Der häufigste Grund, warum Deals stagnieren: Das Follow-up ist nicht passiert. Nicht weil der Rep sich gegen Follow-up entschieden hat — sondern weil er beschäftigt war, der Task untergegangen ist und der Lead gewartet hat, bis er entweder [einen Wettbewerber fand](/de/blog/reaktionszeit/) oder vergaß, dass er interessiert war.
 
 Trigger-basiertes Follow-up eliminiert das, indem es definiert, was automatisch passiert, wenn ein Deal inaktiv liegt:
 
 - **Tag 3 Inaktivität:** Rep bekommt einen Follow-up-Task mit Zusammenfassung der letzten Konversation
 - **Tag 7 Inaktivität:** AI Agent sendet Re-Engagement-Nachricht an den Lead
 - **Tag 14 Inaktivität:** Lead wandert in Langzeit-Nurture-Sequenz
-- **Tag 30 Inaktivität:** [Broadcast](/de/blog/whatsapp-broadcast-campaigns/) Reaktivierungs-Nachricht via WhatsApp
+- **Tag 30 Inaktivität:** [Broadcast](/de/blog/whatsapp-broadcast-kampagnen/) Reaktivierungs-Nachricht via WhatsApp
 
 Jeder Deal in der Pipeline hat einen definierten Aktionsplan, der ohne menschliches Erinnern läuft.
 

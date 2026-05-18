@@ -36,15 +36,15 @@ const canonicalUrl = `https://www.creativecomplete.com/de/blog/${slug}/`;
 const ogImage = `${Astro.url.origin}/images/og/${slug}.svg`;
 
 const serviceLinkDe: Record<string, { href: string; label: string }> = {
-  'speed-to-lead':               { href: '/de/dienstleistungen/speed-to-lead-system/',          label: 'Speed-to-Lead System' },
-  'ai-lead-qualification':       { href: '/de/dienstleistungen/ai-lead-qualification/',         label: 'KI-Leadqualifizierung' },
-  'automated-lead-distribution': { href: '/de/dienstleistungen/ai-lead-qualification/',         label: 'KI-Leadqualifizierung' },
-  'whatsapp-broadcast-campaigns':{ href: '/de/dienstleistungen/whatsapp-datenbank-monetarisierung/', label: 'WhatsApp-Monetarisierung' },
-  'whatsapp-lead-generation':    { href: '/de/dienstleistungen/whatsapp-datenbank-monetarisierung/', label: 'WhatsApp-Monetarisierung' },
-  'ai-ad-creatives':             { href: '/de/dienstleistungen/ai-ad-creative-engine/',         label: 'KI-Werbemittel' },
-  'ad-creative-testing':         { href: '/de/dienstleistungen/ai-ad-creative-engine/',         label: 'KI-Werbemittel' },
-  'ai-sales-agents':             { href: '/de/dienstleistungen/ai-lead-qualification/',         label: 'KI-Leadqualifizierung' },
-  'crm-automation':              { href: '/de/dienstleistungen/ai-lead-qualification/',         label: 'KI-Leadqualifizierung' },
+  'reaktionszeit':                  { href: '/de/dienstleistungen/reaktionszeit-system/',          label: 'Reaktionszeit-System' },
+  'ki-lead-qualifizierung':         { href: '/de/dienstleistungen/ki-lead-qualifizierung/',        label: 'KI-Leadqualifizierung' },
+  'automatisierte-lead-verteilung': { href: '/de/dienstleistungen/ki-lead-qualifizierung/',        label: 'KI-Leadqualifizierung' },
+  'whatsapp-broadcast-kampagnen':   { href: '/de/dienstleistungen/whatsapp-datenbank-monetarisierung/', label: 'WhatsApp-Monetarisierung' },
+  'whatsapp-lead-generierung':      { href: '/de/dienstleistungen/whatsapp-datenbank-monetarisierung/', label: 'WhatsApp-Monetarisierung' },
+  'ki-werbemittel':                 { href: '/de/dienstleistungen/ki-werbemittel-system/',         label: 'KI-Werbemittel' },
+  'werbemittel-testing':            { href: '/de/dienstleistungen/ki-werbemittel-system/',         label: 'KI-Werbemittel' },
+  'ki-verkaufsagenten':             { href: '/de/dienstleistungen/ki-lead-qualifizierung/',        label: 'KI-Leadqualifizierung' },
+  'crm-automatisierung':            { href: '/de/dienstleistungen/ki-lead-qualifizierung/',        label: 'KI-Leadqualifizierung' },
 };
 const relatedService = serviceLinkDe[slug];
 
@@ -96,9 +96,22 @@ const breadcrumbSchema = {
 
 const structuredData = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])];
 
-const showRoutingMotion = ['automated-lead-distribution','speed-to-lead','ai-lead-qualification','ai-sales-agents'].includes(slug);
-const showCreativeMotion = ['ai-ad-creatives','ad-creative-testing'].includes(slug);
-const showBroadcastMotion = ['whatsapp-broadcast-campaigns','whatsapp-lead-generation'].includes(slug);
+const showRoutingMotion = ['automatisierte-lead-verteilung','reaktionszeit','ki-lead-qualifizierung','ki-verkaufsagenten'].includes(slug);
+const showCreativeMotion = ['ki-werbemittel','werbemittel-testing'].includes(slug);
+const showBroadcastMotion = ['whatsapp-broadcast-kampagnen','whatsapp-lead-generierung'].includes(slug);
+
+const caseStudyLinkDe: Record<string, { href: string; label: string; cat: string }> = {
+  'reaktionszeit':                    { href: '/de/projekte/parcel-daily-conversion-boost/',      label: 'Parcel Daily: 60% mehr Conversions',    cat: 'Logistik · KI' },
+  'ki-lead-qualifizierung':           { href: '/de/projekte/imotorbike-ai-lead-qualification/',   label: 'iMotorbike: 2× tägliche Lead-Kapazität', cat: 'Automotive · KI' },
+  'automatisierte-lead-verteilung':   { href: '/de/projekte/imotorbike-ai-lead-qualification/',   label: 'iMotorbike: 2× tägliche Lead-Kapazität', cat: 'Automotive · KI' },
+  'whatsapp-broadcast-kampagnen':     { href: '/de/projekte/only-tourism-ai-visa-automation/',    label: 'Only Tourism: 6× monatliche Leads',      cat: 'Reise · KI' },
+  'whatsapp-lead-generierung':        { href: '/de/projekte/only-tourism-ai-visa-automation/',    label: 'Only Tourism: 6× monatliche Leads',      cat: 'Reise · KI' },
+  'ki-werbemittel':                   { href: '/de/projekte/parcel-daily-conversion-boost/',      label: 'Parcel Daily: 60% mehr Conversions',    cat: 'Logistik · KI' },
+  'werbemittel-testing':              { href: '/de/projekte/nianave-ecommerce-scaling-case-study/', label: 'Nianave: $30k → $120k/Monat',          cat: 'E-Commerce · Marketing' },
+  'ki-verkaufsagenten':               { href: '/de/projekte/only-tourism-ai-visa-automation/',    label: 'Only Tourism: 6× monatliche Leads',      cat: 'Reise · KI' },
+  'crm-automatisierung':              { href: '/de/projekte/prepme-automation-saas/',             label: 'PrepMe: 280 Stunden/Monat gespart',      cat: 'SaaS · Automatisierung' },
+};
+const relatedCaseStudy = caseStudyLinkDe[slug];
 
 const allPosts = await getCollection('blogsDe');
 const relatedPosts = allPosts
@@ -177,6 +190,31 @@ const relatedPosts = allPosts
       </div>
     </section>
 
+    <!-- Stats bar -->
+    <section class="blog-stats" aria-label="Wichtige Ergebnisse">
+      <div class="v2-container">
+        <div class="blog-stats__inner">
+          <div class="blog-stats__item" data-m>
+            <div class="blog-stats__n" data-count="200">0%</div>
+            <div class="blog-stats__label">Mehr Kunden</div>
+            <div class="blog-stats__sub">Lead-Verteilung optimieren für höhere Chat-Volumina</div>
+          </div>
+          <div class="blog-stats__divider" aria-hidden="true"></div>
+          <div class="blog-stats__item" data-m>
+            <div class="blog-stats__n" data-count="94">0%</div>
+            <div class="blog-stats__label">Schnellere Bearbeitung</div>
+            <div class="blog-stats__sub">Leads zum richtigen Agenten für präzise Antworten</div>
+          </div>
+          <div class="blog-stats__divider" aria-hidden="true"></div>
+          <div class="blog-stats__item" data-m>
+            <div class="blog-stats__n" data-count="93">0%</div>
+            <div class="blog-stats__label">CSAT Score</div>
+            <div class="blog-stats__sub">Schnelle, fachkundige Antworten für außergewöhnliche Erlebnisse</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="v2-section" style="padding-top: 0">
       <div class="v2-container">
         <div class="blog-layout">
@@ -184,6 +222,88 @@ const relatedPosts = allPosts
           <article class="blog-prose v2-prose" set:html={post.rendered?.html} />
 
           <aside class="blog-aside">
+
+            {showRoutingMotion && slug === 'automatisierte-lead-verteilung' && (
+              <div class="blog-aside__card">
+                <div class="blog-aside__head">7 Routing-Regeln</div>
+                <ul class="blog-rules-list">
+                  {['Agent-Verfügbarkeit','Round Robin','Kundentyp','Schicht-basiert','Sprachbasiert','Skillbasiert','Funktionsbasiert'].map((r, i) => (
+                    <li>
+                      <span class="blog-rules-list__n">{String(i + 1).padStart(2, '0')}</span>
+                      <span>{r}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {showRoutingMotion && slug === 'reaktionszeit' && (
+              <div class="blog-aside__card">
+                <div class="blog-aside__head">Speed-to-Lead System</div>
+                <ul class="blog-rules-list">
+                  {['Lead-Erfassung (alle Kanäle)','KI-Erstantwort (&lt;60s)','BANT-Qualifizierung','Lead-Score (0–100)','Intelligentes Routing','Hot-Lead-Übergabe','Follow-up-Sequenzen'].map((r, i) => (
+                    <li>
+                      <span class="blog-rules-list__n">{String(i + 1).padStart(2, '0')}</span>
+                      <span set:html={r} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {showRoutingMotion && ['ki-lead-qualifizierung','ki-verkaufsagenten'].includes(slug) && (
+              <div class="blog-aside__card">
+                <div class="blog-aside__head">BANT-Framework</div>
+                <ul class="blog-rules-list">
+                  {[
+                    { label: 'Budget', desc: 'Finanzielle Kapazität bestätigt' },
+                    { label: 'Authority', desc: 'Entscheidungsträger identifiziert' },
+                    { label: 'Need', desc: 'Problem-Lösungs-Fit bestätigt' },
+                    { label: 'Timeline', desc: 'Aktives Kaufzeitfenster' },
+                  ].map((r, i) => (
+                    <li>
+                      <span class="blog-rules-list__n">{String.fromCharCode(66 + i)}</span>
+                      <span><strong style="color:var(--fg-0)">{r.label}</strong> — {r.desc}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {showCreativeMotion && (
+              <div class="blog-aside__card">
+                <div class="blog-aside__head">6 Creative-Systeme</div>
+                <ul class="blog-rules-list">
+                  {[
+                    'Performance-Scoring',
+                    'Varianten-Generierung',
+                    'Multi-Plattform-Export',
+                    'A/B-Test-Automatisierung',
+                    'Marken-konforme Ausgabe',
+                    'Retargeting-Creatives',
+                  ].map((r, i) => (
+                    <li>
+                      <span class="blog-rules-list__n">{String(i + 1).padStart(2, '0')}</span>
+                      <span>{r}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {showBroadcastMotion && (
+              <div class="blog-aside__card">
+                <div class="blog-aside__head">3 Broadcast-Segmente</div>
+                <ul class="blog-rules-list">
+                  {[
+                    { label: 'Aktuelle Käufer', desc: '0–90 Tage · 12–25% Response' },
+                    { label: 'Schlafende High-Value', desc: '91–365 Tage · 8–18% Response' },
+                    { label: 'Nicht konvert. Leads', desc: 'Warmes Interesse · 5–12% Response' },
+                  ].map((r, i) => (
+                    <li>
+                      <span class="blog-rules-list__n">{String(i + 1).padStart(2, '0')}</span>
+                      <span><strong style="color:var(--fg-0)">{r.label}</strong> — {r.desc}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {relatedService && (
               <a href={relatedService.href} class="blog-aside__service-link">
@@ -195,6 +315,15 @@ const relatedPosts = allPosts
                     <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </span>
+              </a>
+            )}
+
+            {relatedCaseStudy && (
+              <a href={relatedCaseStudy.href} class="blog-aside__case-link">
+                <span class="blog-aside__case-eyebrow">In der Praxis gesehen</span>
+                <span class="blog-aside__case-cat">{relatedCaseStudy.cat}</span>
+                <span class="blog-aside__case-title">{relatedCaseStudy.label}</span>
+                <span class="blog-aside__case-read">Case Study lesen →</span>
               </a>
             )}
 
@@ -311,6 +440,36 @@ const relatedPosts = allPosts
 
 .blog-tags { display: flex; gap: 6px; flex-wrap: wrap; }
 
+/* Stats */
+.blog-stats { padding: 0 0 48px; }
+.blog-stats__inner {
+  display: flex; align-items: stretch;
+  background: var(--bg-card); border: 1px solid var(--line);
+  border-radius: var(--r-xl); overflow: hidden;
+}
+.blog-stats__item {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  padding: 36px 24px; text-align: center;
+  opacity: 0; transition: opacity .3s;
+  &.io-in { opacity: 1; }
+}
+.blog-stats__divider {
+  width: 1px; background: var(--line); flex-shrink: 0;
+  @media (max-width: 640px) { display: none; }
+}
+.blog-stats__n {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 60px);
+  letter-spacing: -0.02em;
+  background: var(--grad-text); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text; line-height: 1;
+}
+.blog-stats__label { font-size: 13px; font-weight: 600; color: var(--fg-0); margin-top: 8px; }
+.blog-stats__sub { font-size: 11.5px; color: var(--fg-2); line-height: 1.5; margin-top: 6px; max-width: 22ch; }
+@media (max-width: 640px) {
+  .blog-stats__inner { flex-direction: column; }
+  .blog-stats__item { border-bottom: 1px solid var(--line); &:last-child { border-bottom: none; } }
+}
+
 .blog-layout {
   display: grid;
   grid-template-columns: 1fr 300px;
@@ -401,6 +560,48 @@ const relatedPosts = allPosts
 .blog-aside__service-cta {
   display: inline-flex; align-items: center; gap: 4px;
   font-family: var(--font-mono); font-size: 10px; color: var(--c1-light); margin-top: 4px;
+}
+
+.blog-aside__case-link {
+  display: flex; flex-direction: column; gap: 3px;
+  padding: 14px 16px; background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--r-lg); text-decoration: none;
+  transition: border-color .2s, background .2s;
+  &:hover { border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.045); }
+}
+.blog-aside__case-eyebrow {
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: .1em;
+  text-transform: uppercase; color: rgba(255,255,255,0.25);
+}
+.blog-aside__case-cat {
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: .07em;
+  color: var(--c2); margin-top: 2px;
+}
+.blog-aside__case-title { font-size: 12px; font-weight: 600; color: var(--fg-1); line-height: 1.4; margin-top: 2px; }
+.blog-aside__case-read { font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.35); margin-top: 6px; }
+
+.blog-aside__card {
+  background: var(--bg-card); border: 1px solid var(--line);
+  border-radius: var(--r-lg); padding: 20px;
+}
+.blog-aside__head {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--fg-2); margin-bottom: 14px;
+}
+.blog-rules-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 2px;
+  li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 10px; border-radius: 8px; font-size: 12px; color: var(--fg-1);
+    transition: background .15s;
+    &:hover { background: var(--glass); color: var(--fg-0); }
+  }
+}
+.blog-rules-list__n {
+  font-family: var(--font-mono); font-size: 10px;
+  color: var(--c1-light); flex-shrink: 0; width: 18px;
 }
 
 .blog-aside__cta {

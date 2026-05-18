@@ -1,7 +1,7 @@
 ---
 title: "Ad Creative Testing: So finden Sie Gewinner ohne Budgetverschwendung"
 description: "Die meisten Ad-Accounts testen 2–3 Creative-Varianten und hoffen auf einen Treffer. Gewinner-Kampagnen testen 20–30 systematisch. Hier ist das Framework, das Cost-per-Lead senkt."
-slug: ad-creative-testing
+slug: werbemittel-testing
 author: kerim-alihodza
 published: "2026-05-17"
 updated: "2026-05-17"
@@ -51,7 +51,7 @@ Die häufigsten Fehler im Creative-Testing — und warum sie schlechte Daten pro
 
 Der Test beginnt mit Volumen. Bevor eine einzige Anzeige live geht, sollen 15–30 Creative-Varianten bereitstehen — unterschiedliche Bilder, Headlines, Ansätze für dieselbe Kernbotschaft.
 
-[KI-Creative-Generierung](/de/blog/ai-ad-creatives/) macht das möglich, ohne dass die Produktionskosten proportional steigen. Ein Briefing — Marke, Copy-Richtung, Zielgruppe, Plattform — produziert 20+ Varianten in Minuten, jede vorab auf prognostizierte Performance bewertet.
+[KI-Creative-Generierung](/de/blog/ki-werbemittel/) macht das möglich, ohne dass die Produktionskosten proportional steigen. Ein Briefing — Marke, Copy-Richtung, Zielgruppe, Plattform — produziert 20+ Varianten in Minuten, jede vorab auf prognostizierte Performance bewertet.
 
 Pre-Scoring eliminiert das Testen nicht. Aber es eliminiert die schlechtesten Performer, bevor sie auch nur einen Euro Budget verbrennen. Wenn die KI auf Basis vergleichbarer Kampagnen vorhersagt, dass 8 Varianten unterperformen werden, starten Sie nur die Top 12 und überspringen die Verschwendung an den unteren 8.
 
@@ -92,7 +92,7 @@ Die iterative Natur dieses Prozesses bedeutet: Jeder Zyklus startet von einer be
 
 Ein Kunde, der mit einem 3-Varianten-Ad-Account einsteigt und auf ein 20-Varianten-Framework wechselt, sieht typischerweise:
 
-- **40–60% Reduktion** der [Cost-per-Lead](/de/blog/whatsapp-lead-generation/) in den ersten 90 Tagen
+- **40–60% Reduktion** der [Cost-per-Lead](/de/blog/whatsapp-lead-generierung/) in den ersten 90 Tagen
 - **3–5× mehr** profitable Creative-Konzepte gleichzeitig im Einsatz
 - **Planbare Creative-Pipeline** — immer getestete Varianten bereit, um ermüdende Ads zu ersetzen
 

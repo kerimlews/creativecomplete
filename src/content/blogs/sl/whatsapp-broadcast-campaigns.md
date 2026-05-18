@@ -1,7 +1,7 @@
 ---
 title: "WhatsApp Broadcast kampanje: spremenite obstoječo bazo v prihodek"
 description: "Vaš CRM sedi na neizkoriščenem prihodku. WhatsApp broadcast kampanje dosežejo 98% stopnjo odprtja in povprečno 42,5× ROI na prvi kampanji — z dostavo pravega sporočila pravemu segmentu."
-slug: whatsapp-broadcast-campaigns
+slug: whatsapp-broadcast-kampanje
 author: kerim-alihodza
 published: "2026-05-17"
 updated: "2026-05-17"
@@ -23,7 +23,7 @@ faq:
     answer: "Z obstoječim opt-in seznamom kontaktov je broadcast kampanjo mogoče konfigurirati, odobriti in poslati v 48–72 urah. Če morate najprej zgraditi opt-in seznam, je časovnica 5–10 dni odvisno od vaših trenutnih kanalov. Mi obvladujemo odobritev predlog Mete, logiko segmentacije, pisanje sporočil in razporejanje pošiljanja."
 ---
 
-Imate [CRM](/sl/blog/crm-automation/) poln ljudi, ki vas že poznajo, so že razmišljali o nakupu pri vas, in v mnogih primerih so že kupili enkrat.
+Imate [CRM](/sl/blog/crm-avtomatizacija/) poln ljudi, ki vas že poznajo, so že razmišljali o nakupu pri vas, in v mnogih primerih so že kupili enkrat.
 
 Ta baza je vredna veliko več, kot iz nje črpate.
 
@@ -69,7 +69,7 @@ Pričakovana stopnja odgovora: **8–18%**
 
 ### Segment 3: Nepretvorjeni leadi
 
-Vsako podjetje ima [leade](/sl/blog/whatsapp-lead-generation/), ki so izrazili zanimanje, šli skozi del procesa kvalifikacije in nato postali hladni. To niso mrtvi leadi — so zakasnele odločitve.
+Vsako podjetje ima [leade](/sl/blog/whatsapp-pridobivanje-leadov/), ki so izrazili zanimanje, šli skozi del procesa kvalifikacije in nato postali hladni. To niso mrtvi leadi — so zakasnele odločitve.
 
 Broadcast za ta segment ponovno aktivira razmislek. Sporočilo se sklicuje na to, kar so gledali, naslavlja najpogostejši razlog za zamudo (časovnica, proračun, negotovost) in jim daje jasno pot nazaj. Časovno omejena ponudba ali brezplačno posvetovanje zniža trenje za ponovno angažiranje.
 
@@ -94,7 +94,7 @@ To ni teoretična projekcija. Je realna struktura kampanje, ki proizvaja resnič
 
 Broadcast odpre pogovor. Ta pogovor je treba obvladovati — in tukaj večina podjetij izgubi prihodek, ki so ga pravkar odklenila.
 
-AI agent obvladuje odgovore v realnem času, nadaljuje kvalifikacijski pogovor, odgovarja na vprašanja o produktu in usmerja [vroče odzivnike](/sl/blog/ai-lead-qualification/) k prodajnemu predstavniku ali povezavi za rezervacijo. Leadi, ki se odzovejo, vendar niso takoj pripravljeni kupiti, so označeni za follow-up zaporedja.
+AI agent obvladuje odgovore v realnem času, nadaljuje kvalifikacijski pogovor, odgovarja na vprašanja o produktu in usmerja [vroče odzivnike](/sl/blog/ai-kvalifikacija-leadov/) k prodajnemu predstavniku ali povezavi za rezervacijo. Leadi, ki se odzovejo, vendar niso takoj pripravljeni kupiti, so označeni za follow-up zaporedja.
 
 Broadcast ni enkratni dogodek. Je otvoritvena poteza v stalnem monetizacijskem sistemu. Vsaka kampanja proizvede prihodek, podatke o tem, kaj odzvanja, in izpopolnjen segment seznam za naslednjo.
 

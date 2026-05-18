@@ -1,7 +1,7 @@
 ---
 title: "Speed-to-Lead System: Antwort in 60 Sekunden, 24/7"
 description: "Jeder Lead erhält innerhalb von 60 Sekunden eine qualifizierte Antwort — rund um die Uhr, auf 40+ Kanälen. Speed-to-Lead ist der wichtigste Hebel für höhere Abschlussraten. CreativeComplete baut und betreibt Ihr System."
-slug: "speed-to-lead-system"
+slug: "reaktionszeit-system"
 category: "Lead-Management"
 features:
   - "60-Sekunden-Antwortzeit, 24/7"

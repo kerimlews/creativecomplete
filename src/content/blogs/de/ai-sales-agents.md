@@ -1,7 +1,7 @@
 ---
 title: "AI Sales Agents: Qualifizieren und nachfassen, während Ihr Team schläft"
 description: "80% der Verkäufe brauchen 5+ Follow-ups. Die meisten Reps geben nach 2 auf. AI Sales Agents übernehmen Qualifizierung, Follow-up und Terminbuchung rund um die Uhr — Ihr Team fokussiert sich aufs Closing."
-slug: ai-sales-agents
+slug: ki-verkaufsagenten
 author: kerim-alihodza
 published: "2026-05-17"
 updated: "2026-05-17"
@@ -39,9 +39,9 @@ Der Umfang dessen, was er übernimmt:
 
 **Erste Antwort (< 60 Sekunden):** Jeder neue Lead bekommt eine Antwort innerhalb von Sekunden nach seiner Anfrage. Bevor Ihre Reps morgens die Nachrichten checken, hat die KI bereits Ihr Unternehmen vorgestellt, mit der Qualifizierung begonnen und den Kernbedarf identifiziert.
 
-**[BANT-Qualifizierung](/de/blog/ai-lead-qualification/):** Durch konversationellen Austausch surfacet die KI Budget, Entscheidungsautorität, konkreten Bedarf und Timeline. Der Lead erlebt ein hilfreiches Gespräch, kein Verhör. Die KI dokumentiert jedes Signal und baut eine Qualifizierungs-Zusammenfassung.
+**[BANT-Qualifizierung](/de/blog/ki-lead-qualifizierung/):** Durch konversationellen Austausch surfacet die KI Budget, Entscheidungsautorität, konkreten Bedarf und Timeline. Der Lead erlebt ein hilfreiches Gespräch, kein Verhör. Die KI dokumentiert jedes Signal und baut eine Qualifizierungs-Zusammenfassung.
 
-**[Follow-up-Sequenzen](/de/blog/whatsapp-broadcast-campaigns/):** Ein Lead, der nicht auf die erste Nachricht reagiert, bekommt automatisch Follow-ups an Tag 1, 3, 7 und 14. Der Nachrichteninhalt passt sich der letzten bekannten Position des Leads in der Konversation an. Leads, die warm waren und stumm wurden, bekommen einen Re-Engagement-Prompt. Leads, die einen konkreten Einwand erhoben haben, bekommen Inhalte, die ihn adressieren.
+**[Follow-up-Sequenzen](/de/blog/whatsapp-broadcast-kampagnen/):** Ein Lead, der nicht auf die erste Nachricht reagiert, bekommt automatisch Follow-ups an Tag 1, 3, 7 und 14. Der Nachrichteninhalt passt sich der letzten bekannten Position des Leads in der Konversation an. Leads, die warm waren und stumm wurden, bekommen einen Re-Engagement-Prompt. Leads, die einen konkreten Einwand erhoben haben, bekommen Inhalte, die ihn adressieren.
 
 **Einwandbehandlung:** Wenn ein Lead zögert oder Bedenken äußert, ist die KI trainiert, sie aufzugreifen und zu behandeln — statt sie zu überspringen. Ein Preiseinwand bekommt ein Value-Reframe. Ein Timing-Einwand bekommt einen Dringlichkeits-Prompt oder einen "Lassen Sie uns für nächstes Quartal terminieren"-Pfad. Die Einwandbehandlung nutzt Ihre besten Antworten konsistent.
 
@@ -78,6 +78,6 @@ Die meisten Leads kaufen nicht beim ersten Gespräch. Sie kaufen beim dritten, f
 
 AI Agents fahren das Follow-up systematisch: die richtige Nachricht, im richtigen Intervall, basierend auf dem Stand des Leads in der Konversation. Keine Leads fallen durch die Maschen, weil ein Rep zu beschäftigt, zu vergesslich oder zu unbehaglich mit persistentem Follow-up war.
 
-Bei **CreativeComplete** sind AI Sales Agents in der Convert-Phase des AI Customer Systems konfiguriert — integriert mit jedem Lead-Kanal, Ihrem [CRM](/de/blog/crm-automation/) und dem Kalender Ihrer Reps. Das System wird in 5 Tagen gebaut, trainiert und getestet.
+Bei **CreativeComplete** sind AI Sales Agents in der Convert-Phase des AI Customer Systems konfiguriert — integriert mit jedem Lead-Kanal, Ihrem [CRM](/de/blog/crm-automatisierung/) und dem Kalender Ihrer Reps. Das System wird in 5 Tagen gebaut, trainiert und getestet.
 
 Wenn Ihre Abschlussquote niedriger ist, als sie sein sollte, liegt es wahrscheinlich nicht am Produkt oder am Pitch. Es liegt an den Leads, die zwischen Erstkontakt und erstem Gespräch kalt geworden sind.
