@@ -21,6 +21,7 @@ const c = getV2Content(lang).stats;
         </div>
       ))}
     </div>
+    <p class="v2-stats-strip__source">Client median results across 50+ agency deployments. Individual results vary.</p>
     <div class="v2-sc" data-m="up" style="--m-d:.45s">
       <a href="javascript:void(0)" class="v2-sc__btn"
          data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'>
@@ -29,3 +30,15 @@ const c = getV2Content(lang).stats;
     </div>
   </div>
 </section>
+
+<style>
+  .v2-stats-strip__source {
+    text-align: center;
+    font-size: 11px;
+    font-family: var(--font-mono);
+    color: var(--fg-2);
+    letter-spacing: 0.05em;
+    margin: 12px 0 0;
+    opacity: 0.7;
+  }
+</style>

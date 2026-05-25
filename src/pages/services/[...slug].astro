@@ -73,10 +73,7 @@ const features: string[] = (service.data.features as string[] | undefined) ?? []
 const faq: { question: string; answer: string }[] = (service.data.faq as any) ?? [];
 const category = service.data.category as string | undefined;
 
-// SEO: keyword-first title
-const seoTitle = category
-  ? `${category}: ${service.data.title as string} | CreativeComplete`
-  : `${service.data.title as string} | AI Customer System Agency`;
+const seoTitle = `${service.data.title as string} | CreativeComplete`;
 
 const structuredData = generateServiceJsonLd(service);
 const breadcrumbs = [

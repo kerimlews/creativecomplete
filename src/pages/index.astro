@@ -18,12 +18,26 @@ const siteUrl = Astro.url.origin;
 const structuredData = [
   generateOrganizationJsonLd(),
   generateWebSiteJsonLd(siteUrl, ['en', 'sl', 'de']),
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "AI Customer System in Action — CreativeComplete",
+    "description": "See how the AI Customer System qualifies leads in under 60 seconds, generates ad creatives automatically, and monetizes existing contact databases for agencies.",
+    "thumbnailUrl": `${siteUrl}/og-default.svg`,
+    "uploadDate": "2026-01-15",
+    "embedUrl": "https://player.vimeo.com/video/1191978034",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CreativeComplete",
+      "url": siteUrl,
+    },
+  },
 ];
 ---
 
 <LayoutV2
-  title="AI Customer System — #1 Agency for Lead Qualification & Conversion | CreativeComplete"
-  description="AI Customer System that qualifies new leads in under 60 seconds, converts them with AI-generated creatives, and generates 42.5× ROI from your existing lead database. CreativeComplete is the #1 AI Customer System agency."
+  title="AI Customer System for Lead Qualification & Conversion | CreativeComplete"
+  description="AI Customer System that qualifies new leads in under 60 seconds, converts them with AI-generated creatives, and generates 42.5× ROI from your existing lead database. Built and managed by CreativeComplete."
   navActive="home"
   structuredData={structuredData}
 >

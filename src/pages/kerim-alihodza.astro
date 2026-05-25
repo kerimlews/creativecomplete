@@ -23,6 +23,8 @@ const jsonLd = {
       "url": canonicalUrl,
       "name": "Kerim Alihodza — AI Customer System Consultant",
       "description": "10+ years transforming businesses through AI automation and engineered growth systems.",
+      "dateCreated": "2023-01-01",
+      "dateModified": "2026-05-01",
       "mainEntity": {
         "@type": "Person",
         "@id": canonicalUrl + "#person",
@@ -30,7 +32,7 @@ const jsonLd = {
         "jobTitle": "CEO & AI Customer System Consultant",
         "description": "10+ years transforming businesses through AI automation and engineered growth systems.",
         "url": canonicalUrl,
-        "image": "https://creativecomplete.com/images/kerim-alihodza.jpg",
+        "image": "https://creativecomplete.com/images/kerim-alihodza.png",
         "sameAs": activeSocials.map(([, social]) => social.url),
         "worksFor": {
           "@type": "Organization",
@@ -44,7 +46,17 @@ const jsonLd = {
           "Digital Business Transformation",
           "Revenue Growth Strategy",
           "Ad Creative Optimization"
-        ]
+        ],
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "name": "WhatsApp Business Solution Partner" },
+          { "@type": "EducationalOccupationalCredential", "name": "Meta Blueprint Certified" },
+          { "@type": "EducationalOccupationalCredential", "name": "Google Ads Advanced Certified" }
+        ],
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "CreativeComplete",
+          "url": "https://creativecomplete.com/"
+        }
       }
     },
     {
@@ -107,6 +119,7 @@ const credentials = [
   description="Meet Kerim Alihodza, CEO of CreativeComplete. 10+ years engineering AI-powered lead qualification, WhatsApp automation, and customer systems for agencies."
   structuredData={jsonLd}
   canonicalUrl={canonicalUrl}
+  hreflangAlternates={{ en: canonicalUrl }}
 >
   <main>
     <!-- Breadcrumb -->
@@ -222,7 +235,7 @@ const credentials = [
               I've spent the last decade in the trenches of digital business transformation. Not in theory. Not in conferences. In the reality of taking businesses from struggling to dominant.
             </p>
             <p>
-              Most agencies sell dreams. I deliver measurable outcomes. While others talk about "brand presence," I'm engineering systems that drive 300% revenue growth, automate 80% of manual work, and position businesses as market leaders.
+              Most agencies sell dreams. I deliver measurable outcomes. The difference is verifiable: 81% lead qualification rates, 42.5× broadcast ROI, 60-second response times — numbers from real deployments, not projections.
             </p>
             <p>
               Today, CreativeComplete is the AI Customer System agency I wish had existed when I started. We plug in, capture every lead across 40+ channels, qualify them in 60 seconds via WhatsApp, and continuously monetize your existing database — without adding headcount.
@@ -250,6 +263,10 @@ const credentials = [
             </li>
           ))}
         </ul>
+        <p class="ka-creds__verify">
+          Certifications and professional history verifiable on
+          <a href="https://www.linkedin.com/in/kerim-alihodza/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+        </p>
       </div>
     </section>
 
@@ -548,6 +565,20 @@ const credentials = [
     font-size: 15px;
     color: var(--fg-1);
     line-height: 1.5;
+  }
+
+  .ka-creds__verify {
+    margin-top: 16px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+    color: var(--fg-2);
+    max-width: 640px;
+
+    a {
+      color: var(--c1-light);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
   }
 
   .ka-cred__check {

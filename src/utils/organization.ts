@@ -14,21 +14,18 @@ export const ORGANIZATION = {
     url: "https://www.creativecomplete.com/kerim-alihodza/"
   },
   contactPoint: {
-    telephone: "",
     contactType: "Customer Service",
     email: "info@creativecomplete.com"
   },
   sameAs: [
-    "https://www.linkedin.com/in/kerim-alihodza-a765aa145/",
     "https://www.linkedin.com/company/creative-complete/",
+    "https://www.linkedin.com/in/kerim-alihodza-a765aa145/",
     "https://twitter.com/KAlihodza82975",
     "https://instagram.com/creative_complete"
   ],
   address: {
-    streetAddress: "",
     addressLocality: "Ljubljana",
     addressRegion: "Ljubljana",
-    postalCode: "",
     addressCountry: "SI"
   }
 } as const;

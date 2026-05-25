@@ -38,6 +38,35 @@ const publishedFmt   = publishedDate.toLocaleDateString('en-US', { year: 'numeri
 const canonicalUrl = `${Astro.url.origin}/blog/${slug}/`;
 const ogImage = `${Astro.url.origin}/images/og/${slug}.svg`;
 
+const siteUrl = 'https://www.creativecomplete.com';
+const enToDeBlog: Record<string, string> = {
+  'ai-sales-agents':              'ki-verkaufsagenten',
+  'ai-ad-creatives':              'ki-werbemittel',
+  'whatsapp-lead-generation':     'whatsapp-lead-generierung',
+  'speed-to-lead':                'reaktionszeit',
+  'automated-lead-distribution':  'automatisierte-lead-verteilung',
+  'crm-automation':               'crm-automatisierung',
+  'ai-lead-qualification':        'ki-lead-qualifizierung',
+  'whatsapp-broadcast-campaigns': 'whatsapp-broadcast-kampagnen',
+  'ad-creative-testing':          'werbemittel-testing',
+};
+const enToSlBlog: Record<string, string> = {
+  'ai-sales-agents':              'ai-prodajni-agenti',
+  'ai-ad-creatives':              'ai-oglasne-kreative',
+  'whatsapp-lead-generation':     'whatsapp-pridobivanje-leadov',
+  'speed-to-lead':                'hitrost-do-leada',
+  'automated-lead-distribution':  'avtomatizirana-distribucija-leadov',
+  'crm-automation':               'crm-avtomatizacija',
+  'ai-lead-qualification':        'ai-kvalifikacija-leadov',
+  'whatsapp-broadcast-campaigns': 'whatsapp-broadcast-kampanje',
+  'ad-creative-testing':          'testiranje-oglasnih-kreativ',
+};
+const hreflangAlternates = enToDeBlog[slug] ? {
+  en: canonicalUrl,
+  de: `${siteUrl}/de/blog/${enToDeBlog[slug]}/`,
+  sl: `${siteUrl}/sl/blog/${enToSlBlog[slug]}/`,
+} : undefined;
+
 // Sidebar: related service page per post
 const serviceLink: Record<string, { href: string; label: string }> = {
   'speed-to-lead':               { href: '/services/speed-to-lead-system/',          label: 'Speed to Lead System' },
@@ -79,29 +108,27 @@ const articleSchema = {
   "url": canonicalUrl,
   "datePublished": published,
   "dateModified": updated,
+  "image": ogImage,
   "author": {
     "@type": "Person",
     "name": "Kerim Alihodza",
     "url": `${Astro.url.origin}/kerim-alihodza/`,
+    "sameAs": "https://www.linkedin.com/in/kerim-alihodza/",
   },
   "publisher": {
     "@type": "Organization",
     "name": "CreativeComplete",
     "url": Astro.url.origin,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${Astro.url.origin}/favicon.svg`,
+    },
   },
   "keywords": tags.join(', '),
   "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
 };
 
-const faqSchema = faqItems.length > 0 ? {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqItems.map((item) => ({
-    "@type": "Question",
-    "name": item.question,
-    "acceptedAnswer": { "@type": "Answer", "text": item.answer },
-  })),
-} : null;
+// FAQPage rich results deprecated May 7 2026 — schema removed; visible FAQ content remains on page.
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -109,11 +136,11 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": Astro.url.origin + '/' },
     { "@type": "ListItem", "position": 2, "name": "Blog", "item": Astro.url.origin + '/blog/' },
-    { "@type": "ListItem", "position": 3, "name": title, "item": canonicalUrl },
+    { "@type": "ListItem", "position": 3, "name": title },
   ],
 };
 
-const structuredData = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])];
+const structuredData = [articleSchema, breadcrumbSchema];
 
 // Detect which motion graphic to show based on category/tags
 const showRoutingMotion = ['automated lead distribution', 'speed to lead', 'AI lead qualification', 'lead scoring', 'AI sales agents', 'automated follow-up'].some(t => tags.includes(t))
@@ -150,6 +177,8 @@ const relatedPosts = allPosts
   ogImage={ogImage}
   structuredData={structuredData}
   navActive="results"
+  {hreflangAlternates}
+  openGraph={{ type: 'article' }}
 >
   <main>
 

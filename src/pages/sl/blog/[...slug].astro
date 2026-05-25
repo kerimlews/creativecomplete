@@ -35,6 +35,35 @@ const publishedFmt  = publishedDate.toLocaleDateString('sl-SI', { year: 'numeric
 const canonicalUrl = `https://www.creativecomplete.com/sl/blog/${slug}/`;
 const ogImage = `${Astro.url.origin}/images/og/${slug}.svg`;
 
+const siteUrl = 'https://www.creativecomplete.com';
+const slToEnBlog: Record<string, string> = {
+  'ai-prodajni-agenti':               'ai-sales-agents',
+  'ai-oglasne-kreative':              'ai-ad-creatives',
+  'whatsapp-pridobivanje-leadov':     'whatsapp-lead-generation',
+  'hitrost-do-leada':                 'speed-to-lead',
+  'avtomatizirana-distribucija-leadov': 'automated-lead-distribution',
+  'crm-avtomatizacija':               'crm-automation',
+  'ai-kvalifikacija-leadov':          'ai-lead-qualification',
+  'whatsapp-broadcast-kampanje':      'whatsapp-broadcast-campaigns',
+  'testiranje-oglasnih-kreativ':      'ad-creative-testing',
+};
+const slToDeBlog: Record<string, string> = {
+  'ai-prodajni-agenti':               'ki-verkaufsagenten',
+  'ai-oglasne-kreative':              'ki-werbemittel',
+  'whatsapp-pridobivanje-leadov':     'whatsapp-lead-generierung',
+  'hitrost-do-leada':                 'reaktionszeit',
+  'avtomatizirana-distribucija-leadov': 'automatisierte-lead-verteilung',
+  'crm-avtomatizacija':               'crm-automatisierung',
+  'ai-kvalifikacija-leadov':          'ki-lead-qualifizierung',
+  'whatsapp-broadcast-kampanje':      'whatsapp-broadcast-kampagnen',
+  'testiranje-oglasnih-kreativ':      'werbemittel-testing',
+};
+const hreflangAlternates = slToEnBlog[slug] ? {
+  en: `${siteUrl}/blog/${slToEnBlog[slug]}/`,
+  de: `${siteUrl}/de/blog/${slToDeBlog[slug]}/`,
+  sl: canonicalUrl,
+} : undefined;
+
 const serviceLinkSl: Record<string, { href: string; label: string }> = {
   'hitrost-do-leada':                 { href: '/sl/storitve/hitrost-do-leada/',                   label: 'Hitrost do leada' },
   'ai-kvalifikacija-leadov':          { href: '/sl/storitve/ai-kvalifikacija-leadov/',             label: 'AI kvalifikacija leadov' },
@@ -60,29 +89,24 @@ const articleSchema = {
   "datePublished": published,
   "dateModified": updated,
   "inLanguage": "sl",
+  "image": `${Astro.url.origin}/images/og/${slug}.svg`,
   "author": {
     "@type": "Person",
     "name": "Kerim Alihodza",
     "url": `${Astro.url.origin}/kerim-alihodza/`,
+    "sameAs": "https://www.linkedin.com/in/kerim-alihodza/",
   },
   "publisher": {
     "@type": "Organization",
     "name": "CreativeComplete",
     "url": Astro.url.origin,
+    "logo": { "@type": "ImageObject", "url": `${Astro.url.origin}/logo-gradient.svg` },
   },
   "keywords": tags.join(', '),
   "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
 };
 
-const faqSchema = faqItems.length > 0 ? {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqItems.map(item => ({
-    "@type": "Question",
-    "name": item.question,
-    "acceptedAnswer": { "@type": "Answer", "text": item.answer },
-  })),
-} : null;
+// FAQPage rich results deprecated May 7 2026 — schema removed; visible FAQ content remains on page.
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -90,11 +114,11 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Domov", "item": `${Astro.url.origin}/sl/` },
     { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${Astro.url.origin}/sl/blog/` },
-    { "@type": "ListItem", "position": 3, "name": title, "item": canonicalUrl },
+    { "@type": "ListItem", "position": 3, "name": title },
   ],
 };
 
-const structuredData = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])];
+const structuredData = [articleSchema, breadcrumbSchema];
 
 const showRoutingMotion = ['avtomatizirana-distribucija-leadov','hitrost-do-leada','ai-kvalifikacija-leadov','ai-prodajni-agenti'].includes(slug);
 const showCreativeMotion = ['ai-oglasne-kreative','testiranje-oglasnih-kreativ'].includes(slug);
@@ -136,6 +160,8 @@ const relatedPosts = allPosts
   ogImage={ogImage}
   structuredData={structuredData}
   navActive="results"
+  {hreflangAlternates}
+  openGraph={{ type: 'article' }}
 >
   <main>
 

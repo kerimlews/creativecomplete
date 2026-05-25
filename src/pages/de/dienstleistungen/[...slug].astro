@@ -23,6 +23,25 @@ const faqItems    = (service.data.faq as { question: string; answer: string }[] 
 
 const canonicalUrl = `https://www.creativecomplete.com/de/dienstleistungen/${slug}/`;
 
+const siteUrl = 'https://www.creativecomplete.com';
+const deToEnSlug: Record<string, string> = {
+  'ki-werbemittel-system': '/services/ai-ad-creative-engine/',
+  'ki-lead-qualifizierung': '/services/ai-lead-qualification/',
+  'reaktionszeit-system': '/services/speed-to-lead-system/',
+  'whatsapp-datenbank-monetarisierung': '/services/whatsapp-database-monetization/',
+};
+const deToSlSlug: Record<string, string> = {
+  'ki-werbemittel-system': '/sl/storitve/ai-oglasevalski-kreativni-sistem/',
+  'ki-lead-qualifizierung': '/sl/storitve/ai-kvalifikacija-leadov/',
+  'reaktionszeit-system': '/sl/storitve/hitrost-do-leada/',
+  'whatsapp-datenbank-monetarisierung': '/sl/storitve/whatsapp-monetizacija-baze/',
+};
+const hreflangAlternates = deToEnSlug[slug] ? {
+  en: siteUrl + deToEnSlug[slug],
+  de: canonicalUrl,
+  sl: siteUrl + deToSlSlug[slug],
+} : undefined;
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -40,6 +59,7 @@ const structuredData = {
   description={description}
   canonicalUrl={canonicalUrl}
   structuredData={structuredData}
+  {hreflangAlternates}
 >
   <main>
 

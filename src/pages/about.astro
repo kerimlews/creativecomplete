@@ -2,11 +2,42 @@
 import LayoutV2 from '../layouts/LayoutV2.astro';
 import AuthorBadge from '../components/v2/AuthorBadge.astro';
 import CTA from '../components/v2/CTA.astro';
+import { generateAboutPageJsonLd, generateBreadcrumbJsonLd } from '../utils/jsonld';
+
+const canonicalUrl = 'https://www.creativecomplete.com/about/';
+
+const structuredData = [
+  generateAboutPageJsonLd({
+    name: 'CreativeComplete',
+    description: 'CreativeComplete builds and manages AI Customer Systems for agencies — the infrastructure that qualifies leads in 60 seconds, generates creatives automatically, and monetizes existing contact databases.',
+    url: canonicalUrl,
+    founder: { name: 'Kerim Alihodza', url: 'https://www.creativecomplete.com/kerim-alihodza/' },
+    foundingDate: '2023',
+    services: [
+      'AI Lead Qualification',
+      'AI Ad Creative Engine',
+      'Speed to Lead System',
+      'WhatsApp Database Monetization',
+      'Web Design',
+      'SEO',
+      'AI Automation',
+      'E-commerce Development',
+      'Mobile App Development',
+      'Custom SaaS Development',
+    ],
+  }),
+  generateBreadcrumbJsonLd([
+    { name: 'Home', url: 'https://www.creativecomplete.com/' },
+    { name: 'About', url: canonicalUrl },
+  ]),
+];
 ---
 
 <LayoutV2
   title="About CreativeComplete | AI Customer System Agency"
   description="CreativeComplete is focused on building and managing AI Customer Systems for agencies — the infrastructure that qualifies leads in 60 seconds, generates creatives automatically, and monetizes existing contact databases."
+  canonicalUrl={canonicalUrl}
+  structuredData={structuredData}
 >
   <main>
     <div class="v2-container v2-bc">

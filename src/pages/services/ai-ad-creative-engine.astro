@@ -3,6 +3,12 @@ import ServiceLayout from '../../layouts/ServiceLayout.astro';
 
 const canonicalUrl = 'https://creativecomplete.com/services/ai-ad-creative-engine/';
 
+const hreflangAlternates = {
+  en: canonicalUrl,
+  de: 'https://www.creativecomplete.com/de/dienstleistungen/ki-werbemittel-system/',
+  sl: 'https://www.creativecomplete.com/sl/storitve/ai-oglasevalski-kreativni-sistem/',
+};
+
 const faqItems = [
   { name: "What is the AI Ad Creative Engine?", answer: "It's a system that generates multiple ad creative variants — headlines, visuals, copy angles — and systematically tests them to find the highest-performing combinations. Instead of a single creative running until it fatigues, you always have 4–8 tested variants, with winners scaling automatically and losers killed before they drain budget." },
   { name: "Which ad platforms does this cover?", answer: "Meta (Facebook and Instagram), Google Display, YouTube pre-roll, and TikTok. Each platform gets platform-native formats — vertical video for Reels, static for Feed, responsive for Display — generated and sized automatically." },
@@ -31,10 +37,6 @@ const structuredData = {
         { "@type": "ListItem", "position": 3, "name": "AI Ad Creative Engine", "item": canonicalUrl },
       ]
     },
-    {
-      "@type": "FAQPage",
-      "mainEntity": faqItems.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.answer } }))
-    }
   ]
 };
 ---
@@ -44,6 +46,7 @@ const structuredData = {
   description="AI-generated multi-variant ad creatives tested automatically across Meta and Google. Winners scale. Losers die. Cost-per-lead drops 40–60% in 30 days."
   {canonicalUrl}
   {structuredData}
+  {hreflangAlternates}
   h1="AI Ad Creative Engine: Cut CPL 40–60% in 30 Days"
   h1Grad="Cut CPL 40–60% in 30 Days"
   lead="Stop guessing which ad will work. Our AI generates dozens of creative variants — headlines, hooks, formats — and tests them simultaneously across Meta and Google. Winners scale automatically. Losers are killed before they drain budget. You get lower CPL without touching the ad account."

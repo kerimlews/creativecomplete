@@ -277,7 +277,7 @@ const en = {
   ] as FAQItem[],
 
   cta: {
-    eyebrow: '#1 AI Customer System Agency · Limited slots',
+    eyebrow: 'AI Customer System Agency · 50+ Agencies Served',
     headline: 'Stop Losing Leads<br/><span class="v2-grad">Your Ads Already Paid For.</span>',
     subline: 'Book a free 30-minute audit. We map your current lead flow, calculate your exact revenue leakage, and show you the precise AI configuration for your agency, at no cost, no obligation.',
     buttonText: 'Claim My Free Audit, Book Now',
@@ -554,7 +554,7 @@ const de = {
   ] as FAQItem[],
 
   cta: {
-    eyebrow: '#1 KI Customer System Agentur · Begrenzte Plätze',
+    eyebrow: 'KI Customer System Agentur · 50+ Agenturen betreut',
     headline: 'Hören Sie auf, Leads zu verlieren,<br/><span class="v2-grad">für die Ihre Werbung bereits bezahlt hat.</span>',
     subline: 'Buchen Sie ein kostenloses 30-Minuten-Audit. Wir analysieren Ihren aktuellen Lead-Flow, berechnen Ihre genaue Umsatzlücke und zeigen Ihnen die exakte KI-Konfiguration für Ihre Agentur — kostenlos, unverbindlich.',
     buttonText: 'Kostenloses Audit jetzt sichern',
@@ -831,7 +831,7 @@ const sl = {
   ] as FAQItem[],
 
   cta: {
-    eyebrow: '#1 AI Customer System Agencija · Omejeno število mest',
+    eyebrow: 'AI Customer System Agencija · 50+ agencij',
     headline: 'Prenehajte izgubljati leade,<br/><span class="v2-grad">za katere ste že plačali z oglasi.</span>',
     subline: 'Rezervirajte brezplačen 30-minutni pregled. Analiziramo vaš trenutni tok leadov, izračunamo vašo natančno izgubo prihodkov in vam pokažemo natančno AI konfiguracijo za vašo agencijo — brez stroškov, brez obveznosti.',
     buttonText: 'Zahtevaj brezplačen pregled zdaj',

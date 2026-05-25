@@ -36,12 +36,17 @@ const collectionSchema = {
   "author": {
     "@type": "Person",
     "name": "Kerim Alihodza",
-    "url": "https://creativecomplete.com/kerim-alihodza/"
+    "url": "https://creativecomplete.com/kerim-alihodza/",
+    "sameAs": "https://www.linkedin.com/in/kerim-alihodza/",
   },
   "publisher": {
     "@type": "Organization",
     "name": "CreativeComplete",
-    "url": "https://creativecomplete.com/"
+    "url": "https://creativecomplete.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.creativecomplete.com/logo-gradient.svg",
+    },
   },
   "hasPart": posts.map(p => ({
     "@type": "BlogPosting",
@@ -49,7 +54,12 @@ const collectionSchema = {
     "description": p.description,
     "url": `https://creativecomplete.com/blog/${p.slug}/`,
     "datePublished": p.published,
-  }))
+    "author": {
+      "@type": "Person",
+      "name": "Kerim Alihodza",
+      "url": "https://creativecomplete.com/kerim-alihodza/",
+    },
+  })),
 };
 ---
 
@@ -72,6 +82,10 @@ const collectionSchema = {
         <p class="v2-lead blog-index-lead" data-m="up" style="--m-d:.1s">
           Practical breakdowns on automated lead distribution, AI systems, and sales automation — with real numbers from real builds.
         </p>
+        <a href="/kerim-alihodza/" class="blog-index-author" data-m="up" style="--m-d:.12s">
+          <img src="/images/kerim-alihodza.png" alt="Kerim Alihodza" width="28" height="28" loading="lazy" />
+          <span>Written by <strong>Kerim Alihodza</strong>, CEO & AI Customer System Consultant</span>
+        </a>
 
         <!-- Search -->
         <div class="blog-search" data-m="up" style="--m-d:.15s">
@@ -225,7 +239,30 @@ filters?.addEventListener('click', e => {
   .v2-eyebrow { margin-bottom: 16px; }
 }
 .blog-index-h1 { margin: 0 0 16px; max-width: 18ch; }
-.blog-index-lead { margin: 0 0 36px; max-width: 54ch; }
+.blog-index-lead { margin: 0 0 20px; max-width: 54ch; }
+
+.blog-index-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  transition: color .15s;
+
+  img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  strong { color: rgba(255,255,255,0.8); font-weight: 600; }
+
+  &:hover { color: rgba(255,255,255,0.7); }
+}
 
 /* Search */
 .blog-search {

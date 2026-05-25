@@ -35,6 +35,8 @@
     "sharp": "^0.34.2"
   },
   "devDependencies": {
-    "sass-embedded": "^1.93.3"
+    "@astrojs/check": "^0.9.9",
+    "sass-embedded": "^1.93.3",
+    "typescript": "^6.0.3"
   }
 }

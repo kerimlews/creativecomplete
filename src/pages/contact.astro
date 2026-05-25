@@ -1,10 +1,42 @@
 ---
 import LayoutV2 from '../layouts/LayoutV2.astro';
+import { generateOrganizationJsonLd, generateBreadcrumbJsonLd } from '../utils/jsonld';
+
+const canonicalUrl = 'https://www.creativecomplete.com/contact/';
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": canonicalUrl,
+    "url": canonicalUrl,
+    "name": "Contact CreativeComplete",
+    "description": "Get in touch to audit your current setup, calculate your revenue leakage, and see what AI Customer System can generate for your agency.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "CreativeComplete",
+      "url": "https://www.creativecomplete.com/",
+      "email": "info@creativecomplete.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "info@creativecomplete.com",
+        "availableLanguage": ["English", "German", "Slovenian"],
+      },
+    },
+  },
+  generateBreadcrumbJsonLd([
+    { name: 'Home', url: 'https://www.creativecomplete.com/' },
+    { name: 'Contact', url: canonicalUrl },
+  ]),
+];
 ---
 
 <LayoutV2
   title="Contact CreativeComplete | AI Customer System Agency"
   description="Get in touch to audit your current setup, calculate your revenue leakage, and see what AI Customer System can generate for your agency."
+  canonicalUrl={canonicalUrl}
+  structuredData={structuredData}
 >
   <main>
     <div class="v2-container v2-bc">
@@ -128,6 +160,9 @@ import LayoutV2 from '../layouts/LayoutV2.astro';
                 </div>
               </div>
 
+              <p class="ct-privacy">
+                By submitting you agree to our <a href="/privacy-policy/">Privacy Policy</a>. We never share your data.
+              </p>
               <button type="submit" class="ct-submit v2-btn v2-btn-primary" id="ctSubmit">
                 <span class="ct-submit__text">
                   Send message
@@ -364,6 +399,20 @@ import LayoutV2 from '../layouts/LayoutV2.astro';
   .ct-input    { @extend %ct-control; }
   .ct-select   { @extend %ct-control; cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%234b5563' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
   .ct-textarea { @extend %ct-control; resize: vertical; min-height: 120px; line-height: 1.6; }
+
+  .ct-privacy {
+    font-size: 11px;
+    font-family: var(--font-mono);
+    color: var(--fg-2);
+    margin: 0 0 12px;
+    line-height: 1.5;
+
+    a {
+      color: var(--c1-light);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
 
   .ct-submit {
     width: 100%;

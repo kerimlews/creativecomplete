@@ -3,6 +3,12 @@ import ServiceLayout from '../../layouts/ServiceLayout.astro';
 
 const canonicalUrl = 'https://creativecomplete.com/services/speed-to-lead-system/';
 
+const hreflangAlternates = {
+  en: canonicalUrl,
+  de: 'https://www.creativecomplete.com/de/dienstleistungen/reaktionszeit-system/',
+  sl: 'https://www.creativecomplete.com/sl/storitve/hitrost-do-leada/',
+};
+
 const faqItems = [
   { name: "What is a Speed to Lead system?", answer: "A Speed to Lead system ensures every new lead — from any channel — receives an AI response within seconds of their inquiry, 24 hours a day. The AI acknowledges their specific interest, starts a qualification conversation, and routes the lead based on score before any human is involved. This compresses the standard 4–6 hour response window to under 60 seconds." },
   { name: "Why does speed to lead matter so much?", answer: "The MIT Lead Response Management Study found that contacting a lead within 5 minutes makes you 9× more likely to qualify them versus waiting 30 minutes, and 21× more likely versus waiting 24 hours. The majority of businesses respond in over an hour. The first business to respond meaningfully wins the lead in most categories." },
@@ -31,10 +37,6 @@ const structuredData = {
         { "@type": "ListItem", "position": 3, "name": "Speed to Lead System", "item": canonicalUrl },
       ]
     },
-    {
-      "@type": "FAQPage",
-      "mainEntity": faqItems.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.answer } }))
-    }
   ]
 };
 ---
@@ -44,6 +46,7 @@ const structuredData = {
   description="AI-powered lead response system that contacts every new lead within 60 seconds across 40+ channels, 24/7. Stop losing hot leads to slower competitors."
   {canonicalUrl}
   {structuredData}
+  {hreflangAlternates}
   h1="Speed to Lead System: Respond in 60 Seconds, 24/7"
   h1Grad="Respond in 60 Seconds, 24/7"
   lead="The first business to respond to a lead wins it. Most businesses take 4–6 hours. We install an AI layer that responds within 60 seconds of every inquiry — across every channel, around the clock — so your competitors never get a window to step in."

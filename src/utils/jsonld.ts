@@ -7,14 +7,14 @@ export interface Organization {
   logo: string;
   description: string;
   address?: {
-    streetAddress: string;
+    streetAddress?: string;
     addressLocality: string;
     addressRegion: string;
-    postalCode: string;
+    postalCode?: string;
     addressCountry: string;
   };
   contactPoint?: {
-    telephone: string;
+    telephone?: string;
     contactType: string;
     email: string;
   };
@@ -352,7 +352,9 @@ export function generateOrganizationJsonLd() {
     "url": ORGANIZATION.url,
     "logo": {
       "@type": "ImageObject",
-      "url": ORGANIZATION.logo
+      "url": ORGANIZATION.logo,
+      "width": 600,
+      "height": 60,
     },
     "description": ORGANIZATION.description,
     "foundingDate": ORGANIZATION.foundingDate,
@@ -364,15 +366,19 @@ export function generateOrganizationJsonLd() {
     ...(ORGANIZATION.contactPoint && {
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": ORGANIZATION.contactPoint.telephone,
+        ...(ORGANIZATION.contactPoint.telephone && { "telephone": ORGANIZATION.contactPoint.telephone }),
         "contactType": ORGANIZATION.contactPoint.contactType,
-        "email": ORGANIZATION.contactPoint.email
+        "email": ORGANIZATION.contactPoint.email,
       }
     }),
     ...(ORGANIZATION.address && {
       "address": {
         "@type": "PostalAddress",
-        ...ORGANIZATION.address
+        ...(ORGANIZATION.address.streetAddress && { "streetAddress": ORGANIZATION.address.streetAddress }),
+        "addressLocality": ORGANIZATION.address.addressLocality,
+        "addressRegion": ORGANIZATION.address.addressRegion,
+        ...(ORGANIZATION.address.postalCode && { "postalCode": ORGANIZATION.address.postalCode }),
+        "addressCountry": ORGANIZATION.address.addressCountry,
       }
     }),
     ...(ORGANIZATION.sameAs && {
@@ -396,13 +402,5 @@ export function generateWebSiteJsonLd(siteUrl: string, languages: string[] = ['e
       "@id": `${ORGANIZATION.url}#organization`
     },
     "inLanguage": languages,
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${siteUrl}/search?q={search_term_string}`
-      },
-      "query-input": "required name=search_term_string"
-    }
   };
 }

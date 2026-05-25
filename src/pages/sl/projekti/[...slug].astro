@@ -36,6 +36,12 @@ if (heroImg) {
 
 const slug = (project.data.slug ?? project.id) as string;
 const canonicalUrl = `${Astro.url.origin}/sl/projekti/${slug}/`;
+const siteUrl = 'https://www.creativecomplete.com';
+const hreflangAlternates = {
+  en: `${siteUrl}/projects/${slug}/`,
+  de: `${siteUrl}/de/projekte/${slug}/`,
+  sl: `${siteUrl}/sl/projekti/${slug}/`,
+};
 
 const all = await getCollection('projectsSl');
 const related = all
@@ -65,6 +71,7 @@ const stats: { value: string; label: string }[] = (project.data.stats as any) ??
   ogImage={ogImage}
   lang="sl"
   navActive="results"
+  {hreflangAlternates}
 >
   <main>
     <div class="v2-container v2-breadcrumb">

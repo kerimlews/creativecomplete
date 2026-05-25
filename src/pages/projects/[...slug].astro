@@ -97,6 +97,12 @@ const projectBlogLinks: Record<string, { href: string; label: string }[]> = {
 };
 const projectBlogs = projectBlogLinks[slug] ?? [];
 const canonicalUrl = `${Astro.url.origin}/projects/${slug}/`;
+const siteUrl = 'https://www.creativecomplete.com';
+const hreflangAlternates = {
+  en: `${siteUrl}/projects/${slug}/`,
+  de: `${siteUrl}/de/projekte/${slug}/`,
+  sl: `${siteUrl}/sl/projekti/${slug}/`,
+};
 const structuredData = [
   generateProjectJsonLd(project as any),
   generateBreadcrumbJsonLd([
@@ -114,6 +120,7 @@ const structuredData = [
   ogImage={ogImage}
   structuredData={structuredData}
   navActive="results"
+  {hreflangAlternates}
 >
   <main>
     <!-- Breadcrumb -->

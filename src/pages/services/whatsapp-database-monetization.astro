@@ -3,6 +3,12 @@ import ServiceLayout from '../../layouts/ServiceLayout.astro';
 
 const canonicalUrl = 'https://creativecomplete.com/services/whatsapp-database-monetization/';
 
+const hreflangAlternates = {
+  en: canonicalUrl,
+  de: 'https://www.creativecomplete.com/de/dienstleistungen/whatsapp-datenbank-monetarisierung/',
+  sl: 'https://www.creativecomplete.com/sl/storitve/whatsapp-monetizacija-baze/',
+};
+
 const faqItems = [
   { name: "What is WhatsApp database monetization?", answer: "It's the process of reactivating your existing lead and customer database through targeted WhatsApp broadcast campaigns. Instead of only chasing new leads, you send personalized broadcast messages to segmented lists of past leads, past clients, and cold contacts — achieving 98% open rates and generating revenue from contacts you already paid to acquire." },
   { name: "How is WhatsApp different from email for this?", answer: "WhatsApp achieves 98% open rates versus email's 18%. Response rates are 45% versus 6% for email. Messages are read within 3 minutes on average. The conversational format means recipients engage rather than delete. For database reactivation campaigns, WhatsApp consistently outperforms email by 7–12× on revenue per contact." },
@@ -31,10 +37,6 @@ const structuredData = {
         { "@type": "ListItem", "position": 3, "name": "WhatsApp Database Monetization", "item": canonicalUrl },
       ]
     },
-    {
-      "@type": "FAQPage",
-      "mainEntity": faqItems.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.answer } }))
-    }
   ]
 };
 ---
@@ -44,6 +46,7 @@ const structuredData = {
   description="Turn your existing lead database into recurring revenue with WhatsApp broadcast campaigns. 98% open rate, 45% response rate, 42× ROI in 48 hours."
   {canonicalUrl}
   {structuredData}
+  {hreflangAlternates}
   h1="WhatsApp Database Monetization: 42× ROI in 48 Hours"
   h1Grad="42× ROI in 48 Hours"
   lead="You've spent thousands acquiring leads. Most are sitting in a spreadsheet or CRM doing nothing. We reactivate your entire database through targeted WhatsApp broadcast campaigns — segmented, personalized, and sent via the official Business API. 98% open rate. Revenue within 48 hours."

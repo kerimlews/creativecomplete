@@ -85,7 +85,7 @@ const breadcrumbs = [
 ];
 ---
 
-<LayoutV2 
+<LayoutV2
   title={t('services.title', currentLang)}
   description={t('services.description', currentLang)}
   structuredData={structuredData}
@@ -94,7 +94,11 @@ const breadcrumbs = [
     title: t('services.title', currentLang),
     description: t('services.description', currentLang),
   }}
-  priority={9}
+  hreflangAlternates={{
+    en: 'https://www.creativecomplete.com/services/',
+    de: 'https://www.creativecomplete.com/de/dienstleistungen/',
+    sl: 'https://www.creativecomplete.com/sl/storitve/',
+  }}
 >
   <main>
     <section class="v2-proj-list v2-section">
