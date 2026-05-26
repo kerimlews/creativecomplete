@@ -1,6 +1,6 @@
 ---
-title: "KI Ad Creatives: Anzeigen generieren, die 14× besser konvertieren"
-description: "Manuelle Creative-Produktion killt Kampagnen, bevor sie starten. Lernen Sie die 6 KI-Creative-Systeme, die bewertete, markenkonforme Ad-Varianten in Sekunden generieren — 14× besser als manuell."
+title: "KI Ad Creatives: Das 6-System-Framework hinter 14× besseren Conversion-Rates"
+description: "Manuelle Creative-Produktion bremst jede Kampagne bereits vor dem Start. Dieser Leitfaden erklärt die 6 KI-Creative-Frameworks, die bewertete, markenkonforme Ad-Varianten in Sekunden erzeugen — und warum sie 14× besser konvertieren als manuell erstellte Anzeigen."
 slug: ki-werbemittel
 author: kerim-alihodza
 published: "2026-05-15"

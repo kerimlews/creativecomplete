@@ -1,6 +1,6 @@
 ---
-title: "AI Ad Creatives: Generate Ads That Convert 14× Better"
-description: "Manual creative production kills campaigns before they start. Learn the 6 AI creative systems that generate scored, brand-locked ad variants in seconds — and why they convert 14× better than anything a design team builds by hand."
+title: "AI Ad Creatives: The 6-System Framework Behind 14× Conversion Rates"
+description: "Manual creative production kills campaigns before they launch. This breakdown covers the 6 AI creative frameworks that generate scored, brand-locked ad variants in seconds — and why they convert 14× better than anything a design team builds by hand."
 slug: ai-ad-creatives
 author: kerim-alihodza
 published: "2026-05-15"

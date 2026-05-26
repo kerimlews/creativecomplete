@@ -1,6 +1,6 @@
 ---
-title: "AI kvalifikacija leadov: ocenite vsak lead, preden ga vaša ekipa vidi"
-description: "Prodajne ekipe zapravijo 70% časa na leadih, ki ne bodo nikoli konvertirali. AI kvalifikacija oceni vsak inbound lead v manj kot 60 sekundah z BANT — preden človek sploh sodeluje."
+title: "Kako deluje AI kvalifikacija leadov: BANT sistem za prodajne ekipe"
+description: "Prodajne ekipe zapravijo 70 % časa na leadih, ki nikoli ne bodo konvertirali. Ta vodnik pojasni, kako AI kvalifikacija z BANT oceni vsak inbound lead v manj kot 60 sekundah — da vaša ekipa obravnava samo vroče kontakte."
 slug: ai-kvalifikacija-leadov
 author: kerim-alihodza
 published: "2026-05-17"

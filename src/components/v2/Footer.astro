@@ -33,35 +33,6 @@ const systemLinks: Record<string, FooterLink[]> = {
   ],
 };
 
-const serviceLinks: Record<string, FooterLink[]> = {
-  en: [
-    { label: "AI Automation",   href: "/services/automation/"         },
-    { label: "Web Design",      href: "/services/web-design/"         },
-    { label: "SEO",             href: "/services/seo/"                },
-    { label: "E-commerce",      href: "/services/ecommerce/"          },
-    { label: "Mobile Apps",     href: "/services/mobile-development/" },
-    { label: "Custom SaaS",     href: "/services/saas-development/"   },
-    { label: "Local SEO",       href: "/services/local-seo/"          },
-  ],
-  de: [
-    { label: "KI-Automatisierung", href: "/de/dienstleistungen/automation/"         },
-    { label: "Webdesign",          href: "/de/dienstleistungen/web-design/"         },
-    { label: "SEO",                href: "/de/dienstleistungen/seo/"                },
-    { label: "E-Commerce",         href: "/de/dienstleistungen/ecommerce/"          },
-    { label: "Mobile Apps",        href: "/de/dienstleistungen/mobile-development/" },
-    { label: "Custom SaaS",        href: "/de/dienstleistungen/saas-development/"   },
-    { label: "Lokales SEO",        href: "/de/dienstleistungen/local-seo/"          },
-  ],
-  sl: [
-    { label: "AI avtomatizacija",  href: "/sl/storitve/automation/"         },
-    { label: "Spletno oblikovanje",href: "/sl/storitve/web-design/"         },
-    { label: "SEO",                href: "/sl/storitve/seo/"                },
-    { label: "E-commerce",         href: "/sl/storitve/ecommerce/"          },
-    { label: "Mobilne aplikacije", href: "/sl/storitve/mobile-development/" },
-    { label: "SaaS razvoj",        href: "/sl/storitve/saas-development/"   },
-    { label: "Lokalni SEO",        href: "/sl/storitve/local-seo/"          },
-  ],
-};
 
 const blogLinksMap: Record<string, FooterLink[]> = {
   en: [
@@ -145,10 +116,10 @@ const auditLabel: Record<string, string> = {
   sl: "Rezerviraj brezplačni audit",
 };
 
-const colHeads: Record<string, { system: string; services: string; blog: string; company: string; resources: string }> = {
-  en: { system: "AI Customer System", services: "Services",        blog: "Blog", company: "Company",    resources: "Resources"  },
-  de: { system: "KI Customer System", services: "Dienstleistungen", blog: "Blog", company: "Unternehmen", resources: "Ressourcen" },
-  sl: { system: "AI Customer System", services: "Storitve",         blog: "Blog", company: "Podjetje",    resources: "Viri"       },
+const colHeads: Record<string, { system: string; blog: string; company: string; resources: string }> = {
+  en: { system: "AI Customer System", blog: "Blog", company: "Company",    resources: "Resources"  },
+  de: { system: "KI Customer System", blog: "Blog", company: "Unternehmen", resources: "Ressourcen" },
+  sl: { system: "AI Customer System", blog: "Blog", company: "Podjetje",    resources: "Viri"       },
 };
 
 const legalLabel: Record<string, { copyright: string; privacy: string; terms: string; contact: string }> = {
@@ -158,7 +129,6 @@ const legalLabel: Record<string, { copyright: string; privacy: string; terms: st
 };
 
 const system   = systemLinks[lang];
-const services = serviceLinks[lang];
 const company  = companyLinks[lang];
 const resources = resourceLinks[lang];
 const heads    = colHeads[lang];
@@ -192,14 +162,6 @@ const langs = [
         <div class="v2-footer__head">{heads.system}</div>
         <ul>
           {system.map(l => <li><a href={l.href}>{l.label}</a></li>)}
-        </ul>
-      </div>
-
-      <!-- Services -->
-      <div>
-        <div class="v2-footer__head">{heads.services}</div>
-        <ul>
-          {services.map(l => <li><a href={l.href}>{l.label}</a></li>)}
         </ul>
       </div>
 

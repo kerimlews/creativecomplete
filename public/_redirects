@@ -1,0 +1,180 @@
+# =============================================================================
+# CreativeComplete — Redirect rules
+# Format: Netlify / Cloudflare Pages _redirects
+# All rules: 301 Permanent
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# 1. WRONG LOCALE PATH SEGMENTS
+#    Google crawled these because old hreflang pointed to wrong URL segments.
+#    Catch-all wildcards — must come before specific rules.
+# ---------------------------------------------------------------------------
+
+# DE locale with wrong path prefix
+/de/services/*          /de/dienstleistungen/:splat          301
+/de/storitve/*          /de/dienstleistungen/:splat          301
+/de/projects/*          /de/projekte/:splat                  301
+/de/projekti/*          /de/projekte/:splat                  301
+
+# SL locale with wrong path prefix
+/sl/services/*          /sl/storitve/:splat                  301
+/sl/dienstleistungen/*  /sl/storitve/:splat                  301
+/sl/projects/*          /sl/projekti/:splat                  301
+/sl/projekte/*          /sl/projekti/:splat                  301
+
+# EN locale with DE/SL path segments (segment leaked into EN)
+/projekte/*             /projects/:splat                     301
+/projekti/*             /projects/:splat                     301
+/dienstleistungen/*     /services/:splat                     301
+/storitve/*             /services/:splat                     301
+
+# ---------------------------------------------------------------------------
+# 2. EN-ONLY PAGES — wrong locale variants
+#    These pages exist only in EN; hreflang is now corrected but old URLs
+#    may still be in Google's index.
+# ---------------------------------------------------------------------------
+
+/de/kerim-alihodza/     /kerim-alihodza/                     301
+/sl/kerim-alihodza/     /kerim-alihodza/                     301
+/de/terms-of-use/       /terms-of-use/                       301
+/sl/terms-of-use/       /terms-of-use/                       301
+/de/privacy-policy/     /privacy-policy/                     301
+/sl/privacy-policy/     /privacy-policy/                     301
+
+# Old DE/SL contact slug variants
+/de/kontakt/            /de/contact/                         301
+/sl/kontakt/            /sl/contact/                         301
+
+# ---------------------------------------------------------------------------
+# 3. CROSS-LOCALE BLOG SLUG CONTAMINATION
+#    EN path served with DE or SL slug (wrong locale, redirect to correct one)
+# ---------------------------------------------------------------------------
+
+# EN path + DE slug → DE blog
+/blog/ki-verkaufsagenten/              /de/blog/ki-verkaufsagenten/              301
+/blog/ki-werbemittel/                  /de/blog/ki-werbemittel/                  301
+/blog/whatsapp-lead-generierung/       /de/blog/whatsapp-lead-generierung/       301
+/blog/reaktionszeit/                   /de/blog/reaktionszeit/                   301
+/blog/automatisierte-lead-verteilung/  /de/blog/automatisierte-lead-verteilung/  301
+/blog/crm-automatisierung/             /de/blog/crm-automatisierung/             301
+/blog/ki-lead-qualifizierung/          /de/blog/ki-lead-qualifizierung/          301
+/blog/whatsapp-broadcast-kampagnen/    /de/blog/whatsapp-broadcast-kampagnen/    301
+/blog/werbemittel-testing/             /de/blog/werbemittel-testing/             301
+
+# EN path + SL slug → SL blog
+/blog/ai-prodajni-agenti/                  /sl/blog/ai-prodajni-agenti/                  301
+/blog/ai-oglasne-kreative/                 /sl/blog/ai-oglasne-kreative/                 301
+/blog/whatsapp-pridobivanje-leadov/        /sl/blog/whatsapp-pridobivanje-leadov/        301
+/blog/hitrost-do-leada/                    /sl/blog/hitrost-do-leada/                    301
+/blog/avtomatizirana-distribucija-leadov/  /sl/blog/avtomatizirana-distribucija-leadov/  301
+/blog/crm-avtomatizacija/                  /sl/blog/crm-avtomatizacija/                  301
+/blog/ai-kvalifikacija-leadov/             /sl/blog/ai-kvalifikacija-leadov/             301
+/blog/whatsapp-broadcast-kampanje/         /sl/blog/whatsapp-broadcast-kampanje/         301
+/blog/testiranje-oglasnih-kreativ/         /sl/blog/testiranje-oglasnih-kreativ/         301
+
+# DE path + EN slug → EN blog
+/de/blog/ai-sales-agents/              /blog/ai-sales-agents/              301
+/de/blog/ai-ad-creatives/              /blog/ai-ad-creatives/              301
+/de/blog/whatsapp-lead-generation/     /blog/whatsapp-lead-generation/     301
+/de/blog/speed-to-lead/                /blog/speed-to-lead/                301
+/de/blog/automated-lead-distribution/  /blog/automated-lead-distribution/  301
+/de/blog/crm-automation/               /blog/crm-automation/               301
+/de/blog/ai-lead-qualification/        /blog/ai-lead-qualification/        301
+/de/blog/whatsapp-broadcast-campaigns/ /blog/whatsapp-broadcast-campaigns/ 301
+/de/blog/ad-creative-testing/          /blog/ad-creative-testing/          301
+
+# DE path + SL slug → SL blog
+/de/blog/ai-prodajni-agenti/                  /sl/blog/ai-prodajni-agenti/                  301
+/de/blog/ai-oglasne-kreative/                 /sl/blog/ai-oglasne-kreative/                 301
+/de/blog/whatsapp-pridobivanje-leadov/        /sl/blog/whatsapp-pridobivanje-leadov/        301
+/de/blog/hitrost-do-leada/                    /sl/blog/hitrost-do-leada/                    301
+/de/blog/avtomatizirana-distribucija-leadov/  /sl/blog/avtomatizirana-distribucija-leadov/  301
+/de/blog/crm-avtomatizacija/                  /sl/blog/crm-avtomatizacija/                  301
+/de/blog/ai-kvalifikacija-leadov/             /sl/blog/ai-kvalifikacija-leadov/             301
+/de/blog/whatsapp-broadcast-kampanje/         /sl/blog/whatsapp-broadcast-kampanje/         301
+/de/blog/testiranje-oglasnih-kreativ/         /sl/blog/testiranje-oglasnih-kreativ/         301
+
+# SL path + EN slug → EN blog
+/sl/blog/ai-sales-agents/              /blog/ai-sales-agents/              301
+/sl/blog/ai-ad-creatives/              /blog/ai-ad-creatives/              301
+/sl/blog/whatsapp-lead-generation/     /blog/whatsapp-lead-generation/     301
+/sl/blog/speed-to-lead/                /blog/speed-to-lead/                301
+/sl/blog/automated-lead-distribution/  /blog/automated-lead-distribution/  301
+/sl/blog/crm-automation/               /blog/crm-automation/               301
+/sl/blog/ai-lead-qualification/        /blog/ai-lead-qualification/        301
+/sl/blog/whatsapp-broadcast-campaigns/ /blog/whatsapp-broadcast-campaigns/ 301
+/sl/blog/ad-creative-testing/          /blog/ad-creative-testing/          301
+
+# SL path + DE slug → DE blog
+/sl/blog/ki-verkaufsagenten/              /de/blog/ki-verkaufsagenten/              301
+/sl/blog/ki-werbemittel/                  /de/blog/ki-werbemittel/                  301
+/sl/blog/whatsapp-lead-generierung/       /de/blog/whatsapp-lead-generierung/       301
+/sl/blog/reaktionszeit/                   /de/blog/reaktionszeit/                   301
+/sl/blog/automatisierte-lead-verteilung/  /de/blog/automatisierte-lead-verteilung/  301
+/sl/blog/crm-automatisierung/             /de/blog/crm-automatisierung/             301
+/sl/blog/ki-lead-qualifizierung/          /de/blog/ki-lead-qualifizierung/          301
+/sl/blog/whatsapp-broadcast-kampagnen/    /de/blog/whatsapp-broadcast-kampagnen/    301
+/sl/blog/werbemittel-testing/             /de/blog/werbemittel-testing/             301
+
+# ---------------------------------------------------------------------------
+# 4. CROSS-LOCALE AI SERVICE SLUG CONTAMINATION
+# ---------------------------------------------------------------------------
+
+# DE path + EN slug → correct DE slug
+/de/dienstleistungen/ai-ad-creative-engine/            /de/dienstleistungen/ki-werbemittel-system/              301
+/de/dienstleistungen/ai-lead-qualification/             /de/dienstleistungen/ki-lead-qualifizierung/             301
+/de/dienstleistungen/speed-to-lead-system/              /de/dienstleistungen/reaktionszeit-system/               301
+/de/dienstleistungen/whatsapp-database-monetization/    /de/dienstleistungen/whatsapp-datenbank-monetarisierung/ 301
+
+# DE path + SL slug → correct DE slug
+/de/dienstleistungen/ai-oglasevalski-kreativni-sistem/  /de/dienstleistungen/ki-werbemittel-system/              301
+/de/dienstleistungen/ai-kvalifikacija-leadov/           /de/dienstleistungen/ki-lead-qualifizierung/             301
+/de/dienstleistungen/hitrost-do-leada/                  /de/dienstleistungen/reaktionszeit-system/               301
+/de/dienstleistungen/whatsapp-monetizacija-baze/        /de/dienstleistungen/whatsapp-datenbank-monetarisierung/ 301
+
+# SL path + EN slug → correct SL slug
+/sl/storitve/ai-ad-creative-engine/            /sl/storitve/ai-oglasevalski-kreativni-sistem/  301
+/sl/storitve/ai-lead-qualification/             /sl/storitve/ai-kvalifikacija-leadov/           301
+/sl/storitve/speed-to-lead-system/              /sl/storitve/hitrost-do-leada/                  301
+/sl/storitve/whatsapp-database-monetization/    /sl/storitve/whatsapp-monetizacija-baze/        301
+
+# SL path + DE slug → correct SL slug
+/sl/storitve/ki-werbemittel-system/             /sl/storitve/ai-oglasevalski-kreativni-sistem/  301
+/sl/storitve/ki-lead-qualifizierung/            /sl/storitve/ai-kvalifikacija-leadov/           301
+/sl/storitve/reaktionszeit-system/              /sl/storitve/hitrost-do-leada/                  301
+/sl/storitve/whatsapp-datenbank-monetarisierung/ /sl/storitve/whatsapp-monetizacija-baze/       301
+
+# EN path + DE slug → correct EN slug
+/services/ki-werbemittel-system/             /services/ai-ad-creative-engine/           301
+/services/ki-lead-qualifizierung/            /services/ai-lead-qualification/           301
+/services/reaktionszeit-system/              /services/speed-to-lead-system/            301
+/services/whatsapp-datenbank-monetarisierung/ /services/whatsapp-database-monetization/ 301
+
+# EN path + SL slug → correct EN slug
+/services/ai-oglasevalski-kreativni-sistem/  /services/ai-ad-creative-engine/           301
+/services/ai-kvalifikacija-leadov/           /services/ai-lead-qualification/           301
+/services/hitrost-do-leada/                  /services/speed-to-lead-system/            301
+/services/whatsapp-monetizacija-baze/        /services/whatsapp-database-monetization/  301
+
+# ---------------------------------------------------------------------------
+# 5. HR LOCALE — redirect to EN equivalent
+#    HR pages were removed; redirect to avoid 404 crawl waste.
+# ---------------------------------------------------------------------------
+
+/hr/blog/       /blog/      301
+/hr/projekti/   /projects/  301
+/hr/*           /           301
+
+# ---------------------------------------------------------------------------
+# 6. OLD GHOST URLS
+# ---------------------------------------------------------------------------
+
+# SearchAction URL (deprecated Nov 2024, removed from schema)
+/search         /           301
+
+# Old booking URL (Cal.com replaced with inline modal)
+/booking        /contact/   301
+
+# Old service pages that no longer exist as standalone URLs
+/services/ai-automation-saved-20-hours-weekly/    /services/  301
+/services/why-your-online-store-isnt-converting/  /services/  301

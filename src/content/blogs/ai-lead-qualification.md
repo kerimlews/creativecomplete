@@ -1,6 +1,6 @@
 ---
-title: "AI Lead Qualification: Score Every Lead Before Your Team Sees It"
-description: "Sales teams waste 70% of their time on leads that will never convert. AI lead qualification scores every inbound lead in under 60 seconds using BANT — before a human ever gets involved. Here's the system."
+title: "How AI Lead Qualification Works: BANT Scoring for Sales Teams"
+description: "Sales teams waste 70% of their time on leads that will never convert. This guide explains how AI lead qualification uses BANT to score every inbound lead in under 60 seconds — so your team only handles verified hot prospects."
 slug: ai-lead-qualification
 author: kerim-alihodza
 published: "2026-05-17"

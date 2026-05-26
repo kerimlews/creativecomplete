@@ -1,6 +1,6 @@
 ---
-title: "KI Lead-Qualifizierung: Jeden Lead bewerten, bevor Ihr Team ihn sieht"
-description: "Vertriebsteams verschwenden 70% ihrer Zeit auf Leads, die nie konvertieren. KI-Lead-Qualifizierung scort jeden Inbound-Lead in unter 60 Sekunden via BANT — bevor ein Mensch eingreift."
+title: "Wie KI Lead-Qualifizierung funktioniert: BANT-Scoring für Vertriebsteams"
+description: "Vertriebsteams verschwenden 70 % ihrer Zeit auf Leads, die nie konvertieren. Dieser Leitfaden erklärt, wie KI-Lead-Qualifizierung BANT nutzt, um jeden Inbound-Lead in unter 60 Sekunden zu bewerten — damit Ihr Team nur heiße Kontakte bearbeitet."
 slug: ki-lead-qualifizierung
 author: kerim-alihodza
 published: "2026-05-17"

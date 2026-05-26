@@ -67,7 +67,7 @@
   <line x1="810" y1="290" x2="1120" y2="290" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
   <text x="810" y="322" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.2)" letter-spacing="0.8">SYSTEM PERFORMANCE</text>
   <text x="810" y="348" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.38)">Avg. routing time</text>
-  <text x="1120" y="348" font-family="monospace" font-size="12" fill="#a5b4fc" text-anchor="end">< 3 seconds</text>
+  <text x="1120" y="348" font-family="monospace" font-size="12" fill="#a5b4fc" text-anchor="end">&lt; 3 seconds</text>
   <line x1="810" y1="358" x2="1120" y2="358" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
   <text x="810" y="388" font-family="-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.38)">Reps contacted per lead</text>
   <text x="1120" y="388" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="end">1 (correct rep)</text>

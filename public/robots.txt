@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /v1/
+Disallow: /hr/
 
 Sitemap: https://www.creativecomplete.com/sitemap-index.xml

@@ -56,7 +56,8 @@
       "Bash(sed -i 's|]\\(/de/blog/ad-creative-testing/|]\\(/de/blog/werbemittel-testing/|g' *.md)",
       "WebFetch(domain:instantly.ai)",
       "WebFetch(domain:www.creativecomplete.com)",
-      "Bash(awk '{ print length\": \"$0 }')"
+      "Bash(awk '{ print length\": \"$0 }')",
+      "Bash(grep -v \"^de$\\\\|^sl$\")"
     ],
     "additionalDirectories": [
       "/home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/de",

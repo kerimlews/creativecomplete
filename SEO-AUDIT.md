@@ -252,6 +252,30 @@ Branch: `bdm` | Last updated: 2026-05-25
 
 ---
 
+### 16. GSC Coverage Report — Redirect Fixes
+**Found (from Google Search Console Coverage report):**
+- ~120 problem URLs in 8 categories:
+  - Wrong locale path segments (e.g. `/de/services/`, `/sl/dienstleistungen/`, `/projekte/` on EN)
+  - EN-only pages with DE/SL crawled variants (`/de/kerim-alihodza/`, `/de/privacy-policy/`)
+  - Cross-locale blog slug contamination (`/blog/hitrost-do-leada/`, `/de/blog/ai-prodajni-agenti/`)
+  - Cross-locale AI service slug contamination (wrong slugs on wrong locale service paths)
+  - HR locale pages still being crawled (`/hr/`, `/hr/projekti/`)
+  - Old ghost URLs (`/search?q=…`, `/booking?type=discovery`)
+  - Old service ghost pages (`/services/ai-automation-saved-20-hours-weekly/`)
+  - Double-slash URLs (normalised by most hosts automatically)
+
+**Done:**
+- Created `public/_redirects` — 120+ rules covering all 8 categories with wildcard support (Netlify/Cloudflare Pages format)
+- Added 100+ specific redirect rules to `astro.config.mjs` `redirects` option — generates HTML redirect pages as fallback for other static hosts
+- Added `Disallow: /hr/` to `robots.txt` — stops fresh HR crawl budget waste
+- All cross-locale blog slugs: wrong locale → correct locale blog page (all 9 posts × 6 wrong combinations)
+- All cross-locale AI service slugs: wrong locale → correct locale service page (4 services × 6 wrong combinations)
+- All wildcard path segment rules: `/de/services/*` → `/de/dienstleistungen/:splat` etc.
+
+**Note:** `_redirects` wildcards (`:splat`) take priority on Netlify/Cloudflare Pages. Astro `redirects` covers specific paths on other hosts. Both are compatible — no conflicts.
+
+---
+
 ## Outstanding Items (Not Yet Done)
 
 | Item | Priority | Notes |
@@ -260,9 +284,38 @@ Branch: `bdm` | Last updated: 2026-05-25
 | VideoObject `thumbnailUrl` | Medium | Replace `/og-default.svg` with actual Vimeo thumbnail: `https://i.vimeocdn.com/video/1191978034_1280x720.jpg` |
 | Article image aspect ratios | Low | Google recommends 16:9, 4:3, 1:1 variants per article. Current: single SVG OG image. Needs image generation pipeline. |
 | Image license metadata | Low | Add `license` + `acquireLicensePage` to ImageObject for blog images to get Licensable badge |
-| `whatsapp-lead-generation` blog post | Low | EN has it, but DE/SL have it too — ensure it's in hreflang mapping (it is: `whatsapp-lead-generierung` / `whatsapp-pridobivanje-leadov`) |
-| Soft 404 audit | Medium | Verify no removed pages return 200 with "not found" content — use Google Search Console Coverage report |
+| GSC Coverage — verify redirects working | High | After deploy, confirm problem URLs in GSC now return 301 instead of 404. Submit URLs for re-indexing in URL Inspection. |
 | Core Web Vitals | High (ongoing) | LCP < 2.5s, CLS < 0.1, INP < 200ms — monitor via Search Console |
+
+---
+
+---
+
+### 17. Keyword Cannibalization Audit
+**Found (all EN pages audited — titles, descriptions, inferred primary keywords):**
+
+| Overlap | Type | Severity |
+|---------|------|----------|
+| Service `/services/ai-lead-qualification/` vs Blog `/blog/ai-lead-qualification/` | Both targeted "AI lead qualification" as exact primary keyword | Critical |
+| Service `/services/ai-ad-creative-engine/` title said "Automated Creative Testing" vs Blog `/blog/ad-creative-testing/` | Title phrase overlap | High |
+| Blog `/blog/ai-ad-creatives/` vs Service `/services/ai-ad-creative-engine/` | Both targeted AI creative generation | Medium |
+
+**Intent differentiation principle applied:**
+- Service pages = **commercial intent** (buy/hire this service)
+- Blog posts = **informational intent** (learn how this works)
+
+**Done (EN + DE + SL):**
+- `/blog/ai-lead-qualification/`: title changed from "AI Lead Qualification: Score Every Lead Before Your Team Sees It" → "How AI Lead Qualification Works: BANT Scoring for Sales Teams" — signals informational intent with "How…Works"
+- `/blog/ai-ad-creatives/`: title changed to "AI Ad Creatives: The 6-System Framework Behind 14× Conversion Rates" — "framework" signals educational, not transactional
+- `/services/ai-ad-creative-engine/`: title changed from "Cut CPL 40–60% With Automated Creative Testing" → "AI-Generated Ads That Cut CPL by 40–60%" — removes "Automated Creative Testing" phrase that directly competed with the blog post
+- DE/SL equivalents of both blog posts updated with the same informational framing
+
+**No issues found (correctly differentiated already):**
+- Service "Speed to Lead System" vs Blog "Speed to Lead" — service targets "system/service", blog targets "why first 5 minutes matter" (different intent ✓)
+- Service "WhatsApp Database Monetization" vs Blog "WhatsApp Broadcast Campaigns" — different keyword phrases ✓
+- Blog "AI Sales Agents" vs Blog "AI Lead Qualification" — agents = automation tool, qualification = scoring process ✓
+- Blog "WhatsApp Lead Generation" vs Blog "WhatsApp Broadcast Campaigns" — top-funnel vs. existing-database intent ✓
+- Homepage vs About — homepage = brand/system term, About = company info ✓
 
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: "AI oglasne kreative: ustvarite oglase, ki konvertirajo 14× bolje"
-description: "Ročna produkcija ubije kampanje, preden se začnejo. Spoznajte 6 AI sistemov, ki generirajo ocenjene, znamki skladne različice v sekundah — in zakaj konvertirajo 14× bolje kot kar koli ročnega."
+title: "AI oglasne kreative: okvir 6 sistemov za 14× boljše stopnje konverzije"
+description: "Ročna produkcija kreativ upočasni vsako kampanjo že pred zagonom. Ta vodnik pojasni 6 AI kreativnih okvirov, ki generirajo ocenjene, znamki skladne različice v sekundah — in zakaj konvertirajo 14× bolje kot ročno izdelani oglasi."
 slug: ai-oglasne-kreative
 author: kerim-alihodza
 published: "2026-05-15"
