@@ -407,13 +407,13 @@ const en = {
 
 const de = {
   hero: {
-    badge: 'KI Customer System, Live',
-    h1Line1: 'Jedes Lead-Potenzial maximal ausschöpfen',
-    h1Line2: 'Ohne mehr Personal einzustellen',
-    subtitle: 'Wir bauen, betreiben und verantworten das KI-Kampagnensystem von Ad bis Chat. Sie erhalten nur die Ergebnisse.',
+    badge: '50+ Agenturen · Ergebnisse in 45 Tagen',
+    h1Line1: 'Wir führen Ihr Lead-System.',
+    h1Line2: 'Sie schließen die Deals.',
+    subtitle: 'Jeder eingehende Lead wird in unter 60 Sekunden qualifiziert. Über WhatsApp, Instagram, TikTok und 40+ Kanäle. Ohne neue Mitarbeiter. Ohne verlorene Leads.',
     ctaPrimary: 'Kostenloses System-Audit sichern',
     ctaSecondary: 'So funktioniert es',
-    trustText: 'vertrauen dem KI Customer System',
+    trustText: '50+ Agenturen vertrauen dem KI Customer System',
   } satisfies HeroContent,
 
   stats: {
@@ -437,7 +437,7 @@ const de = {
       { label: 'Fragen beantworten',    desc: 'Wir verstehen Ihr Geschäft, Kanäle, Ziele und den aktuellen Lead-Flow.' },
       { label: 'Fixpreis festlegen',    desc: 'Eine monatliche Pauschale. Keine Überraschungen, keine versteckten Kosten.' },
       { label: 'System-Aufbau',         desc: 'Wir bauen, verbinden und deployen das vollständige KI Customer System. Sie müssen nichts tun.' },
-      { label: 'Sie gewinnen',          desc: 'Leads qualifizieren sich selbst. Heiße Leads buchen. Ihr CRM konvertiert auf Autopilot.' },
+      { label: 'Sie gewinnen',           desc: 'Leads qualifizieren sich selbst. Heiße Leads buchen. Ihr CRM konvertiert auf Autopilot.' },
     ],
   } satisfies TrackContent & { titleSuffix: string },
 
@@ -557,7 +557,7 @@ const de = {
     eyebrow: 'KI Customer System Agentur · 50+ Agenturen betreut',
     headline: 'Hören Sie auf, Leads zu verlieren,<br/><span class="v2-grad">für die Ihre Werbung bereits bezahlt hat.</span>',
     subline: 'Buchen Sie ein kostenloses 30-Minuten-Audit. Wir analysieren Ihren aktuellen Lead-Flow, berechnen Ihre genaue Umsatzlücke und zeigen Ihnen die exakte KI-Konfiguration für Ihre Agentur. Kostenlos, unverbindlich.',
-    buttonText: 'Kostenloses Audit jetzt sichern',
+    buttonText: 'Kostenloses Audit buchen',
     promises: [
       'Kein Pitch, außer Sie möchten ihn',
       'Individueller ROI-Schätzwert im Call',
@@ -568,8 +568,8 @@ const de = {
 
   results: {
     eyebrow: 'Bewiesene Ergebnisse',
-    title: 'Zahlen, die',
-    titleGrad: 'für sich sprechen.',
+    title: 'Was unsere Kunden',
+    titleGrad: 'wirklich sehen.',
     ctaSeeStudies: 'Fallstudien ansehen →',
     ctaWant: 'Diese Ergebnisse haben wollen →',
     items: [
@@ -684,13 +684,13 @@ const de = {
 
 const sl = {
   hero: {
-    badge: 'AI Customer System, v živo',
-    h1Line1: 'Izkoristite celoten potencial vsakega leada',
-    h1Line2: 'Brez povečevanja ekipe',
-    subtitle: 'Zgradimo, upravljamo in prevzamemo lastništvo AI kampanje od oglasa do pogovora. Vi prejmete samo rezultate.',
+    badge: '50+ agencij · Rezultati v 45 dneh',
+    h1Line1: 'Vodimo vaš sistem leadov.',
+    h1Line2: 'Vi zapirate posle.',
+    subtitle: 'Vsak dohodni lead kvalificiran v manj kot 60 sekundah. Prek WhatsAppa, Instagrama, TikToka in 40+ kanalov. Brez novih zaposlitev. Brez zamujenih leadov.',
     ctaPrimary: 'Pridobite brezplačen sistemski pregled',
     ctaSecondary: 'Poglejte, kako deluje',
-    trustText: 'zaupa AI Customer Systemu',
+    trustText: '50+ agencij zaupa AI Customer Systemu',
   } satisfies HeroContent,
 
   stats: {
@@ -834,7 +834,7 @@ const sl = {
     eyebrow: 'AI Customer System Agencija · 50+ agencij',
     headline: 'Prenehajte izgubljati leade,<br/><span class="v2-grad">za katere ste že plačali z oglasi.</span>',
     subline: 'Rezervirajte brezplačen 30-minutni pregled. Analiziramo vaš trenutni tok leadov, izračunamo vašo natančno izgubo prihodkov in vam pokažemo natančno AI konfiguracijo za vašo agencijo. Brez stroškov, brez obveznosti.',
-    buttonText: 'Zahtevaj brezplačen pregled zdaj',
+    buttonText: 'Rezerviraj brezplačen pregled',
     promises: [
       'Brez prodajnega pritiska, razen če ga želite',
       'Individualna ocena ROI na klicu',
@@ -845,8 +845,8 @@ const sl = {
 
   results: {
     eyebrow: 'Dokazani rezultati',
-    title: 'Številke, ki',
-    titleGrad: 'govorijo same zase.',
+    title: 'Kar naše stranke',
+    titleGrad: 'dejansko vidijo.',
     ctaSeeStudies: 'Poglej študije primerov →',
     ctaWant: 'Hočem te rezultate →',
     items: [
