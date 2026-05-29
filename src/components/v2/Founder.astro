@@ -1,0 +1,239 @@
+---
+---
+
+<section class="v2-founder">
+  <div class="v2-container">
+    <div class="v2-founder__card">
+
+      <div class="v2-founder__body">
+        <span class="v2-eyebrow">A note from the founder</span>
+
+        <h2 class="v2-founder__title">Built for results.<br/>Run by engineers.</h2>
+
+        <div class="v2-founder__copy">
+          <p>Most tools make you do the work. We don't hand you a platform and a tutorial and wish you luck. We run the entire lead system for you, from the first ad click to the booked call in your calendar.</p>
+
+          <p>That means working directly with your sales team, not around them. We map your current flow, find where leads are going cold, and replace those gaps with AI that responds, qualifies, and routes every lead to the right person automatically.</p>
+
+          <p>We also handle your traffic. Whether it is organic search, paid campaigns, or both, we engineer each channel to pull in leads that are actually worth chasing. Not just visitors. Buyers.</p>
+
+          <p>And when something is not performing, we investigate properly. We have been building complex systems for over a decade, long before AI made things easier. That engineering background means we find the real issue, not just the obvious one, and fix it at the root. You will notice the difference within weeks, not months.</p>
+
+          <p>With AI, we do all of this faster than ever before.</p>
+        </div>
+
+        <a href="/kerim-alihodza" class="v2-founder__sig">
+          <span class="v2-founder__sig-script">Kerim Alihodza</span>
+          <div class="v2-founder__sig-role">Founder, CreativeComplete</div>
+        </a>
+      </div>
+
+      <div class="v2-founder__right">
+        <div class="v2-founder__photo-wrap">
+          <img
+            src="/images/kerim-alihodza.png"
+            alt="Kerim Alihodza, Founder of CreativeComplete"
+            width="280"
+            height="320"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="v2-founder__stats">
+          <div class="v2-founder__stat">
+            <span class="v2-founder__stat-n">10+</span>
+            <span class="v2-founder__stat-l">years building</span>
+          </div>
+          <div class="v2-founder__stat">
+            <span class="v2-founder__stat-n">42.5×</span>
+            <span class="v2-founder__stat-l">campaign ROI</span>
+          </div>
+          <div class="v2-founder__stat">
+            <span class="v2-founder__stat-n">48h</span>
+            <span class="v2-founder__stat-l">to go live</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style lang="scss" is:global>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
+</style>
+
+<style lang="scss">
+.v2-founder {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.v2-founder__card {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 64px;
+  align-items: start;
+  background: #f9f6ef;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  border: 1px solid #e0d9cc;
+  border-radius: var(--r-xl);
+  padding: 56px 56px 56px 64px;
+  box-shadow: 0 2px 0 #d4cbbe, 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.v2-founder__body {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.v2-founder__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.2vw, 48px);
+  font-weight: 400;
+  letter-spacing: -.02em;
+  color: #1a1814;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.v2-founder__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  p {
+    font-size: clamp(15px, 1.2vw, 17px);
+    color: #3d3830;
+    line-height: 1.75;
+    margin: 0;
+  }
+}
+
+.v2-founder__sig {
+  padding-top: 8px;
+  border-top: 1px solid #d4cbbe;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+  width: fit-content;
+
+  &:hover .v2-founder__sig-script { opacity: 0.75; }
+}
+
+.v2-founder__sig-script {
+  font-family: 'Dancing Script', cursive;
+  font-size: 38px;
+  font-weight: 600;
+  color: #1a1814;
+  line-height: 1.1;
+  display: block;
+  transition: opacity .2s;
+}
+
+.v2-founder__sig-role {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: #7a7060;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.v2-founder__right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.v2-founder__photo-wrap {
+  width: 100%;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.v2-founder__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.v2-founder__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid #ddd5c5;
+  border-radius: var(--r-md);
+}
+
+.v2-founder__stat-n {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -.02em;
+  color: #1a1814;
+  line-height: 1;
+}
+
+.v2-founder__stat-l {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: #7a7060;
+  letter-spacing: .05em;
+}
+
+@media (max-width: 900px) {
+  .v2-founder__card {
+    grid-template-columns: 1fr;
+    padding: 40px 32px;
+    gap: 40px;
+  }
+
+  .v2-founder__right {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .v2-founder__photo-wrap {
+    width: 160px;
+    flex-shrink: 0;
+  }
+
+  .v2-founder__stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .v2-founder__stat {
+    flex: 1;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 560px) {
+  .v2-founder__card { padding: 32px 24px; }
+
+  .v2-founder__right {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .v2-founder__photo-wrap { width: 100%; max-width: 240px; align-self: center; }
+}
+</style>

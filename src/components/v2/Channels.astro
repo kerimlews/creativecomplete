@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import channelsImg from '../../images/channels.png';
+---
+
+<section class="v2-channels">
+  <div class="v2-container">
+
+    <div class="v2-channels__head" data-m="fade">
+      <span class="v2-eyebrow">40+ channels</span>
+      <h2 class="v2-channels__title">
+        Every channel your leads use.<br/>
+        <span class="v2-grad">One unified inbox.</span>
+      </h2>
+      <p class="v2-channels__sub">
+        WhatsApp, Instagram, Facebook Messenger, TikTok, email, SMS, live chat. Every conversation your leads start, handled in one place by your AI sales agent.
+      </p>
+    </div>
+
+    <div class="v2-channels__visual" data-m="up" style="--m-d:.1s">
+      <Image
+        src={channelsImg}
+        alt="Channel catalog showing 40+ connected platforms - WhatsApp, TikTok, Instagram, Messenger, Viber, LINE and more"
+        loading="lazy"
+        quality={90}
+      />
+    </div>
+
+  </div>
+</section>
+
+<style lang="scss">
+.v2-channels {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.v2-channels__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.v2-channels__title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 42px);
+  font-weight: 400;
+  letter-spacing: -.02em;
+  color: var(--fg-0);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.v2-channels__sub {
+  font-size: clamp(15px, 1.3vw, 18px);
+  color: var(--fg-1);
+  max-width: 56ch;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.v2-channels__visual {
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px var(--line),
+    0 24px 80px rgba(0, 0, 0, 0.45),
+    0 0 60px rgba(99, 102, 241, 0.1);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+</style>

@@ -1,5 +1,6 @@
 ---
-import LeadJourneyMotion from './LeadJourneyMotion.astro';
+import { Image } from 'astro:assets';
+import chatImg from '../../images/chat.png';
 import getV2Content from '../../utils/v2i18n';
 import type { Lang } from '../../utils/v2i18n';
 
@@ -14,7 +15,6 @@ const c = getV2Content(lang).hero;
 <section class="v2-hero">
   <div class="v2-container">
 
-    <!-- Centered headline -->
     <div class="v2-hero__top">
       <div class="v2-hero__badge">
         <span class="v2-hero__badge-dot"></span>
@@ -24,34 +24,8 @@ const c = getV2Content(lang).hero;
         {c.h1Line1} <br/>
         <span class="v2-grad">{c.h1Line2}</span>
       </h1>
-      <p class="v2-hero__subtitle">
-        {c.subtitle}
-      </p>
-    </div>
+      <p class="v2-hero__subtitle">{c.subtitle}</p>
 
-    <!-- Two columns: YT video | dashboard motion -->
-    <div class="v2-hero__inner">
-      <div class="v2-hero__left">
-        <div class="v2-hero__yt">
-          <iframe
-            id="hero-vimeo"
-            src="https://player.vimeo.com/video/1191978034?title=0&byline=0&portrait=0&badge=0&autopause=0&autoplay=1&player_id=0&app_id=58479"
-            title="AI Customer System in action"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-
-      <div class="v2-hero__right">
-        <LeadJourneyMotion />
-      </div>
-    </div>
-
-    <!-- CTAs + trust below the grid -->
-    <div class="v2-hero__below">
       <div class="v2-hero__actions">
         <a
           href="javascript:void(0)"
@@ -75,31 +49,21 @@ const c = getV2Content(lang).hero;
           </div>
         </div>
         <span class="v2-hero__trust-sep" aria-hidden="true"></span>
-        <span class="v2-hero__trust-text">
-          {c.trustText}
-        </span>
+        <span class="v2-hero__trust-text">{c.trustText}</span>
       </div>
+    </div>
+
+    <div class="v2-hero__visual">
+      <Image
+        src={chatImg}
+        alt="AI Sales Agent managing leads in real time - inbox, lifecycle stages, and WhatsApp conversations"
+        loading="eager"
+        quality={90}
+      />
     </div>
 
   </div>
 </section>
-
-<script is:inline>
-  (function () {
-    var tag = document.createElement('script');
-    tag.src = 'https://player.vimeo.com/api/player.js';
-    tag.onload = function () {
-      var iframe = document.getElementById('hero-vimeo');
-      if (!iframe) return;
-      var player = new Vimeo.Player(iframe);
-      player.ready().then(function () {
-        player.setPlaybackRate(1.25);
-        player.setVolume(1);
-      });
-    };
-    document.head.appendChild(tag);
-  })();
-</script>
 
 <style lang="scss">
 .v2-hero__top {
@@ -108,7 +72,7 @@ const c = getV2Content(lang).hero;
   align-items: center;
   text-align: center;
   gap: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 
   .v2-h1 { font-size: clamp(36px, 5.5vw, 80px); }
 }
@@ -119,40 +83,6 @@ const c = getV2Content(lang).hero;
   max-width: 52ch;
   line-height: 1.6;
   margin: 0;
-}
-
-.v2-hero__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: stretch;
-  margin-bottom: 24px;
-  /* Reserve space so dynamic motion card doesn't shift layout (CLS fix) */
-  min-height: 210px;
-}
-
-.v2-hero__left { display: flex; align-items: stretch; }
-
-.v2-hero__yt {
-  width: 100%;
-  border-radius: var(--r-xl);
-  overflow: hidden;
-  background: #000;
-  aspect-ratio: 16 / 9;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px var(--line);
-
-  iframe {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-}
-
-.v2-hero__below {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
 }
 
 .v2-hero__actions {
@@ -167,6 +97,7 @@ const c = getV2Content(lang).hero;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .v2-hero__logos {
@@ -210,7 +141,19 @@ const c = getV2Content(lang).hero;
   white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-  .v2-hero__inner { grid-template-columns: 1fr; gap: 32px; }
+.v2-hero__visual {
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px var(--line),
+    0 32px 100px rgba(0, 0, 0, 0.55),
+    0 0 80px rgba(99, 102, 241, 0.12);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 </style>

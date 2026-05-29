@@ -8,6 +8,8 @@ import Results from '../components/v2/Results.astro';
 import BlogScroll from '../components/v2/BlogScroll.astro';
 import Testimonials from '../components/v2/Testimonials.astro';
 import FAQ from '../components/v2/FAQ.astro';
+import Channels from '../components/v2/Channels.astro';
+import Founder from '../components/v2/Founder.astro';
 import Track from '../components/v2/Track.astro';
 import EndToEnd from '../components/v2/EndToEnd.astro';
 import CTA from '../components/v2/CTA.astro';
@@ -18,20 +20,6 @@ const siteUrl = Astro.url.origin;
 const structuredData = [
   generateOrganizationJsonLd(),
   generateWebSiteJsonLd(siteUrl, ['en', 'sl', 'de']),
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "AI Customer System in Action — CreativeComplete",
-    "description": "See how the AI Customer System qualifies leads in under 60 seconds, generates ad creatives automatically, and monetizes existing contact databases for agencies.",
-    "thumbnailUrl": `${siteUrl}/og-default.svg`,
-    "uploadDate": "2026-01-15T00:00:00+00:00",
-    "embedUrl": "https://player.vimeo.com/video/1191978034",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CreativeComplete",
-      "url": siteUrl,
-    },
-  },
 ];
 ---
 
@@ -43,12 +31,14 @@ const structuredData = [
 >
   <main>
     <Hero />
+    <Channels />
     <Track />
     <Clients />
     <Stats />
     <EndToEnd />
     <Services />
     <Results />
+    <Founder />
     <BlogScroll />
     <Testimonials />
     <FAQ />

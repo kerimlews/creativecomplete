@@ -1,4 +1,4 @@
-// v2i18n.ts — Translation utility for v2 homepage components
+// v2i18n.ts. Translation utility for v2 homepage components
 // Supports: en (fallback), de (German/DACH), sl (Slovenian)
 
 export type Lang = 'en' | 'de' | 'sl';
@@ -131,9 +131,9 @@ export interface StatsContent {
 const en = {
   hero: {
     badge: 'AI Customer System, Live',
-    h1Line1: "Maximize Every Lead's Potential",
-    h1Line2: 'Without Scaling Your Team',
-    subtitle: 'We build, run, and own the AI ad-to-chat campaign. You just get results.',
+    h1Line1: 'We Run Your Entire Lead System.',
+    h1Line2: 'You Close the Deals.',
+    subtitle: 'We build the AI, run the system, and make sure every lead gets qualified, replied to, and booked. You just close.',
     ctaPrimary: 'Get free system audit',
     ctaSecondary: 'See how it works',
     trustText: 'trust AI Customer System',
@@ -156,7 +156,7 @@ const en = {
     titleSuffix: ' in days, not months.',
     cta: 'Book my strategy call →',
     steps: [
-      { label: 'Schedule a Call',    desc: 'Book a free system audit — 30 minutes, no pressure.' },
+      { label: 'Schedule a Call',    desc: 'Book a free system audit. 30 minutes, no pressure.' },
       { label: 'Answer Questions',   desc: 'We learn your business, channels, goals, and current lead flow.' },
       { label: 'Set Monthly Price',  desc: 'One fixed monthly fee. No surprises, no hidden costs, no per-seat pricing.' },
       { label: 'System Setup',       desc: 'We build, connect, and deploy the full AI Customer System. You do nothing.' },
@@ -240,19 +240,19 @@ const en = {
   faq: [
     {
       q: 'What exactly does CreativeComplete do for us?',
-      a: 'We act as your embedded AI Customer System team. We configure, build, and fully manage the infrastructure that captures leads from every channel, qualifies them with AI Agents in under 60 seconds, and runs broadcast sequences on your existing database. You don\'t get a tool to figure out — you get a specialist team that runs the system end to end. Your team only handles the hot leads that land in your calendar.',
+      a: 'We act as your embedded AI Customer System team. We configure, build, and fully manage the infrastructure that captures leads from every channel, qualifies them with AI Agents in under 60 seconds, and runs broadcast sequences on your existing database. You don\'t get a tool to figure out. You get a specialist team that runs the system end to end. Your team only handles the hot leads that land in your calendar.',
     },
     {
       q: 'How does AI qualify leads better than a human team?',
-      a: 'AI Agents respond in under 60 seconds, 24/7, across every channel simultaneously. They apply the same BANT qualification logic every time — intent, budget, timeline, authority — without fatigue, inconsistency, or missed follow-ups. Our agency-configured agents achieve 81% lead conversion rates, compared to the industry average of 20–30% for human teams. The difference isn\'t the AI — it\'s the setup quality. That\'s what we own.',
+      a: 'AI Agents respond in under 60 seconds, 24/7, across every channel simultaneously. They apply the same BANT qualification logic every time. Intent, budget, timeline, authority. Without fatigue, inconsistency, or missed follow-ups. Our agency-configured agents achieve 81% lead conversion rates, compared to the industry average of 20–30% for human teams. The difference isn\'t the AI. It\'s the setup quality. That\'s what we own.',
     },
     {
       q: 'Which channels does it cover?',
-      a: '40+ channels: WhatsApp Business API, WhatsApp Calling, Instagram DM, TikTok Business Messaging, Facebook Messenger, Facebook Messenger Calls, email (Gmail, Outlook, Yahoo), SMS (Twilio, MessageBird, Vonage), Telegram, Viber, WeChat, LINE, VoIP, and more. Every conversation — regardless of source — flows into one unified team inbox with full source attribution, lead scores, and conversation history. Nothing falls through the cracks.',
+      a: '40+ channels: WhatsApp Business API, WhatsApp Calling, Instagram DM, TikTok Business Messaging, Facebook Messenger, Facebook Messenger Calls, email (Gmail, Outlook, Yahoo), SMS (Twilio, MessageBird, Vonage), Telegram, Viber, WeChat, LINE, VoIP, and more. Every conversation. Regardless of source. Flows into one unified team inbox with full source attribution, lead scores, and conversation history. Nothing falls through the cracks.',
     },
     {
       q: 'How fast will we see results?',
-      a: 'Your AI Agents can be handling inbound leads within 10 days of kickoff. A full system build — qualification flows, nurture sequences, broadcast campaigns, creative production — takes 3–4 weeks. Broadcast campaigns on your existing CRM typically return ROI within the first month. Most clients recoup the full investment within 45 days.',
+      a: 'Your AI Agents can be handling inbound leads within 10 days of kickoff. A full system build. Qualification flows, nurture sequences, broadcast campaigns, creative production. Takes 3–4 weeks. Broadcast campaigns on your existing CRM typically return ROI within the first month. Most clients recoup the full investment within 45 days.',
     },
     {
       q: 'Do we need to be technical or hire anyone new?',
@@ -260,7 +260,7 @@ const en = {
     },
     {
       q: 'How does the creative side connect to the conversation system?',
-      a: 'AI generates 8–12 high-converting ad variants weekly, trained on $35B+ in ad spend data. Creative Scoring AI ranks them before launch — only proven winners go live. Those ads drive leads directly into the conversation system, where AI Agents qualify them instantly. Better creatives bring better leads. Better qualification converts more of them. We manage both loops together so ROAS compounds every week.',
+      a: 'AI generates 8–12 high-converting ad variants weekly, trained on $35B+ in ad spend data. Creative Scoring AI ranks them before launch. Only proven winners go live. Those ads drive leads directly into the conversation system, where AI Agents qualify them instantly. Better creatives bring better leads. Better qualification converts more of them. We manage both loops together so ROAS compounds every week.',
     },
     {
       q: 'What ROI can we realistically expect?',
@@ -268,11 +268,11 @@ const en = {
     },
     {
       q: 'How does it connect to our existing CRM?',
-      a: 'Native integrations with HubSpot, Salesforce, Pipedrive, and 50+ CRMs — plus Zapier for everything else. Your existing lead database is imported for broadcast and re-engagement campaigns. Your CRM stays the system of record. We build on top of it without disrupting your current processes.',
+      a: 'Native integrations with HubSpot, Salesforce, Pipedrive, and 50+ CRMs. Plus Zapier for everything else. Your existing lead database is imported for broadcast and re-engagement campaigns. Your CRM stays the system of record. We build on top of it without disrupting your current processes.',
     },
     {
       q: 'What makes this different from hiring an automation freelancer or using a chatbot tool?',
-      a: 'Freelancers set it up and leave. Chatbot tools handle one channel and one step. We are an ongoing, managed specialist team that owns the full lead lifecycle — capture, qualification, creative production, re-engagement — across every channel, continuously optimised. You get the output of a 5-person AI operations team at a fraction of the cost, without the management overhead.',
+      a: 'Freelancers set it up and leave. Chatbot tools handle one channel and one step. We are an ongoing, managed specialist team that owns the full lead lifecycle. Capture, qualification, creative production, re-engagement. Across every channel, continuously optimised. You get the output of a 5-person AI operations team at a fraction of the cost, without the management overhead.',
     },
   ] as FAQItem[],
 
@@ -307,17 +307,17 @@ const en = {
     eyebrow: 'The full stack',
     title: 'AI Customer System,',
     titleGrad: 'end to end.',
-    lead: 'One system that captures, converts, and retains — fully managed by us.',
+    lead: 'One system that captures, converts, and retains. Fully managed by us.',
     bottomCta: 'Build this system for my agency →',
     phases: [
       {
         name: 'Create Ads',
         tool: 'AI Creative Engine',
-        desc: 'AI generates high-converting images and videos from your brief — trained on $35B+ in real ad spend data. Creative Scoring predicts winners before you spend a single cent.',
+        desc: 'AI generates high-converting images and videos from your brief. Trained on $35B+ in real ad spend data. Creative Scoring predicts winners before you spend a single cent.',
         features: [
-          'Images & Videos — any format',
-          'Creative Scoring AI — 90%+ accuracy',
-          'A/B Testing — scale winners only',
+          'Images & Videos. Any format',
+          'Creative Scoring AI. 90%+ accuracy',
+          'A/B Testing. Scale winners only',
           'Meta · TikTok · Google · LinkedIn',
           'Weekly fresh creative production',
         ],
@@ -338,25 +338,25 @@ const en = {
       {
         name: 'Convert Leads',
         tool: 'AI Agents',
-        desc: 'AI Agents qualify leads in under 60 seconds, route hot prospects to your team, and book appointments — automatically.',
+        desc: 'AI Agents qualify leads in under 60 seconds, route hot prospects to your team, and book appointments. Automatically.',
         features: [
-          'AI Agents ✨ — 24/7 qualification',
-          'Team Inbox — full context, no CRM switch',
-          'Qualify Leads — BANT in every language',
-          'Route Leads — right rep, right time',
-          'Book Appointments — in conversation',
+          'AI Agents ✨. 24/7 qualification',
+          'Team Inbox. Full context, no CRM switch',
+          'Qualify Leads. BANT in every language',
+          'Route Leads. Right rep, right time',
+          'Book Appointments. In conversation',
         ],
         blogLabel: 'Deep dive: AI Sales Agents',
       },
       {
         name: 'Retain Customers',
         tool: 'Broadcasts',
-        desc: 'Turn one-time buyers into recurring revenue. Automated sequences, smart broadcasts, and satisfaction surveys — all in conversation.',
+        desc: 'Turn one-time buyers into recurring revenue. Automated sequences, smart broadcasts, and satisfaction surveys. All in conversation.',
         features: [
-          'Conversational Support — always on',
-          'Promotions & Newsletters — avg 42.5× ROI',
-          'Renewal Reminders — automated sequences',
-          'CSAT & NPS Surveys — in-chat',
+          'Conversational Support. Always on',
+          'Promotions & Newsletters. Avg 42.5× ROI',
+          'Renewal Reminders. Automated sequences',
+          'CSAT & NPS Surveys. In-chat',
         ],
         blogLabel: 'Deep dive: WhatsApp Broadcasts (42.5× ROI)',
       },
@@ -410,7 +410,7 @@ const de = {
     badge: 'KI Customer System, Live',
     h1Line1: 'Jedes Lead-Potenzial maximal ausschöpfen',
     h1Line2: 'Ohne mehr Personal einzustellen',
-    subtitle: 'Wir bauen, betreiben und verantworten das KI-Kampagnensystem von Ad bis Chat — Sie erhalten nur die Ergebnisse.',
+    subtitle: 'Wir bauen, betreiben und verantworten das KI-Kampagnensystem von Ad bis Chat. Sie erhalten nur die Ergebnisse.',
     ctaPrimary: 'Kostenloses System-Audit sichern',
     ctaSecondary: 'So funktioniert es',
     trustText: 'vertrauen dem KI Customer System',
@@ -433,7 +433,7 @@ const de = {
     titleSuffix: ' in Tagen, nicht Monaten.',
     cta: 'Strategie-Call buchen →',
     steps: [
-      { label: 'Termin vereinbaren',    desc: 'Kostenloses System-Audit buchen — 30 Minuten, kein Druck.' },
+      { label: 'Termin vereinbaren',    desc: 'Kostenloses System-Audit buchen. 30 Minuten, kein Druck.' },
       { label: 'Fragen beantworten',    desc: 'Wir verstehen Ihr Geschäft, Kanäle, Ziele und den aktuellen Lead-Flow.' },
       { label: 'Fixpreis festlegen',    desc: 'Eine monatliche Pauschale. Keine Überraschungen, keine versteckten Kosten.' },
       { label: 'System-Aufbau',         desc: 'Wir bauen, verbinden und deployen das vollständige KI Customer System. Sie müssen nichts tun.' },
@@ -444,7 +444,7 @@ const de = {
   services: {
     eyebrow: 'Was wir tun',
     title: 'Vier Motoren.',
-    lead: 'Wir erfassen jeden Lead, konvertieren ihn mit KI und halten ihn mit automatisierten Follow-ups. Die meisten Agenturen trennen diese Phasen — wir besitzen den gesamten Lebenszyklus.',
+    lead: 'Wir erfassen jeden Lead, konvertieren ihn mit KI und halten ihn mit automatisierten Follow-ups. Die meisten Agenturen trennen diese Phasen. Wir besitzen den gesamten Lebenszyklus.',
     bottomCta: 'Alle 4 Motoren aktivieren →',
     services: [
       {
@@ -467,7 +467,7 @@ const de = {
         tag: '02',
         kicker: '$35 Mrd.+ trainiert · Wöchentliche Produktion',
         title: 'KI-Werbemittel-Engine',
-        body: 'Das KI Customer System generiert hochkonvertierende Werbemittel, trainiert auf $35 Mrd.+ realen Werbeausgaben. Die Creative Scoring KI prognostiziert Gewinner mit 90 %+ Genauigkeit — bevor Sie einen Cent ausgeben.',
+        body: 'Das KI Customer System generiert hochkonvertierende Werbemittel, trainiert auf $35 Mrd.+ realen Werbeausgaben. Die Creative Scoring KI prognostiziert Gewinner mit 90 %+ Genauigkeit. Bevor Sie einen Cent ausgeben.',
         list: [
           'Creatives in Minuten, nicht Tagen',
           'Trainiert auf $35 Mrd.+ echten Werbedaten',
@@ -499,7 +499,7 @@ const de = {
         tag: '04',
         kicker: 'Laufende Einnahmen · Ø 42.5×',
         title: 'Bestehende Leads monetarisieren',
-        body: 'Das KI Customer System hebt Profit aus Ihrem bestehenden CRM. WhatsApp-Broadcast-Kampagnen und KI-gestützte Re-Engagement-Sequenzen verwandeln inaktive Kontakte in Umsatz — Ø 42.5× ROI bei der ersten Kampagne.',
+        body: 'Das KI Customer System hebt Profit aus Ihrem bestehenden CRM. WhatsApp-Broadcast-Kampagnen und KI-gestützte Re-Engagement-Sequenzen verwandeln inaktive Kontakte in Umsatz. Ø 42.5× ROI bei der ersten Kampagne.',
         list: [
           'WhatsApp-Broadcasts (Ø 42.5× ROI)',
           'Inaktive CRM-Reaktivierungsflows',
@@ -517,19 +517,19 @@ const de = {
   faq: [
     {
       q: 'Was genau macht CreativeComplete für uns?',
-      a: 'Wir fungieren als Ihr integriertes KI Customer System Team. Wir konfigurieren, bauen und verwalten vollständig die Infrastruktur, die Leads aus jedem Kanal erfasst, sie mit KI-Agenten in unter 60 Sekunden qualifiziert und Broadcast-Sequenzen auf Ihrer bestehenden Datenbank ausführt. Sie erhalten kein Tool, das Sie selbst herausfinden müssen — Sie bekommen ein Spezialistenteam, das das System von A bis Z betreibt. Ihr Team kümmert sich nur um die heißen Leads, die in Ihrem Kalender landen.',
+      a: 'Wir fungieren als Ihr integriertes KI Customer System Team. Wir konfigurieren, bauen und verwalten vollständig die Infrastruktur, die Leads aus jedem Kanal erfasst, sie mit KI-Agenten in unter 60 Sekunden qualifiziert und Broadcast-Sequenzen auf Ihrer bestehenden Datenbank ausführt. Sie erhalten kein Tool, das Sie selbst herausfinden müssen. Sie bekommen ein Spezialistenteam, das das System von A bis Z betreibt. Ihr Team kümmert sich nur um die heißen Leads, die in Ihrem Kalender landen.',
     },
     {
       q: 'Wie qualifiziert KI Leads besser als ein menschliches Team?',
-      a: 'KI-Agenten antworten in unter 60 Sekunden, 24/7, gleichzeitig auf allen Kanälen. Sie wenden jedes Mal dieselbe BANT-Qualifizierungslogik an — Intent, Budget, Timeline, Entscheidungsbefugnis — ohne Ermüdung, Inkonsistenz oder verpasste Follow-ups. Unsere agenturkonfigurierten Agenten erzielen 81 % Lead-Conversion-Raten, verglichen mit dem Branchendurchschnitt von 20–30 % bei menschlichen Teams. Der Unterschied liegt nicht in der KI — sondern in der Setup-Qualität. Das ist, was wir verantworten.',
+      a: 'KI-Agenten antworten in unter 60 Sekunden, 24/7, gleichzeitig auf allen Kanälen. Sie wenden jedes Mal dieselbe BANT-Qualifizierungslogik an. Intent, Budget, Timeline, Entscheidungsbefugnis. Ohne Ermüdung, Inkonsistenz oder verpasste Follow-ups. Unsere agenturkonfigurierten Agenten erzielen 81 % Lead-Conversion-Raten, verglichen mit dem Branchendurchschnitt von 20–30 % bei menschlichen Teams. Der Unterschied liegt nicht in der KI. Sondern in der Setup-Qualität. Das ist, was wir verantworten.',
     },
     {
       q: 'Welche Kanäle sind abgedeckt?',
-      a: '40+ Kanäle: WhatsApp Business API, WhatsApp Calling, Instagram DM, TikTok Business Messaging, Facebook Messenger, Facebook Messenger Calls, E-Mail (Gmail, Outlook, Yahoo), SMS (Twilio, MessageBird, Vonage), Telegram, Viber, WeChat, LINE, VoIP und mehr. Jedes Gespräch — unabhängig von der Quelle — fließt in einen einheitlichen Team-Posteingang mit vollständiger Quellenzuordnung, Lead-Scores und Gesprächshistorie. Nichts fällt durchs Raster.',
+      a: '40+ Kanäle: WhatsApp Business API, WhatsApp Calling, Instagram DM, TikTok Business Messaging, Facebook Messenger, Facebook Messenger Calls, E-Mail (Gmail, Outlook, Yahoo), SMS (Twilio, MessageBird, Vonage), Telegram, Viber, WeChat, LINE, VoIP und mehr. Jedes Gespräch. Unabhängig von der Quelle. Fließt in einen einheitlichen Team-Posteingang mit vollständiger Quellenzuordnung, Lead-Scores und Gesprächshistorie. Nichts fällt durchs Raster.',
     },
     {
       q: 'Wie schnell sehen wir Ergebnisse?',
-      a: 'Ihre KI-Agenten können eingehende Leads innerhalb von 10 Tagen nach Projektstart bearbeiten. Ein vollständiger Systemaufbau — Qualifizierungsflows, Nurture-Sequenzen, Broadcast-Kampagnen, Creative-Produktion — dauert 3–4 Wochen. Broadcast-Kampagnen auf Ihrem bestehenden CRM bringen typischerweise im ersten Monat ROI. Die meisten Kunden amortisieren die Investition innerhalb von 45 Tagen.',
+      a: 'Ihre KI-Agenten können eingehende Leads innerhalb von 10 Tagen nach Projektstart bearbeiten. Ein vollständiger Systemaufbau. Qualifizierungsflows, Nurture-Sequenzen, Broadcast-Kampagnen, Creative-Produktion. Dauert 3–4 Wochen. Broadcast-Kampagnen auf Ihrem bestehenden CRM bringen typischerweise im ersten Monat ROI. Die meisten Kunden amortisieren die Investition innerhalb von 45 Tagen.',
     },
     {
       q: 'Müssen wir technisch versiert sein oder neue Mitarbeiter einstellen?',
@@ -537,7 +537,7 @@ const de = {
     },
     {
       q: 'Wie hängt die Creative-Seite mit dem Gesprächssystem zusammen?',
-      a: 'KI generiert wöchentlich 8–12 hochkonvertierende Anzeigenvarianten, trainiert auf $35 Mrd.+ Werbedaten. Die Creative Scoring KI bewertet sie vor dem Launch — nur bewährte Gewinner gehen live. Diese Anzeigen leiten Leads direkt in das Gesprächssystem, wo KI-Agenten sie sofort qualifizieren. Bessere Creatives bringen bessere Leads. Bessere Qualifizierung konvertiert mehr davon. Wir managen beide Kreisläufe gemeinsam, sodass der ROAS jede Woche steigt.',
+      a: 'KI generiert wöchentlich 8–12 hochkonvertierende Anzeigenvarianten, trainiert auf $35 Mrd.+ Werbedaten. Die Creative Scoring KI bewertet sie vor dem Launch. Nur bewährte Gewinner gehen live. Diese Anzeigen leiten Leads direkt in das Gesprächssystem, wo KI-Agenten sie sofort qualifizieren. Bessere Creatives bringen bessere Leads. Bessere Qualifizierung konvertiert mehr davon. Wir managen beide Kreisläufe gemeinsam, sodass der ROAS jede Woche steigt.',
     },
     {
       q: 'Welchen ROI können wir realistischerweise erwarten?',
@@ -545,18 +545,18 @@ const de = {
     },
     {
       q: 'Wie verbindet es sich mit unserem bestehenden CRM?',
-      a: 'Native Integrationen mit HubSpot, Salesforce, Pipedrive und 50+ CRMs — plus Zapier für alles andere. Ihre bestehende Lead-Datenbank wird für Broadcast- und Re-Engagement-Kampagnen importiert. Ihr CRM bleibt das System of Record. Wir bauen darauf auf, ohne Ihre bestehenden Prozesse zu stören.',
+      a: 'Native Integrationen mit HubSpot, Salesforce, Pipedrive und 50+ CRMs. Plus Zapier für alles andere. Ihre bestehende Lead-Datenbank wird für Broadcast- und Re-Engagement-Kampagnen importiert. Ihr CRM bleibt das System of Record. Wir bauen darauf auf, ohne Ihre bestehenden Prozesse zu stören.',
     },
     {
       q: 'Was unterscheidet das von einem Freelancer oder Chatbot-Tool?',
-      a: 'Freelancer bauen auf und gehen. Chatbot-Tools decken einen Kanal und einen Schritt ab. Wir sind ein laufendes, gemanagtes Spezialistenteam, das den gesamten Lead-Lebenszyklus besitzt — Erfassung, Qualifizierung, Creative-Produktion, Re-Engagement — auf allen Kanälen, kontinuierlich optimiert. Sie erhalten die Leistung eines 5-köpfigen KI-Operations-Teams zu einem Bruchteil der Kosten, ohne den Management-Overhead.',
+      a: 'Freelancer bauen auf und gehen. Chatbot-Tools decken einen Kanal und einen Schritt ab. Wir sind ein laufendes, gemanagtes Spezialistenteam, das den gesamten Lead-Lebenszyklus besitzt. Erfassung, Qualifizierung, Creative-Produktion, Re-Engagement. Auf allen Kanälen, kontinuierlich optimiert. Sie erhalten die Leistung eines 5-köpfigen KI-Operations-Teams zu einem Bruchteil der Kosten, ohne den Management-Overhead.',
     },
   ] as FAQItem[],
 
   cta: {
     eyebrow: 'KI Customer System Agentur · 50+ Agenturen betreut',
     headline: 'Hören Sie auf, Leads zu verlieren,<br/><span class="v2-grad">für die Ihre Werbung bereits bezahlt hat.</span>',
-    subline: 'Buchen Sie ein kostenloses 30-Minuten-Audit. Wir analysieren Ihren aktuellen Lead-Flow, berechnen Ihre genaue Umsatzlücke und zeigen Ihnen die exakte KI-Konfiguration für Ihre Agentur — kostenlos, unverbindlich.',
+    subline: 'Buchen Sie ein kostenloses 30-Minuten-Audit. Wir analysieren Ihren aktuellen Lead-Flow, berechnen Ihre genaue Umsatzlücke und zeigen Ihnen die exakte KI-Konfiguration für Ihre Agentur. Kostenlos, unverbindlich.',
     buttonText: 'Kostenloses Audit jetzt sichern',
     promises: [
       'Kein Pitch, außer Sie möchten ihn',
@@ -584,17 +584,17 @@ const de = {
     eyebrow: 'Der komplette Stack',
     title: 'KI Customer System,',
     titleGrad: 'von A bis Z.',
-    lead: 'Ein System, das erfasst, konvertiert und hält — vollständig von uns gemanagt.',
+    lead: 'Ein System, das erfasst, konvertiert und hält. Vollständig von uns gemanagt.',
     bottomCta: 'Dieses System für meine Agentur aufbauen →',
     phases: [
       {
         name: 'Werbung erstellen',
         tool: 'KI-Creative-Engine',
-        desc: 'KI generiert hochkonvertierende Bilder und Videos aus Ihrem Briefing — trainiert auf $35 Mrd.+ realen Werbedaten. Creative Scoring prognostiziert Gewinner, bevor Sie einen Cent ausgeben.',
+        desc: 'KI generiert hochkonvertierende Bilder und Videos aus Ihrem Briefing. Trainiert auf $35 Mrd.+ realen Werbedaten. Creative Scoring prognostiziert Gewinner, bevor Sie einen Cent ausgeben.',
         features: [
-          'Bilder & Videos — jedes Format',
-          'Creative Scoring KI — 90 %+ Genauigkeit',
-          'A/B-Testing — nur Gewinner skalieren',
+          'Bilder & Videos. Jedes Format',
+          'Creative Scoring KI. 90 %+ Genauigkeit',
+          'A/B-Testing. Nur Gewinner skalieren',
           'Meta · TikTok · Google · LinkedIn',
           'Wöchentlich neue Creatives',
         ],
@@ -615,25 +615,25 @@ const de = {
       {
         name: 'Leads konvertieren',
         tool: 'KI-Agenten',
-        desc: 'KI-Agenten qualifizieren Leads in unter 60 Sekunden, leiten heiße Interessenten an Ihr Team weiter und buchen Termine — automatisch.',
+        desc: 'KI-Agenten qualifizieren Leads in unter 60 Sekunden, leiten heiße Interessenten an Ihr Team weiter und buchen Termine. Automatisch.',
         features: [
-          'KI-Agenten ✨ — 24/7-Qualifizierung',
-          'Team-Inbox — voller Kontext, kein CRM-Wechsel',
-          'Leads qualifizieren — BANT in jeder Sprache',
-          'Leads routen — richtiger Rep, richtige Zeit',
-          'Termine buchen — im Gespräch',
+          'KI-Agenten ✨. 24/7-Qualifizierung',
+          'Team-Inbox. Voller Kontext, kein CRM-Wechsel',
+          'Leads qualifizieren. BANT in jeder Sprache',
+          'Leads routen. Richtiger Rep, richtige Zeit',
+          'Termine buchen. Im Gespräch',
         ],
         blogLabel: 'Tiefer Einblick: KI-Verkaufsagenten',
       },
       {
         name: 'Kunden halten',
         tool: 'Broadcasts',
-        desc: 'Einmalkäufer in wiederkehrende Einnahmen verwandeln. Automatisierte Sequenzen, smarte Broadcasts und Zufriedenheitsumfragen — alles im Chat.',
+        desc: 'Einmalkäufer in wiederkehrende Einnahmen verwandeln. Automatisierte Sequenzen, smarte Broadcasts und Zufriedenheitsumfragen. Alles im Chat.',
         features: [
-          'Konversationaler Support — immer verfügbar',
-          'Aktionen & Newsletter — Ø 42.5× ROI',
-          'Erinnerungen zur Vertragsverlängerung — automatisiert',
-          'CSAT & NPS-Umfragen — im Chat',
+          'Konversationaler Support. Immer verfügbar',
+          'Aktionen & Newsletter. Ø 42.5× ROI',
+          'Erinnerungen zur Vertragsverlängerung. Automatisiert',
+          'CSAT & NPS-Umfragen. Im Chat',
         ],
         blogLabel: 'Tiefer Einblick: WhatsApp-Broadcasts (42.5× ROI)',
       },
@@ -710,7 +710,7 @@ const sl = {
     titleSuffix: ' v dneh, ne mesecih.',
     cta: 'Rezerviraj strateški klic →',
     steps: [
-      { label: 'Rezerviraj klic',        desc: 'Brezplačen sistemski pregled — 30 minut, brez pritiska.' },
+      { label: 'Rezerviraj klic',        desc: 'Brezplačen sistemski pregled. 30 minut, brez pritiska.' },
       { label: 'Odgovorite na vprašanja', desc: 'Spoznamo vaše podjetje, kanale, cilje in trenutni tok leadov.' },
       { label: 'Določimo mesečno ceno',   desc: 'Ena fiksna mesečna cena. Brez presenečenj, skritih stroškov ali cen po sedežih.' },
       { label: 'Vzpostavitev sistema',    desc: 'Zgradimo, povežemo in namestimo celoten AI Customer System. Vi ne naredite ničesar.' },
@@ -728,7 +728,7 @@ const sl = {
         tag: '01',
         kicker: 'Pod 60 sekund · 24/7',
         title: 'AI kvalifikacija leadov',
-        body: 'AI Customer System samodejno kvalificira vsak dohodni lead z AI agenti — ocenjevanje namena, proračuna in časovnice v manj kot 60 sekundah prek WhatsApp, Instagram, TikTok, Facebook in 8+ dodatnih kanalov.',
+        body: 'AI Customer System samodejno kvalificira vsak dohodni lead z AI agenti. Ocenjevanje namena, proračuna in časovnice v manj kot 60 sekundah prek WhatsApp, Instagram, TikTok, Facebook in 8+ dodatnih kanalov.',
         list: [
           'AI agenti skrbijo za prvi stik 24/7',
           'BANT kvalifikacija v vsakem jeziku',
@@ -744,7 +744,7 @@ const sl = {
         tag: '02',
         kicker: '$35 mrd.+ treniranih · Tedenska produkcija',
         title: 'AI oglaševalski kreativni sistem',
-        body: 'AI Customer System ustvarja visoko konverzivne oglaševalske kreative, trenirane na $35 mrd.+ podatkov o oglaševalski porabi. AI za ocenjevanje kreativ napove zmagovalce z več kot 90 % natančnostjo — preden porabite en cent.',
+        body: 'AI Customer System ustvarja visoko konverzivne oglaševalske kreative, trenirane na $35 mrd.+ podatkov o oglaševalski porabi. AI za ocenjevanje kreativ napove zmagovalce z več kot 90 % natančnostjo. Preden porabite en cent.',
         list: [
           'Kreative v minutah, ne dneh',
           'Trenirano na $35 mrd.+ resničnih oglaševalskih podatkov',
@@ -776,7 +776,7 @@ const sl = {
         tag: '04',
         kicker: 'Tekoči prihodki · Povp. 42.5×',
         title: 'Monetizacija obstoječih leadov',
-        body: 'AI Customer System pridobiva profit iz vašega obstoječega CRM-a. WhatsApp broadcast kampanje in AI zaporedja za reaktivacijo pretvorijo neaktivne kontakte v prihodke — povprečno 42.5× ROI pri prvi kampanji.',
+        body: 'AI Customer System pridobiva profit iz vašega obstoječega CRM-a. WhatsApp broadcast kampanje in AI zaporedja za reaktivacijo pretvorijo neaktivne kontakte v prihodke. Povprečno 42.5× ROI pri prvi kampanji.',
         list: [
           'WhatsApp broadcasts (povp. 42.5× ROI)',
           'Tokovi za reaktivacijo neaktivnega CRM-a',
@@ -794,19 +794,19 @@ const sl = {
   faq: [
     {
       q: 'Kaj točno naredi CreativeComplete za nas?',
-      a: 'Nastopamo kot vaša vgrajena ekipa AI Customer Systema. Konfiguriramo, zgradimo in v celoti upravljamo infrastrukturo, ki zajema leade z vsakega kanala, jih kvalificira z AI agenti v manj kot 60 sekundah in izvaja broadcast zaporedja na vaši obstoječi bazi. Ne dobite orodja, ki bi ga morali sami ugotavljati — dobite specializirano ekipo, ki upravlja sistem od začetka do konca. Vaša ekipa se ukvarja samo z vročimi leadi, ki pristanejo v vašem koledarju.',
+      a: 'Nastopamo kot vaša vgrajena ekipa AI Customer Systema. Konfiguriramo, zgradimo in v celoti upravljamo infrastrukturo, ki zajema leade z vsakega kanala, jih kvalificira z AI agenti v manj kot 60 sekundah in izvaja broadcast zaporedja na vaši obstoječi bazi. Ne dobite orodja, ki bi ga morali sami ugotavljati. Dobite specializirano ekipo, ki upravlja sistem od začetka do konca. Vaša ekipa se ukvarja samo z vročimi leadi, ki pristanejo v vašem koledarju.',
     },
     {
       q: 'Kako AI kvalificira leade bolje kot človeška ekipa?',
-      a: 'AI agenti odgovarjajo v manj kot 60 sekundah, 24/7, na vseh kanalih hkrati. Vsakič aplicirajo enako BANT kvalifikacijsko logiko — namen, proračun, časovnico, odločevalca — brez utrujenosti, nedoslednosti ali zamujenih sledilnih sporočil. Naši agencijsko konfigurirani agenti dosegajo 81 % stopnjo konverzije leadov v primerjavi z industrijskim povprečjem 20–30 % za človeške ekipe. Razlika ni v AI — je v kakovosti nastavitve. To je tisto, kar mi zagotavljamo.',
+      a: 'AI agenti odgovarjajo v manj kot 60 sekundah, 24/7, na vseh kanalih hkrati. Vsakič aplicirajo enako BANT kvalifikacijsko logiko. Namen, proračun, časovnico, odločevalca. Brez utrujenosti, nedoslednosti ali zamujenih sledilnih sporočil. Naši agencijsko konfigurirani agenti dosegajo 81 % stopnjo konverzije leadov v primerjavi z industrijskim povprečjem 20–30 % za človeške ekipe. Razlika ni v AI. Je v kakovosti nastavitve. To je tisto, kar mi zagotavljamo.',
     },
     {
       q: 'Katere kanale pokriva?',
-      a: '40+ kanalov: WhatsApp Business API, WhatsApp Calling, Instagram DM, TikTok Business Messaging, Facebook Messenger, Facebook Messenger Calls, e-pošta (Gmail, Outlook, Yahoo), SMS (Twilio, MessageBird, Vonage), Telegram, Viber, WeChat, LINE, VoIP in več. Vsak pogovor — ne glede na vir — se prelije v enotno timsko mapo s popolno atribucijo vira, ocenami leadov in zgodovino pogovorov. Nič ne pade skozi razpoke.',
+      a: '40+ kanalov: WhatsApp Business API, WhatsApp Calling, Instagram DM, TikTok Business Messaging, Facebook Messenger, Facebook Messenger Calls, e-pošta (Gmail, Outlook, Yahoo), SMS (Twilio, MessageBird, Vonage), Telegram, Viber, WeChat, LINE, VoIP in več. Vsak pogovor. Ne glede na vir. Se prelije v enotno timsko mapo s popolno atribucijo vira, ocenami leadov in zgodovino pogovorov. Nič ne pade skozi razpoke.',
     },
     {
       q: 'Kako hitro bomo videli rezultate?',
-      a: 'Vaši AI agenti lahko obravnavajo dohodne leade v 10 dneh po začetku. Celoten sistemski razvoj — kvalifikacijski tokovi, negovalná zaporedja, broadcast kampanje, produkcija kreativ — traja 3–4 tedne. Broadcast kampanje na vašem obstoječem CRM-u tipično povrnejo ROI v prvem mesecu. Večina strank povrne celotno naložbo v 45 dneh.',
+      a: 'Vaši AI agenti lahko obravnavajo dohodne leade v 10 dneh po začetku. Celoten sistemski razvoj. Kvalifikacijski tokovi, negovalná zaporedja, broadcast kampanje, produkcija kreativ. Traja 3–4 tedne. Broadcast kampanje na vašem obstoječem CRM-u tipično povrnejo ROI v prvem mesecu. Večina strank povrne celotno naložbo v 45 dneh.',
     },
     {
       q: 'Ali moramo biti tehnično podkovani ali zaposliti koga novega?',
@@ -814,7 +814,7 @@ const sl = {
     },
     {
       q: 'Kako je kreativna stran povezana s sistemom pogovorov?',
-      a: 'AI tedensko ustvari 8–12 visoko konverzivnih oglasnih različic, treniranih na $35 mrd.+ oglaševalskih podatkov. AI za ocenjevanje kreativ jih razvrsti pred objavo — v živo gredo samo dokazani zmagovalci. Ti oglasi vodijo leade neposredno v sistem pogovorov, kjer jih AI agenti takoj kvalificirajo. Boljše kreative prinašajo boljše leade. Boljša kvalifikacija konvertira več. Oba kroga upravljamo skupaj, tako da se ROAS vsak teden povečuje.',
+      a: 'AI tedensko ustvari 8–12 visoko konverzivnih oglasnih različic, treniranih na $35 mrd.+ oglaševalskih podatkov. AI za ocenjevanje kreativ jih razvrsti pred objavo. V živo gredo samo dokazani zmagovalci. Ti oglasi vodijo leade neposredno v sistem pogovorov, kjer jih AI agenti takoj kvalificirajo. Boljše kreative prinašajo boljše leade. Boljša kvalifikacija konvertira več. Oba kroga upravljamo skupaj, tako da se ROAS vsak teden povečuje.',
     },
     {
       q: 'Kakšen ROI lahko realistično pričakujemo?',
@@ -822,18 +822,18 @@ const sl = {
     },
     {
       q: 'Kako se poveže z našim obstoječim CRM-om?',
-      a: 'Nativne integracije z HubSpot, Salesforce, Pipedrive in 50+ CRM-i — plus Zapier za vse ostalo. Vaša obstoječa baza leadov se uvozi za broadcast in reaktivacijske kampanje. Vaš CRM ostane sistem za evidentiranje. Mi gradimo na njem, ne da bi motili vaše trenutne procese.',
+      a: 'Nativne integracije z HubSpot, Salesforce, Pipedrive in 50+ CRM-i. Plus Zapier za vse ostalo. Vaša obstoječa baza leadov se uvozi za broadcast in reaktivacijske kampanje. Vaš CRM ostane sistem za evidentiranje. Mi gradimo na njem, ne da bi motili vaše trenutne procese.',
     },
     {
       q: 'Kaj to loči od najemanja freelancerja za avtomatizacijo ali chatbot orodja?',
-      a: 'Freelancerji nastavijo in gredo. Chatbot orodja pokrivajo en kanal in en korak. Mi smo trajna, upravljana specializirana ekipa, ki je lastnik celotnega življenjskega cikla leadov — zajem, kvalifikacija, produkcija kreativ, reaktivacija — na vseh kanalih, neprekinjeno optimizirano. Dobite učinek 5-članske AI operativne ekipe za delček stroškov, brez upravljalskega bremena.',
+      a: 'Freelancerji nastavijo in gredo. Chatbot orodja pokrivajo en kanal in en korak. Mi smo trajna, upravljana specializirana ekipa, ki je lastnik celotnega življenjskega cikla leadov. Zajem, kvalifikacija, produkcija kreativ, reaktivacija. Na vseh kanalih, neprekinjeno optimizirano. Dobite učinek 5-članske AI operativne ekipe za delček stroškov, brez upravljalskega bremena.',
     },
   ] as FAQItem[],
 
   cta: {
     eyebrow: 'AI Customer System Agencija · 50+ agencij',
     headline: 'Prenehajte izgubljati leade,<br/><span class="v2-grad">za katere ste že plačali z oglasi.</span>',
-    subline: 'Rezervirajte brezplačen 30-minutni pregled. Analiziramo vaš trenutni tok leadov, izračunamo vašo natančno izgubo prihodkov in vam pokažemo natančno AI konfiguracijo za vašo agencijo — brez stroškov, brez obveznosti.',
+    subline: 'Rezervirajte brezplačen 30-minutni pregled. Analiziramo vaš trenutni tok leadov, izračunamo vašo natančno izgubo prihodkov in vam pokažemo natančno AI konfiguracijo za vašo agencijo. Brez stroškov, brez obveznosti.',
     buttonText: 'Zahtevaj brezplačen pregled zdaj',
     promises: [
       'Brez prodajnega pritiska, razen če ga želite',
@@ -861,17 +861,17 @@ const sl = {
     eyebrow: 'Celoten sklad',
     title: 'AI Customer System,',
     titleGrad: 'od začetka do konca.',
-    lead: 'En sistem, ki zajema, konvertira in zadržuje — v celoti upravljan pri nas.',
+    lead: 'En sistem, ki zajema, konvertira in zadržuje. V celoti upravljan pri nas.',
     bottomCta: 'Zgradi ta sistem za mojo agencijo →',
     phases: [
       {
         name: 'Ustvari oglase',
         tool: 'AI kreativni sistem',
-        desc: 'AI ustvarja visoko konverzivne slike in videe na podlagi vašega briefinga — treniran na $35 mrd.+ resničnih oglaševalskih podatkih. Creative Scoring napove zmagovalce, preden porabite en cent.',
+        desc: 'AI ustvarja visoko konverzivne slike in videe na podlagi vašega briefinga. Treniran na $35 mrd.+ resničnih oglaševalskih podatkih. Creative Scoring napove zmagovalce, preden porabite en cent.',
         features: [
-          'Slike in videi — vsak format',
-          'AI za ocenjevanje kreativ — 90 %+ natančnost',
-          'A/B testiranje — skaliranje samo zmagovalcev',
+          'Slike in videi. Vsak format',
+          'AI za ocenjevanje kreativ. 90 %+ natančnost',
+          'A/B testiranje. Skaliranje samo zmagovalcev',
           'Meta · TikTok · Google · LinkedIn',
           'Tedensko sveže kreative',
         ],
@@ -892,25 +892,25 @@ const sl = {
       {
         name: 'Konvertiraj leade',
         tool: 'AI agenti',
-        desc: 'AI agenti kvalificirajo leade v manj kot 60 sekundah, usmerijo vroče prospects k vaši ekipi in rezervirajo termine — samodejno.',
+        desc: 'AI agenti kvalificirajo leade v manj kot 60 sekundah, usmerijo vroče prospects k vaši ekipi in rezervirajo termine. Samodejno.',
         features: [
-          'AI agenti ✨ — 24/7 kvalifikacija',
-          'Timska mapa — poln kontekst, brez menjave CRM-a',
-          'Kvalifikacija leadov — BANT v vsakem jeziku',
-          'Usmerjanje leadov — pravi zastopnik, pravi čas',
-          'Rezervacija terminov — v pogovoru',
+          'AI agenti ✨. 24/7 kvalifikacija',
+          'Timska mapa. Poln kontekst, brez menjave CRM-a',
+          'Kvalifikacija leadov. BANT v vsakem jeziku',
+          'Usmerjanje leadov. Pravi zastopnik, pravi čas',
+          'Rezervacija terminov. V pogovoru',
         ],
         blogLabel: 'Poglobljeno: AI prodajni agenti',
       },
       {
         name: 'Zadržuj stranke',
         tool: 'Broadcasts',
-        desc: 'Enkratne kupce spremenite v ponavljajoče se prihodke. Avtomatizirana zaporedja, pametni broadcasts in ankete o zadovoljstvu — vse v pogovoru.',
+        desc: 'Enkratne kupce spremenite v ponavljajoče se prihodke. Avtomatizirana zaporedja, pametni broadcasts in ankete o zadovoljstvu. Vse v pogovoru.',
         features: [
-          'Pogovorna podpora — vedno na voljo',
-          'Promocije in glasila — povp. 42.5× ROI',
-          'Opomniki za obnovo — avtomatizirana zaporedja',
-          'Ankete CSAT & NPS — v klepetu',
+          'Pogovorna podpora. Vedno na voljo',
+          'Promocije in glasila. Povp. 42.5× ROI',
+          'Opomniki za obnovo. Avtomatizirana zaporedja',
+          'Ankete CSAT & NPS. V klepetu',
         ],
         blogLabel: 'Poglobljeno: WhatsApp broadcasts (42.5× ROI)',
       },
