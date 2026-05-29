@@ -130,13 +130,13 @@ export interface StatsContent {
 
 const en = {
   hero: {
-    badge: 'AI Customer System, Live',
-    h1Line1: 'We Run Your Entire Lead System.',
+    badge: '50+ Agencies · Results in 45 Days',
+    h1Line1: 'We Run Your Lead System.',
     h1Line2: 'You Close the Deals.',
-    subtitle: 'We build the AI, run the system, and make sure every lead gets qualified, replied to, and booked. You just close.',
+    subtitle: 'Every inbound lead qualified in under 60 seconds. Across WhatsApp, Instagram, TikTok, and 40+ channels. No new hires. No missed leads.',
     ctaPrimary: 'Get free system audit',
     ctaSecondary: 'See how it works',
-    trustText: 'trust AI Customer System',
+    trustText: '50+ agencies trust AI Customer System',
   } satisfies HeroContent,
 
   stats: {
@@ -160,7 +160,7 @@ const en = {
       { label: 'Answer Questions',   desc: 'We learn your business, channels, goals, and current lead flow.' },
       { label: 'Set Monthly Price',  desc: 'One fixed monthly fee. No surprises, no hidden costs, no per-seat pricing.' },
       { label: 'System Setup',       desc: 'We build, connect, and deploy the full AI Customer System. You do nothing.' },
-      { label: 'You Winning',        desc: 'Leads qualify themselves. Hot leads book. Your CRM converts on autopilot.' },
+      { label: 'You Win',             desc: 'Leads qualify themselves. Hot leads book. Your CRM converts on autopilot.' },
     ],
   } satisfies TrackContent & { titleSuffix: string },
 
@@ -280,7 +280,7 @@ const en = {
     eyebrow: 'AI Customer System Agency · 50+ Agencies Served',
     headline: 'Stop Losing Leads<br/><span class="v2-grad">Your Ads Already Paid For.</span>',
     subline: 'Book a free 30-minute audit. We map your current lead flow, calculate your exact revenue leakage, and show you the precise AI configuration for your agency, at no cost, no obligation.',
-    buttonText: 'Claim My Free Audit, Book Now',
+    buttonText: 'Book My Free Audit',
     promises: [
       'No pitch unless you ask',
       'Custom ROI estimate on the call',
@@ -291,8 +291,8 @@ const en = {
 
   results: {
     eyebrow: 'Proven results',
-    title: 'Numbers that',
-    titleGrad: 'speak for themselves.',
+    title: 'What our clients',
+    titleGrad: 'actually see.',
     ctaSeeStudies: 'See the case studies →',
     ctaWant: 'I want these results →',
     items: [
