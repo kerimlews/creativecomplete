@@ -22,23 +22,23 @@
   --glow-2: rgba(34,211,238,0.25);
 
   // Surfaces
-  --bg-page: #030712;
-  --bg-card: #0d1117;
-  --bg-elev: #161b22;
-  --bg-hover: #1c2433;
-  --glass:       rgba(255,255,255,0.028);
-  --glass-hover: rgba(255,255,255,0.05);
+  --bg-page: #111318;
+  --bg-card: #181a1f;
+  --bg-elev: #1e2026;
+  --bg-hover: #252830;
+  --glass:       rgba(255,255,255,0.04);
+  --glass-hover: rgba(255,255,255,0.07);
 
   // Borders
-  --line:        rgba(255,255,255,0.07);
-  --line-2:      rgba(255,255,255,0.12);
+  --line:        rgba(255,255,255,0.10);
+  --line-2:      rgba(255,255,255,0.16);
   --line-accent: rgba(99,102,241,0.35);
 
   // Text
   --fg-0: #f0f6fc;
-  --fg-1: #8b949e;
-  --fg-2: #484f58;
-  --fg-3: #30363d;
+  --fg-1: #b0b9c5;
+  --fg-2: #7e8896;
+  --fg-3: #525c68;
 
   // Fonts
   --font-display: "Instrument Serif", "Times New Roman", serif;
@@ -69,9 +69,9 @@ $c1:         #6366f1;
 $c1-light:   #818cf8;
 $c2:         #22d3ee;
 $c3:         #a855f7;
-$bg-page:    #030712;
-$bg-card:    #0d1117;
-$bg-elev:    #161b22;
+$bg-page:    #111318;
+$bg-card:    #181a1f;
+$bg-elev:    #1e2026;
 $fg-0:       #f0f6fc;
-$fg-1:       #8b949e;
-$fg-2:       #484f58;
+$fg-1:       #b0b9c5;
+$fg-2:       #7e8896;

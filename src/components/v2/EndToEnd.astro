@@ -1,6 +1,5 @@
 ---
-// EndToEnd.astro
-// Full lifecycle: Create → Capture → Convert → Retain
+// EndToEnd.astro — Tabbed phase viewer with auto-advancing progress bar
 import getV2Content from '../../utils/v2i18n';
 import type { Lang } from '../../utils/v2i18n';
 
@@ -12,32 +11,31 @@ const { lang = 'en' } = Astro.props;
 const c = getV2Content(lang).endToEnd;
 
 const e2eBlogLinks = lang === 'de'
-  ? {
-      creative: '/de/blog/ki-werbemittel/',
-      whatsappLead: '/de/blog/whatsapp-lead-generierung/',
-      salesAgents: '/de/blog/ki-verkaufsagenten/',
-      broadcasts: '/de/blog/whatsapp-broadcast-kampagnen/',
-    }
+  ? { creative: '/de/blog/ki-werbemittel/', whatsappLead: '/de/blog/whatsapp-lead-generierung/', salesAgents: '/de/blog/ki-verkaufsagenten/', broadcasts: '/de/blog/whatsapp-broadcast-kampagnen/' }
   : lang === 'sl'
-  ? {
-      creative: '/sl/blog/ai-oglasne-kreative/',
-      whatsappLead: '/sl/blog/whatsapp-pridobivanje-leadov/',
-      salesAgents: '/sl/blog/ai-prodajni-agenti/',
-      broadcasts: '/sl/blog/whatsapp-broadcast-kampanje/',
-    }
-  : {
-      creative: '/blog/ai-ad-creatives/',
-      whatsappLead: '/blog/whatsapp-lead-generation/',
-      salesAgents: '/blog/ai-sales-agents/',
-      broadcasts: '/blog/whatsapp-broadcast-campaigns/',
-    };
+  ? { creative: '/sl/blog/ai-oglasne-kreative/', whatsappLead: '/sl/blog/whatsapp-pridobivanje-leadov/', salesAgents: '/sl/blog/ai-prodajni-agenti/', broadcasts: '/sl/blog/whatsapp-broadcast-kampanje/' }
+  : { creative: '/blog/ai-ad-creatives/', whatsappLead: '/blog/whatsapp-lead-generation/', salesAgents: '/blog/ai-sales-agents/', broadcasts: '/blog/whatsapp-broadcast-campaigns/' };
 
-// Phase CSS class keys
+const blogLinks = [e2eBlogLinks.creative, e2eBlogLinks.whatsappLead, e2eBlogLinks.salesAgents, e2eBlogLinks.broadcasts];
 const phaseClasses = ['create', 'capture', 'convert', 'retain'];
 
-// Phase feature icon SVGs (one set per phase)
+// Tab icons (larger, 20px viewport)
+const tabIcons = [
+  `<path d="M10 2l1.5 4h4l-3.2 2.3 1.2 4L10 10l-3.5 2.3 1.2-4L4.5 6h4z" fill="currentColor"/>`,
+  `<rect x="1" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M1 8h18" stroke="currentColor" stroke-width="1.4"/><circle cx="6" cy="12" r="1.5" fill="currentColor" opacity=".7"/><circle cx="10" cy="12" r="1.5" fill="currentColor"/><circle cx="14" cy="12" r="1.5" fill="currentColor" opacity=".5"/>`,
+  `<path d="M5 10l3.5 3.5L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.6"/>`,
+  `<path d="M10 3.5C7.5 1 3 2.5 3 6.5c0 5 7 10 7 10s7-5 7-10c0-4-4.5-5.5-7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>`,
+];
+
+// Metric chips per phase
+const phaseMetrics = [
+  [{ v: '14×', l: 'more conversions', c: 'var(--c3)' }, { v: '90%+', l: 'creative accuracy', c: 'var(--c2)' }],
+  [{ v: '40+', l: 'channels unified',  c: '#f97316'  }, { v: '0',    l: 'missed leads',     c: 'var(--c2)' }],
+  [{ v: '81%', l: 'lead conversion',  c: 'var(--c1-light)' }, { v: '<60s', l: 'qualify time', c: 'var(--c2)' }],
+  [{ v: '42.5×', l: 'avg broadcast ROI', c: 'var(--c2)' }, { v: '45d', l: 'to full ROI', c: 'var(--c3)' }],
+];
+
 const phaseIcons = [
-  // Create (purple)
   [
     `<rect x="2" y="2" width="5" height="5" rx="1" fill="currentColor"/><rect x="9" y="2" width="5" height="5" rx="1" fill="currentColor" opacity=".6"/><rect x="2" y="9" width="5" height="5" rx="1" fill="currentColor" opacity=".6"/><rect x="9" y="9" width="5" height="5" rx="1" fill="currentColor"/>`,
     `<path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5z" fill="currentColor"/>`,
@@ -45,14 +43,12 @@ const phaseIcons = [
     `<path d="M2 12l4-4 3 3 5-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>`,
     `<circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.8"/><path d="M8 5v3l2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>`,
   ],
-  // Capture (orange)
   [
     `<rect x="1" y="3" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M1 6h14" stroke="currentColor" stroke-width="1.2"/>`,
     `<circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>`,
     `<path d="M2 2h12v10H2zM6 12v2M10 12v2M4 14h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
     `<path d="M8 2L2 5v9h12V5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 14V9h4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
   ],
-  // Convert (indigo)
   [
     `<circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 8l2 2 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>`,
     `<path d="M3 3h10v8H9l-3 3V11H3z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>`,
@@ -60,7 +56,6 @@ const phaseIcons = [
     `<circle cx="4.5" cy="8" r="2" stroke="currentColor" stroke-width="1.4"/><circle cx="11.5" cy="4" r="2" stroke="currentColor" stroke-width="1.4"/><circle cx="11.5" cy="12" r="2" stroke="currentColor" stroke-width="1.4"/><path d="M6.4 7l3.2-2.2M6.4 9l3.2 2.2" stroke="currentColor" stroke-width="1.2"/>`,
     `<rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 1v4M11 1v4M2 7h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>`,
   ],
-  // Retain (cyan)
   [
     `<circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M8 5v3.5l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
     `<path d="M2 4h12v9H2zM6 4V3a2 2 0 014 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
@@ -69,200 +64,370 @@ const phaseIcons = [
   ],
 ];
 
-const phaseIconStyles = [
-  'background:rgba(168,85,247,.1);color:var(--c3)',
-  '',   // cap class
-  '',   // con class
-  '',   // ret class
+const featIconStyle = [
+  'background:rgba(168,85,247,.12);color:var(--c3)',
+  'background:rgba(249,115,22,.12);color:#fb923c',
+  'background:rgba(99,102,241,.12);color:var(--c1-light)',
+  'background:rgba(34,211,238,.1);color:var(--c2)',
 ];
 
-// Mini-demo content per phase is hardcoded (animation strings) — stays EN
+const arrowSvg = `<svg width="10" height="10" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 ---
 
 <section class="e2e v2-section" id="system">
   <div class="v2-container">
 
-    <!-- ── Header ───────────────────────────────────── -->
+    <!-- Header -->
     <div class="e2e__head">
       <span class="v2-eyebrow" data-m="fade">{c.eyebrow}</span>
       <h2 class="e2e__h2" data-m="up" style="--m-d:.08s">
         {c.title}<br/><span class="v2-grad">{c.titleGrad}</span>
       </h2>
-      <p class="e2e__lead" data-m="up" style="--m-d:.16s">
-        {c.lead}
-      </p>
-      
+      <p class="e2e__lead" data-m="up" style="--m-d:.16s">{c.lead}</p>
+    </div>
 
-    <!-- ── 4 Phase columns ───────────────────────────── -->
-    <div class="e2e__grid">
+    <!-- Tab nav -->
+    <div class="e2e__tabs" role="tablist" aria-label="System phases" data-m="up" style="--m-d:.2s">
+      {phaseClasses.map((cls, i) => (
+        <button
+          class={`e2e__tab ${cls}${i === 0 ? ' active' : ''}`}
+          role="tab"
+          aria-selected={i === 0 ? 'true' : 'false'}
+          aria-controls={`e2e-panel-${i}`}
+          data-tab={i}
+        >
+          <span class="e2e__tab-progress" aria-hidden="true"></span>
+          <span class={`e2e__tab-icon ${cls}`}>
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" set:html={tabIcons[i]}/>
+          </span>
+          <span class="e2e__tab-body">
+            <span class="e2e__tab-tag">{String(i).padStart(2,'0')} · {c.phases[i].tool}</span>
+            <span class="e2e__tab-name">{c.phases[i].name}</span>
+          </span>
+        </button>
+      ))}
+    </div>
 
-      <!-- ══ 00 CREATE ══ -->
-      <div class="e2e__phase" data-m="up" style="--m-d:.05s">
-        <div class="e2e__phase-hdr create">
-          <span class="e2e__phase-tag">00</span>
-          <span class="e2e__phase-name">{c.phases[0].name}</span>
-          <span class="e2e__phase-tool">{c.phases[0].tool}</span>
-        </div>
+    <!-- Panels -->
+    <div class="e2e__panel-wrap" data-m="up" style="--m-d:.26s">
 
-        <p class="e2e__phase-desc" set:html={c.phases[0].desc.replace('$35B+', '<strong>$35B+</strong>')}></p>
-
-        <ul class="e2e__features">
-          {c.phases[0].features.map((f: string, fi: number) => (
-            <li>
-              <span class="e2e__feat-icon" style="background:rgba(168,85,247,.1);color:var(--c3)">
-                <svg width="11" height="11" viewBox="0 0 16 16" fill="none" set:html={phaseIcons[0][fi]} />
-              </span>
-              {f}
-            </li>
-          ))}
-        </ul>
-
-        <a href={e2eBlogLinks.creative} class="e2e__blog-link">
-          {c.phases[0].blogLabel}
-          <svg width="10" height="10" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-
-        <div class="e2e__mini-demo create-demo">
-          <div class="e2e__demo-brief">
-            <span class="e2e__demo-lbl">BRIEF</span>
-            <span class="e2e__demo-txt">Real estate · CEO · €450k+<span class="e2e__cur">|</span></span>
+      <!-- 00 CREATE -->
+      <div class="e2e__panel active" id="e2e-panel-0" role="tabpanel" data-panel="0">
+        <div class="e2e__panel-left">
+          <div class="e2e__phase-hdr create">
+            <span class="e2e__phase-icon create">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none" set:html={tabIcons[0]}/>
+            </span>
+            <span class="e2e__phase-name">{c.phases[0].name}</span>
+            <span class="e2e__phase-tool">{c.phases[0].tool}</span>
           </div>
-          <div class="e2e__demo-creatives">
-            <div class="e2e__dc win" style="--d:.2s">▲97 <span>SCALING</span></div>
-            <div class="e2e__dc win" style="--d:.4s">▲91 <span>SCALING</span></div>
-            <div class="e2e__dc win" style="--d:.6s">▲89 <span>SCALING</span></div>
-            <div class="e2e__dc" style="--d:.8s">▼74</div>
-            <div class="e2e__dc" style="--d:1.0s">▼68</div>
-            <div class="e2e__dc" style="--d:1.2s">▼63</div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ══ 01 CAPTURE ══ -->
-      <div class="e2e__phase" data-m="up" style="--m-d:.13s">
-        <div class="e2e__phase-hdr capture">
-          <span class="e2e__phase-tag">01</span>
-          <span class="e2e__phase-name">{c.phases[1].name}</span>
-          <span class="e2e__phase-tool">{c.phases[1].tool}</span>
-        </div>
-
-        <p class="e2e__phase-desc">{c.phases[1].desc}</p>
-
-        <ul class="e2e__features">
-          {c.phases[1].features.map((f: string, fi: number) => (
-            <li>
-              <span class="e2e__feat-icon cap">
-                <svg width="11" height="11" viewBox="0 0 16 16" fill="none" set:html={phaseIcons[1][fi]} />
-              </span>
-              {f}
-            </li>
-          ))}
-        </ul>
-
-        <a href={e2eBlogLinks.whatsappLead} class="e2e__blog-link">
-          {c.phases[1].blogLabel}
-          <svg width="10" height="10" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-
-        <div class="e2e__mini-demo capture-demo">
-          <div class="e2e__ch-row">
-            {['WA','IG','TT','FB','✉','SMS'].map((ch, i) => (
-              <span class="e2e__ch-tag" style={`--d:${i * 0.1}s`}>{ch}</span>
+          <div class="e2e__metrics">
+            {phaseMetrics[0].map(m => (
+              <div class="e2e__metric">
+                <span class="e2e__metric-v" style={`color:${m.c}`}>{m.v}</span>
+                <span class="e2e__metric-l">{m.l}</span>
+              </div>
             ))}
           </div>
-          <div class="e2e__inbox-row" style="--d:.8s">
-            <span class="e2e__inbox-dot"></span>
-            unified inbox · 0 missed leads
-          </div>
+          <p class="e2e__phase-desc" set:html={c.phases[0].desc.replace('$35B+','<strong>$35B+</strong>')}></p>
+          <ul class="e2e__features">
+            {c.phases[0].features.map((f: string, fi: number) => (
+              <li style={`--fi-d:${fi * 0.06}s`}>
+                <span class="e2e__feat-icon" style={featIconStyle[0]}>
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" set:html={phaseIcons[0][fi]}/>
+                </span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a href={blogLinks[0]} class="e2e__blog-link">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {c.phases[0].blogLabel}
+            <Fragment set:html={arrowSvg}/>
+          </a>
         </div>
-      </div>
-
-
-      <!-- ══ 02 CONVERT ══ -->
-      <div class="e2e__phase" data-m="up" style="--m-d:.21s">
-        <div class="e2e__phase-hdr convert">
-          <span class="e2e__phase-tag">02</span>
-          <span class="e2e__phase-name">{c.phases[2].name}</span>
-          <span class="e2e__phase-tool">{c.phases[2].tool}</span>
-        </div>
-
-        <p class="e2e__phase-desc">{c.phases[2].desc}</p>
-
-        <ul class="e2e__features">
-          {c.phases[2].features.map((f: string, fi: number) => (
-            <li>
-              <span class="e2e__feat-icon con">
-                <svg width="11" height="11" viewBox="0 0 16 16" fill="none" set:html={phaseIcons[2][fi]} />
+        <div class="e2e__panel-right">
+          <div class="e2e__right-bg create"></div>
+          <div class="e2e__mini-demo create-demo">
+            <div class="e2e__demo-header">
+              <span class="e2e__demo-lbl create">✦ AI Creative Engine</span>
+              <span class="e2e__demo-status">
+                <span class="e2e__demo-dot"></span>Generating
               </span>
-              {f}
-            </li>
-          ))}
-        </ul>
-
-        <a href={e2eBlogLinks.salesAgents} class="e2e__blog-link">
-          {c.phases[2].blogLabel}
-          <svg width="10" height="10" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <div class="e2e__mini-demo convert-demo">
-          <div class="e2e__conv-msg" style="--d:.15s">Hi! Pre-approved €500k, need 3BR now</div>
-          <div class="e2e__conv-ai"  style="--d:.7s">
-            <span class="e2e__conv-spark">✨</span> AI qualified · Score 96
+            </div>
+            <div class="e2e__demo-brief">
+              <span class="e2e__demo-field">Brief</span>
+              <span class="e2e__demo-txt">Real estate · CEO · €450k+<span class="e2e__cur">|</span></span>
+            </div>
+            <div class="e2e__demo-brief" style="--d:.25s">
+              <span class="e2e__demo-field">Audience</span>
+              <span class="e2e__demo-txt">HNW investors · 35–55 · DE/AT</span>
+            </div>
+            <div class="e2e__demo-divider">Creative Scoring Results</div>
+            <div class="e2e__demo-creatives">
+              <div class="e2e__dc win" style="--d:.3s">
+                <span class="e2e__dc-score">▲97</span>
+                <span class="e2e__dc-label">SCALING</span>
+                <span class="e2e__dc-platform">Meta</span>
+              </div>
+              <div class="e2e__dc win" style="--d:.5s">
+                <span class="e2e__dc-score">▲91</span>
+                <span class="e2e__dc-label">SCALING</span>
+                <span class="e2e__dc-platform">TikTok</span>
+              </div>
+              <div class="e2e__dc win" style="--d:.7s">
+                <span class="e2e__dc-score">▲88</span>
+                <span class="e2e__dc-label">SCALING</span>
+                <span class="e2e__dc-platform">Google</span>
+              </div>
+              <div class="e2e__dc" style="--d:.9s">
+                <span class="e2e__dc-score">▼74</span>
+                <span class="e2e__dc-label">HOLD</span>
+              </div>
+              <div class="e2e__dc" style="--d:1.05s">
+                <span class="e2e__dc-score">▼68</span>
+                <span class="e2e__dc-label">HOLD</span>
+              </div>
+              <div class="e2e__dc" style="--d:1.2s">
+                <span class="e2e__dc-score">▼61</span>
+                <span class="e2e__dc-label">PAUSE</span>
+              </div>
+            </div>
+            <div class="e2e__demo-footer" style="--d:1.4s">
+              <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              3 winners selected · pushing to live
+            </div>
           </div>
-          <div class="e2e__conv-hot" style="--d:1.3s">🔥 HOT LEAD → Sarah (Sales Rep)</div>
         </div>
       </div>
 
-
-      <!-- ══ 03 RETAIN ══ -->
-      <div class="e2e__phase" data-m="up" style="--m-d:.29s">
-        <div class="e2e__phase-hdr retain">
-          <span class="e2e__phase-tag">03</span>
-          <span class="e2e__phase-name">{c.phases[3].name}</span>
-          <span class="e2e__phase-tool">{c.phases[3].tool}</span>
+      <!-- 01 CAPTURE -->
+      <div class="e2e__panel" id="e2e-panel-1" role="tabpanel" data-panel="1">
+        <div class="e2e__panel-left">
+          <div class="e2e__phase-hdr capture">
+            <span class="e2e__phase-icon capture">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none" set:html={tabIcons[1]}/>
+            </span>
+            <span class="e2e__phase-name">{c.phases[1].name}</span>
+            <span class="e2e__phase-tool">{c.phases[1].tool}</span>
+          </div>
+          <div class="e2e__metrics">
+            {phaseMetrics[1].map(m => (
+              <div class="e2e__metric">
+                <span class="e2e__metric-v" style={`color:${m.c}`}>{m.v}</span>
+                <span class="e2e__metric-l">{m.l}</span>
+              </div>
+            ))}
+          </div>
+          <p class="e2e__phase-desc">{c.phases[1].desc}</p>
+          <ul class="e2e__features">
+            {c.phases[1].features.map((f: string, fi: number) => (
+              <li style={`--fi-d:${fi * 0.06}s`}>
+                <span class="e2e__feat-icon" style={featIconStyle[1]}>
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" set:html={phaseIcons[1][fi]}/>
+                </span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a href={blogLinks[1]} class="e2e__blog-link">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {c.phases[1].blogLabel}
+            <Fragment set:html={arrowSvg}/>
+          </a>
         </div>
-
-        <p class="e2e__phase-desc">{c.phases[3].desc}</p>
-
-        <ul class="e2e__features">
-          {c.phases[3].features.map((f: string, fi: number) => (
-            <li>
-              <span class="e2e__feat-icon ret">
-                <svg width="11" height="11" viewBox="0 0 16 16" fill="none" set:html={phaseIcons[3][fi]} />
+        <div class="e2e__panel-right">
+          <div class="e2e__right-bg capture"></div>
+          <div class="e2e__mini-demo capture-demo">
+            <div class="e2e__demo-header">
+              <span class="e2e__demo-lbl capture">⬡ Unified Inbox</span>
+              <span class="e2e__demo-counter" style="--d:.1s">
+                <span class="e2e__counter-n" data-to="247">0</span> leads today
               </span>
-              <Fragment set:html={f.replace('&', '&amp;')} />
-            </li>
-          ))}
-        </ul>
-
-        <a href={e2eBlogLinks.broadcasts} class="e2e__blog-link">
-          {c.phases[3].blogLabel}
-          <svg width="10" height="10" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-
-        <div class="e2e__mini-demo retain-demo">
-          <div class="e2e__ret-row" style="--d:.2s">
-            <span class="e2e__ret-week">D+30</span>
-            <span class="e2e__ret-txt">Renewal reminder · WA</span>
-            <span class="e2e__ret-s sent">SENT</span>
-          </div>
-          <div class="e2e__ret-row" style="--d:.6s">
-            <span class="e2e__ret-week">D+45</span>
-            <span class="e2e__ret-txt">Exclusive offer broadcast</span>
-            <span class="e2e__ret-s sent">SENT</span>
-          </div>
-          <div class="e2e__ret-row live" style="--d:1.0s">
-            <span class="e2e__ret-week">D+60</span>
-            <span class="e2e__ret-txt">CSAT survey · 94% positive</span>
-            <span class="e2e__ret-s live">LIVE</span>
+            </div>
+            <div class="e2e__ch-grid">
+              {[
+                { ch: 'WhatsApp', n: '94', d: '.1s', hot: true },
+                { ch: 'Instagram', n: '51', d: '.2s', hot: false },
+                { ch: 'TikTok', n: '38', d: '.3s', hot: false },
+                { ch: 'Facebook', n: '32', d: '.4s', hot: false },
+                { ch: 'Email', n: '19', d: '.5s', hot: false },
+                { ch: 'SMS', n: '13', d: '.6s', hot: false },
+              ].map(row => (
+                <div class={`e2e__ch-row-item${row.hot ? ' hot' : ''}`} style={`--d:${row.d}`}>
+                  <span class="e2e__ch-name">{row.ch}</span>
+                  <span class="e2e__ch-bar-wrap">
+                    <span class="e2e__ch-bar" style={`--w:${Math.round(parseInt(row.n)/94*100)}%`}></span>
+                  </span>
+                  <span class="e2e__ch-count">{row.n}</span>
+                </div>
+              ))}
+            </div>
+            <div class="e2e__inbox-row" style="--d:.9s">
+              <span class="e2e__inbox-dot"></span>
+              All 40+ channels · 0 missed leads
+            </div>
           </div>
         </div>
       </div>
 
-    </div><!-- /grid -->
+      <!-- 02 CONVERT -->
+      <div class="e2e__panel" id="e2e-panel-2" role="tabpanel" data-panel="2">
+        <div class="e2e__panel-left">
+          <div class="e2e__phase-hdr convert">
+            <span class="e2e__phase-icon convert">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none" set:html={tabIcons[2]}/>
+            </span>
+            <span class="e2e__phase-name">{c.phases[2].name}</span>
+            <span class="e2e__phase-tool">{c.phases[2].tool}</span>
+          </div>
+          <div class="e2e__metrics">
+            {phaseMetrics[2].map(m => (
+              <div class="e2e__metric">
+                <span class="e2e__metric-v" style={`color:${m.c}`}>{m.v}</span>
+                <span class="e2e__metric-l">{m.l}</span>
+              </div>
+            ))}
+          </div>
+          <p class="e2e__phase-desc">{c.phases[2].desc}</p>
+          <ul class="e2e__features">
+            {c.phases[2].features.map((f: string, fi: number) => (
+              <li style={`--fi-d:${fi * 0.06}s`}>
+                <span class="e2e__feat-icon" style={featIconStyle[2]}>
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" set:html={phaseIcons[2][fi]}/>
+                </span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a href={blogLinks[2]} class="e2e__blog-link">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {c.phases[2].blogLabel}
+            <Fragment set:html={arrowSvg}/>
+          </a>
+        </div>
+        <div class="e2e__panel-right">
+          <div class="e2e__right-bg convert"></div>
+          <div class="e2e__mini-demo convert-demo">
+            <div class="e2e__demo-header">
+              <span class="e2e__demo-lbl convert">✨ AI Agent · Live</span>
+              <span class="e2e__demo-time" style="--d:.05s">00:47s</span>
+            </div>
+            <div class="e2e__conv-thread">
+              <div class="e2e__conv-msg user" style="--d:.1s">
+                Hi, I'm looking for a 3BR apartment, budget €500k, need it asap
+              </div>
+              <div class="e2e__conv-msg ai" style="--d:.55s">
+                <span class="e2e__conv-spark">✨</span>
+                Great! To find the best match — is your budget firm at €500k, or is there flexibility?
+              </div>
+              <div class="e2e__conv-msg user" style="--d:1.0s">
+                Firm. Pre-approved. Want to move within 60 days.
+              </div>
+              <div class="e2e__conv-bant" style="--d:1.4s">
+                <span class="e2e__bant-item yes">B ✓</span>
+                <span class="e2e__bant-item yes">A ✓</span>
+                <span class="e2e__bant-item yes">N ✓</span>
+                <span class="e2e__bant-item yes">T ✓</span>
+                <span class="e2e__bant-score">Score 96</span>
+              </div>
+            </div>
+            <div class="e2e__conv-hot" style="--d:1.9s">
+              🔥 HOT LEAD routed → Sarah (Senior Sales)
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- 03 RETAIN -->
+      <div class="e2e__panel" id="e2e-panel-3" role="tabpanel" data-panel="3">
+        <div class="e2e__panel-left">
+          <div class="e2e__phase-hdr retain">
+            <span class="e2e__phase-icon retain">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none" set:html={tabIcons[3]}/>
+            </span>
+            <span class="e2e__phase-name">{c.phases[3].name}</span>
+            <span class="e2e__phase-tool">{c.phases[3].tool}</span>
+          </div>
+          <div class="e2e__metrics">
+            {phaseMetrics[3].map(m => (
+              <div class="e2e__metric">
+                <span class="e2e__metric-v" style={`color:${m.c}`}>{m.v}</span>
+                <span class="e2e__metric-l">{m.l}</span>
+              </div>
+            ))}
+          </div>
+          <p class="e2e__phase-desc">{c.phases[3].desc}</p>
+          <ul class="e2e__features">
+            {c.phases[3].features.map((f: string, fi: number) => (
+              <li style={`--fi-d:${fi * 0.06}s`}>
+                <span class="e2e__feat-icon" style={featIconStyle[3]}>
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" set:html={phaseIcons[3][fi]}/>
+                </span>
+                <span><Fragment set:html={f.replace('&','&amp;')}/></span>
+              </li>
+            ))}
+          </ul>
+          <a href={blogLinks[3]} class="e2e__blog-link">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {c.phases[3].blogLabel}
+            <Fragment set:html={arrowSvg}/>
+          </a>
+        </div>
+        <div class="e2e__panel-right">
+          <div class="e2e__right-bg retain"></div>
+          <div class="e2e__mini-demo retain-demo">
+            <div class="e2e__demo-header">
+              <span class="e2e__demo-lbl retain">⟳ Broadcast Campaign</span>
+              <span class="e2e__demo-roi" style="--d:.05s">42.5× ROI</span>
+            </div>
+            <div class="e2e__ret-campaign">
+              <div class="e2e__ret-row" style="--d:.15s">
+                <span class="e2e__ret-icon">📤</span>
+                <div class="e2e__ret-info">
+                  <span class="e2e__ret-title">Renewal reminder · WhatsApp</span>
+                  <span class="e2e__ret-sub">D+30 · 1,240 contacts</span>
+                </div>
+                <span class="e2e__ret-s sent">SENT</span>
+              </div>
+              <div class="e2e__ret-row" style="--d:.5s">
+                <span class="e2e__ret-icon">🎯</span>
+                <div class="e2e__ret-info">
+                  <span class="e2e__ret-title">Exclusive re-engagement offer</span>
+                  <span class="e2e__ret-sub">D+45 · 890 dormant contacts</span>
+                </div>
+                <span class="e2e__ret-s sent">SENT</span>
+              </div>
+              <div class="e2e__ret-row live" style="--d:.85s">
+                <span class="e2e__ret-icon">⭐</span>
+                <div class="e2e__ret-info">
+                  <span class="e2e__ret-title">CSAT survey · in-chat</span>
+                  <span class="e2e__ret-sub">D+60 · 94% positive replies</span>
+                </div>
+                <span class="e2e__ret-s live">LIVE</span>
+              </div>
+            </div>
+            <div class="e2e__ret-stats" style="--d:1.2s">
+              <div class="e2e__ret-stat">
+                <span class="e2e__ret-stat-n">68%</span>
+                <span class="e2e__ret-stat-l">open rate</span>
+              </div>
+              <div class="e2e__ret-stat">
+                <span class="e2e__ret-stat-n">31%</span>
+                <span class="e2e__ret-stat-l">reply rate</span>
+              </div>
+              <div class="e2e__ret-stat">
+                <span class="e2e__ret-stat-n">€84k</span>
+                <span class="e2e__ret-stat-l">revenue</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- ── Bottom ROI strip ──────────────────────────── -->
+    </div><!-- /panel-wrap -->
+
+    <!-- ROI strip -->
     <div class="e2e__strip" data-m="up" style="--m-d:.35s">
       {c.strip.map((item: { n: string; l: string }) => (
         <div class="e2e__strip-item">
@@ -273,7 +438,10 @@ const phaseIconStyles = [
     </div>
 
     <div class="v2-sc" data-m="up" style="--m-d:.4s">
-      <a href="javascript:void(0)" class="v2-sc__btn primary" data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}'>
+      <a href="javascript:void(0)" class="v2-sc__btn primary"
+         data-cal-link="kerim-alihodza-7u7w6q/30min"
+         data-cal-namespace="30min"
+         data-cal-config='{"layout":"month_view","theme":"dark"}'>
         {c.bottomCta}
       </a>
     </div>
@@ -281,305 +449,592 @@ const phaseIconStyles = [
   </div>
 </section>
 
+<script is:inline>
+  (() => {
+    const DURATION = 5000;
+    const tabs    = document.querySelectorAll('.e2e__tab');
+    const panels  = document.querySelectorAll('.e2e__panel');
+    if (!tabs.length) return;
+
+    let current = 0;
+    let timer   = null;
+
+    function restartDemoAnims(panel) {
+      const els = panel.querySelectorAll(
+        '.e2e__dc,.e2e__ch-row-item,.e2e__inbox-row,.e2e__conv-msg,.e2e__conv-ai,.e2e__conv-hot,.e2e__conv-bant,.e2e__ret-row,.e2e__ret-stats,.e2e__demo-brief,.e2e__demo-footer,.e2e__demo-header,.e2e__demo-counter,.e2e__demo-time,.e2e__demo-roi,.e2e__bant-item,.e2e__bant-score'
+      );
+      els.forEach(el => {
+        el.style.animation = 'none';
+        void el.offsetWidth;
+        el.style.animation = '';
+      });
+    }
+
+    function goTo(idx) {
+      const next = ((idx % tabs.length) + tabs.length) % tabs.length;
+      tabs[current].classList.remove('active');
+      tabs[current].setAttribute('aria-selected', 'false');
+      panels[current].classList.remove('active');
+
+      current = next;
+      const tab = tabs[current];
+      const panel = panels[current];
+
+      const bar = tab.querySelector('.e2e__tab-progress');
+      if (bar) { const c = bar.cloneNode(true); bar.replaceWith(c); }
+
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      panel.classList.add('active');
+      restartDemoAnims(panel);
+
+      clearTimeout(timer);
+      timer = setTimeout(() => goTo(current + 1), DURATION);
+    }
+
+    tabs.forEach((tab, i) => tab.addEventListener('click', () => goTo(i)));
+    timer = setTimeout(() => goTo(1), DURATION);
+  })();
+</script>
 
 <style lang="scss" is:global>
 
-@keyframes e2e-up   { from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none} }
-@keyframes e2e-in   { from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none} }
-@keyframes e2e-fade { from{opacity:0}to{opacity:1} }
-@keyframes e2e-blink{ 0%,49%{opacity:1}50%,100%{opacity:0} }
-@keyframes e2e-dot  { 0%,100%{box-shadow:0 0 5px var(--c2)}50%{box-shadow:0 0 16px var(--c2),0 0 32px rgba(34,211,238,.3)} }
+@keyframes e2e-up     { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
+@keyframes e2e-in     { from{opacity:0;transform:translateX(-10px)} to{opacity:1;transform:none} }
+@keyframes e2e-fade   { from{opacity:0} to{opacity:1} }
+@keyframes e2e-blink  { 0%,49%{opacity:1}50%,100%{opacity:0} }
+@keyframes e2e-dot    { 0%,100%{box-shadow:0 0 6px var(--c2)}50%{box-shadow:0 0 18px var(--c2),0 0 36px rgba(34,211,238,.3)} }
+@keyframes e2e-progress { from{transform:scaleX(0)} to{transform:scaleX(1)} }
+@keyframes e2e-panel-in { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
+@keyframes e2e-bar    { from{width:0} to{width:var(--w,100%)} }
+@keyframes e2e-glow   { 0%,100%{opacity:.18;transform:scale(1)} 50%{opacity:.32;transform:scale(1.12)} }
 
 /* ── Section ────────────────────────────────────────── */
 .e2e { padding: 96px 0; }
 
 /* ── Head ───────────────────────────────────────────── */
 .e2e__head {
-  text-align: center; margin-bottom: 64px;
+  text-align: center; margin-bottom: 56px;
   display: flex; flex-direction: column; align-items: center; gap: 16px;
 }
 .e2e__h2 {
   font-family: var(--font-display);
-  font-size: clamp(32px, 4vw, 60px);
+  font-size: clamp(34px, 4.5vw, 64px);
   font-weight: 400; letter-spacing: -.025em; line-height: 1.1;
   color: var(--fg-0); margin: 0;
 }
 .e2e__lead {
-  font-size: 16px; color: var(--fg-1); line-height: 1.7;
-  max-width: 52ch; margin: 0;
+  font-size: clamp(16px, 1.3vw, 19px); color: var(--fg-1); line-height: 1.7;
+  max-width: 54ch; margin: 0;
 }
 
-/* platform badges */
-.e2e__platforms {
-  display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;
-  padding: 14px 24px; border-radius: var(--r-lg);
-  background: var(--glass); border: 1px solid var(--line);
-}
-.e2e__plat { display: flex; align-items: center; gap: 10px; }
-.e2e__plat-icon {
-  width: 36px; height: 36px; border-radius: 9px;
-  display: flex; align-items: center; justify-content: center;
-  &.ac { background: rgba(168,85,247,.15); color: var(--c3); border: 1px solid rgba(168,85,247,.3); }
-  &.ri { background: rgba(34,211,238,.1);  color: var(--c2); border: 1px solid rgba(34,211,238,.3); }
-}
-.e2e__plat-name { font-size: 13px; font-weight: 600; color: var(--fg-0); }
-.e2e__plat-role { font-family: var(--font-mono); font-size: 9px; color: var(--fg-2); letter-spacing: .06em; }
-.e2e__plus, .e2e__equals {
-  font-family: var(--font-display); font-size: 22px; color: var(--fg-3); line-height: 1;
-}
-.e2e__result { display: flex; align-items: center; }
-
-/* ── Phase grid ─────────────────────────────────────── */
-.e2e__grid {
+/* ── Tab nav ────────────────────────────────────────── */
+.e2e__tabs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  align-items: stretch;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  margin-bottom: 4px;
+
+  @media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ── Phase card ─────────────────────────────────────── */
-.e2e__phase {
-  background: var(--bg-card); border: 1px solid var(--line);
-  border-radius: var(--r-xl); overflow: hidden;
-  display: flex; flex-direction: column; gap: 0;
+.e2e__tab {
   position: relative;
-  transition: border-color .25s, box-shadow .25s;
+  display: flex; align-items: center; gap: 12px;
+  padding: 18px 20px 16px;
+  background: var(--bg-card);
+  border: none; border-right: 1px solid var(--line);
+  cursor: pointer; text-align: left;
+  transition: background .2s;
+  overflow: hidden;
 
-  &:hover { border-color: rgba(99,102,241,.3); box-shadow: 0 20px 40px rgba(0,0,0,.25); }
+  &:last-child { border-right: none; }
+  &:hover { background: var(--bg-elev); }
 
-  &::before {
-    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    transform: scaleX(0); transform-origin: left;
-    transition: transform .7s cubic-bezier(.22,.68,0,1.1);
+  &.active {
+    background: var(--bg-elev);
+    .e2e__tab-name { color: var(--fg-0); }
+    .e2e__tab-progress { animation: e2e-progress 5s linear both; }
+    &.create  .e2e__tab-progress { background: var(--c3);       box-shadow: 0 0 8px var(--c3); }
+    &.capture .e2e__tab-progress { background: #f97316;         box-shadow: 0 0 8px #f97316; }
+    &.convert .e2e__tab-progress { background: var(--c1-light); box-shadow: 0 0 8px var(--c1-light); }
+    &.retain  .e2e__tab-progress { background: var(--c2);       box-shadow: 0 0 8px var(--c2); }
+    &.create  .e2e__tab-icon { color: var(--c3); }
+    &.capture .e2e__tab-icon { color: #f97316; }
+    &.convert .e2e__tab-icon { color: var(--c1-light); }
+    &.retain  .e2e__tab-icon { color: var(--c2); }
   }
-  &.io-in::before { transform: scaleX(1); }
 
-  &:nth-child(1)::before { background: linear-gradient(90deg,var(--c3),rgba(168,85,247,.4)); }
-  &:nth-child(2)::before { background: linear-gradient(90deg,#f97316,rgba(249,115,22,.4)); }
-  &:nth-child(3)::before { background: linear-gradient(90deg,var(--c1),var(--c3)); }
-  &:nth-child(4)::before { background: linear-gradient(90deg,var(--c2),rgba(34,211,238,.4)); }
+  @media (max-width: 640px) {
+    padding: 14px 16px 12px; gap: 10px;
+    &:nth-child(2) { border-right: none; }
+    &:nth-child(3),&:nth-child(4) { border-top: 1px solid var(--line); }
+  }
 }
 
-/* phase header bar */
-.e2e__phase-hdr {
-  display: flex; align-items: center; gap: 8px;
-  padding: 13px 16px 10px;
-  border-bottom: 1px solid var(--line);
-  background: var(--bg-elev);
-  flex-wrap: wrap;
+.e2e__tab-progress {
+  position: absolute; bottom: 0; left: 0;
+  width: 100%; height: 2px;
+  transform: scaleX(0); transform-origin: left;
 }
-.e2e__phase-tag {
-  font-family: var(--font-mono); font-size: 9px; font-weight: 700; letter-spacing: .14em;
-  padding: 2px 7px; border-radius: var(--r-pill); color: var(--fg-3);
+
+.e2e__tab-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--r-sm);
   background: var(--glass); border: 1px solid var(--line);
+  color: var(--fg-2);
+  transition: color .2s, background .2s, border-color .2s;
+}
+
+.e2e__tab-body {
+  display: flex; flex-direction: column; gap: 3px; min-width: 0;
+}
+.e2e__tab-tag {
+  font-family: var(--font-mono); font-size: 9px; font-weight: 700;
+  letter-spacing: .12em; color: var(--fg-3); text-transform: uppercase;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.e2e__tab-name {
+  font-size: 14px; font-weight: 600; color: var(--fg-1);
+  transition: color .2s; line-height: 1.2;
+}
+
+/* ── Panel wrapper ──────────────────────────────────── */
+.e2e__panel-wrap {
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  min-height: 380px;
+}
+
+/* ── Panel ──────────────────────────────────────────── */
+.e2e__panel {
+  display: none;
+  grid-template-columns: 55% 45%;
+
+  &.active {
+    display: grid;
+    animation: e2e-panel-in .4s cubic-bezier(0.16,1,0.3,1) both;
+  }
+  @media (max-width: 768px) { grid-template-columns: 1fr; }
+}
+
+/* ── Panel left ─────────────────────────────────────── */
+.e2e__panel-left {
+  display: flex; flex-direction: column; gap: 0;
+  border-right: 1px solid var(--line);
+  position: relative;
+
+  /* paper base — very slightly lighter than bg-card for warmth */
+  background-color: #161820;
+  background-image:
+    /* ruled lines — clear enough to read as paper, not noise */
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 31px,
+      rgba(255,255,255,0.055) 31px,
+      rgba(255,255,255,0.055) 32px
+    ),
+    /* left margin rule — classic legal-pad pink-ish line */
+    linear-gradient(
+      to right,
+      transparent 48px,
+      rgba(99,102,241,0.18) 48px,
+      rgba(99,102,241,0.18) 49.5px,
+      transparent 49.5px
+    );
+  background-size: 100% 32px, 100% 100%;
+
+  /* inset shadow on right edge — makes left feel front/important */
+  box-shadow: inset -24px 0 52px rgba(0,0,0,.22);
+
+  @media (max-width: 768px) {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    box-shadow: inset 0 -20px 40px rgba(0,0,0,.18);
+  }
+}
+
+/* ── Panel right ────────────────────────────────────── */
+.e2e__panel-right {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px 32px;
+  background: var(--bg-elev);
+  overflow: hidden;
+  min-height: 420px;
+
+  /* stretch the mini-demo to fill */
+  .e2e__mini-demo {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.e2e__right-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  &.create  { background: radial-gradient(ellipse at 60% 40%, rgba(168,85,247,.12) 0%, transparent 65%); }
+  &.capture { background: radial-gradient(ellipse at 50% 50%, rgba(249,115,22,.1) 0%, transparent 65%); }
+  &.convert { background: radial-gradient(ellipse at 40% 40%, rgba(99,102,241,.12) 0%, transparent 65%); }
+  &.retain  { background: radial-gradient(ellipse at 60% 60%, rgba(34,211,238,.1) 0%, transparent 65%); }
+  animation: e2e-glow 6s ease-in-out infinite;
+}
+
+/* ── Phase header bar ───────────────────────────────── */
+.e2e__phase-hdr {
+  display: flex; align-items: center; gap: 10px;
+  padding: 18px 22px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-elev); flex-wrap: wrap;
+}
+.e2e__phase-icon {
+  width: 30px; height: 30px; border-radius: 8px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  &.create  { background:rgba(168,85,247,.12); color:var(--c3); border:1px solid rgba(168,85,247,.25); }
+  &.capture { background:rgba(249,115,22,.12); color:#fb923c;   border:1px solid rgba(249,115,22,.25); }
+  &.convert { background:rgba(99,102,241,.12); color:var(--c1-light); border:1px solid rgba(99,102,241,.25); }
+  &.retain  { background:rgba(34,211,238,.1);  color:var(--c2); border:1px solid rgba(34,211,238,.25); }
 }
 .e2e__phase-name {
-  font-size: 13px; font-weight: 700; flex: 1;
+  font-size: 15px; font-weight: 700; flex: 1;
   .create  & { color: var(--c3); }
   .capture & { color: #f97316; }
   .convert & { color: var(--c1-light); }
   .retain  & { color: var(--c2); }
 }
 .e2e__phase-tool {
-  font-family: var(--font-mono); font-size: 8px; font-weight: 700; letter-spacing: .08em;
-  padding: 2px 6px; border-radius: var(--r-pill);
+  font-family: var(--font-mono); font-size: 9px; font-weight: 700; letter-spacing: .08em;
+  padding: 3px 8px; border-radius: var(--r-pill);
   .create  & { background:rgba(168,85,247,.1); color:var(--c3); border:1px solid rgba(168,85,247,.2); }
   .capture & { background:rgba(249,115,22,.1); color:#fb923c; border:1px solid rgba(249,115,22,.2); }
   .convert & { background:rgba(99,102,241,.1); color:var(--c1-light); border:1px solid rgba(99,102,241,.2); }
   .retain  & { background:rgba(34,211,238,.08);color:var(--c2); border:1px solid rgba(34,211,238,.2); }
 }
 
-.e2e__phase-desc {
-  font-size: 12.5px; color: var(--fg-1); line-height: 1.65;
-  padding: 14px 16px 0; margin: 0;
-  strong { color: var(--fg-0); }
+/* ── Metrics ────────────────────────────────────────── */
+.e2e__metrics {
+  display: flex; gap: 0;
+  border-bottom: 1px solid var(--line);
+}
+.e2e__metric {
+  flex: 1; display: flex; flex-direction: column; gap: 2px;
+  padding: 14px 22px;
+  &:not(:last-child) { border-right: 1px solid var(--line); }
+}
+.e2e__metric-v {
+  font-family: var(--font-display); font-size: 28px; letter-spacing: -.03em; line-height: 1;
+}
+.e2e__metric-l {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--fg-2);
 }
 
-/* features list */
+/* ── Description ────────────────────────────────────── */
+.e2e__phase-desc {
+  font-size: 14px; color: var(--fg-1); line-height: 1.7;
+  padding: 18px 22px 0; margin: 0;
+  strong { color: var(--fg-0); font-weight: 600; }
+}
+
+/* ── Features ───────────────────────────────────────── */
 .e2e__features {
-  list-style: none; padding: 12px 16px 0; margin: 0;
-  display: flex; flex-direction: column; gap: 8px;
+  list-style: none; padding: 16px 22px 0; margin: 0;
+  display: flex; flex-direction: column; gap: 10px;
 
   li {
-    display: flex; align-items: center; gap: 8px;
-    font-size: 12px; color: var(--fg-1); line-height: 1.4;
+    display: flex; align-items: center; gap: 10px;
+    font-size: 14px; color: var(--fg-1); line-height: 1.4;
+    opacity: 0; animation: e2e-in .35s cubic-bezier(0.16,1,0.3,1) both;
+    animation-delay: calc(.1s + var(--fi-d, 0s));
   }
 }
-.e2e__feat-icon {
-  width: 18px; height: 18px; border-radius: 4px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
+.e2e__panel.active .e2e__features li { opacity: 1; }
 
-  &.cap { background:rgba(249,115,22,.1); color:#fb923c; }
-  &.con { background:rgba(99,102,241,.1); color:var(--c1-light); }
-  &.ret { background:rgba(34,211,238,.08);color:var(--c2); }
+.e2e__feat-icon {
+  width: 22px; height: 22px; border-radius: 6px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
 }
 
-/* ── Blog deep-dive links ───────────────────────────── */
+/* ── Blog link ──────────────────────────────────────── */
 .e2e__blog-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 6px 12px;
-  margin: 10px 16px 0;
-  font-family: var(--font-mono);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: rgba(99,102,241,0.7);
-  text-decoration: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 16px; margin: 24px 22px 22px;
+  font-family: var(--font-mono); font-size: 10px; font-weight: 600;
+  letter-spacing: .07em; text-transform: uppercase;
+  color: var(--c1-light); text-decoration: none;
   border-radius: var(--r-pill);
-  border: 1px solid rgba(99,102,241,0.2);
-  background: rgba(99,102,241,0.05);
-  transition: color .15s, border-color .15s, gap .15s;
-  align-self: flex-start;
+  border: 1px solid rgba(99,102,241,.35);
+  background: rgba(99,102,241,.12);
+  transition: color .15s, border-color .15s, gap .15s, background .15s, box-shadow .15s;
+  align-self: flex-start; margin-top: auto;
 
   &:hover {
-    color: #a5b4fc;
-    border-color: rgba(99,102,241,0.4);
-    gap: 7px;
+    color: #c4b5fd;
+    border-color: rgba(99,102,241,.6);
+    background: rgba(99,102,241,.2);
+    box-shadow: 0 0 16px rgba(99,102,241,.2);
+    gap: 8px;
   }
 }
 
 /* ── Mini demos ─────────────────────────────────────── */
 .e2e__mini-demo {
-  margin: 14px 16px 16px;
-  border-radius: var(--r-md); overflow: hidden;
-  background: rgba(255,255,255,.02); border: 1px solid var(--line);
-  padding: 10px 12px;
-  flex: 1;
+  width: 100%; max-width: 340px; position: relative; z-index: 1;
+  border-radius: var(--r-lg); overflow: hidden;
+  background: var(--bg-card); border: 1px solid var(--line);
+  box-shadow: 0 20px 60px rgba(0,0,0,.4), 0 0 0 1px var(--line);
 }
 
-/* Create demo */
-.create-demo { display: flex; flex-direction: column; gap: 8px; }
-.e2e__demo-brief {
-  display: flex; align-items: center; gap: 7px;
-  font-family: var(--font-mono); font-size: 9px;
+/* ── Demo shared header ─────────────────────────────── */
+.e2e__demo-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-elev);
+  opacity: 0; animation: e2e-fade .25s ease both; animation-delay: 0s;
 }
 .e2e__demo-lbl {
-  color: var(--c3); background: rgba(168,85,247,.1); border: 1px solid rgba(168,85,247,.2);
-  padding: 1px 5px; border-radius: 3px; font-weight: 700; letter-spacing: .1em;
+  font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .1em;
+  &.create  { color: var(--c3); }
+  &.capture { color: #fb923c; }
+  &.convert { color: var(--c1-light); }
+  &.retain  { color: var(--c2); }
+}
+.e2e__demo-status {
+  display: flex; align-items: center; gap: 5px;
+  font-family: var(--font-mono); font-size: 9px; color: var(--c2);
+}
+.e2e__demo-dot {
+  width: 5px; height: 5px; border-radius: 50%; background: var(--c2);
+  animation: e2e-dot 1.8s ease-in-out infinite;
+}
+.e2e__demo-time, .e2e__demo-roi, .e2e__demo-counter {
+  font-family: var(--font-mono); font-size: 10px; font-weight: 700;
+  color: var(--c2);
+  opacity: 0; animation: e2e-fade .3s ease both; animation-delay: var(--d, 0s);
+}
+.e2e__demo-counter { color: var(--fg-1); }
+
+/* ── Create demo ────────────────────────────────────── */
+.e2e__demo-brief {
+  display: flex; align-items: center; gap: 8px; padding: 8px 14px;
+  font-family: var(--font-mono); font-size: 10px;
+  border-bottom: 1px solid var(--line);
+  opacity: 0; animation: e2e-in .3s ease both; animation-delay: var(--d, .15s);
+}
+.e2e__demo-field {
+  font-size: 8px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--fg-3); min-width: 44px;
 }
 .e2e__demo-txt { color: var(--fg-0); flex: 1; }
 .e2e__cur { color: var(--c1-light); font-weight: 700; animation: e2e-blink .9s step-end infinite; }
-.e2e__demo-creatives { display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; }
+
+.e2e__demo-divider {
+  font-family: var(--font-mono); font-size: 8px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--fg-3);
+  padding: 6px 14px 4px; border-bottom: 1px solid var(--line);
+}
+.e2e__demo-creatives {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; padding: 10px 14px;
+}
 .e2e__dc {
-  font-family: var(--font-mono); font-size: 8.5px; font-weight: 700;
-  padding: 4px 5px; border-radius: 4px; text-align: center;
-  background: var(--glass); color: var(--fg-2); border: 1px solid var(--line);
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 7px 4px; border-radius: 6px; text-align: center;
+  background: var(--glass); border: 1px solid var(--line);
   opacity: 0; animation: e2e-up .3s ease both; animation-delay: var(--d, 0s);
-  span { display: block; font-size: 6.5px; letter-spacing: .08em; margin-top: 1px; }
 
   &.win {
-    background: rgba(99,102,241,.08); color: var(--c2);
-    border-color: rgba(99,102,241,.3); box-shadow: 0 0 8px rgba(99,102,241,.1);
+    background: rgba(99,102,241,.1); border-color: rgba(99,102,241,.3);
+    box-shadow: 0 0 12px rgba(99,102,241,.12);
   }
 }
+.e2e__dc-score {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+  .win & { color: var(--c2); }
+  color: var(--fg-2);
+}
+.e2e__dc-label {
+  font-family: var(--font-mono); font-size: 7px; letter-spacing: .1em;
+  .win & { color: var(--c1-light); }
+  color: var(--fg-3);
+}
+.e2e__dc-platform {
+  font-family: var(--font-mono); font-size: 7px; color: var(--fg-3);
+}
 
-/* Capture demo */
-.capture-demo { display: flex; flex-direction: column; gap: 7px; }
-.e2e__ch-row { display: flex; flex-wrap: wrap; gap: 4px; }
-.e2e__ch-tag {
-  font-family: var(--font-mono); font-size: 8px; font-weight: 700; letter-spacing: .06em;
-  padding: 2px 6px; border-radius: var(--r-pill);
-  background: rgba(249,115,22,.08); color: #fb923c; border: 1px solid rgba(249,115,22,.2);
-  opacity: 0; animation: e2e-fade .25s ease both; animation-delay: var(--d, 0s);
+.e2e__demo-footer {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 14px; border-top: 1px solid var(--line);
+  font-family: var(--font-mono); font-size: 9px; color: var(--c2);
+  background: rgba(34,211,238,.04);
+  opacity: 0; animation: e2e-in .3s ease both; animation-delay: var(--d, 1.4s);
+}
+
+/* ── Capture demo ───────────────────────────────────── */
+.e2e__ch-grid {
+  display: flex; flex-direction: column; gap: 4px; padding: 10px 14px;
+}
+.e2e__ch-row-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 5px 8px; border-radius: 6px;
+  background: var(--glass); border: 1px solid var(--line);
+  opacity: 0; animation: e2e-in .3s ease both; animation-delay: var(--d, 0s);
+
+  &.hot { background: rgba(249,115,22,.06); border-color: rgba(249,115,22,.2); }
+}
+.e2e__ch-name {
+  font-family: var(--font-mono); font-size: 9px; font-weight: 600;
+  color: var(--fg-1); min-width: 64px;
+  .hot & { color: #fb923c; }
+}
+.e2e__ch-bar-wrap {
+  flex: 1; height: 4px; background: var(--line); border-radius: 2px; overflow: hidden;
+}
+.e2e__ch-bar {
+  display: block; height: 100%; border-radius: 2px;
+  background: var(--c1);
+  .hot & { background: #f97316; }
+  width: 0; animation: e2e-bar .6s ease both; animation-delay: var(--d, 0s);
+}
+.e2e__ch-count {
+  font-family: var(--font-mono); font-size: 9px; font-weight: 700; color: var(--fg-1);
+  min-width: 24px; text-align: right;
 }
 .e2e__inbox-row {
-  display: flex; align-items: center; gap: 6px;
+  display: flex; align-items: center; gap: 7px;
   font-family: var(--font-mono); font-size: 9px; color: var(--c2);
-  padding: 4px 8px; border-radius: 5px;
-  background: rgba(34,211,238,.05); border: 1px solid rgba(34,211,238,.18);
-  opacity: 0; animation: e2e-in .3s ease both; animation-delay: var(--d, .8s);
+  padding: 8px 14px; border-top: 1px solid var(--line);
+  background: rgba(34,211,238,.04);
+  opacity: 0; animation: e2e-in .3s ease both; animation-delay: var(--d, .9s);
 }
 .e2e__inbox-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--c2); flex-shrink: 0;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--c2); flex-shrink: 0;
   animation: e2e-dot 2s ease-in-out infinite;
 }
 
-/* Convert demo */
-.convert-demo { display: flex; flex-direction: column; gap: 5px; }
+/* ── Convert demo ───────────────────────────────────── */
+.e2e__conv-thread {
+  display: flex; flex-direction: column; gap: 6px; padding: 10px 14px;
+}
 .e2e__conv-msg {
-  font-size: 10.5px; color: var(--fg-1); padding: 5px 8px; border-radius: 7px;
-  background: var(--bg-elev); border: 1px solid var(--line);
-  border-bottom-left-radius: 2px;
-  opacity: 0; animation: e2e-in .3s ease both; animation-delay: var(--d, .15s);
+  font-size: 11px; line-height: 1.5; padding: 8px 10px;
+  opacity: 0; animation: e2e-in .35s ease both; animation-delay: var(--d, 0s);
+
+  &.user {
+    color: var(--fg-1); background: var(--bg-elev); border: 1px solid var(--line);
+    border-radius: 10px 10px 10px 2px; align-self: flex-start; max-width: 90%;
+  }
+  &.ai {
+    display: flex; gap: 6px; align-items: flex-start;
+    color: var(--fg-0); background: rgba(99,102,241,.08); border: 1px solid rgba(99,102,241,.2);
+    border-radius: 10px 10px 2px 10px; align-self: flex-end; max-width: 90%;
+  }
 }
-.e2e__conv-ai {
-  display: flex; align-items: center; gap: 5px;
-  font-family: var(--font-mono); font-size: 9px; color: var(--c1-light);
-  padding: 4px 8px; border-radius: 5px;
-  background: rgba(99,102,241,.08); border: 1px solid rgba(99,102,241,.2);
-  opacity: 0; animation: e2e-in .3s ease both; animation-delay: var(--d, .7s);
+.e2e__conv-spark { font-size: 12px; flex-shrink: 0; margin-top: 1px; }
+
+.e2e__conv-bant {
+  display: flex; align-items: center; gap: 4px;
+  padding: 6px 10px; border-radius: 8px;
+  background: rgba(99,102,241,.06); border: 1px solid rgba(99,102,241,.2);
+  opacity: 0; animation: e2e-up .3s ease both; animation-delay: var(--d, 1.4s);
 }
-.e2e__conv-spark { font-size: 11px; }
-.e2e__conv-hot {
+.e2e__bant-item {
   font-family: var(--font-mono); font-size: 9px; font-weight: 700;
-  padding: 4px 8px; border-radius: 5px;
-  background: rgba(249,115,22,.1); color: #fb923c; border: 1px solid rgba(249,115,22,.25);
-  opacity: 0; animation: e2e-in .3s ease both; animation-delay: var(--d, 1.3s);
+  padding: 2px 6px; border-radius: var(--r-pill);
+  &.yes { background: rgba(34,211,238,.1); color: var(--c2); border: 1px solid rgba(34,211,238,.25); }
+}
+.e2e__bant-score {
+  margin-left: auto; font-family: var(--font-mono); font-size: 10px;
+  font-weight: 700; color: var(--c2);
 }
 
-/* Retain demo */
-.retain-demo { display: flex; flex-direction: column; gap: 4px; }
+.e2e__conv-hot {
+  font-family: var(--font-mono); font-size: 9px; font-weight: 700;
+  padding: 8px 14px; border-top: 1px solid var(--line);
+  background: rgba(249,115,22,.08); color: #fb923c;
+  opacity: 0; animation: e2e-in .3s ease both; animation-delay: var(--d, 1.9s);
+}
+
+/* ── Retain demo ────────────────────────────────────── */
+.e2e__ret-campaign {
+  display: flex; flex-direction: column; gap: 4px; padding: 10px 14px;
+}
 .e2e__ret-row {
-  display: flex; align-items: center; gap: 6px; padding: 5px 7px; border-radius: 5px;
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 10px; border-radius: 8px;
   background: var(--glass); border: 1px solid var(--line);
-  opacity: 0; animation: e2e-in .3s ease both; animation-delay: var(--d, .2s);
+  opacity: 0; animation: e2e-in .35s ease both; animation-delay: var(--d, 0s);
   &.live { background: rgba(99,102,241,.06); border-color: rgba(99,102,241,.25); }
 }
-.e2e__ret-week {
-  font-family: var(--font-mono); font-size: 8px; font-weight: 700; color: var(--c2);
-  min-width: 28px; flex-shrink: 0;
-}
-.e2e__ret-txt { font-size: 9.5px; color: var(--fg-1); flex: 1; }
+.e2e__ret-icon { font-size: 14px; flex-shrink: 0; }
+.e2e__ret-info { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.e2e__ret-title { font-size: 11px; font-weight: 600; color: var(--fg-0); }
+.e2e__ret-sub { font-family: var(--font-mono); font-size: 8px; color: var(--fg-2); }
 .e2e__ret-s {
   font-family: var(--font-mono); font-size: 7px; font-weight: 700; letter-spacing: .1em;
-  padding: 1px 5px; border-radius: var(--r-pill); flex-shrink: 0;
+  padding: 2px 6px; border-radius: var(--r-pill); flex-shrink: 0;
   &.sent { background:rgba(34,211,238,.08); color:var(--c2); border:1px solid rgba(34,211,238,.2); }
   &.live { background:rgba(99,102,241,.12); color:var(--c1-light); border:1px solid rgba(99,102,241,.3); }
+}
+.e2e__ret-stats {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  border-top: 1px solid var(--line);
+  opacity: 0; animation: e2e-up .35s ease both; animation-delay: var(--d, 1.2s);
+}
+.e2e__ret-stat {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 10px 8px; text-align: center;
+  &:not(:last-child) { border-right: 1px solid var(--line); }
+}
+.e2e__ret-stat-n {
+  font-family: var(--font-display); font-size: 18px; letter-spacing: -.02em;
+  background: var(--grad-text); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text; line-height: 1;
+}
+.e2e__ret-stat-l {
+  font-family: var(--font-mono); font-size: 8px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--fg-2);
 }
 
 /* ── ROI strip ──────────────────────────────────────── */
 .e2e__strip {
   display: grid; grid-template-columns: repeat(5,1fr);
-  margin-top: 40px; border-radius: var(--r-xl);
+  margin-top: 32px; border-radius: var(--r-xl);
   background: var(--bg-elev); border: 1px solid var(--line);
   overflow: hidden;
 }
 .e2e__strip-item {
   display: flex; flex-direction: column; align-items: center; gap: 4px;
-  padding: 20px 12px; text-align: center;
-  position: relative;
+  padding: 22px 12px; text-align: center; position: relative;
   &:not(:last-child)::after {
-    content: "";
-    position: absolute; top: 20%; right: 0; width: 1px; height: 60%;
+    content: ""; position: absolute; top: 20%; right: 0; width: 1px; height: 60%;
     background: linear-gradient(to bottom, transparent, var(--line), transparent);
   }
 }
 .e2e__strip-n {
-  font-family: var(--font-display); font-size: 26px; letter-spacing: -.03em;
-  line-height: 1;
+  font-family: var(--font-display); font-size: 28px; letter-spacing: -.03em; line-height: 1;
   background: linear-gradient(135deg, var(--c1-light), var(--c2));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .e2e__strip-l {
-  font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .1em;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em;
   text-transform: uppercase; color: var(--fg-2);
 }
 
 /* ── Responsive ─────────────────────────────────────── */
-@media (max-width: 1100px) {
-  .e2e__grid { grid-template-columns: repeat(2,1fr); }
-}
-
 @media (max-width: 640px) {
   .e2e { padding: 64px 0; }
-  .e2e__grid { grid-template-columns: 1fr; }
   .e2e__strip { grid-template-columns: repeat(3,1fr); }
   .e2e__strip-item:nth-child(n+4) { border-top: 1px solid var(--line); }
+  .e2e__metrics { flex-wrap: wrap; }
+  .e2e__tab-icon { width: 30px; height: 30px; }
 }
 
 </style>

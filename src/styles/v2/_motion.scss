@@ -6,10 +6,10 @@
 
 /* ── Core keyframes ──────────────────────────────────────────── */
 
-@keyframes m-up    { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
-@keyframes m-left  { from { opacity:0; transform:translateX(-28px); } to { opacity:1; transform:translateX(0); } }
-@keyframes m-right { from { opacity:0; transform:translateX(28px); } to { opacity:1; transform:translateX(0); } }
-@keyframes m-scale { from { opacity:0; transform:scale(0.86); } to { opacity:1; transform:scale(1); } }
+@keyframes m-up    { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes m-left  { from { opacity:0; transform:translateX(-18px); } to { opacity:1; transform:translateX(0); } }
+@keyframes m-right { from { opacity:0; transform:translateX(18px); } to { opacity:1; transform:translateX(0); } }
+@keyframes m-scale { from { opacity:0; transform:scale(0.92); } to { opacity:1; transform:scale(1); } }
 @keyframes m-fade  { from { opacity:0; } to { opacity:1; } }
 
 @keyframes m-scan-h {
@@ -58,16 +58,16 @@
   opacity: 0;
   will-change: opacity, transform;
 }
-[data-m="up"]    { transform: translateY(32px); }
-[data-m="left"]  { transform: translateX(-28px); }
-[data-m="right"] { transform: translateX(28px); }
-[data-m="scale"] { transform: scale(0.86); }
+[data-m="up"]    { transform: translateY(20px); }
+[data-m="left"]  { transform: translateX(-18px); }
+[data-m="right"] { transform: translateX(18px); }
+[data-m="scale"] { transform: scale(0.92); }
 [data-m="fade"]  { transform: none; }
 
 /* Trigger class added by IntersectionObserver */
 [data-m].io-in {
-  animation-duration:  var(--m-dur, 0.65s);
-  animation-timing-function: cubic-bezier(0.22, 0.68, 0, 1.1);
+  animation-duration:  var(--m-dur, 0.55s);
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   animation-fill-mode: both;
   animation-delay:     var(--m-d, 0s);
 }
