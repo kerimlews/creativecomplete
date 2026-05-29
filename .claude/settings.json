@@ -73,7 +73,9 @@
       "Bash(google-chrome --headless=new --no-sandbox --window-size=1440,900 --run-all-compositor-stages-before-draw --print-to-pdf=/tmp/page.pdf http://localhost:4321/)",
       "Bash(node -e ' *)",
       "Bash(google-chrome --headless=new --no-sandbox --window-size=1440,10000 --screenshot=/tmp/founder-10k.png http://localhost:4321/)",
-      "Bash(google-chrome --headless=new --no-sandbox --window-size=1440,10000 --screenshot=/tmp/founder-final.png http://localhost:4321/)"
+      "Bash(google-chrome --headless=new --no-sandbox --window-size=1440,10000 --screenshot=/tmp/founder-final.png http://localhost:4321/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/de/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321/sl/)"
     ],
     "additionalDirectories": [
       "/home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/de",

@@ -1,26 +1,57 @@
 ---
 import { Image } from 'astro:assets';
 import channelsImg from '../../images/channels.png';
+import type { Lang } from '../../utils/v2i18n';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'en' } = Astro.props;
+
+const content = {
+  en: {
+    eyebrow: '40+ channels',
+    title: 'Every channel your leads use.',
+    titleGrad: 'One unified inbox.',
+    sub: 'WhatsApp, Instagram, Facebook Messenger, TikTok, email, SMS, live chat. Every conversation your leads start, handled in one place by your AI sales agent.',
+    alt: 'Channel catalog showing 40+ connected platforms - WhatsApp, TikTok, Instagram, Messenger, Viber, LINE and more',
+  },
+  de: {
+    eyebrow: '40+ Kanäle',
+    title: 'Jeder Kanal, den Ihre Leads nutzen.',
+    titleGrad: 'Ein einheitlicher Posteingang.',
+    sub: 'WhatsApp, Instagram, Facebook Messenger, TikTok, E-Mail, SMS, Live-Chat. Jedes Gespräch, das Ihre Leads starten, wird an einem Ort von Ihrem KI-Vertriebsagenten bearbeitet.',
+    alt: 'Kanal-Katalog mit 40+ verbundenen Plattformen: WhatsApp, TikTok, Instagram, Messenger, Viber, LINE und mehr',
+  },
+  sl: {
+    eyebrow: '40+ kanalov',
+    title: 'Vsak kanal, ki ga vaši leadi uporabljajo.',
+    titleGrad: 'Ena enotna mapa.',
+    sub: 'WhatsApp, Instagram, Facebook Messenger, TikTok, e-pošta, SMS, live chat. Vsak pogovor vaših leadov, upravljan na enem mestu z vašim AI prodajnim agentom.',
+    alt: 'Katalog kanalov z 40+ povezanimi platformami: WhatsApp, TikTok, Instagram, Messenger, Viber, LINE in več',
+  },
+} as const;
+
+const c = content[lang];
 ---
 
 <section class="v2-channels">
   <div class="v2-container">
 
     <div class="v2-channels__head" data-m="fade">
-      <span class="v2-eyebrow">40+ channels</span>
+      <span class="v2-eyebrow">{c.eyebrow}</span>
       <h2 class="v2-channels__title">
-        Every channel your leads use.<br/>
-        <span class="v2-grad">One unified inbox.</span>
+        {c.title}<br/>
+        <span class="v2-grad">{c.titleGrad}</span>
       </h2>
-      <p class="v2-channels__sub">
-        WhatsApp, Instagram, Facebook Messenger, TikTok, email, SMS, live chat. Every conversation your leads start, handled in one place by your AI sales agent.
-      </p>
+      <p class="v2-channels__sub">{c.sub}</p>
     </div>
 
     <div class="v2-channels__visual" data-m="up" style="--m-d:.1s">
       <Image
         src={channelsImg}
-        alt="Channel catalog showing 40+ connected platforms - WhatsApp, TikTok, Instagram, Messenger, Viber, LINE and more"
+        alt={c.alt}
         loading="lazy"
         quality={90}
       />

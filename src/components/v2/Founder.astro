@@ -1,4 +1,73 @@
 ---
+import type { Lang } from '../../utils/v2i18n';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'en' } = Astro.props;
+
+const content = {
+  en: {
+    eyebrow: 'A note from the founder',
+    title: 'Built for results.',
+    titleLine2: 'Run by engineers.',
+    paragraphs: [
+      "Most tools make you do the work. We don't hand you a platform and a tutorial and wish you luck. We run the entire lead system for you, from the first ad click to the booked call in your calendar.",
+      "That means working directly with your sales team, not around them. We map your current flow, find where leads are going cold, and replace those gaps with AI that responds, qualifies, and routes every lead to the right person automatically.",
+      "We also handle your traffic. Whether it is organic search, paid campaigns, or both, we engineer each channel to pull in leads that are actually worth chasing. Not just visitors. Buyers.",
+      "And when something is not performing, we investigate properly. We have been building complex systems for over a decade, long before AI made things easier. That engineering background means we find the real issue, not just the obvious one, and fix it at the root. You will notice the difference within weeks, not months.",
+      "With AI, we do all of this faster than ever before.",
+    ],
+    role: 'Founder, CreativeComplete',
+    stats: [
+      { n: '10+', l: 'years building' },
+      { n: '42.5×', l: 'campaign ROI' },
+      { n: '48h', l: 'to go live' },
+    ],
+    sigHref: '/kerim-alihodza/',
+  },
+  de: {
+    eyebrow: 'Eine Notiz vom Gründer',
+    title: 'Für Ergebnisse gebaut.',
+    titleLine2: 'Von Ingenieuren betrieben.',
+    paragraphs: [
+      "Die meisten Tools lassen Sie die Arbeit machen. Wir übergeben Ihnen keine Plattform mit einer Anleitung und wünschen Ihnen viel Glück. Wir betreiben das gesamte Lead-System für Sie, vom ersten Anzeigenklick bis zum gebuchten Termin in Ihrem Kalender.",
+      "Das bedeutet, direkt mit Ihrem Vertriebsteam zu arbeiten, nicht an ihm vorbei. Wir analysieren Ihren aktuellen Flow, finden heraus, wo Leads kalt werden, und ersetzen diese Lücken mit KI, die automatisch antwortet, qualifiziert und jeden Lead zur richtigen Person weiterleitet.",
+      "Wir kümmern uns auch um Ihren Traffic. Ob organische Suche, bezahlte Kampagnen oder beides: Wir optimieren jeden Kanal so, dass er Leads anzieht, die wirklich kaufen wollen. Nicht nur Besucher. Käufer.",
+      "Und wenn etwas nicht funktioniert, gehen wir dem auf den Grund. Wir bauen seit über einem Jahrzehnt komplexe Systeme, lange bevor KI alles einfacher gemacht hat. Dieser technische Hintergrund bedeutet, dass wir das echte Problem finden, nicht nur das offensichtliche, und es an der Wurzel beheben. Sie werden den Unterschied innerhalb von Wochen bemerken, nicht Monaten.",
+      "Mit KI erledigen wir das alles schneller als je zuvor.",
+    ],
+    role: 'Gründer, CreativeComplete',
+    stats: [
+      { n: '10+', l: 'Jahre Erfahrung' },
+      { n: '42.5×', l: 'Kampagnen-ROI' },
+      { n: '48h', l: 'bis zum Start' },
+    ],
+    sigHref: '/kerim-alihodza/',
+  },
+  sl: {
+    eyebrow: 'Opomba od ustanovitelja',
+    title: 'Zgrajeno za rezultate.',
+    titleLine2: 'Upravljano z inženirji.',
+    paragraphs: [
+      "Večina orodij vas pusti, da delate sami. Mi vam ne predamo platforme z navodili in vam zaželimo srečo. Mi vodimo celoten sistem leadov za vas, od prvega klika na oglas do rezerviranega klica v vašem koledarju.",
+      "To pomeni delo neposredno z vašo prodajno ekipo, ne mimo nje. Analiziramo vaš trenutni tok, ugotovimo, kje se leadi ohlajajo, in te vrzeli zapolnimo z AI, ki samodejno odgovori, kvalificira in usmeri vsakega leada k pravi osebi.",
+      "Skrbimo tudi za vaš promet. Ne glede na to, ali gre za organično iskanje, plačane kampanje ali oboje: optimiziramo vsak kanal, da pritegne leade, ki resnično kupujejo. Ne le obiskovalce. Kupce.",
+      "In ko nekaj ne deluje, to temeljito raziščemo. Gradimo kompleksne sisteme že več kot desetletje, dolgo preden je AI olajšal delo. Ta tehnično ozadje pomeni, da najdemo pravo težavo, ne le očitno, in jo odpravimo pri korenu. Razliko boste opazili v tednih, ne mesecih.",
+      "Z AI vse to naredimo hitreje kot kdaj koli prej.",
+    ],
+    role: 'Ustanovitelj, CreativeComplete',
+    stats: [
+      { n: '10+', l: 'let izkušenj' },
+      { n: '42.5×', l: 'ROI kampanj' },
+      { n: '48h', l: 'do zagona' },
+    ],
+    sigHref: '/kerim-alihodza/',
+  },
+} as const;
+
+const c = content[lang];
 ---
 
 <section class="v2-founder">
@@ -6,25 +75,17 @@
     <div class="v2-founder__card">
 
       <div class="v2-founder__body">
-        <span class="v2-eyebrow">A note from the founder</span>
+        <span class="v2-eyebrow">{c.eyebrow}</span>
 
-        <h2 class="v2-founder__title">Built for results.<br/>Run by engineers.</h2>
+        <h2 class="v2-founder__title">{c.title}<br/>{c.titleLine2}</h2>
 
         <div class="v2-founder__copy">
-          <p>Most tools make you do the work. We don't hand you a platform and a tutorial and wish you luck. We run the entire lead system for you, from the first ad click to the booked call in your calendar.</p>
-
-          <p>That means working directly with your sales team, not around them. We map your current flow, find where leads are going cold, and replace those gaps with AI that responds, qualifies, and routes every lead to the right person automatically.</p>
-
-          <p>We also handle your traffic. Whether it is organic search, paid campaigns, or both, we engineer each channel to pull in leads that are actually worth chasing. Not just visitors. Buyers.</p>
-
-          <p>And when something is not performing, we investigate properly. We have been building complex systems for over a decade, long before AI made things easier. That engineering background means we find the real issue, not just the obvious one, and fix it at the root. You will notice the difference within weeks, not months.</p>
-
-          <p>With AI, we do all of this faster than ever before.</p>
+          {c.paragraphs.map(p => <p>{p}</p>)}
         </div>
 
-        <a href="/kerim-alihodza" class="v2-founder__sig">
+        <a href={c.sigHref} class="v2-founder__sig">
           <span class="v2-founder__sig-script">Kerim Alihodza</span>
-          <div class="v2-founder__sig-role">Founder, CreativeComplete</div>
+          <div class="v2-founder__sig-role">{c.role}</div>
         </a>
       </div>
 
@@ -40,18 +101,12 @@
         </div>
 
         <div class="v2-founder__stats">
-          <div class="v2-founder__stat">
-            <span class="v2-founder__stat-n">10+</span>
-            <span class="v2-founder__stat-l">years building</span>
-          </div>
-          <div class="v2-founder__stat">
-            <span class="v2-founder__stat-n">42.5×</span>
-            <span class="v2-founder__stat-l">campaign ROI</span>
-          </div>
-          <div class="v2-founder__stat">
-            <span class="v2-founder__stat-n">48h</span>
-            <span class="v2-founder__stat-l">to go live</span>
-          </div>
+          {c.stats.map(s => (
+            <div class="v2-founder__stat">
+              <span class="v2-founder__stat-n">{s.n}</span>
+              <span class="v2-founder__stat-l">{s.l}</span>
+            </div>
+          ))}
         </div>
       </div>
 
