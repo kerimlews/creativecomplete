@@ -130,7 +130,7 @@ export interface StatsContent {
 
 const en = {
   hero: {
-    badge: '50+ Agencies · Results in 45 Days',
+    badge: '50+ Agencies · Results in 1 Week',
     h1Line1: 'We Run Your Lead System.',
     h1Line2: 'You Close the Deals.',
     subtitle: 'Every inbound lead qualified in under <span class="v2-em">60 seconds</span>. Across WhatsApp, Instagram, TikTok, and <span class="v2-em">40+ channels</span>. No new hires. No missed leads.',
@@ -407,7 +407,7 @@ const en = {
 
 const de = {
   hero: {
-    badge: '50+ Agenturen · Ergebnisse in 45 Tagen',
+    badge: '50+ Agenturen · Ergebnisse in 1 Woche',
     h1Line1: 'Wir führen Ihr Lead-System.',
     h1Line2: 'Sie schließen die Deals.',
     subtitle: 'Jeder eingehende Lead wird in unter <span class="v2-em">60 Sekunden</span> qualifiziert. Über WhatsApp, Instagram, TikTok und <span class="v2-em">40+ Kanäle</span>. Ohne neue Mitarbeiter. Ohne verlorene Leads.',
@@ -684,7 +684,7 @@ const de = {
 
 const sl = {
   hero: {
-    badge: '50+ agencij · Rezultati v 45 dneh',
+    badge: '50+ agencij · Rezultati v 1 tednu',
     h1Line1: 'Vodimo vaš sistem leadov.',
     h1Line2: 'Vi zapirate posle.',
     subtitle: 'Vsak dohodni lead kvalificiran v manj kot <span class="v2-em">60 sekundah</span>. Prek WhatsAppa, Instagrama, TikToka in <span class="v2-em">40+ kanalov</span>. Brez novih zaposlitev. Brez zamujenih leadov.',

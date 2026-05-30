@@ -14,7 +14,7 @@ const c = getV2Content(lang).hero;
 const socials = [
   {
     id: 'wa', name: 'WhatsApp', stat: '94 leads today',
-    iconBg: '#25D366', pos: 'tr',
+    iconBg: '#25D366', pos: 'tr', circle: true,
     border: 'rgba(37,211,102,.3)', chipBg: 'rgba(37,211,102,.1)',
     icon: `<svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`,
   },
@@ -32,7 +32,7 @@ const socials = [
   },
   {
     id: 'fb', name: 'Facebook', stat: '32 chats',
-    iconBg: '#1877F2', pos: 'br',
+    iconBg: '#1877F2', pos: 'br', circle: true,
     border: 'rgba(24,119,242,.3)', chipBg: 'rgba(24,119,242,.1)',
     icon: `<svg viewBox="0 0 24 24" fill="#fff"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>`,
   },
@@ -44,11 +44,32 @@ const socials = [
   },
   {
     id: 'tg', name: 'Telegram', stat: '13 msgs',
-    iconBg: '#26A5E4', pos: 'ml',
+    iconBg: '#26A5E4', pos: 'ml', circle: true,
     border: 'rgba(38,165,228,.3)', chipBg: 'rgba(38,165,228,.1)',
     icon: `<svg viewBox="0 0 24 24" fill="#fff"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>`,
   },
 ];
+
+const rtAgents = [
+  { name: 'Sarah K.',  typeLabel: 'LANG',  typeIcon: '🌐', flag: '🇬🇧', role: lang === 'de' ? 'Sprachagentin'    : lang === 'sl' ? 'Jezikovni agent'  : 'Language Agent',   criteria: lang === 'de' ? 'Sprachzuweisung'  : lang === 'sl' ? 'Ujemanje jezika'    : 'Language match',   color: '#6366f1', glow: 'rgba(99,102,241,.25)', img: 'sarah-k.jpg' },
+  { name: 'Alex M.',   typeLabel: 'SKILL', typeIcon: '🧠', flag: '🇩🇪', role: lang === 'de' ? 'Skill-Spezialist' : lang === 'sl' ? 'Skill specialist'  : 'Skill Specialist', criteria: lang === 'de' ? 'Kompetenzniveau'  : lang === 'sl' ? 'Raven spretnosti'  : 'Skill level',      color: '#a855f7', glow: 'rgba(168,85,247,.25)', img: 'alex-m.jpg'  },
+  { name: 'David L.',  typeLabel: 'LIVE',  typeIcon: '⚡', flag: '🇦🇺', role: lang === 'de' ? 'Rezeptionist'     : lang === 'sl' ? 'Receptionist'      : 'Receptionist',     criteria: lang === 'de' ? 'Verfügbarkeit'    : lang === 'sl' ? 'Razpoložljivost'   : 'Availability',     color: '#22d3ee', glow: 'rgba(34,211,238,.25)', img: 'david-l.jpg' },
+  { name: 'Maria R.',  typeLabel: 'VIP',   typeIcon: '👑', flag: '🇪🇸', role: lang === 'de' ? 'VIP-Betreuerin'   : lang === 'sl' ? 'VIP specialist'    : 'VIP Handler',      criteria: lang === 'de' ? 'Kundentyp'        : lang === 'sl' ? 'Vrsta stranke'     : 'Customer type',    color: '#f59e0b', glow: 'rgba(245,158,11,.25)',  img: 'maria-r.jpg' },
+];
+const rtCopy = {
+  en: { heading: 'Every lead routed to the right agent.', sub: 'Language, skill level, availability and customer type matched automatically in under 2 seconds.' },
+  de: { heading: 'Jeder Lead zum richtigen Agenten geleitet.', sub: 'Sprache, Skill-Level, Verfügbarkeit und Kundentyp automatisch in unter 2 Sekunden zugeordnet.' },
+  sl: { heading: 'Vsak lead usmerjen k pravemu agentu.', sub: 'Jezik, raven spretnosti, razpoložljivost in vrsta stranke samodejno v manj kot 2 sekundah.' },
+};
+const rt = rtCopy[lang];
+
+const proofItems = [
+  { client: 'iMotorbike',   cat: 'Automotive', stat: '80%',  accent: '#E8420C', glow: 'rgba(232,66,12,.22)',   logo: '/images/logos/clients/imotorbike.svg',   label: lang === 'de' ? 'Anfragen automatisiert' : lang === 'sl' ? 'poizvedb avtomatiziranih' : 'inquiries automated',       slug: 'imotorbike-ai-lead-qualification' },
+  { client: 'Only Tourism', cat: 'Travel',     stat: '60%',  accent: '#0055ff', glow: 'rgba(0,85,255,.22)',    logo: '/images/logos/clients/only-tourism.svg', label: lang === 'de' ? 'mehr Conversions'       : lang === 'sl' ? 'rast konverzij'           : 'conversion rate increase',  slug: 'only-tourism-ai-visa-automation'  },
+  { client: 'Parcel Daily', cat: 'Logistics',  stat: '300%', accent: '#F97316', glow: 'rgba(249,115,22,.22)',  logo: '/images/logos/clients/parcel-daily.svg', label: lang === 'de' ? 'Umsatzwachstum in 6M'  : lang === 'sl' ? 'rast prihodkov v 6M'      : 'revenue growth in 6 months',slug: 'parcel-daily-conversion-boost'    },
+];
+const proofEyebrow = lang === 'de' ? 'Echte Agentur-Ergebnisse' : lang === 'sl' ? 'Resnični rezultati agencij' : 'Real agency results';
+const projectBase  = lang === 'en' ? '/projects' : `/${lang}/projects`;
 ---
 
 <section class="v2-hero">
@@ -101,7 +122,7 @@ const socials = [
           style={`--chip-bg:${s.chipBg};--chip-border:${s.border};--chip-delay:${i * 0.35}s`}
           aria-hidden="true"
         >
-          <span class="v2-hero__chip-icon" style={`background:${s.iconBg}`}>
+          <span class="v2-hero__chip-icon" style={`background:${s.iconBg}${s.circle ? ';border-radius:50%' : ''}`}>
             <Fragment set:html={s.icon} />
           </span>
           <span class="v2-hero__chip-body">
@@ -122,8 +143,160 @@ const socials = [
 
     </div>
 
+    <!-- ── Scroll-animated lead routing tree ─────────────── -->
+    <div class="v2-rt">
+
+      <svg class="v2-rt__svg" viewBox="0 0 800 200" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <defs>
+          <!-- Trunk: fades in from image, precise userSpace coords -->
+          <linearGradient id="rtTrunkGrad" gradientUnits="userSpaceOnUse" x1="400" y1="0" x2="400" y2="80">
+            <stop offset="0%"   stop-color="rgba(99,102,241,0.4)"/>
+            <stop offset="100%" stop-color="#6366f1"/>
+          </linearGradient>
+          <!-- Branch gradients: all begin indigo at fork, bleed into agent color -->
+          <linearGradient id="rtB1Grad" gradientUnits="userSpaceOnUse" x1="400" y1="80" x2="100" y2="200">
+            <stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#6366f1"/>
+          </linearGradient>
+          <linearGradient id="rtB2Grad" gradientUnits="userSpaceOnUse" x1="400" y1="80" x2="300" y2="200">
+            <stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#a855f7"/>
+          </linearGradient>
+          <linearGradient id="rtB3Grad" gradientUnits="userSpaceOnUse" x1="400" y1="80" x2="500" y2="200">
+            <stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#22d3ee"/>
+          </linearGradient>
+          <linearGradient id="rtB4Grad" gradientUnits="userSpaceOnUse" x1="400" y1="80" x2="700" y2="200">
+            <stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#f59e0b"/>
+          </linearGradient>
+          <filter id="rtNodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- Trunk: starts at hero image bottom edge, grows down to fork -->
+        <path class="rt-path rt-trunk" d="M 400 0 L 400 80"
+          stroke="url(#rtTrunkGrad)" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Branches: unified start color splits into agent colors -->
+        <path class="rt-path rt-branch" d="M 400 80 C 400 140 100 140 100 200"
+          stroke="url(#rtB1Grad)" stroke-width="2.5" stroke-linecap="round"/>
+        <path class="rt-path rt-branch" d="M 400 80 C 400 140 300 140 300 200"
+          stroke="url(#rtB2Grad)" stroke-width="2.5" stroke-linecap="round"/>
+        <path class="rt-path rt-branch" d="M 400 80 C 400 140 500 140 500 200"
+          stroke="url(#rtB3Grad)" stroke-width="2.5" stroke-linecap="round"/>
+        <path class="rt-path rt-branch" d="M 400 80 C 400 140 700 140 700 200"
+          stroke="url(#rtB4Grad)" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Endpoint glow nodes -->
+        <circle class="rt-node" cx="100" cy="200" r="5" fill="#6366f1" filter="url(#rtNodeGlow)"/>
+        <circle class="rt-node" cx="300" cy="200" r="5" fill="#a855f7" filter="url(#rtNodeGlow)"/>
+        <circle class="rt-node" cx="500" cy="200" r="5" fill="#22d3ee" filter="url(#rtNodeGlow)"/>
+        <circle class="rt-node" cx="700" cy="200" r="5" fill="#f59e0b" filter="url(#rtNodeGlow)"/>
+      </svg>
+
+      <!-- Agent characters: one per branch endpoint (4-col grid aligns with SVG) -->
+      <div class="v2-rt__agents">
+        {rtAgents.map((a, i) => (
+          <div class="v2-rt__agent" style={`--col:${a.color};--glow:${a.glow};--i:${i}`}>
+            <!-- Full-bleed AI portrait -->
+            <img
+              src={`/images/agents/${a.img}`}
+              alt={`${a.name}, ${a.role}`}
+              class="v2-rt__photo"
+              loading="lazy"
+            />
+            <!-- Type pill — top left -->
+            <div class="v2-rt__strip" aria-hidden="true">
+              <span class="v2-rt__strip-icon">{a.typeIcon}</span>
+              <span class="v2-rt__strip-label">{a.typeLabel}</span>
+            </div>
+            <!-- Country flag — top right -->
+            <span class="v2-rt__flag" aria-hidden="true">{a.flag}</span>
+            <!-- Glass info panel — bottom -->
+            <div class="v2-rt__info">
+              <span class="v2-rt__name">{a.name}</span>
+              <span class="v2-rt__role">{a.role}</span>
+              <span class="v2-rt__badge">{a.criteria}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Heading + subheading: routing criteria explanation -->
+      <div class="v2-rt__copy" data-m="up" style="--m-d:.1s">
+        <h2 class="v2-rt__h2">{rt.heading}</h2>
+        <p class="v2-rt__sub">{rt.sub}</p>
+      </div>
+
+    </div>
+
+    <!-- ── Real agency results proof strip ───────────────── -->
+    <div class="v2-proof">
+      <div class="v2-proof__head" data-m="fade">
+        <span class="v2-eyebrow">{proofEyebrow}</span>
+      </div>
+      <div class="v2-proof__grid">
+        {proofItems.map((p, i) => (
+          <a
+            href={`${projectBase}/${p.slug}/`}
+            class="v2-proof__card"
+            data-m="up"
+            style={`--m-d:${i * 0.08}s; --accent:${p.accent}; --glow:${p.glow}`}
+          >
+            <!-- glow orb -->
+            <span class="v2-proof__orb" aria-hidden="true"/>
+            <!-- header row: category + arrow -->
+            <div class="v2-proof__card-head">
+              <span class="v2-proof__cat">{p.cat}</span>
+              <svg class="v2-proof__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <!-- stat -->
+            <span class="v2-proof__stat">{p.stat}</span>
+            <span class="v2-proof__stat-label">{p.label}</span>
+            <!-- client logo -->
+            <div class="v2-proof__logo-wrap">
+              <img
+                src={p.logo}
+                alt={p.client}
+                class="v2-proof__logo"
+                loading="lazy"
+                height="28"
+              />
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+
   </div>
 </section>
+
+<!-- Schema: Lead routing to agents presentation for Google -->
+<script is:inline type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Automated Lead Routing to Sales Agents",
+  "description": "AI-powered system that automatically routes incoming leads to the right sales agent based on language, skill level, availability and customer type in under 2 seconds.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Lead arrives via any channel",
+      "text": "A new lead arrives via WhatsApp, Instagram, Facebook, TikTok, email or SMS and enters the AI Customer System."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "AI routing engine evaluates criteria",
+      "text": "The routing engine instantly evaluates the lead against criteria including language, customer type, agent availability and required skill level."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Lead assigned to the right agent in under 2 seconds",
+      "text": "The lead is automatically routed to the best-matched available agent — Sales Rep by language match, Senior Closer by skill level, Support by availability, or Account Manager by customer type."
+    }
+  ],
+  "tool": [{ "@type": "HowToTool", "name": "AI Customer System by CreativeComplete" }]
+})} />
 
 <style lang="scss">
 
@@ -248,10 +421,10 @@ const socials = [
   position: relative;
   max-width: 960px;
   margin: 0 auto;
-  padding: 52px 100px;
+  padding: 52px 100px 0;
 
-  @media (max-width: 900px)  { padding: 44px 64px; }
-  @media (max-width: 640px)  { padding: 36px 20px; }
+  @media (max-width: 900px)  { padding: 44px 64px 0; }
+  @media (max-width: 640px)  { padding: 36px 20px 0; }
 }
 
 /* ── Main image ─────────────────────────────────────── */
@@ -275,6 +448,12 @@ const socials = [
   gap: 10px;
   padding: 7px 14px 7px 8px;
   border-radius: var(--r-lg);
+
+  @media (max-width: 640px) {
+    gap: 6px;
+    padding: 5px 8px 5px 5px;
+    border-radius: 10px;
+  }
   background: var(--chip-bg, rgba(255,255,255,.08));
   border: 1px solid var(--chip-border, rgba(255,255,255,.15));
   backdrop-filter: blur(20px);
@@ -313,6 +492,13 @@ const socials = [
     height: 18px;
     display: block;
   }
+
+  @media (max-width: 640px) {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    svg { width: 13px; height: 13px; }
+  }
 }
 
 /* ── Chip text ──────────────────────────────────────── */
@@ -323,10 +509,14 @@ const socials = [
   font-family: var(--font-mono);
   font-size: 11px; font-weight: 700; letter-spacing: .06em;
   color: var(--fg-0); line-height: 1;
+
+  @media (max-width: 640px) { font-size: 9px; letter-spacing: .04em; }
 }
 .v2-hero__chip-stat {
   font-family: var(--font-mono);
-  font-size: 9px; color: var(--fg-2); letter-spacing: .04em; line-height: 1;
+  font-size: 9px; color: rgba(255,255,255,.65); letter-spacing: .04em; line-height: 1;
+
+  @media (max-width: 640px) { font-size: 8px; }
 }
 
 /* ── Positions ──────────────────────────────────────── */
@@ -347,4 +537,343 @@ const socials = [
   .v2-hero__chip--bl { left: 4px;   bottom: 8px; }
 }
 
+/* ── Routing tree ─────────────────────────────────────── */
+@keyframes rt-char-glow {
+  0%,100% { opacity:.18; transform:scale(1); }
+  50%     { opacity:.35; transform:scale(1.1); }
+}
+
+.v2-rt {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 100px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 900px) { padding: 0 64px 64px; }
+  @media (max-width: 640px) { padding: 0 20px 56px; }
+}
+
+.v2-rt__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+
+  .rt-path { stroke-linecap: round; }
+  .rt-node { opacity: 0; }
+}
+
+.v2-rt__agents {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 10px;
+  margin-top: 4px;
+
+  @media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+}
+
+.v2-rt__agent {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--r-lg, 16px);
+  border-top: 3px solid var(--col, #6366f1);
+  box-shadow: 0 6px 28px rgba(0,0,0,.28), 0 1px 4px rgba(0,0,0,.12);
+  /* entry animation */
+  opacity: 0;
+  transform: translateY(18px) scale(.95);
+  transition: opacity .45s ease, transform .45s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease;
+  transition-delay: calc(var(--i,0) * .09s + .9s);
+
+  &.rt-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  &:hover {
+    box-shadow: 0 10px 40px rgba(0,0,0,.35), 0 0 0 2px var(--col, #6366f1);
+    transform: translateY(-3px) scale(1);
+  }
+}
+
+/* Full-bleed photo */
+.v2-rt__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Type pill — top left */
+.v2-rt__strip {
+  position: absolute;
+  top: 10px; left: 10px;
+  padding: 4px 8px 4px 6px;
+  border-radius: 99px;
+  background: rgba(0,0,0,.48);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.18);
+  display: flex; align-items: center; gap: 4px;
+  z-index: 2;
+}
+
+/* Country flag — top right */
+.v2-rt__flag {
+  position: absolute;
+  top: 10px; right: 10px;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: rgba(0,0,0,.48);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255,255,255,.25);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; line-height: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,.4);
+  z-index: 2;
+}
+
+/* Glass info panel — bottom */
+.v2-rt__info {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 18px 12px 14px;
+  background: rgba(255,255,255,.13);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-top: 1px solid rgba(255,255,255,.22);
+  display: flex; flex-direction: column; gap: 4px;
+  z-index: 2;
+}
+
+.v2-rt__strip-icon {
+  font-size: 10px; line-height: 1;
+}
+
+.v2-rt__strip-label {
+  font-family: var(--font-mono);
+  font-size: 8px; font-weight: 800;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+}
+
+.v2-rt__name {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+  letter-spacing: .05em; color: #fff; line-height: 1;
+  text-shadow: 0 1px 4px rgba(0,0,0,.4);
+}
+
+.v2-rt__role {
+  font-family: var(--font-mono); font-size: 9.5px;
+  color: rgba(255,255,255,.75); letter-spacing: .04em; line-height: 1;
+}
+
+.v2-rt__badge {
+  display: inline-flex; align-items: center; align-self: flex-start;
+  height: 17px; padding: 0 7px; border-radius: 99px;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  font-family: var(--font-mono); font-size: 8.5px; letter-spacing: .07em;
+  color: #fff; white-space: nowrap; margin-top: 2px;
+}
+
+.v2-rt__copy {
+  text-align: center; max-width: 50ch;
+  margin: 36px auto 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+
+.v2-rt__h2 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 44px);
+  font-weight: 400; letter-spacing: -.02em;
+  color: var(--fg-0); margin: 0; line-height: 1.15;
+}
+
+.v2-rt__sub {
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: var(--fg-1); line-height: 1.65; margin: 0;
+}
+
+/* ── Proof strip ──────────────────────────────────────── */
+.v2-proof {
+  width: 100%;
+  padding: 0 100px 80px;
+
+  @media (max-width: 900px) { padding: 0 40px 64px; }
+  @media (max-width: 640px) { padding: 0 20px 48px; }
+}
+
+.v2-proof__head {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.v2-proof__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+
+  @media (max-width: 768px) { grid-template-columns: 1fr; }
+}
+
+.v2-proof__card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 26px 24px 22px;
+  background: color-mix(in srgb, var(--accent, #6366f1) 6%, rgba(10,8,20,0.9));
+  border: 1px solid color-mix(in srgb, var(--accent, #6366f1) 22%, rgba(255,255,255,.05));
+  border-left: 3px solid var(--accent, #6366f1);
+  border-radius: var(--r-lg, 16px);
+  text-decoration: none;
+  transition: background .22s ease, box-shadow .22s ease, transform .22s ease;
+
+  &:hover {
+    background: color-mix(in srgb, var(--accent, #6366f1) 12%, rgba(10,8,20,0.9));
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent),
+      0 12px 40px rgba(0,0,0,.4),
+      0 0 50px var(--glow, rgba(99,102,241,.2));
+    transform: translateY(-3px);
+
+    .v2-proof__orb { opacity: .25; }
+    .v2-proof__arrow { color: var(--accent, #6366f1); }
+  }
+}
+
+/* ambient glow bubble from accent */
+.v2-proof__orb {
+  position: absolute;
+  top: -40px; left: -40px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent, #6366f1), transparent 70%);
+  opacity: .07;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+
+.v2-proof__card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.v2-proof__arrow {
+  color: var(--fg-2);
+  flex-shrink: 0;
+  transition: color .2s ease;
+}
+
+.v2-proof__stat {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 400;
+  letter-spacing: -.03em;
+  line-height: 1;
+  color: var(--accent, #6366f1);
+}
+
+.v2-proof__stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-1);
+  letter-spacing: .03em;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.v2-proof__logo-wrap {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,.07);
+}
+
+.v2-proof__logo {
+  height: 28px;
+  width: auto;
+  max-width: 130px;
+  display: block;
+  object-fit: contain;
+  opacity: .85;
+  transition: opacity .2s ease;
+
+  .v2-proof__card:hover & { opacity: 1; }
+}
+
+.v2-proof__cat {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--accent, #6366f1);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .8;
+}
+
 </style>
+
+<script is:inline>
+(function () {
+  var rt = document.querySelector('.v2-rt');
+  if (!rt) return;
+
+  var paths = rt.querySelectorAll('.rt-path');
+  var nodes = rt.querySelectorAll('.rt-node');
+  var agents = rt.querySelectorAll('.v2-rt__agent');
+
+  // Initialise paths as invisible (drawn from dashoffset = full length)
+  paths.forEach(function (p) {
+    try {
+      var len = p.getTotalLength ? p.getTotalLength() : 500;
+      p.style.strokeDasharray = len;
+      p.style.strokeDashoffset = len;
+    } catch (e) {
+      p.style.strokeDasharray = 500;
+      p.style.strokeDashoffset = 500;
+    }
+  });
+
+  function runAnim() {
+    var trunk = rt.querySelector('.rt-trunk');
+    if (trunk) {
+      trunk.style.transition = 'stroke-dashoffset .45s cubic-bezier(.4,0,.2,1)';
+      trunk.style.strokeDashoffset = '0';
+    }
+    rt.querySelectorAll('.rt-branch').forEach(function (b, i) {
+      setTimeout(function () {
+        b.style.transition = 'stroke-dashoffset .55s cubic-bezier(.4,0,.2,1)';
+        b.style.strokeDashoffset = '0';
+      }, 380 + i * 65);
+    });
+    nodes.forEach(function (n, i) {
+      setTimeout(function () {
+        n.style.transition = 'opacity .3s ease';
+        n.style.opacity = '1';
+      }, 720 + i * 55);
+    });
+    agents.forEach(function (a) { a.classList.add('rt-in'); });
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      runAnim();
+      io.disconnect();
+    });
+  }, { threshold: 0.15 });
+
+  io.observe(rt);
+})();
+</script>

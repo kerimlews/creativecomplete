@@ -147,7 +147,14 @@ const arrowSvg = `<svg width="10" height="10" viewBox="0 0 11 11" fill="none" ar
           </a>
         </div>
         <div class="e2e__panel-right">
+          <img src="/images/e2e/create.jpg" alt="" class="e2e__panel-img" aria-hidden="true" loading="lazy"/>
+          <div class="e2e__panel-overlay"></div>
           <div class="e2e__right-bg create"></div>
+          <div class="e2e__float e2e__float--create">
+            <div class="e2e__fn" style="--fn-d:1s"><span class="e2e__fn-ic">✦</span>Creative #3 · ▲97 — pushed live</div>
+            <div class="e2e__fn" style="--fn-d:5.5s"><span class="e2e__fn-ic">📊</span>14× ROAS · A/B winner scaling</div>
+            <div class="e2e__fn" style="--fn-d:10s"><span class="e2e__fn-ic">🎯</span>TikTok winner · 3× higher CTR</div>
+          </div>
           <div class="e2e__mini-demo create-demo">
             <div class="e2e__demo-header">
               <span class="e2e__demo-lbl create">✦ AI Creative Engine</span>
@@ -237,7 +244,14 @@ const arrowSvg = `<svg width="10" height="10" viewBox="0 0 11 11" fill="none" ar
           </a>
         </div>
         <div class="e2e__panel-right">
+          <img src="/images/e2e/capture.jpg" alt="" class="e2e__panel-img" aria-hidden="true" loading="lazy"/>
+          <div class="e2e__panel-overlay"></div>
           <div class="e2e__right-bg capture"></div>
+          <div class="e2e__float e2e__float--capture">
+            <div class="e2e__fn" style="--fn-d:.8s"><span class="e2e__fn-ic">⚡</span>New lead · WhatsApp · +49 157…</div>
+            <div class="e2e__fn" style="--fn-d:4.5s"><span class="e2e__fn-ic">🔔</span>Instagram DM · 3 new replies</div>
+            <div class="e2e__fn" style="--fn-d:8.5s"><span class="e2e__fn-ic">📥</span>47 new leads · last 2h</div>
+          </div>
           <div class="e2e__mini-demo capture-demo">
             <div class="e2e__demo-header">
               <span class="e2e__demo-lbl capture">⬡ Unified Inbox</span>
@@ -307,7 +321,14 @@ const arrowSvg = `<svg width="10" height="10" viewBox="0 0 11 11" fill="none" ar
           </a>
         </div>
         <div class="e2e__panel-right">
+          <img src="/images/e2e/convert.jpg" alt="" class="e2e__panel-img" aria-hidden="true" loading="lazy"/>
+          <div class="e2e__panel-overlay"></div>
           <div class="e2e__right-bg convert"></div>
+          <div class="e2e__float e2e__float--convert">
+            <div class="e2e__fn" style="--fn-d:1.2s"><span class="e2e__fn-ic">🔥</span>HOT LEAD → Sarah K. · Score 96</div>
+            <div class="e2e__fn" style="--fn-d:5.8s"><span class="e2e__fn-ic">✓</span>Appointment booked · Tomorrow 2pm</div>
+            <div class="e2e__fn" style="--fn-d:10.5s"><span class="e2e__fn-ic">💬</span>AI qualified in 47s · 81% match</div>
+          </div>
           <div class="e2e__mini-demo convert-demo">
             <div class="e2e__demo-header">
               <span class="e2e__demo-lbl convert">✨ AI Agent · Live</span>
@@ -375,7 +396,13 @@ const arrowSvg = `<svg width="10" height="10" viewBox="0 0 11 11" fill="none" ar
           </a>
         </div>
         <div class="e2e__panel-right">
+          <div class="e2e__panel-overlay" style="background:linear-gradient(135deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.2) 50%,rgba(0,0,0,.42) 100%)"></div>
           <div class="e2e__right-bg retain"></div>
+          <div class="e2e__float e2e__float--retain">
+            <div class="e2e__fn" style="--fn-d:1s"><span class="e2e__fn-ic">📤</span>Campaign sent · 1,240 contacts</div>
+            <div class="e2e__fn" style="--fn-d:5.5s"><span class="e2e__fn-ic">💰</span>€84k revenue · this month</div>
+            <div class="e2e__fn" style="--fn-d:10s"><span class="e2e__fn-ic">⭐</span>94% CSAT · 890 positive replies</div>
+          </div>
           <div class="e2e__mini-demo retain-demo">
             <div class="e2e__demo-header">
               <span class="e2e__demo-lbl retain">⟳ Broadcast Campaign</span>
@@ -663,8 +690,8 @@ const arrowSvg = `<svg width="10" height="10" viewBox="0 0 11 11" fill="none" ar
 .e2e__panel-right {
   position: relative;
   display: flex; align-items: center; justify-content: center;
-  padding: 40px 32px;
-  background: var(--bg-elev);
+  padding: 32px 28px;
+  background: #07050f;
   overflow: hidden;
   min-height: 420px;
 
@@ -1035,6 +1062,311 @@ const arrowSvg = `<svg width="10" height="10" viewBox="0 0 11 11" fill="none" ar
   .e2e__strip-item:nth-child(n+4) { border-top: 1px solid var(--line); }
   .e2e__metrics { flex-wrap: wrap; }
   .e2e__tab-icon { width: 30px; height: 30px; }
+}
+
+/* ══════════════════════════════════════════════════════
+   ENHANCED VISUAL DESIGN
+   ══════════════════════════════════════════════════════ */
+
+/* ── Heading ─────────────────────────────────────────── */
+.e2e__head {
+  margin-bottom: 48px;
+}
+.e2e__h2 {
+  font-size: clamp(40px, 5.5vw, 76px);
+  line-height: 1.05;
+}
+.e2e__lead {
+  font-size: clamp(15px, 1.3vw, 18px);
+  max-width: 48ch;
+}
+
+/* ── Tabs: individual cards with phase accents ───────── */
+.e2e__tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  margin-bottom: 10px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}
+
+.e2e__tab {
+  border-right: none;
+  border: 1px solid rgba(255,255,255,.07);
+  border-top: 3px solid transparent;
+  border-radius: var(--r-lg);
+  padding: 20px 18px 16px;
+  gap: 12px;
+  background: rgba(255,255,255,.025);
+  transition: background .2s, box-shadow .2s, border-color .2s, transform .18s;
+
+  /* inactive phase accent — subtle */
+  &.create  { border-top-color: rgba(168,85,247,.4); }
+  &.capture { border-top-color: rgba(249,115,22,.4); }
+  &.convert { border-top-color: rgba(99,102,241,.4); }
+  &.retain  { border-top-color: rgba(34,211,238,.4); }
+
+  &:hover {
+    background: rgba(255,255,255,.045);
+    transform: translateY(-1px);
+  }
+
+  /* active: full phase color + card glow */
+  &.active {
+    transform: translateY(-2px);
+
+    &.create {
+      border-top-color: var(--c3);
+      background: rgba(168,85,247,.08);
+      box-shadow: 0 0 0 1px rgba(168,85,247,.2), 0 12px 40px rgba(0,0,0,.35);
+    }
+    &.capture {
+      border-top-color: #f97316;
+      background: rgba(249,115,22,.08);
+      box-shadow: 0 0 0 1px rgba(249,115,22,.2), 0 12px 40px rgba(0,0,0,.35);
+    }
+    &.convert {
+      border-top-color: var(--c1-light);
+      background: rgba(99,102,241,.1);
+      box-shadow: 0 0 0 1px rgba(99,102,241,.25), 0 12px 40px rgba(0,0,0,.35);
+    }
+    &.retain {
+      border-top-color: var(--c2);
+      background: rgba(34,211,238,.08);
+      box-shadow: 0 0 0 1px rgba(34,211,238,.2), 0 12px 40px rgba(0,0,0,.35);
+    }
+
+    .e2e__tab-tag { opacity: 1; }
+    .e2e__tab-name { color: var(--fg-0); font-size: 15px; }
+
+    &.create  .e2e__tab-tag { color: var(--c3); }
+    &.capture .e2e__tab-tag { color: #f97316; }
+    &.convert .e2e__tab-tag { color: var(--c1-light); }
+    &.retain  .e2e__tab-tag { color: var(--c2); }
+
+    &.create  .e2e__tab-icon { background: rgba(168,85,247,.18); border-color: rgba(168,85,247,.4); color: var(--c3); }
+    &.capture .e2e__tab-icon { background: rgba(249,115,22,.18);  border-color: rgba(249,115,22,.4);  color: #fb923c; }
+    &.convert .e2e__tab-icon { background: rgba(99,102,241,.18);  border-color: rgba(99,102,241,.4);  color: var(--c1-light); }
+    &.retain  .e2e__tab-icon { background: rgba(34,211,238,.15);  border-color: rgba(34,211,238,.4);  color: var(--c2); }
+  }
+}
+
+.e2e__tab-icon {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  transition: background .2s, border-color .2s, color .2s;
+}
+
+.e2e__tab-tag {
+  font-size: 9.5px;
+  letter-spacing: .1em;
+  opacity: .6;
+  transition: color .2s, opacity .2s;
+}
+
+.e2e__tab-name {
+  font-size: 14px;
+  font-weight: 600;
+  transition: color .2s, font-size .15s;
+}
+
+/* ── Panel wrapper ───────────────────────────────────── */
+.e2e__panel-wrap {
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 20px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.03) inset,
+    0 32px 80px rgba(0,0,0,.45);
+  overflow: hidden;
+}
+
+/* ── Phase header: gradient tint by phase ────────────── */
+.e2e__phase-hdr {
+  padding: 20px 26px 16px;
+
+  &.create  { background: linear-gradient(90deg, rgba(168,85,247,.14) 0%, transparent 65%); border-bottom-color: rgba(168,85,247,.18); }
+  &.capture { background: linear-gradient(90deg, rgba(249,115,22,.12) 0%, transparent 65%); border-bottom-color: rgba(249,115,22,.18); }
+  &.convert { background: linear-gradient(90deg, rgba(99,102,241,.16) 0%, transparent 65%); border-bottom-color: rgba(99,102,241,.2); }
+  &.retain  { background: linear-gradient(90deg, rgba(34,211,238,.12) 0%, transparent 65%); border-bottom-color: rgba(34,211,238,.18); }
+}
+
+.e2e__phase-name { font-size: 17px; font-weight: 700; }
+
+/* ── Metrics: glass card treatment ──────────────────── */
+.e2e__metrics {
+  gap: 0;
+  padding: 4px 4px 0;
+  background: transparent;
+}
+
+.e2e__metric {
+  padding: 20px 22px;
+  background: rgba(255,255,255,.018);
+  border-right: 1px solid rgba(255,255,255,.05);
+
+  &:last-child { border-right: none; }
+  &:not(:last-child) { border-right: 1px solid rgba(255,255,255,.05); }
+}
+
+.e2e__metric-v {
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -.04em;
+}
+
+.e2e__metric-l {
+  font-size: 9.5px;
+  letter-spacing: .07em;
+}
+
+/* ── Description ─────────────────────────────────────── */
+.e2e__phase-desc {
+  padding: 20px 26px 0;
+  font-size: 14px;
+}
+
+/* ── Features: each item as a mini card ──────────────── */
+.e2e__features {
+  padding: 16px 22px 0;
+  gap: 7px;
+
+  li {
+    padding: 8px 10px;
+    background: rgba(255,255,255,.025);
+    border: 1px solid rgba(255,255,255,.05);
+    border-radius: 8px;
+    font-size: 13.5px;
+    transition: background .15s, border-color .15s;
+
+    &:hover {
+      background: rgba(255,255,255,.04);
+      border-color: rgba(255,255,255,.1);
+    }
+  }
+}
+
+/* ── Blog link: phase-colored ────────────────────────── */
+.e2e__blog-link {
+  margin: 22px 22px 20px;
+}
+
+/* ── Mini demo: phase glow shadow ────────────────────── */
+.e2e__mini-demo {
+  background: rgba(9,7,18,.94);
+  border-color: rgba(255,255,255,.1);
+  max-width: 360px;
+}
+.create-demo  { box-shadow: 0 0 0 1px rgba(255,255,255,.07) inset, 0 28px 70px rgba(0,0,0,.55), 0 0 50px rgba(168,85,247,.14) !important; }
+.capture-demo { box-shadow: 0 0 0 1px rgba(255,255,255,.07) inset, 0 28px 70px rgba(0,0,0,.55), 0 0 50px rgba(249,115,22,.12) !important; }
+.convert-demo { box-shadow: 0 0 0 1px rgba(255,255,255,.07) inset, 0 28px 70px rgba(0,0,0,.55), 0 0 50px rgba(99,102,241,.18) !important; }
+.retain-demo  { box-shadow: 0 0 0 1px rgba(255,255,255,.07) inset, 0 28px 70px rgba(0,0,0,.55), 0 0 50px rgba(34,211,238,.14) !important; }
+
+/* ── Panel image background ──────────────────────────── */
+.e2e__panel-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  opacity: .72;
+  filter: brightness(.82) saturate(.9);
+  z-index: 0;
+}
+
+/* ── Readability overlay — light vignette only ───────── */
+.e2e__panel-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.45) 0%, rgba(0,0,0,.05) 40%, rgba(0,0,0,.55) 100%),
+    linear-gradient(to right, rgba(0,0,0,.3) 0%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Float notification chips ────────────────────────── */
+.e2e__float {
+  position: absolute;
+  top: 14px; right: 14px;
+  display: flex; flex-direction: column; gap: 6px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+@keyframes e2e-fn-cycle {
+  0%,100% { opacity:0; transform:translateX(14px) scale(.97); }
+  7%,72%  { opacity:1; transform:translateX(0)    scale(1); }
+  82%     { opacity:0; transform:translateX(-8px)  scale(.98); }
+}
+
+.e2e__fn {
+  display: flex; align-items: center; gap: 7px;
+  padding: 7px 11px;
+  background: rgba(9,7,18,.9);
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 9px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  font-family: var(--font-mono);
+  font-size: 10px; font-weight: 500;
+  color: rgba(255,255,255,.88);
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(0,0,0,.55);
+  opacity: 0;
+  animation: e2e-fn-cycle 5.5s ease-in-out var(--fn-d,0s) infinite;
+}
+.e2e__fn-ic { font-size: 12px; flex-shrink: 0; }
+
+.e2e__float--create  .e2e__fn { border-color: rgba(168,85,247,.35); }
+.e2e__float--capture .e2e__fn { border-color: rgba(249,115,22,.35); }
+.e2e__float--convert .e2e__fn { border-color: rgba(99,102,241,.35); }
+.e2e__float--retain  .e2e__fn { border-color: rgba(34,211,238,.35); }
+
+/* Ensure demo card stays on top of image */
+.e2e__mini-demo {
+  position: relative;
+  z-index: 3;
+  background: rgba(8,6,18,.88) !important;
+  border-color: rgba(255,255,255,.14) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.07) inset,
+    0 24px 60px rgba(0,0,0,.65) !important;
+}
+
+/* ── Phase name: display font for editorial weight ───── */
+.e2e__phase-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  line-height: 1.1;
+}
+
+/* ── Metric value: display font (already set, boost size) */
+.e2e__metric-v {
+  font-size: clamp(30px, 3.5vw, 44px);
+}
+
+/* ── ROI strip: enhanced numbers ────────────────────── */
+.e2e__strip {
+  margin-top: 28px;
+  border-radius: var(--r-xl);
+  border-color: rgba(255,255,255,.08);
+  background: rgba(255,255,255,.025);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.03) inset;
+}
+.e2e__strip-n {
+  font-size: clamp(26px, 3vw, 36px);
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 </style>

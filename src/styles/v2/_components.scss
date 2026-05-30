@@ -123,7 +123,7 @@
 }
 
 /* === Hero — SPLIT layout ==================================== */
-.v2-hero { padding: 80px 0 96px; }
+.v2-hero { padding: 80px 0 0; }
 .v2-hero__inner {
   display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
 }
@@ -256,29 +256,6 @@
 .v2-hero__float-label { font-size: 11px; color: var(--fg-1); margin-top: 2px; }
 
 /* === Client strip =========================================== */
-.v2-clients {
-  padding: 28px 0;
-  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-}
-.v2-clients__label {
-  display: block;
-  font-family: var(--font-mono); font-size: 9px;
-  letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--fg-2); margin-bottom: 16px; text-align: center;
-}
-.v2-clients__row {
-  display: flex; align-items: center;
-  justify-content: space-between;
-  gap: 0; width: 100%;
-
-  @media (max-width: 768px) { flex-wrap: wrap; gap: 20px 32px; justify-content: center; }
-}
-.v2-clients__item {
-  font-family: var(--font-mono); font-size: 11px;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--fg-2); transition: color .2s; white-space: nowrap;
-  &:hover { color: var(--fg-1); }
-}
 
 /* === Stats strip ============================================ */
 .v2-stats-strip { padding: 80px 0; }
@@ -720,7 +697,7 @@
   .v2-testi__main { grid-row: span 1; }
 }
 @media (max-width: 768px) {
-  .v2-hero { padding: 40px 0 56px; }
+  .v2-hero { padding: 40px 0 0; }
   .v2-stats-strip { padding: 48px 0; }
   .v2-stats-strip__grid { grid-template-columns: repeat(2, 1fr); }
   .v2-stats-strip__n { font-size: clamp(32px, 8vw, 56px); }
@@ -734,11 +711,9 @@
   .v2-footer__legal { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
 @media (max-width: 560px) {
-  .v2-hero { padding: 32px 0 48px; }
+  .v2-hero { padding: 32px 0 0; }
   .v2-results__grid { grid-template-columns: 1fr; }
   .v2-footer__grid { grid-template-columns: 1fr; }
-  .v2-clients__row { gap: 16px 28px; justify-content: center; }
-  .v2-clients__row { gap: 20px 32px; }
   .v2-stats-strip__grid { grid-template-columns: 1fr 1fr; }
 }
 

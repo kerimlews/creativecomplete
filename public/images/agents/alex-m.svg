@@ -1,0 +1,51 @@
+<svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2d1b69"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="110" fill="url(#bg)"/>
+  <!-- Suit jacket -->
+  <path d="M0 110 Q0 68 26 62 L50 70 L74 62 Q100 68 100 110Z" fill="#3b0764"/>
+  <!-- Suit lapels -->
+  <path d="M33 68 L50 80 L67 68 L74 62 L50 70 L26 62Z" fill="#4c1d95"/>
+  <!-- Shirt & tie -->
+  <path d="M44 68 L50 70 L56 68 L53 82 L47 82Z" fill="white" opacity="0.92"/>
+  <path d="M48 69 L50 71.5 L52 69 L51 80 L49 80Z" fill="#a855f7"/>
+  <!-- Neck -->
+  <rect x="44" y="54" width="12" height="16" rx="5" fill="#D4956A"/>
+  <!-- Hair short crop -->
+  <ellipse cx="50" cy="32" rx="20.5" ry="18.5" fill="#1a1a1a"/>
+  <!-- Hairline fade -->
+  <path d="M30 36 Q29 48 34 53 Q36 47 33 36Z" fill="#1a1a1a"/>
+  <path d="M70 36 Q71 48 66 53 Q64 47 67 36Z" fill="#1a1a1a"/>
+  <ellipse cx="50" cy="49" rx="13" ry="5" fill="#1a1a1a"/>
+  <!-- Face -->
+  <ellipse cx="50" cy="38" rx="18" ry="20.5" fill="#D4956A"/>
+  <!-- Jaw hint -->
+  <ellipse cx="50" cy="53" rx="14" ry="7" fill="#D4956A"/>
+  <!-- Eyebrows straight/strong -->
+  <path d="M39.5 30 L47 29" stroke="#0d0d0d" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M53 29 L60.5 30" stroke="#0d0d0d" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <ellipse cx="44" cy="34.5" rx="3.5" ry="3" fill="#0d0d0d"/>
+  <ellipse cx="56" cy="34.5" rx="3.5" ry="3" fill="#0d0d0d"/>
+  <!-- Iris -->
+  <circle cx="44" cy="34.5" r="2" fill="#3d2010"/>
+  <circle cx="56" cy="34.5" r="2" fill="#3d2010"/>
+  <!-- Pupil -->
+  <circle cx="44" cy="34.5" r="1.1" fill="#050505"/>
+  <circle cx="56" cy="34.5" r="1.1" fill="#050505"/>
+  <!-- Eye shine -->
+  <circle cx="45.2" cy="33.4" r="0.9" fill="white" opacity="0.9"/>
+  <circle cx="57.2" cy="33.4" r="0.9" fill="white" opacity="0.9"/>
+  <!-- Nose bridge -->
+  <path d="M49 36 L49 41" stroke="#a06030" stroke-width="0.8" fill="none" opacity="0.3"/>
+  <!-- Nose base -->
+  <path d="M46 42 Q50 45 54 42" stroke="#a06030" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.45"/>
+  <!-- Mouth slight smirk -->
+  <path d="M44.5 50 Q50 54 57 50" stroke="#b06840" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Subtle stubble hint -->
+  <ellipse cx="50" cy="54" rx="12" ry="4" fill="#8b5020" opacity="0.12"/>
+</svg>

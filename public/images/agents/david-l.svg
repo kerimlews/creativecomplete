@@ -1,0 +1,50 @@
+<svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="110" fill="url(#bg)"/>
+  <!-- Shirt/polo -->
+  <path d="M0 110 Q0 70 30 64 L50 70 L70 64 Q100 70 100 110Z" fill="#0891b2"/>
+  <!-- Collar detail -->
+  <path d="M43 66 L50 72 L57 66 L55 64 L50 68 L45 64Z" fill="#22d3ee" opacity="0.35"/>
+  <!-- Neck -->
+  <rect x="44" y="55" width="12" height="15" rx="5" fill="#9B6B4A"/>
+  <!-- Very short hair (tight) -->
+  <ellipse cx="50" cy="32" rx="19.5" ry="17" fill="#2A1200"/>
+  <!-- Fade sides -->
+  <path d="M30.5 36 Q30 46 34 52 Q36 46 33 36Z" fill="#2A1200"/>
+  <path d="M69.5 36 Q70 46 66 52 Q64 46 67 36Z" fill="#2A1200"/>
+  <ellipse cx="50" cy="48" rx="12" ry="4.5" fill="#2A1200"/>
+  <!-- Face rounder/fuller -->
+  <ellipse cx="50" cy="38" rx="17.5" ry="20" fill="#9B6B4A"/>
+  <!-- Jaw -->
+  <ellipse cx="50" cy="52" rx="13.5" ry="7" fill="#9B6B4A"/>
+  <!-- Eyebrows natural curve -->
+  <path d="M40 30 Q44 27.5 47.5 29.5" stroke="#2A1200" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <path d="M52.5 29.5 Q56 27.5 60 30" stroke="#2A1200" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <ellipse cx="44" cy="34.5" rx="3.5" ry="2.9" fill="#1a0800"/>
+  <ellipse cx="56" cy="34.5" rx="3.5" ry="2.9" fill="#1a0800"/>
+  <!-- Iris warm brown -->
+  <circle cx="44" cy="34.5" r="2" fill="#5c3010"/>
+  <circle cx="56" cy="34.5" r="2" fill="#5c3010"/>
+  <!-- Pupil -->
+  <circle cx="44" cy="34.5" r="1.1" fill="#080300"/>
+  <circle cx="56" cy="34.5" r="1.1" fill="#080300"/>
+  <!-- Eye shine -->
+  <circle cx="45.2" cy="33.3" r="0.9" fill="white" opacity="0.9"/>
+  <circle cx="57.2" cy="33.3" r="0.9" fill="white" opacity="0.9"/>
+  <!-- Nose broader hint -->
+  <path d="M47 41 Q50 45 53 41" stroke="#7a4a28" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <ellipse cx="50" cy="43.5" rx="4.5" ry="2" fill="#7a4a28" opacity="0.1"/>
+  <!-- Big friendly smile -->
+  <path d="M43 49 Q50 55 57 49" stroke="#7a3a18" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Teeth hint -->
+  <path d="M44.5 49.5 Q50 52.5 55.5 49.5" fill="#f5e6d8" opacity="0.5"/>
+  <!-- Cheeks (expressive) -->
+  <circle cx="37" cy="42" r="7" fill="#c06040" opacity="0.15"/>
+  <circle cx="63" cy="42" r="7" fill="#c06040" opacity="0.15"/>
+</svg>

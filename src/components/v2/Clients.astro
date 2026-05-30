@@ -47,25 +47,15 @@ const logos = [
 
 <section class="v2-clients">
   <div class="v2-container">
-    <span class="v2-clients__label">{lc.label}</span>
-  </div>
-
-  <!-- Full-bleed marquee track -->
-  <div class="v2-clients__track-wrap" aria-hidden="true">
-    <div class="v2-clients__track">
-      <!-- Two copies for seamless loop -->
-      {[0, 1].map(() => (
-        <div class="v2-clients__set">
-          {logos.map(logo => (
-            <div class="v2-clients__logo" title={logo.name}>
-              {logo.img ? (
-                <img src={logo.img} alt={logo.name} loading="lazy" />
-              ) : (
-                <Fragment set:html={logo.svg} />
-              )}
-              <span class="v2-clients__logo-name">{logo.name}</span>
-            </div>
-          ))}
+    <div class="v2-clients__row">
+{logos.map(logo => (
+        <div class="v2-clients__logo" title={logo.name}>
+          {logo.img ? (
+            <img src={logo.img} alt={logo.name} loading="lazy" />
+          ) : (
+            <Fragment set:html={logo.svg} />
+          )}
+          <span class="v2-clients__logo-name">{logo.name}</span>
         </div>
       ))}
     </div>
@@ -73,72 +63,24 @@ const logos = [
 </section>
 
 <style>
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-
   .v2-clients {
     padding: 24px 0;
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
-    overflow: hidden;
   }
 
-  .v2-clients__label {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--fg-2);
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  /* fade edges */
-  .v2-clients__track-wrap {
-    position: relative;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0; bottom: 0;
-      width: 120px;
-      z-index: 2;
-      pointer-events: none;
-    }
-    &::before {
-      left: 0;
-      background: linear-gradient(to right, var(--bg-page), transparent);
-    }
-    &::after {
-      right: 0;
-      background: linear-gradient(to left, var(--bg-page), transparent);
-    }
-  }
-
-  .v2-clients__track {
-    display: flex;
-    width: max-content;
-    animation: marquee 28s linear infinite;
-
-    &:hover { animation-play-state: paused; }
-  }
-
-  .v2-clients__set {
+.v2-clients__row {
     display: flex;
     align-items: center;
-    gap: 56px;
-    padding: 0 28px;
-    flex-shrink: 0;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: nowrap;
   }
 
   .v2-clients__logo {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 8px;
     opacity: 0.4;
     transition: opacity 0.2s;
     white-space: nowrap;
@@ -147,20 +89,8 @@ const logos = [
 
     &:hover { opacity: 0.9; }
 
-    svg {
-      height: 20px;
-      width: auto;
-      display: block;
-      flex-shrink: 0;
-    }
-
-    img {
-      height: 20px;
-      width: auto;
-      display: block;
-      filter: brightness(0) invert(0.6);
-      flex-shrink: 0;
-    }
+    svg { height: 20px; width: auto; display: block; }
+    img { height: 20px; width: auto; display: block; filter: brightness(0) invert(0.6); }
   }
 
   .v2-clients__logo-name {
@@ -171,7 +101,7 @@ const logos = [
     color: var(--fg-1);
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .v2-clients__track { animation: none; }
+  @media (max-width: 768px) {
+    .v2-clients__row { flex-wrap: wrap; gap: 20px 32px; }
   }
 </style>
