@@ -63,7 +63,7 @@ const socials = [
         {c.h1Line1} <br/>
         <span class="v2-grad">{c.h1Line2}</span>
       </h1>
-      <p class="v2-hero__subtitle">{c.subtitle}</p>
+      <p class="v2-hero__subtitle" set:html={c.subtitle} />
 
       <div class="v2-hero__actions">
         <a
@@ -163,6 +163,14 @@ const socials = [
   max-width: 52ch;
   line-height: 1.6;
   margin: 0;
+
+  .v2-em {
+    color: var(--fg-0);
+    font-weight: 700;
+    text-decoration: underline double;
+    text-decoration-color: var(--fg-0);
+    text-underline-offset: 3px;
+  }
 }
 
 .v2-hero__actions {

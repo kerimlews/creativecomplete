@@ -48,14 +48,24 @@ const logos = [
 <section class="v2-clients">
   <div class="v2-container">
     <span class="v2-clients__label">{lc.label}</span>
-    <div class="v2-clients__row">
-      {logos.map(logo => (
-        <div class="v2-clients__logo" title={logo.name}>
-          {logo.img ? (
-            <img src={logo.img} alt={logo.name} height="22" loading="lazy" />
-          ) : (
-            <Fragment set:html={logo.svg} />
-          )}
+  </div>
+
+  <!-- Full-bleed marquee track -->
+  <div class="v2-clients__track-wrap" aria-hidden="true">
+    <div class="v2-clients__track">
+      <!-- Two copies for seamless loop -->
+      {[0, 1].map(() => (
+        <div class="v2-clients__set">
+          {logos.map(logo => (
+            <div class="v2-clients__logo" title={logo.name}>
+              {logo.img ? (
+                <img src={logo.img} alt={logo.name} loading="lazy" />
+              ) : (
+                <Fragment set:html={logo.svg} />
+              )}
+              <span class="v2-clients__logo-name">{logo.name}</span>
+            </div>
+          ))}
         </div>
       ))}
     </div>
@@ -63,10 +73,16 @@ const logos = [
 </section>
 
 <style>
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
   .v2-clients {
-    padding: 28px 0;
+    padding: 24px 0;
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
+    overflow: hidden;
   }
 
   .v2-clients__label {
@@ -80,48 +96,82 @@ const logos = [
     text-align: center;
   }
 
-  .v2-clients__row {
+  /* fade edges */
+  .v2-clients__track-wrap {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 120px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg-page), transparent);
+    }
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg-page), transparent);
+    }
+  }
+
+  .v2-clients__track {
+    display: flex;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+
+    &:hover { animation-play-state: paused; }
+  }
+
+  .v2-clients__set {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 0;
-    width: 100%;
+    gap: 56px;
+    padding: 0 28px;
+    flex-shrink: 0;
   }
 
   .v2-clients__logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 28px;
-    opacity: 0.45;
+    gap: 9px;
+    opacity: 0.4;
     transition: opacity 0.2s;
+    white-space: nowrap;
     color: var(--fg-1);
+    flex-shrink: 0;
 
-    &:hover { opacity: 0.85; }
+    &:hover { opacity: 0.9; }
 
     svg {
-      height: 22px;
+      height: 20px;
       width: auto;
       display: block;
+      flex-shrink: 0;
     }
 
     img {
-      height: 22px;
+      height: 20px;
       width: auto;
       display: block;
       filter: brightness(0) invert(0.6);
+      flex-shrink: 0;
     }
   }
 
-  @media (max-width: 768px) {
-    .v2-clients__row {
-      flex-wrap: wrap;
-      gap: 20px 32px;
-      justify-content: center;
-    }
+  .v2-clients__logo-name {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--fg-1);
   }
 
-  @media (max-width: 560px) {
-    .v2-clients__row { gap: 16px 28px; }
+  @media (prefers-reduced-motion: reduce) {
+    .v2-clients__track { animation: none; }
   }
 </style>

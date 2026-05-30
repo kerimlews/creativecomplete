@@ -15,6 +15,7 @@ const content = {
     title: 'Every channel your leads use.',
     titleGrad: 'One unified inbox.',
     sub: 'WhatsApp, Instagram, Facebook Messenger, TikTok, email, SMS, live chat. Every conversation your leads start, handled in one place by your AI sales agent.',
+    cta: 'See how it connects →',
     alt: 'Channel catalog showing 40+ connected platforms - WhatsApp, TikTok, Instagram, Messenger, Viber, LINE and more',
   },
   de: {
@@ -22,6 +23,7 @@ const content = {
     title: 'Jeder Kanal, den Ihre Leads nutzen.',
     titleGrad: 'Ein einheitlicher Posteingang.',
     sub: 'WhatsApp, Instagram, Facebook Messenger, TikTok, E-Mail, SMS, Live-Chat. Jedes Gespräch, das Ihre Leads starten, wird an einem Ort von Ihrem KI-Vertriebsagenten bearbeitet.',
+    cta: 'Wie es sich verbindet →',
     alt: 'Kanal-Katalog mit 40+ verbundenen Plattformen: WhatsApp, TikTok, Instagram, Messenger, Viber, LINE und mehr',
   },
   sl: {
@@ -29,6 +31,7 @@ const content = {
     title: 'Vsak kanal, ki ga vaši leadi uporabljajo.',
     titleGrad: 'Ena enotna mapa.',
     sub: 'WhatsApp, Instagram, Facebook Messenger, TikTok, e-pošta, SMS, live chat. Vsak pogovor vaših leadov, upravljan na enem mestu z vašim AI prodajnim agentom.',
+    cta: 'Oglejte si, kako deluje →',
     alt: 'Katalog kanalov z 40+ povezanimi platformami: WhatsApp, TikTok, Instagram, Messenger, Viber, LINE in več',
   },
 } as const;
@@ -55,6 +58,21 @@ const c = content[lang];
         loading="lazy"
         quality={90}
       />
+    </div>
+
+    <div class="v2-channels__cta" data-m="up" style="--m-d:.2s">
+      <a
+        href="javascript:void(0)"
+        class="v2-btn v2-btn-primary"
+        data-cal-link="kerim-alihodza-7u7w6q/30min"
+        data-cal-namespace="30min"
+        data-cal-config='{"layout":"month_view","theme":"dark"}'
+      >
+        {c.cta}
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </div>
 
   </div>
@@ -91,6 +109,12 @@ const c = content[lang];
   max-width: 56ch;
   line-height: 1.65;
   margin: 0;
+}
+
+.v2-channels__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .v2-channels__visual {
