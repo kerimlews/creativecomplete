@@ -31,7 +31,7 @@ faq:
 
 Raziskave iz B2C prodaje konsistentno kažejo: **kdor odgovori v 60 sekundah, konvertira do 21× bolje** kot kdor reagira šele po eni uri.
 
-Zakaj? Ker so leadi v trenutku, ko povpraševanje oddajo, pripravljeni na nakup. Vsaka minuta čakanja ohladi namen in dá konkurenci čas za prevzem pobude.
+Leadi so v trenutku, ko oddajo povpraševanje, pripravljeni na nakup. Vsaka minuta čakanja ohladi namen in dá konkurenci čas za prevzem pobude.
 
 ## Komponente sistema za hitrost do leada
 
@@ -44,7 +44,7 @@ AI agenti odgovorijo v manj kot 60 sekundah na vseh kanalih:
 - rezervacija termina neposredno v klepetu
 - predaja prodajalcu s polnim kontekstom
 
-### Unified inbox — 40+ kanalov, ena nadzorna plošča
+### Unified inbox: 40+ kanalov, ena nadzorna plošča
 
 Noben lead se ne bo več izgubil:
 
@@ -77,7 +77,7 @@ Stranke, ki implementirajo sistem za hitrost do leada, vidijo:
 
 - **60 %** krajših prodajnih ciklov
 - **81 %** stopnja konverzije leadov (vs. 20–30 % industrijsko povprečje)
-- **100 %** vseh leadov odgovorjenih — noben lead se ne izgubi
+- **100 %** vseh leadov odgovorjenih, noben lead se ne izgubi
 - **10 dni** do živega sistema
 
 [Sistem za hitrost do leada vzpostavi v 10 dneh →](/sl/contact/)

@@ -35,7 +35,7 @@ faq:
 
 Beautiful websites don't always convert. Most look polished but fail to turn visitors into customers. They load slowly, confuse visitors, and don't encourage action.
 
-A gorgeous website that doesn't convert is just an expensive business card. You pay for hosting and maintenance but see no return.
+A website that doesn't convert is just an expensive business card. You pay for hosting and maintenance but see no return.
 
 We design differently. Our websites work 24/7 like your best salesperson. Every element guides visitors toward becoming customers.
 
@@ -43,7 +43,7 @@ We design differently. Our websites work 24/7 like your best salesperson. Every 
 
 ### Conversion-Focused Design
 
-We don't just make websites look good — we make them convert. Every decision is based on:
+We don't just make websites look good. We make them convert. Every decision is based on:
 - User psychology and behavior
 - Conversion optimization principles
 - A/B testing results

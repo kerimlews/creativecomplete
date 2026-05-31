@@ -24,11 +24,11 @@ faq:
 
 ## Povzetek
 
-Švicarsko zdravstveno zaposlovanje je bilo ujeto v kameno dobo — ročni procesi, neskončno papirja in nezanesljivo sledenje kandidatom. Zgradili smo CareConnect: prilagojeno platformo z MERN stack (MongoDB, Express.js, React, Node.js), nameščeno na AWS, ki avtomatizira upravljanje kandidatov. Naša SEO strategija je podjetje postavila na #1 za vsak ključen iskalni izraz. Rezultat: **245 %** povečanje prometa, **90 %** zmanjšanje administrativnega dela in jasna prevlada na trgu.
+Švicarsko zdravstveno zaposlovanje je bilo ujeto v kameno dobo. Ročni procesi, neskončno papirja in nezanesljivo sledenje kandidatom so upočasnjevali vsak korak. Zgradili smo CareConnect: prilagojeno platformo z MERN stack (MongoDB, Express.js, React, Node.js), nameščeno na AWS, ki avtomatizira upravljanje kandidatov. Naša SEO strategija je podjetje postavila na #1 za vsak ključen iskalni izraz. Rezultat: **245 %** povečanje prometa, **90 %** zmanjšanje administrativnega dela in jasna prevlada na trgu.
 
 ## Misija
 
-CareConnect je vstopil na švicarski trg z jasno misijo: zaposliti zdravstvene delavce, pripravljene nuditi popolno pomoč, in jim najti boljše umestitve. Toda uvedba nove blagovne znamke na konkurenčnem trgu je zahtevala več kot le spletno stran — potrebovali so celoten digitalni ekosistem.
+CareConnect je vstopil na švicarski trg z jasno misijo: zaposliti zdravstvene delavce, pripravljene nuditi popolno pomoč, in jim najti boljše umestitve. Toda uvedba nove blagovne znamke na konkurenčnem trgu je zahtevala več kot le spletno stran. Potrebovali so celoten digitalni ekosistem.
 
 ## Izzivi, ki smo jih rešili
 

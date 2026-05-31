@@ -25,9 +25,9 @@ faq:
 
 Vertriebsteams verbringen **70%** ihrer Zeit mit Leads, die nie konvertieren.
 
-Nicht weil sie die falschen Prospects anrufen. Sondern weil sie keine Möglichkeit haben zu wissen, welche Leads ihre Zeit wert sind, bevor sie zum Hörer greifen. In einer [CRM](/de/blog/crm-automatisierung/)-Zeile sieht jeder Lead gleich aus — Name, Telefonnummer, vielleicht eine Quelle. Der einzige Weg herauszufinden, ob es sich lohnt, ist anzurufen.
+Nicht weil sie die falschen Prospects anrufen. Sondern weil sie keine Möglichkeit haben zu wissen, welche Leads ihre Zeit wert sind, bevor sie zum Hörer greifen. In einer [CRM](/de/blog/crm-automatisierung/)-Zeile sieht jeder Lead gleich aus, Name, Telefonnummer, vielleicht eine Quelle. Der einzige Weg herauszufinden, ob es sich lohnt, ist anzurufen.
 
-Also rufen die Reps alles an. Und 70% dieser Anrufe sind verschwendet — an Leute ohne Budget, ohne Timeline, ohne Entscheidungsautorität oder ohne echten Bedarf.
+Also rufen die Reps alles an. Und 70% dieser Anrufe sind verschwendet, an Leute ohne Budget, ohne Timeline, ohne Entscheidungsautorität oder ohne echten Bedarf.
 
 KI-Lead-Qualifizierung ändert das, indem sie den Qualifizierungsprozess durchführt, bevor ein Mensch eingreift.
 
@@ -35,17 +35,17 @@ KI-Lead-Qualifizierung ändert das, indem sie den Qualifizierungsprozess durchf�
 
 ![KI Lead-Qualifizierungs-Flow — Inbound-Lead kommt rein, KI führt BANT-Gespräch, Lead bekommt Score 0–100, Routing-Entscheidung automatisch](/images/blog/ai-lead-qualification/01-qualification-flow.svg)
 
-Wenn ein neuer Lead reinkommt — aus einer Ad, einer DM, einem Webformular oder einem anderen Kanal — startet ein AI Agent [in Sekunden](/de/blog/reaktionszeit/) einen konversationellen Austausch. Die Konversation wirkt natürlich, nicht skriptmäßig. Der Lead erlebt kein Formular und keine Umfrage. Er erlebt ein reaktives, sachkundiges Gegenüber, das seine Situation zu verstehen scheint.
+Wenn ein neuer Lead reinkommt, aus einer Ad, einer DM, einem Webformular oder einem anderen Kanal, startet ein AI Agent [in Sekunden](/de/blog/reaktionszeit/) einen konversationellen Austausch. Die Konversation wirkt natürlich, nicht skriptmäßig. Der Lead erlebt kein Formular und keine Umfrage, sondern ein reaktives, sachkundiges Gegenüber, das seine Situation zu verstehen scheint.
 
 Während dieser Konversation arbeitet die KI systematisch durch ein Qualifizierungs-Framework:
 
-Budget — Hat der Lead die finanzielle Kapazität für Ihre Lösung? Das ist nicht immer eine direkte Frage. Oft wird es aus Unternehmensgröße, genanntem Investitionsrahmen oder dem konkreten Problem abgeleitet, das gelöst werden soll.
+Budget: Hat der Lead die finanzielle Kapazität für Ihre Lösung? Das ist nicht immer eine direkte Frage. Oft wird es aus Unternehmensgröße, genanntem Investitionsrahmen oder dem konkreten Problem abgeleitet, das gelöst werden soll.
 
-Authority — Ist diese Person der Entscheider, oder muss sie andere ins Boot holen? Ein Lead ohne Autorität ist nicht disqualifiziert — er braucht andere Follow-up-Inhalte, die ihm helfen, den internen Business Case zu bauen.
+Authority: Ist diese Person der Entscheider, oder muss sie andere ins Boot holen? Ein Lead ohne Autorität ist nicht disqualifiziert, er braucht andere Follow-up-Inhalte, die ihm helfen, den internen Business Case zu bauen.
 
-Need — Ist das Problem, das er erlebt, eins, das Ihre Lösung tatsächlich löst? Ein präziser Fit zwischen Bedarf und Lösung ist der stärkste Prädiktor für die Abschlussquote. Leads mit klarem Bedarf schließen 2–3× häufiger ab als Leads mit vagem oder allgemeinem Interesse.
+Need: Ist das Problem, das er erlebt, eins, das Ihre Lösung tatsächlich löst? Ein präziser Fit zwischen Bedarf und Lösung ist der stärkste Prädiktor für die Abschlussquote. Leads mit klarem Bedarf schließen 2–3× häufiger ab als Leads mit vagem oder allgemeinem Interesse.
 
-Timeline — Wann will er entscheiden? Eine aktive Timeline (Wochen bis Monate) signalisiert echte Kaufabsicht. "Ich schaue mich nur um" ist ein Nurture-Signal, kein Disqualifizierungs-Signal.
+Timeline: Wann will er entscheiden? Eine aktive Timeline (Wochen bis Monate) signalisiert echte Kaufabsicht. "Ich schaue mich nur um" ist ein Nurture-Signal, kein Disqualifizierungs-Signal.
 
 ## Das Scoring-Modell
 
@@ -62,13 +62,13 @@ Typische Routing-Logik basierend auf Score:
 | 40–59 | Nurture | 14-Tage automatisierte Sequenz |
 | 0–39 | Kein Fit | Taggen und archivieren oder Langzeit-Drip |
 
-Das Scoring ist nicht willkürlich — es ist kalibriert gegen Ihre historischen Abschlussdaten. Leads, die wie Ihre Closed/Won-Deals aussehen, bekommen hohe Scores. Leads, die wie Ihre Closed/Lost-Deals aussehen, bekommen niedrige Scores. Das Modell verbessert sich über die Zeit, wenn mehr Ergebnisse zurückfließen.
+Das Scoring ist nicht willkürlich, sondern gegen Ihre historischen Abschlussdaten kalibriert. Leads, die wie Ihre Closed/Won-Deals aussehen, bekommen hohe Scores. Leads, die wie Ihre Closed/Lost-Deals aussehen, bekommen niedrige Scores. Das Modell verbessert sich über die Zeit, wenn mehr Ergebnisse zurückfließen.
 
 ## Was sich ändert, wenn Qualifizierung vor dem Rep passiert
 
 Die praktische Auswirkung ist nicht nur Effizienz. Sie verändert die gesamte Dynamik des Verkaufsgesprächs.
 
-Wenn ein Rep einen qualifizierten Lead erhält — mit Zusammenfassung von Budget-Range, Timeline, Bedarf und Entscheidungsautorität — muss er nicht die ersten 10 Minuten damit verbringen, diese Basics zu klären. Er hat sie bereits. Das Gespräch startet aus einer Position des Verstehens, nicht des Entdeckens.
+Wenn ein Rep einen qualifizierten Lead erhält, mit Zusammenfassung von Budget-Range, Timeline, Bedarf und Entscheidungsautorität, muss er nicht die ersten 10 Minuten damit verbringen, diese Basics zu klären. Er hat sie bereits. Das Gespräch startet aus einer Position des Verstehens, nicht des Entdeckens.
 
 ![Vor und nach KI-Qualifizierung — vorher: Rep ruft alle Leads an, die meisten sind unqualifiziert; nachher: Rep behandelt nur vorqualifizierte Leads mit vollem Kontext](/images/blog/ai-lead-qualification/03-before-after.svg)
 
@@ -81,13 +81,13 @@ Kunden, die KI-Lead-Qualifizierung implementieren, sehen typischerweise:
 
 ## Was KI-Qualifizierung nicht ist
 
-Es ist kein Ersatz für Ihren Vertriebsprozess. Es ist ein Filter und eine erste Schicht.
+Kein Ersatz für Ihren Vertriebsprozess. Sondern ein Filter und eine erste Schicht.
 
-Die KI schließt keine Deals. Sie behandelt keine Einwände ernsthafter Käufer. Sie verhandelt nicht. Sie macht die Arbeit, die aktuell **70%** der Rep-Zeit verschlingt — den initialen Qualifizierungs-Pass — und macht das schneller, konsistenter und zu jeder Tageszeit.
+Die KI schließt keine Deals. Sie behandelt keine Einwände ernsthafter Käufer. Sie verhandelt nicht. Sie macht die Arbeit, die aktuell **70%** der Rep-Zeit verschlingt, nämlich den initialen Qualifizierungs-Pass, und das schneller, konsistenter und zu jeder Tageszeit.
 
 Ihre Reps besitzen weiterhin die Beziehung. Sie besitzen sie nur aus einer viel stärkeren Startposition.
 
-Bei **CreativeComplete** ist KI-Lead-Qualifizierung in die zweite Phase unseres AI Customer Systems eingebaut. Jeder Inbound-Lead wird qualifiziert, bevor er Ihr Team berührt — egal woher er kam, wann er ankam oder wie viele gleichzeitig reinkamen.
+Bei **CreativeComplete** ist KI-Lead-Qualifizierung in die zweite Phase unseres AI Customer Systems eingebaut. Jeder Inbound-Lead wird qualifiziert, bevor er Ihr Team berührt, egal woher er kam, wann er ankam oder wie viele gleichzeitig reinkamen.
 
 Das System skaliert mit Ihrem Volumen. Wenn Sie morgen eine Kampagne starten und am Wochenende 400 Leads reinkommen, sind alle bis Montagmorgen qualifiziert, gescort und [geroutet](/de/blog/automatisierte-lead-verteilung/).
 

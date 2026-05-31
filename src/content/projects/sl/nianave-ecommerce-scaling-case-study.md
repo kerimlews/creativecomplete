@@ -24,7 +24,7 @@ faq:
 
 ## Povzetek
 
-Nianave smo pripeljali od 30k $ na **120k $/mesec** z inženirstvom celotne poti stranke — od Shopify arhitekture do izkušnje po nakupu. Rezultat: **300 %** rast prihodkov, **4,3 %** stopnja konverzije in blagovna znamka, ki upravičuje premium cene.
+Nianave smo pripeljali od 30k $ na **120k $/mesec** z inženirstvom celotne poti stranke, od Shopify arhitekture do izkušnje po nakupu. Rezultat: **300 %** rast prihodkov, **4,3 %** stopnja konverzije in blagovna znamka, ki upravičuje premium cene.
 
 ## Nasveti
 
@@ -62,18 +62,18 @@ Niso imeli problema trženja — imeli so problem izkušnje.
 
 ## 3 vzvodi za skaliranje, o katerih nihče ne govori
 
-### 1. Arhitektura kot orodje za konverzijo
+### Arhitektura kot orodje za konverzijo
 Shopify trgovino smo ponovno zgradili s prilagojenimi temami, ki razvijajo željo namesto le prikazujejo izdelke.
 
-### 2. Strategija plačil kot konkurenčna prednost
-Integrirali smo premium procesorje plačil, ki so stranke počutile varne pri porabi 200+ $.
+### Strategija plačil kot konkurenčna prednost
+Integrirali smo procesorje plačil, ki so stranke počutile varne pri porabi 200+ $.
 
-### 3. Izkušnja po nakupu kot motor zadrževanja
+### Izkušnja po nakupu kot motor zadrževanja
 Zgradili smo sisteme, ki so enkratne kupce spremenili v zagovornike blagovne znamke.
 
 ## Inženirstvo premium izkušnje
 
-Nismo optimizirali — ponovno smo zgradili:
+Nismo optimizirali, temveč smo ponovno zgradili:
 
 - prilagojeno odkritje izdelkov, ki se počuti kot osebno nakupovanje
 - mobilna izkušnja, boljša od namizne

@@ -24,19 +24,19 @@ faq:
 
 ## TL;DR
 
-Gym owners were running on a stack of 7+ disconnected tools: Mindbody for scheduling, separate door fobs, Stripe for payments, Mailchimp for emails, and more. We built Fitovision to replace all of them — a cloud-native platform powered by MERN stack (MongoDB, Express.js, React, Node.js) on AWS, with a React Native mobile app that acts as a member's key, wallet, and ID. The result: **95% automation** of gym operations, one subscription fee replacing seven, and improved member retention because the experience is frictionless.
+Gym owners were running on a stack of 7+ disconnected tools: Mindbody for scheduling, separate door fobs, Stripe for payments, Mailchimp for emails, and more. We built Fitovision to replace all of them. It's a cloud-native platform powered by MERN stack (MongoDB, Express.js, React, Node.js) on AWS, with a React Native mobile app that acts as a member's key, wallet, and ID. The result: **95% automation** of gym operations, one subscription fee replacing seven, and improved member retention because the experience is frictionless.
 
 ## The Mission
 
-Fitovision entered the Croatian market with a mission to help gym owners set up a digital gym presence and take control of their operations. The goal was to replace the chaotic multi-tool ecosystem with one unified platform.
+Fitovision entered the Croatian market to help gym owners set up a digital gym presence and take control of their operations. The goal was to replace the chaotic multi-tool ecosystem with one unified platform.
 
 ## The Challenges We Solved
 
 ### Challenge 1: Design Logo and Brand Identity
 
-**The Problem:** Fitovision needed a brand identity that conveyed innovation, fitness, and technology. The logo needed to work across web, mobile apps, and physical access devices.
+Fitovision needed a brand identity that conveyed innovation, fitness, and technology. The logo needed to work across web, mobile apps, and physical access devices.
 
-**Our Solution:** We designed a complete brand system using Figma:
+We designed a complete brand system using Figma:
 - Modern, tech-forward aesthetic appealing to gym owners and members
 - Scalable logo system working from app icons to large signage
 - Fitness-inspired color palette (energetic, motivating, professional)
@@ -47,9 +47,9 @@ The brand identity positioned Fitovision as the modern, tech-savvy solution for 
 
 ### Challenge 2: SEO Website Architecture
 
-**The Problem:** As a new brand in the Croatian market, Fitovision needed to rank for competitive gym management software keywords. Without proper SEO, they'd be invisible to gym owners searching for solutions.
+As a new brand in the Croatian market, Fitovision needed to rank for competitive gym management software keywords. Without proper SEO, they would be invisible to gym owners searching for solutions.
 
-**Our Solution:** We built an SEO-first architecture:
+We built an SEO-first architecture:
 - Keyword strategy targeting "gym management software Croatia," "fitness studio software," and related terms
 - Technical SEO optimization ensuring fast load times and mobile responsiveness
 - Content strategy creating valuable resources for gym owners
@@ -60,9 +60,9 @@ This SEO architecture, following our [SEO service](/services/seo/) methodology, 
 
 ### Challenge 3: Design Website
 
-**The Problem:** The website needed to explain a complex SaaS platform in simple terms, convert gym owners into trial users, and build trust in a new brand.
+The website needed to explain a complex SaaS platform in simple terms, convert gym owners into trial users, and build trust in a new brand.
 
-**Our Solution:** We designed a conversion-focused website using React:
+We designed a conversion-focused website using React:
 - Clear value propositions showing how Fitovision replaces 7+ tools
 - Interactive demos letting gym owners see the platform in action
 - Social proof (testimonials, case studies, user counts)
@@ -73,9 +73,9 @@ The website design, following our [web design](/services/web-design/) principles
 
 ### Challenge 4: Multi-Tenant Architecture on Backend
 
-**The Problem:** Fitovision needed to serve multiple gyms (tenants) from one platform, with complete data isolation between gyms while sharing infrastructure efficiently.
+Fitovision needed to serve multiple gyms (tenants) from one platform, with complete data isolation between gyms while sharing infrastructure efficiently.
 
-**Our Solution:** We architected a robust multi-tenant system using Node.js and MongoDB:
+We architected a robust multi-tenant system using Node.js and MongoDB:
 - Tenant isolation ensuring complete data separation between gyms
 - Shared infrastructure reducing costs while maintaining security
 - Scalable database design using MongoDB's flexible schema
@@ -84,11 +84,11 @@ The website design, following our [web design](/services/web-design/) principles
 
 The multi-tenant architecture, built with our [SaaS development](/services/saas-development/) expertise, allows Fitovision to scale to thousands of gyms without performance degradation.
 
-### Challenge 5: WDMS - Remotely Device Controlling (SMART Gym)
+### Challenge 5: WDMS — Remotely Device Controlling (SMART Gym)
 
-**The Problem:** The most technically complex challenge: complete remote control of physical gym access. Not just a digital membership card, but the ability to open doors from anywhere in the world.
+The most technically complex challenge was full remote control of physical gym access. Not just a digital membership card, but the ability to open doors from anywhere in the world.
 
-**Our Solution:** We engineered a cloud-based Workout & Door Management System (WDMS):
+We engineered a cloud-based Workout & Door Management System (WDMS):
 - Cloud-first architecture moving all logic to AWS
 - Secure persistent connection between cloud WDMS and on-site access controllers
 - Real-time command system sending "OPEN" commands in under 2 seconds
@@ -97,11 +97,11 @@ The multi-tenant architecture, built with our [SaaS development](/services/saas-
 
 The WDMS, deployed on AWS infrastructure, achieved 99.99% uptime and changed how gyms control physical access.
 
-### Challenge 6: CRM - Member Management System
+### Challenge 6: CRM — Member Management System
 
-**The Problem:** Gym owners needed a comprehensive CRM to manage members, track attendance, handle communications, and analyze member behavior.
+Gym owners needed a comprehensive CRM to manage members, track attendance, handle communications, and analyze member behavior.
 
-**Our Solution:** We built a custom CRM integrated with the platform:
+We built a custom CRM integrated with the platform:
 - Member profiles storing complete information and preferences
 - Attendance tracking automatically logging check-ins via mobile app
 - Communication hub managing emails, SMS, and push notifications
@@ -112,9 +112,9 @@ The CRM, built with our [automation](/services/automation/) capabilities, elimin
 
 ### Challenge 7: QR Scan System
 
-**The Problem:** Members needed a quick, contactless way to check in and access facilities without physical cards or fobs.
+Members needed a quick, contactless way to check in and access facilities without physical cards or fobs.
 
-**Our Solution:** We implemented a QR code scanning system:
+We implemented a QR code scanning system:
 - QR code generation unique to each member in the mobile app
 - Scanner integration in access controllers and front desk systems
 - Instant verification checking membership status in real-time
@@ -125,9 +125,9 @@ The QR system, combined with the React Native mobile app, provided a seamless, m
 
 ### Challenge 8: Subscription System
 
-**The Problem:** Fitovision needed a flexible subscription system handling multiple pricing tiers, billing cycles, and payment methods for both gym owners and their members.
+Fitovision needed a flexible subscription system handling multiple pricing tiers, billing cycles, and payment methods for both gym owners and their members.
 
-**Our Solution:** We built a comprehensive subscription management system:
+We built a comprehensive subscription management system:
 - Multiple pricing tiers (Basic, Pro, Enterprise) for gym owners
 - Member subscription management allowing gyms to set their own pricing
 - Automated billing processing payments on schedule
@@ -136,11 +136,11 @@ The QR system, combined with the React Native mobile app, provided a seamless, m
 
 The subscription system, following our [SaaS development](/services/saas-development/) best practices, handles thousands of subscriptions reliably.
 
-### Challenge 9: Email Marketing - Automated Email Sequences
+### Challenge 9: Email Marketing — Automated Email Sequences
 
-**The Problem:** Gym owners needed automated email campaigns for member onboarding, retention, promotions, and re-engagement without manual work.
+Gym owners needed automated email campaigns for member onboarding, retention, promotions, and re-engagement without manual work.
 
-**Our Solution:** We built automated email marketing using AWS SES:
+We built automated email marketing using AWS SES:
 - Welcome sequences for new members
 - Retention campaigns for inactive members
 - Promotional emails for special offers and events

@@ -25,7 +25,7 @@ faq:
 
 Sales teams spend 70% of their time on leads that will never convert.
 
-Not because they're choosing the wrong prospects to call. Because they have no way to know which leads are worth their time before they pick up the phone. Every lead looks the same in a [CRM](/blog/crm-automation/) row — a name, a phone number, maybe a source. The only way to know if it's worth pursuing is to call it.
+Not because they're choosing the wrong prospects to call. Because they have no way to know which leads are worth their time before they pick up the phone. Every lead looks the same in a [CRM](/blog/crm-automation/) row, a name, a phone number, maybe a source. The only way to know if it's worth pursuing is to call it.
 
 So reps call everything. And 70% of those calls are wasted on people who have no budget, no timeline, no decision authority, or no real need.
 
@@ -35,13 +35,13 @@ AI lead qualification changes this by running the qualification process before a
 
 ![AI lead qualification flow — inbound lead enters, AI conducts BANT conversation, lead receives score 0-100, routing decision made automatically](/images/blog/ai-lead-qualification/01-qualification-flow.svg)
 
-When a new lead comes in — from an ad, a DM, a web form, or any other channel — an AI Agent initiates a conversational exchange [within seconds](/blog/speed-to-lead/). The conversation is natural, not scripted. The lead doesn't experience a form or a survey. They experience a responsive, knowledgeable entity that seems to understand their situation.
+When a new lead comes in, from an ad, a DM, a web form, or any other channel, an AI Agent initiates a conversational exchange [within seconds](/blog/speed-to-lead/). The conversation is natural, not scripted. The lead doesn't experience a form or a survey. They experience a responsive, knowledgeable entity that seems to understand their situation.
 
 Through that conversation, the AI systematically works through a qualification framework:
 
 Budget — Does the lead have the financial capacity for your solution? This isn't always a direct question. Often it's inferred from company size, stated investment range, or the specific problem they're trying to solve.
 
-Authority — Is this person the decision-maker, or do they need to bring others into the process? A lead without authority isn't disqualified — they need different follow-up content that helps them build the internal business case.
+Authority — Is this person the decision-maker, or do they need to bring others into the process? A lead without authority isn't disqualified. They need different follow-up content that helps them build the internal business case.
 
 Need — Is the problem they're experiencing one your solution actually solves? A precise fit between need and solution is the strongest predictor of close rate. Leads with a clear need close at 2–3× the rate of leads with vague or general interest.
 
@@ -62,17 +62,17 @@ Typical routing logic based on score:
 | 40–59 | Nurture | 14-day automated sequence |
 | 0–39 | Not a fit | Tag and archive, or long-term drip |
 
-The scoring isn't arbitrary — it's calibrated against your historical close data. Leads that look like your closed/won deals get high scores. Leads that look like your closed/lost deals get low scores. The model improves over time as more outcomes feed back into it.
+The scoring isn't arbitrary. It's calibrated against your historical close data. Leads that look like your closed/won deals get high scores. Leads that look like your closed/lost deals get low scores. The model improves over time as more outcomes feed back into it.
 
 ## What Changes When Qualification Happens Before the Rep
 
 The practical impact isn't just efficiency. It changes the entire dynamic of the sales conversation.
 
-When a rep receives a qualified lead — one with a summary of their budget range, their timeline, their stated need, and their decision authority — they don't have to spend the first 10 minutes of a call trying to establish these basics. They already have them. The conversation starts from a position of understanding, not discovery.
+When a rep receives a qualified lead, one with a summary of their budget range, their timeline, their stated need, and their decision authority, they don't have to spend the first 10 minutes of a call trying to establish these basics. They already have them. The conversation starts from a position of understanding, not discovery.
 
 ![Before and after AI qualification — before: rep calls all leads, most are unqualified; after: rep only handles pre-qualified leads with full context](/images/blog/ai-lead-qualification/03-before-after.svg)
 
-The result: shorter sales cycles, higher close rates, and reps who spend their working hours closing rather than prospecting.
+Shorter sales cycles, higher close rates, and reps who spend their working hours closing rather than prospecting.
 
 Clients who implement AI lead qualification typically see:
 - **65–80% reduction** in time spent on unqualified leads
@@ -83,11 +83,11 @@ Clients who implement AI lead qualification typically see:
 
 It's not a replacement for your sales process. It's a filter and a first layer.
 
-The AI doesn't close deals. It doesn't handle objections from serious buyers. It doesn't negotiate. It does the work that currently consumes 70% of a rep's time — the initial qualification pass — and does it faster, more consistently, and at any hour of the day.
+The AI doesn't close deals. It doesn't handle objections from serious buyers. It doesn't negotiate. It does the work that currently consumes 70% of a rep's time, the initial qualification pass, and does it faster, more consistently, and at any hour of the day.
 
 Your reps still own the relationship. They just own it from a much stronger starting position.
 
-At **CreativeComplete**, AI lead qualification is built into the second phase of our AI Customer System. Every inbound lead gets qualified before it touches your team — regardless of where it came from, what time it arrived, or how many came in at once.
+At **CreativeComplete**, AI lead qualification is built into the second phase of our AI Customer System. Every inbound lead gets qualified before it touches your team, regardless of where it came from, what time it arrived, or how many came in at once.
 
 The system scales with your volume. If you run a campaign tomorrow and 400 leads come in over the weekend, every one of them is qualified, scored, and [routed](/blog/automated-lead-distribution/) by Monday morning.
 

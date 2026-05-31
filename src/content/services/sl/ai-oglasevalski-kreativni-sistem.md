@@ -29,9 +29,9 @@ faq:
 
 ## Problem z ročno produkcijo oglaševalskih materialov
 
-Tradicionalne agencije potrebujejo tedne za nov kreativni material. Ko gre v živo, se je trg že spremenil. In brez podatkov šele po objavi veste, ali deluje — ko je vaš proračun že porabljen.
+Tradicionalne agencije potrebujejo tedne za nov kreativni material. Ko gre v živo, se je trg že spremenil. Brez podatkov šele po objavi veste, ali deluje, ko je vaš proračun že porabljen.
 
-**Rezultat:** Visok CPL, nizek ROAS, neskončni kreativni cikli brez merljivih izboljšav.
+Visok CPL, nizek ROAS in neskončni kreativni cikli brez merljivih izboljšav so posledica tega pristopa.
 
 ## Kako AI kreativni sistem deluje
 
@@ -39,9 +39,9 @@ Tradicionalne agencije potrebujejo tedne za nov kreativni material. Ko gre v ži
 
 Analiziramo vaše pretekle podatke o kampanjah in jih kombiniramo z vpogledi specifičnimi za panogo iz $35 mrd.+ oglaševalskih podatkov:
 
-- Katera sporočila odmevajo pri vaši ciljni skupini?
-- Kateri vizualni stili delujejo v vaši panogi?
-- Kateri pozivi k dejanju konvertirajo pri vaši cenovni ravni?
+- katera sporočila odmevajo pri vaši ciljni skupini
+- kateri vizualni stili delujejo v vaši panogi
+- kateri pozivi k dejanju konvertirajo pri vaši cenovni ravni
 
 ### AI produkcija: 8–12 variant tedensko
 
@@ -66,7 +66,7 @@ Preden se porabi en cent, naša AI oceni vsak kreativni material:
 Vsak teden se sistem uči:
 
 - kateri kreativni materiali dosegajo boljše rezultate od napovedi
-- kateri elementi — barva, naslov, poziv k dejanju — poganjajo konverzije
+- kateri elementi, kot so barva, naslov in poziv k dejanju, poganjajo konverzije
 - kako se razvija ciljna skupina
 
 ## Dokazani rezultati

@@ -93,7 +93,7 @@ Naše avtomatizacije uporabljajo AI za razumevanje konteksta, učenje iz vzorcev
 
 ### Integracija in testiranje
 
-Povežemo vse z vašimi obstoječimi sistemi — CRM, e-pošta, računovodstvo — in temeljito preizkusimo pred zagonom. Usposobimo vašo ekipo in sledimo zmogljivosti po zagonu.
+Povežemo vse z vašimi obstoječimi sistemi, kot so CRM, e-pošta in računovodstvo, ter temeljito preizkusimo pred zagonom. Usposobimo vašo ekipo in sledimo zmogljivosti po zagonu.
 
 ### Neprekinjena optimizacija
 

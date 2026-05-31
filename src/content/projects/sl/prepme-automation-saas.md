@@ -24,14 +24,14 @@ faq:
 
 ## TL;DR
 
-PrepMe se je utapljal v ročni obdelavi naročil - preglednice, CSV datoteke in ustvarjanje dokumentov, ki so porabljali 300+ ur mesečno. Zgradili smo prilagojeno Shopify integrirano platformo, ki je avtomatizirala njihov celoten delovni tok. Rezultat: 80% zmanjšanje časa, 280k $ letne prihranke in podjetje, ki skaliramo brez dodajanja osebja.
+PrepMe se je utapljal v ročni obdelavi naročil. Preglednice, CSV datoteke in ustvarjanje dokumentov so porabljali 300+ ur mesečno. Zgradili smo prilagojeno Shopify integrirano platformo, ki je avtomatizirala njihov celoten delovni tok. Rezultat: **80 %** zmanjšanje časa, **280k $** letnih prihrankov in podjetje, ki raste brez dodajanja osebja.
 
 ## Nasveti
 
-- **Nehajte sprejemati 'tako se to naredi' kot odgovor**
-- **Če ročno obdelujete CSV datoteke, zapravljate denar**
-- **Prilagojena avtomatizacija se povrne hitreje kot najem**
-- **Integracija premaga zamenjavo** - delujte z vašimi obstoječimi orodji
+- Nehajte sprejemati "tako se to naredi" kot odgovor
+- Če ročno obdelujete CSV datoteke, zapravljate denar
+- Prilagojena avtomatizacija se povrne hitreje kot najem
+- Integracija premaga zamenjavo — delujte z obstoječimi orodji
 
 ## Kazalo vsebine
 
@@ -39,7 +39,6 @@ PrepMe se je utapljal v ročni obdelavi naročil - preglednice, CSV datoteke in 
 - [Gradnja avtomatizacijskega motorja](#gradnja-avtomatizacijskega-motorja)
 - [Shopify integracija, ki res deluje](#shopify-integracija-ki-res-deluje)
 - [Rezultati: Od preobremenjenih do optimiziranih](#rezultati-od-preobremenjenih-do-optimiziranih)
-- [Vas ročno delo stane denar?](#vas-ročno-delo-stane-denar)
 
 ## 300-urna mesečna časovna izguba
 
@@ -75,10 +74,10 @@ Nadomestili smo njihov ročni kaos z:
 
 Večina "integracij" so samo izvozi podatkov. Zgradili smo pravi dvosmerni sistem:
 
-- **Naročila tečejo avtomatično** v upravljalno platformo
-- **Posodobitve zalog** se sinhronizirajo nazaj v Shopify
-- **Komunikacija s strankami** se sledi v obeh sistemih
-- **Ni ročnega vnosa podatkov** potrebnega
+- Naročila tečejo avtomatično v upravljalno platformo
+- Posodobitve zalog se sinhronizirajo nazaj v Shopify
+- Komunikacija s strankami se sledi v obeh sistemih
+- Ni ročnega vnosa podatkov potrebnega
 
 ## Rezultati: Od preobremenjenih do optimiziranih
 
@@ -86,12 +85,3 @@ Večina "integracij" so samo izvozi podatkov. Zgradili smo pravi dvosmerni siste
 - **280.000 $ letne prihranke** pri stroških dela
 - **Nič napak** pri obdelavi naročil (v primerjavi s 5% stopnjo napak prej)
 - **Skalabilna podlaga** za 10x rast brez dodajanja osebja
-
-## Vas ročno delo stane denar?
-
-Če imate zaposlene, ki delajo delo, ki bi lahko bilo avtomatizirano, ne prihranjujete denarja - ga zapravljate.
-
-**Gradimo avtomatizacijo, ki se povrne v 90 dneh.** Če ste pripravljeni nehati plačevati ljudi za delo robotov...
-
-**Kontaktirajte nas za našo oceno priložnosti avtomatizacije.** Izračunali vam bomo točno, koliko vas ročni procesi stanejo.
-

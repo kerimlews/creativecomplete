@@ -131,11 +131,11 @@ Schnellere Bestellverarbeitung, bessere Bestandsverwaltung, weniger Support-Tick
 
 ### Fallstudie: Spezial-E-Commerce-Shop
 
-**Herausforderung:** Ein Online-Spezialshop konvertierte mit 0,8% (unter Branchendurchschnitt) trotz guter Produkte und Traffic.
+Herausforderung: Ein Online-Spezialshop konvertierte mit 0,8% (unter Branchendurchschnitt) trotz guter Produkte und Traffic.
 
-**Lösung:** Wir optimierten Produktseiten, strafften Checkout, verbesserten mobile Erfahrung und implementierten Warenkorb-Wiederherstellung.
+Lösung: Wir optimierten Produktseiten, strafften Checkout, verbesserten mobile Erfahrung und implementierten Warenkorb-Wiederherstellung.
 
-**Ergebnisse:**
+Ergebnisse:
 - Konversionsrate stieg auf 3,2% (4x Verbesserung)
 - 185% Umsatzsteigerung vom gleichen Traffic
 - 40% Reduzierung der Warenkorb-Verlassen

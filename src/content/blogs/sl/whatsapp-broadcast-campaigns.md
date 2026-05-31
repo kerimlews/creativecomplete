@@ -27,7 +27,7 @@ Imate [CRM](/sl/blog/crm-avtomatizacija/) poln ljudi, ki vas že poznajo, so že
 
 Ta baza je vredna veliko več, kot iz nje črpate.
 
-Povprečno podjetje generira 80% prihodka od 20% baze strank — in skoraj nič ne stori za sistematično ponovno aktivacijo preostalih 80%. Ne zato, ker nočejo. Ker so stopnje odprtja e-mailov 18%, hladni klici gredo v glasovno pošto in nimajo zanesljivega kanala za dobivanje odzivov.
+Povprečno podjetje generira 80% prihodka od 20% baze strank in skoraj nič ne stori za sistematično ponovno aktivacijo preostalih 80%. Ne zato, ker nočejo, ampak ker so stopnje odprtja e-mailov 18%, hladni klici gredo v glasovno pošto in ni zanesljivega kanala za dobivanje odzivov.
 
 WhatsApp popolnoma spremeni matematiko.
 
@@ -41,7 +41,7 @@ WhatsApp ni boljši e-mail. Je drugačen medij s temeljito drugačno dinamiko an
 - **45% stopnja odgovora** — ker je medij konverzacijski po zasnovi
 - **3–5× višja konverzija** kot e-mail za isto občinstvo in ponudbo
 
-Razlog ni magija platforme. Je kontekst. Ko sporočilo pride na WhatsApp, je prejemnik v načinu osebne komunikacije. Psihološki okvir je drugačen od e-maila, ki je bil treniran kot komercialni medij. WhatsApp se bere kot sporočilo od osebe, ne od znamke — celo če je očitno iz podjetja.
+Razlog ni magija platforme. Je kontekst. Ko sporočilo pride na WhatsApp, je prejemnik v načinu osebne komunikacije. Psihološki okvir je drugačen od e-maila, ki je bil treniran kot komercialni medij. WhatsApp se bere kot sporočilo od osebe, ne od znamke, celo če je očitno iz podjetja.
 
 ## Tri-segmentna broadcast strategija
 
@@ -53,15 +53,15 @@ Zmagovalni pristop je segmentacija. Trije segmenti, tri sporočila, trije mehani
 
 ### Segment 1: Nedavne stranke (0–90 dni)
 
-Ljudje, ki so pravkar kupili od vas, so na vrhuncu zadovoljstva in vrhuncu odprtosti za ponovni nakup. Vedo, da vaš produkt deluje. Zaupajo znamki. Konverzijska ovira je najnižja, kot bo kdaj.
+Ljudje, ki so pravkar kupili od vas, so na vrhuncu zadovoljstva in odprtosti za ponovni nakup. Vedo, da vaš produkt deluje. Zaupajo znamki. Konverzijska ovira je najnižja, kot bo kdaj.
 
-Sporočilo za ta segment je komplementarna ponudba — produkt, ki naravno sledi tistemu, ki so ga ravnokar kupili, ali nadgradnja, ki povečuje njihovo vrednost za vas. Časovnica: 30 dni po nakupu. CTA: enojna povezava ali sprožilec "Odgovori DA".
+Sporočilo za ta segment je komplementarna ponudba, produkt, ki naravno sledi tistemu, ki so ga ravnokar kupili, ali nadgradnja, ki povečuje njihovo vrednost za vas. Časovnica: 30 dni po nakupu. CTA: enojna povezava ali sprožilec "Odgovori DA".
 
 Pričakovana stopnja odgovora: **12–25%**
 
 ### Segment 2: Neaktivne visoko vredne stranke (91–365 dni)
 
-To so vaše najboljše nekdanje stranke, ki so utihnile. Niso odšle jezne — le bile so raztresene, našle so začasno alternativo ali pozabile. Imajo najvišji potencial doživljenjske vrednosti od katerega koli segmenta.
+To so vaše najboljše nekdanje stranke, ki so utihnile. Niso odšle jezne, le bile so raztresene, našle so začasno alternativo ali pozabile. Imajo najvišji potencial doživljenjske vrednosti od katerega koli segmenta.
 
 Sporočilo za ta segment je ponovno-aktivacijska ponudba z razlogom za vrnitev zdaj: sezonska promocija, lansiranje novega produkta ali ekskluziven popust za vračajoče se stranke. Sporočilo prizna vrzel ("Že nekaj časa je minilo ...") brez nerodnosti.
 
@@ -69,7 +69,7 @@ Pričakovana stopnja odgovora: **8–18%**
 
 ### Segment 3: Nepretvorjeni leadi
 
-Vsako podjetje ima [leade](/sl/blog/whatsapp-pridobivanje-leadov/), ki so izrazili zanimanje, šli skozi del procesa kvalifikacije in nato postali hladni. To niso mrtvi leadi — so zakasnele odločitve.
+Vsako podjetje ima [leade](/sl/blog/whatsapp-pridobivanje-leadov/), ki so izrazili zanimanje, šli skozi del procesa kvalifikacije in nato postali hladni. To niso mrtvi leadi, so zakasnele odločitve.
 
 Broadcast za ta segment ponovno aktivira razmislek. Sporočilo se sklicuje na to, kar so gledali, naslavlja najpogostejši razlog za zamudo (časovnica, proračun, negotovost) in jim daje jasno pot nazaj. Časovno omejena ponudba ali brezplačno posvetovanje zniža trenje za ponovno angažiranje.
 
@@ -92,13 +92,13 @@ To ni teoretična projekcija. Je realna struktura kampanje, ki proizvaja resnič
 
 ## Kaj se zgodi po broadcastu
 
-Broadcast odpre pogovor. Ta pogovor je treba obvladovati — in tukaj večina podjetij izgubi prihodek, ki so ga pravkar odklenila.
+Broadcast odpre pogovor. Ta pogovor je treba obvladovati, in tukaj večina podjetij izgubi prihodek, ki so ga pravkar odklenila.
 
 AI agent obvladuje odgovore v realnem času, nadaljuje kvalifikacijski pogovor, odgovarja na vprašanja o produktu in usmerja [vroče odzivnike](/sl/blog/ai-kvalifikacija-leadov/) k prodajnemu predstavniku ali povezavi za rezervacijo. Leadi, ki se odzovejo, vendar niso takoj pripravljeni kupiti, so označeni za follow-up zaporedja.
 
 Broadcast ni enkratni dogodek. Je otvoritvena poteza v stalnem monetizacijskem sistemu. Vsaka kampanja proizvede prihodek, podatke o tem, kaj odzvanja, in izpopolnjen segment seznam za naslednjo.
 
-Pri **CreativeComplete** so WhatsApp broadcast kampanje zgrajene kot del Retain faze AI Customer Systema — integrirane z vašim CRM, AI kvalifikacijsko plastjo in prodajno pošto, tako da vsak odgovor generira sledljiv prihodkovni dogodek.
+Pri **CreativeComplete** so WhatsApp broadcast kampanje zgrajene kot del Retain faze AI Customer Systema, integrirane z vašim CRM, AI kvalifikacijsko plastjo in prodajno pošto, tako da vsak odgovor generira sledljiv prihodkovni dogodek.
 
 Večina strank lansira prvo kampanjo v **5 dneh** od onboardinga.
 

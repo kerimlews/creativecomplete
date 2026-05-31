@@ -33,11 +33,11 @@ faq:
 
 ## What is Local SEO and Why Does It Matter?
 
-Local SEO is the practice of optimizing your online presence to get found by customers searching for your services in your specific geographic area. When someone searches "plumber near me" or "best restaurant in [city]", local SEO ensures your business appears in those results.
+Local SEO is the practice of optimizing your online presence so customers find you when they search for your services in your area. When someone searches "plumber near me" or "best restaurant in [city]", local SEO ensures your business appears in those results.
 
 Most local businesses are invisible online. They don't show up when customers search for their services, so they lose business to competitors who are optimized for local search.
 
-76% of people who search on their smartphone for something nearby visit a business within a day. Local SEO puts your business in front of customers who are ready to buy, right now.
+**76% of smartphone searches** for something nearby result in a visit to a business within a day. Local SEO puts your business in front of customers who are ready to buy, right now.
 
 We optimize your Google Business Profile, build local citations, and manage your online reputation to make sure you're the first business customers find.
 

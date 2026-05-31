@@ -107,11 +107,11 @@ Sie erhalten **45% weniger** Kundenabwanderung, einen direkten Marketingkanal du
 
 ### Fallstudie: Fitnessstudio Mobile App
 
-**Herausforderung:** Ein Fitnessstudio wollte die Mitgliederbindung erhöhen und es Kunden einfacher machen, Kurse zu buchen und zu bezahlen.
+Herausforderung: Ein Fitnessstudio wollte die Mitgliederbindung erhöhen und es Kunden einfacher machen, Kurse zu buchen und zu bezahlen.
 
-**Lösung:** Wir bauten eine Mobile App mit Kursbuchung, Zahlungsverarbeitung, Push-Benachrichtigungen für Kurserinnerungen und einem Treueprogramm.
+Lösung: Wir bauten eine Mobile App mit Kursbuchung, Zahlungsverarbeitung, Push-Benachrichtigungen für Kurserinnerungen und einem Treueprogramm.
 
-**Ergebnisse:**
+Ergebnisse:
 - 3X Umsatzwachstum in 6 Monaten
 - 45% Reduzierung der Kundenabwanderung
 - 60% der Buchungen jetzt über die App

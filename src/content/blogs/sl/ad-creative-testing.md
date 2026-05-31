@@ -25,23 +25,23 @@ faq:
 
 Razlika med kampanjo z 2× ROAS in kampanjo z 12× ROAS je običajno ena sama kreativa.
 
-Ne produkt. Ne ciljanje. Ne proračun. Kreativa, ki bodisi ustavi skrolanje in konvertira — ali ne.
+Ne produkt. Ne ciljanje. Ne proračun. Kreativa, ki bodisi ustavi skrolanje in konvertira, ali ne.
 
-Težava je v tem, da iskanje te kreative zahteva testiranje. In večina oglasnih računov ne testira dovolj — ker je produkcija dovolj različic počasna in draga, in večina podjetij nima sistematičnega okvira za to, kaj testirati, v kakšnem vrstnem redu in kako dolgo.
+Težava je v tem, da iskanje te kreative zahteva testiranje. In večina oglasnih računov ne testira dovolj, ker je produkcija dovolj različic počasna in draga. Večina podjetij nima sistematičnega okvira za to, kaj testirati, v kakšnem vrstnem redu in kako dolgo.
 
-Tukaj je okvir.
+Tukaj je ta okvir.
 
 ## Zakaj večina testiranja kreativ propade
 
-Najpogostejše napake pri testiranju kreativ — in zakaj proizvajajo slabe podatke:
+Najpogostejše napake pri testiranju kreativ povzročajo slabe podatke:
 
 Premalo testiranih različic. Tri različice kreativ in razglasitev zmagovalca je kot intervju treh kandidatov za delo, ko najboljša oseba sploh ni bila intervjuvana. Zmagovalec v testu s 3 različicami je najboljši od treh, ne najboljši možni. Z 20 različicami najdete pravega zmagovalca.
 
-Testiranje več spremenljivk hkrati. Sprememba slike, naslova in CTA hkrati pomeni, da ne morete vedeti, kaj je povzročilo razliko v zmogljivosti. Če Različica A prekaša Različico B, je to slika? Naslov? Ne morete reči. Testirajte eno spremenljivko na eksperiment.
+Testiranje več spremenljivk hkrati. Sprememba slike, naslova in CTA hkrati pomeni, da ne morete vedeti, kaj je povzročilo razliko v zmogljivosti. Če Različica A prekaša Različico B, je to slika? Naslov? Odgovora ni. Testirajte eno spremenljivko na eksperiment.
 
 Prezgodnja zaustavitev testov. Kreativa, ki dobro deluje v prvih 48 urah, to morda počne zaradi pristranskosti učenja platforme, ne prave zmogljivosti. Ustavitev pred statistično značilnostjo proizvede lažne zmagovalce, ki razpadejo, ko jih skalirate.
 
-Premalo proračuna na različico. 500 € razdeljeno na 10 različic da vsaki različici 50 € — premalo podatkov za kakršen koli zaključek. Dodelitev proračuna mora ustrezati testni strukturi.
+Premalo proračuna na različico. 500 € razdeljeno na 10 različic da vsaki različici 50 €, kar je premalo podatkov za kakršen koli zaključek. Dodelitev proračuna mora ustrezati testni strukturi.
 
 ## 4-fazni okvir testiranja kreativ
 
@@ -53,7 +53,7 @@ Test se začne z obsegom. Preden lansirate en sam oglas, je cilj imeti 15–30 r
 
 [AI generiranje kreativ](/sl/blog/ai-oglasne-kreative/) to omogoča brez sorazmernega povečanja produkcijskih stroškov. En brief — znamka, smer copyja, ciljno občinstvo, platforma — proizvede 20+ različic v minutah, vsako vnaprej ocenjeno za napovedano zmogljivost.
 
-Vnaprejšnje ocenjevanje ne odpravi testiranja. Odpravi pa najslabše izvajalce, preden porabijo kakršen koli proračun. Če AI napove, da bo 8 različic slabo delovalo na podlagi vzorcev primerljivih kampanj, lahko lansirate top 12 in preskočite zapravljanje proračuna na spodnjih 8.
+Vnaprejšnje ocenjevanje ne odpravi testiranja. Odpravi pa najslabše izvajalce, preden porabijo kakršen koli proračun. Če AI napove, da bo 8 različic slabo delovalo na podlagi vzorcev primerljivih kampanj, lansirate top 12 in preskočite zapravljanje proračuna na spodnjih 8.
 
 ### Faza 2: Strukturirajte test
 
@@ -63,7 +63,7 @@ Vseh 20 različic ne gre v zrak hkrati. Testna struktura je odvisna od vašega p
 - Srednji proračun (3.000–15.000 €/mesec): testirajte 8–12 različic hkrati, tedenski cikel
 - Visok proračun (15.000 €+/mesec): testirajte 20+ različic, uporabite AI za samodejno zaustavitev slabih izvajalcev v realnem času
 
-Vsaka različica dobi enak proračun v testni fazi. Enaki pogoji so bistveni — vsaka prednost proračuna bo izkrivila rezultat.
+Vsaka različica dobi enak proračun v testni fazi. Enaki pogoji so bistveni, saj vsaka prednost proračuna izkrivlja rezultat.
 
 ### Faza 3: Spremljajte statistično značilnost
 
@@ -96,6 +96,6 @@ Stranka, ki vstopi s 3-variantnim oglasnim računom in se premakne na 20-variant
 - **3–5× povečanje** števila dobičkonosnih kreativnih konceptov, ki tečejo hkrati
 - predvidljivo kreativno cev — vedno imate pripravljene testirane različice za zamenjavo utrujenih oglasov
 
-Pri **CreativeComplete** je testiranje kreativ vgrajeno v AI Creative Engine — AI generira različice, jih vnaprej oceni, vodi testno strukturo in samodejno skalira zmagovalce ob zaustavitvi slabih izvajalcev. Celoten proces teče, ne da bi vaša ekipa ročno spremljala zmogljivost oglasov ali sprejemala kreativne odločitve v negotovosti.
+Pri **CreativeComplete** je testiranje kreativ vgrajeno v AI Creative Engine. AI generira različice, jih vnaprej oceni, vodi testno strukturo in samodejno skalira zmagovalce ob zaustavitvi slabih izvajalcev. Celoten proces teče, ne da bi vaša ekipa ročno spremljala zmogljivost oglasov ali sprejemala kreativne odločitve v negotovosti.
 
 Cilj je kreativna operacija, kjer vedno veste, kaj deluje, zakaj deluje in kaj testirati naprej.

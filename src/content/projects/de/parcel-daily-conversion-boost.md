@@ -33,33 +33,33 @@ faq:
 
 ## Zusammenfassung
 
-Ein Kurier- und E-Commerce-Logistikunternehmen generierte erhebliches Lead-Volumen aus Meta- und TikTok-Anzeigen — konvertierte aber nur einen Bruchteil davon. Fragmentierte Abläufe, Spam aus Anzeigenkampagnen und manuelle Datenerfassung fraßen die Marge. AI Customer System vereinheitlichte den gesamten Funnel, setzte KI-Agenten für Lead-Qualifizierung und Datenerfassung ein, integrierte Konversionssignale zurück in Meta und TikTok und erzielte innerhalb von 90 Tagen eine **60%ige Konversionssteigerung**.
+Ein Kurier- und E-Commerce-Logistikunternehmen generierte erhebliches Lead-Volumen aus Meta- und TikTok-Anzeigen, konvertierte aber nur einen Bruchteil davon. Fragmentierte Abläufe, Spam aus Anzeigenkampagnen und manuelle Datenerfassung fraßen die Marge. AI Customer System vereinheitlichte den gesamten Funnel, setzte KI-Agenten für Lead-Qualifizierung und Datenerfassung ein, integrierte Konversionssignale zurück in Meta und TikTok und erzielte innerhalb von 90 Tagen eine **60%ige Konversionssteigerung**.
 
 ## Das Problem: Lead-Volumen ohne Konversionsinfrastruktur
 
-Die Anzeigenstrategie funktionierte auf Anzeigenebene — die Kampagnen generierten Klicks und Formulareinsendungen. Aber der Konversionsfunnel nach dem Klick war kaputt.
+Die Anzeigenstrategie funktionierte auf Anzeigenebene. Die Kampagnen generierten Klicks und Formulareinsendungen, aber der Konversionsfunnel nach dem Klick war kaputt.
 
 Drei zusammenwirkende Probleme:
 
 1. Fragmentierte Teams: Marketing, Vertrieb und Support arbeiteten in separaten Tools ohne gemeinsamen Kontext
 2. Hohes Spam-Volumen: Lead-Anzeigen auf Facebook und TikTok ziehen einen erheblichen Anteil unqualifizierter Einsendungen an
-3. Manuelle Datenerfassung: Jede Kurieranfrage erforderte das Sammeln derselben Informationen — Herkunft, Ziel, Abmessungen, Gewicht, Zeitplan, Volumen
+3. Manuelle Datenerfassung: Jede Kurieranfrage erforderte das Sammeln derselben Informationen, Herkunft, Ziel, Abmessungen, Gewicht, Zeitplan, Volumen
 
 ## Die AI Customer System Lösung
 
-### Schritt 1: Marketing, Vertrieb und Support vereinheitlichen
+### Marketing, Vertrieb und Support vereinheitlichen
 
-Wir bauten einen einzigen Workflow, der alle drei Funktionen verband. Jeder Lead — von jeder Anzeigenplattform, jedem Kanal — trat in ein System ein, das dem richtigen Team zur richtigen Zeit sichtbar war.
+Wir bauten einen einzigen Workflow, der alle drei Funktionen verband. Jeder Lead, von jeder Anzeigenplattform und jedem Kanal, trat in ein System ein, das dem richtigen Team zur richtigen Zeit sichtbar war.
 
-### Schritt 2: KI-Agenten für Lead-Qualifizierung
+### KI-Agenten für Lead-Qualifizierung
 
 Wir setzten KI-Agenten an der Spitze des Funnels ein. Innerhalb von 60 Sekunden nach einer Formulareinsendung erhielt jeder Lead eine strukturierte Qualifizierungssequenz. Unqualifizierte Kontakte wurden automatisch deprioritisiert.
 
-### Schritt 3: Meta Conversion API + TikTok Lower Funnel Events
+### Meta Conversion API + TikTok Lower Funnel Events
 
-Wir sendeten Konversionssignale zurück an Meta und TikTok — insbesondere von Leads, die zu Kunden konvertierten. Dadurch konnten die Werbealgorithmen für ähnliche Profile optimieren. Die Kosten pro Lead sanken um **10%**. Das Volumen beider Plattformen stieg um **35%**.
+Wir sendeten Konversionssignale zurück an Meta und TikTok, insbesondere von Leads, die zu Kunden konvertierten. Dadurch konnten die Werbealgorithmen für ähnliche Profile optimieren. Die Kosten pro Lead sanken um **10%**. Das Volumen beider Plattformen stieg um **35%**.
 
-### Schritt 4: Automatisierte Datenerfassung
+### Automatisierte Datenerfassung
 
 Der KI-Agent sammelte Sendungsdaten als Teil des Qualifizierungsgesprächs: Herkunft und Ziel, Paketgewicht und -abmessungen, Volumen und Häufigkeit, Zeitanforderungen. Wenn der Lead einen menschlichen Agenten erreichte, waren die Angebotsdaten bereits vollständig.
 

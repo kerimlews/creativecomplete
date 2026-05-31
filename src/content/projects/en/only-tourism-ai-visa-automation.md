@@ -33,7 +33,7 @@ faq:
 
 ## TL;DR
 
-A growing tour operator was drowning in repetitive WhatsApp questions about visa requirements, application status, and pricing. Consultants spent most of their day answering the same questions, leaving no time for the complex, high-value package inquiries that actually made money. AI Customer System deployed a custom-branded AI Agent with real-time API integration, automated 80% of all visa questions, and freed the human team for work that generates margin. Monthly lead volume went up 6x within the first 60 days.
+A growing tour operator was handling a constant stream of repetitive WhatsApp questions about visa requirements, application status, and pricing. Consultants spent most of their day on the same questions, leaving no time for the complex, high-value package inquiries that actually made money. AI Customer System deployed a custom-branded AI Agent with real-time API integration, automated 80% of all visa questions, and freed the human team for work that generates margin. Monthly lead volume went up 6x within the first 60 days.
 
 ## The Problem: Agents Stuck in the FAQ Loop
 
@@ -62,7 +62,7 @@ All routed to the same accurate answer. Instantly.
 
 ### Step 2: Real-Time API Integration
 
-The big upgrade: we connected the AI Agent to the agency's backend visa processing system via API. For the first time, a customer could ask about their specific application status and get a live answer without a human in the loop.
+We connected the AI Agent to the agency's backend visa processing system via API. For the first time, a customer could ask about their specific application status and get a live answer without a human in the loop.
 
 This single integration eliminated a category of questions that had consumed about 30% of agent time.
 
@@ -95,9 +95,3 @@ Travel questions don't stick to 9-to-5 hours. A family planning a summer holiday
 The most underrated result was consultant morale and performance. When agents stopped spending 60% of their day on repetitive questions, they had energy for complex bookings, the ones with higher margins, longer trips, and repeat customers.
 
 AI Customer System didn't just speed up responses. It changed how the team spent their time.
-
-## What This Means for Your Agency
-
-If your clients' teams are stuck answering the same questions instead of closing new business, this is exactly what AI Customer System fixes. We configure the AI Agent, integrate with existing systems, and manage the setup.
-
-Your clients' teams only handle the conversations that actually need them.

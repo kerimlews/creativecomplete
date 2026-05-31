@@ -97,7 +97,7 @@ Our automations use AI to understand context and respond appropriately, learn fr
 
 ### Integration and Testing
 
-We connect everything with your existing systems — CRM, email, accounting — test thoroughly before going live, train your team on how to use the automations, and monitor performance after launch.
+We connect everything with your existing systems, including CRM, email, and accounting tools. We test thoroughly before going live, train your team on how to use the automations, and monitor performance after launch.
 
 ### Ongoing Optimization
 

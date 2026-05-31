@@ -35,190 +35,124 @@ faq:
 
 Die meisten Websites sehen schön aus, schaffen es aber nicht, Besucher in Kunden zu verwandeln. Sie sind langsam, verwirrend und führen Besucher nicht zum Handeln.
 
-**Die Realität:** Eine schöne Website, die nicht konvertiert, ist nur eine teure Visitenkarte. Sie zahlen für Hosting, Wartung und Updates, erhalten aber keine Rendite.
-
-**Unser Ansatz:** Wir gestalten Websites, die 24/7 als Ihr bester Verkäufer arbeiten. Jedes Element ist strategisch platziert, um Besucher zu Kunden zu führen.
+Eine schöne Website, die nicht konvertiert, ist nur eine teure Visitenkarte. Sie zahlen für Hosting, Wartung und Updates, erhalten aber keine Rendite. Wir gestalten Websites, die 24/7 als Ihr bester Verkäufer arbeiten. Jedes Element ist strategisch platziert, um Besucher zu Kunden zu führen.
 
 ## Was unser Webdesign auszeichnet
 
-### 1. Konversionsorientiertes Design
+### Konversionsorientiertes Design
 
-Wir machen Websites nicht nur schön—wir machen sie konvertieren. Jede Designentscheidung basiert auf:
-- **Benutzerpsychologie** und Verhaltensmustern
-- **Konversionsoptimierung** Best Practices
-- **A/B-Test**-Daten und -Ergebnissen
-- **Ihren spezifischen Geschäftszielen**
+Wir machen Websites nicht nur schön, wir machen sie konvertieren. Jede Designentscheidung basiert auf Benutzerpsychologie und Verhaltensmustern, Konversionsoptimierungs-Best-Practices, A/B-Test-Daten und Ihren spezifischen Geschäftszielen.
 
-### 2. Mobile-First-Ansatz
+### Mobile-First-Ansatz
 
-Über 60% des Web-Traffics kommt von mobilen Geräten. Wir designen zuerst für Mobilgeräte, dann verbessern wir für Desktop. Dies gewährleistet:
-- **Schnelle Ladezeiten** auf allen Geräten
-- **Einfache Navigation** mit daumenfreundlichen Buttons
-- **Lesbarer Inhalt** ohne Zoomen
-- **Nahtlose Erfahrung** auf allen Bildschirmgrößen
+Über 60% des Web-Traffics kommt von mobilen Geräten. Wir designen zuerst für Mobilgeräte und verbessern dann für Desktop. Das gewährleistet schnelle Ladezeiten auf allen Geräten, eine einfache Navigation mit daumenfreundlichen Buttons, lesbaren Inhalt ohne Zoomen und eine nahtlose Erfahrung auf allen Bildschirmgrößen.
 
-### 3. Geschwindigkeitsoptimierung
+### Geschwindigkeitsoptimierung
 
-Langsame Websites verlieren Besucher. Wir garantieren:
-- **3-Sekunden-Ladezeit** oder weniger
-- **Optimierte Bilder** und Assets
-- **Effizienter Code**, der schnell lädt
-- **CDN-Integration** für globale Geschwindigkeit
-- **AWS-Hosting** für zuverlässige, skalierbare Leistung
+Langsame Websites verlieren Besucher. Wir garantieren eine Ladezeit von 3 Sekunden oder weniger, optimierte Bilder und Assets, effizienten Code, der schnell lädt, CDN-Integration für globale Geschwindigkeit und AWS-Hosting für zuverlässige, skalierbare Leistung.
 
-### 4. Strategische CTA-Platzierung
+### Strategische CTA-Platzierung
 
-Jede Seite hat klare Call-to-Actions (CTAs), die:
-- **Visuell auffallen**, ohne aufdringlich zu sein
-- **Benutzerabsicht** in jeder Phase ihrer Reise entsprechen
-- **Dringlichkeit** schaffen, wenn angemessen
-- **Besucher** zum nächsten Schritt führen
+Jede Seite hat klare Call-to-Actions, die visuell auffallen ohne aufdringlich zu sein, der Benutzerabsicht in jeder Phase der Reise entsprechen, Dringlichkeit schaffen wenn angemessen und Besucher zum nächsten Schritt führen.
 
-### 5. Trust-Signal-Implementierung
+### Trust-Signal-Implementierung
 
-Wir platzieren strategisch Trust-Signale wie:
-- **Kundentestimonials** und Bewertungen
-- **Fallstudien** und Erfolgsgeschichten
-- **Sicherheitsabzeichen** und Zertifizierungen
-- **Social Proof** und Nutzerzahlen
-- **Geld-zurück-Garantien** (falls zutreffend)
+Wir platzieren strategisch Trust-Signale wie Kundentestimonials und Bewertungen, Fallstudien und Erfolgsgeschichten, Sicherheitsabzeichen und Zertifizierungen, Social Proof und Nutzerzahlen sowie Geld-zurück-Garantien, falls zutreffend.
 
-### 6. Benutzererfahrungsoptimierung
+### Benutzererfahrungsoptimierung
 
-Wir optimieren für:
-- **Klare Navigation**, die Sinn macht
-- **Intuitive Layouts**, die Benutzer führen
-- **Lesbare Typografie** und Abstände
-- **Zugängliches Design** für alle Benutzer
-- **Schnelle, flüssige Interaktionen**
+Wir optimieren für klare Navigation, intuitive Layouts, lesbare Typografie, zugängliches Design für alle Benutzer und schnelle, flüssige Interaktionen.
 
 ## Unser Webdesign-Prozess
 
-### Phase 1: Discovery und Strategie
+### Discovery und Strategie
 
-Wir beginnen mit dem Verständnis:
-- **Ihrer Geschäftsziele** und -ziele
-- **Ihrer Zielgruppe** und ihrer Bedürfnisse
-- **Ihrer Konkurrenten** und Marktpositionierung
-- **Ihres einzigartigen Wertversprechens**
+Wir beginnen mit dem Verständnis Ihrer Geschäftsziele, Ihrer Zielgruppe und ihrer Bedürfnisse, Ihrer Wettbewerber und Marktpositionierung sowie Ihres einzigartigen Wertversprechens.
 
-### Phase 2: Design und Entwicklung
+### Design und Entwicklung
 
-Wir erstellen:
-- **Wireframes**, die Seitenstruktur zeigen
-- **Design-Mockups** für Ihre Genehmigung
-- **Responsive Layouts** für alle Geräte
-- **Interaktive Prototypen** zum Testen des Benutzerflusses
+Wir erstellen Wireframes, die die Seitenstruktur zeigen, Design-Mockups für Ihre Genehmigung, responsive Layouts für alle Geräte und interaktive Prototypen zum Testen des Benutzerflusses.
 
-### Phase 3: Entwicklung und Optimierung
+### Entwicklung und Optimierung
 
-Wir bauen:
-- **Schnellen, sauberen Code**, der gut performt
-- **SEO-optimierte** Struktur und Inhalt
-- **Konversionstracking** und Analytics
-- **Mobile-responsive** Design
+Wir bauen schnellen, sauberen Code, der gut performt, eine SEO-optimierte Struktur und Inhalte, Konversionstracking und Analytics sowie ein vollständig mobil-responsives Design.
 
-### Phase 4: Launch und Optimierung
+### Launch und Optimierung
 
-Wir:
-- **Starten Ihre Website** ohne Ausfallzeiten
-- **Überwachen die Leistung** und Benutzerverhalten
-- **A/B-Testen** verschiedene Elemente
-- **Optimieren kontinuierlich** basierend auf Daten
+Wir starten Ihre Website ohne Ausfallzeiten, überwachen die Leistung und das Benutzerverhalten, testen verschiedene Elemente per A/B-Test und optimieren kontinuierlich auf Basis von Daten.
 
 ## Welche Ergebnisse können Sie erwarten?
 
 ### Lead-Generierung
 
-Die meisten Kunden sehen:
-- **217% durchschnittliche Steigerung** der Lead-Generierung nach dem Launch
-- **Höhere Konversionsraten** von allen Traffic-Quellen
-- **Mehr qualifizierte Leads**, die kaufbereit sind
+Die meisten Kunden sehen eine **217% durchschnittliche Steigerung** der Lead-Generierung nach dem Launch, höhere Konversionsraten aus allen Traffic-Quellen und mehr qualifizierte Leads, die kaufbereit sind.
 
 ### Benutzererfahrung
 
-Ihre Besucher werden erleben:
-- **Schnellere Ladezeiten** (3 Sekunden oder weniger)
-- **Einfachere Navigation**, die Sinn macht
-- **Klare Botschaften**, die Wert kommunizieren
-- **Flüssige Interaktionen**, die professionell wirken
+Ihre Besucher erleben schnellere Ladezeiten von 3 Sekunden oder weniger, eine einfachere Navigation, klare Botschaften, die Wert kommunizieren, und flüssige Interaktionen, die professionell wirken.
 
 ### Geschäftsauswirkungen
 
-Sie werden sehen:
-- **Mehr Anfragen** und Kontaktformular-Einreichungen
-- **Besseres Engagement** mit Ihrem Inhalt
-- **Erhöhtes Vertrauen** von Besuchern
-- **Höhere Verkäufe** und Umsatz
+Sie erhalten mehr Anfragen und Kontaktformular-Einreichungen, besseres Engagement mit Ihren Inhalten, mehr Vertrauen von Besuchern sowie höhere Verkäufe und Umsatz.
 
 ## Echte Ergebnisse von echten Kunden
 
 ### Fallstudie: Professionelle Dienstleistungsfirma
 
-**Herausforderung:** Eine Beratungsfirma hatte eine schöne Website, die nur 2 qualifizierte Leads pro Monat generierte.
+Herausforderung: Eine Beratungsfirma hatte eine schöne Website, die nur 2 qualifizierte Leads pro Monat generierte.
 
-**Lösung:** Wir redesigneten die Website mit konversionsorientierten Elementen, strategischen CTAs und Trust-Signalen.
+Lösung: Wir redesigneten die Website mit konversionsorientierten Elementen, strategischen CTAs und Trust-Signalen.
 
-**Ergebnisse:**
+Ergebnisse:
 - 15 qualifizierte Leads pro Monat (von 2)
-- 217% Steigerung bei Kontaktformular-Einreichungen
+- **217% Steigerung** bei Kontaktformular-Einreichungen
 - 40% Reduzierung der Absprungrate
 - 120.000€ neuer Umsatz von Website-Leads
 
 ## Für wen ist dieser Service?
 
-Unser Webdesign-Service ist perfekt für:
+Unser Webdesign-Service ist geeignet für:
 
-✅ **Service-Unternehmen**, die mehr Leads benötigen
-✅ **E-Commerce-Shops**, die Verkäufe steigern möchten
-✅ **Professionelle Dienstleistungen**, die sich abheben wollen
-✅ **SaaS-Unternehmen**, die Konversionsoptimierung benötigen
-✅ **Jedes Unternehmen** mit einer Website, die nicht konvertiert
+- Service-Unternehmen, die mehr Leads benötigen
+- E-Commerce-Shops, die Verkäufe steigern möchten
+- Professionelle Dienstleistungen, die sich abheben wollen
+- SaaS-Unternehmen, die Konversionsoptimierung benötigen
+- Jedes Unternehmen mit einer Website, die nicht konvertiert
 
 ## Was ist in Ihrem Webdesign-Paket enthalten?
 
 ### Design-Lieferungen
 
-- **Maßgeschneiderte Gestaltung**, die zu Ihrer Marke passt
-- **Mobile-responsive** Layouts für alle Geräte
-- **Konversionsoptimierte** Seiten und Elemente
-- **SEO-freundliche** Struktur und Inhalt
-- **Schnelle Ladezeiten** (3 Sekunden oder weniger)
+- Maßgeschneiderte Gestaltung, die zu Ihrer Marke passt
+- Mobile-responsive Layouts für alle Geräte
+- Konversionsoptimierte Seiten und Elemente
+- SEO-freundliche Struktur und Inhalte
+- Schnelle Ladezeiten (3 Sekunden oder weniger)
 
 ### Entwicklungsfeatures
 
-- **Moderner, sauberer Code**, der wartbar ist
-- **Content-Management-System** (falls benötigt)
-- **Kontaktformulare** mit Spam-Schutz
-- **Analytics-Integration** für Tracking
-- **Sicherheitsfeatures** und SSL-Zertifikate
+- Moderner, sauberer Code, der wartbar ist
+- Content-Management-System (falls benötigt)
+- Kontaktformulare mit Spam-Schutz
+- Analytics-Integration für Tracking
+- Sicherheitsfeatures und SSL-Zertifikate
 
 ### Laufender Support
 
-- **Leistungsüberwachung** und Optimierung
-- **A/B-Tests** wichtiger Elemente
-- **Content-Updates** und Änderungen
-- **Sicherheitsupdates** und Wartung
-- **Monatliche Berichte** zur Leistung
+- Leistungsüberwachung und Optimierung
+- A/B-Tests wichtiger Elemente
+- Content-Updates und Änderungen
+- Sicherheitsupdates und Wartung
+- Monatliche Berichte zur Leistung
 
 ## Investition und ROI
 
-Eine gut gestaltete Website ist eine Investition, die sich bezahlt macht. Die meisten Kunden sehen:
-- **ROI innerhalb von 30-60 Tagen** durch erhöhte Leads
-- **Nachhaltiges Wachstum**, wenn der Traffic steigt
-- **Niedrigere Kosten pro Lead** im Vergleich zu bezahlten Anzeigen
+Eine gut gestaltete Website ist eine Investition, die sich bezahlt macht. Die meisten Kunden sehen ROI innerhalb von 30 bis 60 Tagen durch erhöhte Leads, nachhaltiges Wachstum wenn der Traffic steigt und niedrigere Kosten pro Lead im Vergleich zu bezahlten Anzeigen.
 
-Das Beste? Ihre Website arbeitet 24/7 und generiert Leads, auch wenn Sie nicht aktiv werben.
+Ihre Website arbeitet 24/7 und generiert Leads, auch wenn Sie nicht aktiv werben.
 
 ## Bereit, loszulegen?
 
 Wenn Sie bereit sind, Ihre Website in eine Lead-generierende Maschine zu verwandeln, beginnen wir mit einer kostenlosen Konversionsprüfung. Wir analysieren Ihre aktuelle Website, identifizieren Möglichkeiten und zeigen Ihnen genau, wie wir Ihnen helfen können, mehr Besucher zu konvertieren.
 
 [Kostenlose Konversionsprüfung erhalten →](/contact/)
-
----
-
-**Nächste Schritte:**
-1. Planen Sie Ihre kostenlose Konversionsprüfung
-2. Überprüfen Sie Ihre maßgeschneiderte Designstrategie
-3. Starten Sie eine Website, die Besucher in Kunden verwandelt

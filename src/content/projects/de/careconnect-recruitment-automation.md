@@ -24,11 +24,11 @@ faq:
 
 ## TL;DR
 
-Die Schweizer Gesundheitsrekrutierung steckte in manuellen Prozessen fest — endloser Papierkram und unzuverlässige Kandidatenverfolgung. Wir haben CareConnect gebaut: eine maßgeschneiderte Plattform mit MERN Stack (MongoDB, Express.js, React, Node.js), die auf AWS läuft und das Kandidatenmanagement automatisiert. Unsere SEO-Strategie brachte sie für jeden wichtigen Suchbegriff auf Platz 1. Ergebnis: **245% Traffic-Anstieg**, **90% Reduzierung der Verwaltungsarbeit** und klare Marktführerschaft.
+Die Schweizer Gesundheitsrekrutierung steckte in manuellen Prozessen fest: endloser Papierkram und unzuverlässige Kandidatenverfolgung. Wir haben CareConnect gebaut, eine maßgeschneiderte Plattform mit MERN Stack (MongoDB, Express.js, React, Node.js), die auf AWS läuft und das Kandidatenmanagement automatisiert. Unsere SEO-Strategie brachte sie für jeden wichtigen Suchbegriff auf Platz 1. Ergebnis: **245% Traffic-Anstieg**, **90% Reduzierung der Verwaltungsarbeit** und klare Marktführerschaft.
 
 ## Die Mission
 
-CareConnect trat mit einer klaren Mission in den Schweizer Markt ein: Gesundheitsfachkräfte rekrutieren, die bereit sind, umfassend zu helfen, und ihnen bessere Stellen finden. Eine neue Marke in einem wettbewerbsintensiven Markt einzuführen, erforderte mehr als nur eine Website — es brauchte ein vollständiges digitales Ökosystem.
+CareConnect trat mit einer klaren Mission in den Schweizer Markt ein: Gesundheitsfachkräfte rekrutieren, die bereit sind, umfassend zu helfen, und ihnen bessere Stellen finden. Eine neue Marke in einem wettbewerbsintensiven Markt einzuführen, erforderte mehr als nur eine Website. Es brauchte ein vollständiges digitales Ökosystem.
 
 ## Die Herausforderungen, die wir gelöst haben
 
@@ -38,7 +38,7 @@ Als neue Marke im Schweizer Gesundheitsrekrutierungsmarkt brauchte CareConnect e
 
 Wir entwarfen ein vollständiges Markenidentitätssystem mit Figma:
 - Professionelles Gesundheitsdesign, das Vertrauen schafft
-- Schweizer Designprinzipien (sauber, minimal, präzise)
+- Schweizer Designprinzipien: sauber, minimal, präzise
 - Vielseitiges Logo-System, das auf allen Touchpoints funktioniert
 - Farbpalette, die Fürsorge, Professionalität und Zuverlässigkeit vermittelt
 
@@ -58,28 +58,28 @@ Diese Architektur, kombiniert mit unserem [SEO-Service](/services/seo/)-Ansatz, 
 ### Website gestalten
 
 Die Website musste Besucher in Bewerber umwandeln und gleichzeitig Vertrauen in eine neue Marke aufbauen. Wir entwarfen eine konversionsorientierte Website mit React:
-- Klare Wertversprechen für sowohl Kandidaten als auch Krankenhäuser
-- Vertrauensbildende Elemente (Testimonials, Zertifizierungen, Prozess-Transparenz)
+- Klare Wertversprechen für Kandidaten und Krankenhäuser
+- Vertrauensbildende Elemente wie Testimonials, Zertifizierungen und Prozess-Transparenz
 - Strategische CTA-Platzierung, die Besucher zur Bewerbung führt
 - Mobile-optimiertes Design für nahtlose Bewerbungen auf jedem Gerät
 - Schnelle Performance mit optimierten React-Komponenten und AWS CDN
 
 Der Designprozess folgte unserer [Web-Design](/services/web-design/)-Methodik mit Fokus auf Konversionsoptimierung.
 
-### Kontaktformular — Detailliertes Bewerbungssystem
+### Kontaktformular: Detailliertes Bewerbungssystem
 
-Standard-Kontaktformulare funktionieren nicht für Rekrutierung. CareConnect brauchte ein Bewerbungsformular, das ihnen hilft, die richtigen Kandidaten zu finden und alle notwendigen Informationen vorab zu erfassen.
+Standard-Kontaktformulare funktionieren nicht für Rekrutierung. CareConnect brauchte ein Bewerbungsformular, das hilft, die richtigen Kandidaten zu finden und alle notwendigen Informationen vorab zu erfassen.
 
 Wir bauten ein mehrstufiges Bewerbungsformular:
 - Progressive Offenlegung, die das Formular in logische Abschnitte aufteilt
 - Bedingte Logik, die relevante Felder basierend auf Kandidatenantworten anzeigt
 - Datei-Upload-System für Lebensläufe, Zertifikate und Dokumente
-- Validierung und Fehlerbehandlung, die Datenqualität sicherstellt
+- Validierung und Fehlerbehandlung zur Sicherstellung der Datenqualität
 - Integration mit CRM, sodass Bewerbungen direkt in das Verwaltungssystem fließen
 
 Das Formular reduzierte die Bewerbungsabbrüche um 60% im Vergleich zu traditionellen einseitigen Formularen und lieferte gleichzeitig umfassendere Kandidatendaten.
 
-### CRM — Maßgeschneiderte Verwaltungslösung
+### CRM: Maßgeschneiderte Verwaltungslösung
 
 Generische CRMs passen nicht zu Rekrutierungs-Workflows. CareConnect brauchte eine Lösung zum Prüfen von Bewerbungen, Verfolgen von Kandidatenreisen und Verwalten von Vermittlungen.
 
@@ -93,7 +93,7 @@ Wir bauten ein maßgeschneidertes CRM mit Node.js, MongoDB und React:
 
 Dieses maßgeschneiderte CRM, aufgebaut mit unserer [Automatisierungs](/services/automation/)-Expertise, eliminierte **90% der manuellen Verwaltungsarbeit**.
 
-### Content-Erstellung — Wöchentliche Blog-Veröffentlichung
+### Content-Erstellung: Wöchentliche Blog-Veröffentlichung
 
 CareConnect musste Autorität im Schweizer Gesundheitsrekrutierungsmarkt aufbauen und für Long-Tail-Keywords ranken. Dafür braucht man konsistenten, wertvollen Content.
 
@@ -106,7 +106,7 @@ Wir implementierten ein Content-Erstellungs- und Veröffentlichungssystem:
 
 Der wöchentliche Blog-Content trieb 40% des organischen Traffics an und etablierte CareConnect als Autorität in der Schweizer Gesundheitsrekrutierung.
 
-### E-Mail-Marketing — Automatisierte E-Mail-Sequenzen
+### E-Mail-Marketing: Automatisierte E-Mail-Sequenzen
 
 Manuelle E-Mail-Follow-ups waren zeitaufwändig und inkonsistent. CareConnect brauchte automatisierte Sequenzen für Kandidatenbetreuung, Interview-Erinnerungen und Vermittlungs-Follow-ups.
 
@@ -119,7 +119,7 @@ Wir bauten automatisiertes E-Mail-Marketing mit AWS SES und benutzerdefinierter 
 
 Das automatisierte E-Mail-System, Teil unseres [Automatisierungs](/services/automation/)-Services, sparte 15 Stunden wöchentlich und verbesserte das Kandidatenengagement.
 
-## Der Technische Stack
+## Der technische Stack
 
 Wir bauten CareConnect mit modernen, skalierbaren Technologien:
 

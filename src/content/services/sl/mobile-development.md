@@ -43,7 +43,7 @@ Gradimo mobilne aplikacije, ki rešujejo prave težave vaših strank in olajšaj
 
 ### Mobilne aplikacije za iOS in Android
 
-Gradimo aplikacije z React Native, ki delujejo na iOS in Android iz ene kode — hitreje in ceneje. Backend razmestimo na AWS za skalabilno infrastrukturo. Nativne aplikacije zgradimo, kadar to zahtevajo specifične potrebe.
+Gradimo aplikacije z React Native, ki delujejo na iOS in Android iz ene kode, hitreje in ceneje. Backend razmestimo na AWS za skalabilno infrastrukturo. Nativne aplikacije zgradimo, kadar to zahtevajo specifične potrebe.
 
 ### Osrednje funkcije
 

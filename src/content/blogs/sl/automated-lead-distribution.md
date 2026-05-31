@@ -27,7 +27,7 @@ Vsaka prodajna ekipa ima problem distribucije leadov. Večina tega še ne ve.
 
 Leadi sedijo v skupni pošti, medtem ko trije predstavniki skrolajo mimo njih in predvidevajo, da bo odgovoril nekdo drug. Francosko govoreča potencialna stranka je usmerjena k predstavniku, ki ne govori francosko. Enterprise poizvedba pristane v vrsti poleg hladnega kontakta izpred šestih mesecev. Vaš najboljši closer je offline, ko prispe [najbolj vroč lead](/sl/blog/ai-kvalifikacija-leadov/) tedna.
 
-Tako izgleda ročna distribucija leadov pri skali. To ni problem ljudi — je problem sistema. In avtomatizirana distribucija leadov je rešitev.
+Tako izgleda ročna distribucija leadov pri skali. To ni problem ljudi, je problem sistema. Avtomatizirana distribucija leadov je rešitev.
 
 ## Skriti strošek ročnega usmerjanja
 
@@ -35,7 +35,7 @@ Preden gremo k pravilom, je vredno razumeti, koliko ročna dodelitev dejansko st
 
 Povprečno B2C podjetje izgubi med 27% in 40% prihajajočih leadov ne zato, ker ne morejo zaključiti, ampak ker je odzivni čas presegel okno potrpljenja leada. V industrijah z visoko namero, kot so avtomobilizem, nepremičnine in e-trgovina, je to okno krajše, kot domneva večina managerjev. Lead, ki vam piše ob 11:43 in dobi odziv ob 14:15, je že podpisal z nekom drugim.
 
-iMotorbike, motoristični marketplace v jugovzhodni Aziji, je to izkusil iz prve roke. Pred uvedbo avtomatiziranega usmerjanja je njihova ekipa ročno obvladovala leade preko več kanalov. Po preklopu na AI-podprto avtomatizirano distribucijo so **obvladali 2× več leadov z isto velikostjo ekipe** — ne z bolj trdim delom, ampak z odpravo mrtvega časa med prihodom leada in dodelitvijo agenta.
+iMotorbike, motoristični marketplace v jugovzhodni Aziji, je to izkusil iz prve roke. Pred uvedbo avtomatiziranega usmerjanja je njihova ekipa ročno obvladovala leade preko več kanalov. Po preklopu na AI-podprto avtomatizirano distribucijo so **obvladali 2× več leadov z isto velikostjo ekipe**, ne z bolj trdim delom, ampak z odpravo mrtvega časa med prihodom leada in dodelitvijo agenta.
 
 Matematika je preprosta: hitrejše usmerjanje = hitrejši prvi odziv = višja stopnja konverzije.
 
@@ -47,7 +47,7 @@ Avtomatizirana distribucija leadov ni ena sama nastavitev. Je plastni sistem pra
 
 ![Usmerjanje glede na razpoložljivost — leadi se usmerjajo samo k spletnim agentom, nikoli k offline predstavnikom](/images/blog/routing/01-availability.svg)
 
-Prvo pravilo, ki ga potrebuje vsaka ekipa. Usmerjanje glede na razpoložljivost dodeli leade samo agentom, ki so trenutno na spletu in sprejemajo pogovore. Če nihče ni na voljo, je lead v vrsti s takojšnjo potrditvijo — tako potencialna stranka ve, da nekdo prihaja.
+Prvo pravilo, ki ga potrebuje vsaka ekipa. Usmerjanje glede na razpoložljivost dodeli leade samo agentom, ki so trenutno na spletu in sprejemajo pogovore. Če nihče ni na voljo, je lead v vrsti s takojšnjo potrditvijo, tako da potencialna stranka ve, da nekdo prihaja.
 
 Ta ena sprememba odpravi najpogostejši vzrok za izgubljene leade: sporočilo, ki pristane pri nekom, ki ga ne bo videl tri ure.
 
@@ -57,7 +57,7 @@ Ta ena sprememba odpravi najpogostejši vzrok za izgubljene leade: sporočilo, k
 
 Ko je razpoložljivost obvladana, Round Robin zagotovi pravično distribucijo. Vsak spletni agent dobi enak delež leadov, ki krožijo skozi ekipo v zaporedju. Noben top performer se ne utopi v leadih, medtem ko junior predstavnik sedi prazen. Brez sporov o provizijah glede tega, kdo "lasti" kateri kontakt. Čisto, pošteno, samodejno.
 
-Round Robin tudi hitreje izpostavi podatke o zmogljivosti. Ko vsak predstavnik dobi približno enak obseg, razlike v stopnji konverzije postanejo agent-gnane — ne distribucijsko-gnane.
+Round Robin tudi hitreje izpostavi podatke o zmogljivosti. Ko vsak predstavnik dobi približno enak obseg, razlike v stopnji konverzije postanejo agent-gnane, ne distribucijsko-gnane.
 
 ### Usmerjanje na podlagi veščin
 
@@ -65,7 +65,7 @@ Round Robin tudi hitreje izpostavi podatke o zmogljivosti. Ko vsak predstavnik d
 
 Niso vsi leadi enaki, in niso vsi agenti enako primerni za vsak lead. Usmerjanje na podlagi veščin ujame kompleksnost in temo poizvedbe z agentom, ki je najbolje opremljen za obravnavo.
 
-Tehnična vprašanja o produktih gredo tehničnim specialistom. Pogovori o cenah in pogodbah se usmerjajo k [seniornim closerjem](/sl/blog/ai-prodajni-agenti/). Poizvedbe o onboardingu gredo Customer Successu. Lead dobi pravi odgovor od prave osebe pri prvem stiku — kar je natanko zakaj je usmerjanje na podlagi veščin primarni gonilnik **94% hitrejše stopnje razrešitve**.
+Tehnična vprašanja o produktih gredo tehničnim specialistom. Pogovori o cenah in pogodbah se usmerjajo k [seniornim closerjem](/sl/blog/ai-prodajni-agenti/). Poizvedbe o onboardingu gredo Customer Successu. Lead dobi pravi odgovor od prave osebe pri prvem stiku, kar je natanko zakaj je usmerjanje na podlagi veščin primarni gonilnik **94% hitrejše stopnje razrešitve**.
 
 ### Usmerjanje na podlagi jezika
 
@@ -75,7 +75,7 @@ To je najmanj uporabljeno pravilo usmerjanja v mednarodnih ekipah in ena najuči
 
 Potencialna stranka, ki piše po slovensko in dobi slovensko govorečega predstavnika, ima bistveno drugačno izkušnjo kot tista, ki se mora prebijati skozi nerodne prevode. Jezikovno usklajeni pogovori se zaključijo hitreje, povzročijo manj nesporazumov in producirajo konsistentno višje ocene zadovoljstva.
 
-Za podjetja, ki delujejo na več trgih — tudi le na dveh ali treh — lahko samo jezikovno usmerjanje pomeni dvomestne odstotne točke stopnje konverzije.
+Za podjetja, ki delujejo na več trgih, tudi le na dveh ali treh, lahko samo jezikovno usmerjanje pomeni dvomestne odstotne točke stopnje konverzije.
 
 ### Usmerjanje po tipu stranke
 
@@ -105,7 +105,7 @@ Ko podporni leadi gredo neposredno k podpori in prodajni neposredno v prodajo, s
 
 Številke, navedene posamično, postanejo kumulativne, ko pravila delujejo kot sistem.
 
-Noonmar, prodajna znamka, ki je v ekipi implementirala avtomatizirano distribucijo, je videla **40% povečanje novih strank v prvem mesecu**. Automax je izvajal WhatsApp broadcast kampanje na obstoječi bazi leadov s pametnim usmerjanjem za vsak odgovor — in generiral **42,5× ROI** na kampanjo. To niso outlier rezultati iz ogromnih enterprise ekip. To so rezultati mid-market podjetij, ki so prenehala usmerjati ročno.
+Noonmar, prodajna znamka, ki je v ekipi implementirala avtomatizirano distribucijo, je videla **40% povečanje novih strank v prvem mesecu**. Automax je izvajal WhatsApp broadcast kampanje na obstoječi bazi leadov s pametnim usmerjanjem za vsak odgovor in generiral **42,5× ROI** na kampanjo. To niso outlier rezultati iz ogromnih enterprise ekip. To so rezultati mid-market podjetij, ki so prenehala usmerjati ročno.
 
 Skupni podatki preko ekip, ki izvajajo avtomatizirano distribucijo, pripovedujejo konsistentno zgodbo:
 
@@ -119,7 +119,7 @@ Ena podrobnost, ki loči avtomatizirano distribucijo leadov od preprostih pravil
 
 Vaši leadi ne prihajajo z enega mesta. WhatsApp, Instagram DM, TikTok, Facebook Messenger, e-mail, spletni klepet, SMS — vsi so aktivni, pogosto hkrati. Ročno usmerjanje najhitreje propade, ko obseg skoči preko kanalov hkrati, ker noben človeški usmerjevalnik ne more triažirati pri tej hitrosti.
 
-Logika usmerjanja mora živeti na ravni pošte — ne na ravni kanala. Ko poenotena pošta uporabi vaših sedem pravil na vsako prihajajoče sporočilo, ne glede na vir, vaša ekipa preneha razmišljati o tem, iz katerega kanala je lead prišel, in se popolnoma osredotoči na sam pogovor.
+Logika usmerjanja mora živeti na ravni pošte, ne na ravni kanala. Ko poenotena pošta uporabi vaših sedem pravil na vsako prihajajoče sporočilo, ne glede na vir, vaša ekipa preneha razmišljati o tem, iz katerega kanala je lead prišel, in se popolnoma osredotoči na sam pogovor.
 
 ## Kako to zagnati
 
@@ -127,6 +127,6 @@ Najhitrejša pot implementacije je platforma z vgrajenim motorjem usmerjanja.
 
 Prava platforma izvaja vseh sedem pravil usmerjanja nativno, z vizualnim konfiguracijskim vmesnikom, ki ne zahteva kode. Mapirate veščine vaše ekipe, postavite urnike izmen, definirate tipe strank, in pravila tečejo samodejno od te točke naprej.
 
-Pri **CreativeComplete** konfiguriramo in vodimo polno postavitev avtomatizirane distribucije leadov kot del našega AI Customer Systema — vključno z logiko usmerjanja, treningom agentov in integracijo z vašim obstoječim CRM. Večina strank gre iz ročne dodelitve v polno avtomatizirano usmerjanje v **10 dneh**.
+Pri **CreativeComplete** konfiguriramo in vodimo polno postavitev avtomatizirane distribucije leadov kot del našega AI Customer Systema, vključno z logiko usmerjanja, treningom agentov in integracijo z vašim obstoječim CRM. Večina strank gre iz ročne dodelitve v polno avtomatizirano usmerjanje v **10 dneh**.
 
 Če vaša ekipa še vedno ročno dodeljuje leade, je vsak dan čakanja prihodek, ki uhaja skozi vrzel, ki je v celoti popravljiva.

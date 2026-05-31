@@ -28,15 +28,15 @@ Swiss healthcare recruitment ran on manual processes, endless paperwork, and unr
 
 ## The Mission
 
-CareConnect entered the Swiss market with a clear mission: recruit healthcare professionals willing to provide full help and find them better placements. But launching a new brand in a competitive market required more than just a website — it needed a complete digital ecosystem.
+CareConnect entered the Swiss market with a clear mission: recruit healthcare professionals willing to provide full help and find them better placements. Launching a new brand in a competitive market required more than just a website. It needed a complete digital ecosystem.
 
 ## The Challenges We Solved
 
 ### Challenge 1: Design Logo and Brand Identity
 
-**The Problem:** As a new brand entering the Swiss healthcare recruitment market, CareConnect needed a professional, trustworthy brand identity that would resonate with both healthcare professionals and hospital administrators.
+As a new brand entering the Swiss healthcare recruitment market, CareConnect needed a professional, trustworthy brand identity that would resonate with both healthcare professionals and hospital administrators.
 
-**Our Solution:** We designed a complete brand identity system using Figma, focusing on:
+We designed a complete brand identity system using Figma, focusing on:
 - Professional healthcare aesthetic that builds trust
 - Swiss design principles (clean, minimal, precise)
 - Versatile logo system that works across all touchpoints
@@ -46,9 +46,9 @@ The logo and brand identity became the foundation for all marketing materials, c
 
 ### Challenge 2: SEO Website Architecture
 
-**The Problem:** CareConnect needed to rank #1 for highly competitive healthcare recruitment keywords in Switzerland. Without proper SEO architecture, they'd be invisible to candidates searching for opportunities.
+CareConnect needed to rank #1 for highly competitive healthcare recruitment keywords in Switzerland. Without proper SEO architecture, they would be invisible to candidates searching for opportunities.
 
-**Our Solution:** We built an SEO-first website architecture using Astro for optimal performance:
+We built an SEO-first website architecture using Astro for optimal performance:
 - Strategic keyword mapping for "nurses to Switzerland," "healthcare jobs Switzerland," and related terms
 - Semantic HTML structure that search engines understand
 - Internal linking strategy connecting related content
@@ -59,9 +59,9 @@ This architecture, combined with our [SEO service](/services/seo/) approach, res
 
 ### Challenge 3: Design Website
 
-**The Problem:** The website needed to convert visitors into applicants while building trust in a new brand. Generic templates wouldn't work for a specialized healthcare recruitment platform.
+The website needed to convert visitors into applicants while building trust in a new brand. Generic templates wouldn't work for a specialized healthcare recruitment platform.
 
-**Our Solution:** We designed a conversion-focused website using React and modern web design principles:
+We designed a conversion-focused website using React and modern web design principles:
 - Clear value propositions for both candidates and hospitals
 - Trust-building elements (testimonials, certifications, process transparency)
 - Strategic CTA placement guiding visitors toward application
@@ -70,11 +70,11 @@ This architecture, combined with our [SEO service](/services/seo/) approach, res
 
 The design process followed our [web design](/services/web-design/) methodology, focusing on conversion optimization rather than just aesthetics.
 
-### Challenge 4: Contact Form - Detailed Application System
+### Challenge 4: Contact Form — Detailed Application System
 
-**The Problem:** Standard contact forms don't work for recruitment. CareConnect needed a detailed application form that would help them find the right candidates while collecting all necessary information upfront.
+Standard contact forms don't work for recruitment. CareConnect needed a detailed application form that would help them find the right candidates while collecting all necessary information upfront.
 
-**Our Solution:** We built a multi-step, intelligent application form:
+We built a multi-step, intelligent application form:
 - Progressive disclosure breaking the form into logical sections
 - Conditional logic showing relevant fields based on candidate responses
 - File upload system for CVs, certifications, and documents
@@ -83,11 +83,11 @@ The design process followed our [web design](/services/web-design/) methodology,
 
 The form reduced application abandonment by 60% compared to traditional single-page forms, while collecting more comprehensive candidate data.
 
-### Challenge 5: CRM - Custom Management Solution
+### Challenge 5: CRM — Custom Management Solution
 
-**The Problem:** Generic CRMs don't work for recruitment workflows. CareConnect needed a custom solution for reviewing applications, tracking candidate journeys, and managing placements.
+Generic CRMs don't work for recruitment workflows. CareConnect needed a custom solution for reviewing applications, tracking candidate journeys, and managing placements.
 
-**Our Solution:** We built a custom CRM using Node.js, MongoDB, and React:
+We built a custom CRM using Node.js, MongoDB, and React:
 - Application review dashboard with candidate scoring and filtering
 - Candidate pipeline management tracking each applicant through stages
 - Automated matching system connecting candidates with hospital requirements
@@ -97,11 +97,11 @@ The form reduced application abandonment by 60% compared to traditional single-p
 
 This custom CRM, built with our [automation](/services/automation/) expertise, eliminated **90%** of manual administrative work.
 
-### Challenge 6: Content Creation - Weekly Blog Publishing
+### Challenge 6: Content Creation — Weekly Blog Publishing
 
-**The Problem:** CareConnect needed to establish authority in the Swiss healthcare recruitment market and rank for long-tail keywords. This required consistent, valuable content.
+CareConnect needed to establish authority in the Swiss healthcare recruitment market and rank for long-tail keywords. This required consistent, valuable content.
 
-**Our Solution:** We implemented a content creation and publishing system:
+We implemented a content creation and publishing system:
 - Content calendar planning topics 3 months in advance
 - SEO-optimized blog posts targeting long-tail keywords
 - Automated publishing workflow using Node.js and MongoDB
@@ -110,11 +110,11 @@ This custom CRM, built with our [automation](/services/automation/) expertise, e
 
 The weekly blog content drove 40% of organic traffic and established CareConnect as the authority in Swiss healthcare recruitment.
 
-### Challenge 7: Email Marketing - Automated Email Sequences
+### Challenge 7: Email Marketing — Automated Email Sequences
 
-**The Problem:** Manual email follow-ups were time-consuming and inconsistent. CareConnect needed automated email sequences for candidate nurturing, interview reminders, and placement follow-ups.
+Manual email follow-ups were time-consuming and inconsistent. CareConnect needed automated email sequences for candidate nurturing, interview reminders, and placement follow-ups.
 
-**Our Solution:** We built automated email marketing using AWS SES and custom Node.js automation:
+We built automated email marketing using AWS SES and custom Node.js automation:
 - Welcome sequences for new applicants
 - Interview reminders reducing no-shows by 45%
 - Placement follow-ups ensuring candidate satisfaction

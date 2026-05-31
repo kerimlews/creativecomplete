@@ -29,51 +29,46 @@ faq:
 
 ## Neizkoriščen zaklad v vašem CRM-u
 
-Vsako podjetje ima bazo podatkov. Večina jo pusti neizkoriščeno — ker e-mail marketing ima slabo stopnjo odprtih sporočil in osebni outreach ne skalira.
+Vsako podjetje ima bazo podatkov. Večina jo pusti neizkoriščeno, ker e-mail marketing ima slabo stopnjo odprtih sporočil in osebni outreach ne skalira.
 
-**WhatsApp to temeljito spremeni:**
+WhatsApp to temeljito spremeni:
 
 - 85–95 % stopnja odprtih sporočil (vs. 20 % pri e-pošti)
 - 15–40 % stopnja klikov (vs. 2–5 % pri e-pošti)
-- Povprečno 42.5× ROI pri prvi kampanji
+- povprečno 42.5× ROI pri prvi kampanji
 
 ## Sistem monetizacije, ki ga zgradimo
 
-### Faza 1: Analiza baze in segmentacija
+### Analiza baze in segmentacija
 
-Analiziramo vaše obstoječe stike in segmentiramo po:
+Analiziramo vaše obstoječe stike in segmentiramo po štirih kriterijih: kdaj je bil zadnji nakup ali stik, kako pogosto je stik interagiral, kakšna je historična življenjska vrednost in katere produkte ali storitve si je ogledal.
 
-- **Aktualnosti:** Kdaj je bil zadnji nakup ali stik?
-- **Pogostosti:** Kako pogosto je stik interagiral?
-- **Vrednosti:** Kakšna je historična življenjska vrednost?
-- **Signalu namena:** Katere produkte ali storitve si je ogledal?
-
-### Faza 2: Kampanja za reaktivacijo
+### Kampanja za reaktivacijo
 
 Za neaktivne stike (60+ dni brez interakcije):
 
-- Personalizirano sporočilo za reaktivacijo prek WhatsApp
+- personalizirano sporočilo za reaktivacijo prek WhatsApp
 - AI agent prevzame dialog ob odgovoru
-- Zbiranje namena in ponovna kvalifikacija
-- Takojšnje posredovanje vročih leadov prodajni ekipi
+- zbiranje namena in ponovna kvalifikacija
+- takojšnje posredovanje vročih leadov prodajni ekipi
 
-### Faza 3: Broadcast kampanje
+### Broadcast kampanje
 
 Za aktivne segmente s potencialom za nakup:
 
-- Promocijske ponudbe z rokom veljavnosti (nujnost)
-- Priporočila produktov na podlagi zgodovine nakupov
-- Ekskluzivne ponudbe za stalne stranke
-- Napovedi dogodkov in lansiranj
+- promocijske ponudbe z rokom veljavnosti (nujnost)
+- priporočila produktov na podlagi zgodovine nakupov
+- ekskluzivne ponudbe za stalne stranke
+- napovedi dogodkov in lansiranj
 
-### Faza 4: Avtomatizirana zaporedja za zadržanje
+### Avtomatizirana zaporedja za zadržanje
 
 Za zvestobo strank in ponavljajoče se poslovanje:
 
-- **D+30:** Povpraševanje o zadovoljstvu in namig za upsell
-- **D+60:** Ekskluzivna ponudba nadaljnjega produkta
-- **D+90:** Opomnik za podaljšanje pri naročninah
-- **Na podlagi sprožilcev:** Odziv na spremembe vedenja v realnem času
+- D+30: povpraševanje o zadovoljstvu in namig za upsell
+- D+60: ekskluzivna ponudba nadaljnjega produkta
+- D+90: opomnik za podaljšanje pri naročninah
+- na podlagi sprožilcev: odziv na spremembe vedenja v realnem času
 
 ## Dokazani rezultati iz prakse
 
@@ -81,7 +76,7 @@ Mediane strank po prvi celotni kampanji:
 
 - **42.5×** ROI na WhatsApp broadcast kampanje
 - **85–95 %** stopnja odprtih sporočil vseh poslanih sporočil
-- **Reaktivacija** 15–30 % neaktivnih stikov
-- **Dokazilo o ROI** za vsako sporočilo prek popolne atribucije
+- reaktivacija 15–30 % neaktivnih stikov
+- dokazilo o ROI za vsako sporočilo prek popolne atribucije
 
 [Izračunajte potencialni ROI vaše baze — brezplačen pregled →](/sl/contact/)

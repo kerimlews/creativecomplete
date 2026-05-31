@@ -24,14 +24,14 @@ faq:
 
 ## TL;DR
 
-PrepMe ertrank in manueller Bestellabwicklung - Tabellenkalkulationen, CSV-Dateien und Dokumentenerstellung, die 300+ Stunden monatlich verbrauchten. Wir haben eine maßgeschneiderte Shopify-integrierte Plattform gebaut, die ihren gesamten Workflow automatisierte. Ergebnis: 80% Zeitreduzierung, $280k jährliche Einsparungen und ein Geschäft, das skaliert, ohne Personal hinzuzufügen.
+PrepMe ertrank in manueller Bestellabwicklung: Tabellenkalkulationen, CSV-Dateien und Dokumentenerstellung, die 300+ Stunden monatlich verbrauchten. Wir haben eine maßgeschneiderte Shopify-integrierte Plattform gebaut, die ihren gesamten Workflow automatisierte. Ergebnis: 80% Zeitreduzierung, $280k jährliche Einsparungen und ein Geschäft, das skaliert, ohne Personal hinzuzufügen.
 
 ## Tipps
 
-- **Hören Sie auf, 'so wird es halt gemacht' als Antwort zu akzeptieren**
-- **Wenn Sie CSV-Dateien manuell verarbeiten, verschwenden Sie Geld**
-- **Maßgeschneiderte Automatisierung amortisiert sich schneller als Einstellung**
-- **Integration schlägt Ersetzung** - arbeiten Sie mit Ihren bestehenden Tools
+- Hören Sie auf, "so wird es halt gemacht" als Antwort zu akzeptieren
+- Wenn Sie CSV-Dateien manuell verarbeiten, verschwenden Sie Geld
+- Maßgeschneiderte Automatisierung amortisiert sich schneller als Einstellungen
+- Integration schlägt Ersetzung: arbeiten Sie mit Ihren bestehenden Tools
 
 ## Inhaltsverzeichnis
 
@@ -39,7 +39,6 @@ PrepMe ertrank in manueller Bestellabwicklung - Tabellenkalkulationen, CSV-Datei
 - [Aufbau der Automatisierungs-Engine](#aufbau-der-automatisierungs-engine)
 - [Shopify-Integration, die wirklich funktioniert](#shopify-integration-die-wirklich-funktioniert)
 - [Ergebnisse: Von überarbeitet zu optimiert](#ergebnisse-von-überarbeitet-zu-optimiert)
-- [Kostet manuelle Arbeit Sie Geld?](#kostet-manuelle-arbeit-sie-geld)
 
 ## Die 300-Stunden monatliche Zeitverschwendung
 
@@ -75,10 +74,10 @@ Wir haben ihr manuelles Chaos ersetzt durch:
 
 Die meisten "Integrationen" sind nur Datenexporte. Wir haben ein echtes Zwei-Wege-System gebaut:
 
-- **Bestellungen fließen automatisch** in die Management-Plattform
-- **Inventar-Updates** synchronisieren zurück zu Shopify
-- **Kundenkommunikation** wird in beiden Systemen verfolgt
-- **Keine manuelle Dateneingabe** erforderlich
+- Bestellungen fließen automatisch in die Management-Plattform
+- Inventar-Updates synchronisieren zurück zu Shopify
+- Kundenkommunikation wird in beiden Systemen verfolgt
+- Keine manuelle Dateneingabe erforderlich
 
 ## Ergebnisse: Von überarbeitet zu optimiert
 
@@ -86,12 +85,3 @@ Die meisten "Integrationen" sind nur Datenexporte. Wir haben ein echtes Zwei-Weg
 - **$280.000 jährliche Einsparungen** bei Arbeitskosten
 - **Null Fehler** bei der Bestellabwicklung (vs. 5% Fehlerrate vorher)
 - **Skalierbare Grundlage** für 10x Wachstum ohne Personal hinzuzufügen
-
-## Kostet manuelle Arbeit Sie Geld?
-
-Wenn Sie Mitarbeiter haben, die Arbeit erledigen, die automatisiert werden könnte, sparen Sie kein Geld - Sie verschwenden es.
-
-**Wir bauen Automatisierung, die sich in 90 Tagen amortisiert.** Wenn Sie bereit sind, aufzuhören, Menschen dafür zu bezahlen, Roboterarbeit zu erledigen...
-
-**Kontaktieren Sie uns für unsere Automatisierungs-Chancenbewertung.** Wir berechnen genau, wie viel manuelle Prozesse Sie kosten.
-

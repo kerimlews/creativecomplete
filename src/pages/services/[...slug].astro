@@ -389,6 +389,46 @@ const breadcrumbs = [
       margin: 24px 0;
       max-width: 100%;
     }
+    :global(table) {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 28px 0;
+      font-size: 14px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    :global(thead) {
+      background: rgba(99,102,241,0.1);
+    }
+    :global(th) {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      font-weight: 600;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid rgba(99,102,241,0.2);
+      white-space: nowrap;
+    }
+    :global(td) {
+      padding: 10px 14px;
+      color: var(--fg-1);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    :global(tbody tr:last-child td) {
+      border-bottom: none;
+    }
+    :global(tbody tr:nth-child(even)) {
+      background: rgba(255,255,255,0.02);
+    }
+    :global(tbody tr:hover) {
+      background: rgba(99,102,241,0.05);
+    }
   }
 
   .v2-proj-aside {

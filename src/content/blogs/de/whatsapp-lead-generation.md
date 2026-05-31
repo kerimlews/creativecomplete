@@ -25,74 +25,74 @@ faq:
 
 WhatsApp hat 2 Milliarden aktive Nutzer. Der Durchschnittsnutzer öffnet die App mehr als 25 Mal pro Tag. Nachrichten werden innerhalb von 3 Minuten gelesen.
 
-Und die meisten Unternehmen nutzen es als Telefonleitung — und warten, dass Kunden anrufen.
+Und die meisten Unternehmen nutzen es als Telefonleitung und warten, dass Kunden anrufen.
 
-Die Chance liegt nicht im Kanal. Sie liegt darin, Lead-Gen-Flows zu bauen, die Prospects in WhatsApp-Konversationen ziehen, bevor sie einen Wettbewerber finden — sie automatisch qualifizieren und nur die wertvollen ans Team routen.
+Die Chance liegt nicht im Kanal. Sie liegt darin, Lead-Gen-Flows zu bauen, die Prospects in WhatsApp-Konversationen ziehen, bevor sie einen Wettbewerber finden, sie automatisch qualifizieren und nur die wertvollen ans Team routen.
 
 ## Warum WhatsApp klassische Lead-Erfassung schlägt
 
-Das Standard-Lead-Generation-Modell — Ad → Landingpage → Formular → Datenbank → Follow-up — hat drei Bruchstellen.
+Das Standard-Lead-Generation-Modell, also Ad, Landingpage, Formular, Datenbank und Follow-up, hat drei Bruchstellen.
 
-Landingpages verlieren 78% der Klicks, bevor irgendjemand das Formular ausfüllt. Formulare verlieren weitere 40% vor dem Submit. Und die eingereichten Leads liegen in der Datenbank, bis ein Rep sie aufnimmt — oft 24–47 Stunden später.
+Landingpages verlieren 78% der Klicks, bevor irgendjemand das Formular ausfüllt. Formulare verlieren weitere 40% vor dem Submit. Und die eingereichten Leads liegen in der Datenbank, bis ein Rep sie aufnimmt, oft 24–47 Stunden später.
 
 WhatsApp kollabiert diesen Funnel.
 
 ![WhatsApp Lead-Funnel vs. klassischer Funnel — weniger Schritte, höhere Konversion auf jeder Stufe, schnellere Zeit bis zur Qualifizierung](/images/blog/whatsapp-lead-generation/01-funnel-comparison.svg)
 
-**Click-to-WhatsApp** Ads ersetzen Landingpages durch direkten Chat-Open. Der Nutzer klickt die Ad, WhatsApp öffnet sich und er ist bereits im Gespräch mit Ihrem Unternehmen. Kein Formular. Keine Landingpage-Friktion. Kein Warteraum.
+Click-to-WhatsApp Ads ersetzen Landingpages durch direkten Chat-Open. Der Nutzer klickt die Ad, WhatsApp öffnet sich und er ist bereits im Gespräch mit Ihrem Unternehmen. Kein Formular. Keine Landingpage-Friktion. Kein Warteraum.
 
 Die Konversion von Klick zu Konversation: **12–22%** vs. **2–5%** für eine Landingpage mit Formular.
 
-Die Qualität dieser Leads unterscheidet sich auch. Wer sich entscheidet, eine WhatsApp-Konversation zu starten, hat höhere Absicht als jemand, der anonym ein Formular einreicht und wartet. Er engagiert freiwillig, in seinem bevorzugten Kanal — und erwartet eine Antwort.
+Die Qualität dieser Leads unterscheidet sich ebenfalls. Wer sich entscheidet, eine WhatsApp-Konversation zu starten, hat höhere Absicht als jemand, der anonym ein Formular einreicht und wartet. Er engagiert freiwillig, in seinem bevorzugten Kanal, und erwartet eine Antwort.
 
 ## Die 4 WhatsApp Lead-Gen Eintrittspunkte
 
 ![Vier Eintrittspunkte für WhatsApp Lead-Generierung: Click-to-WA Ads, Website-Widget, QR-Codes und Social-DM-Flows](/images/blog/whatsapp-lead-generation/02-entry-points.svg)
 
-### 1. Click-to-WhatsApp Ads
+### Click-to-WhatsApp Ads
 
-Laufen auf Facebook und Instagram. Der Ad-CTA öffnet eine WhatsApp-Konversation statt einer Landingpage. Funktioniert für jedes Produkt oder jeden Service, bei dem ein Gespräch ein natürlicher nächster Schritt ist. Am besten in Branchen mit längerem Sales-Cycle — Immobilien, Finanzdienstleistungen, Automotive, professionelle Services.
+Laufen auf Facebook und Instagram. Der Ad-CTA öffnet eine WhatsApp-Konversation statt einer Landingpage. Funktioniert für jedes Produkt oder jeden Service, bei dem ein Gespräch ein natürlicher nächster Schritt ist. Am besten in Branchen mit längerem Sales-Cycle, also Immobilien, Finanzdienstleistungen, Automotive und professionelle Services.
 
-Die Konversation ist vorab so konfiguriert, dass sie mit einer qualifizierenden Nachricht startet — der AI Agent kann die Absicht sofort einschätzen, ohne dass sich der Lead verhört fühlt.
+Die Konversation ist vorab so konfiguriert, dass sie mit einer qualifizierenden Nachricht startet. Der AI Agent kann die Absicht sofort einschätzen, ohne dass sich der Lead verhört fühlt.
 
-### 2. Website WhatsApp-Widget
+### Website WhatsApp-Widget
 
-Ein Widget auf Ihrer Website, das einen WhatsApp-Chat öffnet. Fängt Leads ein, die bereits auf Ihrer Site sind und bereit zum Engagement. Anders als bei Live-Chat läuft die Konversation auf dem Handy weiter, nachdem sie die Site verlassen haben — der Faden reißt nie ab.
+Ein Widget auf Ihrer Website, das einen WhatsApp-Chat öffnet. Es fängt Leads ein, die bereits auf Ihrer Site sind und bereit zum Engagement. Anders als bei Live-Chat läuft die Konversation auf dem Handy weiter, nachdem sie die Site verlassen haben. Der Faden reißt nie ab.
 
 Konversion von Website-Besucher zu WhatsApp-Lead: **3–7%**. Für traffic-starke Sites ist das signifikantes Lead-Volumen bei nahezu null Grenzkosten.
 
-### 3. QR-Codes an Offline-Standorten
+### QR-Codes an Offline-Standorten
 
 Physische QR-Codes, die eine WhatsApp-Konversation öffnen. Nützlich für Retail-Standorte, Events, Messen, Fahrzeugbeschriftungen und Print-Werbung. Der QR-Code codiert eine vorgefüllte Nachricht, sodass die Konversation sofort mit relevantem Kontext startet.
 
-### 4. Instagram und Facebook DM-Flows
+### Instagram und Facebook DM-Flows
 
-Ein Prospect kommentiert Ihren Post oder schickt eine DM und triggert eine automatisierte Antwort, die die Konversation auf WhatsApp verlegt. Das fängt Leads ein, die bereits mit Ihrem Content engagen — typischerweise höhere Absicht als kalte Ad-Leads.
+Ein Prospect kommentiert Ihren Post oder schickt eine DM und triggert eine automatisierte Antwort, die die Konversation auf WhatsApp verlegt. Das fängt Leads ein, die bereits mit Ihrem Content engagen, typischerweise mit höherer Absicht als kalte Ad-Leads.
 
 ## Der Qualifizierungs-Flow, der auf jeden Lead läuft
 
 Sobald ein Lead durch einen dieser Eintrittspunkte kommt, übernimmt das Qualifizierungs-System automatisch.
 
-Der AI Agent fährt die Konversation durch einen natürlichen Austausch, der surfacet:
+Der AI Agent führt die Konversation durch einen natürlichen Austausch, der surfacet:
 - Was er sucht (Produkt-/Service-Fit)
 - Seine Timeline (aktiv vs. erkundend)
 - Seine Budget-Range (über indirekte Fragen)
 - Seine Entscheidungsautorität
 
-Der gesamte Austausch dauert 3–7 Minuten der Lead-Zeit. Er erlebt eine hilfreiche, sachkundige Konversation — kein Formular, kein Verhör.
+Der gesamte Austausch dauert 3–7 Minuten der Lead-Zeit. Er erlebt eine hilfreiche, sachkundige Konversation, kein Formular, kein Verhör.
 
 Am Ende ist der Lead gescort. Heiße Leads werden sofort mit vollem Kontext an einen Vertriebsrep verbunden. Warme Leads kommen in eine 7–14-tägige Nurture-Sequenz. Kalte Leads werden für [Langzeit-Follow-up](/de/blog/ki-verkaufsagenten/) getaggt.
 
 ## Was Unternehmen bei WhatsApp Lead-Gen falsch machen
 
-Drei häufige Fehler, die Konversion killen:
+Drei häufige Fehler, die Konversion kosten:
 
-**Zu langsam antworten.** Dasselbe [Geschwindigkeitsprinzip](/de/blog/reaktionszeit/), das für jeden Lead gilt, gilt hier — Absicht verfällt schnell. Ein AI Agent antwortet in Sekunden; ein menschlicher Rep, der in Stunden antwortet, verliert das Fenster komplett.
+**Zu langsam antworten.** Dasselbe [Geschwindigkeitsprinzip](/de/blog/reaktionszeit/), das für jeden Lead gilt, gilt hier. Absicht verfällt schnell. Ein AI Agent antwortet in Sekunden, ein menschlicher Rep, der in Stunden antwortet, verliert das Fenster komplett.
 
 **WhatsApp als Einbahn-[Broadcast-Kanal](/de/blog/whatsapp-broadcast-kampagnen/) nutzen.** WhatsApp ist ein Konversations-Medium. Leads, die Werbenachrichten ohne Versuch des Bedarfsverständnisses bekommen, konvertieren zu einem Bruchteil der Rate von Leads, die echten Austausch erleben.
 
-**Vor dem Routing nicht qualifizieren.** Reps, die jeden WhatsApp-Lead bekommen — unabhängig von der Qualität — verbringen die meiste Zeit mit Leuten, die nicht kaufbereit sind. Das richtige System surfacet nur qualifizierte Leads mit vollem Kontext.
+**Vor dem Routing nicht qualifizieren.** Reps, die jeden WhatsApp-Lead bekommen, unabhängig von der Qualität, verbringen die meiste Zeit mit Leuten, die nicht kaufbereit sind. Das richtige System surfacet nur qualifizierte Leads mit vollem Kontext.
 
-Bei **CreativeComplete** ist WhatsApp Lead-Generierung als Capture-Phase des AI Customer Systems gebaut — integriert mit jeder Ad-Plattform, jedem Social-Kanal und Ihrer Website, sodass jeder Eintrittspunkt einen WhatsApp-Lead generiert, der sofort erfasst, qualifiziert und ohne manuellen Eingriff geroutet wird.
+Bei **CreativeComplete** ist WhatsApp Lead-Generierung als Capture-Phase des AI Customer Systems gebaut, integriert mit jeder Ad-Plattform, jedem Social-Kanal und Ihrer Website, sodass jeder Eintrittspunkt einen WhatsApp-Lead generiert, der sofort erfasst, qualifiziert und ohne manuellen Eingriff geroutet wird.
 
 Die meisten Kunden sehen ihre ersten qualifizierten WhatsApp-Leads innerhalb von **48 Stunden** nach Setup.

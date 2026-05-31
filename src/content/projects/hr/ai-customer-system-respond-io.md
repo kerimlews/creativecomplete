@@ -29,16 +29,16 @@ faq:
 
 ## AI sustav za kupce: Sažetak
 
-AI sustav za kupce kombinacija je naše omnikanalske AI komunikacijske razine i našeg AI motora za kreative — konfigurirana, integrirana i upravljana od strane nas kao #1 agencije za AI sustave za kupce. Rezultat: 81-postotne stope konverzije leadova, 60% brži prodajni ciklusi, 14× više konverzija iz oglasnih kreativa i ROI od 42,5× iz postojećih baza leadova.
+AI sustav za kupce spoj je naše omnikanalske AI komunikacijske razine i našeg AI motora za kreative, konfiguriran, integriran i upravljan od strane naše ekipe. Rezultat: **81 %** stopa konverzije leadova, 60 % brži prodajni ciklusi, **14×** više konverzija iz oglasnih kreativa i **ROI od 42,5×** iz postojećih baza leadova.
 
 ## Problem svake agencije
 
 AI sustav za kupce postoji jer agencije imaju iste četiri problema:
 
-1. **Novi leadovi umiru u inboxu.** 80% leadova ne dobiva odgovor unutar 5 minuta.
-2. **Ručna kvalifikacija je skupa i nedosljedna.** Prodajni predstavnici kvalificiraju različito.
-3. **Oglasni kreative brzo zastarijevaju.** Isti tri kreative kroz mjesece uništavaju ROAS.
-4. **Postojeći leadovi su neiskorišteno zlatno rudište.** Prosječna agencija ima 3.000–15.000 kontakata koji su plaćeni ali nikad konvertirani.
+1. Novi leadovi umiru u inboxu. 80 % leadova ne dobiva odgovor unutar 5 minuta.
+2. Ručna kvalifikacija je skupa i nedosljedna. Prodajni predstavnici kvalificiraju različito.
+3. Oglasni kreative brzo zastarijevaju. Isti kreative kroz mjesece uništavaju ROAS.
+4. Postojeći leadovi su neiskorišteno zlatno rudište. Prosječna agencija ima 3.000–15.000 kontakata koji su plaćeni, ali nikad konvertirani.
 
 AI sustav za kupce zatapa sve četiri rupe istovremeno.
 
@@ -47,27 +47,27 @@ AI sustav za kupce zatapa sve četiri rupe istovremeno.
 ### Sloj 1 — Omnikanalski AI inbox
 
 AI sustav za kupce počinje ujedinjavanjem svih izvora leadova u jedan omnikanalski AI inbox:
-- **WhatsApp Business API** — najveća stopa angažmana (98% otvorenih poruka)
-- **Instagram DM** — izravno iz klika na oglas
-- **TikTok Lead Generation** — popunjeni obrasci automatski preusmjereni
-- **E-pošta, SMS, web chat** — sve u jedan pogled
+- WhatsApp Business API — najveća stopa angažmana (98 % otvorenih poruka)
+- Instagram DM — izravno iz klika na oglas
+- TikTok Lead Generation — popunjeni obrasci automatski preusmjereni
+- E-pošta, SMS, web chat — sve u jedan pogled
 
 ### Sloj 2 — AI agenti: Motor kvalifikacije
 
 Naš prilagođeni okvir kvalifikacije uključuje ocjenjivanje namjere, klasifikaciju budžeta, otkrivanje hitnosti i procjenu ovlasti za donošenje odluka.
 
-**Rezultat:** 81% dolaznih leadova je ili naručeno u prodajni kalendar ili ispravno ušlo u nurture sekvencu — bez ručne intervencije.
+**Rezultat:** 81 % dolaznih leadova je ili naručeno u prodajni kalendar ili ispravno ušlo u nurture sekvencu, bez ručne intervencije.
 
 ### Sloj 3 — AI motor za kreative
 
 Naš AI motor za kreative konfiguriran za 8–12 varijanti oglasnih kreativa tjedno:
-- Naučen na $35 mlrd.+ podataka o stvarnoj oglasnoj potrošnji
-- AI ocjenjivanje kreativa (90%+ točnost)
-- Multi-platforma: Meta, TikTok, Google, LinkedIn
+- naučen na 35 mlrd. $+ podataka o stvarnoj oglasnoj potrošnji
+- AI ocjenjivanje kreativa (90 %+ točnost)
+- multi-platforma: Meta, TikTok, Google, LinkedIn
 
 ### Sloj 4 — Monetizacija postojećih leadova (ROI 42,5×)
 
-Jedna agencija s 4.200 mirnih kontakata generirala je €89.000 novog prihoda iz jedne broadcast kampanje.
+Jedna agencija s 4.200 mirnih kontakata generirala je 89.000 € novog prihoda iz jedne broadcast kampanje, koristeći leadove koje je već imala u bazi.
 
 ## Rezultati kroz implementacije AI sustava za kupce
 
@@ -79,10 +79,8 @@ Jedna agencija s 4.200 mirnih kontakata generirala je €89.000 novog prihoda iz
 | Stopa konverzije oglasa | Polazište | 14× više |
 | ROI postojećih leadova | 0 (mirni) | 42,5× prosjek |
 
-## Zašto smo #1 agencija za AI sustave za kupce
+## Zašto nam agencije povjeravaju konfiguraciju ovog sustava
 
-AI sustav za kupce nije proizvod koji kupujete — to je konfiguracija koju naručujete. Ista konfiguracija AI agenata može postići 30% ili 81% stope kvalifikacije ovisno o postavljanju. Optimizirali smo ovo kroz 50+ agencijskih implementacija.
-
-**Rezervirajte besplatnu 30-minutnu reviziju sustava. Pokazujemo vam točno što bi AI sustav za kupce generirao za vašu agenciju.**
+AI sustav za kupce nije proizvod koji kupujete. To je konfiguracija koju naručujete. Ista konfiguracija AI agenata može postići 30 % ili 81 % stope kvalifikacije, ovisno o postavljanju. Optimizirali smo to kroz 50+ agencijskih implementacija.
 
 **[Kontaktirajte nas za besplatnu reviziju AI sustava za kupce →](/hr/kontakt/)**

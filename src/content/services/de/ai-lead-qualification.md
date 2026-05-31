@@ -31,7 +31,7 @@ faq:
 
 Jede Minute, in der ein Lead wartet, sinkt die Conversion-Wahrscheinlichkeit um bis zu 80 %. Menschliche Teams verpassen Follow-ups, qualifizieren inkonsistent und können nicht 24/7 auf allen Kanälen gleichzeitig aktiv sein.
 
-**Das Ergebnis:** Leads, für die Sie bereits bezahlt haben, werden kalt — bevor Ihr Team überhaupt antwortet.
+Leads, für die Sie bereits bezahlt haben, werden kalt, bevor Ihr Team überhaupt antwortet.
 
 ## Wie KI-Leadqualifizierung funktioniert
 

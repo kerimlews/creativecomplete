@@ -25,13 +25,13 @@ faq:
 
 **80%** prodaj zahteva pet ali več follow-upov. Povprečen prodajni predstavnik odneha po dveh.
 
-Ta vrzel — med follow-upom, ki bi konvertiral, in tistim, ki se ni zgodil — je tam, kjer izgine večina prihodka. Ne zato, ker leadi niso bili zainteresirani. Ker se je follow-up zaporedje ustavilo, preden je bil lead pripravljen.
+Ta vrzel, med follow-upom, ki bi konvertiral, in tistim, ki se ni zgodil, je tam, kjer izgine večina prihodka. Ne zato, ker leadi niso bili zainteresirani. Ker se je follow-up zaporedje ustavilo, preden je bil lead pripravljen.
 
 AI prodajni agenti zaprejo to vrzel z izvajanjem vsakega follow-upa, na vsakem leadu, na vsakem kanalu, ne glede na uro ali število leadov v pipelineu.
 
 ## Kaj AI prodajni agent dejansko počne
 
-AI prodajni agent ni chatbot s skriptiranimi odzivi. Je sistem, treniran na vašem produktu, vaših kvalifikacijskih kriterijih, vašem playbooku za obravnavo ugovorov in vašem idealnem profilu stranke — ki vodi prave prodajne pogovore skozi naravni jezik.
+AI prodajni agent ni chatbot s skriptiranimi odzivi. Je sistem, treniran na vašem produktu, vaših kvalifikacijskih kriterijih, vašem playbooku za obravnavo ugovorov in vašem idealnem profilu stranke, ki vodi prave prodajne pogovore skozi naravni jezik.
 
 Obseg, ki ga pokriva:
 
@@ -41,11 +41,11 @@ Prvi odziv (< 60 sekund): vsak nov lead prejme odziv v sekundah po poizvedbi. Pr
 
 [BANT kvalifikacija](/sl/blog/ai-kvalifikacija-leadov/): skozi pogovorno izmenjavo AI izpostavi proračun, odločevalsko avtoriteto, konkretno potrebo in časovnico. Lead doživi koristen pogovor, ne zaslišanja. AI zabeleži vsak signal in zgradi povzetek kvalifikacije.
 
-[Follow-up zaporedja](/sl/blog/whatsapp-broadcast-kampanje/): lead, ki se ne odzove na prvo sporočilo, prejme follow-up na dan 1, dan 3, dan 7 in dan 14 — samodejno. Vsebina sporočila se prilagaja zadnji znani poziciji leada v pogovoru. Leadi, ki so bili topli, a so utihnili, prejmejo poziv za ponovno vzpostavitev stika. Leadi, ki so izpostavili določen ugovor, prejmejo vsebino, ki ga naslavlja.
+[Follow-up zaporedja](/sl/blog/whatsapp-broadcast-kampanje/): lead, ki se ne odzove na prvo sporočilo, prejme follow-up na dan 1, dan 3, dan 7 in dan 14, samodejno. Vsebina sporočila se prilagaja zadnji znani poziciji leada v pogovoru. Leadi, ki so bili topli, a so utihnili, prejmejo poziv za ponovno vzpostavitev stika. Leadi, ki so izpostavili določen ugovor, prejmejo vsebino, ki ga naslavlja.
 
-Izpostavljanje ugovorov: ko lead obotavlja ali izpostavi pomislek, je AI treniran, da ga izpostavi in obravnava, namesto da ga preskoči. Cenovni ugovor dobi preokvirjanje vrednosti. Časovni ugovor dobi poziv nujnosti ali pot "naj rezerviramo za naslednje četrtletje". Obravnava ugovorov uporablja vaše najboljše odzive, konsistentno uporabljene.
+Izpostavljanje ugovorov: ko lead obotavlja ali izpostavi pomislek, je AI treniran, da ga izpostavi in obravnava, namesto da ga preskoči. Cenovni ugovor dobi preokvirjanje vrednosti. Časovni ugovor dobi poziv nujnosti ali pot "naj rezerviramo za naslednje četrtletje". Obravnava ugovorov vedno sledi vašemu playbooku.
 
-Rezervacija terminov: ko je lead kvalificiran in pripravljen na pogovor, AI predstavi razpoložljive čase in rezervira termin neposredno v koledar predstavnika — brez izmenjave e-mailov, brez zmede s povezavami za rezervacijo. Termin pride s pred-prebranim povzetkom pogovora.
+Rezervacija terminov: ko je lead kvalificiran in pripravljen na pogovor, AI predstavi razpoložljive čase in rezervira termin neposredno v koledar predstavnika, brez izmenjave e-mailov, brez zmede s povezavami za rezervacijo. Termin pride s pred-prebranim povzetkom pogovora.
 
 ## Vrzel pokritosti, ki jo AI reši
 
@@ -72,12 +72,12 @@ Predstavnik vstopi v pogovor, vedoč, s kom govori, kaj lead potrebuje, kaj ga s
 
 ## Multiplikator follow-upa
 
-Najmanj cenjena prednost AI prodajnih agentov ni prvi odziv — je follow-up.
+Najmanj cenjena prednost AI prodajnih agentov ni prvi odziv, je follow-up.
 
 Večina leadov ne kupi pri prvem pogovoru. Kupijo pri tretjem, petem ali sedmem dotiku, ko je čas pravi in odnos vzdrževan. Brez sistematičnega follow-up procesa večina podjetij zajame samo leade, ki so bili kupni ob kontaktu. Izgubijo vse, ki so potrebovali več časa.
 
 AI agenti izvajajo follow-up sistematično: pravo sporočilo, v pravem intervalu, glede na to, kje je lead v pogovoru. Noben lead ne pade skozi razpoke, ker je bil predstavnik prezaposlen, prepozabljiv ali preveč nelagoden z vztrajnim follow-upom.
 
-Pri **CreativeComplete** so AI prodajni agenti konfigurirani kot del Convert faze AI Customer Systema — integrirani z vsakim kanalom leadov, vašim [CRM](/sl/blog/crm-avtomatizacija/) in koledarjem predstavnika. Sistem je zgrajen, treniran in testiran v 5 dneh.
+Pri **CreativeComplete** so AI prodajni agenti konfigurirani kot del Convert faze AI Customer Systema, integrirani z vsakim kanalom leadov, vašim [CRM](/sl/blog/crm-avtomatizacija/) in koledarjem predstavnika. Sistem je zgrajen, treniran in testiran v 5 dneh.
 
 Če je vaša stopnja zaključkov nižja, kot bi morala biti, najbolj verjetna razlaga ni vaš produkt ali pitch. So leadi, ki so šli hladni med prvim stikom in prvim pogovorom.

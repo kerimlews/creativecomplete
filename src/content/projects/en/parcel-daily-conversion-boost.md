@@ -41,11 +41,11 @@ The logistics company's growth strategy was working at the ad level. Their Meta 
 
 Three problems compounded each other.
 
-1. **Fragmented teams.** Marketing, sales, and customer support operated in separate tools with no shared context. A lead that marketing generated had to be manually re-entered in the sales system before anyone could follow up.
+1. Fragmented teams. Marketing, sales, and customer support operated in separate tools with no shared context. A lead that marketing generated had to be manually re-entered in the sales system before anyone could follow up.
 
-2. **High spam volume.** Lead ads on Facebook and TikTok attract a significant percentage of unqualified or spam submissions. Agents were manually sorting through low-quality leads before finding prospects worth pursuing.
+2. High spam volume. Lead ads on Facebook and TikTok attract a significant percentage of unqualified or spam submissions. Agents were manually sorting through low-quality leads before finding prospects worth pursuing.
 
-3. **Manual data collection.** Every courier inquiry required the same information: origin, destination, package dimensions, weight, timeline, volume. Agents asked the same questions hundreds of times per day.
+3. Manual data collection. Every courier inquiry required the same information: origin, destination, package dimensions, weight, timeline, volume. Agents asked the same questions hundreds of times per day.
 
 The result was high ad spend, high lead volume, and disappointing conversion.
 
@@ -67,7 +67,7 @@ The qualification data was passed to sales agents with full context, so their fi
 
 ### Step 3: Meta Conversion API and TikTok Lower Funnel Events
 
-This was the key move. By feeding conversion signals back to Meta and TikTok, specifically signals from leads who completed qualification and became customers, the ad algorithms learned to optimize for people like those customers.
+By feeding conversion signals back to Meta and TikTok, specifically signals from leads who completed qualification and became customers, the ad algorithms learned to optimize for people like those customers.
 
 The result: the same ad budget started generating a higher proportion of qualified leads. Cost per lead dropped 10%. Lead volume from both platforms increased 35%.
 
@@ -98,9 +98,3 @@ By the time the lead reached a human agent, the quotation data was already compl
 The most lasting result wasn't the conversion rate improvement. It was the feedback loop. By sending quality conversion signals back to Meta and TikTok, the ad platforms learned what a good lead looked like for this business. That intelligence compounds. Every month, targeting improves, lead quality rises, and cost per acquisition falls.
 
 This is what separates AI Customer System from a simple chatbot. We close the loop between conversion and acquisition, making the whole funnel smarter over time.
-
-## What This Means for Your Agency
-
-If your clients' ad platforms are generating volume but the conversion funnel is broken, AI Customer System fixes both ends. We qualify inbound leads, feed conversion signals back to the platforms, and compound ROAS every month.
-
-One integrated system. Fully managed. You take the credit for the results.

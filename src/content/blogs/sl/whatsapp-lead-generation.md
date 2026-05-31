@@ -25,15 +25,15 @@ faq:
 
 WhatsApp ima 2 milijardi aktivnih uporabnikov. Povprečen uporabnik ga odpre več kot 25-krat na dan. Sporočila, poslana skozi njega, so prebrana v 3 minutah.
 
-In večina podjetij ga uporablja kot telefonsko linijo — čakajoč, da stranke pokličejo.
+In večina podjetij ga uporablja kot telefonsko linijo, čakajoč, da stranke pokličejo.
 
 Priložnost ni v kanalu. Je v gradnji tokov pridobivanja leadov, ki pripeljejo potencialne stranke v WhatsApp pogovore, preden najdejo konkurenta, jih samodejno kvalificirajo in usmerijo le tiste, vredne časa vaše ekipe.
 
 ## Zakaj WhatsApp prekaša tradicionalno zajemanje leadov
 
-Standardni model pridobivanja leadov — oglas → pristajalna stran → obrazec → baza → follow-up — ima tri točke neuspeha.
+Standardni model pridobivanja leadov, oglas, pristajalna stran, obrazec, baza, follow-up, ima tri točke neuspeha.
 
-Pristajalne strani izgubijo 78% klikov, preden kdor koli izpolni obrazec. Obrazci izgubijo nadaljnjih 40% pred oddajo. In oddani leadi sedijo v bazi, dokler jih predstavnik ne doseže — pogosto 24–47 ur kasneje.
+Pristajalne strani izgubijo 78% klikov, preden kdor koli izpolni obrazec. Obrazci izgubijo nadaljnjih 40% pred oddajo. In oddani leadi sedijo v bazi, dokler jih predstavnik ne doseže, pogosto 24–47 ur kasneje.
 
 WhatsApp ta lijak zruši.
 
@@ -49,25 +49,25 @@ Kakovost teh leadov je tudi drugačna. Nekdo, ki je izbral, da začne WhatsApp p
 
 ![Štiri vstopne točke za WhatsApp pridobivanje leadov: Click-to-WA oglasi, spletni widget, QR kode in tokovi družbenih DM-jev](/images/blog/whatsapp-lead-generation/02-entry-points.svg)
 
-### 1. Click-to-WhatsApp oglasi
+### Click-to-WhatsApp oglasi
 
-Tečejo na Facebooku in Instagramu. Oglasni CTA odpre WhatsApp pogovor namesto pristajalne strani. Deluje za vsak produkt ali storitev, kjer je pogovor naraven naslednji korak. Najboljši za industrije z daljšim prodajnim ciklom — nepremičnine, finančne storitve, avtomobilizem, profesionalne storitve.
+Tečejo na Facebooku in Instagramu. Oglasni CTA odpre WhatsApp pogovor namesto pristajalne strani. Deluje za vsak produkt ali storitev, kjer je pogovor naraven naslednji korak. Najboljši za industrije z daljšim prodajnim ciklom, kot so nepremičnine, finančne storitve, avtomobilizem in profesionalne storitve.
 
-Pogovor je vnaprej konfiguriran, da se začne s kvalifikacijskim sporočilom, tako da lahko AI agent takoj oceni namero, ne da bi se lead počutil zaslišanega.
+Pogovor je vnaprej konfiguriran, da se začne s kvalifikacijskim sporočilom, tako da AI agent takoj oceni namero, ne da bi se lead počutil zaslišanega.
 
-### 2. Spletni WhatsApp widget
+### Spletni WhatsApp widget
 
-Widget na vaši spletni strani, ki odpre WhatsApp klepet. Zajame leade, ki so že na vaši strani in pripravljeni za angažiranje. Drugače kot pri klepetu v živo se pogovor nadaljuje na njihovem telefonu, potem ko zapustijo stran — niti ne izgubite.
+Widget na vaši spletni strani odpre WhatsApp klepet. Zajame leade, ki so že na vaši strani in pripravljeni za angažiranje. Drugače kot pri klepetu v živo se pogovor nadaljuje na njihovem telefonu, potem ko zapustijo stran.
 
 Konverzija od obiskovalca strani do WhatsApp leada: **3–7%**. Za strani z visokim prometom je to znaten obseg leadov pri skoraj nič mejnih stroških.
 
-### 3. QR kode na offline lokacijah
+### QR kode na offline lokacijah
 
 Fizične QR kode, ki odprejo WhatsApp pogovor. Uporabne za prodajne lokacije, dogodke, sejme, ovojnine vozil in tiskane oglase. QR koda kodira vnaprej izpolnjeno sporočilo, tako da se pogovor takoj začne z relevantnim kontekstom.
 
-### 4. Instagram in Facebook DM tokovi
+### Instagram in Facebook DM tokovi
 
-Potencialna stranka komentira vaš post ali pošlje DM, kar sproži avtomatiziran odziv, ki premakne pogovor na WhatsApp. To zajame leade, ki se že angažirajo z vašo vsebino — običajno višja namera kot pri hladnih oglasnih leadih.
+Potencialna stranka komentira vaš post ali pošlje DM, kar sproži avtomatiziran odziv, ki premakne pogovor na WhatsApp. To zajame leade, ki se že angažirajo z vašo vsebino, ki imajo običajno višjo namero kot hladni oglasni leadi.
 
 ## Kvalifikacijski tok, ki teče na vsakem leadu
 
@@ -79,7 +79,7 @@ AI agent vodi pogovor skozi naravno izmenjavo, ki izpostavi:
 - Njihov razpon proračuna (skozi posredna vprašanja)
 - Njihovo odločevalsko avtoriteto
 
-Celotna izmenjava traja 3–7 minut leadovega časa. Doživijo koristen, sposoben pogovor — ne obrazec ali zaslišanje.
+Celotna izmenjava traja 3–7 minut leadovega časa. Doživijo koristen, sposoben pogovor, ne obrazec ali zaslišanje.
 
 Na koncu je lead ocenjen. Vroči leadi so takoj povezani s prodajnim predstavnikom s polnim kontekstom. Topli leadi vstopijo v 7–14 dnevno zaporedje negovanja. Hladni leadi so označeni za dolgoročno [sledenje](/sl/blog/ai-prodajni-agenti/).
 
@@ -87,12 +87,12 @@ Na koncu je lead ocenjen. Vroči leadi so takoj povezani s prodajnim predstavnik
 
 Tri pogoste napake, ki ubijejo konverzijo:
 
-**Počasno odzivanje.** Isto [načelo hitrosti](/sl/blog/hitrost-do-leada/), ki velja za vsak lead, velja tudi tukaj — namera hitro razpada. AI agent se odzove v sekundah; človeški predstavnik, ki se odzove v urah, popolnoma izgubi okno.
+**Počasno odzivanje.** Isto [načelo hitrosti](/sl/blog/hitrost-do-leada/), ki velja za vsak lead, velja tudi tukaj. Namera hitro razpada. AI agent se odzove v sekundah; človeški predstavnik, ki se odzove v urah, popolnoma izgubi okno.
 
 **Uporaba WhatsAppa kot enosmernega [broadcast kanala](/sl/blog/whatsapp-broadcast-kampanje/).** WhatsApp je konverzacijski medij. Leadi, ki prejmejo promocijska sporočila brez kakršnega koli poskusa razumevanja njihovih potreb, konvertirajo pri delčku stopnje leadov, ki doživijo pristno izmenjavo.
 
-**Brez kvalifikacije pred usmerjanjem k predstavniku.** Predstavniki, ki prejmejo vsak WhatsApp lead — ne glede na kakovost — porabijo večino časa za ljudi, ki niso pripravljeni kupiti. Pravi sistem izpostavi samo kvalificirane leade s polnim kontekstom.
+**Brez kvalifikacije pred usmerjanjem k predstavniku.** Predstavniki, ki prejmejo vsak WhatsApp lead ne glede na kakovost, porabijo večino časa za ljudi, ki niso pripravljeni kupiti. Pravi sistem izpostavi samo kvalificirane leade s polnim kontekstom.
 
-Pri **CreativeComplete** je WhatsApp pridobivanje leadov zgrajeno kot Capture faza AI Customer Systema — integrirano z vsako oglasno platformo, vsakim družbenim kanalom in vašo spletno stranjo, tako da vsaka vstopna točka generira WhatsApp lead, ki je takoj zajet, kvalificiran in usmerjen brez ročnega posega.
+Pri **CreativeComplete** je WhatsApp pridobivanje leadov zgrajeno kot Capture faza AI Customer Systema, integrirano z vsako oglasno platformo, vsakim družbenim kanalom in vašo spletno stranjo, tako da vsaka vstopna točka generira WhatsApp lead, ki je takoj zajet, kvalificiran in usmerjen brez ročnega posega.
 
 Večina strank vidi svoje prve kvalificirane WhatsApp leade v **48 urah** od postavitve.

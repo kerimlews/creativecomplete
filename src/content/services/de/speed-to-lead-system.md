@@ -35,7 +35,7 @@ Warum? Weil Leads in dem Moment am kaufbereitesten sind, in dem sie anfragen. Je
 
 ## Die Komponenten des Speed-to-Lead Systems
 
-### Komponente 1: KI-Agenten für den Erstkontakt
+### KI-Agenten für den Erstkontakt
 
 KI-Agenten antworten in unter 60 Sekunden auf allen Kanälen:
 
@@ -44,7 +44,7 @@ KI-Agenten antworten in unter 60 Sekunden auf allen Kanälen:
 - Terminvereinbarung direkt im Chat
 - Übergabe an den Verkäufer mit vollem Kontext
 
-### Komponente 2: Unified Inbox — 40+ Kanäle, ein Dashboard
+### Unified Inbox: 40+ Kanäle, ein Dashboard
 
 Kein Lead wird mehr verpasst:
 
@@ -53,7 +53,7 @@ Kein Lead wird mehr verpasst:
 - E-Mail, SMS, Website-Chat, Telefon
 - Automatische Quellen-Attribution und Lead-Scoring
 
-### Komponente 3: Intelligentes Routing
+### Intelligentes Routing
 
 Das richtige Lead zum richtigen Verkäufer:
 
@@ -62,7 +62,7 @@ Das richtige Lead zum richtigen Verkäufer:
 - Automatische Kalenderintegration für Terminbuchungen
 - SLA-Überwachung mit Alerts bei Verzögerungen
 
-### Komponente 4: CRM-Synchronisation
+### CRM-Synchronisation
 
 Alle Daten in Echtzeit in Ihrem CRM:
 
@@ -77,7 +77,7 @@ Kunden, die das Speed-to-Lead System implementieren, sehen:
 
 - **60 %** kürzere Verkaufszyklen
 - **81 %** Lead-Conversion-Rate (vs. 20–30 % Branchenschnitt)
-- **100 %** aller Leads beantwortet — kein Lead fällt mehr durch
+- **100 %** aller Leads beantwortet, kein Lead fällt mehr durch
 - **10 Tage** bis zum Live-System
 
 ## Für wen ist das System am relevantesten?

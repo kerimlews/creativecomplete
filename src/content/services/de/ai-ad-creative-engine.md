@@ -31,7 +31,7 @@ faq:
 
 Traditionelle Agenturen brauchen Wochen für ein neues Creative. Bis es live geht, hat sich der Markt verändert. Und ohne Daten wissen Sie erst nach dem Launch, ob es funktioniert — wenn Ihr Budget bereits weg ist.
 
-**Das Ergebnis:** Hohe CPL, niedrige ROAS, endlose Kreativzyklen ohne messbare Verbesserung.
+Das Resultat: hohe CPL, niedrige ROAS, endlose Kreativzyklen ohne messbare Verbesserung.
 
 ## Wie die KI-Creative-Engine funktioniert
 

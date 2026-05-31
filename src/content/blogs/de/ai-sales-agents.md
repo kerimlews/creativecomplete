@@ -25,13 +25,13 @@ faq:
 
 **80%** der Verkäufe brauchen fünf oder mehr Follow-ups. Der durchschnittliche Vertriebler gibt nach zwei auf.
 
-Diese Lücke — zwischen dem Follow-up, das konvertiert hätte, und dem, das nie passiert ist — ist da, wo der meiste Umsatz verschwindet. Nicht weil die Leads desinteressiert waren. Sondern weil die Follow-up-Sequenz stoppte, bevor der Lead bereit war.
+Diese Lücke, zwischen dem Follow-up, das konvertiert hätte, und dem, das nie passiert ist, ist da, wo der meiste Umsatz verschwindet. Nicht weil die Leads desinteressiert waren. Sondern weil die Follow-up-Sequenz stoppte, bevor der Lead bereit war.
 
-AI Sales Agents schließen diese Lücke, indem sie jedes Follow-up auf jedem Lead auf jedem Kanal durchführen — egal welche Uhrzeit, egal wie viele Leads in der Pipeline sind.
+AI Sales Agents schließen diese Lücke, indem sie jedes Follow-up auf jedem Lead auf jedem Kanal durchführen, egal welche Uhrzeit, egal wie viele Leads in der Pipeline sind.
 
 ## Was ein AI Sales Agent tatsächlich tut
 
-Ein AI Sales Agent ist kein Chatbot mit Skript-Antworten. Es ist ein System, trainiert auf Ihr Produkt, Ihre Qualifizierungskriterien, Ihr Einwandbehandlungs-Playbook und Ihr Ideal Customer Profile — das echte Verkaufsgespräche per natürlicher Sprache führt.
+Ein AI Sales Agent ist kein Chatbot mit Skript-Antworten. Er ist ein System, trainiert auf Ihr Produkt, Ihre Qualifizierungskriterien, Ihr Einwandbehandlungs-Playbook und Ihr Ideal Customer Profile, das echte Verkaufsgespräche per natürlicher Sprache führt.
 
 Der Umfang dessen, was er übernimmt:
 
@@ -43,13 +43,13 @@ Erste Antwort (< 60 Sekunden): Jeder neue Lead bekommt eine Antwort innerhalb vo
 
 [Follow-up-Sequenzen](/de/blog/whatsapp-broadcast-kampagnen/): Ein Lead, der nicht auf die erste Nachricht reagiert, bekommt automatisch Follow-ups an Tag 1, 3, 7 und 14. Der Nachrichteninhalt passt sich der letzten bekannten Position des Leads in der Konversation an. Leads, die warm waren und stumm wurden, bekommen einen Re-Engagement-Prompt. Leads, die einen konkreten Einwand erhoben haben, bekommen Inhalte, die ihn adressieren.
 
-Einwandbehandlung: Wenn ein Lead zögert oder Bedenken äußert, greift die KI sie auf und behandelt sie — statt sie zu überspringen. Ein Preiseinwand bekommt ein Value-Reframe. Ein Timing-Einwand bekommt einen Dringlichkeits-Prompt oder einen "Lassen Sie uns für nächstes Quartal terminieren"-Pfad. Die Einwandbehandlung nutzt Ihre besten Antworten konsistent.
+Einwandbehandlung: Wenn ein Lead zögert oder Bedenken äußert, greift die KI sie auf und behandelt sie. Ein Preiseinwand bekommt ein Value-Reframe. Ein Timing-Einwand bekommt einen Dringlichkeits-Prompt oder einen "Lassen Sie uns für nächstes Quartal terminieren"-Pfad. Die Einwandbehandlung nutzt Ihre besten Antworten konsistent.
 
-Terminbuchung: Wenn ein Lead qualifiziert und gesprächsbereit ist, präsentiert die KI verfügbare Zeiten und bucht den Termin direkt im Kalender des Reps — kein E-Mail-Pingpong, keine Kalender-Link-Verwirrung. Der Termin kommt mit einer Pre-Read-Zusammenfassung der Konversation.
+Terminbuchung: Wenn ein Lead qualifiziert und gesprächsbereit ist, präsentiert die KI verfügbare Zeiten und bucht den Termin direkt im Kalender des Reps, ohne E-Mail-Pingpong, ohne Kalender-Link-Verwirrung. Der Termin kommt mit einer Pre-Read-Zusammenfassung der Konversation.
 
 ## Die Abdeckungslücke, die KI schließt
 
-Ihr Vertriebsteam arbeitet 8 Stunden am Tag, 5 Tage die Woche. Das sind 40 Stunden von 168. Die übrigen 128 Stunden — Leads, die über Ads, Social oder Website reinkommen — bleiben unbeantwortet.
+Ihr Vertriebsteam arbeitet 8 Stunden am Tag, 5 Tage die Woche. Das sind 40 Stunden von 168. Die übrigen 128 Stunden, Leads, die über Ads, Social oder Website reinkommen, bleiben unbeantwortet.
 
 Die Forschung dazu ist klar: Ein Lead, der innerhalb von 5 Minuten nach seiner Anfrage kontaktiert wird, ist **21×** wahrscheinlicher qualifiziert als einer, der 24 Stunden später kontaktiert wird. Jeder Lead, der außerhalb der Geschäftszeiten reinkommt und in derselben Session keine Antwort erhält, hat seine Konversionswahrscheinlichkeit weitgehend verloren, wenn Ihr Team Montagmorgen ankommt.
 
@@ -72,12 +72,12 @@ Der Rep geht in ein Gespräch, in dem er weiß, mit wem er spricht, was der Lead
 
 ## Der Follow-up-Multiplikator
 
-Der am meisten unterschätzte Vorteil von AI Sales Agents ist nicht die erste Antwort — es ist das Follow-up.
+Der am meisten unterschätzte Vorteil von AI Sales Agents ist nicht die erste Antwort, sondern das Follow-up.
 
 Die meisten Leads kaufen nicht beim ersten Gespräch. Sie kaufen beim dritten, fünften oder siebten Touchpoint, wenn das Timing passt und die Beziehung gepflegt wurde. Ohne systematischen Follow-up-Prozess fangen die meisten Unternehmen nur die Leads ein, die bei Kontakt schon kaufbereit waren. Sie verlieren alle, die mehr Zeit gebraucht hätten.
 
 AI Agents fahren das Follow-up systematisch: die richtige Nachricht, im richtigen Intervall, basierend auf dem Stand des Leads in der Konversation. Keine Leads fallen durch die Maschen, weil ein Rep zu beschäftigt, zu vergesslich oder zu unbehaglich mit persistentem Follow-up war.
 
-Bei **CreativeComplete** sind AI Sales Agents in der Convert-Phase des AI Customer Systems konfiguriert — integriert mit jedem Lead-Kanal, Ihrem [CRM](/de/blog/crm-automatisierung/) und dem Kalender Ihrer Reps. Das System wird in 5 Tagen gebaut, trainiert und getestet.
+Bei **CreativeComplete** sind AI Sales Agents in der Convert-Phase des AI Customer Systems konfiguriert, integriert mit jedem Lead-Kanal, Ihrem [CRM](/de/blog/crm-automatisierung/) und dem Kalender Ihrer Reps. Das System wird in 5 Tagen gebaut, trainiert und getestet.
 
 Wenn Ihre Abschlussquote niedriger ist, als sie sein sollte, liegt es wahrscheinlich nicht am Produkt oder am Pitch. Es liegt an den Leads, die zwischen Erstkontakt und erstem Gespräch kalt geworden sind.

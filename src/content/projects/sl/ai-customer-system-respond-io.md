@@ -29,7 +29,7 @@ faq:
 
 ## AI sistem za stranke: Povzetek
 
-AI sistem za stranke združuje našo omnikanalsko plast za AI komunikacijo in naš AI motor za kreative — konfiguriramo, integriramo in upravljamo ga za vas. Rezultati: **81 %** stopnja konverzije leadov, 60 % krajši prodajni cikli, **14×** več konverzij iz oglasnih kreativov in **ROI 42,5×** iz obstoječih baz leadov.
+AI sistem za stranke združuje našo omnikanalsko plast za AI komunikacijo in naš AI motor za kreative. Konfiguriramo, integriramo in upravljamo ga za vas. Rezultati: **81 %** stopnja konverzije leadov, 60 % krajši prodajni cikli, **14×** več konverzij iz oglasnih kreativov in **ROI 42,5×** iz obstoječih baz leadov.
 
 ## Problem vsake agencije
 
@@ -89,6 +89,6 @@ Ena agencija s 4.200 mirnimi kontakti je generirala €89.000 novega prihodka iz
 
 ## Zakaj nam agencije zaupajo konfiguriranje tega sistema
 
-AI sistem za stranke ni produkt, ki ga kupite — je konfiguracija, ki jo naročite. Ista konfiguracija AI agentov lahko doseže 30-% ali 81-% stopnje kvalifikacije, odvisno od nastavitve. To smo optimizirali prek 50+ agencijskih implementacij.
+AI sistem za stranke ni produkt, ki ga kupite. Je konfiguracija, ki jo naročite. Ista konfiguracija AI agentov lahko doseže 30-% ali 81-% stopnje kvalifikacije, odvisno od nastavitve. To smo optimizirali prek 50+ agencijskih implementacij.
 
 **[Kontaktirajte nas za brezplačni pregled AI sistema za stranke →](/sl/kontakt/)**

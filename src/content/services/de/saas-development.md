@@ -35,7 +35,7 @@ faq:
 
 Viele erfolgreiche SaaS-Produkte begannen als interne Tools, die ein spezifisches Problem lösten. Die Herausforderung besteht darin, dieses Tool in ein Produkt zu verwandeln, für das Kunden bezahlen.
 
-Ihre internen Tools könnten für andere Unternehmen wertvoll sein, die dieselben Probleme haben. Mit dem richtigen Entwicklungsansatz lassen sie sich in profitable SaaS-Produkte verwandeln. Wir helfen Ihnen dabei — von der Idee bis zur Abonnementverwaltung.
+Ihre internen Tools könnten für andere Unternehmen wertvoll sein, die dieselben Probleme haben. Mit dem richtigen Entwicklungsansatz lassen sie sich in profitable SaaS-Produkte verwandeln. Wir helfen Ihnen dabei, von der Idee bis zur Abonnementverwaltung.
 
 ## Was wir bauen
 
@@ -101,11 +101,11 @@ Ihr SaaS wird schnelle Leistung auch mit vielen Nutzern haben, zuverlässige Bet
 
 ### Fallstudie: Internes Tool zu 10.000€ MRR
 
-**Herausforderung:** Ein Unternehmen hatte ein internes Tool, das ihnen erhebliche Zeit sparte — sie wussten aber nicht, wie sie es produktisieren sollten.
+Herausforderung: Ein Unternehmen hatte ein internes Tool, das ihnen erhebliche Zeit sparte, sie wussten aber nicht, wie sie es produktisieren sollten.
 
-**Lösung:** Wir verwandelten das Tool in ein SaaS-Produkt mit Abonnementverwaltung, Zahlungsverarbeitung und benutzerfreundlicher Oberfläche.
+Lösung: Wir verwandelten das Tool in ein SaaS-Produkt mit Abonnementverwaltung, Zahlungsverarbeitung und benutzerfreundlicher Oberfläche.
 
-**Ergebnisse:**
+Ergebnisse:
 - MVP in 10 Wochen gestartet
 - erster zahlender Kunde in 45 Tagen
 - 10.000€ MRR innerhalb von 12 Monaten

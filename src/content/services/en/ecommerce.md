@@ -33,9 +33,9 @@ faq:
 
 ## The E-commerce Conversion Problem
 
-Most e-commerce stores convert at 1-2%, meaning 98-99% of visitors leave without buying. This isn't because your products are bad — it's because your store isn't optimized for conversion.
+Most e-commerce stores convert at 1-2%, meaning 98-99% of visitors leave without buying. This isn't because your products are bad. Your store simply isn't optimized for conversion.
 
-Small improvements in conversion rate can double or triple your revenue. If you're getting 1,000 visitors per month and converting at 1%, that's 10 sales. At 3%, that's 30 sales — 3x the revenue from the same traffic.
+Small improvements in conversion rate can double or triple your revenue. If you're getting 1,000 visitors per month and converting at 1%, that's 10 sales. At 3%, that's 30 sales, three times the revenue from the same traffic.
 
 We optimize every aspect of your e-commerce store to convert more visitors into customers, from product pages to checkout.
 
@@ -99,7 +99,7 @@ We optimize operations:
 
 ## Our E-commerce Optimization Process
 
-### Phase 1: Audit and Analysis
+### Audit and Analysis
 
 We start by analyzing:
 - Current conversion rate and traffic sources
@@ -108,7 +108,7 @@ We start by analyzing:
 - Mobile vs desktop performance
 - Competitor analysis and best practices
 
-### Phase 2: Quick Wins
+### Quick Wins
 
 We implement high-impact changes first:
 - Product page optimization (descriptions, images, CTAs)
@@ -116,7 +116,7 @@ We implement high-impact changes first:
 - Trust signal addition (reviews, guarantees, badges)
 - Mobile optimization (speed, usability)
 
-### Phase 3: Deep Optimization
+### Deep Optimization
 
 We make comprehensive improvements:
 - Site-wide conversion optimization
@@ -124,7 +124,7 @@ We make comprehensive improvements:
 - Personalization where applicable
 - Advanced features (wishlists, recommendations)
 
-### Phase 4: Ongoing Optimization
+### Ongoing Optimization
 
 We continuously improve:
 - Performance monitoring and analysis

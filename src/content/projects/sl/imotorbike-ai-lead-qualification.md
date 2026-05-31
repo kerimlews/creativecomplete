@@ -33,11 +33,11 @@ faq:
 
 ## Povzetek
 
-Hitro rastoči trg rabljenih motorjev je dnevno obravnaval 500–600 sporočil prek štirih ločenih kanalov. Povpraševanja so prihajala v napačne predale. Kvalificirani kupci so odpadli med predajami. Ročni agenti niso mogli slediti. AI Customer System je vse skupaj zbral v eno mešano mapo, namestil AI agente za poti kupcev in prodajalcev, ter skrajšal odzivne čase za **67 %** — hkrati pa podvojil število dnevno obravnavanih pogovorov. Prodaja se je povečala že v prvem mesecu.
+Hitro rastoči trg rabljenih motorjev je dnevno obravnaval 500–600 sporočil prek štirih ločenih kanalov. Povpraševanja so prihajala v napačne predale. Kvalificirani kupci so odpadli med predajami. Ročni agenti niso mogli slediti. AI Customer System je vse skupaj zbral v eno mešano mapo, namestil AI agente za poti kupcev in prodajalcev ter skrajšal odzivne čase za **67 %**, hkrati pa podvojil število dnevno obravnavanih pogovorov. Prodaja se je povečala že v prvem mesecu.
 
 ## Problem: Obseg brez infrastrukture
 
-Tržnica je imela problem s povpraševanjem, ki je izgledal kot kadrovski problem. Tisoče kupcev in prodajalcev je dnevno pisalo prek WhatsApp, Instagram, TikTok in Facebook — ekipa pa ni imela enega mesta za upravljanje.
+Tržnica je imela problem s povpraševanjem, ki je izgledal kot kadrovski problem. Tisoče kupcev in prodajalcev je dnevno pisalo prek WhatsApp, Instagram, TikTok in Facebook. Ekipa pa ni imela enega mesta za upravljanje.
 
 - Napačno usmerjanje: povpraševanja prodajalcev so dosegla ekipo za nakup in obratno
 - Počasni odzivi: brez skupne mape so agenti preklapljali med zavihki in spregledali sporočila

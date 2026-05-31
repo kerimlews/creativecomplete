@@ -24,13 +24,13 @@ faq:
 
 ## TL;DR
 
-Eine Forschungsplattform, die Tausende von PDFs, Zitaten und kollaborative Bearbeitung verwaltet, braucht eine Architektur, die bei der Skalierung standhält. Wir haben Paperpile mit MERN-Stack und leistungsorientierten Prinzipien entwickelt und bedienen 200.000+ Akademiker über Web, Mobile und Browser-Erweiterungen — bei **95% Leistungswerten**.
+Eine Forschungsplattform, die Tausende von PDFs, Zitaten und kollaborative Bearbeitung verwaltet, braucht eine Architektur, die bei der Skalierung standhält. Wir haben Paperpile mit MERN-Stack und leistungsorientierten Prinzipien entwickelt und bedienen 200.000+ Akademiker über Web, Mobile und Browser-Erweiterungen bei **95% Leistungswerten**.
 
 ## Tipps
 
 - Legen Sie Ihr Leistungsbudget fest, bevor Sie Code schreiben
 - Wählen Sie Ihre Datenbankarchitektur nach Abfragemustern, nicht nach Trends
-- Mobile ist kein Nachgedanke — es ist Ihre primäre Schnittstelle
+- Mobile ist kein Nachgedanke, sondern Ihre primäre Schnittstelle
 - Browser-Erweiterungen sind Vertriebskanäle, keine Nebenfunktionen
 
 ## Inhaltsverzeichnis
@@ -45,7 +45,7 @@ Eine Forschungsplattform, die Tausende von PDFs, Zitaten und kollaborative Bearb
 
 Akademiker nutzten 5+ verschiedene Tools für die Forschung: PDF-Reader, Zitationsmanager, Notiz-Apps, Kollaborationstools. Das Erlebnis war fragmentiert und mühsam.
 
-Paperpile hatte die Vision, den Forschungs-Workflow zu vereinheitlichen — aber ihre technische Architektur konnte die Komplexität bei der Skalierung nicht bewältigen.
+Paperpile hatte die Vision, den Forschungs-Workflow zu vereinheitlichen. Die technische Architektur konnte die Komplexität bei der Skalierung jedoch nicht bewältigen.
 
 ## Architekturentscheidungen, die Skalierung ermöglichten
 

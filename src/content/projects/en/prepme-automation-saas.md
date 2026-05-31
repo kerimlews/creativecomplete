@@ -24,32 +24,32 @@ faq:
 
 ## TL;DR
 
-PrepMe was buried in manual order processing — spreadsheets, CSV files, and document generation that consumed 300+ hours monthly. We built a custom automation platform using Astro, React, and Node.js that automated their entire workflow. Result: **80% time reduction**, $280k annual savings, and a business that scales without adding staff.
+PrepMe was buried in manual order processing: spreadsheets, CSV files, and document generation that consumed 300+ hours monthly. We built a custom automation platform using Astro, React, and Node.js that automated their entire workflow. Result: **80% time reduction**, $280k annual savings, and a business that scales without adding staff.
 
 ## The Mission
 
-PrepMe needed an automation tool that would save 4 hours per day of manual work. Their process involved parsing large Excel files, combining subscriptions with new orders, creating review tables, and generating custom delivery formats — all done by hand.
+PrepMe needed an automation tool that would save 4 hours per day of manual work. Their process involved parsing large Excel files, combining subscriptions with new orders, creating review tables, and generating custom delivery formats, all done by hand.
 
 ## The Challenges We Solved
 
 ### Challenge 1: Parse Large Excel Files
 
-**The Problem:** PrepMe received large Excel files (often 10,000+ rows) containing order data, subscription information, and customer details. Manual parsing was error-prone and consumed 2-3 hours daily.
+PrepMe received large Excel files (often 10,000+ rows) containing order data, subscription information, and customer details. Manual parsing was error-prone and consumed 2 to 3 hours daily.
 
-**Our Solution:** We built an automated Excel parsing system using Node.js:
+We built an automated Excel parsing system using Node.js:
 - Automated file processing detecting and importing new Excel files
 - Data extraction parsing complex Excel structures with multiple sheets
 - Error handling identifying and flagging data inconsistencies
 - Validation ensuring data quality before processing
 - Logging system tracking all processed files and errors
 
-The automated parsing system reduced processing time from 2-3 hours to 5 minutes, eliminating human error. This is part of our [automation](/services/automation/) service capabilities.
+The automated parsing system reduced processing time from 2 to 3 hours down to 5 minutes, eliminating human error. This is part of our [automation](/services/automation/) service capabilities.
 
 ### Challenge 2: Combine Subscriptions with New Orders
 
-**The Problem:** PrepMe needed to merge subscription data with new one-time orders, creating a unified view for processing. Manual combination was time-consuming and prone to errors.
+PrepMe needed to merge subscription data with new one-time orders, creating a unified view for processing. Manual combination was time-consuming and prone to errors.
 
-**Our Solution:** We built an intelligent data merging system:
+We built an intelligent data merging system:
 - Subscription matching automatically linking subscriptions to customer accounts
 - Order consolidation combining one-time and recurring orders
 - Conflict resolution handling cases where subscriptions and orders overlap
@@ -60,9 +60,9 @@ The automated merging system, built with our [automation](/services/automation/)
 
 ### Challenge 3: Create a Review Table with All Merged Orders
 
-**The Problem:** After merging subscriptions and orders, PrepMe needed a comprehensive review table showing all processed items, allowing staff to verify accuracy before final processing.
+After merging subscriptions and orders, PrepMe needed a comprehensive review table showing all processed items, so staff could verify accuracy before final processing.
 
-**Our Solution:** We built an interactive review dashboard using React:
+We built an interactive review dashboard using React:
 - Real-time data display showing all merged orders in a searchable table
 - Filtering and sorting helping staff find specific orders quickly
 - Visual indicators highlighting potential issues or conflicts
@@ -73,9 +73,9 @@ The review table, part of our [SaaS development](/services/saas-development/) ap
 
 ### Challenge 4: Parse into Custom Format for Delivering
 
-**The Problem:** PrepMe needed to transform merged order data into a specific format required by their delivery system. Manual formatting was tedious and error-prone.
+PrepMe needed to transform merged order data into a specific format required by their delivery system. Manual formatting was tedious and error-prone.
 
-**Our Solution:** We built automated format conversion:
+We built automated format conversion:
 - Template system defining custom output formats
 - Data transformation converting merged data to required structure
 - Format validation ensuring output meets delivery system requirements
@@ -86,9 +86,9 @@ The automated formatting, following our [automation](/services/automation/) meth
 
 ### Challenge 5: Excel Custom Functionalities for Calculating
 
-**The Problem:** PrepMe needed complex calculations (pricing, discounts, shipping costs, taxes) that were currently done manually in Excel, taking hours and prone to errors.
+PrepMe needed complex calculations (pricing, discounts, shipping costs, taxes) that were previously done manually in Excel, taking hours and prone to errors.
 
-**Our Solution:** We built a calculation engine:
+We built a calculation engine:
 - Pricing rules automating price calculations based on product, quantity, and customer type
 - Discount application applying promotional codes and volume discounts
 - Shipping calculation determining costs based on weight, destination, and service level
@@ -110,7 +110,7 @@ This approach, following our [automation](/services/automation/) and [SaaS devel
 
 ## Results
 
-- **80% reduction** in manual processing time (300 → 60 hours monthly)
+- **80% reduction** in manual processing time (300 to 60 hours monthly)
 - **$280,000 annual savings** in labor costs
 - Zero errors in order processing (vs. 5% error rate before)
 - 4 hours saved daily as originally requested

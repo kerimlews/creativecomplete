@@ -29,9 +29,9 @@ faq:
 
 ## Die ungenutzte Goldmine in Ihrem CRM
 
-Jedes Unternehmen besitzt eine Datenbank. Die meisten lassen sie ungenutzt — weil E-Mail-Marketing schlechte Öffnungsraten hat und persönlicher Outreach nicht skaliert.
+Jedes Unternehmen besitzt eine Datenbank. Die meisten lassen sie ungenutzt, weil E-Mail-Marketing schlechte Öffnungsraten hat und persönlicher Outreach nicht skaliert.
 
-**WhatsApp ändert das fundamental:**
+WhatsApp verändert das grundlegend:
 
 - 85–95 % Öffnungsrate (vs. 20 % bei E-Mail)
 - 15–40 % Klickrate (vs. 2–5 % bei E-Mail)
@@ -39,25 +39,25 @@ Jedes Unternehmen besitzt eine Datenbank. Die meisten lassen sie ungenutzt — w
 
 ## Das Monetarisierungssystem, das wir aufbauen
 
-### Phase 1: Datenbankanalyse und Segmentierung
+### Datenbankanalyse und Segmentierung
 
 Wir analysieren Ihre bestehenden Kontakte und segmentieren nach:
 
-- **Aktualität:** Wann war der letzte Kauf oder Kontakt?
-- **Häufigkeit:** Wie oft hat der Kontakt interagiert?
-- **Wert:** Was ist der historische Lifetime Value?
-- **Intent-Signal:** Welche Produkte oder Dienstleistungen haben sie angesehen?
+- Aktualität: Wann war der letzte Kauf oder Kontakt?
+- Häufigkeit: Wie oft hat der Kontakt interagiert?
+- Wert: Was ist der historische Lifetime Value?
+- Intent-Signal: Welche Produkte oder Dienstleistungen haben sie angesehen?
 
-### Phase 2: Reaktivierungs-Kampagne
+### Reaktivierungs-Kampagne
 
 Für inaktive Kontakte (60+ Tage ohne Interaktion):
 
 - Personalisierte Re-Engagement-Nachricht via WhatsApp
 - KI-Agent übernimmt den Dialog bei Antwort
 - Intent-Erfassung und erneute Qualifizierung
-- Weiterleitung heiße Leads sofort an Verkauf
+- Weiterleitung heißer Leads sofort an Verkauf
 
-### Phase 3: Broadcast-Kampagnen
+### Broadcast-Kampagnen
 
 Für aktive Segmente mit Kaufpotenzial:
 
@@ -66,14 +66,14 @@ Für aktive Segmente mit Kaufpotenzial:
 - Exklusive Angebote für Stammkunden
 - Event- und Launch-Ankündigungen
 
-### Phase 4: Automatisierte Retention-Sequenzen
+### Automatisierte Retention-Sequenzen
 
 Für Kundenbindung und wiederkehrendes Geschäft:
 
-- **D+30:** Zufriedenheitsnachfrage und Upsell-Hinweis
-- **D+60:** Exklusives Folgeprodukt-Angebot
-- **D+90:** Verlängerungserinnerung bei Abonnements
-- **Trigger-basiert:** Reaktion auf Verhaltensänderungen in Echtzeit
+- D+30: Zufriedenheitsnachfrage und Upsell-Hinweis
+- D+60: Exklusives Folgeprodukt-Angebot
+- D+90: Verlängerungserinnerung bei Abonnements
+- Trigger-basiert: Reaktion auf Verhaltensänderungen in Echtzeit
 
 ## Bewiesene Ergebnisse aus der Praxis
 
@@ -81,8 +81,8 @@ Kunden-Medianwerte nach der ersten vollständigen Kampagne:
 
 - **42.5×** ROI auf WhatsApp-Broadcast-Kampagnen
 - **85–95 %** Öffnungsrate aller gesendeten Nachrichten
-- **Reaktivierung** von 15–30 % inaktiver Kontakte
-- **ROI-Nachweis** für jede Nachricht durch vollständige Attribution
+- Reaktivierung von 15–30 % inaktiver Kontakte
+- ROI-Nachweis für jede Nachricht durch vollständige Attribution
 
 ## Was im System enthalten ist
 

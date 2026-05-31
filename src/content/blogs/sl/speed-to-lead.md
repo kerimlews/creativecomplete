@@ -25,7 +25,7 @@ faq:
 
 Kupna namera ima razpolovno dobo, merjeno v minutah.
 
-Ko nekdo izpolni obrazec, klikne na oglas ali pošlje DM, je na vrhuncu interesa. Niso rezervirali konkurenta. Niso izgubili zanimanja. Niso šli naprej. To okno — trenutek med namero in neukrepanjem — je tam, kjer se vsaka prodaja zmaga ali izgubi.
+Ko nekdo izpolni obrazec, klikne na oglas ali pošlje DM, je na vrhuncu interesa. Niso rezervirali konkurenta. Niso izgubili zanimanja. Niso šli naprej. To okno, trenutek med namero in neukrepanjem, je tam, kjer se vsaka prodaja zmaga ali izgubi.
 
 MIT Lead Response Management študija je dala temu številko: kontakt z leadom v 5 minutah vas naredi **9× verjetnejšega kvalifikatorja** kot čakanje 30 minut, in **21× verjetnejšega** kot čakanje 24 ur.
 
@@ -33,7 +33,7 @@ Povprečno podjetje se odzove v **47 urah**.
 
 ## Zakaj namera tako hitro razpada
 
-Odločitev za nakup ni trajen racionalen proces. Je skok. Ko potencialna stranka odda poizvedbo, je na vrhuncu tega skoka — motivirana, fokusirana, pripravljena na pogovor. Kar se zgodi v naslednjih 5 do 30 minutah, določa, ali se ta skok pretvori v pogovor ali se razprši v hrupu njihovega dneva.
+Odločitev za nakup ni trajen racionalen proces. Je skok. Ko potencialna stranka odda poizvedbo, je na vrhuncu tega skoka, motivirana, fokusirana, pripravljena na pogovor. Kar se zgodi v naslednjih 5 do 30 minutah, določa, ali se ta skok pretvori v pogovor ali se razprši v hrupu njihovega dneva.
 
 Tri stvari se zgodijo, ko se odzovete počasi:
 
@@ -49,19 +49,19 @@ Tri stvari se zgodijo, ko se odzovete počasi:
 
 Speed to Lead ni ena sama akcija. Je sistem s tremi deli, ki morajo delati skupaj.
 
-### 1. del: Takojšen zajem preko vsakega kanala
+### Del: Takojšen zajem preko vsakega kanala
 
-Hitrost propade, preden se začne, ko leadi niso zajeti v realnem času. Večina podjetij ima leade, ki prihajajo iz oglasov, spletnih obrazcev, WhatsAppa, Instagram DM, TikTok komentarjev in offline priporočil — nobenega sinhroniziranega.
+Hitrost propade, preden se začne, ko leadi niso zajeti v realnem času. Večina podjetij ima leade, ki prihajajo iz oglasov, spletnih obrazcev, WhatsAppa, Instagram DM, TikTok komentarjev in offline priporočil, brez sinhronizacije med njimi.
 
-Poenotena pošta zajame vsak lead v trenutku, ko se obrne, ne glede na kanal. Brez ročnih CSV izvozov. Brez pregleda ob koncu dneva. Vsaka poizvedba, takoj na voljo, s polnim kontekstom o tem, od kod so prišli in kaj so vprašali.
+Poenotena pošta zajame vsak lead v trenutku, ko se obrne, ne glede na kanal. Brez ročnih CSV izvozov. Brez pregleda ob koncu dneva. Vsaka poizvedba je takoj na voljo, s polnim kontekstom o tem, od kod so prišli in kaj so vprašali.
 
-### 2. del: AI prvi odziv v manj kot 60 sekundah
+### Del: AI prvi odziv v manj kot 60 sekundah
 
 ![Časovnica AI prvega odziva — lead odda ob 0s, AI se odzove ob 12s, kvalifikacija zaključena ob 47s](/images/blog/speed-to-lead/02-ai-first-response.svg)
 
 Prvi odziv ne sme priti od človeka. Mora priti hitro in se zdeti relevanten.
 
-AI agent se odzove v sekundah na poizvedbo leada. Potrdi konkretno stvar, za katero je lead izrazil zanimanje, in začne zaporedje kvalifikacije — proračun, časovnica, namera — v pogovornem jeziku, ki se ne bere kot bot.
+AI agent se odzove v sekundah na poizvedbo leada. Potrdi konkretno stvar, za katero je lead izrazil zanimanje, in začne zaporedje kvalifikacije, proračun, časovnica, namera, v pogovornem jeziku, ki se ne bere kot bot.
 
 Do trenutka, ko prodajni predstavnik vidi lead v svoji vrsti, že ima:
 
@@ -72,15 +72,15 @@ Do trenutka, ko prodajni predstavnik vidi lead v svoji vrsti, že ima:
 
 Predstavnik ne potrebuje raziskave, kvalifikacije ali ponovne predstavitve podjetja. Vstopi v pogovor z vsem, kar potrebuje za zaključek.
 
-### 3. del: Prioritizirano usmerjanje k pravemu predstavniku
+### Del: Prioritizirano usmerjanje k pravemu predstavniku
 
 ![Usmerjanje leadov — vroči leadi gredo takoj k closerjem, hladni leadi v zaporedja negovanja, nekvalificirani leadi so filtrirani ven](/images/blog/speed-to-lead/03-lead-routing.svg)
 
-Niso vsi leadi enaki. Vroč lead s proračunom, časovnico in odločevalsko avtoriteto mora takoj doseči zaključno predstavnika. Hladen lead, ki "samo raziskuje", mora vstopiti v [zaporedje negovanja](/sl/blog/whatsapp-broadcast-kampanje/) — ne porabiti časa predstavnika.
+Niso vsi leadi enaki. Vroč lead s proračunom, časovnico in odločevalsko avtoriteto mora takoj doseči zaključno predstavnika. Hladen lead, ki "samo raziskuje", mora vstopiti v [zaporedje negovanja](/sl/blog/whatsapp-broadcast-kampanje/), ne porabiti časa predstavnika.
 
-Logika usmerjanja razvrsti leade po oceni in jih ujema s pravim članom ekipe na podlagi razpoložljivosti, nabora veščin in tipa leada. Pravi predstavnik dobi pravi lead ob pravem času, s polnim kontekstom, dostavljenim, preden dvigne telefon.
+Logika usmerjanja razvrsti leade po oceni in jih ujame s pravim članom ekipe na podlagi razpoložljivosti, nabora veščin in tipa leada. Pravi predstavnik dobi pravi lead ob pravem času, s polnim kontekstom, dostavljenim, preden dvigne telefon.
 
-Ta ločitev — vroči leadi closerjem, hladni leadi v negovanje — je tisto, kar naredi Speed to Lead trajnostnega pri skali. Brez tega hitrost ustvarja kaos: vsak lead je potisnjen k predstavniku, ki nato porabi dan z iskanjem tistega, ki je dejansko pripravljen kupiti.
+Ta ločitev, vroči leadi closerjem, hladni leadi v negovanje, je tisto, kar naredi Speed to Lead trajnostnega pri skali. Brez tega hitrost ustvarja kaos: vsak lead je potisnjen k predstavniku, ki nato porabi dan z iskanjem tistega, ki je dejansko pripravljen kupiti.
 
 ## Kako Speed to Lead izgleda v praksi
 
@@ -94,13 +94,13 @@ Pri strankah, s katerimi delamo, časovnica od oddaje leada do prvega kvalificir
 | Predstavnik dobi kontekst | Brez | Polni BANT povzetek |
 | Vroč lead identificiran | Po prvem klicu | Pred prvim klicem |
 
-Izhod ni le hitrost — je predstavnik, ki se prikaže na vsakem pogovoru informiran, lead že kvalificiran, in odločitev že napol sprejeta.
+Izhod ni le hitrost. Je predstavnik, ki se prikaže na vsakem pogovoru informiran, lead že kvalificiran in odločitev že napol sprejeta.
 
 ## ROI prvega odziva
 
-Poslovni primer za Speed to Lead ni zapleten. Če porabljate denar za oglase, plačujete za vsak lead. Lead, ki gre hladen, ker je vaš odziv trajal 3 ure, stane enako kot lead, ki konvertira — razlika je v celoti v tem, kaj se je zgodilo v prvih 5 minutah.
+Poslovni primer za Speed to Lead ni zapleten. Če porabljate denar za oglase, plačujete za vsak lead. Lead, ki gre hladen, ker je vaš odziv trajal 3 ure, stane enako kot lead, ki konvertira. Razlika je v celoti v tem, kaj se je zgodilo v prvih 5 minutah.
 
-Pri **CreativeComplete** gradimo Speed to Lead kot prvo plast AI Customer Systema. Vsak nov lead — iz katerega koli kanala — dobi AI odziv v manj kot 60 sekundah, oceno kvalifikacije, preden ga vidi človek, in [odločitev usmerjanja](/sl/blog/avtomatizirana-distribucija-leadov/), ki ga postavi pred pravega predstavnika s polnim kontekstom.
+Pri **CreativeComplete** gradimo Speed to Lead kot prvo plast AI Customer Systema. Vsak nov lead, iz katerega koli kanala, dobi AI odziv v manj kot 60 sekundah, oceno kvalifikacije, preden ga vidi človek, in [odločitev usmerjanja](/sl/blog/avtomatizirana-distribucija-leadov/), ki ga postavi pred pravega predstavnika s polnim kontekstom.
 
 Večina strank gre v živo v **5 dneh**.
 

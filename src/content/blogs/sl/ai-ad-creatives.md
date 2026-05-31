@@ -25,7 +25,7 @@ faq:
 
 Večina oglasnih računov teče na treh različicah kreativ. Zmagovalne kampanje tečejo na tridesetih.
 
-Ta vrzel — med tremi in tridesetimi — je tam, kjer izgine večina oglasnega proračuna. Ne zato, ker je produkt napačen. Ne zato, ker je ciljanje slabo. Ker ni bilo dovolj kreativnih različic, da bi našli tisto, ki dejansko konvertira, in ker je bil oblikovalski proces prepočasen in predrag, da bi jih proizvedel.
+Ta vrzel, med tremi in tridesetimi, je tam, kjer izgine večina oglasnega proračuna. Ne zato, ker je produkt napačen. Ne zato, ker je ciljanje slabo. Ker ni bilo dovolj kreativnih različic, da bi našli tisto, ki dejansko konvertira, in ker je bil oblikovalski proces prepočasen in predrag, da bi jih proizvedel.
 
 Povprečna oblikovalska agencija potrebuje tri do sedem dni za dostavo kreative. Popravki dodajo še dva. Do takrat, ko je končna datoteka pripravljena, je kampanjsko okno že mimo, in proračun, porabljen za čakanje, ni proizvedel ničesar.
 
@@ -35,7 +35,7 @@ AI generiranje kreativ ta ozka grla odpravi.
 
 Preden se lotimo sistemov, je vredno razumeti, koliko ročna produkcija dejansko stane — ne le v agencijskih honorarjih, ampak v izgubljeni zmogljivosti.
 
-Tipična plačana social kampanja potrebuje 10–20 aktivnih kreativnih različic za pravilne teste skozi občinstva. Srednje velika znamka z mesečno porabo 30.000 € na oglasih ima morda 3 različice aktivne hkrati. Ne tečejo s 3, ker je 3 optimalno — tečejo s 3, ker je to vse, kar je oblikovalski proračun in čas izdelave dovolil.
+Tipična plačana social kampanja potrebuje 10–20 aktivnih kreativnih različic za pravilne teste skozi občinstva. Srednje velika znamka z mesečno porabo 30.000 € na oglasih ima morda 3 različice aktivne hkrati. Ne tečejo s 3, ker je 3 optimalno, ampak ker je to vse, kar je oblikovalski proračun in čas izdelave dovolil.
 
 S 3 različicami je velika verjetnost, da je zmagovalec nekje med 17 netestiranimi možnostmi. Z 30 različicami ga najdete. Razlika v ROAS med pravo kreativo in povprečno je lahko **14×** ali več.
 
@@ -43,13 +43,13 @@ Matematika je preprosta: več testiranih različic = boljši najdeni zmagovalci 
 
 ## 6 AI sistemov kreativ, ki spremenijo matematiko
 
-AI generiranje kreativ ni ena funkcija — je plastni sistem izhodov, ki skupaj nadomestijo celoten ročni produkcijski potek. Tukaj je šest sistemov, ki štejejo.
+AI generiranje kreativ ni ena funkcija. Je plastni sistem izhodov, ki skupaj nadomestijo celoten ročni produkcijski potek. Tukaj je šest sistemov, ki štejejo.
 
 ### Ocenjevanje zmogljivosti pred lansiranjem
 
 ![Ocenjevanje zmogljivosti — AI napove CTR in CVR, preden je porabljen kakršen koli proračun](/images/blog/creatives/01-performance-scoring.svg)
 
-Največja neučinkovitost ročne produkcije je, da ni signala o zmogljivosti, dokler oglas ne gre v zrak in ne porabi proračuna. Vsak lansiranje je ugibanje.
+Največja neučinkovitost ročne produkcije je odsotnost signala o zmogljivosti, dokler oglas ne gre v zrak in ne porabi proračuna. Vsako lansiranje je ugibanje.
 
 AI ocenjevanje to spremeni z napovedovanjem stopnje klikov in stopnje konverzije za vsako kreativo, preden jo objavite. Sistem je treniran na konverzijskih podatkih iz milijonov oglasov skozi panoge, zato prepozna vzorce v postavitvi, barvnem kontrastu, postavitvi copyja in vizualni hierarhiji, ki korelirajo z zmogljivostjo.
 
@@ -63,7 +63,7 @@ En kreativni brief — znamka, smer copyja, ciljno občinstvo, platforma — gre
 
 To temeljito spremeni ekonomijo testiranja. Namesto da bi oblikovali 2 različici in upali, da bo ena konvertirala, generirate 20, jih ocenite in lansirate top 5. Preostalih 15 se arhivira ali uporabi v prihodnjih kampanjah. Nič ni zapravljenega.
 
-Izhod tudi ni generičen. Sistem uporabi vaš brand kit za vsako različico in zagotavlja, da to, kar skalira, ostane prepoznavno vaše — le v različicah, ki jih ne bi imeli časa ali proračuna ročno testirati.
+Izhod tudi ni generičen. Sistem uporabi vaš brand kit za vsako različico in zagotavlja, da to, kar skalira, ostane prepoznavno vaše, le v različicah, ki jih ne bi imeli časa ali proračuna ročno testirati.
 
 ### Izvoz formatov za več platform
 
@@ -71,17 +71,17 @@ Izhod tudi ni generičen. Sistem uporabi vaš brand kit za vsako različico in z
 
 Kreativa, ki deluje na Instagram Feed, je napačne velikosti za Stories, napačnega razmerja za Google Display in napačnega aspekta za TikTok. Oblikovalska ekipa ročno spremeni velikost vsake. To so štiri ločene datoteke za en kreativni koncept, pomnoženo s številom različic, ki jih testirate.
 
-AI izvoz formatov vzame eno odobreno kreativo in samodejno generira vsako potrebno velikost platforme — pravilne dimenzije, pravilne varne cone, pravilne specifikacije datoteke. Instagram Feed, Stories, Reels, Facebook Banner, Google Display v vseh standardnih velikostih, LinkedIn, TikTok.
+AI izvoz formatov vzame eno odobreno kreativo in samodejno generira vsako potrebno velikost platforme: pravilne dimenzije, pravilne varne cone, pravilne specifikacije datoteke. Instagram Feed, Stories, Reels, Facebook Banner, Google Display v vseh standardnih velikostih, LinkedIn, TikTok.
 
-En brief. Vsaka platforma. Nič ročnega spreminjanja velikosti.
+En brief. Vsaka platforma. Brez ročnega spreminjanja velikosti.
 
 ### Avtomatizacija A/B testiranja
 
 ![A/B testiranje v velikem obsegu — zaženite 20 hkratnih testov in samodejno skalirajte zmagovalca](/images/blog/creatives/04-ab-testing.svg)
 
-Pravilno izvajanje [A/B testa](/sl/blog/testiranje-oglasnih-kreativ/) ročno pomeni nastavitev dveh oglasnih nizov, spremljanje obeh, odločanje, kdaj je statistična značilnost, ustavitev poraženca in skaliranje zmagovalca — vse ročno, vse zahteva čas, skozi katerega zmogljivost izteka.
+Pravilno izvajanje [A/B testa](/sl/blog/testiranje-oglasnih-kreativ/) ročno pomeni nastavitev dveh oglasnih nizov, spremljanje obeh, odločanje, kdaj je statistična značilnost, ustavitev poraženca in skaliranje zmagovalca. Vse ročno, vse zahteva čas, skozi katerega zmogljivost izteka.
 
-AI A/B testiranje vse to izvaja samodejno. Zaženete 20 različic hkrati. Sistem spremlja zmogljivost v realnem času, ustavi slabo izvajajoče kreative, ko dosežejo prage statistične značilnosti, in prerazporedi proračun proti zmagovalcu — brez kakršnega koli ročnega posega.
+AI A/B testiranje vse to izvaja samodejno. Zaženete 20 različic hkrati. Sistem spremlja zmogljivost v realnem času, ustavi slabo izvajajoče kreative, ko dosežejo prage statistične značilnosti, in prerazporedi proračun proti zmagovalcu, brez kakršnega koli ročnega posega.
 
 Vaš oglasni račun vedno teče na najboljši razpoložljivi kreativi, ne na kreativi, ki ste jo nazadnje imeli čas testirati.
 
@@ -93,13 +93,13 @@ Skaliranje za večino znamk ustvari problem konsistentnosti. Ko generirate 30 kr
 
 Generiranje z zaklenjeno znamko to reši z vgrajevanjem skladnosti z znamko v generacijsko plast, ne kot preverjanje kakovosti na koncu. Vaše hex kode, pisave, pravila postavitve logotipa in ton glasu so zaklenjeni enkrat. Vsak izhod, ki sledi, je skladen po konstrukciji.
 
-Generiranje kreativ lahko predate kateremu koli članu ekipe in izhod bo skladen z znamko — ker to izvaja sistem, ne posameznik.
+Generiranje kreativ lahko predate kateremu koli članu ekipe in izhod bo skladen z znamko, ker to izvaja sistem, ne posameznik.
 
 ### Retargeting kreative po stopnjah lijaka
 
 ![Retargeting po stopnjah lijaka — različne kreative za vsako stopnjo poti stranke](/images/blog/creatives/06-retargeting.svg)
 
-Večina znamk teče iste kreative hladnim občinstvom in retargeting občinstvom. To je eden najpogostejših razlogov, zakaj retargeting slabo deluje — sporočilo je napačno za to, kje je potencialna stranka v odločitvenem procesu.
+Večina znamk teče iste kreative hladnim občinstvom in retargeting občinstvom. To je eden najpogostejših razlogov, zakaj retargeting slabo deluje: sporočilo je napačno za to, kje je potencialna stranka v odločitvenem procesu.
 
 Hladna občinstva potrebujejo problemu zavedajoče se kreative širokega dosega, ki uvedejo kategorijo. Topla občinstva potrebujejo družbeni dokaz in nujnost. Vroča občinstva — opuščevalci košarice in [obiskovalci z visoko namero](/sl/blog/hitrost-do-leada/) — potrebujejo neposredno ponudbo s trdim CTA.
 
@@ -107,11 +107,11 @@ AI generiranje kreativ samodejno zgradi ločene komplete kreativ za vsako stopnj
 
 ## Kaj ti sistemi skupaj dostavijo
 
-Skupni učinek izvajanja vseh šestih sistemov ni aditiven — je kumulativen.
+Skupni učinek izvajanja vseh šestih sistemov ni aditiven, je kumulativen.
 
-Ko ocenjevanje izloči slabe izvajalce pred lansiranjem, generiranje različic zagotovi obseg za testiranje, izvoz za več formatov odstrani ozko grlo spreminjanja velikosti, zaklepanje znamke ohranja konsistentnost pri skali, A/B avtomatizacija ohranja najboljšo kreativo aktivno in retargeting zagotovi sporočanje, primerno za lijak — rezultat je kreativna operacija, ki jo lahko triklanska notranja ekipa izvaja v obsegu tridesetčlanske agencije.
+Ko ocenjevanje izloči slabe izvajalce pred lansiranjem, generiranje različic zagotovi obseg za testiranje, izvoz za več formatov odstrani ozko grlo spreminjanja velikosti, zaklepanje znamke ohranja konsistentnost pri skali, A/B avtomatizacija ohranja najboljšo kreativo aktivno in retargeting zagotovi sporočanje, primerno za lijak — rezultat je kreativna operacija, ki jo triklanska notranja ekipa izvaja v obsegu tridesetčlanske agencije.
 
-Pri **CreativeComplete** smo izmerili konsistentno **14-kratno izboljšanje v konverzijah oglasov** za stranke, ki preidejo od ročne produkcije kreativ na AI generirane, ocenjene sisteme kreativ. Ne 14% — 14-krat.
+Pri **CreativeComplete** smo izmerili konsistentno **14-kratno izboljšanje v konverzijah oglasov** za stranke, ki preidejo od ročne produkcije kreativ na AI generirane, ocenjene sisteme kreativ. Ne 14%, ampak 14-krat.
 
 Razlika ni v orodju. Je v kombinaciji obsega, hitrosti, ocenjevanja in usklajenosti z lijakom, ki jo orodje omogoča.
 
@@ -119,7 +119,7 @@ Razlika ni v orodju. Je v kombinaciji obsega, hitrosti, ocenjevanja in usklajeno
 
 Pot implementacije je preprosta: nalaganje brand kita, struktura copy briefinga, izbira platforme, konfiguracija praga ocenjevanja.
 
-Pri **CreativeComplete** to nastavimo kot del našega AI Customer Systema — integrirano z vašimi oglasnimi računi, CRM in usmerjanjem leadov, tako da je vsaka kreativna različica vezana na nadaljnje konverzijske podatke, ne le na metrike klikov na vrhu lijaka. Vidite, katera kreativa je generirala kateri [lead](/sl/blog/whatsapp-pridobivanje-leadov/), kateri lead je konvertiral in kakšna je bila življenjska vrednost.
+Pri **CreativeComplete** to nastavimo kot del našega AI Customer Systema, integriranega z vašimi oglasnimi računi, CRM in usmerjanjem leadov, tako da je vsaka kreativna različica vezana na nadaljnje konverzijske podatke, ne le na metrike klikov na vrhu lijaka. Vidite, katera kreativa je generirala kateri [lead](/sl/blog/whatsapp-pridobivanje-leadov/), kateri lead je konvertiral in kakšna je bila življenjska vrednost.
 
 Večina strank ima svoj prvi ocenjeni batch kreativ v živo v **5 dneh**.
 

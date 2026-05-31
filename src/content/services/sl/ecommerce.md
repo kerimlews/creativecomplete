@@ -33,11 +33,11 @@ faq:
 
 ## Težava s konverzijo e-trgovine
 
-Večina e-trgovin konvertira pri 1-2%, kar pomeni, da 98-99% obiskovalcev zapusti brez nakupa. To ni zato, ker so vaši izdelki slabi — zato, ker vaša trgovina ni optimizirana za konverzijo.
+Večina e-trgovin konvertira pri 1-2%, kar pomeni, da 98-99% obiskovalcev zapusti brez nakupa. To ni zato, ker so vaši izdelki slabi, temveč ker vaša trgovina ni optimizirana za konverzijo.
 
-Majhne izboljšave stopnje konverzije lahko podvojijo ali potrojijo vaše prihodke. Če dobivate 1.000 obiskovalcev na mesec in konvertirate pri 1%, to je 10 prodaj. Pri 3% je to 30 prodaj — trikrat več prihodkov iz istega prometa.
+Majhne izboljšave stopnje konverzije lahko podvojijo ali potrojijo vaše prihodke. Če dobivate 1.000 obiskovalcev na mesec in konvertirate pri 1%, to je 10 prodaj. Pri 3% je to 30 prodaj, trikrat več prihodkov iz istega prometa.
 
-Optimiziramo vsak vidik vaše e-trgovine, da pretvorimo več obiskovalcev v stranke — od produktnih strani do blagajne.
+Optimiziramo vsak vidik vaše e-trgovine, da pretvorimo več obiskovalcev v stranke, od produktnih strani do blagajne.
 
 ## Kaj optimiziramo
 
@@ -55,7 +55,7 @@ Optimiziramo produktne strani za konverzijo:
 
 Poenostavimo postopek blagajne:
 - enostranska blagajna, ko je mogoče
-- možnost gostujoče blagajne (brez prisilne registracije)
+- možnost gostujoče blagajne brez prisilne registracije
 - več možnosti plačila (kreditna kartica, PayPal, itd.)
 - kalkulator dostave pred blagajno
 - signali zaupanja (varnostne značke, jamstva)

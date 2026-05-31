@@ -37,7 +37,7 @@ Lokalno SEO je optimizacija vaše spletne prisotnosti, da vas najdejo stranke, k
 
 76% ljudi, ki iščejo na pametnem telefonu kaj v bližini, obišče podjetje v enem dnevu. Lokalno SEO postavi vas pred stranke, ki so pripravljene kupiti, prav zdaj.
 
-Optimiziramo vaš Google Business Profile, zgradimo lokalne citate in upravljamo vaš spletni ugled — da ste prvo podjetje, ki ga stranke najdejo.
+Optimiziramo vaš Google Business Profile, zgradimo lokalne citate in upravljamo vaš spletni ugled, da ste prvo podjetje, ki ga stranke najdejo.
 
 ## Kako deluje lokalno SEO
 
@@ -201,7 +201,7 @@ Naša storitev lokalnega SEO ustreza:
 
 ## Naložba in ROI
 
-Lokalno SEO je ena najbolj stroškovno učinkovitih marketinških strategij za lokalna podjetja. Večina strank vidi ROI v 30-60 dneh. Ko se enkrat uvrščate v Google Maps, to pozicijo ohranite z neprekinjeno optimizacijo — za razliko od plačljivih oglasov, ki prenehajo delovati, ko prenehate plačevati.
+Lokalno SEO je ena najbolj stroškovno učinkovitih marketinških strategij za lokalna podjetja. Večina strank vidi ROI v 30-60 dneh. Ko se enkrat uvrščate v Google Maps, to pozicijo ohranite z neprekinjeno optimizacijo, za razliko od plačljivih oglasov, ki prenehajo delovati, ko prenehate plačevati.
 
 ## Zakaj je lokalno SEO danes tako pomembno
 

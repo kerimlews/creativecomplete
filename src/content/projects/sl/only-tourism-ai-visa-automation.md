@@ -33,7 +33,7 @@ faq:
 
 ## Povzetek
 
-Rastoči turistični operater je bil preplavljen s ponavljajočimi se vprašanji o vizumih, vlogah in cenah na WhatsApp. Svetovalci so velik del dneva porabili za odgovarjanje na ista vprašanja — brez prostora za kompleksna, visoko vredna rezervacijska povpraševanja. AI Customer System je namestil po meri oblikovanega AI agenta z integracijo API v realnem času, avtomatiziral **80 %** vseh vizumskih poizvedb in v 60 dneh povečal mesečni obseg potencialnih strank za **6×**.
+Rastoči turistični operater je bil preplavljen s ponavljajočimi se vprašanji o vizumih, vlogah in cenah na WhatsApp. Svetovalci so velik del dneva porabili za odgovarjanje na ista vprašanja, brez prostora za kompleksna, visoko vredna rezervacijska povpraševanja. AI Customer System je namestil po meri oblikovanega AI agenta z integracijo API v realnem času, avtomatiziral **80 %** vseh vizumskih poizvedb in v 60 dneh povečal mesečni obseg potencialnih strank za **6×**.
 
 ## Problem: Agenti ujeti v zanki pogostih vprašanj
 
@@ -50,7 +50,7 @@ Vsak odgovor je zahteval človeka. Vsak zaposlen agent ni prodajal. Ekonomika je
 
 ### Korak 1: Izgradnja baze znanja
 
-Vso dokumentacijo o vizumih, cenovne razrede, možnosti paketov in pogosta vprašanja smo strukturirali v bazo znanja, ki jo AI agent takoj poizve. Ni bil statičen seznam pogostih vprašanj — bila je poizvedovalna baza za naravni jezik.
+Vso dokumentacijo o vizumih, cenovne razrede, možnosti paketov in pogosta vprašanja smo strukturirali v bazo znanja, ki jo AI agent takoj poizve. Ni bil statičen seznam pogostih vprašanj, bila je poizvedovalna baza za naravni jezik.
 
 ### Korak 2: Integracija API v realnem času
 
@@ -67,7 +67,7 @@ AI agent je bil konfiguriran z glasom agencije — topel, profesionalen, z znanj
 
 ### Korak 4: Pokritost 24/7 prek časovnih pasov
 
-Turistična povpraševanja ne prihajajo med 9. in 17. uro. AI Customer System je odgovarjal na vsako — takoj, točno, v glasu agencije.
+Turistična povpraševanja ne prihajajo med 9. in 17. uro. AI Customer System je odgovarjal na vsako vprašanje takoj, točno in v glasu agencije.
 
 ## Rezultati
 

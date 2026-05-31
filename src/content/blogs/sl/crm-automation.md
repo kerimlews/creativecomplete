@@ -25,7 +25,7 @@ faq:
 
 Prodajni predstavniki porabijo 65% časa za aktivnosti, ki niso prodaja.
 
-Vnos podatkov. Načrtovanje follow-upa. Posodobitve pipelinea. Beleženje aktivnosti. Premikanje leadov iz ene faze v drugo, ker se je zgodil pogovor. Vsaka od teh nalog je potrebna za delovanje sistema — in nobena ne zahteva prodajnega predstavnika.
+Vnos podatkov. Načrtovanje follow-upa. Posodobitve pipelinea. Beleženje aktivnosti. Premikanje leadov iz ene faze v drugo, ker se je zgodil pogovor. Vsaka od teh nalog je potrebna za delovanje sistema, vendar nobena ne zahteva prodajnega predstavnika.
 
 CRM avtomatizacija prenese vse to administrativno delo na sistem in vrne čas ljudem, ki bi ga morali uporabiti za zaključevanje.
 
@@ -35,7 +35,7 @@ Beseda "avtomatizacija" je preveč uporabljena. Tukaj je, kaj pomeni v praksi, z
 
 ### Zajem in obogatitev leadov
 
-Vsak nov lead — iz oglasa, spletnega obrazca, WhatsAppa, Instagram DM ali priporočila — je samodejno ustvarjen kot kontaktni zapis. Noben predstavnik ročno ne vnaša imena, telefonske številke ali vira. Sistem ga zajame in takoj obogati: naziv delovnega mesta, velikost podjetja, družbene profile in kakršne koli vedenjske podatke iz dogodka zajema.
+Vsak nov lead, iz oglasa, spletnega obrazca, WhatsAppa, Instagram DM ali priporočila, je samodejno ustvarjen kot kontaktni zapis. Noben predstavnik ročno ne vnaša imena, telefonske številke ali vira. Sistem ga zajame in takoj obogati: naziv delovnega mesta, velikost podjetja, družbene profile in kakršne koli vedenjske podatke iz dogodka zajema.
 
 Predstavnik, ki preverja svojo jutranjo vrsto, ne začne dneva z ustvarjanjem kontaktnih zapisov. Začne ga z pregledom leadov, ki so že v sistemu, že obogateni in že razvrščeni po prioriteti.
 
@@ -53,7 +53,7 @@ Pipeline odraža resničnost v realnem času, ne da bi ga kdor koli ročno vzdr�
 
 ![CRM avtomatizacija sprožilni sistem — dogodki (pogovor, pretečeni čas, sprememba faze) sprožijo avtomatizirane akcije follow-upa](/images/blog/crm-automation/02-trigger-system.svg)
 
-Najpogostejši razlog za zastoj poslov je, da se follow-up ni zgodil. Ne zato, ker se predstavnik ne bi odločil za follow-up — ker je postal zaposlen, naloga je bila pokopana, in lead je čakal, dokler ni ali [našel konkurenta](/sl/blog/hitrost-do-leada/) ali pozabil, da je bil zainteresiran.
+Najpogostejši razlog za zastoj poslov je, da se follow-up ni zgodil. Ne zato, ker se predstavnik ne bi odločil za follow-up, ampak ker je postal zaposlen, naloga je bila pokopana in lead je čakal, dokler ni [našel konkurenta](/sl/blog/hitrost-do-leada/) ali pozabil, da je bil zainteresiran.
 
 Follow-up na podlagi sprožilcev to odpravi z definiranjem, kaj se zgodi samodejno, ko posel sedi nedejaven:
 
@@ -68,21 +68,21 @@ Vsak posel v vašem pipelineu ima definiran akcijski načrt, ki se izvede, ne da
 
 Vsak klic, sporočilo, sestanek in e-mail je samodejno zabeležen. Noben predstavnik ne porabi časa s tipkanjem opomb o klicu v CRM po pogovoru. Integracije snemanja klicev prepisujejo in povzemajo klice. WhatsApp in e-mail integracije beležijo vsako sporočilo. CRM postane popoln zapis vsake interakcije brez vnosa predstavnika.
 
-To ni le učinkovitost — je institucionalno znanje. Ko predstavnik odide ali posel zamenja roke, je polna zgodovina tam.
+To ni le učinkovitost. Je institucionalno znanje. Ko predstavnik odide ali posel zamenja roke, je polna zgodovina tam.
 
 ## Problem vidnosti pipelinea
 
 Večina prodajnih vodij nima realne slike svojega pipelinea. Imajo to, kar so njihovi predstavniki nazadnje posodobili, kar je nepopoln in pogosto optimističen pogled na resničnost.
 
-CRM avtomatizacija proizvede natančen pipeline, ker so podatki zajeti iz sistemskih dogodkov, ne iz spomina predstavnika. Če lead 10 dni ni bil kontaktiran, CRM to ve — ker je bilo zadnje WhatsApp sporočilo pred 10 dnevi, zadnji klic pred 14 dnevi in noben sestanek ni načrtovan. Lead se samodejno prikaže kot ogrožen, preden je posel že izgubljen.
+CRM avtomatizacija proizvede natančen pipeline, ker so podatki zajeti iz sistemskih dogodkov, ne iz spomina predstavnika. Če lead 10 dni ni bil kontaktiran, CRM to ve, ker je bilo zadnje WhatsApp sporočilo pred 10 dnevi, zadnji klic pred 14 dnevi in noben sestanek ni načrtovan. Lead se samodejno prikaže kot ogrožen, preden je posel že izgubljen.
 
 ![Realnočasovni pogled pipelinea — CRM prikazuje dejansko distribucijo faz, ogroženi posli označeni in napoved prihodka na podlagi pravih podatkov o aktivnosti](/images/blog/crm-automation/03-pipeline-view.svg)
 
-Natančni podatki pipelinea proizvedejo boljše napovedi, boljši coaching in hitrejšo identifikacijo poslov, ki potrebujejo pozornost. Prodajni vodja, ki lahko vidi, kateri posli so dejansko ogroženi — ne tisti, za katere predstavnik misli, da so ogroženi — lahko posreduje prej in z večjo natančnostjo.
+Natančni podatki pipelinea proizvedejo boljše napovedi, boljši coaching in hitrejšo identifikacijo poslov, ki potrebujejo pozornost. Prodajni vodja, ki vidi, kateri posli so dejansko ogroženi, ne tisti, za katere predstavnik misli, da so ogroženi, lahko posreduje prej in z večjo natančnostjo.
 
 ## Integracijska plast
 
-CRM avtomatizacija deluje, ko je CRM povezan z vsakim kanalom, kjer se zgodijo pogovori. CRM, ki zahteva ročni uvoz podatkov iz WhatsAppa, ni avtomatiziran — je le zakasnjeno ročno delo.
+CRM avtomatizacija deluje, ko je CRM povezan z vsakim kanalom, kjer se zgodijo pogovori. CRM, ki zahteva ročni uvoz podatkov iz WhatsAppa, ni avtomatiziran, je le zakasnjeno ročno delo.
 
 Integracijska plast povezuje:
 - WhatsApp Business API → kontaktni zapisi, zgodovina pogovorov, sprožilci faz
@@ -91,8 +91,8 @@ Integracijska plast povezuje:
 - Koledar → beleženje sestankov, sprožilci no-show
 - Oglasne platforme → atribucija vira, cena na lead po kanalu
 
-Ko je vse to povezano, CRM teče sam. Predstavniki ga uporabljajo za upravljanje svojih odnosov — ne za vzdrževanje sistema.
+Ko je vse to povezano, CRM teče sam. Predstavniki ga uporabljajo za upravljanje svojih odnosov, ne za vzdrževanje sistema.
 
-Pri **CreativeComplete** je CRM avtomatizacija zgrajena kot povezovalna plast AI Customer Systema — povezuje zajem leadov, kvalifikacijo, usmerjanje in zadrževanje v en pipeline, ki se posodablja v realnem času brez ročnega vnosa.
+Pri **CreativeComplete** je CRM avtomatizacija zgrajena kot povezovalna plast AI Customer Systema, ki povezuje zajem leadov, kvalifikacijo, usmerjanje in zadrževanje v en pipeline, ki se posodablja v realnem času brez ročnega vnosa.
 
 Večina strank povrne **2–3 ure časa predstavnika na dan** v prvem tednu implementacije. Ta čas gre neposredno v zaključevanje.

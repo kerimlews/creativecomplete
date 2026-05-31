@@ -33,7 +33,7 @@ faq:
 
 ## Die versteckten Kosten manueller Arbeit
 
-Die meisten Unternehmer verbringen 20+ Stunden pro Woche mit repetitiven Aufgaben, die automatisiert werden könnten. Diese Arbeit nimmt Zeit von Wachstumsaktivitäten weg, erhöht die Fehlerquote durch manuelle Prozesse und begrenzt die Skalierbarkeit — während sie gleichzeitig zermürbt.
+Die meisten Unternehmer verbringen 20+ Stunden pro Woche mit repetitiven Aufgaben, die automatisiert werden könnten. Diese Arbeit nimmt Zeit von Wachstumsaktivitäten weg, erhöht die Fehlerquote durch manuelle Prozesse und begrenzt die Skalierbarkeit.
 
 Jede Stunde, die Sie mit manuellen Routineaufgaben verbringen, ist eine Stunde weniger für Wachstum, Kundenpflege und neue Chancen. Wir identifizieren die repetitiven Abläufe in Ihrem Unternehmen und ersetzen sie durch intelligente Automatisierung, die 24/7 ohne Fehler läuft.
 
@@ -87,7 +87,7 @@ Wir bauen Automatisierungslösungen, die genau zu Ihrem Workflow passen, nahtlos
 
 ### KI-gestützte Intelligenz
 
-Unsere Automatisierungen verstehen Kontext und reagieren angemessen. Sie lernen aus Mustern und verbessern sich über Zeit. Auch ungewöhnliche Fälle werden sauber behandelt — mit Einblicken, die einfache Regelwerke nicht liefern.
+Unsere Automatisierungen verstehen Kontext und reagieren angemessen. Sie lernen aus Mustern und verbessern sich über Zeit. Auch ungewöhnliche Fälle werden sauber behandelt, mit Einblicken, die einfache Regelwerke nicht liefern.
 
 ### Integration und Tests
 
@@ -119,11 +119,11 @@ Die meisten Kunden sehen ROI innerhalb von 3-6 Monaten allein durch Zeitersparni
 
 ### Fallstudie: Service-Unternehmen-Automatisierung
 
-**Herausforderung:** Ein Reinigungsunternehmer verbrachte 20+ Stunden wöchentlich mit Planung, Kundenkommunikation und Rechnungsstellung.
+Herausforderung: Ein Reinigungsunternehmer verbrachte 20+ Stunden wöchentlich mit Planung, Kundenkommunikation und Rechnungsstellung.
 
-**Lösung:** Wir implementierten KI-gestützte Planung, automatisierte Kunden-Follow-ups und intelligente Rechnungsstellung mit Zahlungserinnerungen.
+Lösung: Wir implementierten KI-gestützte Planung, automatisierte Kunden-Follow-ups und intelligente Rechnungsstellung mit Zahlungserinnerungen.
 
-**Ergebnisse:**
+Ergebnisse:
 - 20 Stunden wöchentlich gespart (bewertet mit 2.000€/Monat)
 - 95% Reduzierung bei Planungsfehlern
 - 40% schnellere Zahlungsverarbeitung
@@ -167,7 +167,7 @@ Unser Automatisierungsservice passt gut für:
 
 Automatisierung zahlt sich schnell aus. Die meisten Kunden sehen ROI innerhalb von 3-6 Monaten durch Zeitersparnis. Dazu summieren sich laufende Einsparungen, die Skalierbarkeit ohne proportionale Kostensteigerung und ein Wettbewerbsvorteil durch Effizienz.
 
-Sobald eingerichtet, läuft Automatisierung 24/7 — ohne zusätzliche Kosten, anders als bei zusätzlichem Personal.
+Sobald eingerichtet, läuft Automatisierung 24/7 ohne zusätzliche Kosten, anders als bei zusätzlichem Personal.
 
 ## Bereit, loszulegen?
 

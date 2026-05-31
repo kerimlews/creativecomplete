@@ -24,14 +24,14 @@ faq:
 
 ## TL;DR
 
-Gradnja raziskovalne platforme, ki obravnava tisoče PDF-jev, citatov in sodelovalnega urejanja, zahteva arhitekturo, ki se ne zlomi pri skaliranju. Razvili smo Paperpile z MERN skladom z načeli, osredotočenimi na zmogljivost, ki služi 200.000+ akademikom preko spleta, mobilnih naprav in razširitev brskalnikov, medtem ko ohranjamo 95% ocene zmogljivosti.
+Gradnja raziskovalne platforme, ki obravnava tisoče PDF-jev, citatov in sodelovalnega urejanja, zahteva arhitekturo, ki se ne zlomi pri skaliranju. Razvili smo Paperpile z MERN skladom in načeli, osredotočenimi na zmogljivost. Platforma danes služi 200.000+ akademikom prek spleta, mobilnih naprav in razširitev brskalnikov ter ohranja **95%** ocene zmogljivosti.
 
 ## Nasveti
 
-- **Zgradite vaš proračun zmogljivosti PRED pisanjem kode**
-- **Izberite vašo arhitekturo podatkovne baze na podlagi vzorcev poizvedb**, ne trendov
-- **Mobilna naprava ni naknadna misel** - je vaš primarni vmesnik
-- **Razširitve brskalnikov so distribucijski kanali**, ne funkcije
+- Zgradite vaš proračun zmogljivosti pred pisanjem kode
+- Izberite arhitekturo podatkovne baze na podlagi vzorcev poizvedb, ne trendov
+- Mobilna naprava ni naknadna misel — je vaš primarni vmesnik
+- Razširitve brskalnikov so distribucijski kanali, ne le funkcije
 
 ## Kazalo vsebine
 
@@ -40,7 +40,6 @@ Gradnja raziskovalne platforme, ki obravnava tisoče PDF-jev, citatov in sodelov
 - [Zmogljivost kot funkcija, ne kot metrika](#zmogljivost-kot-funkcija-ne-kot-metrika)
 - [Strategija več platform, ki res deluje](#strategija-več-platform-ki-res-deluje)
 - [Rezultati: Od MVP do industrijskega standarda](#rezultati-od-mvp-do-industrijskega-standarda)
-- [Pripravljeni zgraditi programsko opremo, ki skaliramo?](#pripravljeni-zgraditi-programsko-opremo-ki-skaliramo)
 
 ## Akademski raziskovalni problem, ki ga nihče ni rešil
 
@@ -52,43 +51,34 @@ Paperpile je imel vizijo združevanja raziskovalnega delovnega toka, vendar njih
 
 Sprejeli smo neizprosne tehnične odločitve:
 
-- **MERN sklad** za hitrost razvoja IN zmogljivost
-- **Sinhronizacija v realnem času**, ki res deluje brez povezave
-- **Obdelava PDF-jev**, ki ne zruši brskalnikov
-- **Citacijski motor**, ki obravnava 10.000+ stilov citiranja
+- MERN sklad za hitrost razvoja in zmogljivost
+- Sinhronizacija v realnem času, ki res deluje brez povezave
+- Obdelava PDF-jev, ki ne zruši brskalnikov
+- Citacijski motor, ki obravnava 10.000+ stilov citiranja
 
 Večina SaaS izdelkov izbira med funkcijami in zmogljivostjo. Razvili smo oboje.
 
 ## Zmogljivost kot funkcija, ne kot metrika
 
-Medtem ko so se konkurenti osredotočali na dodajanje funkcij, smo bili obsedeni z:
+Medtem ko so se konkurenti osredotočali na dodajanje funkcij, smo bili osredotočeni na:
 
-- **95% ocenami zmogljivosti** pri Core Web Vitals
-- **Podsekundnim iskanjem** preko milijonov dokumentov
-- **Takojšnjim sodelovanjem** brez potrebe po osvežitvi
-- **Konsistentnostjo preko platform**, ki se povsod počuti domače
+- **95% ocene zmogljivosti** pri Core Web Vitals
+- **podsekundno iskanje** prek milijonov dokumentov
+- **takojšnje sodelovanje** brez potrebe po osvežitvi
+- konsistentnost prek platform, ki se povsod počuti domače
 
 ## Strategija več platform, ki res deluje
 
 Zgradili smo enkrat, razporedili povsod:
 
-- **Spletna aplikacija** kot osrednja izkušnja
-- **React Native mobilne aplikacije**, ki se počutijo domače
-- **Razširitev brskalnika** za brezhibno raziskovanje
-- **Namizne aplikacije** za napredne uporabnike
+- spletna aplikacija kot osrednja izkušnja
+- React Native mobilne aplikacije, ki se počutijo domače
+- razširitev brskalnika za brezhibno raziskovanje
+- namizne aplikacije za napredne uporabnike
 
 ## Rezultati: Od MVP do industrijskega standarda
 
 - **200.000+ aktivnih raziskovalcev** po vsem svetu
 - **95% ocene zmogljivosti** dosledno ohranjene
 - **4,8/5 zvezdic ocene** na vseh platformah
-- **Industrijska priznanja** kot vodilni raziskovalni delovni tok
-
-## Pripravljeni zgraditi programsko opremo, ki skaliramo?
-
-Če gradite SaaS izdelek in se skrbi, da bo tehnični dolg ubil vašo rast, se pogovorimo o arhitekturi.
-
-**Sprejemamo samo 2 SaaS razvojna projekta na četrtletje.** Če ste pripravljeni zgraditi programsko opremo, ki skaliramo, ne da bi se zrušila...
-
-**Kontaktirajte nas za našo tehnično arhitekturno pregled.** Pokazali vam bomo točno, kje se vaši ozki grli skaliranja skrivajo.
-
+- industrijska priznanja kot vodilni raziskovalni delovni tok

@@ -33,7 +33,7 @@ faq:
 
 ## Zusammenfassung
 
-Ein wachsender Reiseveranstalter ertrank in repetitiven WhatsApp-Fragen zu Visaanforderungen, Antragsstatus und Preisen. Berater verbrachten den Großteil ihres Tages damit, dieselben Fragen zu beantworten — ohne Kapazität für komplexe, hochwertige Buchungsanfragen. AI Customer System setzte einen gebrandeten KI-Agenten mit Echtzeit-API-Integration ein, automatisierte **80% aller Visaanfragen** und steigerte das monatliche Lead-Volumen innerhalb der ersten 60 Tage um das **6-fache**.
+Ein wachsender Reiseveranstalter ertrank in repetitiven WhatsApp-Fragen zu Visaanforderungen, Antragsstatus und Preisen. Berater verbrachten den Großteil ihres Tages damit, dieselben Fragen zu beantworten, ohne Kapazität für komplexe, hochwertige Buchungsanfragen. AI Customer System setzte einen gebrandeten KI-Agenten mit Echtzeit-API-Integration ein, automatisierte **80% aller Visaanfragen** und steigerte das monatliche Lead-Volumen innerhalb der ersten 60 Tage um das **6-fache**.
 
 ## Das Problem: Agenten in der FAQ-Schleife gefangen
 
@@ -48,26 +48,26 @@ Jede Antwort erforderte einen Menschen. Jeder antwortende Mitarbeiter verkaufte 
 
 ## Die AI Customer System Lösung
 
-### Schritt 1: Wissensbank aufbauen
+### Wissensbank aufbauen
 
-Alle Visaanforderungen, Preisstufen, Paketoptionen und FAQs wurden in eine Wissensdatenbank strukturiert, die der KI-Agent sofort abfragen konnte — keine statische FAQ-Liste, sondern eine abfragbare Datenbank für natürliche Sprache.
+Alle Visaanforderungen, Preisstufen, Paketoptionen und FAQs wurden in eine Wissensdatenbank strukturiert, die der KI-Agent sofort abfragen konnte, keine statische FAQ-Liste, sondern eine abfragbare Datenbank für natürliche Sprache.
 
-### Schritt 2: Echtzeit-API-Integration
+### Echtzeit-API-Integration
 
-Das entscheidende Upgrade: Wir verbanden den KI-Agenten über API mit dem Backend-Visa-Bearbeitungssystem. Zum ersten Mal konnte ein Kunde nach seinem spezifischen Antragsstatus fragen und eine aktuelle, genaue Antwort erhalten — ohne dass ein Mensch eingriff.
+Das entscheidende Upgrade: Wir verbanden den KI-Agenten über API mit dem Backend-Visa-Bearbeitungssystem. Zum ersten Mal konnte ein Kunde nach seinem spezifischen Antragsstatus fragen und eine aktuelle, genaue Antwort erhalten, ohne dass ein Mensch eingriff.
 
-### Schritt 3: Gebrandeter KI-Agent
+### Gebrandeter KI-Agent
 
-Der KI-Agent wurde so konfiguriert, dass er dem Ton der Agentur entspricht — warm, professionell, reisekenntnisreich. Kunden merkten keinen Unterschied. Der Agent konnte:
+Der KI-Agent wurde so konfiguriert, dass er dem Ton der Agentur entspricht: warm, professionell, reisekenntnisreich. Kunden merkten keinen Unterschied. Der Agent konnte:
 
 - Visa- und Dokumentenfragen für 50+ Destinationen beantworten
 - Echtzeit-Antragsstatus-Updates geben
 - Interesse an Premiumpaketen qualifizieren
 - Komplexe oder hochwertige Anfragen mit vollem Kontext an menschliche Berater weiterleiten
 
-### Schritt 4: 24/7-Abdeckung über Zeitzonen
+### 24/7-Abdeckung über Zeitzonen
 
-Reiseanfragen kommen nicht im 9-to-5-Rhythmus. Eine Familie, die einen Sommerurlaub plant, recherchiert um 22 Uhr. AI Customer System beantwortete jede Anfrage — sofort, genau, in der Stimme der Agentur.
+Reiseanfragen kommen nicht im 9-to-5-Rhythmus. Eine Familie, die einen Sommerurlaub plant, recherchiert um 22 Uhr. AI Customer System beantwortete jede Anfrage sofort, genau und in der Stimme der Agentur.
 
 ## Die Ergebnisse
 

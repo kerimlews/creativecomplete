@@ -37,7 +37,7 @@ faq:
 
 ## Povzetek
 
-Švicarsko podjetje za čiščenje površin in tlačno čiščenje v Arbonu je imelo težavo, ki jo pozna vsako lokalno storitveno podjetje: stranke so iskale — a jih niso našle. Nobene spletne strani. Nobenega Google Business Profila. Nobenih ocen. Vse smo rešili — zgradili smo profesionalno spletno stran, uvrstili in optimizirali GBP profil, ustvarili lokacijsko specifične pristajalne strani za 4 mesta v kantonu Thurgau, producirali YouTube video vsebine in vzpostavili sistematično strategijo lokalnega SEO. Rezultat: uvrstitev v vrh na Google Mapsu in merljiv pritok dohodnih klicev.
+Švicarsko podjetje za čiščenje površin in tlačno čiščenje v Arbonu je imelo težavo, ki jo pozna vsako lokalno storitveno podjetje: stranke so iskale, a jih niso našle. Nobene spletne strani. Nobenega Google Business Profila. Nobenih ocen. Vse smo rešili. Zgradili smo profesionalno spletno stran, uvrstili in optimizirali GBP profil, ustvarili lokacijsko specifične pristajalne strani za 4 mesta v kantonu Thurgau, producirali YouTube video vsebine in vzpostavili sistematično strategijo lokalnega SEO. Rezultat: uvrstitev v vrh na Google Mapsu in merljiv pritok dohodnih klicev.
 
 ## Izhodišče: Kakovostno podjetje, ki ga nihče ni mogel najti
 
@@ -51,13 +51,13 @@ Kljub odličnemu delu je bilo podjetje na spletu praktično nevidno.
 - Nobene vsebinske strategije — vsaka lokalna iskalna namera je bila zamujana
 - Nobene lokacijske pokritosti — okoliška mesta sploh niso bila naslovljena
 
-To je ena najpogostejših situacij, s katerimi se srečujemo pri švicarskih in nemško govorečih storitvenih podjetjih. Kakovost dela je tu — digitalna infrastruktura preprosto še ne obstaja.
+To je ena najpogostejših situacij, s katerimi se srečujemo pri švicarskih in nemško govorečih storitvenih podjetjih. Kakovost dela je tu, digitalna infrastruktura preprosto še ne obstaja.
 
 ## Strategija: Štirje stebri lokalnega uveljavljanja
 
 ### Steber 1: Profesionalni spletni dizajn za konverzije
 
-Preden SEO lahko deluje, potrebujete temelje. Zasnovano in zgradili smo profesionalno spletno stran, optimizirano za švicarski trg, po naši metodologiji [spletnega dizajna](/sl/storitve/web-design/):
+Preden SEO lahko deluje, potrebujete temelje. Zasnovali in zgradili smo profesionalno spletno stran, optimizirano za švicarski trg, po naši metodologiji [spletnega dizajna](/sl/storitve/web-design/):
 
 - Mobile-first design — 74 % lokalnih iskanj se dogodi na pametnih telefonih
 - Hitre čase nalaganja — pod 2 sekundi na LTE omrežjih
@@ -90,7 +90,7 @@ Sistem za generiranje ocen:
 - QR kode na gradbišču, ki vodijo neposredno na obrazec za oceno
 - Opominska e-pošta 48 ur po zaključku projekta
 
-Optimizacija GBP je jedro našega [servisa lokalnega SEO](/sl/storitve/local-seo/) — to je tisto, kar poganja vidnost Map Pack za iskanja z visoko namero.
+Optimizacija GBP je jedro našega [servisa lokalnega SEO](/sl/storitve/local-seo/), kar poganja vidnost Map Pack za iskanja z visoko namero.
 
 ### Steber 3: Lokacijsko specifične pristajalne strani
 

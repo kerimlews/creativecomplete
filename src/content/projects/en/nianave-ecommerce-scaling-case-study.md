@@ -33,11 +33,11 @@ faq:
 
 ## TL;DR
 
-Nianave had 8 years of brand equity and almost no online revenue. We built their entire e-commerce operation from the ground up — Shopify store live in 3 weeks, conversion-optimized custom theme, full third-party integrations, and automated pre/post-purchase sequences. Conversion rate went from 1.2% to **4.3%**. Monthly revenue went from $30k to $120k. Time: 6 months.
+Nianave had 8 years of brand equity and almost no online revenue. We built their entire e-commerce operation from the ground up: Shopify store live in 3 weeks, conversion-optimized custom theme, full third-party integrations, and automated pre/post-purchase sequences. Conversion rate went from 1.2% to **4.3%**. Monthly revenue went from $30k to $120k. Time: 6 months.
 
 ## The Situation
 
-Nianave is a fashion brand with 8 years of local presence and a loyal customer base. Their digital operation was minimal — a basic website with no transactional capability and no automation. They wanted to expand into online retail but needed to move quickly to capture seasonal demand.
+Nianave is a fashion brand with 8 years of local presence and a loyal customer base. Their digital operation was minimal, with a basic website that had no transactional capability and no automation. They wanted to expand into online retail and needed to move quickly to capture seasonal demand.
 
 The challenge wasn't brand awareness. The challenge was building a complete e-commerce infrastructure, fast, without disrupting existing operations.
 
@@ -45,9 +45,9 @@ The challenge wasn't brand awareness. The challenge was building a complete e-co
 
 ### Challenge 1: Launch a Shopify Store in Weeks, Not Months
 
-**The problem:** Standard agency timelines for e-commerce builds run 3–5 months. Nianave's seasonal window did not allow that. They needed to be transacting online within weeks of kickoff.
+Standard agency timelines for e-commerce builds run 3 to 5 months. Nianave's seasonal window did not allow that. They needed to be transacting online within weeks of kickoff.
 
-**What we built:**
+What we built:
 - Shopify Plus setup with enterprise-level features and room to scale
 - Full product catalog migration from their existing inventory system
 - Payment gateway configuration (Stripe and PayPal) for immediate transaction capability
@@ -58,22 +58,22 @@ The Shopify store was live and processing orders within 3 weeks. Online revenue 
 
 ### Challenge 2: A Theme That Reflects a Premium Fashion Brand
 
-**The problem:** Default Shopify themes are built for general retail. Nianave's brand positioning required a custom experience — high-quality imagery, refined typography, and a conversion flow designed for fashion buyers.
+Default Shopify themes are built for general retail. Nianave's brand positioning required a custom experience, with high-quality imagery, refined typography, and a conversion flow designed for fashion buyers.
 
-**What we built:**
+What we built:
 - Custom product pages with full-width imagery and editorial layouts
 - Advanced product filtering by size, color, and collection
-- Mobile-first design — 74% of their traffic came from smartphones
+- Mobile-first design, because 74% of their traffic came from smartphones
 - Conversion elements integrated throughout: social proof, sizing guides, urgency signals
 - Performance optimization to maintain fast load times despite rich visual assets
 
-Conversion rate moved from 1.2% to **4.3%** within 60 days of the new theme going live. That single improvement — before any additional ad spend — produced a 258% increase in revenue per visitor.
+Conversion rate moved from 1.2% to **4.3%** within 60 days of the new theme going live. That single improvement, before any additional ad spend, produced a 258% increase in revenue per visitor.
 
 ### Challenge 3: Third-Party Integrations and Payment Infrastructure
 
-**The problem:** Manual disconnects between systems — payments, inventory, shipping, email marketing — were creating operational errors and costing hours per week in manual reconciliation.
+Manual disconnects between systems, including payments, inventory, shipping, and email marketing, were creating operational errors and costing hours per week in manual reconciliation.
 
-**What we built:**
+What we built:
 - Stripe and PayPal configured and tested for secure, fast checkout
 - DHL and local courier integration with automated rate calculation at checkout
 - Real-time inventory sync between the Shopify store and their warehouse system
@@ -84,15 +84,15 @@ Manual data entry was eliminated. Inventory errors dropped to near zero. The tea
 
 ### Challenge 4: Pre- and Post-Purchase Automation
 
-**The problem:** Cart abandonment was high and there was no system in place to recover lost sales or maximize revenue from existing customers after their first purchase.
+Cart abandonment was high and there was no system in place to recover lost sales or maximize revenue from existing customers after their first purchase.
 
-**Pre-purchase automation we built:**
+Pre-purchase automation we built:
 - Abandoned cart sequence: 3-message flow recovering 25% of abandoned carts
 - Low stock alerts for high-demand items creating purchase urgency
 - Price drop notifications re-engaging customers who viewed but did not buy
 - Browse abandonment recovery for visitors who spent time on product pages
 
-**Post-purchase automation we built:**
+Post-purchase automation we built:
 - Order confirmation and shipping update sequence
 - Delivery confirmation with automated review request
 - Upsell campaign triggered 14 days post-delivery suggesting complementary products
@@ -116,8 +116,6 @@ Three decisions produced the outcome.
 
 Speed of deployment. Being live in 3 weeks meant capturing revenue during the seasonal window. Every week of delay has a direct cost in missed sales.
 
-Conversion-first design. The custom theme was built around one goal — turning visitors into buyers. Every element — image size, button placement, trust signals, mobile flow — was designed to reduce friction at the point of decision.
+Conversion-first design. The custom theme was built around one goal: turning visitors into buyers. Every element, from image size to button placement to mobile flow, was designed to reduce friction at the point of decision.
 
 Automation from day one. Most stores treat automation as an afterthought. Building the pre/post-purchase sequences as part of the initial launch meant that every customer from day one entered a lifecycle system, not a one-time transaction.
-
-[Contact us to discuss your situation →](/contact/)

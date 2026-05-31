@@ -24,7 +24,7 @@ faq:
 
 ## Povzetek
 
-Lastniki fitnesov so izkrvavljani s Frankenstein skladom 7+ ločenih orodij: Mindbody za razporejanje, ločeni ključi za vrata, Stripe za plačila, Mailchimp za e-pošto in več. Nismo jih "integrirali" — naredili smo jih zastarele. Zgradili smo Fitovision: oblačno platformo, ki jo poganja MERN sklad na AWS, z React Native mobilno aplikacijo, ki deluje kot članov ključ, denarnica in osebna izkaznica. Rezultat: **95 %** avtomatiziranih operacij, ena naročnina namesto sedmih in višje zadrževanje članov, ker je izkušnja brez trenja.
+Lastniki fitnesov so izkrvavljani s Frankenstein skladom 7+ ločenih orodij: Mindbody za razporejanje, ločeni ključi za vrata, Stripe za plačila, Mailchimp za e-pošto in več. Nismo jih "integrirali", naredili smo jih zastarele. Zgradili smo Fitovision: oblačno platformo, ki jo poganja MERN sklad na AWS, z React Native mobilno aplikacijo, ki deluje kot članov ključ, denarnica in osebna izkaznica. Rezultat: **95 %** avtomatiziranih operacij, ena naročnina namesto sedmih in višje zadrževanje članov, ker je izkušnja brez trenja.
 
 ## Problem: 7-orodijski fitnes tehnološki sklad
 
@@ -42,17 +42,17 @@ Vsako orodje ima svojo prijavo, svojo pristojbino in svojo krivuljo učenja. Ta 
 
 ## Inženirski prelom: Oblačno nadzorovani fizični dostop
 
-Naša osrednja misija je bila jasna: popoln, daljinski nadzor fitnes objekta. Ne samo digitalna članska kartica — sposobnost odpiranja vrat za člana iz druge države.
+Naša osrednja misija je bila jasna: popoln, daljinski nadzor fitnes objekta. Ne samo digitalna članska kartica, temveč sposobnost odpiranja vrat za člana iz druge države.
 
 ### Arhitektura: Kako smo povezali digitalni in fizični svet
 
-Največji izziv ni bila programska oprema — bila je strojna oprema. Cilj: ena fizična naprava na lokaciji, vse ostalo v oblaku.
+Največji izziv ni bila programska oprema, bila je strojna oprema. Cilj: ena fizična naprava na lokaciji, vse ostalo v oblaku.
 
 1. Mozgani: WDMS v oblaku
    Naš notranji WDMS (Workout & Door Management System) smo preselili na AWS. Arhitekturno smo ga predelali za večnajemništvo, skalabilnost in zanesljivost. To je komandno središče za vsak fitnes na platformi.
 
 2. Nervni konci: Krmilnik dostopa
-   Edina strojna oprema, ki jo mora lastnik fitnesa namestiti. Naprava vzpostavi varno, trajno povezavo z oblačnim WDMS in ne shranjuje logike lokalno — prejema ukaze. Vsa inteligenca je v oblaku.
+   Edina strojna oprema, ki jo mora lastnik fitnesa namestiti. Naprava vzpostavi varno, trajno povezavo z oblačnim WDMS in ne shranjuje logike lokalno. Prejema ukaze. Vsa inteligenca je v oblaku.
 
 3. Vmesnik: Mobilne in spletne aplikacije
    Zgradili smo React Native mobilno aplikacijo in odziven spletni nadzorni panel. Telefon člana postane njegov ključ. Ko tapnejo "Odkleni vrata", aplikacija pošlje signal oblačnemu WDMS, ki preveri status članstva in pošlje ukaz "ODPRI" krmilniku dostopa. Vse v manj kot dveh sekundah.
@@ -70,7 +70,7 @@ Rezultat: Član prispe, telefon samodejno prikaže gumb za odpiranje vrat, tapne
 
 - **95 % avtomatizacija:** prijave članov, obračunavanje, nadzor dostopa in komunikacija
 - Ena platforma, ena pristojbina namesto 7+ naročnin
-- **30 % zmanjšanje stroškov programske opreme** kljub prehodu na premium rešitev
+- **30 % zmanjšanje stroškov programske opreme** kljub prehodu na rešitev višjega razreda
 - **45 % povečanje zadrževanja članov** zaradi brezhibne izkušnje
 - **4,9 / 5 zvezdic** — ocena aplikacije s strani članov
 

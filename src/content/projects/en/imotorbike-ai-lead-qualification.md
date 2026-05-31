@@ -51,11 +51,11 @@ The team thought they had a lead quality problem. They actually had a lead handl
 
 ### Step 1: Unify Every Channel
 
-We connected WhatsApp Business API, Facebook Messenger, Instagram DM, and TikTok into a single inbox. Every message regardless of source arrived in one place, tagged by channel and timestamp. No more tab-switching. No more missed inquiries.
+We connected WhatsApp Business API, Facebook Messenger, Instagram DM, and TikTok into a single inbox. Every message, regardless of source, arrived in one place, tagged by channel and timestamp. No more tab-switching. No more missed inquiries.
 
 ### Step 2: Intent-Based AI Routing
 
-The key insight: buyers and sellers ask fundamentally different questions from the first message. We trained AI Agents to identify intent within the opening exchange and route automatically.
+Buyers and sellers ask fundamentally different questions from the first message. We trained AI Agents to identify intent within the opening exchange and route automatically.
 
 - Buyer signals go to the sales team with vehicle availability context.
 - Seller signals go to the acquisitions team with valuation prompts.
@@ -72,11 +72,11 @@ AI Agents handled the full first-touch qualification.
 - Financing needs
 - Location for test drives
 
-Hot prospects, those with defined budget, near-term timeline, and confirmed intent, were flagged and pushed to human agents with full context attached. Cold leads entered a nurture sequence automatically.
+Hot prospects, those with a defined budget, near-term timeline, and confirmed intent, were flagged and pushed to human agents with full context attached. Cold leads entered a nurture sequence automatically.
 
 ### Step 4: 24/7 Coverage
 
-Before AI Customer System, evenings and weekends meant unanswered messages. After, 24/7 coverage across all channels. A buyer messaging at 11pm on a Saturday received a qualifying response in under 60 seconds.
+Before AI Customer System, evenings and weekends meant unanswered messages. After, 24/7 coverage ran across all channels. A buyer messaging at 11pm on a Saturday received a qualifying response in under 60 seconds.
 
 ## The Results
 
@@ -88,8 +88,8 @@ Before AI Customer System, evenings and weekends meant unanswered messages. Afte
 | Human agent workload | 100% triage and qualify | Close only |
 | Sales performance | Baseline | Increased in month 1 |
 
-## What This Means for Your Agency
+## What This Means for Your Business
 
-If your clients are running paid ads but their team can't handle the volume, or qualified leads are dropping during handoff, this is the exact scenario AI Customer System solves. We configure the routing, train the AI Agents, connect all channels, and manage the system ongoing.
+If you're running paid ads but your team can't handle the volume, or qualified leads are dropping during handoff, this is the exact scenario AI Customer System solves. We configure the routing, train the AI Agents, connect all channels, and manage the system ongoing.
 
 You bring the client. We bring the infrastructure.

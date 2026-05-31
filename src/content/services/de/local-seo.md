@@ -88,11 +88,11 @@ Ihr Ruf verbessert sich durch mehr positive Bewertungen, eine höhere Durchschni
 
 ### Fallstudie: Lokales Klempnerunternehmen
 
-**Herausforderung:** Ein lokales Klempnerunternehmen war auf Seite 5 von Google unsichtbar und bekam nur 2-3 Anrufe pro Monat aus Online-Suchen.
+Herausforderung: Ein lokales Klempnerunternehmen war auf Seite 5 von Google unsichtbar und bekam nur 2-3 Anrufe pro Monat aus Online-Suchen.
 
-**Lösung:** Wir optimierten ihr Google Business Profile, bauten lokale Zitate auf, erstellten standortspezifische Inhalte und implementierten ein Bewertungsgenerierungssystem.
+Lösung: Wir optimierten ihr Google Business Profile, bauten lokale Zitate auf, erstellten standortspezifische Inhalte und implementierten ein Bewertungsgenerierungssystem.
 
-**Ergebnisse:**
+Ergebnisse:
 - Von Seite 5 auf #1 in Google Maps in 90 Tagen
 - 47 neue Kunden in den ersten 3 Monaten
 - **287% Steigerung** der Anrufe aus Online-Suchen
@@ -101,11 +101,11 @@ Ihr Ruf verbessert sich durch mehr positive Bewertungen, eine höhere Durchschni
 
 ### Fallstudie: Lokales Restaurant
 
-**Herausforderung:** Ein lokales Restaurant erschien nicht bei Suchen wie "beste Restaurant in [Stadt]" oder "Abendessen in meiner Nähe" und war vollständig auf Mundpropaganda angewiesen.
+Herausforderung: Ein lokales Restaurant erschien nicht bei Suchen wie "beste Restaurant in [Stadt]" oder "Abendessen in meiner Nähe" und war vollständig auf Mundpropaganda angewiesen.
 
-**Lösung:** Wir optimierten ihr Google Business Profile mit Fotos, Menüpunkten und regelmäßigen Posts und bauten lokale Zitate sowie ein System zur Gewinnung von Kundenbewertungen auf.
+Lösung: Wir optimierten ihr Google Business Profile mit Fotos, Menüpunkten und regelmäßigen Posts und bauten lokale Zitate sowie ein System zur Gewinnung von Kundenbewertungen auf.
 
-**Ergebnisse:**
+Ergebnisse:
 - Top-3-Ranking für "Restaurant in [Stadt]"-Suchen
 - 35% Steigerung der Reservierungen aus Online-Suchen
 - 4,8-Sterne-Durchschnittsbewertung mit 150+ Bewertungen

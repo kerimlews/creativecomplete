@@ -33,23 +33,23 @@ faq:
 
 ## Povzetek
 
-Kurirsko podjetje je ustvarjalo znaten obseg potencialnih strank iz Meta in TikTok oglasov — a konverzija je bila slaba. Fragmentirane operacije, neželena pošta iz oglasnih kampanj in ročno zbiranje podatkov so jedli maržo. AI Customer System je združil celoten lijak, namestil AI agente za kvalifikacijo potencialnih strank in zbiranje podatkov, integriral konverzijske signale nazaj na Meta in TikTok ter dosegel povečanje konverzij za 60% v 90 dneh.
+Kurirsko podjetje je ustvarjalo znaten obseg potencialnih strank iz Meta in TikTok oglasov, a konverzija je bila slaba. Fragmentirane operacije, neželena pošta iz oglasnih kampanj in ročno zbiranje podatkov so jedli maržo. AI Customer System je združil celoten lijak, namestil AI agente za kvalifikacijo potencialnih strank in zbiranje podatkov, integriral konverzijske signale nazaj na Meta in TikTok ter dosegel povečanje konverzij za **60 %** v 90 dneh.
 
 ## Problem: Obseg potencialnih strank brez konverzijske infrastrukture
 
-Oglasna strategija podjetja je delovala na ravni oglaševanja — kampanje so ustvarjale klike in izpolnjevanje obrazcev v velikem obsegu. Toda konverzijski lijak po kliku je bil pokvarjen.
+Oglasna strategija podjetja je delovala na ravni oglaševanja. Kampanje so ustvarjale klike in izpolnjevanje obrazcev v velikem obsegu. Toda konverzijski lijak po kliku je bil pokvarjen.
 
-**Trije združeni problemi:**
+Trije združeni problemi:
 
-1. **Fragmentirane ekipe**: trženje, prodaja in podpora so delovali v ločenih orodjih brez skupnega konteksta
-2. **Visok obseg neželene pošte**: oglasi privabljajo znaten odstotek nekvalificiranih ali neželenih oddaj
-3. **Ročno zbiranje podatkov**: vsako kurirsko povpraševanje je zahtevalo zbiranje istih informacij
+1. Fragmentirane ekipe: trženje, prodaja in podpora so delovali v ločenih orodjih brez skupnega konteksta
+2. Visok obseg neželene pošte: oglasi privabljajo znaten odstotek nekvalificiranih ali neželenih oddaj
+3. Ročno zbiranje podatkov: vsako kurirsko povpraševanje je zahtevalo zbiranje istih informacij
 
 ## Rešitev AI Customer System
 
 ### Korak 1: Združitev trženja, prodaje in podpore
 
-Zgradili smo enotni potek dela, ki je povezal vse tri funkcije. Vsaka potencialna stranka — s katere koli oglaševalske platforme, katerega koli kanala — je vstopila v en sistem.
+Zgradili smo enotni potek dela, ki je povezal vse tri funkcije. Vsaka potencialna stranka, s katere koli oglaševalske platforme in katerega koli kanala, je vstopila v en sistem.
 
 ### Korak 2: AI agenti za kvalifikacijo potencialnih strank
 
@@ -57,7 +57,7 @@ Namestili smo AI agente na vrhu lijaka. V 60 sekundah po oddaji obrazca ali nepo
 
 ### Korak 3: Meta Conversion API + TikTok Lower Funnel Events
 
-S posredovanjem konverzijskih signalov nazaj na Meta in TikTok — specifično signalov od potencialnih strank, ki so se konvertirale v stranke — so oglaševalski algoritmi optimizirali za prave profile. Strošek na potencialno stranko je padel za 10%. Obseg se je povečal za 35%.
+S posredovanjem konverzijskih signalov nazaj na Meta in TikTok, specifično signalov od potencialnih strank, ki so se konvertirale v stranke, so oglaševalski algoritmi optimizirali za prave profile. Strošek na potencialno stranko je padel za 10 %. Obseg se je povečal za 35 %.
 
 ### Korak 4: Avtomatizirano zbiranje podatkov
 

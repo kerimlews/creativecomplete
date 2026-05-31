@@ -31,7 +31,7 @@ faq:
 
 Vsaka minuta, v kateri lead čaka, se verjetnost konverzije zmanjša za do 80 %. Človeške ekipe zamujajo sledilna sporočila, nekonsistentno kvalificirajo in ne morejo biti aktivne 24/7 na vseh kanalih hkrati.
 
-**Rezultat:** Leadi, za katere ste že plačali, se ohladijo — preden vaša ekipa sploh odgovori.
+Leadi, za katere ste že plačali, se ohladijo, preden vaša ekipa sploh odgovori.
 
 ## Kako AI kvalifikacija leadov deluje
 
@@ -48,9 +48,9 @@ Takoj ko lead prispe prek katerega koli kanala, AI agent prevzame v sekundah:
 
 Po kvalifikaciji sistem samodejno odloči:
 
-- Vroči leadi (ocena 70+): takojšnje usmerjanje vašemu prodajalcu z vsem kontekstom
-- Topli leadi: negovalna zaporedja za nadaljnjo kvalifikacijo
-- Hladni leadi: samodejno arhiviranje z reaktivacijo po 30 dneh
+- vroči leadi (ocena 70+) gredo takoj k vašemu prodajalcu z vsem kontekstom
+- topli leadi preidejo v negovalna zaporedja za nadaljnjo kvalifikacijo
+- hladni leadi se samodejno arhivirajo z reaktivacijo po 30 dneh
 
 ### Brezhibna CRM integracija
 
