@@ -37,7 +37,7 @@ Before getting into the systems, it's worth understanding what manual creative p
 
 A typical paid social campaign needs 10–20 active creative variants to run proper tests across audiences. A mid-size brand spending $30,000 per month on ads might have 3 variants live at any given time. They're not running 3 variants because 3 is optimal — they're running 3 because that's all the design budget and turnaround time allowed.
 
-With 3 variants, there's a high probability the winner is somewhere in the 17 untested options. With 30 variants, you find it. The difference in ROAS between the right creative and a mediocre one can be 14× or more.
+With 3 variants, there's a high probability the winner is somewhere in the 17 untested options. With 30 variants, you find it. The difference in ROAS between the right creative and a mediocre one can be **14×** or more.
 
 The math is simple: more variants tested equals better winners found equals lower cost per acquisition across every campaign you run.
 

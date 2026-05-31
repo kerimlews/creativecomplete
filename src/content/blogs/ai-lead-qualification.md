@@ -37,15 +37,15 @@ AI lead qualification changes this by running the qualification process before a
 
 When a new lead comes in — from an ad, a DM, a web form, or any other channel — an AI Agent initiates a conversational exchange [within seconds](/blog/speed-to-lead/). The conversation is natural, not scripted. The lead doesn't experience a form or a survey. They experience a responsive, knowledgeable entity that seems to understand their situation.
 
-Through that conversation, the AI is systematically working through a qualification framework:
+Through that conversation, the AI systematically works through a qualification framework:
 
-**Budget** — Does the lead have the financial capacity for your solution? This isn't always a direct question. Often it's inferred from company size, stated investment range, or the specific problem they're trying to solve.
+Budget — Does the lead have the financial capacity for your solution? This isn't always a direct question. Often it's inferred from company size, stated investment range, or the specific problem they're trying to solve.
 
-**Authority** — Is this person the decision-maker, or do they need to bring others into the process? A lead without authority isn't disqualified — they need different follow-up content that helps them build the internal business case.
+Authority — Is this person the decision-maker, or do they need to bring others into the process? A lead without authority isn't disqualified — they need different follow-up content that helps them build the internal business case.
 
-**Need** — Is the problem they're experiencing one your solution actually solves? A precise fit between need and solution is the strongest predictor of close rate. Leads with a clear need close at 2–3× the rate of leads with vague or general interest.
+Need — Is the problem they're experiencing one your solution actually solves? A precise fit between need and solution is the strongest predictor of close rate. Leads with a clear need close at 2–3× the rate of leads with vague or general interest.
 
-**Timeline** — When are they looking to make a decision? An active timeline (weeks to months) signals genuine intent. "Just exploring" is a nurture signal, not a disqualify signal.
+Timeline — When are they looking to make a decision? An active timeline (weeks to months) signals genuine intent. "Just exploring" is a nurture signal, not a disqualify signal.
 
 ## The Scoring Model
 

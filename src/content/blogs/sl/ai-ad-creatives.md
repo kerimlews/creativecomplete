@@ -29,7 +29,7 @@ Ta vrzel — med tremi in tridesetimi — je tam, kjer izgine večina oglasnega 
 
 Povprečna oblikovalska agencija potrebuje tri do sedem dni za dostavo kreative. Popravki dodajo še dva. Do takrat, ko je končna datoteka pripravljena, je kampanjsko okno že mimo, in proračun, porabljen za čakanje, ni proizvedel ničesar.
 
-AI generiranje kreativ ta ozka grla popolnoma odpravi.
+AI generiranje kreativ ta ozka grla odpravi.
 
 ## Prava cena ročne produkcije kreativ
 
@@ -37,7 +37,7 @@ Preden se lotimo sistemov, je vredno razumeti, koliko ročna produkcija dejansko
 
 Tipična plačana social kampanja potrebuje 10–20 aktivnih kreativnih različic za pravilne teste skozi občinstva. Srednje velika znamka z mesečno porabo 30.000 € na oglasih ima morda 3 različice aktivne hkrati. Ne tečejo s 3, ker je 3 optimalno — tečejo s 3, ker je to vse, kar je oblikovalski proračun in čas izdelave dovolil.
 
-S 3 različicami je velika verjetnost, da je zmagovalec nekje med 17 netestiranimi možnostmi. Z 30 različicami ga najdete. Razlika v ROAS med pravo kreativo in povprečno je lahko 14× ali več.
+S 3 različicami je velika verjetnost, da je zmagovalec nekje med 17 netestiranimi možnostmi. Z 30 različicami ga najdete. Razlika v ROAS med pravo kreativo in povprečno je lahko **14×** ali več.
 
 Matematika je preprosta: več testiranih različic = boljši najdeni zmagovalci = nižji stroški pridobivanja pri vsaki kampanji.
 
@@ -45,17 +45,17 @@ Matematika je preprosta: več testiranih različic = boljši najdeni zmagovalci 
 
 AI generiranje kreativ ni ena funkcija — je plastni sistem izhodov, ki skupaj nadomestijo celoten ročni produkcijski potek. Tukaj je šest sistemov, ki štejejo.
 
-### 1. Ocenjevanje zmogljivosti pred lansiranjem
+### Ocenjevanje zmogljivosti pred lansiranjem
 
 ![Ocenjevanje zmogljivosti — AI napove CTR in CVR, preden je porabljen kakršen koli proračun](/images/blog/creatives/01-performance-scoring.svg)
 
 Največja neučinkovitost ročne produkcije je, da ni signala o zmogljivosti, dokler oglas ne gre v zrak in ne porabi proračuna. Vsak lansiranje je ugibanje.
 
-AI ocenjevanje to spremeni s tem, da napove stopnjo klikov in stopnjo konverzije za vsako kreativo, preden je objavljena. Sistem je treniran na konverzijskih podatkih iz milijonov oglasov skozi panoge, zato lahko prepozna vzorce v postavitvi, barvnem kontrastu, postavitvi copyja in vizualni hierarhiji, ki korelirajo z zmogljivostjo.
+AI ocenjevanje to spremeni z napovedovanjem stopnje klikov in stopnje konverzije za vsako kreativo, preden jo objavite. Sistem je treniran na konverzijskih podatkih iz milijonov oglasov skozi panoge, zato prepozna vzorce v postavitvi, barvnem kontrastu, postavitvi copyja in vizualni hierarhiji, ki korelirajo z zmogljivostjo.
 
 Samo kreative nad pragom ocene gredo v lansiranje. Ostale se zavržejo ali popravijo, preden se porabi en sam evro.
 
-### 2. Generiranje različic v velikem obsegu
+### Generiranje različic v velikem obsegu
 
 ![Generiranje različic — en brief proizvede 20+ ocenjenih kreativnih različic v sekundah](/images/blog/creatives/02-variant-generation.svg)
 
@@ -65,7 +65,7 @@ To temeljito spremeni ekonomijo testiranja. Namesto da bi oblikovali 2 različic
 
 Izhod tudi ni generičen. Sistem uporabi vaš brand kit za vsako različico in zagotavlja, da to, kar skalira, ostane prepoznavno vaše — le v različicah, ki jih ne bi imeli časa ali proračuna ročno testirati.
 
-### 3. Izvoz formatov za več platform
+### Izvoz formatov za več platform
 
 ![Izvoz formatov za več platform — ena kreativa se samodejno prilagaja vsem oglasnim platformam](/images/blog/creatives/03-platform-formats.svg)
 
@@ -75,7 +75,7 @@ AI izvoz formatov vzame eno odobreno kreativo in samodejno generira vsako potreb
 
 En brief. Vsaka platforma. Nič ročnega spreminjanja velikosti.
 
-### 4. Avtomatizacija A/B testiranja
+### Avtomatizacija A/B testiranja
 
 ![A/B testiranje v velikem obsegu — zaženite 20 hkratnih testov in samodejno skalirajte zmagovalca](/images/blog/creatives/04-ab-testing.svg)
 
@@ -83,19 +83,19 @@ Pravilno izvajanje [A/B testa](/sl/blog/testiranje-oglasnih-kreativ/) ročno pom
 
 AI A/B testiranje vse to izvaja samodejno. Zaženete 20 različic hkrati. Sistem spremlja zmogljivost v realnem času, ustavi slabo izvajajoče kreative, ko dosežejo prage statistične značilnosti, in prerazporedi proračun proti zmagovalcu — brez kakršnega koli ročnega posega.
 
-Praktičen rezultat je, da vaš oglasni račun vedno teče na najboljši razpoložljivi kreativi, ne na kreativi, ki ste jo nazadnje imeli čas testirati.
+Vaš oglasni račun vedno teče na najboljši razpoložljivi kreativi, ne na kreativi, ki ste jo nazadnje imeli čas testirati.
 
-### 5. Generiranje z zaklenjeno znamko
+### Generiranje z zaklenjeno znamko
 
 ![Generiranje z zaklenjeno znamko — vsak kreativni izhod je privzeto skladen z znamko](/images/blog/creatives/05-brand-consistency.svg)
 
 Skaliranje za večino znamk ustvari problem konsistentnosti. Ko generirate 30 kreativnih različic na teden, se verjetnost izhoda izven znamke poveča z vsako datoteko, ki jo oblikovalec naredi pod pritiskom.
 
-Generiranje z zaklenjeno znamko to reši tako, da naredi skladnost z znamko omejitev na generacijski plasti, ne preverjanje kakovosti na koncu. Vaše hex kode, pisave, pravila postavitve logotipa in ton glasu so zaklenjeni enkrat. Vsak izhod, ki sledi, je skladen po konstrukciji.
+Generiranje z zaklenjeno znamko to reši z vgrajevanjem skladnosti z znamko v generacijsko plast, ne kot preverjanje kakovosti na koncu. Vaše hex kode, pisave, pravila postavitve logotipa in ton glasu so zaklenjeni enkrat. Vsak izhod, ki sledi, je skladen po konstrukciji.
 
-Rezultat je, da lahko generiranje kreativ predate kateremu koli članu ekipe in izhod bo skladen z znamko — ker to izvaja sistem, ne posameznik.
+Generiranje kreativ lahko predate kateremu koli članu ekipe in izhod bo skladen z znamko — ker to izvaja sistem, ne posameznik.
 
-### 6. Retargeting kreative po stopnjah lijaka
+### Retargeting kreative po stopnjah lijaka
 
 ![Retargeting po stopnjah lijaka — različne kreative za vsako stopnjo poti stranke](/images/blog/creatives/06-retargeting.svg)
 

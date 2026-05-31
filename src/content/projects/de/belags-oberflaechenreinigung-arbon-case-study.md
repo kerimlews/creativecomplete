@@ -37,7 +37,7 @@ faq:
 
 ## Kurzfassung
 
-Ein Schweizer Oberflächen- und Druckreinigungsunternehmen in Arbon hatte ein Problem, das jeder lokale Dienstleister kennt: Kunden suchten — fanden ihn aber nicht. Keine Website. Kein Google Business Profile. Keine Bewertungen. Wir haben alles gelöst — eine professionelle Website gebaut, das GBP-Profil vollständig eingerichtet und optimiert, standortspezifische Landingpages für 4 Städte im Kanton Thurgau erstellt, YouTube-Videoinhalte produziert und eine systematische Local-SEO-Strategie aufgebaut. Das Ergebnis? Top-Positionen auf Google Maps und messbar mehr eingehende Anrufe.
+Ein Schweizer Oberflächen- und Druckreinigungsunternehmen in Arbon hatte ein Problem, das viele lokale Dienstleister kennen: Kunden suchten — fanden ihn aber nicht. Keine Website. Kein Google Business Profile. Keine Bewertungen. Wir haben alles aufgebaut: eine professionelle Website, ein vollständig optimiertes GBP-Profil, standortspezifische Landingpages für 4 Städte im Kanton Thurgau, YouTube-Videoinhalte und eine systematische Local-SEO-Strategie. Das Ergebnis: Top-Positionen auf Google Maps und messbar mehr eingehende Anrufe.
 
 ## Die Ausgangslage: Ein qualitätsorientierter Betrieb, den niemand finden konnte
 
@@ -45,13 +45,13 @@ Belags-Oberflächenreinigung ist ein professioneller Druckreinigungs- und Oberfl
 
 Das Problem war eindeutig: Trotz exzellenter Arbeit war der Betrieb online praktisch unsichtbar.
 
-- **Keine Website** — organisches Ranking unmöglich
-- **Kein Google Business Profile** — kein Erscheinen auf Google Maps
-- **Keine Bewertungen** — kein Social Proof für unentschlossene Kunden
-- **Keine Content-Strategie** — jede lokale Suchabsicht wurde verpasst
-- **Keine Standortabdeckung** — umliegende Städte wurden gar nicht angesprochen
+- Keine Website — organisches Ranking unmöglich
+- Kein Google Business Profile — kein Erscheinen auf Google Maps
+- Keine Bewertungen — kein Social Proof für unentschlossene Kunden
+- Keine Content-Strategie — jede lokale Suchabsicht wurde verpasst
+- Keine Standortabdeckung — umliegende Städte wurden gar nicht angesprochen
 
-Dies ist eine der häufigsten Situationen, die wir bei Schweizer und deutschsprachigen Dienstleistungsbetrieben antreffen. Die Qualität der Arbeit ist vorhanden — die digitale Infrastruktur fehlt schlicht.
+Das ist eine der häufigsten Situationen, die wir bei Schweizer und deutschsprachigen Dienstleistungsbetrieben antreffen. Die Qualität der Arbeit ist vorhanden — die digitale Infrastruktur fehlt schlicht.
 
 ## Die Strategie: Vier Säulen der lokalen Marktführerschaft
 
@@ -59,14 +59,14 @@ Dies ist eine der häufigsten Situationen, die wir bei Schweizer und deutschspra
 
 Bevor SEO funktionieren kann, braucht man ein Fundament. Wir haben eine professionelle Website für den Schweizer Markt entworfen und gebaut — nach unserer bewährten [Webdesign](/de/dienstleistungen/web-design/) Methodik:
 
-- **Mobile-First-Design** — 74 % der lokalen Suchanfragen kommen vom Smartphone
-- **Schnelle Ladezeiten** — unter 2 Sekunden im LTE-Netz
-- **Klare Serviceseiten** — Druckreinigung, Belagsreinigung, Fassadenreinigung
-- **Prominente CTAs** — Click-to-Call-Buttons auf jeder Seite sichtbar
-- **Professionelle Fotografie** — echte Projektfotos schaffen sofortiges Vertrauen
-- **Vertrauenssignale** — Zertifikate, Servicebereichskarte, Vorher/Nachher-Galerien
+- Mobile-First-Design — 74 % der lokalen Suchanfragen kommen vom Smartphone
+- Schnelle Ladezeiten — unter 2 Sekunden im LTE-Netz
+- Klare Serviceseiten — Druckreinigung, Belagsreinigung, Fassadenreinigung
+- Prominente CTAs — Click-to-Call-Buttons auf jeder Seite sichtbar
+- Professionelle Fotografie — echte Projektfotos schaffen sofortiges Vertrauen
+- Vertrauenssignale — Zertifikate, Servicebereichskarte, Vorher/Nachher-Galerien
 
-Die Website wurde mit WordPress und Elementor für Flexibilität gebaut, Yoast SEO für die On-Page-Optimierung und Schema-Markup für Rich Results. Jede Seite wurde so konzipiert, dass sie sowohl Nutzer als auch Suchmaschinen optimal bedient.
+Die Website wurde mit WordPress und Elementor für Flexibilität gebaut, Yoast SEO für die On-Page-Optimierung und Schema-Markup für Rich Results. Jede Seite bedient sowohl Nutzer als auch Suchmaschinen.
 
 ### Säule 2: Google Business Profile — Vollständige Einrichtung und Optimierung
 
@@ -97,10 +97,10 @@ Die GBP-Optimierung ist der Kern unseres [Local SEO Service](/de/dienstleistunge
 Statt einer einzigen Homepage, die den gesamten lokalen Traffic abfangen soll, haben wir für jede wichtige Stadt im Servicegebiet eigene Landingpages erstellt. Jede Seite zielt auf hyperlokale Keywords und ist so strukturiert, dass sie eigenständig rankt:
 
 **Erstellte Seiten:**
-1. **Druckreinigung Arbon** — Heimatbasis, höchste Konkurrenzdichte
-2. **Druckreinigung Rorschach** — Nachbarstadt am Bodensee
-3. **Druckreinigung Romanshorn** — Hafenstadt, hohes Suchvolumen
-4. **Druckreinigung Kreuzlingen** — Grenzstadt, Chance für grenzüberschreitenden Markt
+1. Druckreinigung Arbon — Heimatbasis, höchste Konkurrenzdichte
+2. Druckreinigung Rorschach — Nachbarstadt am Bodensee
+3. Druckreinigung Romanshorn — Hafenstadt, hohes Suchvolumen
+4. Druckreinigung Kreuzlingen — Grenzstadt, Chance für grenzüberschreitenden Markt
 
 **Jede Seite enthält:**
 - Stadtspezifische H1-Tags und Seitentitel
@@ -114,11 +114,11 @@ Diese interne Verlinkungsstruktur, die auf den Best Practices unseres [SEO-Servi
 
 ### Säule 4: YouTube-Videoproduktion
 
-YouTube ist ein ungenutzter Kanal für lokale Dienstleistungsbetriebe im deutschsprachigen Schweizer Markt. Wir haben professionelle Videoinhalte produziert, die gleichzeitig drei Zwecke erfüllen:
+YouTube ist ein wenig genutzter Kanal für lokale Dienstleistungsbetriebe im deutschsprachigen Schweizer Markt. Wir haben professionelle Videoinhalte produziert, die gleichzeitig drei Zwecke erfüllen:
 
-1. **Vertrauensaufbau** — Kunden können die Qualität der Arbeit sehen, bevor sie anrufen
-2. **Zusätzliche Suchrankings** — Videos erscheinen in den Google-Ergebnissen für lokale Suchanfragen
-3. **Social Proof** — Teilbarer Content, der die Marke stärkt
+1. Vertrauensaufbau — Kunden sehen die Qualität der Arbeit, bevor sie anrufen
+2. Zusätzliche Suchrankings — Videos erscheinen in den Google-Ergebnissen für lokale Suchanfragen
+3. Social Proof — teilbarer Content, der die Marke stärkt
 
 **Produzierte Videoinhalte:**
 - Vorher/Nachher-Enthüllungsvideos der Druckreinigung (höchste Interaktionsrate)
@@ -132,11 +132,11 @@ Videos wurden mit deutschsprachigen Titeln, Beschreibungen und Tags optimiert, d
 
 Neben dem Content haben wir eine solide technische Grundlage aufgebaut — nach den Standards unseres [SEO-Service](/de/dienstleistungen/seo/):
 
-- **Lokales Schema-Markup** — LocalBusiness-, Service- und Review-Schema auf jeder relevanten Seite
-- **XML-Sitemap** — mit Prioritätshierarchie an die Google Search Console übermittelt
-- **Core Web Vitals** — LCP unter 2,5 s, CLS unter 0,1 optimiert
-- **NAP-Konsistenz** — Name, Adresse, Telefon identisch auf Website, GBP und Verzeichnissen
-- **Lokale Zitierungen** — eingetragen auf local.ch, search.ch, directories.ch und 12 Branchenverzeichnissen
+- Lokales Schema-Markup — LocalBusiness-, Service- und Review-Schema auf jeder relevanten Seite
+- XML-Sitemap — mit Prioritätshierarchie an die Google Search Console übermittelt
+- Core Web Vitals — LCP unter 2,5 s, CLS unter 0,1 optimiert
+- NAP-Konsistenz — Name, Adresse, Telefon identisch auf Website, GBP und Verzeichnissen
+- Lokale Zitierungen — eingetragen auf local.ch, search.ch, directories.ch und 12 Branchenverzeichnissen
 
 ## Interne Verlinkungsarchitektur
 
@@ -153,25 +153,17 @@ Alle internen Links verwenden abschließende Schrägstriche für Konsistenz und 
 
 Das komplette digitale Paket hat messbare Ergebnisse über alle Kanäle geliefert:
 
-- **Google Maps** — Top-3-Ranking für "Druckreinigung Arbon" und umliegende Städte
-- **GBP-Anrufe** — 312 % mehr eingehende Anrufe über Google Maps
-- **Website-Traffic** — organischer Traffic wächst seit dem Launch monatlich
-- **YouTube** — professionelle Videopräsenz in einer unangetasteten Nische aufgebaut
-- **Bewertungen** — 5-Sterne-Bewertungsbasis von ersten zufriedenen Kunden aufgebaut
-- **Standortabdeckung** — 4 Städte werden jetzt mit eigenen Ranking-Seiten abgedeckt
+- Google Maps — Top-3-Ranking für "Druckreinigung Arbon" und umliegende Städte
+- GBP-Anrufe — **312%** mehr eingehende Anrufe über Google Maps
+- Website-Traffic — organischer Traffic wächst seit dem Launch monatlich
+- YouTube — professionelle Videopräsenz in einer bisher unangetasteten Nische aufgebaut
+- Bewertungen — **5-Sterne**-Bewertungsbasis von ersten zufriedenen Kunden aufgebaut
+- Standortabdeckung — 4 Städte werden jetzt mit eigenen Ranking-Seiten abgedeckt
 
 ## Im Projekt eingesetzte Dienstleistungen
 
 Dieses Projekt kombinierte unsere wichtigsten lokalen Wachstumsdienstleistungen:
 
-- **[Local SEO](/de/dienstleistungen/local-seo/)** — Google Maps Dominanz, GBP-Optimierung, lokaler Zitierungsaufbau
-- **[Webdesign](/de/dienstleistungen/web-design/)** — Professionelle WordPress-Website für Conversions gebaut
-- **[SEO](/de/dienstleistungen/seo/)** — Technisches SEO, Schema-Markup, standortspezifische Content-Strategie
-
-## Ist Ihr lokaler Dienstleistungsbetrieb online unsichtbar?
-
-Wenn potenzielle Kunden Sie auf Google Maps nicht finden können, geben Sie jeden Auftrag täglich an Ihre Mitbewerber ab.
-
-**Das Fenster, um die lokale Suche in Ihrer Region zu dominieren, ist noch offen.** Es schliesst sich aber, sobald ein Mitbewerber dort ankommt.
-
-**Kontaktieren Sie uns für ein kostenloses lokales Sichtbarkeits-Audit.** Wir zeigen Ihnen genau, wo Sie Anrufe verpassen und was es braucht, um das zu beheben — für Ihre spezifische Stadt, Ihr spezifisches Gewerk.
+- [Local SEO](/de/dienstleistungen/local-seo/) — Google Maps Dominanz, GBP-Optimierung, lokaler Zitierungsaufbau
+- [Webdesign](/de/dienstleistungen/web-design/) — Professionelle WordPress-Website für Conversions gebaut
+- [SEO](/de/dienstleistungen/seo/) — Technisches SEO, Schema-Markup, standortspezifische Content-Strategie

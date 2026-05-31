@@ -35,31 +35,31 @@ Vsaka minuta, v kateri lead čaka, se verjetnost konverzije zmanjša za do 80 %.
 
 ## Kako AI kvalifikacija leadov deluje
 
-### Korak 1: Takojšen prvi stik
+### Takojšen prvi stik
 
 Takoj ko lead prispe prek katerega koli kanala, AI agent prevzame v sekundah:
 
-- Pozdrav in zbiranje konteksta
-- Prepoznavanje namena prek naravnega pogovora
-- Kvalifikacijska vprašanja po BANT okviru
-- Samodejno ocenjevanje na podlagi odgovorov
+- pozdrav in zbiranje konteksta
+- prepoznavanje namena prek naravnega pogovora
+- kvalifikacijska vprašanja po BANT okviru
+- samodejno ocenjevanje na podlagi odgovorov
 
-### Korak 2: Pametno usmerjanje
+### Pametno usmerjanje
 
 Po kvalifikaciji sistem samodejno odloči:
 
-- **Vroči leadi (ocena 70+):** Takojšnje usmerjanje vašemu prodajalcu z vsem kontekstom
-- **Topli leadi:** Negovalná zaporedja za nadaljnjo kvalifikacijo
-- **Hladni leadi:** Samodejno arhiviranje z reaktivacijo po 30 dneh
+- Vroči leadi (ocena 70+): takojšnje usmerjanje vašemu prodajalcu z vsem kontekstom
+- Topli leadi: negovalna zaporedja za nadaljnjo kvalifikacijo
+- Hladni leadi: samodejno arhiviranje z reaktivacijo po 30 dneh
 
-### Korak 3: Brezhibna CRM integracija
+### Brezhibna CRM integracija
 
 Vsi podatki samodejno tečejo v vaš CRM:
 
-- Ocena leada in status kvalifikacije
-- Transkript pogovora in atribucija kanala
-- Naslednja priporočena dejanja
-- Opomniki za termine in časovni načrt sledilnih sporočil
+- ocena leada in status kvalifikacije
+- transkript pogovora in atribucija kanala
+- naslednja priporočena dejanja
+- opomniki za termine in časovni načrt sledilnih sporočil
 
 ## Dokazani rezultati
 

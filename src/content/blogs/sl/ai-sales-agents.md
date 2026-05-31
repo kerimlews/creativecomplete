@@ -23,7 +23,7 @@ faq:
     answer: "ROI prihaja iz treh virov: prihranek časa pri kvalifikaciji (predstavniki porabijo 70% časa za nekvalificirane leade), povrnjen prihodek od leadov, ki bi šli hladni brez follow-upa (80% prodaj zahteva 5+ dotikov; večina predstavnikov ustavi pri 2) in 24/7 pokritost, ki ujame leade izven poslovnih ur. Skupaj stranke običajno vidijo 2–4× kvalificiranega pipelinea iz istega obsega leadov."
 ---
 
-80% prodaj zahteva pet ali več follow-upov. Povprečen prodajni predstavnik odneha po dveh.
+**80%** prodaj zahteva pet ali več follow-upov. Povprečen prodajni predstavnik odneha po dveh.
 
 Ta vrzel — med follow-upom, ki bi konvertiral, in tistim, ki se ni zgodil — je tam, kjer izgine večina prihodka. Ne zato, ker leadi niso bili zainteresirani. Ker se je follow-up zaporedje ustavilo, preden je bil lead pripravljen.
 
@@ -37,21 +37,21 @@ Obseg, ki ga pokriva:
 
 ![Obseg AI prodajnega agenta — prvi odziv, kvalifikacija, follow-up zaporedja, obravnava ugovorov, rezervacija terminov in predaja človeškemu predstavniku](/images/blog/ai-sales-agents/01-agent-scope.svg)
 
-**Prvi odziv (< 60 sekund):** Vsak nov lead prejme odziv v sekundah po poizvedbi. Preden vaši predstavniki preverijo jutranja sporočila, je AI že predstavil vaše podjetje, začel kvalificirati lead in identificiral njihovo glavno potrebo.
+Prvi odziv (< 60 sekund): vsak nov lead prejme odziv v sekundah po poizvedbi. Preden vaši predstavniki preverijo jutranja sporočila, je AI že predstavil vaše podjetje, začel kvalificirati lead in identificiral njegovo glavno potrebo.
 
-**[BANT kvalifikacija](/sl/blog/ai-kvalifikacija-leadov/):** Skozi pogovorno izmenjavo AI izpostavi proračun, odločevalsko avtoriteto, konkretno potrebo in časovnico. Lead doživi koristen pogovor, ne zaslišanja. AI zabeleži vsak signal in zgradi povzetek kvalifikacije.
+[BANT kvalifikacija](/sl/blog/ai-kvalifikacija-leadov/): skozi pogovorno izmenjavo AI izpostavi proračun, odločevalsko avtoriteto, konkretno potrebo in časovnico. Lead doživi koristen pogovor, ne zaslišanja. AI zabeleži vsak signal in zgradi povzetek kvalifikacije.
 
-**[Follow-up zaporedja](/sl/blog/whatsapp-broadcast-kampanje/):** Lead, ki se ne odzove na prvo sporočilo, prejme follow-up na dan 1, dan 3, dan 7 in dan 14 — samodejno. Vsebina sporočila se prilagaja zadnji znani poziciji leada v pogovoru. Leadi, ki so bili topli, a so utihnili, prejmejo poziv za ponovno vzpostavitev stika. Leadi, ki so izpostavili določen ugovor, prejmejo vsebino, ki ga naslavlja.
+[Follow-up zaporedja](/sl/blog/whatsapp-broadcast-kampanje/): lead, ki se ne odzove na prvo sporočilo, prejme follow-up na dan 1, dan 3, dan 7 in dan 14 — samodejno. Vsebina sporočila se prilagaja zadnji znani poziciji leada v pogovoru. Leadi, ki so bili topli, a so utihnili, prejmejo poziv za ponovno vzpostavitev stika. Leadi, ki so izpostavili določen ugovor, prejmejo vsebino, ki ga naslavlja.
 
-**Izpostavljanje ugovorov:** Ko lead obotavlja ali izpostavi pomislek, je AI treniran, da ga izpostavi in obravnava, namesto da ga preskoči. Cenovni ugovor dobi preokvirjanje vrednosti. Časovni ugovor dobi poziv nujnosti ali pot "naj rezerviramo za naslednje četrtletje". Obravnava ugovorov uporablja vaše najboljše odzive, konsistentno uporabljene.
+Izpostavljanje ugovorov: ko lead obotavlja ali izpostavi pomislek, je AI treniran, da ga izpostavi in obravnava, namesto da ga preskoči. Cenovni ugovor dobi preokvirjanje vrednosti. Časovni ugovor dobi poziv nujnosti ali pot "naj rezerviramo za naslednje četrtletje". Obravnava ugovorov uporablja vaše najboljše odzive, konsistentno uporabljene.
 
-**Rezervacija terminov:** Ko je lead kvalificiran in pripravljen na pogovor, AI predstavi razpoložljive čase in rezervira termin neposredno v koledar predstavnika — brez izmenjave e-mailov, brez zmede s povezavami za rezervacijo. Termin pride s pred-prebranim povzetkom pogovora.
+Rezervacija terminov: ko je lead kvalificiran in pripravljen na pogovor, AI predstavi razpoložljive čase in rezervira termin neposredno v koledar predstavnika — brez izmenjave e-mailov, brez zmede s povezavami za rezervacijo. Termin pride s pred-prebranim povzetkom pogovora.
 
 ## Vrzel pokritosti, ki jo AI reši
 
 Vaša prodajna ekipa dela 8 ur na dan, 5 dni v tednu. To je 40 ur od 168. V preostalih 128 urah leadi, ki pridejo prek oglasov, social omrežij ali vaše spletne strani, ostanejo brez odgovora.
 
-Raziskave so jasne: lead, kontaktiran v 5 minutah od poizvedbe, je **21× verjetneje kvalificiran** kot tisti, kontaktiran 24 ur kasneje. Vsak lead, ki pride izven poslovnih ur in ne prejme odziva v isti seji, je do prihoda vaše ekipe v ponedeljek izgubil večino svoje konverzijske verjetnosti.
+Podatki so jasni: lead, kontaktiran v 5 minutah od poizvedbe, je **21× verjetneje kvalificiran** kot tisti, kontaktiran 24 ur kasneje. Vsak lead, ki pride izven poslovnih ur in ne prejme odziva v isti seji, je do prihoda vaše ekipe v ponedeljek izgubil večino svoje konverzijske verjetnosti.
 
 ![24/7 vrzel pokritosti — ure človeške prodajne ekipe vs. pokritost AI agenta, ki prikazuje 128 ur na teden neobravnavanih leadov](/images/blog/ai-sales-agents/02-coverage-gap.svg)
 
@@ -59,14 +59,14 @@ AI prodajni agent to vrzel popolnoma odpravi. Nima poslovnih ur. Lead, ki pride 
 
 ## Kaj prejme predstavnik
 
-AI prodajni agent ne nadomesti vaše prodajne ekipe. Ga naredi dramatično bolj učinkovitega z odpravo nizko vrednih del, ki trenutno porabijo večino časa.
+AI prodajni agent ne nadomesti vaše prodajne ekipe. Naredi jo učinkovitejšo z odpravo nizko vrednih del, ki trenutno porabijo večino časa.
 
 Ko predstavnik prejme lead od AI:
 
-- Polna zgodovina pogovora (vsako sporočilo, vsak odziv, vsak signal)
-- Povzetek kvalifikacije (BANT profil, ocena, temperatura leada)
-- Priporočen uvod glede na navedeno potrebo
-- Termin že rezerviran (v mnogih primerih)
+- polna zgodovina pogovora (vsako sporočilo, vsak odziv, vsak signal)
+- povzetek kvalifikacije (BANT profil, ocena, temperatura leada)
+- priporočen uvod glede na navedeno potrebo
+- termin že rezerviran (v mnogih primerih)
 
 Predstavnik vstopi v pogovor, vedoč, s kom govori, kaj lead potrebuje, kaj ga skrbi in kateri korak je pripravljen storiti. To je pozicija, ki si jo vrhunski predstavnik ustvari skozi več dotikov. AI jo dostavi iz prve interakcije.
 

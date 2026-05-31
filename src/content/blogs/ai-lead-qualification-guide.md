@@ -39,9 +39,9 @@ Lead qualification is the process of determining whether an inbound prospect has
 
 Manual qualification looks like this: a lead fills out a form. It gets assigned to a rep. The rep calls within 47 hours (industry median response time). They spend 20–30 minutes asking questions about budget, timeline, and authority. They take notes. They update the CRM. They decide whether to pursue.
 
-That process is expensive, slow, and inconsistent. Every rep has a different definition of "qualified." Leads slip through because a rep was in a meeting. Promising prospects get cold because the first contact came a day too late.
+That process is expensive, slow, and inconsistent. Every rep has a different definition of "qualified." Leads slip through because a rep was in a meeting. Promising prospects go cold because the first contact came a day too late.
 
-AI qualification replaces the slow, variable-quality manual process with a fast, consistent automated one. When a lead submits their details, an AI agent initiates a conversation within seconds — on WhatsApp, Instagram DM, SMS, or whatever channel the lead used. The AI works through a structured qualification dialogue, scores the lead against your criteria, and either routes them to a rep (with a full summary of the conversation) or places them into a nurture sequence.
+AI qualification replaces that slow, variable-quality process with a fast, consistent automated one. When a lead submits their details, an AI agent initiates a conversation within seconds — on WhatsApp, Instagram DM, SMS, or whatever channel the lead used. The AI works through a structured qualification dialogue, scores the lead against your criteria, and either routes them to a rep (with a full summary of the conversation) or places them into a nurture sequence.
 
 The rep receives pre-qualified leads with context. They close — they do not sort.
 
@@ -53,38 +53,38 @@ The rep receives pre-qualified leads with context. They close — they do not so
 
 BANT is the oldest and most widely used qualification framework. Developed at IBM in the 1950s, it assesses four variables:
 
-- **Budget**: Does the prospect have allocated funds for this type of solution?
-- **Authority**: Are you speaking with the decision-maker, or an influencer?
-- **Need**: Do they have a documented problem your solution addresses?
-- **Timeline**: Are they planning to buy in the next 30, 60, or 90 days?
+- Budget: Does the prospect have allocated funds for this type of solution?
+- Authority: Are you speaking with the decision-maker, or an influencer?
+- Need: Do they have a documented problem your solution addresses?
+- Timeline: Are they planning to buy in the next 30, 60, or 90 days?
 
-AI systems excel at BANT because each variable can be assessed through direct conversational questions. "What's your rough monthly budget for lead generation?" "Who else would be involved in this decision?" These are natural, conversational — they feel like qualification, not interrogation.
+AI systems excel at BANT because each variable can be assessed through direct conversational questions. "What's your rough monthly budget for lead generation?" "Who else would be involved in this decision?" These feel like qualification, not interrogation.
 
-**When to use BANT:** High-volume lead environments, straightforward purchase decisions, B2C with significant purchase values, agency client acquisition for defined services.
+When to use BANT: High-volume lead environments, straightforward purchase decisions, B2C with significant purchase values, agency client acquisition for defined services.
 
 ### CHAMP — Challenges, Authority, Money, Prioritization
 
 CHAMP flips the BANT priority by leading with the prospect's challenges rather than their budget. The reasoning: if you understand their core problem first, the money conversation becomes about cost of the problem versus cost of the solution — a more compelling frame.
 
-- **Challenges**: What specific problem are they trying to solve?
-- **Authority**: Who is involved in the decision?
-- **Money**: What's the realistic budget envelope?
-- **Prioritization**: How urgent is solving this versus other initiatives?
+- Challenges: What specific problem are they trying to solve?
+- Authority: Who is involved in the decision?
+- Money: What's the realistic budget envelope?
+- Prioritization: How urgent is solving this versus other initiatives?
 
-**When to use CHAMP:** B2B deals with longer cycles, consultative selling environments, solutions where ROI needs to be established before price is discussed.
+When to use CHAMP: B2B deals with longer cycles, consultative selling environments, solutions where ROI needs to be established before price is discussed.
 
 ### MEDDIC — Metrics, Economic Buyer, Decision Criteria, Decision Process, Identify Pain, Champion
 
 MEDDIC is the enterprise sales qualification standard. It requires more information but produces higher-quality pipeline:
 
-- **Metrics**: What specific, measurable improvement does the prospect expect?
-- **Economic Buyer**: Who has final budget authority?
-- **Decision Criteria**: What factors determine which vendor gets selected?
-- **Decision Process**: What steps does the evaluation follow?
-- **Identify Pain**: What is the quantifiable cost of the current problem?
-- **Champion**: Who inside the prospect organisation is advocating for your solution?
+- Metrics: What specific, measurable improvement does the prospect expect?
+- Economic Buyer: Who has final budget authority?
+- Decision Criteria: What factors determine which vendor gets selected?
+- Decision Process: What steps does the evaluation follow?
+- Identify Pain: What is the quantifiable cost of the current problem?
+- Champion: Who inside the prospect organisation is advocating for your solution?
 
-**When to use MEDDIC:** Six-figure contracts, multi-stakeholder enterprise deals, long sales cycles (90+ days), competitive environments with formal procurement processes.
+When to use MEDDIC: Six-figure contracts, multi-stakeholder enterprise deals, long sales cycles (90+ days), competitive environments with formal procurement processes.
 
 ### BANT-AI: The Agency Default
 
@@ -100,11 +100,11 @@ Leads scoring above your threshold (typically 70+) get routed live. Leads scorin
 
 The qualification system activates the moment a lead enters your funnel. Sources include:
 
-- **Paid social** (Meta Lead Ads, TikTok Lead Gen Forms, LinkedIn Lead Gen)
-- **Organic social** (Instagram DMs, Facebook Messenger, WhatsApp clicks-to-chat)
-- **Website** (contact forms, chat widgets, live chat)
-- **Inbound calls** (IVR to chat handoff)
-- **Offline** (QR codes to WhatsApp)
+- Paid social (Meta Lead Ads, TikTok Lead Gen Forms, LinkedIn Lead Gen)
+- Organic social (Instagram DMs, Facebook Messenger, WhatsApp clicks-to-chat)
+- Website (contact forms, chat widgets, live chat)
+- Inbound calls (IVR to chat handoff)
+- Offline (QR codes to WhatsApp)
 
 Each source triggers the same first response: an AI message that appears within 60 seconds, personalised to the channel and lead source context.
 
@@ -131,9 +131,9 @@ The system continues until it has sufficient data on all BANT dimensions. The en
 Each BANT dimension is scored based on the prospect's responses. The system applies weighted scoring — Timeline and Budget typically carry higher weight because they are the most reliable conversion predictors.
 
 The composite score determines routing:
-- **Hot (75–100)**: Real-time alert to a rep. Full conversation transcript attached. Rep is expected to follow up within 15 minutes.
-- **Warm (45–74)**: Automated nurture sequence begins. Rep reviews the lead within 24 hours and decides whether to engage directly or continue the automation.
-- **Cold (0–44)**: Lead enters a long-cycle drip. No rep time is spent until the lead re-engages with intent signals.
+- Hot (75–100): Real-time alert to a rep. Full conversation transcript attached. Rep is expected to follow up within 15 minutes.
+- Warm (45–74): Automated nurture sequence begins. Rep reviews the lead within 24 hours and decides whether to engage directly or continue the automation.
+- Cold (0–44): Lead enters a long-cycle drip. No rep time is spent until the lead re-engages with intent signals.
 
 ### Step 4: CRM Enrichment and Handoff
 
@@ -242,21 +242,21 @@ After 30 days, the system reaches stable performance. Ongoing optimisation focus
 
 ### Primary Metrics
 
-**Lead-to-qualification rate:** The percentage of total leads that pass the qualification threshold. Healthy benchmark: 15–35% (lower means stricter criteria, higher means criteria may be too loose).
+Lead-to-qualification rate: The percentage of total leads that pass the qualification threshold. Healthy benchmark: 15–35% (lower means stricter criteria, higher means criteria may be too loose).
 
-**Time-to-first-contact:** How long between lead capture and first AI message. Target: under 60 seconds. This single metric has the highest correlation with qualification success.
+Time-to-first-contact: How long between lead capture and first AI message. Target: under 60 seconds. This single metric has the highest correlation with qualification success.
 
-**Qualification completion rate:** The percentage of leads who complete the full qualification dialogue (as opposed to dropping off mid-conversation). Benchmark: 55–75%. Below 55% indicates the script is too long or the questions feel intrusive.
+Qualification completion rate: The percentage of leads who complete the full qualification dialogue (as opposed to dropping off mid-conversation). Benchmark: 55–75%. Below 55% indicates the script is too long or the questions feel intrusive.
 
-**Rep acceptance rate:** The percentage of AI-qualified leads that reps rate as genuinely qualified after their first call. Target: 80%+. If this is low, your scoring threshold is misaligned.
+Rep acceptance rate: The percentage of AI-qualified leads that reps rate as genuinely qualified after their first call. Target: 80%+. If this is low, your scoring threshold is misaligned.
 
 ### Revenue Metrics
 
-**Cost per qualified lead:** Total system cost divided by qualified leads generated per month. Compare to your previous cost per qualified lead from manual processes.
+Cost per qualified lead: Total system cost divided by qualified leads generated per month. Compare to your previous cost per qualified lead from manual processes.
 
-**Close rate on qualified leads:** What percentage of AI-qualified leads convert to a closed deal. This should be dramatically higher than your historical close rate on unfiltered leads.
+Close rate on qualified leads: What percentage of AI-qualified leads convert to a closed deal. This should be dramatically higher than your historical close rate on unfiltered leads.
 
-**Pipeline velocity:** How quickly qualified leads move through your sales stages. AI-qualified leads typically move 60% faster because the rep's first conversation is a continuation of qualification, not a restart of it.
+Pipeline velocity: How quickly qualified leads move through your sales stages. AI-qualified leads typically move 60% faster because the rep's first conversation is a continuation of qualification, not a restart of it.
 
 ---
 
@@ -288,10 +288,10 @@ Lead quality evolves. Markets shift. Qualifying criteria change. A system that i
 
 AI lead qualification does not operate in isolation. It is the first engine in a four-part system:
 
-1. **AI Lead Qualification** — Score and route every inbound lead in under 60 seconds
-2. **AI Ad Creative Engine** — Generate the ads that bring qualified leads into the funnel in the first place
-3. **Lead Capture Across 40+ Channels** — Ensure no lead is missed, regardless of source
-4. **Existing Lead Monetization** — Re-engage the qualified leads who did not convert the first time via WhatsApp broadcasts
+1. AI Lead Qualification — Score and route every inbound lead in under 60 seconds
+2. AI Ad Creative Engine — Generate the ads that bring qualified leads into the funnel in the first place
+3. Lead Capture Across 40+ Channels — Ensure no lead is missed, regardless of source
+4. Existing Lead Monetization — Re-engage the qualified leads who did not convert the first time via WhatsApp broadcasts
 
 [See how the full AI Customer System works →](/services/ai-lead-qualification/)
 

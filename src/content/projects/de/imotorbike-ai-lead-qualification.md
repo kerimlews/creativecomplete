@@ -33,15 +33,15 @@ faq:
 
 ## Zusammenfassung
 
-Ein schnell wachsender Gebrauchtmotorrad-Marktplatz bearbeitete täglich 500–600 Nachrichten über vier separate Kanäle. Anfragen landeten in falschen Posteingängen. Qualifizierte Käufer verschwanden bei Übergaben. Manuelle Agenten konnten nicht mithalten. AI Customer System bündelte alles in einen einheitlichen Posteingang, setzte KI-Agenten ein, die auf Käufer- und Verkäuferreisen trainiert wurden, und reduzierte die Reaktionszeiten um 67% — bei gleichzeitiger Verdoppelung der täglich bearbeiteten Gesprächsvolumen. Der Umsatz stieg im ersten Monat.
+Ein schnell wachsender Gebrauchtmotorrad-Marktplatz bearbeitete täglich 500–600 Nachrichten über vier separate Kanäle. Anfragen landeten in falschen Posteingängen. Qualifizierte Käufer verschwanden bei Übergaben. Manuelle Agenten konnten nicht mithalten. AI Customer System bündelte alles in einen einheitlichen Posteingang, setzte KI-Agenten ein, die auf Käufer- und Verkäuferreisen trainiert wurden, und reduzierte die Reaktionszeiten um **67%** — bei gleichzeitiger Verdoppelung des täglich bearbeiteten Gesprächsvolumens. Der Umsatz stieg im ersten Monat.
 
 ## Das Problem: Volumen ohne Infrastruktur
 
 Der Marktplatz hatte ein Nachfrageproblem, das wie ein Personalproblem aussah. Tausende von Käufern und Verkäufern schrieben täglich über WhatsApp, Instagram, TikTok und Facebook — aber das Team hatte keinen einzigen Ort zur Verwaltung.
 
-- **Falsches Routing**: Verkäuferanfragen erreichten das Käuferteam und umgekehrt
-- **Langsame Reaktionen**: Ohne einheitlichen Posteingang wechselten Agenten zwischen Tabs und verpassten Nachrichten
-- **Verlorene Übergaben**: Ein qualifizierter Käufer, der zu lange wartete, wechselte einfach zum nächsten Angebot
+- Falsches Routing: Verkäuferanfragen erreichten das Käuferteam und umgekehrt
+- Langsame Reaktionen: Ohne einheitlichen Posteingang wechselten Agenten zwischen Tabs und verpassten Nachrichten
+- Verlorene Übergaben: Ein qualifizierter Käufer, der zu lange wartete, wechselte zum nächsten Angebot
 
 ## Die AI Customer System Lösung
 
@@ -51,11 +51,11 @@ Wir verbanden WhatsApp Business API, Facebook Messenger, Instagram DM und TikTok
 
 ### Schritt 2: Absichtsbasiertes KI-Routing
 
-Käufer und Verkäufer stellen grundlegend unterschiedliche Fragen von der ersten Nachricht an. Wir trainierten KI-Agenten, die Absicht innerhalb des Eröffnungsaustausches zu identifizieren und automatisch weiterzuleiten:
+Käufer und Verkäufer stellen von der ersten Nachricht an grundlegend unterschiedliche Fragen. Wir trainierten KI-Agenten, die Absicht innerhalb des Eröffnungsaustausches zu erkennen und automatisch weiterzuleiten:
 
-- **Käufersignale** → Verkaufsteam mit Fahrzeugverfügbarkeitskontext
-- **Verkäufersignale** → Akquiseteam mit Bewertungsaufforderungen
-- **Unklare Signale** → KI stellt eine klärende Frage, dann Weiterleitung
+- Käufersignale → Verkaufsteam mit Fahrzeugverfügbarkeitskontext
+- Verkäufersignale → Akquiseteam mit Bewertungsaufforderungen
+- Unklare Signale → KI stellt eine klärende Frage, dann Weiterleitung
 
 ### Schritt 3: KI-Qualifizierung im großen Maßstab
 
@@ -63,7 +63,7 @@ KI-Agenten übernahmen die vollständige Erstkontakt-Qualifizierung — Fahrzeug
 
 ### Schritt 4: 24/7-Abdeckung
 
-Vor AI Customer System bedeuteten Abende und Wochenenden unbeantwortete Nachrichten. Danach: 24/7-Abdeckung über alle Kanäle.
+Vor AI Customer System bedeuteten Abende und Wochenenden unbeantwortete Nachrichten. Danach: durchgehende Abdeckung über alle Kanäle.
 
 ## Die Ergebnisse
 

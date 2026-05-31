@@ -33,13 +33,13 @@ faq:
 
 ## TL;DR
 
-Nianave had 8 years of brand equity and almost no online revenue. We built their entire e-commerce operation from the ground up — Shopify store live in 3 weeks, conversion-optimized custom theme, full third-party integrations, and automated pre/post-purchase sequences. Conversion rate went from 1.2% to 4.3%. Monthly revenue went from $30k to $120k. Time: 6 months.
+Nianave had 8 years of brand equity and almost no online revenue. We built their entire e-commerce operation from the ground up — Shopify store live in 3 weeks, conversion-optimized custom theme, full third-party integrations, and automated pre/post-purchase sequences. Conversion rate went from 1.2% to **4.3%**. Monthly revenue went from $30k to $120k. Time: 6 months.
 
 ## The Situation
 
 Nianave is a fashion brand with 8 years of local presence and a loyal customer base. Their digital operation was minimal — a basic website with no transactional capability and no automation. They wanted to expand into online retail but needed to move quickly to capture seasonal demand.
 
-The challenge was not brand awareness. The challenge was building a complete e-commerce infrastructure, fast, without disrupting existing operations.
+The challenge wasn't brand awareness. The challenge was building a complete e-commerce infrastructure, fast, without disrupting existing operations.
 
 ## The Challenges We Solved
 
@@ -67,7 +67,7 @@ The Shopify store was live and processing orders within 3 weeks. Online revenue 
 - Conversion elements integrated throughout: social proof, sizing guides, urgency signals
 - Performance optimization to maintain fast load times despite rich visual assets
 
-Conversion rate moved from 1.2% to 4.3% within 60 days of the new theme going live. That single improvement — before any additional ad spend — produced a 258% increase in revenue per visitor.
+Conversion rate moved from 1.2% to **4.3%** within 60 days of the new theme going live. That single improvement — before any additional ad spend — produced a 258% increase in revenue per visitor.
 
 ### Challenge 3: Third-Party Integrations and Payment Infrastructure
 
@@ -80,7 +80,7 @@ Conversion rate moved from 1.2% to 4.3% within 60 days of the new theme going li
 - Mailchimp connected for automated campaign triggering
 - Google Analytics and Meta Pixel installed and verified for accurate attribution
 
-Manual data entry was eliminated. Inventory errors dropped to near zero. The team gained back hours each week that had previously gone to cross-system reconciliation.
+Manual data entry was eliminated. Inventory errors dropped to near zero. The team recovered hours each week that had previously gone to cross-system reconciliation.
 
 ### Challenge 4: Pre- and Post-Purchase Automation
 
@@ -98,7 +98,7 @@ Manual data entry was eliminated. Inventory errors dropped to near zero. The tea
 - Upsell campaign triggered 14 days post-delivery suggesting complementary products
 - 30/60/90-day re-engagement sequences for repeat purchase cultivation
 
-The automation system operates around the clock with zero manual involvement. It recovered 25% of abandoned carts and increased customer lifetime value by 3.2× through consistent post-purchase engagement.
+The automation system runs around the clock with zero manual involvement. It recovered 25% of abandoned carts and increased customer lifetime value by **3.2×** through consistent post-purchase engagement.
 
 ## Results
 
@@ -112,14 +112,12 @@ The automation system operates around the clock with zero manual involvement. It
 
 ## What Made the Difference
 
-Three decisions produced the outcome:
+Three decisions produced the outcome.
 
-**Speed of deployment.** Being live in 3 weeks meant capturing revenue during the seasonal window. Every week of delay has a direct cost in missed sales.
+Speed of deployment. Being live in 3 weeks meant capturing revenue during the seasonal window. Every week of delay has a direct cost in missed sales.
 
-**Conversion-first design.** The custom theme was built around one goal — turning visitors into buyers. Every element — image size, button placement, trust signals, mobile flow — was designed to reduce friction at the point of decision.
+Conversion-first design. The custom theme was built around one goal — turning visitors into buyers. Every element — image size, button placement, trust signals, mobile flow — was designed to reduce friction at the point of decision.
 
-**Automation from day one.** Most stores implement automation as an afterthought. Building the pre/post-purchase sequences as part of the initial launch meant that every customer from day one entered a lifecycle system, not a one-time transaction.
+Automation from day one. Most stores treat automation as an afterthought. Building the pre/post-purchase sequences as part of the initial launch meant that every customer from day one entered a lifecycle system, not a one-time transaction.
 
-## Want to Build an E-commerce Operation That Scales?
-
-If you're a brand with an existing customer base and a product that sells, the system is the gap. [Contact us to discuss your situation →](/contact/)
+[Contact us to discuss your situation →](/contact/)

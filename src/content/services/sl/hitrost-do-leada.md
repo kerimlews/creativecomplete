@@ -35,41 +35,41 @@ Zakaj? Ker so leadi v trenutku, ko povpraševanje oddajo, pripravljeni na nakup.
 
 ## Komponente sistema za hitrost do leada
 
-### Komponenta 1: AI agenti za prvi stik
+### AI agenti za prvi stik
 
 AI agenti odgovorijo v manj kot 60 sekundah na vseh kanalih:
 
-- Personaliziran pozdrav glede na vir leada
-- Takojšnja kvalifikacijska vprašanja
-- Rezervacija termina neposredno v klepetu
-- Predaja prodajalcu s polnim kontekstom
+- personaliziran pozdrav glede na vir leada
+- takojšnja kvalifikacijska vprašanja
+- rezervacija termina neposredno v klepetu
+- predaja prodajalcu s polnim kontekstom
 
-### Komponenta 2: Unified inbox — 40+ kanalov, ena nadzorna plošča
+### Unified inbox — 40+ kanalov, ena nadzorna plošča
 
 Noben lead se ne bo več izgubil:
 
 - WhatsApp Business API (vključno s funkcijo broadcast)
 - Instagram DM, TikTok, Facebook Messenger
-- E-pošta, SMS, spletni klepet, telefon
-- Samodejno sledenje viru in ocenjevanje leadov
+- e-pošta, SMS, spletni klepet, telefon
+- samodejno sledenje viru in ocenjevanje leadov
 
-### Komponenta 3: Inteligentno usmerjanje
+### Inteligentno usmerjanje
 
 Pravi lead k pravemu prodajalcu:
 
-- Usmerjanje po področju, strokovnosti ali razpoložljivosti
-- Eskalacija vročih leadov (ocena 70+) v realnem času
-- Samodejna integracija s koledarjem za rezervacije terminov
-- Nadzor SLA z opozorili pri zamudah
+- usmerjanje po področju, strokovnosti ali razpoložljivosti
+- eskalacija vročih leadov (ocena 70+) v realnem času
+- samodejna integracija s koledarjem za rezervacije terminov
+- nadzor SLA z opozorili pri zamudah
 
-### Komponenta 4: Sinhronizacija s CRM-om
+### Sinhronizacija s CRM-om
 
 Vsi podatki v realnem času v vašem CRM-u:
 
-- Ocena leada in status kvalifikacije
-- Celoten transkript pogovora
-- Atribucija kanala in sledenje viru
-- Načrt sledilnih sporočil in naslednja dejanja
+- ocena leada in status kvalifikacije
+- celoten transkript pogovora
+- atribucija kanala in sledenje viru
+- načrt sledilnih sporočil in naslednja dejanja
 
 ## Dokazani učinek na vaš prihodek
 

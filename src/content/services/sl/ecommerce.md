@@ -33,104 +33,104 @@ faq:
 
 ## Težava s konverzijo e-trgovine
 
-Večina e-trgovin konvertira pri 1-2%, kar pomeni, da 98-99% obiskovalcev zapusti brez nakupa. To ni zato, ker so vaši izdelki slabi—zato, ker vaša trgovina ni optimizirana za konverzijo.
+Večina e-trgovin konvertira pri 1-2%, kar pomeni, da 98-99% obiskovalcev zapusti brez nakupa. To ni zato, ker so vaši izdelki slabi — zato, ker vaša trgovina ni optimizirana za konverzijo.
 
-**Realnost:** Majhne izboljšave stopnje konverzije lahko podvojijo ali potrojijo vaše prihodke. Če dobivate 1.000 obiskovalcev na mesec in konvertirate pri 1%, to je 10 prodaj. Pri 3% je to 30 prodaj—3x prihodki iz istega prometa.
+Majhne izboljšave stopnje konverzije lahko podvojijo ali potrojijo vaše prihodke. Če dobivate 1.000 obiskovalcev na mesec in konvertirate pri 1%, to je 10 prodaj. Pri 3% je to 30 prodaj — trikrat več prihodkov iz istega prometa.
 
-**Naš pristop:** Optimiziramo vsak vidik vaše e-trgovine, da pretvorimo več obiskovalcev v stranke, od produktnih strani do blagajne.
+Optimiziramo vsak vidik vaše e-trgovine, da pretvorimo več obiskovalcev v stranke — od produktnih strani do blagajne.
 
 ## Kaj optimiziramo
 
-### 1. Produktne strani
+### Produktne strani
 
 Optimiziramo produktne strani za konverzijo:
-- **Prepričljive opise izdelkov**, ki prodajajo prednosti
-- **Visokokakovostne slike** in videoposnetke
-- **Socialni dokaz** (ocene, ocenjevanja, pričevanja)
-- **Jasne cene** in vrednostna predloga
-- **Elementi nujnosti**, ko je primerno
-- **Enostavna funkcionalnost dodajanja v košarico**
+- prepričljivi opisi izdelkov, ki prodajajo prednosti
+- visokokakovostne slike in videoposnetki
+- socialni dokaz (ocene, ocenjevanja, pričevanja)
+- jasne cene in vrednostna predloga
+- elementi nujnosti, ko je primerno
+- enostavna funkcionalnost dodajanja v košarico
 
-### 2. Košarica in blagajna
+### Košarica in blagajna
 
 Poenostavimo postopek blagajne:
-- **Enostranska blagajna**, ko je mogoče
-- **Možnost gostujoče blagajne** (brez prisilne registracije)
-- **Več možnosti plačila** (kreditna kartica, PayPal, itd.)
-- **Kalkulator dostave** pred blagajno
-- **Signali zaupanja** (varnostne značke, jamstva)
-- **Indikatorji napredka**, ki prikazujejo korake blagajne
+- enostranska blagajna, ko je mogoče
+- možnost gostujoče blagajne (brez prisilne registracije)
+- več možnosti plačila (kreditna kartica, PayPal, itd.)
+- kalkulator dostave pred blagajno
+- signali zaupanja (varnostne značke, jamstva)
+- indikatorji napredka, ki prikazujejo korake blagajne
 
-### 3. Mobilna nakupovalna izkušnja
+### Mobilna nakupovalna izkušnja
 
 Optimiziramo za mobilne nakupovalce:
-- **Mobilno prvo oblikovanje**, ki popolnoma deluje na telefonih
-- **Prstno prijazni** gumbi in navigacija
-- **Hitri časi nalaganja** na mobilnih omrežjih
-- **Enostavno brskanje po izdelkih** in filtriranje
-- **Poenostavljena blagajna** za mobilne uporabnike
+- mobilno-prvo oblikovanje, ki popolnoma deluje na telefonih
+- prstno prijazni gumbi in navigacija
+- hitri časi nalaganja na mobilnih omrežjih
+- enostavno brskanje po izdelkih in filtriranje
+- poenostavljena blagajna za mobilne uporabnike
 
-### 4. Plačila in dostava
+### Plačila in dostava
 
 Optimiziramo plačila in dostavo:
-- **Več načinov plačila**, da zmanjšamo trenje
-- **Možnosti dostave** z jasnimi stroški
-- **Pragovi brezplačne dostave**, da povečamo vrednost naročila
-- **Možnosti hitre blagajne** (Apple Pay, Google Pay)
-- **Nastavitev mednarodne dostave**, če je potrebno
+- več načinov plačila, da zmanjšamo trenje
+- možnosti dostave z jasnimi stroški
+- pragovi brezplačne dostave, da povečamo vrednost naročila
+- možnosti hitre blagajne (Apple Pay, Google Pay)
+- nastavitev mednarodne dostave, če je potrebno
 
-### 5. Obnovitev opuščenih košaric
+### Obnovitev opuščenih košaric
 
 Implementiramo sisteme za obnovitev izgubljenih prodaj:
-- **E-poštne sekvence** za opuščene košarice
-- **SMS obvestila** (če je primerno)
-- **Ponovno ciljne oglase** za tiste, ki opustijo košarico
-- **Popup okna z namero zapuščanja** z ponudbami
-- **Kode za popust** za vračajoče se obiskovalce
+- e-poštne sekvence za opuščene košarice
+- SMS obvestila, kjer je primerno
+- ponovne ciljne oglase za tiste, ki opustijo košarico
+- popup okna z namero zapuščanja z ponudbami
+- kode za popust za vračajoče se obiskovalce
 
-### 6. Upravljanje zalog in naročil
+### Upravljanje zalog in naročil
 
 Optimiziramo operacije:
-- **Sledenje zalogam** in opozorila o nizki zalogi
-- **Avtomatizirani delovni tokovi obdelave naročil**
-- **Ustvarjanje etiket za dostavo** in sledenje
-- **Sistemi obveščanja strank**
-- **Upravljanje vračil in povračil**
+- sledenje zalogam in opozorila o nizki zalogi
+- avtomatizirani delovni tokovi obdelave naročil
+- ustvarjanje etiket za dostavo in sledenje
+- sistemi obveščanja strank
+- upravljanje vračil in povračil
 
 ## Naš proces optimizacije e-trgovine
 
-### Faza 1: Revizija in analiza
+### Revizija in analiza
 
 Začnemo z analizo:
-- **Trenutne stopnje konverzije** in virov prometa
-- **Vedenja uporabnikov** na vaši spletni strani (toplotne karte, posnetki)
-- **Točk opustitve blagajne**
-- **Zmogljivosti mobilnih naprav v primerjavi z namiznimi**
-- **Analize konkurentov** in najboljših praks
+- trenutnih stopenj konverzije in virov prometa
+- vedenja uporabnikov na vaši spletni strani (toplotne karte, posnetki)
+- točk opustitve blagajne
+- zmogljivosti mobilnih naprav v primerjavi z namiznimi
+- analize konkurentov in najboljših praks
 
-### Faza 2: Hitri uspehi
+### Hitri uspehi
 
 Najprej implementiramo visoko učinkovite spremembe:
-- **Optimizacija produktnih strani** (opisi, slike, CTA)
-- **Poenostavitev blagajne** (odstranitev nepotrebnih korakov)
-- **Dodajanje signalov zaupanja** (ocene, jamstva, značke)
-- **Optimizacija mobilnih naprav** (hitrost, uporabnost)
+- optimizacija produktnih strani (opisi, slike, CTA)
+- poenostavitev blagajne (odstranitev nepotrebnih korakov)
+- dodajanje signalov zaupanja (ocene, jamstva, značke)
+- optimizacija mobilnih naprav (hitrost, uporabnost)
 
-### Faza 3: Globoka optimizacija
+### Globoka optimizacija
 
 Naredimo celovite izboljšave:
-- **Optimizacija konverzije** po celotni spletni strani
-- **A/B testiranje** ključnih elementov
-- **Personalizacija**, kjer je primerno
-- **Napredne funkcije** (seznami želja, priporočila)
+- optimizacija konverzije po celotni spletni strani
+- A/B testiranje ključnih elementov
+- personalizacija, kjer je primerno
+- napredne funkcije (seznami želja, priporočila)
 
-### Faza 4: Neprekinjena optimizacija
+### Neprekinjena optimizacija
 
 Neprekinjeno izboljšujemo:
-- **Sledenje zmogljivosti** in analiza
-- **A/B testiranje** novih idej
-- **Sezonska optimizacija** za praznike
-- **Dodajanje funkcij** na podlagi podatkov
+- sledenje zmogljivosti in analiza
+- A/B testiranje novih idej
+- sezonska optimizacija za praznike
+- dodajanje funkcij na podlagi podatkov
 
 ## Katere rezultate lahko pričakujete?
 
@@ -138,25 +138,23 @@ Neprekinjeno izboljšujemo:
 
 Večina strank vidi:
 - **2-3x izboljšanje** stopenj konverzije
-- **3-5% stopnje konverzije** (v primerjavi z industrijo 1-2%)
-- **Višjo povprečno vrednost naročila** zaradi optimizacije
-- **Več strank, ki se vračajo** zaradi boljše izkušnje
+- **3-5% stopnje konverzije** (v primerjavi z industrijskim povprečjem 1-2%)
+- višjo povprečno vrednost naročila
+- več strank, ki se vračajo, zaradi boljše izkušnje
 
 ### Rast prihodkov
 
-Videli boste:
-- **Povečane prodaje** iz istega prometa
-- **Višje vrednosti naročil** zaradi nadprodaje
-- **Več ponovnih nakupov** zaradi boljše izkušnje
-- **Zmanjšano opuščanje košaric** zaradi sistemov za obnovitev
+- povečane prodaje iz istega prometa
+- višje vrednosti naročil zaradi nadprodaje
+- več ponovnih nakupov
+- zmanjšano opuščanje košaric
 
 ### Operativna učinkovitost
 
-Vaše operacije se bodo izboljšale:
-- **Hitrejša obdelava naročil** zaradi avtomatizacije
-- **Boljše upravljanje zalog** zaradi sistemov
-- **Zmanjšana podporna vprašanja** zaradi jasnosti
-- **Skalabilni procesi**, ko rastete
+- hitrejša obdelava naročil z avtomatizacijo
+- boljše upravljanje zalog
+- zmanjšana vprašanja za podporo
+- skalabilni procesi za rast
 
 ## Pravi rezultati pravih strank
 
@@ -174,67 +172,44 @@ Vaše operacije se bodo izboljšale:
 
 ## Za koga je ta storitev?
 
-Naša storitev optimizacije e-trgovine je popolna za:
+Naša storitev optimizacije e-trgovine ustreza:
 
-✅ **E-trgovine** z nizkimi stopnjami konverzije
-✅ **Nove spletne trgovine**, ki želijo pravilno začeti
-✅ **Rastoča podjetja**, ki potrebujejo učinkovito skaliranje
-✅ **Trgovine s prometom**, vendar nizkimi prodajami
-✅ **Vsako podjetje e-trgovine**, ki je pripravljeno optimizirati
+- e-trgovinam z nizkimi stopnjami konverzije
+- novim spletnim trgovinam, ki želijo pravilno začeti
+- rastočim podjetjem, ki potrebujejo učinkovito skaliranje
+- trgovinam s prometom, a nizkimi prodajami
+- vsakemu podjetju e-trgovine, ki je pripravljeno optimizirati
 
 ## Kaj je vključeno v vaš paket e-trgovine?
 
 ### Optimizacija
 
-- **Optimizacija stopnje konverzije** po vaši trgovini
-- **Optimizacija mobilne izkušnje**
-- **Poenostavitev postopka blagajne**
-- **Izboljšave produktnih strani**
-- **Optimizacija plačil in dostave**
+- optimizacija stopnje konverzije po vaši trgovini
+- optimizacija mobilne izkušnje
+- poenostavitev postopka blagajne
+- izboljšave produktnih strani
+- optimizacija plačil in dostave
 
 ### Sistemi in avtomatizacija
 
-- **E-poštne sekvence za obnovitev opuščenih košaric**
-- **Integracija upravljanja zalog**
-- **Avtomatizacija obdelave naročil**
-- **Sistemi obveščanja strank**
-- **Nastavitev analitike in sledenja**
+- e-poštne sekvence za obnovitev opuščenih košaric
+- integracija upravljanja zalog
+- avtomatizacija obdelave naročil
+- sistemi obveščanja strank
+- nastavitev analitike in sledenja
 
 ### Neprekinjena podpora
 
-- **Sledenje zmogljivosti** in poročanje
-- **A/B testiranje** idej optimizacije
-- **Sezonska optimizacija** za praznike
-- **Dodajanje funkcij** na podlagi podatkov
-- **Tehnična podpora**, ko je potrebna
+- sledenje zmogljivosti in poročanje
+- A/B testiranje idej optimizacije
+- sezonska optimizacija za praznike
+- dodajanje funkcij na podlagi podatkov
+- tehnična podpora, ko je potrebna
 
 ## Naložba in ROI
 
-Optimizacija e-trgovine se običajno hitro povrne. Večina strank vidi:
-- **ROI v 30-60 dneh** zaradi povečanih prodaj
-- **2-3x povečanje prihodkov** iz istega prometa
-- **Neprekinjene izboljšave**, ki se kopičijo
-- **Skalabilna rast** brez sorazmernih stroškov
+Optimizacija e-trgovine se hitro povrne. Večina strank vidi ROI v 30-60 dneh, izboljšave pa se kopičijo dolgoročno. Skalabilna rast ne zahteva sorazmernih dodatnih stroškov.
 
-Najboljše? Izboljšave optimizacije se sčasoma kopičijo in dolgoročno ohranite koristi.
-
-## Pripravljeni začeti?
-
-Če ste pripravljeni pretvoriti več obiskovalcev v stranke in povečati svoje prihodke iz e-trgovine, začnimo z brezplačno revizijo konverzije. Analizirali bomo vašo trgovino, identificirali priložnosti in vam pokazali, kako vam lahko pomagamo rasti.
+Če ste pripravljeni pretvoriti več obiskovalcev v stranke in povečati prihodke vaše e-trgovine, začnimo z brezplačno revizijo konverzije.
 
 [Pridobite brezplačno revizijo konverzije →](/contact/)
-
----
-
-**Naslednji koraki:**
-1. Načrtujte svojo brezplačno revizijo konverzije
-2. Pregledajte svojo strategijo optimizacije
-3. Začnite pretvarjati več obiskovalcev v stranke
-
-
-
-
-
-
-
-

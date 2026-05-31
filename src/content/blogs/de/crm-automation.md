@@ -23,7 +23,7 @@ faq:
     answer: "Kern-Automation (Lead-Erfassung, Zuweisung, Follow-up-Trigger) geht typischerweise in 5–7 Tagen live. Fortgeschrittene Automation (KI-gestütztes Lead-Scoring, Verhaltens-Trigger, Multi-Channel-Sequenzen) dauert 2–3 Wochen. Die Timeline hängt von der Komplexität Ihrer aktuellen CRM-Konfiguration und der Anzahl integrierter Kanäle ab."
 ---
 
-Vertriebsreps verbringen 65% ihrer Zeit mit Aktivitäten, die nichts mit Verkaufen zu tun haben.
+Vertriebsreps verbringen **65%** ihrer Zeit mit Aktivitäten, die nichts mit Verkaufen zu tun haben.
 
 Dateneingabe. Follow-up-Planung. Pipeline-Updates. Aktivitäts-Logging. Leads von einer Stufe in die nächste verschieben, weil ein Gespräch stattfand. Jede dieser Aufgaben ist notwendig, damit das System funktioniert — und keine erfordert einen Vertriebsrep.
 
@@ -57,10 +57,10 @@ Der häufigste Grund, warum Deals stagnieren: Das Follow-up ist nicht passiert. 
 
 Trigger-basiertes Follow-up eliminiert das, indem es definiert, was automatisch passiert, wenn ein Deal inaktiv liegt:
 
-- **Tag 3 Inaktivität:** Rep bekommt einen Follow-up-Task mit Zusammenfassung der letzten Konversation
-- **Tag 7 Inaktivität:** AI Agent sendet Re-Engagement-Nachricht an den Lead
-- **Tag 14 Inaktivität:** Lead wandert in Langzeit-Nurture-Sequenz
-- **Tag 30 Inaktivität:** [Broadcast](/de/blog/whatsapp-broadcast-kampagnen/) Reaktivierungs-Nachricht via WhatsApp
+- Tag 3 Inaktivität: Rep bekommt einen Follow-up-Task mit Zusammenfassung der letzten Konversation
+- Tag 7 Inaktivität: AI Agent sendet Re-Engagement-Nachricht an den Lead
+- Tag 14 Inaktivität: Lead wandert in Langzeit-Nurture-Sequenz
+- Tag 30 Inaktivität: [Broadcast](/de/blog/whatsapp-broadcast-kampagnen/) Reaktivierungs-Nachricht via WhatsApp
 
 Jeder Deal in der Pipeline hat einen definierten Aktionsplan, der ohne menschliches Erinnern läuft.
 
@@ -95,4 +95,4 @@ Wenn all das verbunden ist, läuft das CRM von selbst. Reps nutzen es zum Manage
 
 Bei **CreativeComplete** ist CRM-Automation die Verbindungsschicht des AI Customer Systems — sie verknüpft Lead-Erfassung, Qualifizierung, Routing und Retention zu einer Pipeline, die in Echtzeit ohne manuellen Eingriff aktualisiert wird.
 
-Die meisten Kunden gewinnen **2–3 Stunden Rep-Zeit pro Tag** in der ersten Implementierungswoche zurück. Diese Zeit fließt direkt ins Closing.
+Die meisten Kunden gewinnen **2–3 Stunden** Rep-Zeit pro Tag in der ersten Implementierungswoche zurück. Diese Zeit fließt direkt ins Closing.

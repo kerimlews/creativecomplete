@@ -23,7 +23,7 @@ faq:
     answer: "Der ROI kommt aus drei Quellen: Gesparte Zeit bei der Qualifizierung (Reps verbringen 70% ihrer Zeit auf unqualifizierten Leads), zurückgewonnener Umsatz aus Leads, die ohne Follow-up kalt geworden wären (80% der Verkäufe brauchen 5+ Touches; die meisten Reps stoppen bei 2), und 24/7-Abdeckung, die Leads außerhalb der Geschäftszeiten einfängt. Kombiniert sehen Kunden typischerweise 2–4× die qualifizierte Pipeline aus dem gleichen Lead-Volumen."
 ---
 
-80% der Verkäufe brauchen fünf oder mehr Follow-ups. Der durchschnittliche Vertriebler gibt nach zwei auf.
+**80%** der Verkäufe brauchen fünf oder mehr Follow-ups. Der durchschnittliche Vertriebler gibt nach zwei auf.
 
 Diese Lücke — zwischen dem Follow-up, das konvertiert hätte, und dem, das nie passiert ist — ist da, wo der meiste Umsatz verschwindet. Nicht weil die Leads desinteressiert waren. Sondern weil die Follow-up-Sequenz stoppte, bevor der Lead bereit war.
 
@@ -37,29 +37,29 @@ Der Umfang dessen, was er übernimmt:
 
 ![AI Sales Agent Umfang — erste Antwort, Qualifizierung, Follow-up-Sequenzen, Einwandbehandlung, Terminbuchung und Übergabe an menschlichen Rep](/images/blog/ai-sales-agents/01-agent-scope.svg)
 
-**Erste Antwort (< 60 Sekunden):** Jeder neue Lead bekommt eine Antwort innerhalb von Sekunden nach seiner Anfrage. Bevor Ihre Reps morgens die Nachrichten checken, hat die KI bereits Ihr Unternehmen vorgestellt, mit der Qualifizierung begonnen und den Kernbedarf identifiziert.
+Erste Antwort (< 60 Sekunden): Jeder neue Lead bekommt eine Antwort innerhalb von Sekunden nach seiner Anfrage. Bevor Ihre Reps morgens die Nachrichten checken, hat die KI bereits Ihr Unternehmen vorgestellt, mit der Qualifizierung begonnen und den Kernbedarf identifiziert.
 
-**[BANT-Qualifizierung](/de/blog/ki-lead-qualifizierung/):** Durch konversationellen Austausch surfacet die KI Budget, Entscheidungsautorität, konkreten Bedarf und Timeline. Der Lead erlebt ein hilfreiches Gespräch, kein Verhör. Die KI dokumentiert jedes Signal und baut eine Qualifizierungs-Zusammenfassung.
+[BANT-Qualifizierung](/de/blog/ki-lead-qualifizierung/): Durch konversationellen Austausch surfacet die KI Budget, Entscheidungsautorität, konkreten Bedarf und Timeline. Der Lead erlebt ein hilfreiches Gespräch, kein Verhör. Die KI dokumentiert jedes Signal und baut eine Qualifizierungs-Zusammenfassung.
 
-**[Follow-up-Sequenzen](/de/blog/whatsapp-broadcast-kampagnen/):** Ein Lead, der nicht auf die erste Nachricht reagiert, bekommt automatisch Follow-ups an Tag 1, 3, 7 und 14. Der Nachrichteninhalt passt sich der letzten bekannten Position des Leads in der Konversation an. Leads, die warm waren und stumm wurden, bekommen einen Re-Engagement-Prompt. Leads, die einen konkreten Einwand erhoben haben, bekommen Inhalte, die ihn adressieren.
+[Follow-up-Sequenzen](/de/blog/whatsapp-broadcast-kampagnen/): Ein Lead, der nicht auf die erste Nachricht reagiert, bekommt automatisch Follow-ups an Tag 1, 3, 7 und 14. Der Nachrichteninhalt passt sich der letzten bekannten Position des Leads in der Konversation an. Leads, die warm waren und stumm wurden, bekommen einen Re-Engagement-Prompt. Leads, die einen konkreten Einwand erhoben haben, bekommen Inhalte, die ihn adressieren.
 
-**Einwandbehandlung:** Wenn ein Lead zögert oder Bedenken äußert, ist die KI trainiert, sie aufzugreifen und zu behandeln — statt sie zu überspringen. Ein Preiseinwand bekommt ein Value-Reframe. Ein Timing-Einwand bekommt einen Dringlichkeits-Prompt oder einen "Lassen Sie uns für nächstes Quartal terminieren"-Pfad. Die Einwandbehandlung nutzt Ihre besten Antworten konsistent.
+Einwandbehandlung: Wenn ein Lead zögert oder Bedenken äußert, greift die KI sie auf und behandelt sie — statt sie zu überspringen. Ein Preiseinwand bekommt ein Value-Reframe. Ein Timing-Einwand bekommt einen Dringlichkeits-Prompt oder einen "Lassen Sie uns für nächstes Quartal terminieren"-Pfad. Die Einwandbehandlung nutzt Ihre besten Antworten konsistent.
 
-**Terminbuchung:** Wenn ein Lead qualifiziert und gesprächsbereit ist, präsentiert die KI verfügbare Zeiten und bucht den Termin direkt im Kalender des Reps — kein E-Mail-Pingpong, keine Kalender-Link-Verwirrung. Der Termin kommt mit einer Pre-Read-Zusammenfassung der Konversation.
+Terminbuchung: Wenn ein Lead qualifiziert und gesprächsbereit ist, präsentiert die KI verfügbare Zeiten und bucht den Termin direkt im Kalender des Reps — kein E-Mail-Pingpong, keine Kalender-Link-Verwirrung. Der Termin kommt mit einer Pre-Read-Zusammenfassung der Konversation.
 
 ## Die Abdeckungslücke, die KI schließt
 
 Ihr Vertriebsteam arbeitet 8 Stunden am Tag, 5 Tage die Woche. Das sind 40 Stunden von 168. Die übrigen 128 Stunden — Leads, die über Ads, Social oder Website reinkommen — bleiben unbeantwortet.
 
-Die Forschung dazu ist klar: Ein Lead, der innerhalb von 5 Minuten nach seiner Anfrage kontaktiert wird, ist **21× wahrscheinlicher** qualifiziert als einer, der 24 Stunden später kontaktiert wird. Jeder Lead, der außerhalb der Geschäftszeiten reinkommt und in derselben Session keine Antwort erhält, hat seine Konversionswahrscheinlichkeit weitgehend verloren, wenn Ihr Team Montagmorgen ankommt.
+Die Forschung dazu ist klar: Ein Lead, der innerhalb von 5 Minuten nach seiner Anfrage kontaktiert wird, ist **21×** wahrscheinlicher qualifiziert als einer, der 24 Stunden später kontaktiert wird. Jeder Lead, der außerhalb der Geschäftszeiten reinkommt und in derselben Session keine Antwort erhält, hat seine Konversionswahrscheinlichkeit weitgehend verloren, wenn Ihr Team Montagmorgen ankommt.
 
 ![24/7 Abdeckungslücke — menschliche Vertriebsteam-Stunden vs. AI Agent Coverage zeigt die 128 Stunden pro Woche unbeantworteter Leads](/images/blog/ai-sales-agents/02-coverage-gap.svg)
 
-Ein AI Sales Agent eliminiert diese Lücke komplett. Er hat keine Geschäftszeiten. Ein Lead, der freitags um 23:47 Uhr reinkommt, bekommt die gleiche Antwortqualität wie einer dienstags um 10:15 Uhr. Wenn Ihr Rep den Tag startet, sind die After-Hours-Leads bereits qualifiziert und warten in der Hot-Leads-Queue.
+Ein AI Sales Agent schließt diese Lücke. Er hat keine Geschäftszeiten. Ein Lead, der freitags um 23:47 Uhr reinkommt, bekommt die gleiche Antwortqualität wie einer dienstags um 10:15 Uhr. Wenn Ihr Rep den Tag startet, sind die After-Hours-Leads bereits qualifiziert und warten in der Hot-Leads-Queue.
 
 ## Was der Rep bekommt
 
-Der AI Sales Agent ersetzt Ihr Vertriebsteam nicht. Er macht es dramatisch effektiver, indem er die niedrigwertige Arbeit eliminiert, die aktuell die meiste Zeit verschlingt.
+Der AI Sales Agent ersetzt Ihr Vertriebsteam nicht. Er macht es deutlich effektiver, indem er die niedrigwertige Arbeit eliminiert, die aktuell die meiste Zeit verschlingt.
 
 Wenn ein Rep einen Lead von der KI bekommt:
 

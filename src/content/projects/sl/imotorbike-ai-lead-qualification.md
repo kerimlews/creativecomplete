@@ -33,15 +33,15 @@ faq:
 
 ## Povzetek
 
-Hitro rastoči trg rabljenih motorjev je dnevno obravnaval 500–600 sporočil prek štirih ločenih kanalov. Povpraševanja so prihajala v napačne predale. Kvalificirani kupci so odpadli med predajami. Ročni agenti niso mogli slediti. AI Customer System je vse skupaj zbral v eno mešano mapo, namestil AI agente, usposobljene za poti kupcev in prodajalcev, ter skrajšal odzivne čase za 67% — hkrati pa podvojil število dnevno obravnavanih pogovorov. Prodaja se je povečala v prvem mesecu.
+Hitro rastoči trg rabljenih motorjev je dnevno obravnaval 500–600 sporočil prek štirih ločenih kanalov. Povpraševanja so prihajala v napačne predale. Kvalificirani kupci so odpadli med predajami. Ročni agenti niso mogli slediti. AI Customer System je vse skupaj zbral v eno mešano mapo, namestil AI agente za poti kupcev in prodajalcev, ter skrajšal odzivne čase za **67 %** — hkrati pa podvojil število dnevno obravnavanih pogovorov. Prodaja se je povečala že v prvem mesecu.
 
 ## Problem: Obseg brez infrastrukture
 
 Tržnica je imela problem s povpraševanjem, ki je izgledal kot kadrovski problem. Tisoče kupcev in prodajalcev je dnevno pisalo prek WhatsApp, Instagram, TikTok in Facebook — ekipa pa ni imela enega mesta za upravljanje.
 
-- **Napačno usmerjanje**: povpraševanja prodajalcev so dosegla ekipo za nakup in obratno
-- **Počasni odzivi**: brez skupne mape so agenti preklapljali med zavihki in spregledali sporočila
-- **Izgubljene predaje**: kvalificiran kupec, ki je počakal predolgo, je preprosto šel naprej
+- Napačno usmerjanje: povpraševanja prodajalcev so dosegla ekipo za nakup in obratno
+- Počasni odzivi: brez skupne mape so agenti preklapljali med zavihki in spregledali sporočila
+- Izgubljene predaje: kvalificiran kupec, ki je počakal predolgo, je šel naprej
 
 ## Rešitev AI Customer System
 
@@ -51,11 +51,11 @@ Priključili smo WhatsApp Business API, Facebook Messenger, Instagram DM in TikT
 
 ### Korak 2: Usmerjanje AI na podlagi namere
 
-Kupci in prodajalci zastavljajo bistveno drugačna vprašanja že od prvega sporočila. Usposobili smo AI agente, da zaznajo namen in samodejno usmerijo:
+Kupci in prodajalci zastavljajo različna vprašanja že od prvega sporočila. AI agente smo usposobili, da zaznajo namen in samodejno usmerijo:
 
-- **Signali kupcev** → ekipa za prodajo z informacijami o razpoložljivosti vozila
-- **Signali prodajalcev** → ekipa za nakup s pozivi za ocenjevanje
-- **Nejasni signali** → AI postavi eno pojasnilno vprašanje, nato usmeri
+- Signali kupcev → ekipa za prodajo z informacijami o razpoložljivosti vozila
+- Signali prodajalcev → ekipa za nakup s pozivi za ocenjevanje
+- Nejasni signali → AI postavi eno pojasnilno vprašanje, nato usmeri
 
 ### Korak 3: Kvalifikacija AI v velikem obsegu
 
@@ -63,7 +63,7 @@ AI agenti so vodili celotno kvalifikacijo prvega stika — preference vozila, pr
 
 ### Korak 4: Pokritost 24/7
 
-Pred AI Customer System so večeri in vikendi pomenili neodgovorjena sporočila. Po: pokritost 24/7 prek vseh kanalov.
+Pred AI Customer System so večeri in vikendi pomenili neodgovorjena sporočila. Po implementaciji: pokritost 24/7 prek vseh kanalov.
 
 ## Rezultati
 

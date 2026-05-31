@@ -33,7 +33,7 @@ faq:
 
 ## TL;DR
 
-A fast-growing pre-owned motorbike marketplace was handling 500–600 daily messages across four separate channels. Inquiries were landing in the wrong inboxes. Qualified buyers were disappearing during handoffs. Manual agents couldn't keep up. AI Customer System consolidated everything into one unified inbox, deployed AI Agents trained on buyer and seller journeys, and cut response times by 67% — while doubling the volume of conversations handled daily. Sales increased within the first month.
+A fast-growing pre-owned motorbike marketplace was handling 500–600 daily messages across four separate channels. Inquiries were landing in the wrong inboxes. Qualified buyers were disappearing during handoffs. Manual agents couldn't keep up. AI Customer System consolidated everything into one unified inbox, deployed AI Agents trained on buyer and seller journeys, and cut response times by **67%** — while doubling the volume of conversations handled daily. Sales increased within the first month.
 
 ## The Problem: Volume Without Infrastructure
 
@@ -41,11 +41,11 @@ The marketplace had a demand problem that looked like a staffing problem. Thousa
 
 The consequences were predictable:
 
-- **Wrong routing**: seller inquiries reached the buying team and vice versa, causing confusion and delays
-- **Slow responses**: with no unified inbox, agents were tab-switching and missing messages
-- **Dropped handoffs**: a qualified buyer who waited too long simply moved on to the next listing
+- Wrong routing: seller inquiries reached the buying team and vice versa, causing confusion and delays
+- Slow responses: with no unified inbox, agents were tab-switching and missing messages
+- Dropped handoffs: a qualified buyer who waited too long simply moved on to the next listing
 
-The team knew they had a lead quality problem. They were wrong — they had a lead handling problem.
+The team thought they had a lead quality problem. They had a lead handling problem.
 
 ## The AI Customer System Solution
 
@@ -57,9 +57,9 @@ We connected WhatsApp Business API, Facebook Messenger, Instagram DM, and TikTok
 
 The critical insight: buyers and sellers ask fundamentally different questions from the first message. We trained AI Agents to identify intent within the opening exchange and route automatically:
 
-- **Buyer signals** → sent to the sales team with vehicle availability context
-- **Seller signals** → sent to the acquisitions team with valuation prompts
-- **Ambiguous signals** → AI asks one clarifying question, then routes
+- Buyer signals → sent to the sales team with vehicle availability context
+- Seller signals → sent to the acquisitions team with valuation prompts
+- Ambiguous signals → AI asks one clarifying question, then routes
 
 This eliminated the triage step entirely.
 

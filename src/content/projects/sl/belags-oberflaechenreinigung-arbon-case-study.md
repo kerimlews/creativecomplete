@@ -37,72 +37,72 @@ faq:
 
 ## Povzetek
 
-Švicarsko podjetje za čiščenje površin in tlačno čiščenje v Arbonu je imelo problem, ki ga pozna vsako lokalno storitveno podjetje: stranke so iskale — a jih niso našle. Nobene spletne strani. Nobenega Google Business Profila. Nobenih ocen. Vse smo rešili — zgradili profesionalno spletno stran, uvrstili in popolnoma optimizirali GBP profil, ustvarili lokacijsko specifične pristajalne strani za 4 mesta v kantonu Thurgau, producirali YouTube video vsebine in vzpostavili sistematično strategijo lokalnega SEO. Rezultat? Najboljše uvrstitve na Google Mapsu in merljiv pritok dohodnih klicev.
+Švicarsko podjetje za čiščenje površin in tlačno čiščenje v Arbonu je imelo težavo, ki jo pozna vsako lokalno storitveno podjetje: stranke so iskale — a jih niso našle. Nobene spletne strani. Nobenega Google Business Profila. Nobenih ocen. Vse smo rešili — zgradili smo profesionalno spletno stran, uvrstili in optimizirali GBP profil, ustvarili lokacijsko specifične pristajalne strani za 4 mesta v kantonu Thurgau, producirali YouTube video vsebine in vzpostavili sistematično strategijo lokalnega SEO. Rezultat: uvrstitev v vrh na Google Mapsu in merljiv pritok dohodnih klicev.
 
 ## Izhodišče: Kakovostno podjetje, ki ga nihče ni mogel najti
 
-Belags-Oberflächenreinigung je profesionalna storitev tlačnega čiščenja in čiščenja površin s sedežem na Berglistrasse 51, 9320 Arbon, Švica. Podjetje čisti dovozne poti, terase, fasade, parkirišča in industrijske površine po celotni bodenjski regiji.
+Belags-Oberflächenreinigung je storitev tlačnega čiščenja in čiščenja površin s sedežem na Berglistrasse 51, 9320 Arbon, Švica. Podjetje čisti dovozne poti, terase, fasade, parkirišča in industrijske površine po celotni bodenjski regiji.
 
-Problem je bil jasen: kljub odličnemu delu je bilo podjetje na spletu praktično nevidno.
+Kljub odličnemu delu je bilo podjetje na spletu praktično nevidno.
 
-- **Nobene spletne strani** — organsko uvrščanje nemogoče
-- **Nobenega Google Business Profila** — ne pojavi se na Google Mapsu
-- **Nobenih ocen** — brez socialnega dokaza za neodločene stranke
-- **Nobene vsebinske strategije** — vsaka lokalna iskalna namera je bila zamujana
-- **Nobene lokacijske pokritosti** — okoliška mesta sploh niso bila naslovljena
+- Nobene spletne strani — organsko uvrščanje nemogoče
+- Nobenega Google Business Profila — ne pojavi se na Google Mapsu
+- Nobenih ocen — brez socialnega dokaza za neodločene stranke
+- Nobene vsebinske strategije — vsaka lokalna iskalna namera je bila zamujana
+- Nobene lokacijske pokritosti — okoliška mesta sploh niso bila naslovljena
 
 To je ena najpogostejših situacij, s katerimi se srečujemo pri švicarskih in nemško govorečih storitvenih podjetjih. Kakovost dela je tu — digitalna infrastruktura preprosto še ne obstaja.
 
-## Strategija: Štirje stebri lokalnega prevladovanja
+## Strategija: Štirje stebri lokalnega uveljavljanja
 
 ### Steber 1: Profesionalni spletni dizajn za konverzije
 
-Preden SEO lahko deluje, potrebujete temelje. Zasnovano in zgrajeno smo profesionalno spletno stran, optimizirano za švicarski trg, po naši preverjeni metodologiji [spletnega dizajna](/sl/storitve/web-design/):
+Preden SEO lahko deluje, potrebujete temelje. Zasnovano in zgradili smo profesionalno spletno stran, optimizirano za švicarski trg, po naši metodologiji [spletnega dizajna](/sl/storitve/web-design/):
 
-- **Mobile-first design** — 74 % lokalnih iskanj se dogodi na pametnih telefonih
-- **Hitre čase nalaganja** — pod 2 sekundi na LTE omrežjih
-- **Jasne strani storitev** — Druckreinigung, Belagsreinigung, Fassadenreinigung
-- **Prominentni CTA-ji** — gumbi za klik-za-klic vidni na vsaki strani
-- **Profesionalna fotografija** — resnične fotografije projektov gradijo takojšnje zaupanje
-- **Signali zaupanja** — certifikati, zemljevid servisnega območja, galerije pred/po
+- Mobile-first design — 74 % lokalnih iskanj se dogodi na pametnih telefonih
+- Hitre čase nalaganja — pod 2 sekundi na LTE omrežjih
+- Jasne strani storitev — Druckreinigung, Belagsreinigung, Fassadenreinigung
+- Prominentni CTA-ji — gumbi za klik-za-klic vidni na vsaki strani
+- Fotografija iz projektov — resnične slike gradijo takojšnje zaupanje
+- Signali zaupanja — certifikati, zemljevid servisnega območja, galerije pred/po
 
-Spletna stran je bila zgrajena z WordPressom in Elementorjem za prilagodljivost, Yoast SEO za optimizacijo na strani in schema označbo za bogate rezultate. Vsaka stran je bila zasnovana tako, da optimalno služi tako uporabnikom kot iskalnikam.
+Spletna stran je bila zgrajena z WordPressom in Elementorjem, Yoast SEO za optimizacijo na strani in schema označbo za bogate rezultate.
 
-### Steber 2: Google Business Profile — Popolna vzpostavitev in optimizacija
+### Steber 2: Google Business Profile — Vzpostavitev in optimizacija
 
 Google Business Profile je najpomembnejše posamično sredstvo za lokalno storitveno podjetje. Izvedli smo popolno vzpostavitev in optimizacijo:
 
-**Popolnost profila:**
+Popolnost profila:
 - Verificiran naslov podjetja: Berglistrasse 51, 9320 Arbon
 - Pravilna primarna kategorija: Reinigungsunternehmen / Čistilno podjetje
 - Sekundarne kategorije: Druckreinigung, Fassadenreinigung, Pflasterstein-Reinigung
 - Pokritost servisnega območja: Arbon, Rorschach, Romanshorn, Kreuzlingen, mejna regija Konstanz
 - Delovni čas, telefon, spletna stran in URL za naročanje terminov
 
-**Tekoče upravljanje GBP:**
+Tekoče upravljanje GBP:
 - Tedenske objave GBP s fotografijami projektov in sezonskimi ponudbami
 - Q&A razdelek napolnjen z najpogostejšimi vprašanji strank
-- Vnosi izdelkov/storitev s podrobnimi opisi in cenovnimi razponi
-- Nalaganje fotografij: fotografije ekipe, opreme, rezultatov projektov pred/po
+- Vnosi storitev s podrobnimi opisi in cenovnimi razponi
+- Nalaganje fotografij: ekipa, oprema, rezultati projektov pred/po
 
-**Sistem za generiranje ocen:**
+Sistem za generiranje ocen:
 - SMS follow-up zaporedje po zaključenih naročilih
 - QR kode na gradbišču, ki vodijo neposredno na obrazec za oceno
-- Avtomatizirana opominska e-pošta 48 ur po zaključku projekta
+- Opominska e-pošta 48 ur po zaključku projekta
 
 Optimizacija GBP je jedro našega [servisa lokalnega SEO](/sl/storitve/local-seo/) — to je tisto, kar poganja vidnost Map Pack za iskanja z visoko namero.
 
 ### Steber 3: Lokacijsko specifične pristajalne strani
 
-Namesto da bi se zanašali na eno domačo stran za zajetje vsega lokalnega prometa, smo zgradili namenske pristajalne strani za vsako ključno mesto v servisnem območju. Vsaka stran cilja na hiperlokalne ključne besede in je strukturirana za neodvisno uvrščanje:
+Namesto da bi se zanašali na eno domačo stran, smo zgradili namenske pristajalne strani za vsako ključno mesto v servisnem območju. Vsaka stran cilja na hiperlokalne ključne besede in je strukturirana za neodvisno uvrščanje:
 
-**Ustvarjene strani:**
-1. **Druckreinigung Arbon** — matični kraj, najvišja konkurenca
-2. **Druckreinigung Rorschach** — sosednje bodenjsko mesto
-3. **Druckreinigung Romanshorn** — pristaniško mesto, visok promet iskanj
-4. **Druckreinigung Kreuzlingen** — mejno mesto, priložnost za čezmejni trg
+Ustvarjene strani:
+1. Druckreinigung Arbon — matični kraj, najvišja konkurenca
+2. Druckreinigung Rorschach — sosednje bodenjsko mesto
+3. Druckreinigung Romanshorn — pristaniško mesto, visok promet iskanj
+4. Druckreinigung Kreuzlingen — mejno mesto, priložnost za čezmejni trg
 
-**Vsaka stran vključuje:**
+Vsaka stran vključuje:
 - Mestno specifične H1 in oznake naslovov
 - LocalBusiness JSON-LD schema z mestnimi koordinatami
 - Omembo lokalnih znamenitosti in četrti
@@ -116,36 +116,36 @@ Ta struktura internih povezav, zgrajena na najboljših praksah našega [SEO serv
 
 YouTube je neizkoriščen kanal za lokalna storitvena podjetja na nemško govorečem švicarskem trgu. Producirali smo profesionalne video vsebine, ki hkrati služijo trem namenom:
 
-1. **Gradnja zaupanja** — stranke si ogledajo kakovost dela, preden pokličejo
-2. **Dodatne uvrstitve v iskanjih** — videoposnetki se pojavljajo v Googlovih rezultatih za lokalne poizvedbe
-3. **Socialni dokaz** — vsebina, ki jo je mogoče deliti in krepi blagovno znamko
+1. Gradnja zaupanja — stranke si ogledajo kakovost dela, preden pokličejo
+2. Dodatne uvrstitve v iskanjih — videoposnetki se pojavljajo v Googlovih rezultatih za lokalne poizvedbe
+3. Socialni dokaz — vsebina, ki jo je mogoče deliti in krepi blagovno znamko
 
-**Producirana video vsebina:**
+Producirana video vsebina:
 - Videoposnetki razkritja pred/po tlačnem čiščenju (najvišja stopnja vključenosti)
-- Procesni videoposnetki z opremo in tehnikami (gradnja avtoritete)
+- Procesni videoposnetki z opremo in tehnikami
 - Lokacijsko specifični videoposnetki ("Druckreinigung Arbon — Vorher/Nachher")
 - Video pričevanje stranke z izkušnjo Ramona Malkoca
 
-Videoposnetki so bili optimizirani z nemškojezičnimi naslovi, opisi in oznakami, ki ciljajo na lokalne švicarske iskalne izraze. YouTube kanal je bil povezan z GBP profilom za maksimizacijo vidnosti na različnih platformah.
+Videoposnetki so bili optimizirani z nemškojezičnimi naslovi, opisi in oznakami, ki ciljajo na lokalne švicarske iskalne izraze. YouTube kanal je bil povezan z GBP profilom.
 
 ## Tehnična SEO infrastruktura
 
 Poleg vsebine smo zgradili trdne tehnične temelje po standardih našega [SEO servisa](/sl/storitve/seo/):
 
-- **Lokalna schema označba** — LocalBusiness, Service in Review schema na vsaki relevantni strani
-- **XML sitemap** — predložena v Google Search Console s hierarhijo prioritet
-- **Core Web Vitals** — optimiziran LCP pod 2,5 s, CLS pod 0,1
-- **NAP konsistentnost** — Ime, Naslov, Telefon identični na spletni strani, GBP in imenikiih
-- **Lokalne citacije** — vpisani na local.ch, search.ch, directories.ch in 12 industrijskih imenikih
+- Lokalna schema označba — LocalBusiness, Service in Review schema na vsaki relevantni strani
+- XML sitemap — predložena v Google Search Console s hierarhijo prioritet
+- Core Web Vitals — optimiziran LCP pod 2,5 s, CLS pod 0,1
+- NAP konsistentnost — Ime, Naslov, Telefon identični na spletni strani, GBP in imenikiih
+- Lokalne citacije — vpisani na local.ch, search.ch, directories.ch in 12 industrijskih imenikih
 
 ## Arhitektura internih povezav
 
 Vsaka stran na spletni strani je zavestno povezana. Domača stran se povezuje na vse strani storitev in lokacijske strani. Lokacijske strani se med seboj navzkrižno povezujejo in na relevantne strani storitev. Prihodnji blogovni prispevki se bodo vračali na strani storitev in lokacij.
 
 Ta struktura:
-- Porazdeljuje PageRank po vseh pomembnih straneh
-- Ustvarja tematske gruče, ki jih Googlov algoritem nagrajuje
-- Naredi navigacijo intuitivno ne glede na to, na kateri strani pristane uporabnik
+- porazdeljuje PageRank po vseh pomembnih straneh
+- ustvarja tematske gruče, ki jih Googlov algoritem nagrajuje
+- naredi navigacijo intuitivno ne glede na to, na kateri strani pristane uporabnik
 
 Vse interne povezave uporabljajo zaključne poševnice za doslednost in ujemanje s kanonično strukturo URL, definirano v sitemapih.
 
@@ -153,25 +153,15 @@ Vse interne povezave uporabljajo zaključne poševnice za doslednost in ujemanje
 
 Celoten digitalni paket je zagotovil merljive rezultate na vseh kanalih:
 
-- **Google Maps** — uvrstitev v Top 3 za "Druckreinigung Arbon" in okoliška mesta
-- **Klici prek GBP** — 312 % povečanje dohodnih klicev iz Google Mapsa
-- **Promet na spletni strani** — organski promet raste mesec za mesecem od zagona
-- **YouTube** — profesionalna videona prisotnost vzpostavljena v nezasedeni niši
-- **Ocene** — baza 5-zvezdičnih ocen zgrajena od prvih zadovoljnih strank
-- **Lokacijska pokritost** — 4 mesta zdaj pokrita z namenskimi uvrstitvenimi stranmi
+- Google Maps — uvrstitev v Top 3 za "Druckreinigung Arbon" in okoliška mesta
+- Klici prek GBP — **312 %** povečanje dohodnih klicev iz Google Mapsa
+- Promet na spletni strani — organski promet raste mesec za mesecem od zagona
+- YouTube — prisotnost vzpostavljena v nezasedeni niši
+- Ocene — baza 5-zvezdičnih ocen zgrajena od prvih zadovoljnih strank
+- Lokacijska pokritost — 4 mesta zdaj pokrita z namenskimi stranmi
 
 ## Storitve, uporabljene v tem projektu
 
-Ta projekt je združil naše ključne lokalne storitve rasti:
-
-- **[Lokalni SEO](/sl/storitve/local-seo/)** — prevlada na Google Mapsu, optimizacija GBP, gradnja lokalnih citacij
-- **[Spletni dizajn](/sl/storitve/web-design/)** — Profesionalna WordPress spletna stran, zgrajena za konverzije
-- **[SEO](/sl/storitve/seo/)** — Tehnični SEO, schema označba, lokacijsko specifična vsebinska strategija
-
-## Je vaše lokalno storitveno podjetje na spletu nevidno?
-
-Če vas potencialne stranke ne morejo najti na Google Mapsu, vsak dan prepuščate vsako delo svojim konkurentom.
-
-**Okno za prevlado v lokalnem iskanju na vašem področju je še vedno odprto.** Zapre pa se takoj, ko tja pride konkurent.
-
-**Kontaktirajte nas za brezplačno revizijo lokalne vidljivosti.** Pokazali vam bomo točno, kje zamujate klice in kaj je potrebno, da to popravimo — za vaše specifično mesto, vašo specifično dejavnost.
+- [Lokalni SEO](/sl/storitve/local-seo/) — uveljavljanje na Google Mapsu, optimizacija GBP, gradnja lokalnih citacij
+- [Spletni dizajn](/sl/storitve/web-design/) — WordPress spletna stran, zgrajena za konverzije
+- [SEO](/sl/storitve/seo/) — Tehnični SEO, schema označba, lokacijsko specifična vsebinska strategija

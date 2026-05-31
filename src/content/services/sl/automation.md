@@ -33,91 +33,71 @@ faq:
 
 ## Skriti stroški ročnega dela
 
-Večina lastnikov podjetij preživi 20+ ur na teden z ponavljajočimi se nalogami, ki bi jih lahko avtomatizirali. Delate delo, ki:
-- **Jemlje čas** od dejavnosti rasti
-- **Povečuje napake** zaradi ročnih procesov
-- **Omejuje skalabilnost**, ker se ne morete klonirati
-- **Vas izčrpa** z neskončnim ponavljajočim se delom
+Večina lastnikov podjetij preživi 20+ ur na teden z nalogami, ki bi jih lahko avtomatizirali. Ponavljajoče se delo jemlje čas, ki bi ga porabili za rast. Povečuje napake. Omejuje skalabilnost in sčasoma izčrpa ekipo.
 
-**Realnost:** Vsaka ura, ki jo preživite z ročnimi, ponavljajočimi se nalogami, je ura, ki je ne porabite za rast vašega podjetja, servisiranje strank ali razvoj novih priložnosti.
+Vsaka ura, ki jo preživite z ročnimi procesi, je ura, ki je ne vložite v rast, storitve strankam ali razvoj novih priložnosti.
 
-**Naš pristop:** Identificiramo ponavljajoče se naloge v vašem podjetju in jih nadomestimo z inteligentno avtomatizacijo, ki deluje 24/7 brez napak.
+Identificiramo ponavljajoče se naloge v vašem podjetju in jih nadomestimo z avtomatizacijo, ki deluje 24/7 brez napak.
 
 ## Kaj je mogoče avtomatizirati?
 
 ### Komunikacija s strankami
 
-- **AI chatboti**, ki 24/7 odgovarjajo na pogosta vprašanja
-- **Avtomatizirani odgovori na e-pošto** za pogosto zastavljena vprašanja
-- **Razporejanje terminov**, ki odpravlja sem in tja
-- **Sekvence sledenja**, ki samodejno negujejo potenciale
-- **Podpora strankam**, ki obravnava rutinske poizvedbe
+- AI chatboti, ki 24/7 odgovarjajo na pogosta vprašanja
+- avtomatizirani odgovori na e-pošto za pogosto zastavljena vprašanja
+- razporejanje terminov brez usklajevanja sem in tja
+- sekvence sledenja, ki samodejno negujejo potencialne stranke
+- podpora strankam za rutinske poizvedbe
 
 ### Poslovne operacije
 
-- **Ustvarjanje računov** in opomniki za plačila
-- **Vnos podatkov** in vodenje evidence
-- **Ustvarjanje poročil** in distribucija
-- **Obdelava dokumentov** in organizacija
-- **Upravljanje zalog** in opozorila
+- ustvarjanje računov in opomniki za plačila
+- vnos podatkov in vodenje evidence
+- ustvarjanje poročil in distribucija
+- obdelava dokumentov in organizacija
+- upravljanje zalog in opozorila
 
 ### Prodaja in marketing
 
-- **Kvalifikacija in ocenjevanje potencialov**
-- **Sekvence sledenja** za potencialne stranke
-- **Objave na družbenih omrežjih** in razporejanje
-- **E-poštne marketinške kampanje**
-- **CRM posodobitve** in sinhronizacija podatkov
+- kvalifikacija in ocenjevanje potencialov
+- sekvence sledenja za potencialne stranke
+- objave na družbenih omrežjih in razporejanje
+- e-poštne marketinške kampanje
+- CRM posodobitve in sinhronizacija podatkov
 
 ### Administrativne naloge
 
-- **Sledenje stroškom** in kategorizacija
-- **Sledenje času** in poročanje
-- **Razporejanje** in upravljanje koledarja
-- **Organizacija datotek** in varnostne kopije
-- **Poročanje o skladnosti** in dokumentacija
+- sledenje stroškom in kategorizacija
+- sledenje času in poročanje
+- razporejanje in upravljanje koledarja
+- organizacija datotek in varnostne kopije
+- poročanje o skladnosti in dokumentacija
 
-## Kako deluje naš storitev avtomatizacije
+## Kako poteka naša storitev avtomatizacije
 
-### 1. Revizija avtomatizacije
+### Revizija avtomatizacije
 
 Začnemo z analizo vašega podjetja, da identificiramo:
-- **Ponavljajoče se naloge**, ki porabijo največ časa
-- **Visoko učinkovite priložnosti** za avtomatizacijo
-- **Integracijske točke** z obstoječimi sistemi
-- **ROI potencial** za vsako avtomatizacijo
+- ponavljajoče se naloge, ki porabijo največ časa
+- visoko učinkovite priložnosti za avtomatizacijo
+- integracijske točke z obstoječimi sistemi
+- ROI potencial za vsako avtomatizacijo
 
-### 2. Prilagojena razvoj
+### Prilagojen razvoj
 
-Gradimo rešitve za avtomatizacijo, ki:
-- **Se popolnoma prilegajo vašemu delovnemu toku**, kot ga potrebujete
-- **Se brezhibno integrirajo** z vašimi obstoječimi orodji
-- **Se skalirajo z vašim podjetjem**, ko rastete
-- **Zahtevajo minimalno vzdrževanje**, ko so nastavljene
+Gradimo rešitve za avtomatizacijo, ki se popolnoma prilegajo vašemu delovnemu toku, se brezhibno integrirajo z obstoječimi orodji in se skalirajo, ko vaše podjetje raste.
 
-### 3. Inteligenca, ki jo poganja AI
+### AI inteligenca
 
-Naše avtomatizacije uporabljajo AI za:
-- **Razumevanje konteksta** in ustrezno odzivanje
-- **Učenje iz vzorcev** in izboljševanje sčasoma
-- **Obravnavanje robnih primerov**, ki jih preprosta pravila ne morejo
-- **Zagotavljanje vpogledov** iz avtomatiziranih procesov
+Naše avtomatizacije uporabljajo AI za razumevanje konteksta, učenje iz vzorcev, obravnavanje robnih primerov in zagotavljanje vpogledov iz avtomatiziranih procesov.
 
-### 4. Integracija in testiranje
+### Integracija in testiranje
 
-Zagotavljamo, da vse deluje skupaj:
-- **Povezovanje z vašimi obstoječimi sistemi** (CRM, e-pošta, računovodstvo, itd.)
-- **Temeljito testiranje** pred zagonom
-- **Usposabljanje vaše ekipe** o uporabi avtomatizacij
-- **Sledenje zmogljivosti** in neprekinjena optimizacija
+Povežemo vse z vašimi obstoječimi sistemi — CRM, e-pošta, računovodstvo — in temeljito preizkusimo pred zagonom. Usposobimo vašo ekipo in sledimo zmogljivosti po zagonu.
 
-### 5. Neprekinjena optimizacija
+### Neprekinjena optimizacija
 
-Avtomatizacija ni "nastavi in pozabi". Mi:
-- **Sledimo zmogljivosti** in identificiramo izboljšave
-- **Posodabljamo avtomatizacije**, ko se vaše podjetje razvija
-- **Dodajamo nove avtomatizacije**, ko se pojavijo priložnosti
-- **Zagotavljamo podporo**, ko jo potrebujete
+Sledimo rezultatom, posodabljamo avtomatizacije, ko se vaše podjetje razvija, in dodajamo nove, ko se pojavijo priložnosti.
 
 ## Katere rezultate lahko pričakujete?
 
@@ -126,24 +106,23 @@ Avtomatizacija ni "nastavi in pozabi". Mi:
 Večina strank prihrani:
 - **20+ ur na teden** pri ponavljajočih se nalogah
 - **95% zmanjšanje** ročnih napak
-- **Hitrejši časi odziva** strankam
-- **Več časa** za osredotočanje na rast
+- hitrejše odzivne čase za stranke
+- več časa za osredotočanje na rast
 
 ### Poslovni vpliv
 
-Videli boste:
-- **Izboljšano zadovoljstvo strank** zaradi hitrejših odzivov
-- **Zmanjšani operativni stroški** zaradi povečanja učinkovitosti
-- **Boljša skalabilnost** brez zaposlovanja več osebja
-- **Višja kakovost** dela z manj napakami
+- izboljšano zadovoljstvo strank zaradi hitrejših odzivov
+- zmanjšani operativni stroški
+- boljša skalabilnost brez zaposlovanja
+- višja kakovost dela z manj napakami
 
 ### ROI
 
 Večina strank vidi:
-- **ROI v 3-6 mesecih** samo zaradi prihranka časa
-- **Zmanjšani stroški dela** brez zmanjšanja proizvodnje
-- **Povečana zmogljivost** za obvladovanje več posla
-- **Konkurenčna prednost** zaradi učinkovitosti
+- **ROI v 3-6 mesecih** že samo zaradi prihranka časa
+- zmanjšane stroške dela brez zmanjšanja obsega
+- povečano zmogljivost za obvladovanje večjega obsega posla
+- konkurenčno prednost zaradi učinkovitosti
 
 ## Pravi rezultati pravih strank
 
@@ -162,56 +141,41 @@ Večina strank vidi:
 
 ## Za koga je ta storitev?
 
-Naša storitev avtomatizacije je popolna za:
+Naša storitev avtomatizacije ustreza:
 
-✅ **Storitvena podjetja** z ponavljajočim se razporejanjem in komunikacijo
-✅ **E-trgovine**, ki potrebujejo avtomatizacijo obdelave naročil
-✅ **Strokovne storitve** z delovnimi tokovi sprejema strank
-✅ **SaaS podjetja**, ki potrebujejo avtomatizacijo podpore strankam
-✅ **Vsako podjetje**, ki preživi 10+ ur tedensko z ponavljajočimi se nalogami
+- storitvenim podjetjem s ponavljajočim se razporejanjem in komunikacijo
+- e-trgovinam, ki potrebujejo avtomatizacijo obdelave naročil
+- strokovnim storitvam z delovnimi tokovi sprejema strank
+- SaaS podjetjem, ki potrebujejo avtomatizacijo podpore strankam
+- vsakemu podjetju, ki preživi 10+ ur tedensko z ponavljajočimi se nalogami
 
 ## Kaj je vključeno v vaš paket avtomatizacije?
 
 ### Razvoj
 
-- **Prilagojeni delovni tokovi avtomatizacije**, prilagojeni vašim potrebam
-- **Integracija AI** za inteligentno odločanje
-- **Integracije sistemov** z vašimi obstoječimi orodji
-- **Testiranje in optimizacija** pred zagonom
+- prilagojeni delovni tokovi avtomatizacije, prilagojeni vašim potrebam
+- integracija AI za inteligentno odločanje
+- integracije sistemov z vašimi obstoječimi orodji
+- testiranje in optimizacija pred zagonom
 
 ### Implementacija
 
-- **Nastavitev in konfiguracija** vseh avtomatizacij
-- **Usposabljanje ekipe** o uporabi sistemov
-- **Dokumentacija** za prihodnjo referenco
-- **Podpora pri zagonu** za zagotovitev nemotenga uvedbe
+- nastavitev in konfiguracija vseh avtomatizacij
+- usposabljanje ekipe o uporabi sistemov
+- dokumentacija za prihodnjo referenco
+- podpora pri zagonu za nemoteno uvedbo
 
 ### Neprekinjena podpora
 
-- **Sledenje zmogljivosti** in optimizacija
-- **Posodobitve in izboljšave** po potrebi
-- **Identifikacija novih priložnosti za avtomatizacijo**
-- **Tehnična podpora**, ko se pojavijo težave
+- sledenje zmogljivosti in optimizacija
+- posodobitve in izboljšave po potrebi
+- identifikacija novih priložnosti za avtomatizacijo
+- tehnična podpora, ko se pojavijo težave
 
 ## Naložba in ROI
 
-Avtomatizacija je naložba, ki se hitro povrne. Večina strank vidi:
-- **ROI v 3-6 mesecih** zaradi prihranka časa
-- **Neprekinjene prihranke**, ki se sčasoma kopičijo
-- **Skalabilnost** brez sorazmernih povečanj stroškov
-- **Konkurenčna prednost** zaradi učinkovitosti
+Ko je nastavljena, avtomatizacija deluje 24/7 brez dodatnih stroškov. Večina strank vidi ROI v 3-6 mesecih, prihranki pa se sčasoma kopičijo skupaj s skalabilnostjo.
 
-Najboljše? Ko je nastavljena, avtomatizacija deluje 24/7 brez dodatnih stroškov, za razliko od zaposlovanja osebja.
-
-## Pripravljeni začeti?
-
-Če ste pripravljeni odpraviti ponavljajoče se delo in si vrniti 20+ ur tedensko, začnimo z brezplačno revizijo avtomatizacije. Identificirali bomo najbolj učinkovite priložnosti v vašem podjetju in vam pokazali, kako lahko avtomatizacija pomaga.
+Če ste pripravljeni odpraviti ponavljajoče se delo in si vrniti 20+ ur tedensko, začnimo z brezplačno revizijo avtomatizacije.
 
 [Pridobite brezplačno revizijo avtomatizacije →](/contact/)
-
----
-
-**Naslednji koraki:**
-1. Načrtujte svojo brezplačno revizijo avtomatizacije
-2. Pregledajte svojo prilagojeno strategijo avtomatizacije
-3. Začnite prihranjevati čas in skalirati svoje podjetje

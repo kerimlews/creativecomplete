@@ -29,7 +29,7 @@ Diese Lücke — zwischen drei und dreißig — ist da, wo das meiste Ad-Budget 
 
 Die durchschnittliche Designagentur braucht drei bis sieben Tage, um ein Creative zu liefern. Revisionen addieren weitere zwei. Bis das finale File da ist, ist das Kampagnenfenster längst vorbei — und das Budget, das während der Wartezeit ausgegeben wurde, hat nichts generiert.
 
-KI-Creative-Generierung eliminiert diesen Engpass komplett.
+KI-Creative-Generierung löst diesen Engpass.
 
 ## Die tatsächlichen Kosten manueller Creative-Produktion
 
@@ -37,7 +37,7 @@ Bevor wir zu den Systemen kommen — es lohnt sich zu verstehen, was manuelle Cr
 
 Eine typische Paid-Social-Kampagne braucht 10–20 aktive Creative-Varianten, um saubere Tests über Zielgruppen hinweg zu fahren. Eine mittelgroße Marke mit 30.000 € Monatsbudget hat oft 3 Varianten gleichzeitig live. Sie laufen nicht mit 3, weil 3 optimal ist — sondern weil mehr in der Design-Kapazität und Durchlaufzeit nicht drin war.
 
-Mit 3 Varianten ist die Wahrscheinlichkeit hoch, dass der Gewinner unter den 17 nie getesteten Optionen liegt. Mit 30 Varianten finden Sie ihn. Der ROAS-Unterschied zwischen dem richtigen und einem mittelmäßigen Creative kann 14× oder mehr betragen.
+Mit 3 Varianten ist die Wahrscheinlichkeit hoch, dass der Gewinner unter den 17 nie getesteten Optionen liegt. Mit 30 Varianten finden Sie ihn. Der ROAS-Unterschied zwischen dem richtigen und einem mittelmäßigen Creative kann **14×** oder mehr betragen.
 
 Die Rechnung ist einfach: Mehr getestete Varianten = bessere Gewinner gefunden = niedrigere Akquisitionskosten über jede Kampagne hinweg.
 
@@ -45,7 +45,7 @@ Die Rechnung ist einfach: Mehr getestete Varianten = bessere Gewinner gefunden =
 
 KI-Creative-Generierung ist kein einzelnes Feature — sondern ein geschichtetes System aus Outputs, die zusammen den gesamten manuellen Produktions-Workflow ersetzen. Hier sind die sechs Systeme, die zählen.
 
-### 1. Performance-Scoring vor dem Launch
+### Performance-Scoring vor dem Launch
 
 ![Performance-Scoring — KI prognostiziert CTR und CVR, bevor Budget ausgegeben wird](/images/blog/creatives/01-performance-scoring.svg)
 
@@ -55,7 +55,7 @@ KI-Scoring ändert das, indem es Click-Through-Rate und Conversion-Rate für jed
 
 Nur Creatives oberhalb des Score-Schwellenwerts gehen live. Der Rest wird verworfen oder überarbeitet, bevor ein einziger Euro fließt.
 
-### 2. Varianten-Generierung im großen Maßstab
+### Varianten-Generierung im großen Maßstab
 
 ![Varianten-Generierung — ein Briefing produziert 20+ bewertete Creative-Varianten in Sekunden](/images/blog/creatives/02-variant-generation.svg)
 
@@ -65,7 +65,7 @@ Das verändert die Ökonomie des Testens fundamental. Statt 2 Varianten zu desig
 
 Der Output ist auch nicht generisch. Das System wendet Ihr Brand Kit auf jede Variante an — was skaliert, bleibt erkennbar Ihres, nur in Versionen, die Sie manuell weder Zeit noch Budget gehabt hätten, zu testen.
 
-### 3. Multi-Plattform Format-Export
+### Multi-Plattform Format-Export
 
 ![Multi-Plattform Format-Export — ein Creative adaptiert sich automatisch an jede Ad-Plattform](/images/blog/creatives/03-platform-formats.svg)
 
@@ -75,7 +75,7 @@ KI-Format-Export nimmt ein freigegebenes Creative und generiert automatisch jede
 
 Ein Briefing. Jede Plattform. Null manuelles Skalieren.
 
-### 4. A/B-Testing Automatisierung
+### A/B-Testing Automatisierung
 
 ![A/B-Testing im großen Maßstab — 20 gleichzeitige Tests laufen lassen und Gewinner automatisch skalieren](/images/blog/creatives/04-ab-testing.svg)
 
@@ -85,7 +85,7 @@ KI-A/B-Testing macht all das automatisch. Sie starten 20 Varianten gleichzeitig.
 
 Praktisches Ergebnis: Ihr Ad-Account läuft immer mit dem besten verfügbaren Creative, nicht mit dem, das Sie zuletzt Zeit hatten zu testen.
 
-### 5. Marken-gesicherte Generierung
+### Marken-gesicherte Generierung
 
 ![Marken-gesicherte Generierung — jeder Creative-Output ist standardmäßig markenkonform](/images/blog/creatives/05-brand-consistency.svg)
 
@@ -95,7 +95,7 @@ Marken-gesicherte Generierung löst das, indem Markenkonformität ein Constraint
 
 Das Ergebnis: Creative-Generierung kann jedem Teammitglied übergeben werden — der Output ist on-Brand, weil das System es erzwingt, nicht die einzelne Person.
 
-### 6. Funnel-Stufen Retargeting-Creatives
+### Funnel-Stufen Retargeting-Creatives
 
 ![Funnel-Stufen Retargeting — unterschiedliches Creative für jede Stufe der Customer Journey](/images/blog/creatives/06-retargeting.svg)
 

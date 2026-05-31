@@ -23,29 +23,29 @@ faq:
     answer: "Pri CreativeComplete je kvalifikacijski sistem nastavljen in v živo v 5 dneh. To vključuje definiranje vaših BANT kriterijev, treniranje AI na vašem produktu in pogostih ugovorih, integracijo z obstoječimi kanali (WhatsApp, Instagram, spletni klepet) in povezavo s CRM ali prodajno pošto za usmerjanje."
 ---
 
-Prodajne ekipe porabijo 70% časa za leade, ki ne bodo nikoli konvertirali.
+Prodajne ekipe porabijo **70%** časa za leade, ki ne bodo nikoli konvertirali.
 
 Ne zato, ker izbirajo napačne potencialne stranke za klic. Ker nimajo načina, da bi vedeli, kateri leadi so vredni njihovega časa, preden dvignejo telefon. V [CRM](/sl/blog/crm-avtomatizacija/) vrstici vsak lead izgleda enako — ime, telefonska številka, morda vir. Edini način, da ugotovite, ali je vreden zasledovanja, je, da pokličete.
 
-Tako predstavniki pokličejo vse. In 70% teh klicev je zapravljenih za ljudi, ki nimajo proračuna, časovnice, odločevalske avtoritete ali prave potrebe.
+Tako predstavniki pokličejo vse. In **70%** teh klicev je zapravljenih za ljudi, ki nimajo proračuna, časovnice, odločevalske avtoritete ali prave potrebe.
 
-AI kvalifikacija leadov to spremeni s tem, da izvaja proces kvalifikacije, preden se vključi človek.
+AI kvalifikacija leadov to spremeni z izvajanjem procesa kvalifikacije, preden se vključi človek.
 
 ## Kaj AI kvalifikacija dejansko počne
 
 ![AI kvalifikacija leadov flow — inbound lead vstopi, AI izvede BANT pogovor, lead prejme oceno 0–100, odločitev usmerjanja samodejno](/images/blog/ai-lead-qualification/01-qualification-flow.svg)
 
-Ko pride nov lead — iz oglasa, DM, spletnega obrazca ali drugega kanala — AI agent začne pogovorno izmenjavo [v sekundah](/sl/blog/hitrost-do-leada/). Pogovor je naraven, ne skriptiran. Lead ne doživi obrazca ali ankete. Doživi odzivnega, sposobnega sogovornika, ki se zdi, da razume njihovo situacijo.
+Ko pride nov lead — iz oglasa, DM, spletnega obrazca ali drugega kanala — AI agent začne pogovorno izmenjavo [v sekundah](/sl/blog/hitrost-do-leada/). Pogovor je naraven, ne skriptiran. Lead ne doživi obrazca ali ankete. Doživi odzivnega, sposobnega sogovornika, ki razume njegovo situacijo.
 
 Skozi ta pogovor AI sistematično dela skozi okvir kvalifikacije:
 
-**Proračun** — Ali ima lead finančne zmogljivosti za vašo rešitev? To ni vedno neposredno vprašanje. Pogosto je sklepano iz velikosti podjetja, omenjenega razpona naložb ali konkretnega problema, ki ga poskušajo rešiti.
+Proračun — ali ima lead finančne zmogljivosti za vašo rešitev? To ni vedno neposredno vprašanje. Pogosto se sklepa iz velikosti podjetja, omenjenega razpona naložb ali konkretnega problema, ki ga poskušajo rešiti.
 
-**Avtoriteta** — Je ta oseba odločevalec ali mora pripeljati druge v proces? Lead brez avtoritete ni diskvalificiran — potrebujejo drugačno vsebino follow-upa, ki jim pomaga zgraditi notranji poslovni primer.
+Avtoriteta — je ta oseba odločevalec ali mora pripeljati druge v proces? Lead brez avtoritete ni diskvalificiran — potrebuje drugačno vsebino follow-upa, ki mu pomaga zgraditi notranji poslovni primer.
 
-**Potreba** — Ali je problem, ki ga doživljajo, tak, ki ga vaša rešitev dejansko reši? Natančno ujemanje med potrebo in rešitvijo je najmočnejši napovedovalec stopnje zaključkov. Leadi z jasno potrebo zaključijo 2–3× hitreje od leadov z nejasnim ali splošnim zanimanjem.
+Potreba — ali je problem, ki ga doživljajo, tak, ki ga vaša rešitev dejansko reši? Natančno ujemanje med potrebo in rešitvijo je najmočnejši napovedovalec stopnje zaključkov. Leadi z jasno potrebo zaključijo 2–3× hitreje od leadov z nejasnim ali splošnim zanimanjem.
 
-**Časovnica** — Kdaj nameravajo sprejeti odločitev? Aktivna časovnica (tedni do meseci) signalizira pravo namero. "Samo raziskujem" je negovalni signal, ne diskvalifikacijski.
+Časovnica — kdaj nameravajo sprejeti odločitev? Aktivna časovnica (tedni do meseci) signalizira pravo namero. "Samo raziskujem" je negovalni signal, ne diskvalifikacijski.
 
 ## Model ocenjevanja
 
@@ -62,7 +62,7 @@ Tipična logika usmerjanja na podlagi ocene:
 | 40–59 | Negovanje | 14-dnevno avtomatizirano zaporedje |
 | 0–39 | Ni ujemanje | Označi in arhiviraj ali dolgoročni drip |
 
-Ocenjevanje ni naključno — kalibrirano je proti vašim zgodovinskim podatkom o zaključkih. Leadi, ki izgledajo kot vaši closed/won posli, dobijo visoke ocene. Leadi, ki izgledajo kot vaši closed/lost posli, dobijo nizke ocene. Model se izboljša s časom, ko se več rezultatov vrne nazaj v sistem.
+Ocenjevanje ni naključno — kalibrirano je proti vašim zgodovinskim podatkom o zaključkih. Leadi, ki izgledajo kot vaši closed/won posli, dobijo visoke ocene. Leadi, ki izgledajo kot vaši closed/lost posli, dobijo nizke ocene. Model se z časom izboljšuje, ko se več rezultatov vrne v sistem.
 
 ## Kaj se spremeni, ko se kvalifikacija zgodi pred predstavnikom
 
@@ -83,7 +83,7 @@ Stranke, ki uvedejo AI kvalifikacijo, običajno vidijo:
 
 Ni nadomestilo za vaš prodajni proces. Je filter in prva plast.
 
-AI ne zaključuje poslov. Ne obravnava ugovorov resnih kupcev. Ne pogaja. Opravlja delo, ki trenutno porabi 70% časa predstavnika — začetno kvalifikacijo — in to počne hitreje, bolj konsistentno in ob kateri koli uri dneva.
+AI ne zaključuje poslov. Ne obravnava ugovorov resnih kupcev. Ne pogaja. Opravlja delo, ki trenutno porabi **70%** časa predstavnika — začetno kvalifikacijo — in to počne hitreje, bolj konsistentno in ob kateri koli uri dneva.
 
 Vaši predstavniki še vedno lastnijo odnos. Le da ga lastnijo iz veliko močnejšega začetnega položaja.
 

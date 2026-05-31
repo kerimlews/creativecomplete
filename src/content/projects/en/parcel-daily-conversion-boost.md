@@ -33,19 +33,19 @@ faq:
 
 ## TL;DR
 
-A courier and e-commerce logistics company was generating significant lead volume from Meta and TikTok ads — but conversion was poor. Fragmented operations across marketing, sales, and support meant leads fell through gaps. Spam from ad campaigns was wasting agent time. Productivity was low because agents were manually collecting customer information for every shipment inquiry. AI Customer System unified the entire funnel, deployed AI Agents for lead qualification and data collection, integrated conversion signals back to Meta and TikTok, and delivered a 60% conversion rate increase within 90 days.
+A courier and e-commerce logistics company was generating significant lead volume from Meta and TikTok ads — but conversion was poor. Fragmented operations across marketing, sales, and support meant leads fell through gaps. Spam from ad campaigns was wasting agent time. Agents were manually collecting customer information for every shipment inquiry. AI Customer System unified the entire funnel, deployed AI Agents for lead qualification and data collection, integrated conversion signals back to Meta and TikTok, and delivered a **60%** conversion rate increase within 90 days.
 
 ## The Problem: Lead Volume Without Conversion Infrastructure
 
 The logistics company's growth strategy was working at the ad level — their Meta and TikTok campaigns were generating clicks and form fills at scale. But the conversion funnel after the click was broken.
 
-**Three compounding problems:**
+Three compounding problems:
 
-1. **Fragmented teams**: Marketing, sales, and customer support operated in separate tools with no shared context. A lead that marketing generated had to be manually re-entered in the sales system before anyone could follow up.
+1. Fragmented teams: Marketing, sales, and customer support operated in separate tools with no shared context. A lead that marketing generated had to be manually re-entered in the sales system before anyone could follow up.
 
-2. **High spam volume**: Lead ads on Facebook and TikTok attract a significant percentage of unqualified or spam submissions. Agents were sorting through low-quality leads manually before identifying prospects worth pursuing.
+2. High spam volume: Lead ads on Facebook and TikTok attract a significant percentage of unqualified or spam submissions. Agents were sorting through low-quality leads manually before identifying prospects worth pursuing.
 
-3. **Manual data collection**: Every courier inquiry required collecting the same information — origin, destination, package dimensions, weight, timeline, volume. Agents asked the same questions hundreds of times per day.
+3. Manual data collection: Every courier inquiry required collecting the same information — origin, destination, package dimensions, weight, timeline, volume. Agents asked the same questions hundreds of times per day.
 
 The result: high ad spend, high lead volume, and disappointing conversion.
 

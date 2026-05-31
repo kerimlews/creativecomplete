@@ -24,14 +24,14 @@ faq:
 
 ## TL;DR
 
-Der Aufbau einer Forschungsplattform, die Tausende von PDFs, Zitaten und kollaborative Bearbeitung handhabt, erfordert eine Architektur, die bei der Skalierung nicht zusammenbricht. Wir haben Paperpile mit MERN-Stack und leistungsorientierten Prinzipien entwickelt und bedienen 200.000+ Akademiker über Web, Mobile und Browser-Erweiterungen, während wir 95% Leistungswerte aufrechterhalten.
+Eine Forschungsplattform, die Tausende von PDFs, Zitaten und kollaborative Bearbeitung verwaltet, braucht eine Architektur, die bei der Skalierung standhält. Wir haben Paperpile mit MERN-Stack und leistungsorientierten Prinzipien entwickelt und bedienen 200.000+ Akademiker über Web, Mobile und Browser-Erweiterungen — bei **95% Leistungswerten**.
 
 ## Tipps
 
-- **Erstellen Sie Ihr Leistungsbudget VOR dem Schreiben von Code**
-- **Wählen Sie Ihre Datenbankarchitektur basierend auf Abfragemustern**, nicht Trends
-- **Mobile ist kein Nachgedanke** - es ist Ihre primäre Schnittstelle
-- **Browser-Erweiterungen sind Vertriebskanäle**, nicht Features
+- Legen Sie Ihr Leistungsbudget fest, bevor Sie Code schreiben
+- Wählen Sie Ihre Datenbankarchitektur nach Abfragemustern, nicht nach Trends
+- Mobile ist kein Nachgedanke — es ist Ihre primäre Schnittstelle
+- Browser-Erweiterungen sind Vertriebskanäle, keine Nebenfunktionen
 
 ## Inhaltsverzeichnis
 
@@ -40,55 +40,45 @@ Der Aufbau einer Forschungsplattform, die Tausende von PDFs, Zitaten und kollabo
 - [Leistung als Feature, nicht als Metrik](#leistung-als-feature-nicht-als-metrik)
 - [Multi-Plattform-Strategie, die wirklich funktioniert](#multi-plattform-strategie-die-wirklich-funktioniert)
 - [Ergebnisse: Vom MVP zum Industriestandard](#ergebnisse-vom-mvp-zum-industriestandard)
-- [Bereit, Software zu bauen, die skaliert?](#bereit-software-zu-bauen-die-skaliert)
 
 ## Das akademische Forschungsproblem, das niemand löste
 
-Akademiker verwendeten 5+ verschiedene Tools für die Forschung: PDF-Reader, Zitationsmanager, Notiz-Apps, Kollaborationstools. Das Erlebnis war fragmentiert und schmerzhaft.
+Akademiker nutzten 5+ verschiedene Tools für die Forschung: PDF-Reader, Zitationsmanager, Notiz-Apps, Kollaborationstools. Das Erlebnis war fragmentiert und mühsam.
 
-Paperpile hatte die Vision, den Forschungs-Workflow zu vereinheitlichen, aber ihre technische Architektur konnte die Komplexität bei der Skalierung nicht handhaben.
+Paperpile hatte die Vision, den Forschungs-Workflow zu vereinheitlichen — aber ihre technische Architektur konnte die Komplexität bei der Skalierung nicht bewältigen.
 
 ## Architekturentscheidungen, die Skalierung ermöglichten
 
-Wir trafen rücksichtslose technische Entscheidungen:
+Wir trafen klare technische Entscheidungen:
 
-- **MERN-Stack** für Entwicklungsgeschwindigkeit UND Leistung
-- **Echtzeit-Synchronisierung**, die wirklich offline funktioniert
-- **PDF-Verarbeitung**, die Browser nicht zum Absturz bringt
-- **Zitations-Engine**, die 10.000+ Zitationsstile handhabt
+- MERN-Stack für Entwicklungsgeschwindigkeit und Leistung
+- Echtzeit-Synchronisierung, die auch offline funktioniert
+- PDF-Verarbeitung, die Browser nicht zum Absturz bringt
+- Zitations-Engine, die 10.000+ Zitationsstile verarbeitet
 
 Die meisten SaaS-Produkte wählen zwischen Features und Leistung. Wir haben beides entwickelt.
 
 ## Leistung als Feature, nicht als Metrik
 
-Während Konkurrenten sich auf das Hinzufügen von Features konzentrierten, waren wir besessen von:
+Während Mitbewerber Features aufhäuften, konzentrierten wir uns auf:
 
-- **95% Leistungswerten** bei Core Web Vitals
-- **Sub-Sekunden-Suche** über Millionen von Dokumenten
-- **Sofortige Kollaboration** ohne Aktualisierung erforderlich
-- **Plattformübergreifende Konsistenz**, die sich überall nativ anfühlt
+- **95% Leistungswerte** bei Core Web Vitals
+- Sub-Sekunden-Suche über Millionen von Dokumenten
+- Sofortige Kollaboration ohne Seitenaktualisierung
+- Plattformübergreifende Konsistenz, die sich überall nativ anfühlt
 
 ## Multi-Plattform-Strategie, die wirklich funktioniert
 
-Wir haben einmal gebaut, überall bereitgestellt:
+Einmal gebaut, überall bereitgestellt:
 
-- **Web-Anwendung** als Kern-Erlebnis
-- **React Native Mobile-Apps**, die sich nativ anfühlen
-- **Browser-Erweiterung** für nahtlose Forschung
-- **Desktop-Anwendungen** für Power-User
+- Web-Anwendung als Kern-Erlebnis
+- React Native Mobile-Apps, die sich nativ anfühlen
+- Browser-Erweiterung für nahtlose Forschung
+- Desktop-Anwendungen für Power-User
 
 ## Ergebnisse: Vom MVP zum Industriestandard
 
-- **200.000+ aktive Forscher** weltweit
-- **95% Leistungswerte** konsistent aufrechterhalten
-- **4,8/5-Sterne-Bewertungen** auf allen Plattformen
-- **Industrieanerkennung** als Forschungs-Workflow-Führer
-
-## Bereit, Software zu bauen, die skaliert?
-
-Wenn Sie ein SaaS-Produkt bauen und sich Sorgen machen, dass technische Schulden Ihr Wachstum töten, sprechen wir über Architektur.
-
-**Wir übernehmen nur 2 SaaS-Entwicklungsprojekte pro Quartal.** Wenn Sie bereit sind, Software zu bauen, die skaliert, ohne zusammenzubrechen...
-
-**Kontaktieren Sie uns für unsere technische Architekturprüfung.** Wir zeigen Ihnen genau, wo sich Ihre Skalierungsengpässe verstecken.
-
+- 200.000+ aktive Forscher weltweit
+- **95% Leistungswerte** dauerhaft gehalten
+- **4,8/5 Sterne** auf allen Plattformen
+- Anerkennung als führendes Tool für Forschungs-Workflows

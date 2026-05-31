@@ -35,107 +35,79 @@ faq:
 
 Mobilne aplikacije ustvarjajo neposredno povezavo z vašimi strankami, ki je spletne strani ne morejo doseči. So na telefonih vaših strank, pošiljajo potisna obvestila in olajšajo poslovanje z vami.
 
-**Priložnost:** Podjetja z mobilnimi aplikacijami vidijo:
-- **3X rast prihodkov** v povprečju
-- **45% zmanjšanje** odhoda strank
-- **Višjo življenjsko vrednost stranke** zaradi ponavljajočega se poslovanja
-- **Nove tokove prihodkov** iz funkcij v aplikaciji
+Podjetja z mobilnimi aplikacijami v povprečju vidijo **3X rast prihodkov**, **45% zmanjšanje** odhoda strank in nove tokove prihodkov iz funkcij v aplikaciji.
 
-**Naš pristop:** Gradimo mobilne aplikacije, ki rešujejo prave težave za vaše stranke, kar olajša in naredi poslovanje z vami bolj priročno.
+Gradimo mobilne aplikacije, ki rešujejo prave težave vaših strank in olajšajo ter naredijo poslovanje z vami bolj priročno.
 
 ## Kaj gradimo
 
-### 1. Mobilne aplikacije preko platform
+### Mobilne aplikacije za iOS in Android
 
-Gradimo aplikacije z React Native, ki delujejo na:
-- **iOS** (iPhone in iPad)
-- **Android** (telefoni in tablični računalniki)
-- **Ena koda** za obe platformi (hitreje, ceneje)
-- **Nativna zmogljivost** in uporabniška izkušnja
-- **Dosledno oblikovanje** preko naprav
-- **AWS backend** za skalabilno, zanesljivo infrastrukturo
+Gradimo aplikacije z React Native, ki delujejo na iOS in Android iz ene kode — hitreje in ceneje. Backend razmestimo na AWS za skalabilno infrastrukturo. Nativne aplikacije zgradimo, kadar to zahtevajo specifične potrebe.
 
-### 2. Osrednje funkcije
+### Osrednje funkcije
 
 Vsaka aplikacija vključuje:
-- **Uporabniško avtentikacijo** in profile
-- **Varno shranjevanje podatkov** in sinhronizacijo
-- **Offline funkcionalnost**, ko je mogoče
-- **Potisna obvestila** za angažiranje
-- **Integracijo analitike** za vpoglede
+- uporabniško avtentikacijo in profile
+- varno shranjevanje podatkov in sinhronizacijo
+- offline funkcionalnost, kjer je mogoče
+- potisna obvestila za angažiranje
+- integracijo analitike za vpoglede
 
-### 3. Poslovno specifične funkcije
+### Poslovno specifične funkcije
 
-Prilagajamo na podlagi vaših potreb:
-- **Rezervacije in razporejanje** za storitvena podjetja
-- **Funkcionalnost e-trgovine** za maloprodajo
-- **Obdelava plačil** za transakcije
-- **Programi zvestobe** in nagrade
-- **Družbene funkcije** in deljenje
-- **Lokacijske storitve** za lokalna podjetja
+Prilagajamo glede na vaše potrebe:
+- rezervacije in razporejanje za storitvena podjetja
+- funkcionalnost e-trgovine za maloprodajo
+- obdelava plačil za transakcije
+- programi zvestobe in nagrade
+- družbene funkcije in deljenje
+- lokacijske storitve za lokalna podjetja
 
-### 4. Integracija plačil
+### Integracija plačil
 
 Integriramo sisteme plačil:
-- **Nakupi v aplikaciji** za digitalne izdelke
-- **Upravljanje naročnin** za ponavljajoče se prihodke
-- **Obdelava plačil** (Stripe, PayPal, itd.)
-- **Več načinov plačila** za priročnost
-- **Varne transakcije** s šifriranjem
+- nakupi v aplikaciji za digitalne izdelke
+- upravljanje naročnin za ponavljajoče se prihodke
+- obdelava plačil (Stripe, PayPal, itd.)
+- več načinov plačila za priročnost
+- varne transakcije s šifriranjem
 
-### 5. Strategija potisnih obvestil
+### Strategija potisnih obvestil
 
 Implementiramo pametna obvestila:
-- **Kampanje za angažiranje**, da spodbujemo uporabo
-- **Promocijska sporočila** za posebne ponudbe
-- **Opominska obvestila** za rezervacije/termini
-- **Prilagojena vsebina** na podlagi vedenja uporabnikov
-- **Optimalen čas**, da maksimiziramo stopnje odpiranja
+- kampanje za angažiranje, da spodbudimo uporabo
+- promocijska sporočila za posebne ponudbe
+- opominska obvestila za rezervacije in termine
+- prilagojena vsebina na podlagi vedenja uporabnikov
+- optimalen čas za višje stopnje odpiranja
 
-### 6. Optimizacija trgovine z aplikacijami
+### Optimizacija trgovine z aplikacijami
 
 Optimiziramo za odkritje:
-- **Seznami v trgovini z aplikacijami** s prepričljivimi opisi
-- **Posnetki zaslona in videoposnetki**, ki prikazujejo funkcije
-- **Optimizacija ključnih besed** za iskanje
-- **Upravljanje ocen in pregledov**
-- **Strategija zagona** za največjo vidnost
+- seznami v trgovini z aplikacijami s prepričljivimi opisi
+- posnetki zaslona in videoposnetki, ki prikazujejo funkcije
+- optimizacija ključnih besed za iskanje
+- upravljanje ocen in pregledov
+- strategija zagona za največjo vidnost
 
 ## Naš proces razvoja mobilnih aplikacij
 
-### Faza 1: Strategija in načrtovanje
+### Strategija in načrtovanje
 
-Začnemo z razumevanjem:
-- **Vaših poslovnih ciljev** in objektivov
-- **Vaše ciljne publike** in njenih potreb
-- **Ključnih funkcij**, ki generirajo vrednost
-- **Modela prihodkov** in strategije monetizacije
+Začnemo z razumevanjem vaših poslovnih ciljev, ciljne publike, ključnih funkcij, ki ustvarjajo vrednost, in modela prihodkov.
 
-### Faza 2: Oblikovanje in prototipiranje
+### Oblikovanje in prototipiranje
 
-Ustvarjamo:
-- **Oblikovanja uporabniške izkušnje** in tokove
-- **Vizualna oblikovanja**, ki se ujemajo z vašo blagovno znamko
-- **Interaktivne prototipe** za testiranje
-- **Integracijo povratne informacije uporabnikov**
+Ustvarimo oblikovanja uporabniške izkušnje, vizualna oblikovanja, ki se ujemajo z vašo blagovno znamko, in interaktivne prototipe za testiranje pred razvojem.
 
-### Faza 3: Razvoj
+### Razvoj
 
-Gradimo:
-- **Aplikacijo preko platform** s sodobnimi tehnologijami
-- **Sisteme backend** za podatke in API-je
-- **Integracijo plačil**, če je potrebno
-- **Nastavitev potisnih obvestil**
-- **Analitiko in sledenje**
+Zgradimo aplikacijo z modernimi tehnologijami, sisteme backend za podatke in API-je, integracijo plačil in potisna obvestila, ter nastavimo analitiko in sledenje.
 
-### Faza 4: Testiranje in zagon
+### Testiranje in zagon
 
-Zagotavljamo:
-- **Temeljito testiranje** na več napravah
-- **Odpravljanje napak** in optimizacija zmogljivosti
-- **Oddajo v trgovino z aplikacijami** in odobritev
-- **Podporo pri marketingu zagona**
-- **Sledenje po zagonu** in podpora
+Temeljito testiramo na več napravah, odpravimo napake in optimiziramo zmogljivost, predamo v trgovino z aplikacijami in podpremo marketing ob zagonu.
 
 ## Katere rezultate lahko pričakujete?
 
@@ -143,25 +115,20 @@ Zagotavljamo:
 
 Večina strank vidi:
 - **3X rast prihodkov** od uporabnikov aplikacije
-- **Višjo povprečno vrednost naročila** zaradi priročnosti
-- **Nove tokove prihodkov** iz funkcij v aplikaciji
-- **Povečano življenjsko vrednost stranke**
+- višjo povprečno vrednost naročila zaradi priročnosti
+- nove tokove prihodkov iz funkcij v aplikaciji
+- povečano življenjsko vrednost stranke
 
 ### Angažiranje strank
 
-Vaše stranke bodo:
-- **Redno uporabljale vašo aplikacijo** zaradi priročnosti
-- **Lažje opravljale ponavljajoče se nakupe**
-- **Sodelovale s potisnimi obvestili** in ponudbami
-- **Delile vašo aplikacijo** z drugimi
+Vaše stranke bodo redno uporabljale aplikacijo, lažje opravile ponavljajoče se nakupe, se odzivale na potisna obvestila in jo delile z drugimi.
 
 ### Poslovne koristi
 
-Videli boste:
-- **Zmanjšan odhod strank** (povprečno 45% zmanjšanje)
-- **Neposreden marketinški kanal** preko potisnih obvestil
-- **Boljše podatke o strankah** in vpoglede
-- **Konkurenčno prednost** na vašem trgu
+- **zmanjšan odhod strank** (povprečno 45% zmanjšanje)
+- neposreden marketinški kanal prek potisnih obvestil
+- boljši podatki o strankah in vpogledi
+- konkurenčna prednost na vašem trgu
 
 ## Pravi rezultati pravih strank
 
@@ -174,72 +141,55 @@ Videli boste:
 **Rezultati:**
 - 3X rast prihodkov v 6 mesecih
 - 45% zmanjšanje odhoda strank
-- 60% rezervacij zdaj preko aplikacije
+- 60% rezervacij zdaj prek aplikacije
 - 120.000€ dodatnih letnih prihodkov
 - Višje ocene zadovoljstva članov
 
 ## Za koga je ta storitev?
 
-Naša storitev razvoja mobilnih aplikacij je popolna za:
+Naša storitev razvoja mobilnih aplikacij ustreza:
 
-✅ **Storitvena podjetja** (fitnes, lepota, zdravstvo, itd.)
-✅ **E-trgovine**, ki želijo mobilne nakupovalne aplikacije
-✅ **Restavracije in kavarne**, ki potrebujejo aplikacije za naročanje
-✅ **Strokovne storitve** s potrebami po rezervacijah
-✅ **Vsako podjetje**, ki želi povečati zvestobo strank
+- storitvenim podjetjem (fitnes, lepota, zdravstvo, itd.)
+- e-trgovinam, ki želijo mobilne nakupovalne aplikacije
+- restavracijam in kavarnarm, ki potrebujejo aplikacije za naročanje
+- strokovnim storitvam s potrebami po rezervacijah
+- vsakemu podjetju, ki želi povečati zvestobo strank
 
 ## Kaj je vključeno v vaš paket mobilne aplikacije?
 
 ### Razvoj
 
-- **Aplikacija preko platform** (iOS in Android)
-- **Prilagojeno oblikovanje**, ki se ujema z vašo blagovno znamko
-- **Osrednje funkcije** na podlagi vaših potreb
-- **Razvoj backend** za podatke in API-je
-- **Integracija plačil** (če je primerno)
+- aplikacija za iOS in Android
+- prilagojeno oblikovanje, ki se ujema z vašo blagovno znamko
+- osrednje funkcije na podlagi vaših potreb
+- razvoj backend za podatke in API-je
+- integracija plačil, če je primerno
 
 ### Funkcije
 
-- **Uporabniški računi** in avtentikacija
-- **Nastavitev potisnih obvestil** in strategija
-- **Integracija analitike** za vpoglede
-- **Optimizacija trgovine z aplikacijami** in oddaja
-- **Sledenje zmogljivosti** in podpora
+- uporabniški računi in avtentikacija
+- nastavitev potisnih obvestil in strategija
+- integracija analitike za vpoglede
+- optimizacija trgovine z aplikacijami in oddaja
+- sledenje zmogljivosti in podpora
 
 ### Neprekinjena podpora
 
-- **Posodobitve funkcij** in izboljšave
-- **Odpravljanje napak** in optimizacija zmogljivosti
-- **Vzdrževanje trgovine z aplikacijami** in posodobitve
-- **Upravljanje kampanj potisnih obvestil**
-- **Tehnična podpora** za vašo ekipo
+- posodobitve funkcij in izboljšave
+- odpravljanje napak in optimizacija zmogljivosti
+- vzdrževanje v trgovini z aplikacijami in posodobitve
+- upravljanje kampanj potisnih obvestil
+- tehnična podpora za vašo ekipo
 
 ## Naložba in ROI
 
 Razvoj mobilnih aplikacij je naložba v zvestobo strank in rast prihodkov. Tipični časovni okviri:
-- **MVP:** 8-12 tednov
-- **Popolnoma opremljena aplikacija:** 4-6 mesecev
-- **Neprekinjen razvoj:** Mesečni retainer
+- MVP: 8-12 tednov
+- Popolnoma opremljena aplikacija: 4-6 mesecev
+- Neprekinjen razvoj: mesečni retainer
 
-Večina strank vidi ROI v 6-12 mesecih zaradi povečanih prihodkov, zmanjšanega odhoda strank in novih tokov prihodkov.
+Večina strank vidi ROI v 6-12 mesecih.
 
-## Pripravljeni začeti?
-
-Če ste pripravljeni zgraditi mobilno aplikacijo, ki generira prihodke in povečuje zvestobo strank, začnimo s strateško sejo. Razpravljali bomo o vaših ciljih, identificirali ključne funkcije in ustvarili načrt razvoja.
+Če ste pripravljeni zgraditi mobilno aplikacijo, ki generira prihodke in povečuje zvestobo strank, začnimo s strateško sejo.
 
 [Načrtujte svojo strateško sejo →](/contact/)
-
----
-
-**Naslednji koraki:**
-1. Načrtujte svojo strateško sejo
-2. Določite funkcije in cilje vaše aplikacije
-3. Začnite graditi svojo mobilno aplikacijo, ki generira prihodke
-
-
-
-
-
-
-
-

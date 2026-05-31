@@ -37,15 +37,15 @@ The scope of what it handles:
 
 ![AI sales agent scope — first response, qualification, follow-up sequences, objection handling, appointment booking, and handoff to human rep](/images/blog/ai-sales-agents/01-agent-scope.svg)
 
-**First response (< 60 seconds):** Every new lead gets a response within seconds of their inquiry. Before your reps check their morning messages, the AI has already introduced your company, started qualifying the lead, and identified their core need.
+First response (< 60 seconds): Every new lead gets a response within seconds of their inquiry. Before your reps check their morning messages, the AI has already introduced your company, started qualifying the lead, and identified their core need.
 
-**[BANT qualification](/blog/ai-lead-qualification/):** Through a conversational exchange, the AI surfaces budget, decision authority, specific need, and timeline. The lead experiences a helpful conversation, not an interrogation. The AI records every signal and builds a qualification summary.
+[BANT qualification](/blog/ai-lead-qualification/): Through a conversational exchange, the AI surfaces budget, decision authority, specific need, and timeline. The lead experiences a helpful conversation, not an interrogation. The AI records every signal and builds a qualification summary.
 
-**[Follow-up sequences](/blog/whatsapp-broadcast-campaigns/):** A lead who doesn't respond to the first message gets a follow-up at Day 1, Day 3, Day 7, and Day 14 — automatically. The message content adapts to the lead's last known position in the conversation. Leads who were warm but went quiet receive a re-engagement prompt. Leads who raised a specific objection receive content that addresses it.
+[Follow-up sequences](/blog/whatsapp-broadcast-campaigns/): A lead who doesn't respond to the first message gets a follow-up at Day 1, Day 3, Day 7, and Day 14 — automatically. The message content adapts to the lead's last known position in the conversation. Leads who were warm but went quiet receive a re-engagement prompt. Leads who raised a specific objection receive content that addresses it.
 
-**Objection surfacing:** When a lead hesitates or raises a concern, the AI is trained to surface and address it rather than skip past it. A price objection gets a value reframe. A timing objection gets an urgency prompt or a "let's schedule for next quarter" path. The objection handling uses your best-performing responses, applied consistently.
+Objection surfacing: When a lead hesitates or raises a concern, the AI surfaces and addresses it rather than skipping past it. A price objection gets a value reframe. A timing objection gets an urgency prompt or a "let's schedule for next quarter" path. The objection handling uses your best-performing responses, applied consistently.
 
-**Appointment booking:** When a lead is qualified and ready to talk, the AI presents available times and books the appointment directly into the rep's calendar — no back-and-forth email, no scheduling link confusion. The appointment arrives with a pre-read summary of the conversation.
+Appointment booking: When a lead is qualified and ready to talk, the AI presents available times and books the appointment directly into the rep's calendar — no back-and-forth email, no scheduling link confusion. The appointment arrives with a pre-read summary of the conversation.
 
 ## The Coverage Gap AI Solves
 

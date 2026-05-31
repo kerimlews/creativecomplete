@@ -33,11 +33,11 @@ faq:
 
 ## Povzetek
 
-Rastoči turistični operater je bil preplavljen s ponavljajočimi se vprašanji o vizumih, vlogah in cenah na WhatsApp. Svetovalci so velik del dneva porabili za odgovarjanje na ista vprašanja — brez prostora za kompleksna, visoko vredna rezervacijska povpraševanja. AI Customer System je namestil po meri oblikovanega AI agenta z integracijo API v realnem času, avtomatiziral 80% vseh vizumskih poizvedb in v 60 dneh povečal mesečni obseg potencialnih strank za 6×.
+Rastoči turistični operater je bil preplavljen s ponavljajočimi se vprašanji o vizumih, vlogah in cenah na WhatsApp. Svetovalci so velik del dneva porabili za odgovarjanje na ista vprašanja — brez prostora za kompleksna, visoko vredna rezervacijska povpraševanja. AI Customer System je namestil po meri oblikovanega AI agenta z integracijo API v realnem času, avtomatiziral **80 %** vseh vizumskih poizvedb in v 60 dneh povečal mesečni obseg potencialnih strank za **6×**.
 
 ## Problem: Agenti ujeti v zanki pogostih vprašanj
 
-Vsak dan so prišla ista vprašanja:
+Vsak dan so prihajala ista vprašanja:
 
 - "Katere dokumente potrebujem za turistični vizum?"
 - "Kako dolgo traja postopek pridobitve vizuma?"
@@ -54,16 +54,16 @@ Vso dokumentacijo o vizumih, cenovne razrede, možnosti paketov in pogosta vpra�
 
 ### Korak 2: Integracija API v realnem času
 
-Ključna nadgradnja: AI agenta smo priključili na zaledni sistem za obdelavo vizumov prek API. Stranka je prvič lahko vprašala za status vloge in dobila živ, točen odgovor brez vmešavanja agenta.
+AI agenta smo priključili na zaledni sistem za obdelavo vizumov prek API. Stranka je prvič lahko vprašala za status vloge in dobila živ, točen odgovor brez vmešavanja agenta.
 
-### Korak 3: Namestitev blagovnega AI agenta
+### Korak 3: Namestitev AI agenta z glasom blagovne znamke
 
-AI agent je bil konfiguriran tako, da ustreza tonu agencije — topel, profesionalen, z znanjem o destinacijah. Stranke niso vedele, da komunicirajo z AI. Agent je lahko:
+AI agent je bil konfiguriran z glasom agencije — topel, profesionalen, z znanjem o destinacijah. Agent je znal:
 
-- Odgovarjal na vizumska vprašanja za 50+ destinacij
-- Zagotavljal posodobitve statusa vloge v realnem času
-- Kvalificiral zanimanje za premijske pakete
-- Preusmerjal kompleksna povpraševanja svetovalcem s polnim kontekstom
+- odgovarjati na vizumska vprašanja za 50+ destinacij
+- zagotavljati posodobitve statusa vloge v realnem času
+- kvalificirati zanimanje za premijske pakete
+- preusmeriti kompleksna povpraševanja svetovalcem s polnim kontekstom
 
 ### Korak 4: Pokritost 24/7 prek časovnih pasov
 

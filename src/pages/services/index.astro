@@ -44,13 +44,13 @@ async function getImage(slug: string) {
 
 // Get all services and filter by language
 const langServices = await getCollection('servicesEn');
-const services = await Promise.all(langServices.map(async s => {
+const services = (await Promise.all(langServices.map(async s => {
   const serviceName = s.id.split('/').pop() || s.id;
   // Use service.data.image if it exists, otherwise try the service name
   const imageSlug = s.data.image || serviceName;
   const image = await getImage(imageSlug);
-  return { ...s, image };
-}));
+  return image ? { ...s, image } : null;
+}))).filter(s => s !== null);
 
 // Sort services by priority (highest first) then featured
 const sortedServices = services.toSorted((a, b) => {

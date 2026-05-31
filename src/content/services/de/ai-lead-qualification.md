@@ -35,7 +35,7 @@ Jede Minute, in der ein Lead wartet, sinkt die Conversion-Wahrscheinlichkeit um 
 
 ## Wie KI-Leadqualifizierung funktioniert
 
-### Schritt 1: Sofortiger Erstkontakt
+### Sofortiger Erstkontakt
 
 Sobald ein Lead über einen Ihrer Kanäle eingeht, übernimmt der KI-Agent in Sekunden:
 
@@ -44,15 +44,15 @@ Sobald ein Lead über einen Ihrer Kanäle eingeht, übernimmt der KI-Agent in Se
 - Qualifizierungsfragen nach dem BANT-Framework
 - Automatische Scorewertung basierend auf Antworten
 
-### Schritt 2: Smarte Weiterleitung
+### Smarte Weiterleitung
 
 Nach der Qualifizierung entscheidet das System automatisch:
 
-- **Heiße Leads (Score 70+):** Sofortige Weiterleitung an Ihren Verkäufer inklusive vollständigem Kontext
-- **Warme Leads:** Nurture-Sequenzen zur weiteren Qualifizierung
-- **Kalte Leads:** Automatische Archivierung mit Re-Engagement nach 30 Tagen
+- Heiße Leads (Score 70+): Sofortige Weiterleitung an Ihren Verkäufer inklusive vollständigem Kontext
+- Warme Leads: Nurture-Sequenzen zur weiteren Qualifizierung
+- Kalte Leads: Automatische Archivierung mit Re-Engagement nach 30 Tagen
 
-### Schritt 3: Nahtlose CRM-Integration
+### Nahtlose CRM-Integration
 
 Alle Daten fließen automatisch in Ihr CRM:
 

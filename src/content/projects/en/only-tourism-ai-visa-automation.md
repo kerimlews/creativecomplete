@@ -33,7 +33,7 @@ faq:
 
 ## TL;DR
 
-A growing tour operator was drowning in repetitive WhatsApp questions about visa requirements, application status, and pricing. Consultants spent most of their day answering the same questions — leaving no bandwidth for the complex, high-value package inquiries that actually drove revenue. AI Customer System deployed a custom-branded AI Agent with real-time API integration, automated 80% of all visa inquiries, and freed the human team for the work that generates margin. Monthly lead volume increased 6× within the first 60 days.
+A growing tour operator was getting buried in repetitive WhatsApp questions about visa requirements, application status, and pricing. Consultants spent most of their day answering the same questions — leaving no bandwidth for the complex, high-value package inquiries that actually drove revenue. AI Customer System deployed a custom-branded AI Agent with real-time API integration, automated **80%** of all visa inquiries, and freed the human team for the work that generates margin. Monthly lead volume increased **6×** within the first 60 days.
 
 ## The Problem: Agents Trapped in the FAQ Loop
 
@@ -46,9 +46,7 @@ Every day, the same questions arrived:
 - "What's the price for a 7-day package to [destination]?"
 - "What's the status of my application?"
 
-Each answer required a human. Each human answering a repetitive question was a human not selling. The economics were broken: agents were maxed out on low-value interactions while high-value prospects waited.
-
-Slow replies were costing real bookings. Travelers who waited more than a few minutes often simply messaged a competitor.
+Each answer required a human. Each human answering a repetitive question was a human not selling. Agents were maxed out on low-value interactions while high-value prospects waited. Slow replies were costing real bookings — travelers who waited more than a few minutes often simply messaged a competitor.
 
 ## The AI Customer System Solution
 
@@ -102,4 +100,4 @@ AI Customer System didn't just speed up responses. It restructured how the team 
 
 If your clients' teams are trapped answering the same questions instead of closing new business — this is exactly the pattern AI Customer System breaks. We configure the AI Agent, integrate with existing systems, and manage the setup ongoing.
 
-Your clients' teams only handle the conversations that require them.
+Your clients' teams only handle the conversations that actually require them.

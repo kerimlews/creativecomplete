@@ -43,7 +43,7 @@ Die Rechnung ist einfach: schnelleres Routing = schnellere Erstantwort = höhere
 
 Automatisierte Lead-Verteilung ist keine einzelne Einstellung. Es ist ein geschichtetes Regelsystem, das zusammen den richtigen Lead vor die richtige Person im richtigen Moment bringt. Hier sind die sieben Regeln, die am meisten zählen.
 
-### 1. Agent-Verfügbarkeits-Routing
+### Agent-Verfügbarkeits-Routing
 
 ![Agent-Verfügbarkeits-Routing — Leads gehen nur an Online-Agents, nie an Offline-Reps](/images/blog/routing/01-availability.svg)
 
@@ -51,7 +51,7 @@ Die erste Regel, die jedes Team braucht. Verfügbarkeits-Routing weist Leads nur
 
 Diese eine Änderung eliminiert die häufigste Ursache für verlorene Leads: eine Nachricht, die bei jemandem landet, der sie drei Stunden nicht sehen wird.
 
-### 2. Round-Robin-Routing
+### Round-Robin-Routing
 
 ![Round-Robin-Routing — gleichmäßige Lead-Verteilung zyklisch durch jeden verfügbaren Agent](/images/blog/routing/02-round-robin.svg)
 
@@ -59,7 +59,7 @@ Sobald die Verfügbarkeit geregelt ist, sorgt Round Robin für gerechte Verteilu
 
 Round Robin macht auch Performance-Daten schneller sichtbar. Wenn jeder Rep ungefähr gleiches Volumen bekommt, werden Konversionsraten-Unterschiede agent-getrieben — nicht verteilungsbedingt.
 
-### 3. Skill-basiertes Routing
+### Skill-basiertes Routing
 
 ![Skill-basiertes Routing — technische Anfragen matchen zu Spezialisten, nicht Generalisten](/images/blog/routing/03-skill-based.svg)
 
@@ -67,17 +67,17 @@ Nicht alle Leads sind gleich, und nicht alle Agents sind gleich gut für jeden L
 
 Technische Produktfragen gehen an technische Spezialisten. Preis- und Vertragsgespräche routen zu [Senior-Closern](/de/blog/ki-verkaufsagenten/). Onboarding-Anfragen gehen an Customer Success. Der Lead bekommt die richtige Antwort von der richtigen Person beim Erstkontakt — genau deshalb ist Skill-basiertes Routing der primäre Treiber dieser **94% schnelleren Auflösung**.
 
-### 4. Sprachbasiertes Routing
+### Sprachbasiertes Routing
 
 ![Sprachbasiertes Routing — französischer Prospect routet sofort zu einem muttersprachlichen französischen Rep](/images/blog/routing/04-language-based.svg)
 
-Das ist die am wenigsten genutzte Routing-Regel in internationalen Teams — und eine der hebelstärksten Änderungen, die Sie machen können.
+Das ist die am wenigsten genutzte Routing-Regel in internationalen Teams — und eine der wirkungsvollsten Änderungen, die Sie machen können.
 
 Ein Prospect, der auf Deutsch schreibt und einen deutschsprachigen Rep bekommt, hat ein fundamental anderes Erlebnis als einer, der sich durch holprige Übersetzungen kämpfen muss. Sprach-gematchte Gespräche schließen schneller, erzeugen weniger Missverständnisse und produzieren konsistent höhere Zufriedenheitswerte.
 
 Für Unternehmen in mehreren Märkten — selbst nur zwei oder drei — kann Sprach-Routing allein zweistellige Prozentpunkte Konversionsrate wert sein.
 
-### 5. Kundentyp-Routing
+### Kundentyp-Routing
 
 ![Kundentyp-Routing — neue Leads, wiederkehrende Kunden und VIPs gehen jeweils zum richtigen Team](/images/blog/routing/05-customer-type.svg)
 
@@ -85,7 +85,7 @@ Neue Leads, wiederkehrende Kunden und VIPs erfordern jeweils einen anderen Ansat
 
 VIP-Kunden routen zu Ihrem Account-Management-Team. Wiederkehrende Kunden mit Servicethema gehen an dedizierte Support-Reps, die ihre Historie kennen. Neue Inbound-Leads gehen an Ihr Akquise-Team. Jeder Kontakt wird auf dem Level behandelt, das seine Beziehung zu Ihnen verdient.
 
-### 6. Schicht-basiertes Routing
+### Schicht-basiertes Routing
 
 ![Schicht-basiertes Routing — 24/7-Abdeckung mit automatischen Team-Übergaben über Morgen-, Tag- und Nachtschichten](/images/blog/routing/06-shift-based.svg)
 
@@ -93,7 +93,7 @@ Unternehmen, die über Zeitzonen oder verlängerte Stunden operieren, brauchen R
 
 Ein Lead um 2:00 Uhr morgens routet zu Ihrem Nachtteam. Derselbe Typ Lead um 9:00 Uhr trifft Ihre Morgenschicht. Keine Lücken, kein "Ich dachte, jemand anderes hat das übernommen", keine verpassten Chancen wegen Schichtplan-Blindstellen.
 
-### 7. Funktions-basiertes Routing
+### Funktions-basiertes Routing
 
 ![Funktions-basiertes Routing — Sales-Leads zu Sales, Support-Leads zu Support, Account-Leads zum Account Management](/images/blog/routing/07-function-based.svg)
 
@@ -109,7 +109,7 @@ Noonmar, eine Retail-Marke, die automatisierte Lead-Verteilung im Team eingefüh
 
 Die aggregierten Daten über Teams mit automatisierter Lead-Verteilung erzählen eine konsistente Geschichte:
 
-- **200% mehr Kunden** — ohne mehr Personal. Dasselbe Team behandelt dramatisch höheres Konversationsvolumen, weil keine Leads durch Routing-Verzögerungen verloren gehen.
+- **200% mehr Kunden** — ohne mehr Personal. Dasselbe Team behandelt deutlich höheres Konversationsvolumen, weil keine Leads durch Routing-Verzögerungen verloren gehen.
 - **94% schnellere Auflösungen** — weil der Agent, der annimmt, bereits die relevante Expertise und den Kontext hat.
 - **93% CSAT-Score** — weil Kunden jemanden erreichen, der ihnen helfen kann — beim ersten Mal, jedes Mal.
 

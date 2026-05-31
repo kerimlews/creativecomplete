@@ -151,16 +151,16 @@ const en = {
 
   track: {
     eyebrow: 'How we start',
-    title: 'From first call to',
-    titleGrad: 'live system',
+    title: 'From strategy call to',
+    titleGrad: 'live AI system',
     titleSuffix: ' in days, not months.',
     cta: 'Book my strategy call →',
     steps: [
-      { label: 'Schedule a Call',    desc: 'Book a free system audit. 30 minutes, no pressure.' },
-      { label: 'Answer Questions',   desc: 'We learn your business, channels, goals, and current lead flow.' },
-      { label: 'Set Monthly Price',  desc: 'One fixed monthly fee. No surprises, no hidden costs, no per-seat pricing.' },
-      { label: 'System Setup',       desc: 'We build, connect, and deploy the full AI Customer System. You do nothing.' },
-      { label: 'You Win',             desc: 'Leads qualify themselves. Hot leads book. Your CRM converts on autopilot.' },
+      { label: 'Strategy Call',        desc: 'Book a short discovery call to review your goals, channels, and current lead flow.' },
+      { label: 'Business Assessment',  desc: 'We map your sales process, qualification criteria, and routing rules.' },
+      { label: 'Pricing & Scope',      desc: 'You get a fixed monthly service fee based on the scope of work.' },
+      { label: 'System Build & Launch',desc: 'We design, connect, and deploy your AI customer system on respond.io — including qualification, routing, and CRM handoff.' },
+      { label: 'Results',              desc: 'Leads are qualified automatically, hot prospects are routed faster, and your team spends less time on routine inquiries.' },
     ],
   } satisfies TrackContent & { titleSuffix: string },
 
@@ -172,22 +172,6 @@ const en = {
     services: [
       {
         tag: '01',
-        kicker: 'Under 60 seconds · 24/7',
-        title: 'AI Lead Qualification',
-        body: 'AI Customer System qualifies every inbound lead automatically using AI Agents, scoring intent, budget, and timeline in under 60 seconds across WhatsApp, Instagram, TikTok, Facebook, and 8+ more channels.',
-        list: [
-          'AI Agents handle first touch 24/7',
-          'BANT qualification in every language',
-          'Hot leads → sales calendar instantly',
-          '80% of routine inquiries automated',
-        ],
-        cta: 'Qualify my leads with AI →',
-        blogLabel: 'How AI qualification works →',
-        engTitle: 'AI Lead Qualification',
-        engMetricLabel: 'avg qualify time',
-      },
-      {
-        tag: '02',
         kicker: '$35B+ trained · Weekly production',
         title: 'AI Ad Creative Engine',
         body: 'AI Customer System generates high-converting ad creatives trained on $35B+ in ad spend data. Creative Scoring AI predicts winners with 90%+ accuracy before you spend a single cent.',
@@ -203,7 +187,7 @@ const en = {
         engMetricLabel: 'prediction accuracy',
       },
       {
-        tag: '03',
+        tag: '02',
         kicker: '40+ channels · Zero missed leads',
         title: 'Lead Capture & Conversion',
         body: 'AI Customer System unifies WhatsApp, Instagram, TikTok, Facebook, email, SMS, and web chat into one inbox. Capture every lead, convert them with AI, retain them with smart sequences.',
@@ -217,6 +201,22 @@ const en = {
         blogLabel: 'Why speed to lead decides every sale →',
         engTitle: 'Lead Capture',
         engMetricLabel: 'channels unified',
+      },
+      {
+        tag: '03',
+        kicker: 'Under 60 seconds · 24/7',
+        title: 'AI Lead Qualification',
+        body: 'AI Customer System qualifies every inbound lead automatically using AI Agents, scoring intent, budget, and timeline in under 60 seconds across WhatsApp, Instagram, TikTok, Facebook, and 8+ more channels.',
+        list: [
+          'AI Agents handle first touch 24/7',
+          'BANT qualification in every language',
+          'Hot leads → sales calendar instantly',
+          '80% of routine inquiries automated',
+        ],
+        cta: 'Qualify my leads with AI →',
+        blogLabel: 'How AI qualification works →',
+        engTitle: 'AI Lead Qualification',
+        engMetricLabel: 'avg qualify time',
       },
       {
         tag: '04',
@@ -428,16 +428,16 @@ const de = {
 
   track: {
     eyebrow: 'So starten wir',
-    title: 'Vom ersten Anruf zum',
-    titleGrad: 'Live-System',
+    title: 'Vom Strategie-Call zum',
+    titleGrad: 'Live-KI-System',
     titleSuffix: ' in Tagen, nicht Monaten.',
     cta: 'Strategie-Call buchen →',
     steps: [
-      { label: 'Termin vereinbaren',    desc: 'Kostenloses System-Audit buchen. 30 Minuten, kein Druck.' },
-      { label: 'Fragen beantworten',    desc: 'Wir verstehen Ihr Geschäft, Kanäle, Ziele und den aktuellen Lead-Flow.' },
-      { label: 'Fixpreis festlegen',    desc: 'Eine monatliche Pauschale. Keine Überraschungen, keine versteckten Kosten.' },
-      { label: 'System-Aufbau',         desc: 'Wir bauen, verbinden und deployen das vollständige KI Customer System. Sie müssen nichts tun.' },
-      { label: 'Sie gewinnen',           desc: 'Leads qualifizieren sich selbst. Heiße Leads buchen. Ihr CRM konvertiert auf Autopilot.' },
+      { label: 'Strategie-Call',          desc: 'Kurzer Discovery-Call zu Ihren Zielen, Kanälen und aktuellem Lead-Flow.' },
+      { label: 'Business-Analyse',        desc: 'Wir erfassen Ihren Vertriebsprozess, Qualifizierungskriterien und Routing-Regeln.' },
+      { label: 'Preis & Umfang',          desc: 'Sie erhalten eine feste monatliche Service-Pauschale basierend auf dem Leistungsumfang.' },
+      { label: 'Systemaufbau & Launch',   desc: 'Wir konzipieren, verbinden und deployen Ihr KI-System auf respond.io — inkl. Qualifizierung, Routing und CRM-Übergabe.' },
+      { label: 'Ergebnisse',              desc: 'Leads qualifizieren sich automatisch, heiße Kontakte werden schneller weitergeleitet, und Ihr Team verbringt weniger Zeit mit Routineanfragen.' },
     ],
   } satisfies TrackContent & { titleSuffix: string },
 
@@ -449,22 +449,6 @@ const de = {
     services: [
       {
         tag: '01',
-        kicker: 'Unter 60 Sekunden · 24/7',
-        title: 'KI-Leadqualifizierung',
-        body: 'Das KI Customer System qualifiziert jeden eingehenden Lead automatisch mit KI-Agenten: Intent, Budget und Timeline werden in unter 60 Sekunden über WhatsApp, Instagram, TikTok, Facebook und 8+ weitere Kanäle bewertet.',
-        list: [
-          'KI-Agenten übernehmen den Erstkontakt 24/7',
-          'BANT-Qualifizierung in jeder Sprache',
-          'Heiße Leads → Verkaufskalender sofort',
-          '80 % der Routineanfragen automatisiert',
-        ],
-        cta: 'Meine Leads mit KI qualifizieren →',
-        blogLabel: 'Wie KI-Qualifizierung funktioniert →',
-        engTitle: 'KI-Leadqualifizierung',
-        engMetricLabel: 'Ø Qualifizierungszeit',
-      },
-      {
-        tag: '02',
         kicker: '$35 Mrd.+ trainiert · Wöchentliche Produktion',
         title: 'KI-Werbemittel-Engine',
         body: 'Das KI Customer System generiert hochkonvertierende Werbemittel, trainiert auf $35 Mrd.+ realen Werbeausgaben. Die Creative Scoring KI prognostiziert Gewinner mit 90 %+ Genauigkeit. Bevor Sie einen Cent ausgeben.',
@@ -480,7 +464,7 @@ const de = {
         engMetricLabel: 'Prognose-Genauigkeit',
       },
       {
-        tag: '03',
+        tag: '02',
         kicker: '40+ Kanäle · Null verpasste Leads',
         title: 'Lead-Erfassung & Conversion',
         body: 'Das KI Customer System vereint WhatsApp, Instagram, TikTok, Facebook, E-Mail, SMS und Web-Chat in einem Posteingang. Jeden Lead erfassen, mit KI konvertieren, mit smarten Sequenzen halten.',
@@ -494,6 +478,22 @@ const de = {
         blogLabel: 'Warum Speed-to-Lead jeden Abschluss entscheidet →',
         engTitle: 'Lead-Erfassung',
         engMetricLabel: 'vereinte Kanäle',
+      },
+      {
+        tag: '03',
+        kicker: 'Unter 60 Sekunden · 24/7',
+        title: 'KI-Leadqualifizierung',
+        body: 'Das KI Customer System qualifiziert jeden eingehenden Lead automatisch mit KI-Agenten: Intent, Budget und Timeline werden in unter 60 Sekunden über WhatsApp, Instagram, TikTok, Facebook und 8+ weitere Kanäle bewertet.',
+        list: [
+          'KI-Agenten übernehmen den Erstkontakt 24/7',
+          'BANT-Qualifizierung in jeder Sprache',
+          'Heiße Leads → Verkaufskalender sofort',
+          '80 % der Routineanfragen automatisiert',
+        ],
+        cta: 'Meine Leads mit KI qualifizieren →',
+        blogLabel: 'Wie KI-Qualifizierung funktioniert →',
+        engTitle: 'KI-Leadqualifizierung',
+        engMetricLabel: 'Ø Qualifizierungszeit',
       },
       {
         tag: '04',
@@ -705,16 +705,16 @@ const sl = {
 
   track: {
     eyebrow: 'Kako začnemo',
-    title: 'Od prvega klica do',
-    titleGrad: 'živega sistema',
+    title: 'Od strateškega klica do',
+    titleGrad: 'živega AI sistema',
     titleSuffix: ' v dneh, ne mesecih.',
     cta: 'Rezerviraj strateški klic →',
     steps: [
-      { label: 'Rezerviraj klic',        desc: 'Brezplačen sistemski pregled. 30 minut, brez pritiska.' },
-      { label: 'Odgovorite na vprašanja', desc: 'Spoznamo vaše podjetje, kanale, cilje in trenutni tok leadov.' },
-      { label: 'Določimo mesečno ceno',   desc: 'Ena fiksna mesečna cena. Brez presenečenj, skritih stroškov ali cen po sedežih.' },
-      { label: 'Vzpostavitev sistema',    desc: 'Zgradimo, povežemo in namestimo celoten AI Customer System. Vi ne naredite ničesar.' },
-      { label: 'Vi zmagate',              desc: 'Leadi se kvalificirajo sami. Vroči leadi rezervirajo. Vaš CRM konvertira na avtopilotu.' },
+      { label: 'Strateški klic',          desc: 'Kratek discovery klic o vaših ciljih, kanalih in trenutnem toku leadov.' },
+      { label: 'Analiza poslovanja',      desc: 'Mapiramo vaš prodajni proces, kriterije kvalifikacije in pravila usmerjanja.' },
+      { label: 'Cena in obseg',           desc: 'Prejmete fiksno mesečno storitveno ceno glede na obseg dela.' },
+      { label: 'Gradnja in zagon sistema',desc: 'Načrtujemo, povežemo in namestimo vaš AI sistem na respond.io — vključno s kvalifikacijo, usmerjanjem in predajo v CRM.' },
+      { label: 'Rezultati',               desc: 'Leadi se kvalificirajo samodejno, vroči kontakti so usmerjeni hitreje in vaša ekipa porabi manj časa za rutinska povpraševanja.' },
     ],
   } satisfies TrackContent & { titleSuffix: string },
 
@@ -726,22 +726,6 @@ const sl = {
     services: [
       {
         tag: '01',
-        kicker: 'Pod 60 sekund · 24/7',
-        title: 'AI kvalifikacija leadov',
-        body: 'AI Customer System samodejno kvalificira vsak dohodni lead z AI agenti. Ocenjevanje namena, proračuna in časovnice v manj kot 60 sekundah prek WhatsApp, Instagram, TikTok, Facebook in 8+ dodatnih kanalov.',
-        list: [
-          'AI agenti skrbijo za prvi stik 24/7',
-          'BANT kvalifikacija v vsakem jeziku',
-          'Vroči leadi → prodajni koledar takoj',
-          '80 % rutinskih povpraševanj avtomatizirano',
-        ],
-        cta: 'Kvalificiraj moje leade z AI →',
-        blogLabel: 'Kako deluje AI kvalifikacija →',
-        engTitle: 'AI kvalifikacija leadov',
-        engMetricLabel: 'povp. čas kvalifikacije',
-      },
-      {
-        tag: '02',
         kicker: '$35 mrd.+ treniranih · Tedenska produkcija',
         title: 'AI oglaševalski kreativni sistem',
         body: 'AI Customer System ustvarja visoko konverzivne oglaševalske kreative, trenirane na $35 mrd.+ podatkov o oglaševalski porabi. AI za ocenjevanje kreativ napove zmagovalce z več kot 90 % natančnostjo. Preden porabite en cent.',
@@ -757,7 +741,7 @@ const sl = {
         engMetricLabel: 'natančnost napovedi',
       },
       {
-        tag: '03',
+        tag: '02',
         kicker: '40+ kanalov · Nič zamujenih leadov',
         title: 'Zajem in konverzija leadov',
         body: 'AI Customer System združi WhatsApp, Instagram, TikTok, Facebook, e-pošto, SMS in spletni klepet v eno mapo. Zajamite vsak lead, ga konvertirajte z AI in zadržite s pametnimi zaporedji.',
@@ -771,6 +755,22 @@ const sl = {
         blogLabel: 'Zakaj hitrost do leada odloči vsako prodajo →',
         engTitle: 'Zajem leadov',
         engMetricLabel: 'združenih kanalov',
+      },
+      {
+        tag: '03',
+        kicker: 'Pod 60 sekund · 24/7',
+        title: 'AI kvalifikacija leadov',
+        body: 'AI Customer System samodejno kvalificira vsak dohodni lead z AI agenti. Ocenjevanje namena, proračuna in časovnice v manj kot 60 sekundah prek WhatsApp, Instagram, TikTok, Facebook in 8+ dodatnih kanalov.',
+        list: [
+          'AI agenti skrbijo za prvi stik 24/7',
+          'BANT kvalifikacija v vsakem jeziku',
+          'Vroči leadi → prodajni koledar takoj',
+          '80 % rutinskih povpraševanj avtomatizirano',
+        ],
+        cta: 'Kvalificiraj moje leade z AI →',
+        blogLabel: 'Kako deluje AI kvalifikacija →',
+        engTitle: 'AI kvalifikacija leadov',
+        engMetricLabel: 'povp. čas kvalifikacije',
       },
       {
         tag: '04',

@@ -35,7 +35,7 @@ Traditionelle Agenturen brauchen Wochen für ein neues Creative. Bis es live geh
 
 ## Wie die KI-Creative-Engine funktioniert
 
-### 1. Datengestütztes Briefing
+### Datengestütztes Briefing
 
 Wir analysieren Ihre bisherigen Kampagnendaten und kombinieren sie mit branchenspezifischen Insights aus $35 Mrd.+ Werbedaten:
 
@@ -43,7 +43,7 @@ Wir analysieren Ihre bisherigen Kampagnendaten und kombinieren sie mit branchens
 - Welche visuellen Stile performen in Ihrer Branche?
 - Welche Calls-to-Action konvertieren bei Ihrem Preisniveau?
 
-### 2. KI-Produktion: 8–12 Varianten pro Woche
+### KI-Produktion: 8–12 Varianten pro Woche
 
 Basierend auf dem Briefing generiert unsere KI wöchentlich eine vollständige Creative-Suite:
 
@@ -52,7 +52,7 @@ Basierend auf dem Briefing generiert unsere KI wöchentlich eine vollständige C
 - Karussell-Anzeigen mit dynamischen Elementen
 - A/B-Varianten für Headline, Visual und CTA
 
-### 3. Creative Scoring vor dem Launch
+### Creative Scoring vor dem Launch
 
 Bevor ein einziger Cent ausgegeben wird, bewertet unsere KI jedes Creative:
 
@@ -61,7 +61,7 @@ Bevor ein einziger Cent ausgegeben wird, bewertet unsere KI jedes Creative:
 - Empfehlung: Skalieren, testen oder pausieren
 - Nur bewährte Gewinner gehen live
 
-### 4. Kontinuierliche Optimierung
+### Kontinuierliche Optimierung
 
 Jede Woche lernt das System:
 
@@ -82,10 +82,10 @@ Kunden-Medianwerte nach 90 Tagen:
 
 Die KI-Creative-Engine erzielt die stärksten Ergebnisse in:
 
-- **Immobilien** — hochwertige Leads für Neubauprojekte und Makler
-- **Finanzdienstleistungen** — Leads für Versicherung, Kredit, Investment
-- **E-Commerce** — Produkt-Anzeigen mit dynamischen Elementen
-- **SaaS & Software** — Demo-Buchungen und Trial-Conversions
-- **Bildung & Kurse** — Einschreibungen und Lead-Magneten
+- Immobilien — hochwertige Leads für Neubauprojekte und Makler
+- Finanzdienstleistungen — Leads für Versicherung, Kredit, Investment
+- E-Commerce — Produkt-Anzeigen mit dynamischen Elementen
+- SaaS & Software — Demo-Buchungen und Trial-Conversions
+- Bildung & Kurse — Einschreibungen und Lead-Magneten
 
 [Kostenloses System-Audit und erste Creative-Analyse →](/de/contact/)

@@ -37,20 +37,20 @@ faq:
 
 ## TL;DR
 
-Belags-Oberflächenreinigung is a professional pressure washing and surface cleaning business in Arbon, Switzerland. When we started: no website, no Google Business Profile, no reviews, no digital presence of any kind. We built the full digital infrastructure — WordPress site, GBP setup and ongoing management, 4 location-specific landing pages, YouTube video production, local citation building, and technical SEO. Result: Top 3 Google Maps rankings for target queries, 312% increase in inbound calls from GBP.
+Belags-Oberflächenreinigung is a professional pressure washing and surface cleaning business in Arbon, Switzerland. When we started: no website, no Google Business Profile, no reviews, no digital presence of any kind. We built the full digital infrastructure — WordPress site, GBP setup and ongoing management, 4 location-specific landing pages, YouTube video production, local citation building, and technical SEO. Result: Top 3 Google Maps rankings for target queries, **312%** increase in inbound calls from GBP.
 
 ## The Situation
 
 Belags-Oberflächenreinigung handles driveways, patios, facades, parking lots, and industrial surfaces across the Lake Constance region — Arbon, Rorschach, Romanshorn, and Kreuzlingen. The work quality was there. The digital infrastructure was not.
 
-**At the start of the engagement:**
+At the start of the engagement:
 - No website — impossible to rank organically for anything
 - No Google Business Profile — completely absent from Google Maps
 - No reviews — no social proof for undecided customers
 - No content — missing every local search intent query
 - No location coverage — not targeting surrounding cities
 
-This is the most common situation we encounter with established Swiss and German-speaking service businesses. Years of quality work, word-of-mouth growth, zero digital presence. The ceiling on revenue is set entirely by referrals.
+This is the most common situation we encounter with established Swiss and German-speaking service businesses. Years of quality work, word-of-mouth growth, zero digital presence. When that's your situation, the ceiling on revenue is set entirely by referrals.
 
 ## The Strategy
 
@@ -58,7 +58,7 @@ This is the most common situation we encounter with established Swiss and German
 
 Before any SEO can work, there needs to be something to rank. We built a WordPress site specifically for the Swiss market using Elementor for layout flexibility and Yoast SEO for on-page optimization.
 
-**What the site was built to do:**
+What the site was built to do:
 - Convert mobile visitors — 74% of local searches happen on smartphones; every element was designed for touch and small screens
 - Load fast — under 2 seconds on LTE connections; slow sites lose local searchers who move to the next result
 - Communicate services clearly — dedicated pages for Druckreinigung, Belagsreinigung, and Fassadenreinigung with specific descriptions and project photos
@@ -71,7 +71,7 @@ Schema markup (LocalBusiness, Service, Review) was implemented on every relevant
 
 For a local service business, the Google Business Profile is the most important digital asset. A complete, active, optimized GBP listing appears in the Map Pack — the 3 listings Google shows above organic results for local queries. Most of the high-intent clicks go to these three results.
 
-**Initial setup:**
+Initial setup:
 - Business address verified: Berglistrasse 51, 9320 Arbon
 - Primary category: Reinigungsunternehmen / Cleaning service
 - Secondary categories: Druckreinigung, Fassadenreinigung, Pflasterstein-Reinigung
@@ -80,29 +80,29 @@ For a local service business, the Google Business Profile is the most important 
 - Q&A section written with the 10 most common customer questions
 - Products/services listed with detailed descriptions
 
-**Ongoing management (monthly):**
+Ongoing management (monthly):
 - Weekly GBP posts with project photos and seasonal content
 - New project photos uploaded after each significant job
 - Review monitoring and response
 
-**Review generation system:**
+Review generation system:
 - Follow-up SMS sent 24 hours after job completion with direct GBP review link
 - QR code cards provided to the team for leaving at job sites
 - 48-hour email reminder for clients who did not respond to the SMS
 
-GBP inbound calls increased 312% within 90 days of the full setup going live.
+GBP inbound calls increased **312%** within 90 days of the full setup going live.
 
 ### Pillar 3: Location-Specific Landing Pages
 
 One homepage cannot rank competitively for multiple cities. Searchers in Rorschach looking for "Druckreinigung Rorschach" will see pages that are specifically about Rorschach — not a generic homepage that mentions the city once in a paragraph.
 
-**Pages built:**
-1. **Druckreinigung Arbon** — home base, highest search volume, most competitive
-2. **Druckreinigung Rorschach** — neighboring Lake Constance town, clear demand
-3. **Druckreinigung Romanshorn** — ferry port city, high traffic area
-4. **Druckreinigung Kreuzlingen** — border city, cross-border opportunity
+Pages built:
+1. Druckreinigung Arbon — home base, highest search volume, most competitive
+2. Druckreinigung Rorschach — neighboring Lake Constance town, clear demand
+3. Druckreinigung Romanshorn — ferry port city, high traffic area
+4. Druckreinigung Kreuzlingen — border city, cross-border opportunity
 
-**Each page was built with:**
+Each page was built with:
 - City-specific H1 and title tag with the target keyword
 - LocalBusiness JSON-LD schema with city-specific coordinates
 - References to local landmarks and neighborhoods that signal genuine local relevance
@@ -116,7 +116,7 @@ The internal linking structure connects all location pages to each other and to 
 
 YouTube is largely uncontested for local service businesses in the German-speaking Swiss market. A professional video presence in an uncontested niche provides two distinct advantages: it ranks in Google's video results for local queries, and it functions as a trust signal at the consideration stage.
 
-**Videos produced:**
+Videos produced:
 - Before/after pressure washing reveal videos — highest engagement format; viewers see the result before deciding
 - Process videos showing equipment and technique — builds expertise perception
 - Location-specific service videos ("Druckreinigung Arbon — Vorher/Nachher")
@@ -126,11 +126,11 @@ All videos were optimized with German-language titles, descriptions, and tags ta
 
 ## Technical SEO Foundation
 
-- **NAP consistency** — Business name, address, and phone number identical across website, GBP listing, and all directory submissions
-- **Local citations** — Listed on local.ch, search.ch, directories.ch, and 12 industry-specific directories
-- **Core Web Vitals** — LCP under 2.5 seconds, CLS under 0.1
-- **XML sitemap** — Submitted to Google Search Console with correct URL priority structure
-- **Schema markup** — LocalBusiness, Service, and Review schema on all relevant pages
+- NAP consistency — Business name, address, and phone number identical across website, GBP listing, and all directory submissions
+- Local citations — Listed on local.ch, search.ch, directories.ch, and 12 industry-specific directories
+- Core Web Vitals — LCP under 2.5 seconds, CLS under 0.1
+- XML sitemap — Submitted to Google Search Console with correct URL priority structure
+- Schema markup — LocalBusiness, Service, and Review schema on all relevant pages
 
 ## Results
 
@@ -145,14 +145,10 @@ All videos were optimized with German-language titles, descriptions, and tags ta
 
 ## What Made the Difference
 
-**Complete infrastructure, not individual tactics.** A GBP listing without a website limits ranking potential. A website without GBP leaves Map Pack traffic uncaptured. Location pages without internal linking dilute authority instead of building it. Each component works because the others exist — the system is what produces the result.
+Complete infrastructure, not individual tactics. A GBP listing without a website limits ranking potential. A website without GBP leaves Map Pack traffic uncaptured. Location pages without internal linking dilute authority instead of building it. Each component works because the others exist — the system is what produces the result.
 
-**Review generation built into the operations workflow.** Most businesses intend to collect reviews and do not. By building the follow-up sequence into the post-job process — SMS within 24 hours, QR code at the job site — reviews accumulate automatically rather than depending on someone remembering to ask.
+Review generation built into the operations workflow. Most businesses intend to collect reviews and don't follow through. By building the follow-up sequence into the post-job process — SMS within 24 hours, QR code at the job site — reviews accumulate automatically rather than depending on someone remembering to ask.
 
-**Location pages built for genuine local relevance.** Pages that mention a city name once do not rank for that city. Pages that are built specifically for that location — with local landmarks, project photos from that area, and schema markup with the correct coordinates — signal genuine local relevance to Google's algorithm.
-
-## Is Your Local Service Business Invisible Online?
-
-If potential customers in your area cannot find you on Google Maps, you are losing jobs to competitors daily — not because your work is worse, but because they are easier to find.
+Location pages built for genuine local relevance. Pages that mention a city name once do not rank for that city. Pages built specifically for that location — with local landmarks, project photos from that area, and schema markup with the correct coordinates — signal genuine local relevance to Google's algorithm.
 
 [Contact us to discuss a local SEO strategy for your service area →](/contact/)

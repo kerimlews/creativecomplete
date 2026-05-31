@@ -33,7 +33,7 @@ faq:
 
 ## TL;DR
 
-Paperpile had an existing PHP research platform with a real user base. The architecture could not scale to where they needed to go. We redesigned the full UI system in Figma, rewrote the backend from PHP to Node.js, migrated to MongoDB, and rebuilt the frontend in React — all while keeping the live product running. Eighteen months later: 200,000+ active users, 95% performance scores, 3× speed improvement, 100% feature parity maintained throughout.
+Paperpile had an existing PHP research platform with a real user base. The architecture could not scale to where they needed to go. We redesigned the full UI system in Figma, rewrote the backend from PHP to Node.js, migrated to MongoDB, and rebuilt the frontend in React — all while keeping the live product running. Eighteen months later: 200,000+ active users, **95%** performance scores, 3× speed improvement, 100% feature parity maintained throughout.
 
 ## The Situation
 
@@ -103,7 +103,7 @@ The result: 100% feature parity on launch day. No user-facing regressions throug
 - Bundle optimization reducing total JavaScript payload by 60%
 - Core Web Vitals monitoring integrated into the deployment pipeline
 
-**Outcome:** 95% performance scores consistently, sub-second search across millions of documents, collaborative editing without refresh lag, 3× faster than the original PHP version on equivalent operations.
+**Outcome:** **95%** performance scores consistently, sub-second search across millions of documents, collaborative editing without refresh lag, 3× faster than the original PHP version on equivalent operations.
 
 ## Results
 
@@ -117,12 +117,10 @@ The result: 100% feature parity on launch day. No user-facing regressions throug
 
 ## What Made the Difference
 
-**Feature-by-feature migration, not a big bang rewrite.** The most common failure mode in platform rewrites is attempting to rewrite everything simultaneously and launching all at once. Every component that can be isolated and validated independently reduces the risk of the overall migration. We isolated 23 distinct feature areas and validated each one before proceeding.
+Feature-by-feature migration, not a big bang rewrite. The most common failure mode in platform rewrites is attempting to rewrite everything simultaneously and launch all at once. Every component that can be isolated and validated independently reduces the overall risk. We isolated 23 distinct feature areas and validated each one before proceeding.
 
-**Performance built into the architecture, not bolted on afterward.** Performance optimizations added after architecture decisions are made have limited effect — the ceiling is set by the architecture. Building caching, async processing, and database indexing into the design phase rather than the optimization phase meant there was no performance ceiling to work around later.
+Performance built into the architecture, not bolted on afterward. Performance optimizations added after architecture decisions have limited effect — the ceiling is set by the architecture itself. Building caching, async processing, and database indexing into the design phase rather than the optimization phase meant there was no artificial ceiling to work around later.
 
-**Design system first.** Building the Figma component library before writing any code meant that engineering decisions could reference a shared visual language from day one. Inconsistencies that appear in design are easy to fix — inconsistencies discovered during engineering review are expensive.
+Design system first. Building the Figma component library before writing any code meant that engineering decisions could reference a shared visual language from day one. Inconsistencies that appear in design are easy to fix — inconsistencies discovered during engineering review are expensive.
 
-## Building a Product That Needs to Scale?
-
-If you have an existing platform approaching its architectural limits, or a new product that needs to be built for scale from the start, [contact us to discuss your requirements →](/contact/)
+[Contact us to discuss your requirements →](/contact/)

@@ -33,101 +33,97 @@ faq:
 
 ## Kaj je lokalno SEO in zakaj je pomembno?
 
-Lokalno SEO je praksa optimizacije vaše spletne prisotnosti, da vas najdejo stranke, ki iščejo vaše storitve na vašem specifičnem geografskem območju. Ko nekdo išče "vodovodar v bližini" ali "najboljša restavracija v [mesto]", lokalno SEO zagotavlja, da se vaše podjetje pojavi v teh rezultatih.
+Lokalno SEO je optimizacija vaše spletne prisotnosti, da vas najdejo stranke, ki iščejo vaše storitve v vašem geografskem območju. Ko nekdo išče "vodovodar v bližini" ali "najboljša restavracija v [mesto]", lokalno SEO zagotavlja, da se vaše podjetje pojavi v teh rezultatih.
 
-**Težava:** Večina lokalnih podjetij je nevidnih na spletu. Ne pojavijo se, ko stranke iščejo njihove storitve, zato izgubljajo posel konkurentom, ki so optimizirani za lokalno iskanje.
+76% ljudi, ki iščejo na pametnem telefonu kaj v bližini, obišče podjetje v enem dnevu. Lokalno SEO postavi vas pred stranke, ki so pripravljene kupiti, prav zdaj.
 
-**Priložnost:** 76% ljudi, ki iščejo na svojem pametnem telefonu nekaj v bližini, obišče podjetje v enem dnevu. Lokalno SEO postavi vaše podjetje pred stranke, ki so pripravljene kupiti, prav zdaj.
-
-**Naš pristop:** Optimiziramo vaš Google Business Profile, dominiramo uvrstive Google Maps, gradimo lokalne citate in upravljamo vaš spletni ugled, da zagotovimo, da ste prvo podjetje, ki ga stranke najdejo.
+Optimiziramo vaš Google Business Profile, zgradimo lokalne citate in upravljamo vaš spletni ugled — da ste prvo podjetje, ki ga stranke najdejo.
 
 ## Kako deluje lokalno SEO
 
-### 1. Optimizacija Google Business Profile
+### Optimizacija Google Business Profile
 
 Vaš Google Business Profile je vaša digitalna izložba. Optimiziramo ga, da:
-- **Dopolnimo vse informacije** (ure, storitve, fotografije, itd.)
-- **Izberemo prave kategorije**, ki se ujemajo z vašim podjetjem
-- **Dodamo ustrezne ključne besede** v vaš opis
-- **Objavljamo redno**, da pokažemo, da ste aktivni
-- **Odgovarjamo na ocene**, da zgradimo zaupanje
+- dopolnimo vse informacije (ure, storitve, fotografije, itd.)
+- izberemo prave kategorije, ki se ujemajo z vašim podjetjem
+- dodamo ustrezne ključne besede v vaš opis
+- redno objavljamo, da pokažemo aktivnost
+- odgovarjamo na ocene in gradimo zaupanje
 
-### 2. Dominacija Google Maps
+### Dominacija Google Maps
 
 Vaše podjetje uvrstimo v Google Maps z:
-- **Optimizacijo lokacijskih podatkov** in storitvenih območij
-- **Gradnjo lokalnih citatov** preko imenikov
-- **Doslednim NAP** (Ime, Naslov, Telefon) po vsem spletu
-- **Spodbujanjem ocen strank** in odgovarjanjem nanje
-- **Ustvarjanjem lokacijsko specifične vsebine** na vaši spletni strani
+- optimizacijo lokacijskih podatkov in storitvenih območij
+- gradnjo lokalnih citatov prek imenikov
+- doslednim NAP (Ime, Naslov, Telefon) po vsem spletu
+- spodbujanjem ocen strank in odgovarjanjem nanje
+- ustvarjanjem lokacijsko specifične vsebine na vaši spletni strani
 
-### 3. Ciljanje lokalnih ključnih besed
+### Ciljanje lokalnih ključnih besed
 
 Ciljamo na ključne besede, po katerih lokalne stranke dejansko iščejo:
-- **"[Storitev] v bližini"** iskanja
-- **"[Storitev] v [Mesto]"** iskanja
-- **"[Storitev] [Soseska]"** iskanja
-- **Nujna in nujna** iskanja storitev
-- **Primerjalna iskanja** ("najboljša [storitev] v [mesto]")
+- "[Storitev] v bližini" iskanja
+- "[Storitev] v [Mesto]" iskanja
+- "[Storitev] [Soseska]" iskanja
+- nujna iskanja storitev
+- primerjalna iskanja ("najboljša [storitev] v [mesto]")
 
-### 4. Upravljanje ocen
+### Upravljanje ocen
 
 Ocene so ključne za lokalno SEO. Pomagamo vam:
-- **Pridobiti več ocen** od zadovoljnih strank
-- **Odgovoriti na vse ocene** profesionalno
-- **Predstaviti ocene** na vaši spletni strani
-- **Učinkovito obravnavati negativne ocene**
-- **Zgraditi pozitiven ugled** sčasoma
+- pridobiti več ocen od zadovoljnih strank
+- odgovoriti na vse ocene profesionalno
+- predstaviti ocene na vaši spletni strani
+- učinkovito obravnavati negativne ocene
+- graditi pozitiven ugled sčasoma
 
-### 5. Vnosi v lokalne imenike
+### Vnosi v lokalne imenike
 
 Zagotavljamo, da je vaše podjetje navedeno na:
-- **Google Business Profile** (najpomembneje)
-- **Sektorskih imenikih** (Yelp, Angie's List, itd.)
-- **Lokalnih imenikih podjetij** (Gospodarska zbornica, itd.)
-- **Sektorskih združenjih** in strokovnih imenikih
-- **Platformah družbenih omrežij** (Facebook, LinkedIn, itd.)
+- Google Business Profile (najpomembneje)
+- sektorskih imenikih (Yelp, Angie's List, itd.)
+- lokalnih imenikih podjetij (Gospodarska zbornica, itd.)
+- sektorskih združenjih in strokovnih imenikih
+- platformah družbenih omrežij (Facebook, LinkedIn, itd.)
 
-### 6. Ustvarjanje lokalne vsebine
+### Ustvarjanje lokalne vsebine
 
 Ustvarjamo vsebino, ki cilja na lokalna iskanja:
-- **Lokacijsko specifične ciljne strani** za vsako storitveno območje
-- **Lokalne objave v blogu** o dogodkih in novicah skupnosti
-- **Študije primerov** z lokalnimi strankami
-- **Strani storitvenih območij** optimizirane za lokalne ključne besede
-- **Strani s pogostimi vprašanji**, ki odgovarjajo na lokalna vprašanja strank
+- lokacijsko specifične ciljne strani za vsako storitveno območje
+- lokalne objave v blogu o dogodkih in novicah skupnosti
+- študije primerov z lokalnimi strankami
+- strani storitvenih območij, optimizirane za lokalne ključne besede
+- strani s pogostimi vprašanji, ki odgovarjajo na lokalna vprašanja
 
 ## Katere rezultate lahko pričakujete?
 
 ### Vidnost Google Maps
 
 Večina strank vidi:
-- **Top 3 uvrstive** v Google Maps v 90 dneh
-- **Povečane oglede zemljevidov** in zahteve za navodila
-- **Več iskanj "v bližini"**, ki vodijo k vašemu podjetju
-- **Višje stopnje klikov** iz seznamov zemljevidov
+- top 3 uvrstive v Google Maps v 90 dneh
+- povečane oglede zemljevidov in zahteve za navodila
+- več iskanj "v bližini", ki vodijo k vašemu podjetju
+- višje stopnje klikov iz seznamov zemljevidov
 
 ### Telefonski klici in obiski
 
-Dobili boste:
 - **47 novih strank** v povprečju v prvih 90 dneh
-- **Več telefonskih klicev** iz lokalnih iskanj
-- **Povečane obiskovalce** za maloprodajne lokacije
-- **Več zahtev za storitve** za storitvena podjetja
+- več telefonskih klicev iz lokalnih iskanj
+- povečane obiskovalce za maloprodajne lokacije
+- več zahtev za storitve za storitvena podjetja
 
 ### Spletni ugled
 
-Vaš ugled se bo izboljšal:
-- **Več pozitivnih ocen** od zadovoljnih strank
-- **Višja povprečna ocena** na Googlu in drugih platformah
-- **Boljša stopnja odziva** na poizvedbe strank
-- **Povečano zaupanje** potencialnih strank
+- več pozitivnih ocen od zadovoljnih strank
+- višja povprečna ocena na Googlu in drugih platformah
+- boljša stopnja odziva na poizvedbe
+- povečano zaupanje potencialnih strank
 
 ## Pravi rezultati pravih strank
 
 ### Študija primera: Lokalno podjetje za vodovod
 
-**Izziv:** Lokalno podjetje za vodovod je bilo ujet na 5. strani Googla, nevidno strankam, ki iščejo vodovodne storitve na njihovem območju. Dobivali so le 2-3 klice na mesec iz spletnih iskanj.
+**Izziv:** Lokalno podjetje za vodovod je bilo na 5. strani Googla, nevidno strankam, ki iščejo vodovodne storitve. Dobivali so le 2-3 klice na mesec iz spletnih iskanj.
 
 **Rešitev:** Optimizirali smo njihov Google Business Profile, zgradili lokalne citate, ustvarili lokacijsko specifično vsebino in implementirali sistem za generiranje ocen.
 
@@ -140,9 +136,9 @@ Vaš ugled se bo izboljšal:
 
 ### Študija primera: Lokalna restavracija
 
-**Izziv:** Lokalna restavracija se ni pojavila, ko so ljudje iskali "najboljša restavracija v [mesto]" ali "večerja v bližini". Popolnoma so se zanašali na ustno propagando in obiskovalce, ki so prišli peš.
+**Izziv:** Lokalna restavracija se ni pojavila, ko so ljudje iskali "najboljša restavracija v [mesto]" ali "večerja v bližini". Zanašali so se izključno na ustno propagando in obiskovalce, ki so prišli peš.
 
-**Rešitev:** Optimizirali smo njihov Google Business Profile s fotografijami, menijskimi artikli in rednimi objavami. Zgradili smo tudi lokalne citate in spodbudili ocene strank.
+**Rešitev:** Optimizirali smo njihov Google Business Profile s fotografijami, menijskimi artikli in rednimi objavami. Zgradili smo lokalne citate in spodbudili ocene strank.
 
 **Rezultati:**
 - Top 3 uvrstitev za iskanja "restavracija v [mesto]"
@@ -152,93 +148,70 @@ Vaš ugled se bo izboljšal:
 
 ## Za koga je ta storitev?
 
-Naša storitev lokalnega SEO je popolna za:
+Naša storitev lokalnega SEO ustreza:
 
-✅ **Storitvena podjetja** (vodovodarji, električarji, izvajalci, HVAC, itd.)
-✅ **Lokalni trgovci** (trgovine, prodajalne, butiki)
-✅ **Restavracije in kavarne**, ki služijo lokalnim strankam
-✅ **Strokovne storitve** (odvetniki, računovodje, zdravniki, zobozdravniki)
-✅ **Domači storitveni ponudniki** (čiščenje, krajinska arhitektura, zatiranje škodljivcev)
-✅ **Vsako podjetje**, ki služijo strankam na določenem geografskem območju
+- storitvenim podjetjem (vodovodarji, električarji, izvajalci, HVAC, itd.)
+- lokalnim trgovcem (trgovine, prodajalne, butiki)
+- restavracijam in kavarnarn, ki služijo lokalnim strankam
+- strokovnim storitvam (odvetniki, računovodje, zdravniki, zobozdravniki)
+- domačim storitvenim ponudnikom (čiščenje, krajinska arhitektura, zatiranje škodljivcev)
+- vsakemu podjetju, ki streže strankam na določenem geografskem območju
 
 ## Kaj je vključeno v vaš paket lokalnega SEO?
 
 ### Upravljanje Google Business Profile
 
-- **Celovita optimizacija** vašega Google Business Profile
-- **Redne objave**, da ohranite vaš profil aktiven
-- **Optimizacija fotografij** in upravljanje
-- **Upravljanje vprašanj in odgovorov** in odgovori
-- **Posodobitve ur in storitev** po potrebi
+- celovita optimizacija vašega Google Business Profile
+- redne objave, da profil ostane aktiven
+- optimizacija in upravljanje fotografij
+- upravljanje vprašanj, odgovorov in komentarjev
+- posodobitve ur in storitev po potrebi
 
 ### Optimizacija lokalnega iskanja
 
-- **Raziskovanje lokalnih ključnih besed** in ciljanje
-- **Lokacijsko specifične ciljne strani** na vaši spletni strani
-- **Ustvarjanje lokalne vsebine** (objave v blogu, študije primerov)
-- **Doslednost NAP** preko vseh imenikov
-- **Implementacija lokalne oznake sheme**
+- raziskovanje lokalnih ključnih besed in ciljanje
+- lokacijsko specifične ciljne strani na vaši spletni strani
+- ustvarjanje lokalne vsebine (objave v blogu, študije primerov)
+- doslednost NAP prek vseh imenikov
+- implementacija lokalne oznake sheme
 
 ### Upravljanje ocen
 
-- **Sistem za generiranje ocen**, da dobite več ocen
-- **Odgovor na ocene** na vse ocene strank
-- **Sledenje ocenam** preko platform
-- **Strategije upravljanja ugleda**
-- **Predstavitev ocen** na vaši spletni strani
+- sistem za generiranje ocen
+- odgovor na vse ocene strank
+- sledenje ocenam prek platform
+- strategije upravljanja ugleda
+- predstavitev ocen na vaši spletni strani
 
 ### Lokalni citati
 
-- **Oddaje v imenike** na ustrezne platforme
-- **Doslednost NAP** preko vseh seznamov
-- **Optimizacija sektorskih imenikov**
-- **Vnosi lokalnih poslovnih združenj**
-- **Optimizacija profilov družbenih omrežij**
+- oddaje v imenike na ustrezne platforme
+- doslednost NAP prek vseh seznamov
+- optimizacija sektorskih imenikov
+- vnosi lokalnih poslovnih združenj
+- optimizacija profilov na družbenih omrežjih
 
 ### Poročanje in analitika
 
-- **Poročila o uvrstivah Google Maps**
-- **Sledenje vidnosti iskanja**
-- **Sledenje telefonskim klicem** iz lokalnih iskanj
-- **Sledenje ocenam** in analiza sentimenta
-- **Poročanje o ROI** s prikazom atribucije prihodkov
+- poročila o uvrstivah Google Maps
+- sledenje vidnosti iskanja
+- sledenje telefonskim klicem iz lokalnih iskanj
+- sledenje ocenam in analiza sentimenta
+- poročanje o ROI z atribucijo prihodkov
 
 ## Naložba in ROI
 
-Lokalno SEO je ena najbolj stroškovno učinkovitih marketinških strategij za lokalna podjetja. Večina strank vidi:
-- **ROI v 30-60 dneh** zaradi povečanih telefonskih klicev in obiskov
-- **47 novih strank** v povprečju v prvih 90 dneh
-- **Nižji stroški na stranko** kot plačljivo oglaševanje
-- **Trajnostni rezultati**, ki se sčasoma kopičijo
+Lokalno SEO je ena najbolj stroškovno učinkovitih marketinških strategij za lokalna podjetja. Večina strank vidi ROI v 30-60 dneh. Ko se enkrat uvrščate v Google Maps, to pozicijo ohranite z neprekinjeno optimizacijo — za razliko od plačljivih oglasov, ki prenehajo delovati, ko prenehate plačevati.
 
-Najboljše? Ko se uvrščate v Google Maps, to pozicijo ohranite z neprekinjeno optimizacijo, za razliko od plačljivih oglasov, ki prenehajo delovati, ko prenehate plačevati.
-
-## Zakaj je lokalno SEO pomembnejše kot kdaj koli prej
+## Zakaj je lokalno SEO danes tako pomembno
 
 - **76% iskanj na pametnih telefonih** za lokalna podjetja povzroči obisk v enem dnevu
 - **28% lokalnih iskanj** povzroči nakup
-- **Iskanja "v bližini"** so v zadnjih letih zrasla za 500%
-- **Google Business Profile** je brezplačen in lahko generira pomemben promet
+- iskanja "v bližini" so v zadnjih letih zrasla za 500%
+- Google Business Profile je brezplačen in generira pomemben promet
 
 Če se ne pojavljate v lokalnih rezultatih iskanja, izgubljate posel konkurentom, ki se pojavljajo.
 
-## Pripravljeni začeti?
-
-Če ste pripravljeni dominirati lokalno iskanje in se najti s strankami na vašem območju, začnimo z brezplačno revizijo lokalnega SEO. Analizirali bomo vašo trenutno prisotnost lokalnega iskanja, identificirali priložnosti in vam pokazali, kako vam lahko pomagamo dobiti več strank.
+Začnimo z brezplačno revizijo lokalnega SEO. Analizirali bomo vašo trenutno prisotnost, identificirali priložnosti in vam pokazali, kako pridobiti več strank.
 
 [Pridobite brezplačno revizijo lokalnega SEO →](/contact/)
-
----
-
-**Naslednji koraki:**
-1. Načrtujte svojo brezplačno revizijo lokalnega SEO
-2. Pregledajte svojo prilagojeno strategijo lokalnega SEO
-3. Začnite se uvrščati v Google Maps in dobivati več strank
-
-
-
-
-
-
-
-

@@ -35,7 +35,7 @@ Tradicionalne agencije potrebujejo tedne za nov kreativni material. Ko gre v ži
 
 ## Kako AI kreativni sistem deluje
 
-### 1. Podatkovno podprt briefing
+### Podatkovno podprt briefing
 
 Analiziramo vaše pretekle podatke o kampanjah in jih kombiniramo z vpogledi specifičnimi za panogo iz $35 mrd.+ oglaševalskih podatkov:
 
@@ -43,31 +43,31 @@ Analiziramo vaše pretekle podatke o kampanjah in jih kombiniramo z vpogledi spe
 - Kateri vizualni stili delujejo v vaši panogi?
 - Kateri pozivi k dejanju konvertirajo pri vaši cenovni ravni?
 
-### 2. AI produkcija: 8–12 variant tedensko
+### AI produkcija: 8–12 variant tedensko
 
 Na podlagi briefinga naša AI tedensko generira celotno zbirko kreativnih materialov:
 
-- Statični slikovni oglasi (1:1, 9:16, 16:9)
-- Video Reeli in zgodbe (15s, 30s, 60s)
-- Vrtilni oglasi z dinamičnimi elementi
+- statični slikovni oglasi (1:1, 9:16, 16:9)
+- video Reeli in zgodbe (15s, 30s, 60s)
+- vrtilni oglasi z dinamičnimi elementi
 - A/B variante za naslov, vizual in poziv k dejanju
 
-### 3. Ocenjevanje kreativ pred objavo
+### Ocenjevanje kreativ pred objavo
 
 Preden se porabi en cent, naša AI oceni vsak kreativni material:
 
-- Napoved CTR glede na referenčno vrednost
-- Verjetnost konverzije za vašo ciljno skupino
-- Priporočilo: skaliranje, testiranje ali zaustavitev
-- V živo gredo samo dokazani zmagovalci
+- napoved CTR glede na referenčno vrednost
+- verjetnost konverzije za vašo ciljno skupino
+- priporočilo: skaliranje, testiranje ali zaustavitev
+- v živo gredo samo dokazani zmagovalci
 
-### 4. Neprekinjeno optimiziranje
+### Neprekinjeno optimiziranje
 
 Vsak teden se sistem uči:
 
-- Kateri kreativni materiali dosegajo boljše rezultate od napovedi?
-- Kateri elementi — barva, naslov, poziv k dejanju — poganjajo konverzije?
-- Kako se razvija ciljna skupina?
+- kateri kreativni materiali dosegajo boljše rezultate od napovedi
+- kateri elementi — barva, naslov, poziv k dejanju — poganjajo konverzije
+- kako se razvija ciljna skupina
 
 ## Dokazani rezultati
 

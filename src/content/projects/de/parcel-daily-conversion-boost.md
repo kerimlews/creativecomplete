@@ -33,17 +33,17 @@ faq:
 
 ## Zusammenfassung
 
-Ein Kurier- und E-Commerce-Logistikunternehmen generierte erhebliches Lead-Volumen aus Meta- und TikTok-Anzeigen — aber die Konversion war schlecht. Fragmentierte Abläufe, Spam aus Anzeigenkampagnen und manuelle Datenerfassung fraßen die Marge. AI Customer System vereinheitlichte den gesamten Funnel, setzte KI-Agenten für Lead-Qualifizierung und Datenerfassung ein, integrierte Konversionssignale zurück in Meta und TikTok und erzielte innerhalb von 90 Tagen eine 60%ige Konversionssteigerung.
+Ein Kurier- und E-Commerce-Logistikunternehmen generierte erhebliches Lead-Volumen aus Meta- und TikTok-Anzeigen — konvertierte aber nur einen Bruchteil davon. Fragmentierte Abläufe, Spam aus Anzeigenkampagnen und manuelle Datenerfassung fraßen die Marge. AI Customer System vereinheitlichte den gesamten Funnel, setzte KI-Agenten für Lead-Qualifizierung und Datenerfassung ein, integrierte Konversionssignale zurück in Meta und TikTok und erzielte innerhalb von 90 Tagen eine **60%ige Konversionssteigerung**.
 
 ## Das Problem: Lead-Volumen ohne Konversionsinfrastruktur
 
-Die Anzeigenstrategie des Unternehmens funktionierte auf Anzeigenebene — die Kampagnen generierten Klicks und Formulareinsendungen in großem Umfang. Aber der Konversionsfunnel nach dem Klick war kaputt.
+Die Anzeigenstrategie funktionierte auf Anzeigenebene — die Kampagnen generierten Klicks und Formulareinsendungen. Aber der Konversionsfunnel nach dem Klick war kaputt.
 
-**Drei zusammenwirkende Probleme:**
+Drei zusammenwirkende Probleme:
 
-1. **Fragmentierte Teams**: Marketing, Vertrieb und Support arbeiteten in separaten Tools ohne gemeinsamen Kontext
-2. **Hohes Spam-Volumen**: Lead-Anzeigen auf Facebook und TikTok ziehen einen erheblichen Anteil unqualifizierter Einsendungen an
-3. **Manuelle Datenerfassung**: Jede Kurieranfrage erforderte das Sammeln derselben Informationen — Herkunft, Ziel, Abmessungen, Gewicht, Zeitplan, Volumen
+1. Fragmentierte Teams: Marketing, Vertrieb und Support arbeiteten in separaten Tools ohne gemeinsamen Kontext
+2. Hohes Spam-Volumen: Lead-Anzeigen auf Facebook und TikTok ziehen einen erheblichen Anteil unqualifizierter Einsendungen an
+3. Manuelle Datenerfassung: Jede Kurieranfrage erforderte das Sammeln derselben Informationen — Herkunft, Ziel, Abmessungen, Gewicht, Zeitplan, Volumen
 
 ## Die AI Customer System Lösung
 
@@ -57,7 +57,7 @@ Wir setzten KI-Agenten an der Spitze des Funnels ein. Innerhalb von 60 Sekunden 
 
 ### Schritt 3: Meta Conversion API + TikTok Lower Funnel Events
 
-Durch die Rücksendung von Konversionssignalen an Meta und TikTok — insbesondere Signale von Leads, die zu Kunden konvertierten — konnten die Werbealgorithmen für ähnliche Profile optimieren. Die Kosten pro Lead sanken um 10%. Das Volumen beider Plattformen stieg um 35%.
+Wir sendeten Konversionssignale zurück an Meta und TikTok — insbesondere von Leads, die zu Kunden konvertierten. Dadurch konnten die Werbealgorithmen für ähnliche Profile optimieren. Die Kosten pro Lead sanken um **10%**. Das Volumen beider Plattformen stieg um **35%**.
 
 ### Schritt 4: Automatisierte Datenerfassung
 

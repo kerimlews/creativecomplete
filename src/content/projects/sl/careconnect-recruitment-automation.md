@@ -22,143 +22,130 @@ faq:
     answer: "Oboje. Spletna stran pritegne potencialne stranke preko naše [storitve za oblikovanje spletnih strani](/services/web-design/), platforma jih pretvori preko [avtomatizacije](/services/automation/). Eno brez drugega je zapravljen potencial."
 ---
 
-## TL;DR
+## Povzetek
 
-Švicarsko zdravstveno zaposlovanje je bilo ujeto v kameno dobo - ročni procesi, neskončno papirja in nezanesljivo sledenje kandidatom. Zgradili smo CareConnect: prilagojeno platformo z MERN stack (MongoDB, Express.js, React, Node.js), ki je nameščena na AWS in avtomatizira upravljanje kandidatov, medtem ko je naša SEO strategija postavila podjetje na #1 za vsak ključen iskalni izraz. Rezultat: 245% povečanje prometa, 90% zmanjšanje administrativnega dela in popolna prevlada na trgu.
+Švicarsko zdravstveno zaposlovanje je bilo ujeto v kameno dobo — ročni procesi, neskončno papirja in nezanesljivo sledenje kandidatom. Zgradili smo CareConnect: prilagojeno platformo z MERN stack (MongoDB, Express.js, React, Node.js), nameščeno na AWS, ki avtomatizira upravljanje kandidatov. Naša SEO strategija je podjetje postavila na #1 za vsak ključen iskalni izraz. Rezultat: **245 %** povečanje prometa, **90 %** zmanjšanje administrativnega dela in jasna prevlada na trgu.
 
 ## Misija
 
-CareConnect je vstopil na švicarski trg z jasno misijo: zaposliti zdravstvene delavce, ki so pripravljeni nuditi popolno pomoč in jim najti boljše umestitve. Toda uvedba nove blagovne znamke na konkurenčnem trgu je zahtevala več kot le spletno stran—potrebno je bilo popolno digitalno ekosistem.
+CareConnect je vstopil na švicarski trg z jasno misijo: zaposliti zdravstvene delavce, pripravljene nuditi popolno pomoč, in jim najti boljše umestitve. Toda uvedba nove blagovne znamke na konkurenčnem trgu je zahtevala več kot le spletno stran — potrebovali so celoten digitalni ekosistem.
 
 ## Izzivi, ki smo jih rešili
 
 ### Izziv 1: Oblikovanje logotipa in identitete blagovne znamke
 
-**Problem:** Kot nova blagovna znamka, ki vstopa na švicarski trg zaposlovanja v zdravstvu, je CareConnect potreboval profesionalno, zaupanja vredno identiteto blagovne znamke, ki bi odmevala pri zdravstvenih delavcih in bolnišničnih administratorjih.
+Kot nova blagovna znamka, ki vstopa na švicarski trg zaposlovanja v zdravstvu, je CareConnect potreboval profesionalno identiteto, ki bi odmevala pri zdravstvenih delavcih in bolnišničnih administratorjih.
 
-**Naša rešitev:** Oblikovali smo popoln sistem identitete blagovne znamke z uporabo Figme, ki se osredotoča na:
-- **Profesionalno zdravstveno estetiko**, ki gradi zaupanje
-- **Švicarska načela oblikovanja** (čisto, minimalno, natančno)
-- **Vsestranski sistem logotipov**, ki deluje na vseh stičnih točkah
-- **Barvna paleta**, ki izraža skrb, profesionalnost in zanesljivost
+Oblikovali smo sistem identitete blagovne znamke z Figmo:
+- zdravstvena estetika, ki gradi zaupanje
+- švicarska načela oblikovanja — čisto, minimalno, natančno
+- vsestranski sistem logotipov za vse stične točke
+- barvna paleta, ki izraža skrb, profesionalnost in zanesljivost
 
-Logotip in identiteta blagovne znamke sta postala temelj za vse marketinške materiale in ustvarila konsistentno prepoznavnost blagovne znamke na švicarskem trgu.
+Logotip in identiteta sta postala temelj vseh marketinških materialov in ustvarila prepoznavnost na švicarskem trgu.
 
 ### Izziv 2: SEO arhitektura spletne strani
 
-**Problem:** CareConnect je moral doseči #1 uvrstitev za zelo konkurenčne ključne besede za zaposlovanje v zdravstvu v Švici. Brez ustrezne SEO arhitekture bi bili nevidni za kandidate, ki iščejo priložnosti.
+CareConnect je moral doseči #1 uvrstitev za konkurenčne ključne besede za zaposlovanje v zdravstvu v Švici. Brez ustrezne SEO arhitekture bi bili nevidni za kandidate, ki iščejo priložnosti.
 
-**Naša rešitev:** Zgradili smo SEO-prvo arhitekturo spletne strani z uporabo Astro za optimalno zmogljivost:
-- **Strateško preslikavo ključnih besed** za "medicinske sestre v Švico", "zdravstvena delovna mesta Švica" in sorodne izraze
-- **Semantično HTML strukturo**, ki jo iskalniki razumejo
-- **Strategijo notranjih povezav**, ki povezuje sorodno vsebino
-- **Hitro nalaganje strani** (pod 2 sekundi) za boljše uvrstive
-- **Prvo mobilno odzivno oblikovanje**, saj 70% kandidatov išče na mobilnih napravah
+Zgradili smo SEO-prvo arhitekturo z Astro za optimalno zmogljivost:
+- strateška preslikava ključnih besed za "medicinske sestre v Švico", "zdravstvena delovna mesta Švica" in sorodne izraze
+- semantična HTML struktura, ki jo iskalniki razumejo
+- strategija notranjih povezav med sorodno vsebino
+- hitro nalaganje strani (pod 2 sekundi) za boljše uvrstitve
+- odzivno mobilno oblikovanje, saj 70 % kandidatov išče na mobilnih napravah
 
-Ta arhitektura, skupaj z našim pristopom [SEO storitve](/services/seo/), je privedla do #1 uvrstitev za vse primarne iskalne izraze v 90 dneh.
+Ta arhitektura je v 90 dneh pripeljala do #1 uvrstitev za vse primarne iskalne izraze.
 
 ### Izziv 3: Oblikovanje spletne strani
 
-**Problem:** Spletna stran je morala pretvoriti obiskovalce v kandidate, hkrati pa zgraditi zaupanje v novo blagovno znamko. Generične predloge ne bi delovale za specializirano platformo za zaposlovanje v zdravstvu.
+Spletna stran je morala obiskovalce pretvoriti v kandidate in hkrati zgraditi zaupanje v novo blagovno znamko.
 
-**Naša rešitev:** Oblikovali smo spletno stran, osredotočeno na konverzijo, z uporabo Reacta in sodobnih načel oblikovanja spletnih strani:
-- **Jasne prednosti vrednosti** za kandidate in bolnišnice
-- **Elementi za gradnjo zaupanja** (priporočila, certifikati, transparentnost procesa)
-- **Strateška postavitev CTA**, ki vodi obiskovalce k prijavi
-- **Mobilno optimizirana izkušnja**, ki zagotavlja nemoteno prijavo na kateri koli napravi
-- **Hitra zmogljivost** z optimiziranimi React komponentami in AWS CDN
+Oblikovali smo stran z React in sodobnimi načeli oblikovanja:
+- jasne prednosti za kandidate in bolnišnice
+- elementi zaupanja — priporočila, certifikati, transparentnost procesa
+- strateška postavitev CTA, ki vodi obiskovalce k prijavi
+- mobilna izkušnja, ki zagotavlja nemoteno prijavo na kateri koli napravi
+- hitra zmogljivost z optimiziranimi React komponentami in AWS CDN
 
-Proces oblikovanja je sledil naši metodologiji [oblikovanja spletnih strani](/services/web-design/), ki se osredotoča na optimizacijo konverzij namesto le na estetiko.
+Proces je sledil naši metodologiji [oblikovanja spletnih strani](/services/web-design/), ki se osredotoča na konverzije.
 
-### Izziv 4: Kontaktni obrazec - Podroben sistem prijav
+### Izziv 4: Podroben sistem prijav
 
-**Problem:** Standardni kontaktni obrazci ne delujejo za zaposlovanje. CareConnect je potreboval podroben prijavni obrazec, ki bi jim pomagal najti prave kandidate, hkrati pa zbral vse potrebne informacije vnaprej.
+Standardni kontaktni obrazci za zaposlovanje ne zadostujejo. CareConnect je potreboval večstopenjski prijavni obrazec, ki zbere vse potrebne informacije vnaprej.
 
-**Naša rešitev:** Zgradili smo večstopenjski, inteligenten prijavni obrazec:
-- **Postopna razkritja**, ki obrazec razbije na logične odseke
-- **Pogojna logika**, ki prikaže relevantna polja glede na odgovore kandidatov
-- **Sistem za nalaganje datotek** za življenjepise, certifikate in dokumente
-- **Validacija in obravnava napak**, ki zagotavlja kakovost podatkov
-- **Integracija z CRM**, tako da prijave neposredno tečejo v upravljalni sistem
+Zgradili smo inteligentni prijavni obrazec:
+- postopna razkritja, ki obrazec razdelijo na logične odseke
+- pogojna logika, ki prikaže relevantna polja glede na odgovore kandidatov
+- nalaganje datotek za življenjepise, certifikate in dokumente
+- validacija in obravnava napak za kakovost podatkov
+- integracija s CRM, tako da prijave tečejo neposredno v upravljalni sistem
 
-Obrazec je zmanjšal opustitve prijav za 60% v primerjavi s tradicionalnimi enostranskimi obrazci, hkrati pa zbral obsežnejše podatke kandidatov.
+Obrazec je zmanjšal opustitve prijav za 60 % in hkrati zbral obsežnejše podatke kandidatov.
 
-### Izziv 5: CRM - Prilagojena upravljalna rešitev
+### Izziv 5: Prilagojena upravljalna rešitev (CRM)
 
-**Problem:** Generični CRM-ji ne delujejo za delovne tokove zaposlovanja. CareConnect je potreboval prilagojeno rešitev za pregled prijav, sledenje poti kandidatov in upravljanje umestitev.
+Generični CRM-ji ne ustrezajo delovnim tokovom zaposlovanja. CareConnect je potreboval rešitev za pregled prijav, sledenje poti kandidatov in upravljanje umestitev.
 
-**Naša rešitev:** Zgradili smo prilagojen CRM z Node.js, MongoDB in Reactom:
-- **Nadzorna plošča za pregled prijav** z ocenjevanjem in filtriranjem kandidatov
-- **Upravljanje cevovoda kandidatov**, ki sledi vsakemu kandidatu skozi faze
-- **Avtomatiziran sistem ujemanja**, ki povezuje kandidate z zahtevami bolnišnic
-- **Upravljanje dokumentov**, ki shranjuje življenjepise, certifikate in pogodbe
-- **Sledenje komunikacije**, ki beleži vse interakcije s kandidati in bolnišnicami
-- **Poročanje in analitika**, ki prikazuje stopnje uspešnosti umestitev in ozka grla
+Zgradili smo CRM z Node.js, MongoDB in React:
+- nadzorna plošča z ocenjevanjem in filtriranjem kandidatov
+- upravljanje cevovoda, ki sledi vsakemu kandidatu skozi faze
+- avtomatiziran sistem ujemanja kandidatov z zahtevami bolnišnic
+- upravljanje dokumentov — življenjepisi, certifikati, pogodbe
+- sledenje komunikacije z vsemi kandidati in bolnišnicami
+- poročanje, ki prikazuje stopnje uspešnosti umestitev in ozka grla
 
-Ta prilagojen CRM, zgrajen z našo strokovno znanjem [avtomatizacije](/services/automation/), je odpravil 90% ročnega administrativnega dela.
+Ta CRM, zgrajen z našim znanjem [avtomatizacije](/services/automation/), je odpravil 90 % ročnega administrativnega dela.
 
-### Izziv 6: Ustvarjanje vsebine - Tedensko objavljanje bloga
+### Izziv 6: Tedensko objavljanje bloga
 
-**Problem:** CareConnect je moral vzpostaviti avtoriteto na švicarskem trgu zaposlovanja v zdravstvu in se uvrstiti za dolge ključne besede. To je zahtevalo konsistentno, vredno vsebino.
+CareConnect je moral vzpostaviti avtoriteto na švicarskem trgu zaposlovanja in se uvrstiti za dolge ključne besede.
 
-**Naša rešitev:** Implementirali smo sistem za ustvarjanje in objavljanje vsebine:
-- **Koledar vsebine**, ki načrtuje teme 3 mesece vnaprej
-- **SEO optimizirani blog prispevki**, ki ciljajo na dolge ključne besede
-- **Avtomatiziran delovni tok objavljanja** z Node.js in MongoDB
-- **Predloge vsebine**, ki zagotavljajo konsistentnost in kakovost
-- **Strategija notranjih povezav**, ki povezuje blog prispevke s storitvenimi stranmi
+Implementirali smo sistem za ustvarjanje vsebine:
+- vsebinski koledar s temami 3 mesece vnaprej
+- SEO optimizirani blog prispevki za dolge ključne besede
+- avtomatiziran delovni tok objavljanja z Node.js in MongoDB
+- predloge vsebine za konsistentnost in kakovost
+- strategija notranjih povezav med blog prispevki in storitvenimi stranmi
 
-Tedenska vsebina bloga je privedla 40% organskega prometa in vzpostavila CareConnect kot avtoriteto v švicarskem zaposlovanju v zdravstvu.
+Tedenska vsebina bloga je privabila 40 % organskega prometa in postavila CareConnect kot avtoriteto v švicarskem zaposlovanju v zdravstvu.
 
-### Izziv 7: E-poštni marketing - Avtomatizirane e-poštne sekvence
+### Izziv 7: Avtomatizirane e-poštne sekvence
 
-**Problem:** Ročno sledenje e-pošte je bilo časovno zahtevno in nedosledno. CareConnect je potreboval avtomatizirane e-poštne sekvence za negovanje kandidatov, opomnike za intervjuje in sledenje umestitvam.
+Ročno sledenje e-pošte je bilo zamudno in nedosledno. CareConnect je potreboval avtomatizirane sekvence za negovanje kandidatov, opomnike in sledenje umestitvam.
 
-**Naša rešitev:** Zgradili smo avtomatiziran e-poštni marketing z AWS SES in prilagojeno Node.js avtomatizacijo:
-- **Dobrodošle sekvence** za nove kandidate
-- **Opomniki za intervjuje**, ki zmanjšujejo neprisotnost za 45%
-- **Sledenje umestitvam**, ki zagotavlja zadovoljstvo kandidatov
-- **Kampanje za ponovno aktivacijo** za neaktivne kandidate
-- **Personalizirana vsebina** na podlagi profila in faze kandidata
+Zgradili smo avtomatiziran e-poštni marketing z AWS SES in Node.js:
+- dobrodošle sekvence za nove kandidate
+- opomniki za intervjuje, ki zmanjšujejo neprisotnost za 45 %
+- sledenje umestitvam za zadovoljstvo kandidatov
+- kampanje za ponovno aktivacijo neaktivnih kandidatov
+- personalizirana vsebina glede na profil in fazo kandidata
 
-Avtomatiziran e-poštni sistem, del naše storitve [avtomatizacije](/services/automation/), je prihranil 15 ur tedensko, hkrati pa izboljšal angažiranost kandidatov.
+Sistem je prihranil 15 ur tedensko in izboljšal angažiranost kandidatov.
 
 ## Tehnični stack
 
-Zgradili smo CareConnect z uporabo sodobnih, skalabilnih tehnologij:
+CareConnect smo zgradili z modernimi, skalabilnimi tehnologijami:
 
-- **Frontend:** React za glavno spletno stran, Astro za SEO optimizirane strani
-- **Backend:** Node.js z Express.js za razvoj API-jev
-- **Podatkovna baza:** MongoDB za prilagodljivo shranjevanje dokumentov
-- **Oblakovna infrastruktura:** AWS (EC2, S3, SES) za skalabilno gostovanje
-- **Orodja za oblikovanje:** Figma za UI/UX oblikovanje
-- **Arhitektura:** MERN stack za full-stack razvoj
+- Frontend: React za glavno spletno stran, Astro za SEO optimizirane strani
+- Backend: Node.js z Express.js
+- Podatkovna baza: MongoDB
+- Oblakovna infrastruktura: AWS (EC2, S3, SES)
+- Orodja za oblikovanje: Figma
+- Arhitektura: MERN stack
 
-Ta stack, podoben našemu pristopu [razvoja SaaS](/services/saas-development/), zagotavlja skalabilnost, zanesljivost in vzdržljivost.
+## Rezultati
 
-## Rezultati: Od papirja do dobička
+- **245 %** povečanje kvalificiranega prometa iz SEO
+- **#1 uvrstitve** za vse primarne iskalne izraze ("medicinske sestre v Švico", "zdravstvena delovna mesta Švica")
+- **90 %** zmanjšanje administrativne obremenitve z avtomatizacijo
+- **3× več umestitev** z enako velikostjo ekipe
+- Rekruterji se zdaj posvečajo odnosom, ne papirju
+- 5-zvezdna verificirana ocena stranke
 
-- **245% povečanje** kvalificiranega prometa iz SEO
-- **#1 uvrstive** za vse primarne iskalne izraze ("medicinske sestre v Švico", "zdravstvena delovna mesta Švica")
-- **90% zmanjšanje** administrativne obremenitve z avtomatizacijo
-- **3x več umestitev** z enako velikostjo ekipe
-- **Rekruterji se zdaj osredotočajo** na odnose, ne na papir
-- **5-zvezdna verificirana** zadovoljstvo strank
+## Storitve, uporabljene v tem projektu
 
-## Povezane storitve
-
-Ta projekt je združil več storitev, ki jih ponujamo:
-
-- **[SEO storitev](/services/seo/)** - Prevladala nad iskalnimi rezultati za ključne besede zaposlovanja v zdravstvu
-- **[Oblikovanje spletnih strani](/services/web-design/)** - Zgradila spletno stran, osredotočeno na konverzijo, z Reactom in Astro
-- **[Avtomatizacija](/services/automation/)** - Avtomatizirala delovne tokove CRM in e-poštni marketing
-- **[Razvoj SaaS](/services/saas-development/)** - Zgradila prilagojen CRM z MERN stack na AWS
-
-## Bi lahko bilo vaše storitveno podjetje avtomatizirano?
-
-Če vaša ekipa porabi več časa za administracijo kot za dejansko izvajanje storitev, zapravljate denar.
-
-**Specializirani smo za avtomatizacijo storitvenih podjetij.** Če ste pripravljeni nehati biti procesor papirja in začeti biti lastnik podjetja...
-
-**Kontaktirajte nas za našo revizijo avtomatizacije storitev.** Pokazali vam bomo točno, kateri procesi vas stanejo čas in denar.
-
+- [SEO storitev](/services/seo/) — uvrstitev na vrh za ključne besede zaposlovanja v zdravstvu
+- [Oblikovanje spletnih strani](/services/web-design/) — konverzijska spletna stran z React in Astro
+- [Avtomatizacija](/services/automation/) — delovni tokovi CRM in e-poštni marketing
+- [Razvoj SaaS](/services/saas-development/) — prilagojen CRM z MERN stack na AWS

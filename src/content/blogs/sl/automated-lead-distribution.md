@@ -43,7 +43,7 @@ Matematika je preprosta: hitrejše usmerjanje = hitrejši prvi odziv = višja st
 
 Avtomatizirana distribucija leadov ni ena sama nastavitev. Je plastni sistem pravil, ki skupaj postavijo pravi lead pred pravo osebo ob pravem trenutku. Tukaj je sedem pravil, ki najbolj štejejo.
 
-### 1. Usmerjanje glede na razpoložljivost agenta
+### Usmerjanje glede na razpoložljivost agenta
 
 ![Usmerjanje glede na razpoložljivost — leadi se usmerjajo samo k spletnim agentom, nikoli k offline predstavnikom](/images/blog/routing/01-availability.svg)
 
@@ -51,7 +51,7 @@ Prvo pravilo, ki ga potrebuje vsaka ekipa. Usmerjanje glede na razpoložljivost 
 
 Ta ena sprememba odpravi najpogostejši vzrok za izgubljene leade: sporočilo, ki pristane pri nekom, ki ga ne bo videl tri ure.
 
-### 2. Round Robin usmerjanje
+### Round Robin usmerjanje
 
 ![Round Robin usmerjanje — enakomerna distribucija leadov skozi vsakega razpoložljivega agenta v zaporedju](/images/blog/routing/02-round-robin.svg)
 
@@ -59,33 +59,33 @@ Ko je razpoložljivost obvladana, Round Robin zagotovi pravično distribucijo. V
 
 Round Robin tudi hitreje izpostavi podatke o zmogljivosti. Ko vsak predstavnik dobi približno enak obseg, razlike v stopnji konverzije postanejo agent-gnane — ne distribucijsko-gnane.
 
-### 3. Usmerjanje na podlagi veščin
+### Usmerjanje na podlagi veščin
 
 ![Usmerjanje na podlagi veščin — tehnične poizvedbe se ujemajo s specialisti, ne z generalisti](/images/blog/routing/03-skill-based.svg)
 
-Niso vsi leadi enaki, in niso vsi agenti enako primerni za vsak lead. Usmerjanje na podlagi veščin ujema kompleksnost in temo poizvedbe z agentom, ki je najbolje opremljen za obravnavo.
+Niso vsi leadi enaki, in niso vsi agenti enako primerni za vsak lead. Usmerjanje na podlagi veščin ujame kompleksnost in temo poizvedbe z agentom, ki je najbolje opremljen za obravnavo.
 
-Tehnična vprašanja o produktih gredo tehničnim specialistom. Pogovori o cenah in pogodbah se usmerjajo k [seniornim closerjem](/sl/blog/ai-prodajni-agenti/). Poizvedbe o onboardingu gredo Customer Successu. Lead dobi pravi odgovor od prave osebe pri prvem stiku — kar je natanko zakaj je usmerjanje na podlagi veščin primarni gonilnik te **94% hitrejše stopnje razrešitve**.
+Tehnična vprašanja o produktih gredo tehničnim specialistom. Pogovori o cenah in pogodbah se usmerjajo k [seniornim closerjem](/sl/blog/ai-prodajni-agenti/). Poizvedbe o onboardingu gredo Customer Successu. Lead dobi pravi odgovor od prave osebe pri prvem stiku — kar je natanko zakaj je usmerjanje na podlagi veščin primarni gonilnik **94% hitrejše stopnje razrešitve**.
 
-### 4. Usmerjanje na podlagi jezika
+### Usmerjanje na podlagi jezika
 
 ![Usmerjanje na podlagi jezika — francoska potencialna stranka takoj pristane pri maternem francosko govorečem predstavniku](/images/blog/routing/04-language-based.svg)
 
-To je najmanj uporabljeno pravilo usmerjanja v mednarodnih ekipah in ena najbolj učinkovitih sprememb, ki jih lahko naredite.
+To je najmanj uporabljeno pravilo usmerjanja v mednarodnih ekipah in ena najučinkovitejših sprememb, ki jih lahko naredite.
 
 Potencialna stranka, ki piše po slovensko in dobi slovensko govorečega predstavnika, ima bistveno drugačno izkušnjo kot tista, ki se mora prebijati skozi nerodne prevode. Jezikovno usklajeni pogovori se zaključijo hitreje, povzročijo manj nesporazumov in producirajo konsistentno višje ocene zadovoljstva.
 
 Za podjetja, ki delujejo na več trgih — tudi le na dveh ali treh — lahko samo jezikovno usmerjanje pomeni dvomestne odstotne točke stopnje konverzije.
 
-### 5. Usmerjanje po tipu stranke
+### Usmerjanje po tipu stranke
 
 ![Usmerjanje po tipu stranke — novi leadi, vračajoče se stranke in VIP-ji se vsak usmerijo k pravi ekipi](/images/blog/routing/05-customer-type.svg)
 
 Novi leadi, vračajoče se stranke in VIP-ji vsak zahteva drugačen pristop. Usmerjanje po tipu stranke prepozna, kdo je lead, preden ga dodeli, in ga pošlje ekipi, zgrajeni za ta pogovor.
 
-VIP stranke se usmerjajo k vaši account management ekipi. Vračajoče se stranke s servisno težavo gredo k vašim namenskim podpornim predstavnikom, ki že imajo njihovo zgodovino. Novi prihajajoči leadi gredo k vaši ekipi za pridobivanje. Vsak kontakt je obravnavan na ravni, ki si jo zasluži njihov odnos z vami.
+VIP stranke se usmerjajo k vaši account management ekipi. Vračajoče se stranke s servisno težavo gredo k vašim namenskim podpornim predstavnikom, ki že imajo njihovo zgodovino. Novi prihajajoči leadi gredo k vaši ekipi za pridobivanje. Vsak kontakt je obravnavan na ravni, ki si jo zasluži glede na odnos z vami.
 
-### 6. Usmerjanje na podlagi izmen
+### Usmerjanje na podlagi izmen
 
 ![Usmerjanje na podlagi izmen — 24/7 pokritost s samodejnimi predajami ekipe čez jutranje, dnevne in nočne izmene](/images/blog/routing/06-shift-based.svg)
 
@@ -93,7 +93,7 @@ Podjetja, ki delujejo skozi časovne pasove ali podaljšane ure, potrebujejo log
 
 Lead, ki prispe ob 2:00 zjutraj, se usmeri k vaši nočni ekipi. Isti tip leada ob 9:00 prizadene vašo jutranjo izmeno. Brez vrzeli, brez "mislil sem, da to pokriva nekdo drug", brez izgubljenih priložnosti zaradi slepih pik urnika.
 
-### 7. Usmerjanje na podlagi funkcije
+### Usmerjanje na podlagi funkcije
 
 ![Usmerjanje na podlagi funkcije — prodajni leadi gredo v prodajo, podporni v podporo, account leadi v Account Management](/images/blog/routing/07-function-based.svg)
 

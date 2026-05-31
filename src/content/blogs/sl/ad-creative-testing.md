@@ -35,13 +35,13 @@ Tukaj je okvir.
 
 Najpogostejše napake pri testiranju kreativ — in zakaj proizvajajo slabe podatke:
 
-**Premalo testiranih različic.** Tri različice kreativ in razglasitev zmagovalca je kot intervju treh kandidatov za delo, ko najboljša oseba sploh ni bila intervjuvana. Zmagovalec v testu s 3 različicami je najboljši od treh, ne najboljši možni. Z 20 različicami najdete pravega zmagovalca.
+Premalo testiranih različic. Tri različice kreativ in razglasitev zmagovalca je kot intervju treh kandidatov za delo, ko najboljša oseba sploh ni bila intervjuvana. Zmagovalec v testu s 3 različicami je najboljši od treh, ne najboljši možni. Z 20 različicami najdete pravega zmagovalca.
 
-**Testiranje več spremenljivk hkrati.** Sprememba slike, naslova in CTA hkrati pomeni, da ne morete vedeti, kaj je povzročilo razliko v zmogljivosti. Če Različica A prekaša Različico B, je to slika? Naslov? Ne morete reči. Testirajte eno spremenljivko na eksperiment.
+Testiranje več spremenljivk hkrati. Sprememba slike, naslova in CTA hkrati pomeni, da ne morete vedeti, kaj je povzročilo razliko v zmogljivosti. Če Različica A prekaša Različico B, je to slika? Naslov? Ne morete reči. Testirajte eno spremenljivko na eksperiment.
 
-**Prezgodnja zaustavitev testov.** Kreativa, ki dobro deluje v prvih 48 urah, to morda počne zaradi pristranskosti učenja platforme, ne prave zmogljivosti. Ustavitev pred statistično značilnostjo proizvede lažne zmagovalce, ki razpadejo, ko jih skalirate.
+Prezgodnja zaustavitev testov. Kreativa, ki dobro deluje v prvih 48 urah, to morda počne zaradi pristranskosti učenja platforme, ne prave zmogljivosti. Ustavitev pred statistično značilnostjo proizvede lažne zmagovalce, ki razpadejo, ko jih skalirate.
 
-**Premalo proračuna na različico.** 500 € razdeljeno na 10 različic da vsaki različici 50 € — premalo podatkov za kakršen koli zaključek. Dodelitev proračuna mora ustrezati testni strukturi.
+Premalo proračuna na različico. 500 € razdeljeno na 10 različic da vsaki različici 50 € — premalo podatkov za kakršen koli zaključek. Dodelitev proračuna mora ustrezati testni strukturi.
 
 ## 4-fazni okvir testiranja kreativ
 
@@ -59,9 +59,9 @@ Vnaprejšnje ocenjevanje ne odpravi testiranja. Odpravi pa najslabše izvajalce,
 
 Vseh 20 različic ne gre v zrak hkrati. Testna struktura je odvisna od vašega proračuna:
 
-- **Nizek proračun (1.000–3.000 €/mesec):** Testirajte 3–5 različic hkrati, cikel vsaka 2 tedna
-- **Srednji proračun (3.000–15.000 €/mesec):** Testirajte 8–12 različic hkrati, tedenski cikel
-- **Visok proračun (15.000 €+/mesec):** Testirajte 20+ različic, uporabite AI za samodejno zaustavitev slabih izvajalcev v realnem času
+- Nizek proračun (1.000–3.000 €/mesec): testirajte 3–5 različic hkrati, cikel vsaka 2 tedna
+- Srednji proračun (3.000–15.000 €/mesec): testirajte 8–12 različic hkrati, tedenski cikel
+- Visok proračun (15.000 €+/mesec): testirajte 20+ različic, uporabite AI za samodejno zaustavitev slabih izvajalcev v realnem času
 
 Vsaka različica dobi enak proračun v testni fazi. Enaki pogoji so bistveni — vsaka prednost proračuna bo izkrivila rezultat.
 
@@ -81,10 +81,10 @@ Ne sprejemajte odločitev o skaliranju, preden dosežete svoj prag gotovosti. Po
 
 Ko je zmagovalec identificiran:
 
-1. **Skalirajte zmagovalca** — povečajte proračun 2–3× ob hkratni zaustavitvi slabih izvajalcev
-2. **Izluščite zmagovalni element** — identificirajte, ali je bil gonilnik zmogljivosti slika, naslov, kot ali CTA
-3. **Generirajte različice zmagovalca** — če je zmagal določen slog slike, generirajte 5 dodatnih različic z istim slogom in znova testirajte
-4. **Določite kadenco osvežitve** — celo zmagovalne kreative se utrudijo; načrtujte nov testni cikel pred padcem zmogljivosti
+1. Skalirajte zmagovalca — povečajte proračun 2–3× ob hkratni zaustavitvi slabih izvajalcev
+2. Izluščite zmagovalni element — identificirajte, ali je bil gonilnik zmogljivosti slika, naslov, kot ali CTA
+3. Generirajte različice zmagovalca — če je zmagal določen slog slike, generirajte 5 dodatnih različic z istim slogom in znova testirajte
+4. Določite kadenco osvežitve — celo zmagovalne kreative se utrudijo; načrtujte nov testni cikel pred padcem zmogljivosti
 
 Iterativna narava tega procesa pomeni, da vsak cikel začne z boljšega položaja kot prejšnji. Vaš kreativni izhod se izboljša, ker gradite na podatkih, ne na ugibanju.
 
@@ -94,7 +94,7 @@ Stranka, ki vstopi s 3-variantnim oglasnim računom in se premakne na 20-variant
 
 - **40–60% zmanjšanje** [stroškov na lead](/sl/blog/whatsapp-pridobivanje-leadov/) v prvih 90 dneh
 - **3–5× povečanje** števila dobičkonosnih kreativnih konceptov, ki tečejo hkrati
-- **Predvidljiva kreativna cev** — vedno imate pripravljene testirane različice za zamenjavo utrujenih oglasov
+- predvidljivo kreativno cev — vedno imate pripravljene testirane različice za zamenjavo utrujenih oglasov
 
 Pri **CreativeComplete** je testiranje kreativ vgrajeno v AI Creative Engine — AI generira različice, jih vnaprej oceni, vodi testno strukturo in samodejno skalira zmagovalce ob zaustavitvi slabih izvajalcev. Celoten proces teče, ne da bi vaša ekipa ročno spremljala zmogljivost oglasov ali sprejemala kreativne odločitve v negotovosti.
 

@@ -59,12 +59,12 @@ The reason most agencies do not operate at this creative volume is not creative 
 
 Before any creative is generated, the brand parameters are locked as constraints:
 
-- **Color palette:** Primary, secondary, and accent hex codes
-- **Typography:** Approved fonts, weight hierarchy, size ratios
-- **Logo rules:** Placement zones, minimum size, clear space requirements
-- **Image style:** Photography vs. illustration, mood references, color grading
-- **Tone of voice:** Direct, conversational, authoritative, playful — defined with examples
-- **Negative space:** What the brand never does (certain color combinations, font styles, visual clichés)
+- Color palette: Primary, secondary, and accent hex codes
+- Typography: Approved fonts, weight hierarchy, size ratios
+- Logo rules: Placement zones, minimum size, clear space requirements
+- Image style: Photography vs. illustration, mood references, color grading
+- Tone of voice: Direct, conversational, authoritative, playful — defined with examples
+- Negative space: What the brand never does (certain color combinations, font styles, visual clichés)
 
 These constraints are not guidelines for the AI to follow. They are hardcoded inputs to the generation pipeline. The system cannot produce an off-brand output because it has no mechanism to generate outside the defined parameters.
 
@@ -76,11 +76,11 @@ Every generated variant receives a predicted performance score before it is show
 
 The scoring model is trained on conversion data from millions of ads across industries and platforms. It identifies the visual and copy patterns that correlate with strong CTR and CVR:
 
-- **Visual hierarchy:** Is the primary message element the largest and highest-contrast element?
-- **CTA placement and contrast:** Is the call-to-action visually distinct from the background?
-- **Copy density:** Is the text load appropriate for the placement (lower for mobile placements, higher for desktop)?
-- **Color contrast ratio:** Does the foreground text meet minimum legibility thresholds?
-- **Offer clarity:** Is the primary value proposition stated in the first 3 words of the headline?
+- Visual hierarchy: Is the primary message element the largest and highest-contrast element?
+- CTA placement and contrast: Is the call-to-action visually distinct from the background?
+- Copy density: Is the text load appropriate for the placement (lower for mobile placements, higher for desktop)?
+- Color contrast ratio: Does the foreground text meet minimum legibility thresholds?
+- Offer clarity: Is the primary value proposition stated in the first 3 words of the headline?
 
 Variants scoring below the configured threshold are automatically filtered out. Only above-threshold variants reach the review queue — or go directly to launch if the agency has configured auto-launch for top-scoring creatives.
 
@@ -90,13 +90,13 @@ Variants scoring below the configured threshold are automatically filtered out. 
 
 A complete creative brief produces multiple variant axes:
 
-**Headline variants:** 5–8 different headline framings testing different angles (problem-led, outcome-led, curiosity, social proof, direct offer)
+Headline variants: 5–8 different headline framings testing different angles (problem-led, outcome-led, curiosity, social proof, direct offer)
 
-**Visual variants:** Multiple image compositions, color treatments, and layout configurations
+Visual variants: Multiple image compositions, color treatments, and layout configurations
 
-**CTA variants:** Different call-to-action phrases, button styles, and urgency framings
+CTA variants: Different call-to-action phrases, button styles, and urgency framings
 
-**Audience-specific variants:** Messaging adjusted for cold audiences (problem awareness) vs. warm audiences (social proof and specificity) vs. hot audiences (direct offer and urgency)
+Audience-specific variants: Messaging adjusted for cold audiences (problem awareness) vs. warm audiences (social proof and specificity) vs. hot audiences (direct offer and urgency)
 
 The combinatorial output of these axes produces 20–40 unique variants from a single brief. Each is a legitimate creative, not a minor tweak — different enough to produce meaningfully different performance data, similar enough to remain within the brand's visual language.
 
@@ -145,19 +145,19 @@ Most agencies run the same creative to cold and retargeting audiences. This is o
 
 Cold, warm, and hot audiences require fundamentally different messaging:
 
-**Cold audience creative (problem-aware, not solution-aware):**
+Cold audience creative (problem-aware, not solution-aware):
 - Lead with the problem, not your product
 - Broad category framing: "If you're losing sales to slow follow-up..."
 - Social proof is secondary — they don't know you yet
 - CTA is low-commitment: "Learn how," "See the process"
 
-**Warm audience creative (solution-aware, evaluating options):**
+Warm audience creative (solution-aware, evaluating options):
 - Lead with your differentiator vs. alternatives
 - Specific social proof: named clients, concrete numbers
 - Address the most common objection in the headline
 - CTA moves toward commitment: "Book a demo," "See pricing"
 
-**Hot audience creative (ready to decide, needs a push):**
+Hot audience creative (ready to decide, needs a push):
 - Lead with the offer, not the problem
 - Urgency where legitimate: limited capacity, launch pricing, cohort enrollment
 - Remove friction from the CTA: "Start today," "Reserve your spot"
@@ -181,7 +181,7 @@ Over time, this creates a proprietary creative intelligence layer: the AI knows 
 
 The most time-consuming part of implementation is often the brand audit — gathering and documenting all existing brand assets in a format the AI system can consume.
 
-**Deliverables:**
+Deliverables:
 - Color palette with hex codes (primary, secondary, accent, background, text)
 - Font files for all approved typefaces
 - Logo files in SVG format (all variants: primary, reversed, icon-only)
@@ -198,10 +198,10 @@ Calibrate by running 50–100 generated variants through the scorer, manually re
 ### Phase 3: Integration Setup (Days 5–10)
 
 Connect the creative production system to:
-- **Meta Ads Manager** (via API): direct ad set creation and performance monitoring
-- **Google Ads** (via API): responsive display ad population and performance monitoring
-- **CRM or attribution tool**: downstream conversion data for scoring model improvement
-- **Internal workflow tool** (Slack, email): notifications when new creative batches are ready or when winners are identified
+- Meta Ads Manager (via API): direct ad set creation and performance monitoring
+- Google Ads (via API): responsive display ad population and performance monitoring
+- CRM or attribution tool: downstream conversion data for scoring model improvement
+- Internal workflow tool (Slack, email): notifications when new creative batches are ready or when winners are identified
 
 ### Phase 4: First Production Run (Days 10–14)
 
@@ -220,21 +220,21 @@ After calibration, scale to full production across all active campaigns.
 
 ### Production Efficiency Metrics
 
-**Time from brief to launch-ready variants:** Benchmark from your current manual workflow. AI systems target under 5 minutes for a full batch of 30 variants across all formats.
+Time from brief to launch-ready variants: Benchmark from your current manual workflow. AI systems target under 5 minutes for a full batch of 30 variants across all formats.
 
-**Creative refresh cycle time:** How often can you refresh the creative in active campaigns? Manual operations typically refresh every 4–6 weeks. AI operations can refresh weekly or trigger automated refresh when performance drops below threshold.
+Creative refresh cycle time: How often can you refresh the creative in active campaigns? Manual operations typically refresh every 4–6 weeks. AI operations can refresh weekly or trigger automated refresh when performance drops below threshold.
 
-**Cost per creative variant:** Labor cost divided by variants produced. Manual: $800–$2,500 per variant. AI-augmented: $30–$150 per variant (human oversight and brief time included).
+Cost per creative variant: Labor cost divided by variants produced. Manual: $800–$2,500 per variant. AI-augmented: $30–$150 per variant (human oversight and brief time included).
 
 ### Performance Metrics
 
-**Creative win rate:** The percentage of AI-generated variants that score above threshold before launch. Healthy benchmark: 30–40%.
+Creative win rate: The percentage of AI-generated variants that score above threshold before launch. Healthy benchmark: 30–40%.
 
-**Testing velocity:** How many distinct creative variants are tested per month, per campaign. Manual operations: 3–8. AI operations: 40–100+.
+Testing velocity: How many distinct creative variants are tested per month, per campaign. Manual operations: 3–8. AI operations: 40–100+.
 
-**ROAS improvement from creative refresh:** After switching to AI creative production, track ROAS over the first 90 days compared to the prior period. Agencies consistently see 20–40% ROAS improvement in the first quarter, driven by finding better-performing creatives faster.
+ROAS improvement from creative refresh: After switching to AI creative production, track ROAS over the first 90 days compared to the prior period. Agencies consistently see 20–40% ROAS improvement in the first quarter, driven by finding better-performing creatives faster.
 
-**Creative fatigue rate:** How quickly your best-performing creative degrades in performance. AI production reduces fatigue impact by enabling immediate replacement when a creative shows declining CTR.
+Creative fatigue rate: How quickly your best-performing creative degrades in performance. AI production reduces fatigue impact by enabling immediate replacement when a creative shows declining CTR.
 
 ---
 

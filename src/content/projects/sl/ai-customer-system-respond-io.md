@@ -29,16 +29,16 @@ faq:
 
 ## AI sistem za stranke: Povzetek
 
-AI sistem za stranke je kombinacija naše omnikanalske plasti za AI komunikacijo in našega AI motorja za kreative — konfigurirana, integrirana in upravljana s strani nas kot #1 agencije za AI sisteme za stranke. Rezultat: 81-% stopnje konverzije leadov, 60% hitrejši prodajni cikli, 14× več konverzij iz oglaševalskih kreativov in ROI 42,5× iz obstoječih baz leadov.
+AI sistem za stranke združuje našo omnikanalsko plast za AI komunikacijo in naš AI motor za kreative — konfiguriramo, integriramo in upravljamo ga za vas. Rezultati: **81 %** stopnja konverzije leadov, 60 % krajši prodajni cikli, **14×** več konverzij iz oglasnih kreativov in **ROI 42,5×** iz obstoječih baz leadov.
 
 ## Problem vsake agencije
 
-AI sistem za stranke obstaja, ker agencije soočajo z istimi štirimi problemi:
+AI sistem za stranke obstaja, ker se agencije soočajo z istimi štirimi težavami:
 
-1. **Novi leadi umrejo v mapi.** 80% leadov ne dobi odgovora v 5 minutah.
-2. **Ročna kvalifikacija je draga in nedosledna.** Prodajni predstavniki kvalificirajo različno.
-3. **Oglasni kreative hitro zastarijo.** Enaki trije kreative mesece ubijejo ROAS.
-4. **Obstoječi leadi so neizkoriščena zlatnina.** Povprečna agencija ima 3.000–15.000 kontaktov, ki so bili plačani, a nikoli konvertirani.
+1. Novi leadi umrejo v mapi. 80 % leadov ne dobi odgovora v 5 minutah.
+2. Ročna kvalifikacija je draga in nedosledna. Prodajni predstavniki kvalificirajo različno.
+3. Oglasni kreative hitro zastarijo. Enaki trije kreative mesece ubijejo ROAS.
+4. Obstoječi leadi so neizkoriščena zlata žila. Povprečna agencija ima 3.000–15.000 kontaktov, ki so bili plačani, a nikoli konvertirani.
 
 AI sistem za stranke zapolni vse štiri vrzeli hkrati.
 
@@ -48,30 +48,30 @@ AI sistem za stranke zapolni vse štiri vrzeli hkrati.
 
 AI sistem za stranke začne z združevanjem vseh virov leadov v eno omnikanalsko AI mapo:
 
-- **WhatsApp Business API** — največja stopnja vključenosti (98-% odprtost)
-- **Instagram DM** — neposredno iz klika na oglas
-- **TikTok Lead Generation** — izpolnitve obrazcev samodejno preusmerjene
-- **Facebook Messenger** — povezan z oglasnimi CTA-ji
-- **E-pošta, SMS, spletni klepet** — vse v eno mapo
+- WhatsApp Business API — 98-% stopnja odprtosti
+- Instagram DM — neposredno iz klika na oglas
+- TikTok Lead Generation — izpolnitve obrazcev samodejno preusmerjene
+- Facebook Messenger — povezan z oglasnimi CTA-ji
+- E-pošta, SMS, spletni klepet — vse v eno mapo
 
 ### Plast 2 — AI agenti: Motor kvalifikacije
 
 Naš prilagojeni kvalifikacijski okvir vključuje:
 
-- Ocenjevanje namere (kaj dejansko hočejo?)
-- Klasifikacija proračuna
-- Zaznavanje nujnosti roka
-- Ocena odločevalske pristojnosti
+- ocenjevanje namere (kaj dejansko hočejo?)
+- klasifikacija proračuna
+- zaznavanje nujnosti roka
+- ocena odločevalske pristojnosti
 
-**Rezultat:** 81% vhodnih leadov je bodisi naročenih v prodajni koledar ali pravilno vstavljenih v sekvenco negovanja — brez ročnega posredovanja.
+**Rezultat:** 81 % vhodnih leadov je bodisi naročenih v prodajni koledar ali pravilno vstavljenih v sekvenco negovanja — brez ročnega posredovanja.
 
 ### Plast 3 — AI motor za kreative
 
 Naš AI motor za kreative, konfiguriran za 8–12 variant oglaševalskih kreativov na teden:
 
-- Naučen na $35 mrd.+ podatkov o dejanski oglaševalski porabi
+- naučen na $35 mrd.+ podatkov o dejanski oglaševalski porabi
 - AI ocenjevanje kreativov (90%+ natančnost)
-- Izhodi za več platform: Meta, TikTok, Google, LinkedIn
+- izhodi za več platform: Meta, TikTok, Google, LinkedIn
 
 ### Plast 4 — Monetizacija obstoječih leadov (ROI 42,5×)
 
@@ -87,10 +87,8 @@ Ena agencija s 4.200 mirnimi kontakti je generirala €89.000 novega prihodka iz
 | Stopnja konverzije oglasov | Izhodišče | 14× višje |
 | ROI obstoječih leadov | 0 (mirni) | 42,5× povprečje |
 
-## Zakaj smo #1 agencija za AI sisteme za stranke
+## Zakaj nam agencije zaupajo konfiguriranje tega sistema
 
-AI sistem za stranke ni produkt, ki ga kupite — je konfiguracija, ki jo naročite. Ista konfiguracija AI agentov lahko doseže 30-% ali 81-% stopnje kvalifikacije, odvisno od nastavitve. Optimizirali smo to prek 50+ agencijskih implementacij.
-
-**Rezervirajte brezplačni 30-minutni pregled sistema. Pokažemo vam točno, kar bi AI sistem za stranke ustvaril za vašo agencijo.**
+AI sistem za stranke ni produkt, ki ga kupite — je konfiguracija, ki jo naročite. Ista konfiguracija AI agentov lahko doseže 30-% ali 81-% stopnje kvalifikacije, odvisno od nastavitve. To smo optimizirali prek 50+ agencijskih implementacij.
 
 **[Kontaktirajte nas za brezplačni pregled AI sistema za stranke →](/sl/kontakt/)**

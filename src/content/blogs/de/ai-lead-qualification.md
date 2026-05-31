@@ -23,7 +23,7 @@ faq:
     answer: "Bei CreativeComplete ist das Qualifizierungssystem in 5 Tagen konfiguriert und live. Das umfasst die Definition Ihrer BANT-Kriterien, das Training der KI auf Ihr Produkt und gängige Einwände, die Integration in Ihre bestehenden Kanäle (WhatsApp, Instagram, Web-Chat) und die Anbindung an Ihr CRM oder Sales-Postfach für das Routing."
 ---
 
-Vertriebsteams verbringen 70% ihrer Zeit mit Leads, die nie konvertieren.
+Vertriebsteams verbringen **70%** ihrer Zeit mit Leads, die nie konvertieren.
 
 Nicht weil sie die falschen Prospects anrufen. Sondern weil sie keine Möglichkeit haben zu wissen, welche Leads ihre Zeit wert sind, bevor sie zum Hörer greifen. In einer [CRM](/de/blog/crm-automatisierung/)-Zeile sieht jeder Lead gleich aus — Name, Telefonnummer, vielleicht eine Quelle. Der einzige Weg herauszufinden, ob es sich lohnt, ist anzurufen.
 
@@ -39,13 +39,13 @@ Wenn ein neuer Lead reinkommt — aus einer Ad, einer DM, einem Webformular oder
 
 Während dieser Konversation arbeitet die KI systematisch durch ein Qualifizierungs-Framework:
 
-**Budget** — Hat der Lead die finanzielle Kapazität für Ihre Lösung? Das ist nicht immer eine direkte Frage. Oft wird es aus Unternehmensgröße, genanntem Investitionsrahmen oder dem konkreten Problem abgeleitet, das gelöst werden soll.
+Budget — Hat der Lead die finanzielle Kapazität für Ihre Lösung? Das ist nicht immer eine direkte Frage. Oft wird es aus Unternehmensgröße, genanntem Investitionsrahmen oder dem konkreten Problem abgeleitet, das gelöst werden soll.
 
-**Authority** — Ist diese Person der Entscheider, oder muss sie andere ins Boot holen? Ein Lead ohne Autorität ist nicht disqualifiziert — er braucht andere Follow-up-Inhalte, die ihm helfen, den internen Business Case zu bauen.
+Authority — Ist diese Person der Entscheider, oder muss sie andere ins Boot holen? Ein Lead ohne Autorität ist nicht disqualifiziert — er braucht andere Follow-up-Inhalte, die ihm helfen, den internen Business Case zu bauen.
 
-**Need** — Ist das Problem, das er erlebt, eins, das Ihre Lösung tatsächlich löst? Ein präziser Fit zwischen Bedarf und Lösung ist der stärkste Prädiktor für die Abschlussquote. Leads mit klarem Bedarf schließen 2–3× häufiger ab als Leads mit vagem oder allgemeinem Interesse.
+Need — Ist das Problem, das er erlebt, eins, das Ihre Lösung tatsächlich löst? Ein präziser Fit zwischen Bedarf und Lösung ist der stärkste Prädiktor für die Abschlussquote. Leads mit klarem Bedarf schließen 2–3× häufiger ab als Leads mit vagem oder allgemeinem Interesse.
 
-**Timeline** — Wann will er entscheiden? Eine aktive Timeline (Wochen bis Monate) signalisiert echte Kaufabsicht. "Ich schaue mich nur um" ist ein Nurture-Signal, kein Disqualifizierungs-Signal.
+Timeline — Wann will er entscheiden? Eine aktive Timeline (Wochen bis Monate) signalisiert echte Kaufabsicht. "Ich schaue mich nur um" ist ein Nurture-Signal, kein Disqualifizierungs-Signal.
 
 ## Das Scoring-Modell
 
@@ -83,7 +83,7 @@ Kunden, die KI-Lead-Qualifizierung implementieren, sehen typischerweise:
 
 Es ist kein Ersatz für Ihren Vertriebsprozess. Es ist ein Filter und eine erste Schicht.
 
-Die KI schließt keine Deals. Sie behandelt keine Einwände ernsthafter Käufer. Sie verhandelt nicht. Sie macht die Arbeit, die aktuell 70% der Rep-Zeit verschlingt — den initialen Qualifizierungs-Pass — und macht das schneller, konsistenter und zu jeder Tageszeit.
+Die KI schließt keine Deals. Sie behandelt keine Einwände ernsthafter Käufer. Sie verhandelt nicht. Sie macht die Arbeit, die aktuell **70%** der Rep-Zeit verschlingt — den initialen Qualifizierungs-Pass — und macht das schneller, konsistenter und zu jeder Tageszeit.
 
 Ihre Reps besitzen weiterhin die Beziehung. Sie besitzen sie nur aus einer viel stärkeren Startposition.
 

@@ -10,33 +10,33 @@ export interface Props {
 const { lang = 'en' } = Astro.props;
 const c = getV2Content(lang).services;
 
-const motionKeys = ['qualify', 'creative', 'capture', 'monetize'] as const;
-const colors = ['var(--c1)', 'var(--c3)', 'var(--c2)', 'var(--c2)'];
-const texts  = ['#fff', '#fff', '#464040', '#464040'];
+const motionKeys = ['creative', 'capture', 'qualify', 'monetize'] as const;
+const colors = ['var(--c3)', 'var(--c2)', 'var(--c1)', 'var(--c2)'];
+const texts  = ['#fff', '#464040', '#fff', '#464040'];
 const blogHrefs = lang === 'de'
   ? [
-      '/de/blog/ki-lead-qualifizierung/',
       '/de/blog/ki-werbemittel/',
       '/de/blog/reaktionszeit/',
+      '/de/blog/ki-lead-qualifizierung/',
       '/de/blog/whatsapp-broadcast-kampagnen/',
     ]
   : lang === 'sl'
   ? [
-      '/sl/blog/ai-kvalifikacija-leadov/',
       '/sl/blog/ai-oglasne-kreative/',
       '/sl/blog/hitrost-do-leada/',
+      '/sl/blog/ai-kvalifikacija-leadov/',
       '/sl/blog/whatsapp-broadcast-kampanje/',
     ]
   : [
-      '/blog/ai-lead-qualification/',
       '/blog/ai-ad-creatives/',
       '/blog/speed-to-lead/',
+      '/blog/ai-lead-qualification/',
       '/blog/whatsapp-broadcast-campaigns/',
     ];
-const engColors = ['#6366f1', '#a855f7', '#22d3ee', '#e879f9'];
-const engMetrics = ['60s', '90%+', '40+', '42.5×'];
+const engColors = ['#a855f7', '#22d3ee', '#6366f1', '#e879f9'];
+const engMetrics = ['90%+', '40+', '60s', '42.5×'];
 const engDelays = ['0s', '.45s', '.9s', '1.35s'];
-const engEmojis = ['🤖', '🎨', '📡', '💰'];
+const engEmojis = ['🎨', '📡', '🤖', '💰'];
 
 const services = c.services.map((s, i) => ({
   ...s,
@@ -64,7 +64,7 @@ const services = c.services.map((s, i) => ({
       </p>
 
       <!-- Animated engine cards -->
-      <div class="v2-eng-strip" data-m="up" style="--m-d:.3s">
+      <!-- <div class="v2-eng-strip" data-m="up" style="--m-d:.3s">
         {services.map((s, i) => (
           <>
             {i > 0 && <div class="v2-eng-divider"></div>}
@@ -84,7 +84,7 @@ const services = c.services.map((s, i) => ({
             </div>
           </>
         ))}
-      </div>
+      </div> -->
     </div>
 
     <div class="v2-svc-list">
