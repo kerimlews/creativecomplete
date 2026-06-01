@@ -17,7 +17,7 @@ delay: 600
 featured: true
 priority: 4
 slug: "mobile-development"
-published: "2025-01-15"
+published: "2026-06-01"
 updated: "2025-01-15"
 related_articles: ["fitovision-gym-saas"]
 faq:

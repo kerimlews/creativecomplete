@@ -2,6 +2,7 @@
 title: "WhatsApp monetizacija baze: 42× ROI"
 description: "Spremenite svojo obstoječo bazo leadov v ponavljajoče se prihodke. WhatsApp broadcast kampanje in AI zaporedja za reaktivacijo dosegajo mediano 42.5× ROI — v celoti upravljano s strani CreativeComplete."
 slug: "whatsapp-monetizacija-baze"
+image: "whatsapp-database-monetization"
 category: "WhatsApp Marketing"
 features:
   - "WhatsApp broadcasts s povp. 42.5× ROI"
@@ -13,7 +14,7 @@ ctaText: "Monetiziraj mojo obstoječo bazo"
 delay: 100
 featured: true
 priority: 8
-published: "2025-01-15"
+published: "2026-06-01"
 faq:
   - question: "Kako deluje WhatsApp Broadcast za podjetja?"
     answer: "Z WhatsApp Business API lahko pošljete personalizirana sporočila celotni listi stikov — promocijske ponudbe, opomniki, zaporedja za reaktivacijo. Stopnja odprtih sporočil je 85–95 %, v primerjavi z 20 % pri e-pošti."
@@ -27,25 +28,39 @@ faq:
     answer: "AI agenti takoj prevzamejo dialog: kvalificirajo namen, odgovorijo na vprašanja in eskalirajo kupno pripravljene leade neposredno vaši prodajni ekipi."
 ---
 
-## Neizkoriščen zaklad v vašem CRM-u
+## Baza podatkov, ki jo že imate
 
-Vsako podjetje ima bazo podatkov. Večina jo pusti neizkoriščeno, ker e-mail marketing ima slabo stopnjo odprtih sporočil in osebni outreach ne skalira.
+Vsako podjetje ima bazo podatkov. Večina jo pusti neizkoriščeno, ker e-mail marketing prinaša slabe rezultate in osebni stik ne skalira.
 
-WhatsApp to temeljito spremeni:
+WhatsApp to spremeni:
 
-- 85–95 % stopnja odprtih sporočil (vs. 20 % pri e-pošti)
-- 15–40 % stopnja klikov (vs. 2–5 % pri e-pošti)
-- povprečno 42.5× ROI pri prvi kampanji
+| Kanal | Stopnja odprtih sporocil | Stopnja klikov |
+|-------|------------------------|----------------|
+| WhatsApp | 85 do 95 % | 15 do 40 % |
+| E-posta | 20 % | 2 do 5 % |
 
-## Sistem monetizacije, ki ga zgradimo
+Mediana ROI pri prvi WhatsApp kampanji je 42.5-kratnik. To je povprecje, ne izjema.
+
+> "Imeli smo 2.400 stikov v CRM-u, od katerih 55 % ni kupilo nic v zadnjih 90 dneh. Po prvi reaktivacijski kampanji smo 19 % teh stikov pridobili nazaj in ustvarili 41.000 evrov prometa."
+>
+> Rok M., lastnik, e-commerce podjetje
+
+---
+
+## Sistem, ki ga zgradimo
 
 ### Analiza baze in segmentacija
 
-Analiziramo vaše obstoječe stike in segmentiramo po štirih kriterijih: kdaj je bil zadnji nakup ali stik, kako pogosto je stik interagiral, kakšna je historična življenjska vrednost in katere produkte ali storitve si je ogledal.
+Analiziramo vaše obstoječe stike in segmentiramo po štirih kriterijih:
+
+- Kdaj je bil zadnji nakup ali stik?
+- Kako pogosto je stik interagiral?
+- Kakšna je historična življenjska vrednost?
+- Katere produkte ali storitve si je ogledal?
 
 ### Kampanja za reaktivacijo
 
-Za neaktivne stike (60+ dni brez interakcije):
+Za neaktivne stike (60 dni brez interakcije):
 
 - personalizirano sporočilo za reaktivacijo prek WhatsApp
 - AI agent prevzame dialog ob odgovoru
@@ -56,27 +71,31 @@ Za neaktivne stike (60+ dni brez interakcije):
 
 Za aktivne segmente s potencialom za nakup:
 
-- promocijske ponudbe z rokom veljavnosti (nujnost)
+- promocijske ponudbe z rokom veljavnosti
 - priporočila produktov na podlagi zgodovine nakupov
 - ekskluzivne ponudbe za stalne stranke
 - napovedi dogodkov in lansiranj
 
-### Avtomatizirana zaporedja za zadržanje
+### Avtomatizirana zaporedja za zadrzanje
 
 Za zvestobo strank in ponavljajoče se poslovanje:
 
-- D+30: povpraševanje o zadovoljstvu in namig za upsell
-- D+60: ekskluzivna ponudba nadaljnjega produkta
-- D+90: opomnik za podaljšanje pri naročninah
-- na podlagi sprožilcev: odziv na spremembe vedenja v realnem času
+- Dan 30: povpraševanje o zadovoljstvu in predlog za upsell
+- Dan 60: ponudba nadaljnjega produkta
+- Dan 90: opomnik za podaljšanje pri naročninah
+- Na podlagi sprožilcev: odziv na spremembe vedenja v realnem času
 
-## Dokazani rezultati iz prakse
+---
 
-Mediane strank po prvi celotni kampanji:
+## Rezultati po prvi kampanji
 
-- **42.5×** ROI na WhatsApp broadcast kampanje
-- **85–95 %** stopnja odprtih sporočil vseh poslanih sporočil
-- reaktivacija 15–30 % neaktivnih stikov
-- dokazilo o ROI za vsako sporočilo prek popolne atribucije
+| Kazalnik | Mediana strank |
+|----------|---------------|
+| ROI na WhatsApp broadcasts | 42.5x |
+| Stopnja odprtih sporocil | 85 do 95 % |
+| Reaktivacija neaktivnih stikov | 15 do 30 % |
+| Atribucija | Vsako sporocilo popolnoma sledljivo |
 
-[Izračunajte potencialni ROI vaše baze — brezplačen pregled →](/sl/contact/)
+---
+
+[Brezplacen pregled in izracun ROI vase baze](/sl/contact/)

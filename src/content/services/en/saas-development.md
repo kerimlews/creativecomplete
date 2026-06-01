@@ -17,8 +17,8 @@ delay: 400
 featured: true
 priority: 6
 slug: "saas-development"
-published: "2025-01-15"
-updated: "2025-01-15"
+published: "2026-06-01"
+updated: "2026-06-01"
 related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas", "paperpile-saas-scaling-case-study"]
 faq:
   - question: "How long does it take to build a SaaS product?"

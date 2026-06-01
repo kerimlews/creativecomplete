@@ -2,6 +2,7 @@
 title: "Hitrost do leada: odgovor v 60 sekundah, 24/7"
 description: "Vsak lead prejme kvalificiran odgovor v 60 sekundah — 24/7, na 40+ kanalih. Hitrost do leada je najpomembnejši vzvod za višje stopnje zaključevanja poslov. CreativeComplete zgradi in upravlja vaš sistem."
 slug: "hitrost-do-leada"
+image: "speed-to-lead-system"
 category: "Upravljanje leadov"
 features:
   - "60-sekundni odzivni čas, 24/7"
@@ -13,7 +14,7 @@ ctaText: "Zgradi sistem za hitrost do leada"
 delay: 100
 featured: true
 priority: 8
-published: "2025-01-15"
+published: "2026-06-01"
 faq:
   - question: "Kaj je hitrost do leada in zakaj je tako pomembna?"
     answer: "Hitrost do leada je čas med prejetjem leada in prvim kvalificiranim odgovorom. Študije kažejo: kdor odgovori v 5 minutah, ima 21× večjo možnost zaključitve posla kot kdor odgovori po 30 minutah. Z AI dosežemo 60 sekund."
@@ -29,11 +30,17 @@ faq:
 
 ## Zakaj prvi odgovor odloči vse
 
-Raziskave iz B2C prodaje konsistentno kažejo: **kdor odgovori v 60 sekundah, konvertira do 21× bolje** kot kdor reagira šele po eni uri.
+Raziskave iz B2C prodaje kažejo: kdor odgovori v 60 sekundah, konvertira do 21-krat bolje kot kdor reagira šele po eni uri.
 
-Leadi so v trenutku, ko oddajo povpraševanje, pripravljeni na nakup. Vsaka minuta čakanja ohladi namen in dá konkurenci čas za prevzem pobude.
+Leadi so v trenutku, ko oddajo povpraševanje, najbolj pripravljeni na nakup. Vsaka minuta čakanja ohladi namen in da konkurenci čas za prevzem pobude.
 
-## Komponente sistema za hitrost do leada
+> "Mislili smo, da je 15 minut dober odzivni čas. Ko smo videli, koliko leadov smo v tem času izgubili h konkurenci, smo se odločili za spremembo. Zdaj odgovorimo v 60 sekundah, ves dan in noč."
+>
+> Luka N., direktor, nepremičninska agencija
+
+---
+
+## Komponente sistema
 
 ### AI agenti za prvi stik
 
@@ -44,11 +51,11 @@ AI agenti odgovorijo v manj kot 60 sekundah na vseh kanalih:
 - rezervacija termina neposredno v klepetu
 - predaja prodajalcu s polnim kontekstom
 
-### Unified inbox: 40+ kanalov, ena nadzorna plošča
+### Unified inbox: 40 kanalov, ena nadzorna ploščna
 
 Noben lead se ne bo več izgubil:
 
-- WhatsApp Business API (vključno s funkcijo broadcast)
+- WhatsApp Business API vključno s funkcijo broadcast
 - Instagram DM, TikTok, Facebook Messenger
 - e-pošta, SMS, spletni klepet, telefon
 - samodejno sledenje viru in ocenjevanje leadov
@@ -71,13 +78,17 @@ Vsi podatki v realnem času v vašem CRM-u:
 - atribucija kanala in sledenje viru
 - načrt sledilnih sporočil in naslednja dejanja
 
-## Dokazani učinek na vaš prihodek
+---
 
-Stranke, ki implementirajo sistem za hitrost do leada, vidijo:
+## Ucinek na vaš prihodek
 
-- **60 %** krajših prodajnih ciklov
-- **81 %** stopnja konverzije leadov (vs. 20–30 % industrijsko povprečje)
-- **100 %** vseh leadov odgovorjenih, noben lead se ne izgubi
-- **10 dni** do živega sistema
+| Kazalnik | Mediana strank |
+|----------|---------------|
+| Krajsi prodajni cikli | 60 % |
+| Stopnja konverzije leadov | 81 % (vs. 20 do 30 % industrijsko povprecje) |
+| Leadi odgovorjeni | 100 %, noben lead se ne izgubi |
+| Cas do zivega sistema | 10 dni |
 
-[Sistem za hitrost do leada vzpostavi v 10 dneh →](/sl/contact/)
+---
+
+[Sistem za hitrost do leada vzpostavi v 10 dneh](/sl/contact/)

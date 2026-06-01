@@ -17,7 +17,7 @@ delay: 100
 featured: true
 priority: 9
 slug: "seo"
-published: "2025-01-15"
+published: "2026-06-01"
 updated: "2025-01-15"
 related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas"]
 faq:

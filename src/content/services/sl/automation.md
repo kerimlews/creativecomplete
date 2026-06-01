@@ -17,7 +17,7 @@ delay: 300
 featured: true
 priority: 7
 slug: "automation"
-published: "2025-01-15"
+published: "2026-06-01"
 updated: "2025-01-15"
 related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas", "nianave-ecommerce-scaling-case-study"]
 faq:

@@ -17,7 +17,7 @@ delay: 500
 featured: true
 priority: 5
 slug: "ecommerce"
-published: "2025-01-15"
+published: "2026-06-01"
 updated: "2025-01-15"
 related_articles: ["nianave-ecommerce-scaling-case-study"]
 faq:

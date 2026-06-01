@@ -2,6 +2,7 @@
 title: "AI oglaševalski sistem: CPL nižji za 40–60%"
 description: "AI ustvarjeni oglaševalski kreativni materiali, trenirani na $35 mrd.+ resničnih oglaševalskih podatkih. AI za ocenjevanje kreativ napove zmagovalce z več kot 90 % natančnostjo. Tedenska produkcija, v celoti upravljana s strani CreativeComplete."
 slug: "ai-oglasevalski-kreativni-sistem"
+image: "ai-ad-creative-engine"
 category: "AI Oglaševanje"
 features:
   - "Kreativni materiali v minutah, ne dneh"
@@ -13,7 +14,7 @@ ctaText: "Generiraj zmagovalne kreativne materiale"
 delay: 100
 featured: true
 priority: 9
-published: "2025-01-15"
+published: "2026-06-01"
 faq:
   - question: "Kako nastanejo AI kreativni materiali?"
     answer: "Na podlagi vašega briefinga — ciljna skupina, ponudba, ton — naša AI generira več slikovnih in video variant. Vsaka varianta je ovrednotena prek sistema za ocenjevanje kreativ, preden gre v živo."
@@ -31,19 +32,25 @@ faq:
 
 Tradicionalne agencije potrebujejo tedne za nov kreativni material. Ko gre v živo, se je trg že spremenil. Brez podatkov šele po objavi veste, ali deluje, ko je vaš proračun že porabljen.
 
-Visok CPL, nizek ROAS in neskončni kreativni cikli brez merljivih izboljšav so posledica tega pristopa.
+Visok CPL, nizek ROAS in neskončni kreativni cikli brez merljivih izboljšav so rezultat tega pristopa.
+
+> "Trikrat smo podaljšali isto kreativo, ker nismo imeli alternativ. CPL je rastel vsak teden. Z AI kreativnim sistemom smo v 30 dneh testirali 10 novih variant in CPL znižali za 51 %."
+>
+> Ana K., vodja digitalnega marketinga
+
+---
 
 ## Kako AI kreativni sistem deluje
 
 ### Podatkovno podprt briefing
 
-Analiziramo vaše pretekle podatke o kampanjah in jih kombiniramo z vpogledi specifičnimi za panogo iz $35 mrd.+ oglaševalskih podatkov:
+Analiziramo vaše pretekle podatke o kampanjah in jih kombiniramo z vpogledi iz 35 mrd.+ oglaševalskih podatkov:
 
 - katera sporočila odmevajo pri vaši ciljni skupini
 - kateri vizualni stili delujejo v vaši panogi
 - kateri pozivi k dejanju konvertirajo pri vaši cenovni ravni
 
-### AI produkcija: 8–12 variant tedensko
+### AI produkcija: 8 do 12 variant tedensko
 
 Na podlagi briefinga naša AI tedensko generira celotno zbirko kreativnih materialov:
 
@@ -61,21 +68,25 @@ Preden se porabi en cent, naša AI oceni vsak kreativni material:
 - priporočilo: skaliranje, testiranje ali zaustavitev
 - v živo gredo samo dokazani zmagovalci
 
-### Neprekinjeno optimiziranje
+### Neprekinjeno učenje
 
 Vsak teden se sistem uči:
 
 - kateri kreativni materiali dosegajo boljše rezultate od napovedi
-- kateri elementi, kot so barva, naslov in poziv k dejanju, poganjajo konverzije
-- kako se razvija ciljna skupina
+- kateri elementi, barva, naslov ali poziv k dejanju, poganjajo konverzije
+- kako se razvija vedenje ciljne skupine
 
-## Dokazani rezultati
+---
 
-Mediane strank po 90 dneh:
+## Rezultati po 90 dneh
 
-- **14×** več konverzij v primerjavi z ročno oblikovanimi oglasi
-- **40–60 %** znižanje CPL v prvem mesecu
-- **90 %+** natančnost ocenjevanja pri napovedih zmagovalcev
-- **8–12** svežih variant tedensko brez vašega truda
+| Kazalnik | Mediana strank |
+|----------|---------------|
+| Vec konverzij v primerjavi z rocnimi oglasi | 14x |
+| Znizanje CPL v prvem mesecu | 40 do 60 % |
+| Natancnost pri napovedih zmagovalcev | 90 %+ |
+| Svezih variant tedensko | 8 do 12 |
 
-[Brezplačen pregled sistema in prva analiza kreativnih materialov →](/sl/contact/)
+---
+
+[Brezplacen pregled sistema in prva analiza kreativnih materialov](/sl/contact/)

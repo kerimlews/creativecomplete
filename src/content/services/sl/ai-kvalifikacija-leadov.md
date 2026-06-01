@@ -2,6 +2,7 @@
 title: "AI kvalifikacija leadov v 60 sekundah"
 description: "AI agenti samodejno kvalificirajo vsak dohodni lead v manj kot 60 sekundah — 24/7, na 40+ kanalih. 81 % stopnja konverzije leadov. Celotno upravljanje s strani CreativeComplete."
 slug: "ai-kvalifikacija-leadov"
+image: "ai-lead-qualification"
 category: "AI Avtomatizacija"
 features:
   - "AI agenti skrbijo za prvi stik 24/7"
@@ -13,7 +14,7 @@ ctaText: "Pridobi brezplačen sistemski pregled"
 delay: 100
 featured: true
 priority: 9
-published: "2025-01-15"
+published: "2026-06-01"
 faq:
   - question: "Kako hitro AI agenti odgovorijo na nove leade?"
     answer: "AI agenti odgovarjajo v manj kot 60 sekundah, 24/7, na vseh kanalih hkrati — brez izpadov, brez nedoslednosti."
@@ -27,11 +28,17 @@ faq:
     answer: "Ne. AI Customer System nativno integriramo v HubSpot, Salesforce, Pipedrive in 50+ CRM-ov. Vaš obstoječi tech stack ostane sistem za evidentiranje."
 ---
 
-## Zakaj ročno upravljanje leadov jemlje prihodke
+## Kaj se zgodi, ko lead predolgo čaka
 
-Vsaka minuta, v kateri lead čaka, se verjetnost konverzije zmanjša za do 80 %. Človeške ekipe zamujajo sledilna sporočila, nekonsistentno kvalificirajo in ne morejo biti aktivne 24/7 na vseh kanalih hkrati.
+Vsaka minuta, v kateri lead čaka, se verjetnost konverzije zmanjša za do 80 %. Ekipe zamujajo sledilna sporočila, nekonsistentno kvalificirajo in ne morejo biti aktivne 24/7 na vseh kanalih hkrati.
 
 Leadi, za katere ste že plačali, se ohladijo, preden vaša ekipa sploh odgovori.
+
+> "Imeli smo 30 do 40 novih povpraševanj na dan. Ekipa jih ni zmogla vse kontaktirati isti dan. Po uvedbi AI kvalifikacije je 81 % teh povpraševanj kvalificiranih v 60 sekundah. Naši prodajalci se zdaj pogovarjajo samo z resnimi kupci."
+>
+> Maja P., vodja prodaje
+
+---
 
 ## Kako AI kvalifikacija leadov deluje
 
@@ -52,7 +59,7 @@ Po kvalifikaciji sistem samodejno odloči:
 - topli leadi preidejo v negovalna zaporedja za nadaljnjo kvalifikacijo
 - hladni leadi se samodejno arhivirajo z reaktivacijo po 30 dneh
 
-### Brezhibna CRM integracija
+### CRM integracija brez dodatnega dela
 
 Vsi podatki samodejno tečejo v vaš CRM:
 
@@ -61,13 +68,17 @@ Vsi podatki samodejno tečejo v vaš CRM:
 - naslednja priporočena dejanja
 - opomniki za termine in časovni načrt sledilnih sporočil
 
-## Dokazani rezultati
+---
 
-Naši agencijsko konfigurirani AI agenti dosegajo mediane:
+## Rezultati iz prakse
 
-- **81 %** stopnja konverzije leadov (industrijski povprečje: 20–30 %)
-- **60 %** krajši prodajni cikli
-- **10 dni** do živega sistema po zagonu
-- **80 %** rutinskih povpraševanj popolnoma avtomatizirano
+| Kazalnik | Mediana strank |
+|----------|---------------|
+| Stopnja konverzije leadov | 81 % (industrijski povprecje: 20 do 30 %) |
+| Krajsi prodajni cikli | 60 % |
+| Cas do zivega sistema | 10 dni po zagonu |
+| Rutinskih povprasevanj avtomatizirano | 80 % |
 
-[Pridobi brezplačen sistemski pregled →](/sl/contact/)
+---
+
+[Pridobi brezplacen sistemski pregled](/sl/contact/)
