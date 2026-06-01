@@ -112,7 +112,18 @@
       "Bash(sed -i '/^slug: \"whatsapp-monetizacija-baze\"$/a image: \"whatsapp-database-monetization\"' /home/kerim/Documents/astro-creativecomplete-landing/src/content/services/sl/whatsapp-monetizacija-baze.md)",
       "Bash(awk '/^---$/{n++} n==2{print}' /home/kerim/Documents/astro-creativecomplete-landing/src/content/services/sl/ai-oglasevalski-kreativni-sistem.md)",
       "Bash(awk '/^---$/{n++} n==2{print}' /home/kerim/Documents/astro-creativecomplete-landing/src/content/services/sl/ai-kvalifikacija-leadov.md)",
-      "Bash(curl -s http://localhost:4321/services/web-design/)"
+      "Bash(curl -s http://localhost:4321/services/web-design/)",
+      "Bash(google-chrome --headless=new --no-sandbox --window-size=1440,900 --screenshot=/tmp/svc-page.png http://localhost:4321/services/web-design/)",
+      "Bash(git ls-tree *)",
+      "Bash(git ls-remote *)",
+      "Bash(ls ~/.nvm/versions/node/ 2>/dev/null || which node && node --version && ls /usr/local/bin/node* 2>/dev/null || ls /usr/bin/node* 2>/dev/null)",
+      "Read(//usr/bin/**)",
+      "Bash(~/.nvm/versions/node/v22.22.2/bin/node ~/.nvm/versions/node/v22.22.2/bin/npm run build)",
+      "Bash(grep -rA5 \"\\\\.v2-h1\" /home/kerim/Documents/astro-creativecomplete-landing/src/styles/)",
+      "Bash(sed -i 's/ — and you'\\\\''re still running the same creative/. You'\\\\''re still running the same creative/g' /home/kerim/Documents/astro-creativecomplete-landing/src/pages/services/ai-ad-creative-engine.astro)",
+      "Bash(sed -i 's/ — all without a creative team meeting or a campaign manager'\\\\''s gut instinct/, without a creative team meeting or a campaign manager'\\\\''s gut instinct/g' /home/kerim/Documents/astro-creativecomplete-landing/src/pages/services/ai-ad-creative-engine.astro)",
+      "Bash(sed -i 's/went cold in your CRM — ignored, uncontacted, waiting/went cold in your CRM, ignored, uncontacted, waiting/g' /home/kerim/Documents/astro-creativecomplete-landing/src/pages/services/whatsapp-database-monetization.astro)",
+      "Bash(sed -i 's/ — a 42× return — in two days/. That is a 42x return in two days/g' /home/kerim/Documents/astro-creativecomplete-landing/src/pages/services/whatsapp-database-monetization.astro)"
     ],
     "additionalDirectories": [
       "/home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/de",

@@ -10,11 +10,11 @@ const hreflangAlternates = {
 };
 
 const faqItems = [
-  { name: "How does AI lead qualification work?", answer: "When a lead contacts you via any channel, our AI agent immediately engages them in a natural WhatsApp conversation. It confirms budget, authority, need, and timeline — the BANT framework — and assigns a score from 0–100 within 60 seconds. Hot leads (80+) route to closers. Warm leads go to SDRs. Cold leads enter automated nurture sequences." },
-  { name: "What channels does AI lead qualification cover?", answer: "Our system captures and qualifies leads from 40+ channels including WhatsApp, Instagram DMs, Facebook Messenger, web forms, landing pages, Google ads click-to-message, and more. Every channel routes into the same qualification engine." },
-  { name: "How long does it take to qualify a lead?", answer: "Under 60 seconds for a full BANT qualification. The AI responds within seconds of an inquiry, runs the qualification conversation in natural language, and delivers a scored lead profile to your CRM before a human has even seen the notification." },
-  { name: "Does AI qualification replace my sales team?", answer: "No — it makes your sales team dramatically more productive. Reps only speak to leads scored 70+ with confirmed budget and intent. They eliminate 80% of time wasted on unqualified conversations and focus exclusively on closing." },
-  { name: "What results can I expect?", answer: "Clients typically see a 3× improvement in close rate, 80% reduction in rep time spent on qualification, and a 60-second average response time versus the industry average of 4–6 hours." },
+  { name: "How does AI lead qualification work?", answer: "When a lead reaches out through any channel, our AI starts a WhatsApp conversation right away. It checks budget, authority, need, and timeline, then scores the lead from 0 to 100. Hot leads go to closers. Warm leads go to your SDRs. Cold leads enter a nurture sequence." },
+  { name: "What channels does AI lead qualification cover?", answer: "Our system captures and qualifies leads from 40+ channels including WhatsApp, Instagram DMs, Facebook Messenger, web forms, landing pages, Google click-to-message, and more. Every channel feeds into the same qualification engine." },
+  { name: "How long does it take to qualify a lead?", answer: "Under 60 seconds for a full qualification. The AI responds within seconds, runs the conversation in plain language, and delivers a scored lead profile to your CRM before anyone on your team has seen the notification." },
+  { name: "Does AI qualification replace my sales team?", answer: "No. It makes your reps more productive. They only talk to leads scored 70 or higher with confirmed budget and intent. That cuts out 80% of time spent on people who were never going to buy." },
+  { name: "What results can I expect?", answer: "Clients typically see a 3x improvement in close rate, 80% less time spent on qualification, and a 60-second average response time versus the industry average of 4 to 6 hours." },
 ];
 
 const structuredData = {
@@ -23,7 +23,7 @@ const structuredData = {
     {
       "@type": "Service",
       "name": "AI Lead Qualification Service",
-      "description": "Automated BANT lead scoring via WhatsApp. Every inbound lead qualified in under 60 seconds — budget, authority, need, and timeline confirmed before any rep gets involved.",
+      "description": "Automated BANT lead scoring via WhatsApp. Every inbound lead qualified in under 60 seconds: budget, authority, need, and timeline confirmed before any rep gets involved.",
       "url": canonicalUrl,
       "provider": { "@type": "Organization", "name": "CreativeComplete", "url": "https://creativecomplete.com/" },
       "serviceType": "AI Lead Qualification",
@@ -42,33 +42,34 @@ const structuredData = {
 ---
 
 <ServiceLayout
-  title="AI Lead Qualification Service — Score Every Lead in 60 Seconds | CreativeComplete"
-  description="Automated BANT lead scoring via WhatsApp. Every lead qualified in under 60 seconds. Hot leads routed to closers, cold leads into nurture — zero manual sorting."
+  title="AI Lead Qualification Service: Score Every Lead in 60 Seconds | CreativeComplete"
+  description="Automated BANT lead scoring via WhatsApp. Every lead qualified in under 60 seconds. Hot leads go to closers, cold leads into nurture, no manual sorting."
   {canonicalUrl}
   {structuredData}
   {hreflangAlternates}
+  image="ai-lead-qualification"
   h1="AI Lead Qualification: Every Lead Scored in 60 Seconds"
   h1Grad="Every Lead Scored in 60 Seconds"
-  lead="Your sales team should only talk to leads worth talking to. Our AI qualifies every inbound — budget, authority, need, timeline — via WhatsApp before any rep gets involved. Hot leads reach closers in under a minute. Cold leads enter nurture automatically."
+  lead="Your reps should talk to leads worth their time. Our AI qualifies every inbound through WhatsApp before anyone on your team gets involved. Budget, authority, need, timeline. All checked. Hot leads reach closers in under a minute. Cold leads go into nurture on their own."
   blogHref="/blog/ai-lead-qualification/"
-  blogLabel="Read the full playbook →"
+  blogLabel="Read the full playbook"
   metrics={[
     { value: '60s', label: 'Avg. qualification time' },
     { value: '92/100', label: 'Avg. hot lead score' },
-    { value: '3×', label: 'Close rate increase' },
+    { value: '3x', label: 'Close rate increase' },
     { value: '80%', label: 'Rep admin time saved' },
   ]}
   steps={[
-    { n: '01', title: 'Lead Inbound', desc: 'A lead contacts you via any channel — WhatsApp, web form, ad click, DM. The system catches it instantly across all 40+ sources, 24/7.' },
-    { n: '02', title: 'AI Engages', desc: 'Within seconds, the AI opens a natural WhatsApp conversation. It confirms budget, authority, need, and timeline in plain language — not a survey, not a bot script.' },
-    { n: '03', title: 'Score Assigned', desc: 'A BANT score from 0–100 is computed. Hot (80+), Warm (50–79), Cold (20–49), Disqualified (<20). Full profile written to your CRM automatically.' },
-    { n: '04', title: 'Routed Instantly', desc: 'Hot leads go to the right closer with full context. Warm leads to SDRs. Cold leads into a nurture sequence. Zero manual sorting. Zero lead leakage.' },
+    { n: '01', title: 'Lead Inbound', desc: 'A lead reaches you through any channel: WhatsApp, web form, ad click, or DM. The system picks it up instantly from 40+ sources, around the clock.' },
+    { n: '02', title: 'AI Engages', desc: 'Within seconds, the AI starts a WhatsApp conversation. It checks budget, authority, need, and timeline in plain language. Not a survey. Not a bot script.' },
+    { n: '03', title: 'Score Assigned', desc: 'A score from 0 to 100 is computed: Hot (80+), Warm (50-79), Cold (20-49), Disqualified (under 20). The full profile goes straight to your CRM.' },
+    { n: '04', title: 'Routed Instantly', desc: 'Hot leads go to the right closer with full context. Warm leads go to SDRs. Cold leads enter a nurture sequence. No manual sorting. No lead slips through.' },
   ]}
   problemTitle="Your Reps Are Wasting 80% of Their Time"
   problemBody={[
-    "Most B2B sales teams spend the majority of their time talking to leads who were never going to buy. They have no budget. They're not the decision maker. They're just researching. The rep does the discovery call, builds rapport, writes a proposal — and the lead ghosts them.",
-    "The problem isn't your reps. It's the absence of a pre-qualification layer. Without one, every lead looks the same when it arrives, and your team has no way to tell a €30,000 opportunity from a time-waster without spending 45 minutes finding out.",
-    "AI Lead Qualification installs a BANT filter before any human gets involved. Budget confirmed. Authority identified. Need validated. Timeline stated. A lead that passes all four is routed to the right closer with a full dossier. A lead that fails goes into the right nurture sequence — automatically, without human sorting.",
+    "Most B2B sales teams spend most of their time talking to people who were never going to buy. No budget. Not the decision maker. Just browsing. The rep runs the discovery call, writes the proposal, and the lead never replies.",
+    "The problem is not your reps. It is the lack of a pre-qualification layer. Without one, every lead looks the same when it arrives. Your team has no way to tell a 30,000 euro opportunity from a time-waster without spending 45 minutes finding out.",
+    "AI Lead Qualification puts a BANT filter in place before any human gets involved. Budget confirmed. Authority identified. Need validated. Timeline stated. A lead that passes all four goes to the right closer with a full dossier. A lead that fails goes into the right nurture sequence, automatically, without manual sorting.",
   ]}
   {faqItems}
   breadcrumbs={[{ label: 'AI Lead Qualification' }]}

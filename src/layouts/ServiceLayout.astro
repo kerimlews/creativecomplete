@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import LayoutV2 from './LayoutV2.astro';
 import CTA from '../components/v2/CTA.astro';
 
@@ -11,6 +12,7 @@ export interface Props {
   h1: string;
   h1Grad?: string;
   lead: string;
+  image?: string;
   blogHref: string;
   blogLabel: string;
   metrics: { value: string; label: string }[];
@@ -25,11 +27,30 @@ export interface Props {
 const {
   title, description, canonicalUrl, structuredData,
   eyebrow = 'Service', h1, h1Grad, lead,
+  image,
   blogHref, blogLabel,
   metrics, steps, problemTitle, problemBody, faqItems,
   breadcrumbs = [],
   hreflangAlternates,
 } = Astro.props;
+
+const images = import.meta.glob('/src/images/services/*.{png,jpg,jpeg,webp}');
+let heroImg: any = null;
+if (image) {
+  const baseName = image.replace(/\.(png|jpg|jpeg|webp)$/, '');
+  for (const ext of ['png', 'jpg', 'jpeg', 'webp']) {
+    const p = `/src/images/services/${baseName}.${ext}`;
+    if (images[p]) {
+      try {
+        const mod = await (images[p] as () => Promise<any>)();
+        const img = mod.default ?? mod;
+        if (img && 'src' in img) { heroImg = img; break; }
+      } catch { /* skip */ }
+    }
+  }
+}
+
+const imageAlt = `Kerim Alihodza explains how ${h1} works | CreativeComplete`;
 ---
 
 <LayoutV2 {title} {description} {canonicalUrl} {structuredData} {hreflangAlternates}>
@@ -42,18 +63,26 @@ const {
       )}
     </div>
 
+    <!-- ── Hero ──────────────────────────────────────────────────── -->
     <section class="svc-hero">
-      <div class="v2-container">
-        <span class="v2-eyebrow">{eyebrow}</span>
-        <h1 class="v2-h1 svc-h1">
+      <div class="v2-container svc-hero__inner">
+        <span class="v2-eyebrow" data-m="fade">{eyebrow}</span>
+        <h1 class="v2-h1 svc-h1" data-m="up">
           {h1Grad
-            ? <Fragment set:html={h1.replace(h1Grad, `<span class="v2-grad">${h1Grad}</span>`)} />
+            ? <Fragment set:html={h1.replace(h1Grad, `<br><span class="v2-grad">${h1Grad}</span>`)} />
             : h1}
         </h1>
-        <p class="v2-lead svc-lead">{lead}</p>
-        <div class="svc-hero-actions">
+
+        {heroImg ? (
+          <div class="svc-hero-img" data-m="scale">
+            <Image src={heroImg} alt={imageAlt} width={1200} height={Math.round((heroImg.height / heroImg.width) * 1200)} />
+          </div>
+        ) : null}
+
+        <p class="v2-lead svc-lead" data-m="up">{lead}</p>
+        <div class="svc-hero-actions" data-m="up">
           <a href="javascript:void(0)" data-cal-link="kerim-alihodza-7u7w6q/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","theme":"dark"}' class="v2-btn v2-btn-primary">
-            See it in action
+            Book a free call
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a href={blogHref} class="v2-btn v2-btn-ghost">{blogLabel}</a>
@@ -61,11 +90,12 @@ const {
       </div>
     </section>
 
+    <!-- ── Metrics ───────────────────────────────────────────────── -->
     <section class="v2-section svc-metrics-section">
       <div class="v2-container">
-        <div class="svc-metrics">
+        <div class="svc-metrics m-stagger" style={`--cols:${metrics.length}`}>
           {metrics.map(m => (
-            <div class="svc-metric">
+            <div class="svc-metric" data-m="up">
               <div class="svc-metric__n">{m.value}</div>
               <div class="svc-metric__l">{m.label}</div>
             </div>
@@ -74,27 +104,40 @@ const {
       </div>
     </section>
 
-    <section class="v2-section">
-      <div class="v2-container">
-        <div class="v2-section-head">
-          <span class="v2-eyebrow">The Problem</span>
-          <h2 class="v2-h3">{problemTitle}</h2>
+    <!-- ── Problem ───────────────────────────────────────────────── -->
+    <section class="v2-section svc-content-section">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            The Problem
+          </span>
+          <h2 class="svc-h2">{problemTitle}</h2>
         </div>
         <div class="svc-prose">
-          {problemBody.map(p => <p>{p}</p>)}
+          {problemBody.map((p, i) => <p data-m="up" style={`--m-d:${i * 0.08}s`}>{p}</p>)}
         </div>
       </div>
     </section>
 
-    <section class="v2-section" style="padding-top:0">
-      <div class="v2-container">
-        <div class="v2-section-head">
-          <span class="v2-eyebrow">How It Works</span>
-          <h2 class="v2-h3">Step by Step</h2>
+    <!-- ── Steps ─────────────────────────────────────────────────── -->
+    <section class="v2-section svc-content-section" style="padding-top:0">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            How It Works
+          </span>
+          <h2 class="svc-h2">Step by Step</h2>
         </div>
         <div class="svc-steps">
-          {steps.map(s => (
-            <div class="svc-step">
+          {steps.map((s, i) => (
+            <div class="svc-step" data-m="up" style={`--m-d:${i * 0.1}s`}>
               <div class="svc-step__n">{s.n}</div>
               <div class="svc-step__body">
                 <h3 class="svc-step__title">{s.title}</h3>
@@ -106,15 +149,21 @@ const {
       </div>
     </section>
 
-    <section class="v2-section" style="padding-top:0">
-      <div class="v2-container">
-        <div class="v2-section-head">
-          <span class="v2-eyebrow">FAQ</span>
-          <h2 class="v2-h3">Common Questions</h2>
+    <!-- ── FAQ ───────────────────────────────────────────────────── -->
+    <section class="v2-section svc-content-section" style="padding-top:0">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Questions
+          </span>
+          <h2 class="svc-h2">Common Questions</h2>
         </div>
         <div class="svc-faq">
-          {faqItems.map(item => (
-            <details class="svc-faq__item">
+          {faqItems.map((item, i) => (
+            <details class="svc-faq__item" data-m="up" style={`--m-d:${i * 0.07}s`}>
               <summary class="svc-faq__q">{item.name}</summary>
               <p class="svc-faq__a">{item.answer}</p>
             </details>
@@ -140,13 +189,32 @@ const {
     a { color: var(--fg-2); text-decoration: none; &:hover { color: var(--c1-light); } }
   }
 
+  /* ── Hero ─────────────────────────────────────────────────────── */
+
   .svc-hero {
     padding: 52px 0 64px;
   }
 
+  .svc-hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .svc-h1 {
     margin-top: 16px;
-    max-width: 760px;
+    max-width: 100%;
+    font-family: var(--font-display);
+  }
+
+  .svc-hero-img {
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    margin: 28px 0;
+    width: 100%;
+    img { width: 100%; height: auto; display: block; }
   }
 
   .svc-lead {
@@ -160,7 +228,45 @@ const {
     gap: 12px;
     flex-wrap: wrap;
     margin-top: 32px;
+    justify-content: center;
   }
+
+  /* ── Eyebrow with icon ────────────────────────────────────────── */
+
+  .svc-eyebrow-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    svg { opacity: 0.7; }
+  }
+
+  /* ── Section H2 ───────────────────────────────────────────────── */
+
+  .svc-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(20px, 2.2vw, 32px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--fg-0);
+    margin: 12px 0 0;
+    line-height: 1.2;
+  }
+
+  /* ── Content centering ────────────────────────────────────────── */
+
+  .svc-content-section { }
+
+  .svc-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .v2-section-head { margin-bottom: 0; }
+  }
+
+  /* ── Metrics ──────────────────────────────────────────────────── */
 
   .svc-metrics-section {
     padding-top: 0;
@@ -169,12 +275,15 @@ const {
 
   .svc-metrics {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(var(--cols, 4), 1fr);
     gap: 1px;
     background: var(--line);
     border: 1px solid var(--line);
     border-radius: var(--r-lg);
     overflow: hidden;
+    width: 100%;
+
+    @media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); }
   }
 
   .svc-metric {
@@ -182,6 +291,8 @@ const {
     padding: 28px 24px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 6px;
   }
 
@@ -204,21 +315,29 @@ const {
     color: var(--fg-2);
   }
 
+  /* ── Prose ────────────────────────────────────────────────────── */
+
   .svc-prose {
-    max-width: 720px;
+    max-width: 680px;
     display: flex;
     flex-direction: column;
     gap: 18px;
     font-size: 16px;
     line-height: 1.75;
     color: var(--fg-1);
+    margin-top: 32px;
+    text-align: center;
   }
+
+  /* ── Steps ────────────────────────────────────────────────────── */
 
   .svc-steps {
     display: flex;
     flex-direction: column;
     gap: 0;
-    max-width: 760px;
+    width: 100%;
+    max-width: 720px;
+    margin-top: 32px;
   }
 
   .svc-step {
@@ -226,6 +345,7 @@ const {
     gap: 24px;
     padding: 28px 0;
     border-bottom: 1px solid var(--line);
+    text-align: center;
 
     &:last-child { border-bottom: none; }
   }
@@ -245,8 +365,10 @@ const {
   }
 
   .svc-step__title {
-    font-size: 16px;
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
     color: var(--fg-0);
     margin: 0 0 6px;
   }
@@ -258,11 +380,15 @@ const {
     margin: 0;
   }
 
+  /* ── FAQ ──────────────────────────────────────────────────────── */
+
   .svc-faq {
+    width: 100%;
     max-width: 720px;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    margin-top: 32px;
+    text-align: center;
   }
 
   .svc-faq__item {
@@ -275,8 +401,10 @@ const {
   }
 
   .svc-faq__q {
+    font-family: var(--font-sans);
     font-size: 15px;
     font-weight: 600;
+    letter-spacing: 0;
     color: var(--fg-1);
     cursor: pointer;
     list-style: none;
@@ -290,6 +418,7 @@ const {
 
     &::after {
       content: '+';
+      font-family: var(--font-sans);
       font-size: 20px;
       font-weight: 300;
       color: var(--fg-2);
@@ -297,9 +426,7 @@ const {
       transition: transform .2s;
     }
 
-    details[open] &::after {
-      transform: rotate(45deg);
-    }
+    details[open] &::after { transform: rotate(45deg); }
   }
 
   .svc-faq__a {
