@@ -1,5 +1,5 @@
 ---
-title: "Custom SaaS Solutions"
+title: "SaaS Development: MVP to $10K MRR in 12 Months"
 subtitle: "Transform your internal tools into revenue-generating products. From MVP to $10K MRR in 12 months."
 image: "from-idea-to-10k-mrr-saas-case-study"
 author: "kerim-alihodza"
@@ -18,7 +18,18 @@ featured: true
 priority: 6
 slug: "saas-development"
 published: "2026-06-01"
-updated: "2026-06-01"
+updated: "2026-06-02"
+tags:
+  - SaaS development
+  - custom SaaS development
+  - SaaS MVP development
+  - SaaS agency
+  - full-stack SaaS development
+  - MERN stack SaaS
+  - subscription software development
+  - white-label SaaS
+  - SaaS from idea to launch
+  - scalable SaaS architecture
 related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas", "paperpile-saas-scaling-case-study"]
 faq:
   - question: "How long does it take to build a SaaS product?"

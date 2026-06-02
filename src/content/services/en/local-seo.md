@@ -4,7 +4,7 @@ subtitle: "Dominate Google Maps and local search results. Get found by customers
 image: "local-seo-case-study-page-5-to-page"
 author: "kerim-alihodza"
 category: "Local SEO"
-description: "Specialized local SEO services for businesses serving specific geographic areas. Google Business Profile optimization, Google Maps domination, and local search visibility that drives foot traffic and phone calls."
+description: "Local SEO for businesses that need to rank nearby. Google Business Profile, Maps rankings, and local visibility that drives calls and foot traffic."
 features: [
   "Google Business Profile optimization and management",
   "Google Maps ranking domination",
@@ -18,7 +18,18 @@ featured: true
 priority: 8
 slug: "local-seo"
 published: "2026-06-01"
-updated: "2026-06-01"
+updated: "2026-06-02"
+tags:
+  - local SEO
+  - Google Business Profile optimization
+  - Google Maps SEO
+  - local search optimization
+  - local SEO agency
+  - Google Maps ranking
+  - near me SEO
+  - local directory citations
+  - review management SEO
+  - local SEO services
 related_articles: ["careconnect-recruitment-automation"]
 faq:
   - question: "How is local SEO different from regular SEO?"

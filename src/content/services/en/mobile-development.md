@@ -1,5 +1,5 @@
 ---
-title: "Revenue-Driving Mobile Apps"
+title: "Mobile App Development: iOS and Android"
 subtitle: "Mobile apps that increase customer loyalty and repeat business. Average 3X revenue growth for service businesses."
 image: "how-mobile-app-3x-revenue-local-business"
 author: "kerim-alihodza"
@@ -18,7 +18,18 @@ featured: true
 priority: 4
 slug: "mobile-development"
 published: "2026-06-01"
-updated: "2026-06-01"
+updated: "2026-06-02"
+tags:
+  - mobile app development
+  - iOS app development
+  - Android app development
+  - React Native development
+  - cross-platform app development
+  - mobile app agency
+  - custom mobile apps
+  - app development for business
+  - push notification strategy
+  - mobile app ROI
 related_articles: ["fitovision-gym-saas"]
 faq:
   - question: "How long does it take to build a mobile app?"

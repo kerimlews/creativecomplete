@@ -1,6 +1,6 @@
 ---
 title: "AI Lead Qualification: Every Lead Scored in 60 Seconds"
-description: "Automated BANT lead scoring via WhatsApp. Every inbound lead qualified in under 60 seconds — budget, authority, need, and timeline confirmed before any rep gets involved."
+description: "Automated BANT lead scoring via WhatsApp. Every inbound lead qualified in under 60 seconds: budget, authority, need, and timeline confirmed before any rep responds."
 slug: "ai-lead-qualification"
 image: "ai-lead-qualification"
 category: "AI Automation"
@@ -15,6 +15,18 @@ delay: 100
 featured: true
 priority: 9
 published: "2026-06-01"
+updated: "2026-06-02"
+tags:
+  - AI lead qualification
+  - BANT lead scoring
+  - automated lead qualification
+  - WhatsApp lead qualification
+  - lead scoring automation
+  - AI sales qualification
+  - instant lead qualification
+  - reduce lead response time
+  - AI SDR
+  - lead qualification service
 faq:
   - question: "How does AI lead qualification work?"
     answer: "When a lead contacts you via any channel, our AI agent immediately engages them in a natural WhatsApp conversation. It confirms budget, authority, need, and timeline — the BANT framework — and assigns a score from 0–100 within 60 seconds. Hot leads (80+) route to closers. Warm leads go to SDRs. Cold leads enter automated nurture sequences."

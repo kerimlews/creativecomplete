@@ -18,7 +18,18 @@ featured: true
 priority: 8
 slug: "web-design"
 published: "2026-06-01"
-updated: "2026-06-01"
+updated: "2026-06-02"
+tags:
+  - web design agency
+  - conversion-focused web design
+  - high-converting website
+  - website lead generation
+  - Astro web development
+  - mobile-first web design
+  - website optimization
+  - landing page design
+  - web design that converts
+  - custom website development
 related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "paperpile-saas-scaling-case-study"]
 faq:
   - question: "How long does it take to build a website?"

@@ -15,6 +15,18 @@ delay: 100
 featured: true
 priority: 9
 published: "2026-06-01"
+updated: "2026-06-02"
+tags:
+  - AI ad creative engine
+  - AI generated ad creatives
+  - automated ad creative production
+  - ad creative testing automation
+  - reduce cost per lead
+  - Meta ad creative automation
+  - Google ad creative AI
+  - multi-variant ad testing
+  - ad creative fatigue solution
+  - CPL reduction
 faq:
   - question: "What is the AI Ad Creative Engine?"
     answer: "It's a system that generates multiple ad creative variants — headlines, visuals, copy angles — and systematically tests them to find the highest-performing combinations. Instead of a single creative running until it fatigues, you always have 4–8 tested variants, with winners scaling automatically and losers killed before they drain budget."
