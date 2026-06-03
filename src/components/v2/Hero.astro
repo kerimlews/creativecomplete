@@ -75,9 +75,9 @@ const rtCopy = {
 const rt = rtCopy[lang];
 
 const proofItems = [
-  { client: 'iMotorbike',   cat: 'Automotive', stat: '80%',  accent: '#E8420C', glow: 'rgba(232,66,12,.22)',   logo: '/images/logos/clients/imotorbike.svg',   label: lang === 'de' ? 'Anfragen automatisiert' : lang === 'sl' ? 'poizvedb avtomatiziranih' : 'inquiries automated',       slug: 'imotorbike-ai-lead-qualification' },
-  { client: 'Only Tourism', cat: 'Travel',     stat: '60%',  accent: '#0055ff', glow: 'rgba(0,85,255,.22)',    logo: '/images/logos/clients/only-tourism.svg', label: lang === 'de' ? 'mehr Conversions'       : lang === 'sl' ? 'rast konverzij'           : 'conversion rate increase',  slug: 'only-tourism-ai-visa-automation'  },
-  { client: 'Parcel Daily', cat: 'Logistics',  stat: '300%', accent: '#F97316', glow: 'rgba(249,115,22,.22)',  logo: '/images/logos/clients/parcel-daily.svg', label: lang === 'de' ? 'Umsatzwachstum in 6M'  : lang === 'sl' ? 'rast prihodkov v 6M'      : 'revenue growth in 6 months',slug: 'parcel-daily-conversion-boost'    },
+  { client: 'iMotorbike',   cat: 'Automotive', stat: '80%',  accent: '#E8420C', glow: 'rgba(232,66,12,.22)',   logo: '/images/logos/clients/imotorbike.svg',   logoW: 105, label: lang === 'de' ? 'Anfragen automatisiert' : lang === 'sl' ? 'poizvedb avtomatiziranih' : 'inquiries automated',       slug: 'imotorbike-ai-lead-qualification' },
+  { client: 'Only Tourism', cat: 'Travel',     stat: '60%',  accent: '#0055ff', glow: 'rgba(0,85,255,.22)',    logo: '/images/logos/clients/only-tourism.svg', logoW: 126, label: lang === 'de' ? 'mehr Conversions'       : lang === 'sl' ? 'rast konverzij'           : 'conversion rate increase',  slug: 'only-tourism-ai-visa-automation'  },
+  { client: 'Parcel Daily', cat: 'Logistics',  stat: '300%', accent: '#F97316', glow: 'rgba(249,115,22,.22)',  logo: '/images/logos/clients/parcel-daily.svg', logoW: 98,  label: lang === 'de' ? 'Umsatzwachstum in 6M'  : lang === 'sl' ? 'rast prihodkov v 6M'      : 'revenue growth in 6 months',slug: 'parcel-daily-conversion-boost'    },
 ];
 const proofEyebrow = lang === 'de' ? 'Echte Agentur-Ergebnisse' : lang === 'sl' ? 'Resnični rezultati agencij' : 'Real agency results';
 const projectBase  = lang === 'en' ? '/projects' : `/${lang}/projects`;
@@ -116,7 +116,7 @@ const projectBase  = lang === 'en' ? '/projects' : `/${lang}/projects`;
       <div class="v2-hero__trust">
         <div class="v2-hero__logos">
           <div class="v2-hero__logo-pill">
-            <img src="/images/logos/only-tourism.svg" alt="Only Tourism" height="22" loading="lazy" />
+            <img src="/images/logos/only-tourism.svg" alt="Only Tourism" width="99" height="22" loading="lazy" />
           </div>
         </div>
         <span class="v2-hero__trust-sep" aria-hidden="true"></span>
@@ -274,6 +274,7 @@ const projectBase  = lang === 'en' ? '/projects' : `/${lang}/projects`;
                 alt={p.client}
                 class="v2-proof__logo"
                 loading="lazy"
+                width={p.logoW}
                 height="28"
               />
             </div>
