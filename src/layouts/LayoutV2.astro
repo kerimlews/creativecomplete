@@ -17,7 +17,6 @@ export interface Props {
   service?: any;
   openGraph?: Record<string, any>;
   twitterCard?: Record<string, any>;
-  priority?: number;
   // v2-specific
   navActive?: 'home' | 'services' | 'process' | 'results' | 'projects' | 'blog';
   // Override auto-computed hreflang — use when locale URL segments differ (e.g. /services/ vs /dienstleistungen/)
@@ -37,7 +36,6 @@ const {
   service,
   openGraph = {},
   twitterCard = {},
-  priority = 0.8,
   navActive = 'home',
   hreflangAlternates,
 } = Astro.props;
@@ -105,10 +103,10 @@ if (breadcrumbs && !structuredData) {
 
   <!-- JSON-LD -->
   {jsonLdSchemas.map(schema => (
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
   ))}
   {breadcrumbJsonLd && (
-    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
   )}
 
   <!-- Icons -->
@@ -129,12 +127,8 @@ if (breadcrumbs && !structuredData) {
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Dancing+Script:wght@600;700&display=swap" />
   </noscript>
 
-  <!-- Cal.com popup embed -->
-  <script type="text/javascript" is:inline>
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "30min", {origin:"https://app.cal.com"});
-    Cal.ns["30min"]("ui", {"theme":"dark","hideEventTypeDetails":false,"layout":"month_view"});
-  </script>
+  <!-- Cal.com: preconnect only — embed.js loads lazily on first button click -->
+  <link rel="preconnect" href="https://app.cal.com" />
 
   <!-- Analytics: both run in Partytown web worker — zero main-thread blocking -->
   <script is:inline type="text/partytown" src="https://t.contentsquare.net/uxa/be34155e4623d.js"></script>
@@ -151,6 +145,30 @@ if (breadcrumbs && !structuredData) {
     <Footer />
   </div>
   <ConsentModal />
+
+  <!-- Cal.com lazy loader: embed.js is fetched only on the first button click -->
+  <script is:inline>
+  (function () {
+    var calStarted = false;
+    var calReady = false;
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('a[href*="cal.com/kerim-alihodza"]');
+      if (!btn) return;
+      if (calReady) return;
+      e.preventDefault();
+      var link = btn.getAttribute('href').replace(/.*cal\.com\//, '');
+      if (!calStarted) {
+        calStarted = true;
+        (function(C,A,L){var p=function(a,ar){a.q.push(ar)};var d=C.document;C.Cal=C.Cal||function(){var cal=C.Cal;var ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];d.head.appendChild(d.createElement("script")).src=A;cal.loaded=true}if(ar[0]===L){var api=function(){p(api,arguments)};var namespace=ar[1];api.q=api.q||[];if(typeof namespace==="string"){cal.ns[namespace]=cal.ns[namespace]||api;p(cal.ns[namespace],ar);p(cal,["initNamespace",namespace])}else p(cal,ar);return}p(cal,ar)}})(window,"https://app.cal.com/embed/embed.js","init");
+        Cal("init","30min",{origin:"https://app.cal.com"});
+        var s=document.querySelector('script[src*="app.cal.com/embed"]');
+        if(s)s.addEventListener('load',function(){calReady=true});
+        Cal.ns["30min"]("ui",{"theme":"dark","hideEventTypeDetails":false,"layout":"month_view"});
+      }
+      Cal.ns["30min"]("openModal",{calLink:link});
+    });
+  })();
+  </script>
 
   <script is:inline>
     (() => {
@@ -199,8 +217,6 @@ if (breadcrumbs && !structuredData) {
         const isFloat = raw.includes('.');
         const dur = 1600;
         const t0  = performance.now();
-
-        const orig = el.textContent; /* keep original for re-use */
 
         function tick(now) {
           const t = Math.min((now - t0) / dur, 1);
