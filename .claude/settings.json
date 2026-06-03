@@ -123,12 +123,15 @@
       "Bash(sed -i 's/ — and you'\\\\''re still running the same creative/. You'\\\\''re still running the same creative/g' /home/kerim/Documents/astro-creativecomplete-landing/src/pages/services/ai-ad-creative-engine.astro)",
       "Bash(sed -i 's/ — all without a creative team meeting or a campaign manager'\\\\''s gut instinct/, without a creative team meeting or a campaign manager'\\\\''s gut instinct/g' /home/kerim/Documents/astro-creativecomplete-landing/src/pages/services/ai-ad-creative-engine.astro)",
       "Bash(sed -i 's/went cold in your CRM — ignored, uncontacted, waiting/went cold in your CRM, ignored, uncontacted, waiting/g' /home/kerim/Documents/astro-creativecomplete-landing/src/pages/services/whatsapp-database-monetization.astro)",
-      "Bash(sed -i 's/ — a 42× return — in two days/. That is a 42x return in two days/g' /home/kerim/Documents/astro-creativecomplete-landing/src/pages/services/whatsapp-database-monetization.astro)"
+      "Bash(sed -i 's/ — a 42× return — in two days/. That is a 42x return in two days/g' /home/kerim/Documents/astro-creativecomplete-landing/src/pages/services/whatsapp-database-monetization.astro)",
+      "Bash(mkdir -p /home/kerim/Documents/astro-creativecomplete-landing/src/images/agents && cp /home/kerim/Documents/astro-creativecomplete-landing/public/images/agents/*.jpg /home/kerim/Documents/astro-creativecomplete-landing/src/images/agents/ && ls /home/kerim/Documents/astro-creativecomplete-landing/src/images/agents/)",
+      "Bash(nvm ls *)"
     ],
     "additionalDirectories": [
       "/home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/de",
       "/home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/sl",
-      "/tmp"
+      "/tmp",
+      "/home/kerim/Documents/astro-creativecomplete-landing/public/images/agents"
     ]
   }
 }

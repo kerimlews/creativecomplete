@@ -4,6 +4,17 @@ import heroImg from '../../images/ai-custormer-system.png';
 import getV2Content from '../../utils/v2i18n';
 import type { Lang } from '../../utils/v2i18n';
 
+const agentImageModules = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/images/agents/*.jpg',
+  { eager: true }
+);
+const agentImages: Record<string, ImageMetadata> = Object.fromEntries(
+  Object.entries(agentImageModules).map(([path, mod]) => {
+    const filename = path.split('/').pop()!;
+    return [filename, mod.default];
+  })
+);
+
 export interface Props {
   lang?: Lang;
 }
@@ -137,6 +148,7 @@ const projectBase  = lang === 'en' ? '/projects' : `/${lang}/projects`;
           src={heroImg}
           alt="AI Customer System — unified inbox managing leads across WhatsApp, Instagram, TikTok, Facebook and 40+ channels"
           loading="eager"
+          fetchpriority="high"
           quality={90}
         />
       </div>
@@ -195,11 +207,15 @@ const projectBase  = lang === 'en' ? '/projects' : `/${lang}/projects`;
         {rtAgents.map((a, i) => (
           <div class="v2-rt__agent" style={`--col:${a.color};--glow:${a.glow};--i:${i}`}>
             <!-- Full-bleed AI portrait -->
-            <img
-              src={`/images/agents/${a.img}`}
+            <Image
+              src={agentImages[a.img]}
               alt={`${a.name}, ${a.role}`}
               class="v2-rt__photo"
+              format="webp"
+              quality={85}
               loading="lazy"
+              width={300}
+              height={400}
             />
             <!-- Type pill — top left -->
             <div class="v2-rt__strip" aria-hidden="true">
