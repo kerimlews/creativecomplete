@@ -118,13 +118,13 @@ if (breadcrumbs && !structuredData) {
   <!-- Fonts: preconnect + async load (non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Async font stylesheet — does not block render -->
+  <!-- display=optional: no swap period, so fonts never cause layout shift -->
   <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Dancing+Script:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Dancing+Script:wght@600;700&display=optional"
     onload="this.rel='stylesheet'" />
   <noscript>
     <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Dancing+Script:wght@600;700&display=swap" />
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Dancing+Script:wght@600;700&display=optional" />
   </noscript>
 
   <!-- Cal.com: preconnect only — embed.js loads lazily on first button click -->

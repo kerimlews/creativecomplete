@@ -126,7 +126,8 @@
       "Bash(sed -i 's/ — a 42× return — in two days/. That is a 42x return in two days/g' /home/kerim/Documents/astro-creativecomplete-landing/src/pages/services/whatsapp-database-monetization.astro)",
       "Bash(mkdir -p /home/kerim/Documents/astro-creativecomplete-landing/src/images/agents && cp /home/kerim/Documents/astro-creativecomplete-landing/public/images/agents/*.jpg /home/kerim/Documents/astro-creativecomplete-landing/src/images/agents/ && ls /home/kerim/Documents/astro-creativecomplete-landing/src/images/agents/)",
       "Bash(nvm ls *)",
-      "Bash(grep -v '^.*--$')"
+      "Bash(grep -v '^.*--$')",
+      "Bash(identify src/images/ai-custormer-system.png)"
     ],
     "additionalDirectories": [
       "/home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/de",
