@@ -127,7 +127,10 @@
       "Bash(mkdir -p /home/kerim/Documents/astro-creativecomplete-landing/src/images/agents && cp /home/kerim/Documents/astro-creativecomplete-landing/public/images/agents/*.jpg /home/kerim/Documents/astro-creativecomplete-landing/src/images/agents/ && ls /home/kerim/Documents/astro-creativecomplete-landing/src/images/agents/)",
       "Bash(nvm ls *)",
       "Bash(grep -v '^.*--$')",
-      "Bash(identify src/images/ai-custormer-system.png)"
+      "Bash(identify src/images/ai-custormer-system.png)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(echo \"PID: $!\")"
     ],
     "additionalDirectories": [
       "/home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/de",
