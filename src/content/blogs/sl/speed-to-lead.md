@@ -100,6 +100,8 @@ Izhod ni le hitrost. Je predstavnik, ki se prikaže na vsakem pogovoru informira
 
 Poslovni primer za Speed to Lead ni zapleten. Če porabljate denar za oglase, plačujete za vsak lead. Lead, ki gre hladen, ker je vaš odziv trajal 3 ure, stane enako kot lead, ki konvertira. Razlika je v celoti v tem, kaj se je zgodilo v prvih 5 minutah.
 
+Speed to Lead je prva plast celotnega sistema avtomatizacije prodaje. Za celoten okvir — od takojšnjega AI odziva prek kvalifikacije in usmerjanja do follow-up zaporedij in CRM integracije — preberite [celoten vodnik za avtomatizacijo prodajnega procesa](/blog/sales-automation-agencies-guide/).
+
 Pri **CreativeComplete** gradimo Speed to Lead kot prvo plast AI Customer Systema. Vsak nov lead, iz katerega koli kanala, dobi AI odziv v manj kot 60 sekundah, oceno kvalifikacije, preden ga vidi človek, in [odločitev usmerjanja](/sl/blog/avtomatizirana-distribucija-leadov/), ki ga postavi pred pravega predstavnika s polnim kontekstom.
 
 Večina strank gre v živo v **5 dneh**.

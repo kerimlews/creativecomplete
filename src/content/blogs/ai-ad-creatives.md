@@ -117,6 +117,8 @@ The difference isn't the tool. It's the combination of volume, speed, scoring, a
 
 ## How to Get This Running
 
+For the complete production system architecture — how to build all six systems into a single creative operation from brief to scaled deployment — read the [AI Ad Creative Production Guide](/blog/ai-ad-creative-production-guide/).
+
 The implementation path is straightforward: brand kit upload, copy brief structure, platform selection, scoring threshold configuration.
 
 At **CreativeComplete**, we set this up as part of our AI Customer System, integrated with your ad accounts, CRM, and lead routing so that every creative variant is tied to downstream conversion data, not just top-of-funnel click metrics. You see which creative generated which [lead](/blog/whatsapp-lead-generation/), which lead converted, and what the lifetime value was.

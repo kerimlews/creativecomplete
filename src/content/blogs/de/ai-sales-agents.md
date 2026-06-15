@@ -81,3 +81,5 @@ AI Agents fahren das Follow-up systematisch: die richtige Nachricht, im richtige
 Bei **CreativeComplete** sind AI Sales Agents in der Convert-Phase des AI Customer Systems konfiguriert, integriert mit jedem Lead-Kanal, Ihrem [CRM](/de/blog/crm-automatisierung/) und dem Kalender Ihrer Reps. Das System wird in 5 Tagen gebaut, trainiert und getestet.
 
 Wenn Ihre Abschlussquote niedriger ist, als sie sein sollte, liegt es wahrscheinlich nicht am Produkt oder am Pitch. Es liegt an den Leads, die zwischen Erstkontakt und erstem Gespräch kalt geworden sind.
+
+Das vollständige Sales-Automation-Framework — wie AI Agents in ein System aus Qualifizierung, Routing, Follow-up und CRM-Integration eingebettet werden — beschreibt der [vollständige Sales-Process-Automation-Leitfaden](/blog/sales-automation-agencies-guide/).

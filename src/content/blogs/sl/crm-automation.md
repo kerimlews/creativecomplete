@@ -93,6 +93,8 @@ Integracijska plast povezuje:
 
 Ko je vse to povezano, CRM teče sam. Predstavniki ga uporabljajo za upravljanje svojih odnosov, ne za vzdrževanje sistema.
 
+CRM avtomatizacija je ena plast celotnega sklada avtomatizacije prodaje. Za celotno arhitekturo — od prvega zajemanja leadov prek AI kvalifikacije, usmerjanja in avtomatiziranega follow-upa — preberite [celoten vodnik za avtomatizacijo prodajnega procesa](/blog/sales-automation-agencies-guide/).
+
 Pri **CreativeComplete** je CRM avtomatizacija zgrajena kot povezovalna plast AI Customer Systema, ki povezuje zajem leadov, kvalifikacijo, usmerjanje in zadrževanje v en pipeline, ki se posodablja v realnem času brez ročnega vnosa.
 
 Večina strank povrne **2–3 ure časa predstavnika na dan** v prvem tednu implementacije. Ta čas gre neposredno v zaključevanje.

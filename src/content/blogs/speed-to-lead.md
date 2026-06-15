@@ -94,6 +94,8 @@ The output isn't just speed. It's a rep who shows up to every conversation infor
 
 The business case for Speed to Lead isn't complicated. If you're spending money on ads, you're paying for every lead. A lead that goes cold because your response took 3 hours costs the same as a lead that converts. The difference is entirely in what happened in the first 5 minutes.
 
+Speed to Lead is the first layer of a complete sales automation system. For the full framework — from instant AI response through qualification, routing, follow-up sequences, and CRM integration — read the [Sales Process Automation Guide](/blog/sales-automation-agencies-guide/).
+
 At CreativeComplete, we build Speed to Lead as the first layer of the AI Customer System. Every new lead from any channel gets an AI response in under 60 seconds, a qualification score before a human sees it, and a [routing decision](/blog/automated-lead-distribution/) that puts it in front of the right rep with full context.
 
 Most clients go live in 5 days.

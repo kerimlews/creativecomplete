@@ -98,6 +98,8 @@ An AI Agent handles the replies in real time, continuing the qualification conve
 
 The broadcast isn't a one-time event. It's the opening move in an ongoing monetization system. Each campaign produces revenue, data on what resonates, and a refined segment list for the next one.
 
+For the complete WhatsApp Business API setup guide — how to get API access, configure opt-in flows, get template approval, and build every lead generation channel on top of it — read the [WhatsApp Business API Guide](/blog/whatsapp-business-api-guide/).
+
 At **CreativeComplete**, WhatsApp broadcast campaigns are built as part of the AI Customer System's Retain phase, integrated with your CRM, your AI qualification layer, and your sales inbox so that every reply generates a tracked revenue event.
 
 Most clients launch their first campaign within **5 days** of onboarding.

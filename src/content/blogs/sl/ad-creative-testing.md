@@ -99,3 +99,5 @@ Stranka, ki vstopi s 3-variantnim oglasnim računom in se premakne na 20-variant
 Pri **CreativeComplete** je testiranje kreativ vgrajeno v AI Creative Engine. AI generira različice, jih vnaprej oceni, vodi testno strukturo in samodejno skalira zmagovalce ob zaustavitvi slabih izvajalcev. Celoten proces teče, ne da bi vaša ekipa ročno spremljala zmogljivost oglasov ali sprejemala kreativne odločitve v negotovosti.
 
 Cilj je kreativna operacija, kjer vedno veste, kaj deluje, zakaj deluje in kaj testirati naprej.
+
+Za celoten produkcijski sistem — generiranje različic v velikem obsegu, ocenjevanje zmogljivosti, uvajanje za več platform in zaklepanje znamke — preberite [celoten vodnik za AI produkcijo oglasnih kreativ](/blog/ai-ad-creative-production-guide/).

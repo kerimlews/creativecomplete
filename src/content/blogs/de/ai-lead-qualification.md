@@ -87,6 +87,8 @@ Die KI schließt keine Deals. Sie behandelt keine Einwände ernsthafter Käufer.
 
 Ihre Reps besitzen weiterhin die Beziehung. Sie besitzen sie nur aus einer viel stärkeren Startposition.
 
+Eine vollständige Übersicht aller Qualifizierungsframeworks — BANT, CHAMP und MEDDIC — und den Aufbau des Systems von Grund auf beschreibt der [vollständige KI-Lead-Qualifizierungsleitfaden](/blog/ai-lead-qualification-guide/).
+
 Bei **CreativeComplete** ist KI-Lead-Qualifizierung in die zweite Phase unseres AI Customer Systems eingebaut. Jeder Inbound-Lead wird qualifiziert, bevor er Ihr Team berührt, egal woher er kam, wann er ankam oder wie viele gleichzeitig reinkamen.
 
 Das System skaliert mit Ihrem Volumen. Wenn Sie morgen eine Kampagne starten und am Wochenende 400 Leads reinkommen, sind alle bis Montagmorgen qualifiziert, gescort und [geroutet](/de/blog/automatisierte-lead-verteilung/).

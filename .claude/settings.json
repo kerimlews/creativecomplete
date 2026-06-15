@@ -130,7 +130,9 @@
       "Bash(identify src/images/ai-custormer-system.png)",
       "Skill(run)",
       "Skill(run:*)",
-      "Bash(echo \"PID: $!\")"
+      "Bash(echo \"PID: $!\")",
+      "Bash(bash /tmp/orphan_check.sh)",
+      "Bash(bash /tmp/pillar_outbound.sh)"
     ],
     "additionalDirectories": [
       "/home/kerim/Documents/astro-creativecomplete-landing/src/content/blogs/de",

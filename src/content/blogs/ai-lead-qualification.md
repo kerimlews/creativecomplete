@@ -87,6 +87,8 @@ The AI doesn't close deals. It doesn't handle objections from serious buyers. It
 
 Your reps still own the relationship. They just own it from a much stronger starting position.
 
+For a complete breakdown of all qualification frameworks — BANT, CHAMP, and MEDDIC — and how to build the full system architecture from scratch, read the [AI Lead Qualification System Guide](/blog/ai-lead-qualification-guide/).
+
 At **CreativeComplete**, AI lead qualification is built into the second phase of our AI Customer System. Every inbound lead gets qualified before it touches your team, regardless of where it came from, what time it arrived, or how many came in at once.
 
 The system scales with your volume. If you run a campaign tomorrow and 400 leads come in over the weekend, every one of them is qualified, scored, and [routed](/blog/automated-lead-distribution/) by Monday morning.

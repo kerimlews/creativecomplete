@@ -127,6 +127,8 @@ Najhitrejša pot implementacije je platforma z vgrajenim motorjem usmerjanja.
 
 Prava platforma izvaja vseh sedem pravil usmerjanja nativno, z vizualnim konfiguracijskim vmesnikom, ki ne zahteva kode. Mapirate veščine vaše ekipe, postavite urnike izmen, definirate tipe strank, in pravila tečejo samodejno od te točke naprej.
 
+Distribucija leadov je ena plast celotnega sistema avtomatizacije prodaje. Za celoten okvir — kvalifikacija pred usmerjanjem, follow-up zaporedja in CRM integracija — preberite [celoten vodnik za avtomatizacijo prodajnega procesa](/blog/sales-automation-agencies-guide/).
+
 Pri **CreativeComplete** konfiguriramo in vodimo polno postavitev avtomatizirane distribucije leadov kot del našega AI Customer Systema, vključno z logiko usmerjanja, treningom agentov in integracijo z vašim obstoječim CRM. Večina strank gre iz ročne dodelitve v polno avtomatizirano usmerjanje v **10 dneh**.
 
 Če vaša ekipa še vedno ročno dodeljuje leade, je vsak dan čakanja prihodek, ki uhaja skozi vrzel, ki je v celoti popravljiva.

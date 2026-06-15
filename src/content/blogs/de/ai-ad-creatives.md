@@ -117,6 +117,8 @@ Der Unterschied ist nicht das Tool. Es ist die Kombination aus Volumen, Geschwin
 
 ## So setzen Sie das auf
 
+Die vollständige Produktionssystem-Architektur — alle sechs Systeme von Brief bis zum skalierten Einsatz — beschreibt der [vollständige KI-Ad-Creative-Produktionsleitfaden](/blog/ai-ad-creative-production-guide/).
+
 Der Implementierungspfad ist geradlinig: Brand Kit hochladen, Copy-Briefing-Struktur definieren, Plattform-Auswahl treffen, Score-Schwelle konfigurieren.
 
 Bei **CreativeComplete** richten wir das als Teil unseres AI Customer Systems ein, integriert mit Ihren Ad-Accounts, CRM und Lead-Routing, sodass jede Creative-Variante mit nachgelagerten Conversion-Daten verknüpft ist, nicht nur mit Top-of-Funnel-Click-Metriken. Sie sehen, welches Creative welchen [Lead](/de/blog/whatsapp-lead-generierung/) generiert hat, welcher Lead konvertiert ist und wie hoch der Lifetime Value war.

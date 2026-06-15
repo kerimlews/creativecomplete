@@ -93,6 +93,8 @@ Drei häufige Fehler, die Konversion kosten:
 
 **Vor dem Routing nicht qualifizieren.** Reps, die jeden WhatsApp-Lead bekommen, unabhängig von der Qualität, verbringen die meiste Zeit mit Leuten, die nicht kaufbereit sind. Das richtige System surfacet nur qualifizierte Leads mit vollem Kontext.
 
+Den vollständigen Leitfaden zu WhatsApp Business API — Zugang, Nachrichtenvorlagen, Meta-Compliance und das Skalieren von Broadcast und Lead-Gen auf derselben Plattform — finden Sie im [WhatsApp Business API Leitfaden](/blog/whatsapp-business-api-guide/).
+
 Bei **CreativeComplete** ist WhatsApp Lead-Generierung als Capture-Phase des AI Customer Systems gebaut, integriert mit jeder Ad-Plattform, jedem Social-Kanal und Ihrer Website, sodass jeder Eintrittspunkt einen WhatsApp-Lead generiert, der sofort erfasst, qualifiziert und ohne manuellen Eingriff geroutet wird.
 
 Die meisten Kunden sehen ihre ersten qualifizierten WhatsApp-Leads innerhalb von **48 Stunden** nach Setup.

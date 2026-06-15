@@ -127,6 +127,8 @@ The fastest implementation path is a platform that has the routing engine built 
 
 The right platform ships all seven routing rules natively, with a visual configuration interface that requires no code. You map your team's skills, set your shift schedules, define your customer types, and the rules run automatically from that point forward.
 
+Lead distribution is one layer of a complete sales automation system. For the full framework — qualification before routing, follow-up sequences, and CRM integration — read the [Sales Process Automation Guide](/blog/sales-automation-agencies-guide/).
+
 At **CreativeComplete**, we configure and manage the full automated lead distribution setup as part of our AI Customer System, including routing logic, agent training, and integration with your existing CRM. Most clients go from manual assignment to fully automated routing within **10 days**.
 
 If your team is still assigning leads by hand, every day you wait is revenue leaving through a gap that's entirely fixable.

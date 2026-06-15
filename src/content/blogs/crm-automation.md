@@ -93,6 +93,8 @@ The integration layer connects:
 
 When all of these are connected, the CRM runs itself. Reps use it to manage their relationships, not to maintain the system.
 
+CRM automation is one layer of a complete sales automation stack. For the full architecture — from first lead capture through AI qualification, routing, and automated follow-up — read the [Sales Process Automation Guide](/blog/sales-automation-agencies-guide/).
+
 At **CreativeComplete**, CRM automation is built as the connective layer of the AI Customer System, tying together lead capture, qualification, routing, and retention into a single pipeline that updates in real time without manual input.
 
 Most clients recover **2–3 hours of rep time per day** within the first week of implementation. That time goes directly into closing.

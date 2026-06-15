@@ -93,6 +93,8 @@ Tri pogoste napake, ki ubijejo konverzijo:
 
 **Brez kvalifikacije pred usmerjanjem k predstavniku.** Predstavniki, ki prejmejo vsak WhatsApp lead ne glede na kakovost, porabijo večino časa za ljudi, ki niso pripravljeni kupiti. Pravi sistem izpostavi samo kvalificirane leade s polnim kontekstom.
 
+Za celoten vodnik za WhatsApp Business API — dostop, predloge sporočil, skladnost z Meto in skaliranje broadcasta in pridobivanja leadov na isti platformi — preberite [vodnik za WhatsApp Business API](/blog/whatsapp-business-api-guide/).
+
 Pri **CreativeComplete** je WhatsApp pridobivanje leadov zgrajeno kot Capture faza AI Customer Systema, integrirano z vsako oglasno platformo, vsakim družbenim kanalom in vašo spletno stranjo, tako da vsaka vstopna točka generira WhatsApp lead, ki je takoj zajet, kvalificiran in usmerjen brez ročnega posega.
 
 Večina strank vidi svoje prve kvalificirane WhatsApp leade v **48 urah** od postavitve.

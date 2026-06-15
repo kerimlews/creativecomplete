@@ -93,6 +93,8 @@ Die Integrations-Schicht verbindet:
 
 Wenn all das verbunden ist, läuft das CRM von selbst. Reps nutzen es zum Managen ihrer Beziehungen, nicht zum Warten des Systems.
 
+CRM-Automation ist eine Schicht eines vollständigen Sales-Automation-Stacks. Die gesamte Architektur — von der ersten Lead-Erfassung über KI-Qualifizierung, Routing und automatisiertes Follow-up — beschreibt der [vollständige Sales-Process-Automation-Leitfaden](/blog/sales-automation-agencies-guide/).
+
 Bei **CreativeComplete** ist CRM-Automation die Verbindungsschicht des AI Customer Systems, die Lead-Erfassung, Qualifizierung, Routing und Retention zu einer Pipeline verknüpft, die in Echtzeit ohne manuellen Eingriff aktualisiert wird.
 
 Die meisten Kunden gewinnen **2–3 Stunden** Rep-Zeit pro Tag in der ersten Implementierungswoche zurück. Diese Zeit fließt direkt ins Closing.

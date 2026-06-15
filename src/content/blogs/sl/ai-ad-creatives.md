@@ -117,6 +117,8 @@ Razlika ni v orodju. Je v kombinaciji obsega, hitrosti, ocenjevanja in usklajeno
 
 ## Kako to zagnati
 
+Za celotno arhitekturo produkcijskega sistema — kako zgraditi vseh šest sistemov v eno kreativno operacijo od briefinga do skaliranega uvajanja — preberite [celoten vodnik za AI produkcijo oglasnih kreativ](/blog/ai-ad-creative-production-guide/).
+
 Pot implementacije je preprosta: nalaganje brand kita, struktura copy briefinga, izbira platforme, konfiguracija praga ocenjevanja.
 
 Pri **CreativeComplete** to nastavimo kot del našega AI Customer Systema, integriranega z vašimi oglasnimi računi, CRM in usmerjanjem leadov, tako da je vsaka kreativna različica vezana na nadaljnje konverzijske podatke, ne le na metrike klikov na vrhu lijaka. Vidite, katera kreativa je generirala kateri [lead](/sl/blog/whatsapp-pridobivanje-leadov/), kateri lead je konvertiral in kakšna je bila življenjska vrednost.
