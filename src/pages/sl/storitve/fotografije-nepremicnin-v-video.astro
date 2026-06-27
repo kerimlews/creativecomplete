@@ -1,0 +1,287 @@
+---
+import LayoutV2 from '../../../layouts/LayoutV2.astro';
+import CTA from '../../../components/v2/CTA.astro';
+
+const canonicalUrl = 'https://www.creativecomplete.com/sl/storitve/fotografije-nepremicnin-v-video/';
+
+const hreflangAlternates = {
+  en: 'https://creativecomplete.com/services/property-photos-to-video/',
+  de: 'https://www.creativecomplete.com/de/dienstleistungen/immobilienfotos-zu-video/',
+  sl: canonicalUrl,
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Fotografije nepremičnin v video",
+      "description": "Vaše fotografije oglasov spremenimo v kinematografske nepremičninske ture v 48 urah. Brez novih snemanj, brez opreme. Samo vaše obstoječe fotografije kot profesionalni video.",
+      "url": canonicalUrl,
+      "provider": { "@type": "Organization", "name": "CreativeComplete", "url": "https://www.creativecomplete.com/" },
+      "serviceType": "Video produkcija za nepremičnine",
+      "areaServed": "SI",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Domov", "item": "https://www.creativecomplete.com/sl/" },
+        { "@type": "ListItem", "position": 2, "name": "Storitve", "item": "https://www.creativecomplete.com/sl/storitve/" },
+        { "@type": "ListItem", "position": 3, "name": "Fotografije nepremičnin v video", "item": canonicalUrl },
+      ]
+    },
+  ]
+};
+
+const metrics = [
+  { value: '48h', label: 'Dostava na oglas' },
+  { value: '3x', label: 'Več ogledov kot statični oglasi' },
+  { value: '0', label: 'Potrebnih novih snemanj' },
+  { value: '100%', label: 'Vaše obstoječe fotografije' },
+];
+
+const steps = [
+  { n: '01', title: 'Pošljite fotografije oglasa', desc: 'Naložite fotografije nepremičnin, ki jih že imate. Notranjost, zunanjost, detajli. Standardne fotografije oglasov so popolnoma primerne. Profesionalno fotografiranje ni potrebno.' },
+  { n: '02', title: 'Animiramo in dodamo glasbo', desc: 'Dodamo kinematografsko gibanje, gladke prehode, učinke globine in glasbeno ozadje, ki ustreza nepremičnini. Rezultat izgleda kot profesionalno video snemanje.' },
+  { n: '03', title: 'Pregledate in odobrite', desc: 'Osnutek prejmete v 48 urah. Če želite spremembe v tempu, glasbi ali vrstnem redu prostorov, to hitro uredimo in pošljemo končno različico.' },
+  { n: '04', title: 'Objavite in glejte, kako povpraševanja rastejo', desc: 'Video objavite na Instagramu, TikToku, Facebooku, oglasnem portalu in WhatsAppu. Video oglasi dobijo več shranjevanj, deljenja in neposrednih sporočil kot samo fotografije.' },
+];
+
+const faqItems = [
+  { name: "Ali moram najprej najeti fotografa?", answer: "Ne. Delamo s fotografijami oglasov, ki jih že imate. Če imate vsaj 8 do 10 dobrih fotografij nepremičnine, iz njih lahko ustvarimo celoten video." },
+  { name: "Kako dolgo traja produkcija vsakega videa?", answer: "Standardna dostava je 48 ur od trenutka, ko pošljete fotografije. Če potrebujete hitreje, se javite in bomo našli rešitev." },
+  { name: "Kakšno ločljivost in format dobim?", answer: "Dobite 1080p MP4, optimiziran za družbena omrežja. Vertikalno 9:16 za Reels in TikTok, horizontalno 16:9 za portale in YouTube. Oba formata sta vključena. Cena se začne pri 90€ na video in je odvisna od posla." },
+  { name: "Ali lahko te videe uporabim na oglasnih portalih in svoji spletni strani?", answer: "Da. Polne pravice uporabe za vse kanale: družbena omrežja, oglasni portali, spletna stran agencije, e-pošta in plačano oglaševanje." },
+  { name: "Koliko fotografij potrebujem na nepremičnino?", answer: "8 fotografij je minimum za soliden 30 do 45 sekund dolg video. Večina agencij pošlje 15 do 25 slik na nepremičnino, kar nam da več manevrskega prostora." },
+];
+
+const videos = [
+  { id: '1T9ggm6Xzg5FJ8Mgwu3Blb-HOgrsxXNfQ', label: 'Primer 1' },
+  { id: '1l56wT-rN7ZzWqXEAg7B794vzoMxyBALM', label: 'Primer 2' },
+  { id: '1PDi0OMS1Gq9X5iO5jasglTvD0NqiPux5', label: 'Primer 3' },
+  { id: '1La0UDn1kdJ4gP9X6XPeqpD_vJpAY1vQ6', label: 'Primer 4' },
+];
+---
+
+<LayoutV2
+  lang="sl"
+  title="Fotografije nepremičnin v video: Kinematografske ture za agencije | CreativeComplete"
+  description="Fotografije nepremičnin v video v 48 urah. Vaše obstoječe fotografije oglasov spremenimo v kinematografske ture z 3x več ogledi. Brez novih snemanj."
+  {canonicalUrl}
+  {structuredData}
+  {hreflangAlternates}
+  navActive="services"
+>
+  <main>
+    <div class="v2-container v2-bc">
+      <a href="/sl/">Domov</a><span>/</span><a href="/sl/storitve/">Storitve</a><span>/</span>
+      <span>Fotografije nepremičnin v video</span>
+    </div>
+
+    <section class="svc-hero">
+      <div class="v2-container svc-hero__inner">
+        <span class="v2-eyebrow" data-m="fade">Video za nepremičnine</span>
+        <h1 class="v2-h1 svc-h1" data-m="up">
+          Fotografije nepremičnin v video<br><span class="v2-grad">za nepremičninske agencije</span>
+        </h1>
+        <p class="v2-lead svc-lead" data-m="up">
+          Fotografije nepremičnin v video. Vzamemo fotografije, ki jih že imate, in jih spremenimo
+          v kinematografske ture, ki ustavijo drsenje po zaslonu. Brez novih snemanj, brez opreme,
+          brez dolgega čakanja. Pošljite fotografije in video prejmete v 48 urah.
+        </p>
+        <div class="svc-hero-actions" data-m="up">
+          <a href="https://cal.com/kerim-alihodza-7u7w6q/30min" class="v2-btn v2-btn-primary">
+            Rezervirajte brezplačen klic
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#primeri" class="v2-btn v2-btn-ghost">Oglejte si primere</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section svc-metrics-section">
+      <div class="v2-container">
+        <div class="svc-metrics m-stagger" style={`--cols:${metrics.length}`}>
+          {metrics.map(m => (
+            <div class="svc-metric" data-m="up">
+              <div class="svc-metric__n">{m.value}</div>
+              <div class="svc-metric__l">{m.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section svc-videos-section" id="primeri">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Resnični rezultati
+          </span>
+          <h2 class="svc-h2">Poglejte, kaj smo ustvarili iz fotografij oglasov</h2>
+          <p class="svc-section-sub">Štiri resnične nepremičninske ture, ustvarjene iz standardnih fotografij oglasov. Brez video posnetkov.</p>
+        </div>
+        <div class="svc-video-grid">
+          {videos.map((v, i) => (
+            <div class="svc-video-wrap" data-m="up" style={`--m-d:${i * 0.1}s`}>
+              <div class="svc-video-label">{v.label}</div>
+              <div class="svc-video-frame">
+                <iframe
+                  src={`https://drive.google.com/file/d/${v.id}/preview`}
+                  allow="autoplay"
+                  allowfullscreen
+                  loading="lazy"
+                  title={`Nepremičninski video ${v.label}`}
+                ></iframe>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section svc-content-section">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Problem
+          </span>
+          <h2 class="svc-h2">Statične fotografije nepremičnin ne prodajajo več</h2>
+        </div>
+        <div class="svc-prose">
+          <p data-m="up">
+            Kupci pri vsaki seji pregledajo desetine oglasov. Mreža statičnih fotografij je videti
+            enako kot vsak drug oglas. Vaša nepremičnina dobi dve sekundi pozornosti in nato brisanje.
+            Video pripravi ljudi, da se ustavijo, gledajo in dejansko začutijo prostor. To se odraža
+            v povpraševanjih.
+          </p>
+          <p data-m="up" style="--m-d:0.08s">
+            Očitna rešitev je video. Problem sta stroški in čas. Profesionalno video snemanje na oglas
+            je drago, koordinirati ga morate, čakati na montažo in vse ponoviti za naslednji posel.
+            Za agencije z več aktivnimi oglasi se to hitro sešteje.
+          </p>
+          <p data-m="up" style="--m-d:0.16s">
+            Delamo s fotografijami, ki ste jih že posneli. Dodamo kinematografsko gibanje, prehode
+            in glasbo in rezultat izgleda kot profesionalno video snemanje. Pošljete fotografije,
+            mi vrnemo video v 48 urah, pripravljen za objavo na Instagramu, TikToku, YouTubu in Meta oglasih.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section svc-content-section" style="padding-top:0">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Kako deluje
+          </span>
+          <h2 class="svc-h2">Od fotografij do objavljenega videa v 4 korakih</h2>
+        </div>
+        <div class="svc-steps">
+          {steps.map((s, i) => (
+            <div class="svc-step" data-m="up" style={`--m-d:${i * 0.1}s`}>
+              <div class="svc-step__n">{s.n}</div>
+              <div class="svc-step__body">
+                <h3 class="svc-step__title">{s.title}</h3>
+                <p class="svc-step__desc">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section svc-content-section" style="padding-top:0">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Vprašanja
+          </span>
+          <h2 class="svc-h2">Pogosta vprašanja</h2>
+        </div>
+        <div class="svc-faq">
+          {faqItems.map((item, i) => (
+            <details class="svc-faq__item" data-m="up" style={`--m-d:${i * 0.07}s`}>
+              <summary class="svc-faq__q">{item.name}</summary>
+              <p class="svc-faq__a">{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTA lang="sl" />
+  </main>
+</LayoutV2>
+
+<style lang="scss" is:global>
+  .v2-bc {
+    display: flex; align-items: center; gap: 8px;
+    padding-top: 24px; padding-bottom: 8px;
+    font-size: 13px; font-family: var(--font-mono); color: var(--fg-2);
+    a { color: var(--fg-2); text-decoration: none; &:hover { color: var(--c1-light); } }
+  }
+  .svc-hero { padding: 52px 0 64px; }
+  .svc-hero__inner { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .svc-h1 { margin-top: 16px; max-width: 100%; font-family: var(--font-display); }
+  .svc-lead { max-width: 640px; margin-top: 20px; }
+  .svc-hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 32px; justify-content: center; }
+  .svc-eyebrow-icon { display: inline-flex; align-items: center; gap: 6px; svg { opacity: 0.7; } }
+  .svc-h2 {
+    font-family: var(--font-sans); font-size: clamp(20px, 2.2vw, 32px); font-weight: 700;
+    letter-spacing: 0.04em; text-transform: uppercase; color: var(--fg-0); margin: 12px 0 0; line-height: 1.2;
+  }
+  .svc-section-sub { font-size: 15px; color: var(--fg-2); margin-top: 12px; max-width: 560px; }
+  .svc-content-center { display: flex; flex-direction: column; align-items: center; text-align: center; .v2-section-head { margin-bottom: 0; } }
+  .svc-metrics-section { padding-top: 0; padding-bottom: 64px; }
+  .svc-metrics {
+    display: grid; grid-template-columns: repeat(var(--cols, 4), 1fr);
+    gap: 1px; background: var(--line); border: 1px solid var(--line);
+    border-radius: var(--r-lg); overflow: hidden; width: 100%;
+    @media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); }
+  }
+  .svc-metric { background: var(--bg-card); padding: 28px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; }
+  .svc-metric__n {
+    font-family: var(--font-display); font-size: 40px; letter-spacing: -0.025em; line-height: 1;
+    background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .svc-metric__l { font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-2); }
+  .svc-videos-section { padding-bottom: 80px; }
+  .svc-video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; width: 100%; margin-top: 40px; @media (max-width: 640px) { grid-template-columns: 1fr; } }
+  .svc-video-wrap { display: flex; flex-direction: column; gap: 10px; }
+  .svc-video-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-2); text-align: left; }
+  .svc-video-frame {
+    position: relative; width: 100%; padding-bottom: 56.25%;
+    border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line); background: var(--bg-card);
+    iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  }
+  .svc-prose { max-width: 680px; display: flex; flex-direction: column; gap: 18px; font-size: 16px; line-height: 1.75; color: var(--fg-1); margin-top: 32px; text-align: center; }
+  .svc-steps { display: flex; flex-direction: column; gap: 0; width: 100%; max-width: 720px; margin-top: 32px; }
+  .svc-step { display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--line); text-align: left; &:last-child { border-bottom: none; } }
+  .svc-step__n { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; color: var(--c1-light); background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); border-radius: 6px; padding: 4px 8px; align-self: flex-start; flex-shrink: 0; margin-top: 3px; }
+  .svc-step__title { font-family: var(--font-display); font-size: 20px; font-weight: 400; letter-spacing: -0.01em; color: var(--fg-0); margin: 0 0 6px; }
+  .svc-step__desc { font-size: 15px; color: var(--fg-2); line-height: 1.6; margin: 0; }
+  .svc-faq { width: 100%; max-width: 720px; display: flex; flex-direction: column; margin-top: 32px; }
+  .svc-faq__item { border-bottom: 1px solid var(--line); padding: 20px 0; &:first-child { border-top: 1px solid var(--line); } &[open] .svc-faq__q { color: var(--fg-0); } }
+  .svc-faq__q {
+    font-family: var(--font-sans); font-size: 15px; font-weight: 600; color: var(--fg-1);
+    cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; user-select: none; text-align: left;
+    &::-webkit-details-marker { display: none; }
+    &::after { content: '+'; font-size: 20px; font-weight: 300; color: var(--fg-2); flex-shrink: 0; transition: transform .2s; }
+    details[open] &::after { transform: rotate(45deg); }
+  }
+  .svc-faq__a { margin: 12px 0 0; font-size: 14px; line-height: 1.7; color: var(--fg-2); text-align: left; }
+</style>
