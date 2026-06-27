@@ -1,0 +1,494 @@
+---
+import LayoutV2 from '../../layouts/LayoutV2.astro';
+import CTA from '../../components/v2/CTA.astro';
+
+const canonicalUrl = 'https://creativecomplete.com/services/property-photos-to-video/';
+
+const hreflangAlternates = {
+  en: canonicalUrl,
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Property Photos to Video",
+      "description": "We turn real estate listing photos into cinematic property tour videos in 48 hours. No new shoots, no equipment. Just your existing images turned into scroll-stopping videos.",
+      "url": canonicalUrl,
+      "provider": { "@type": "Organization", "name": "CreativeComplete", "url": "https://creativecomplete.com/" },
+      "serviceType": "Real Estate Video Production",
+      "areaServed": "Worldwide",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://creativecomplete.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://creativecomplete.com/services/" },
+        { "@type": "ListItem", "position": 3, "name": "Property Photos to Video", "item": canonicalUrl },
+      ]
+    },
+  ]
+};
+
+const metrics = [
+  { value: '48h', label: 'Turnaround per listing' },
+  { value: '3x', label: 'More views vs static listings' },
+  { value: '0', label: 'New shoots required' },
+  { value: '100%', label: 'Your existing photos used' },
+];
+
+const steps = [
+  { n: '01', title: 'Send Your Listing Photos', desc: 'Upload the property images you already have. Interior, exterior, detail shots. Standard listing photos work fine. No professional photography needed.' },
+  { n: '02', title: 'We Animate and Score', desc: 'We add cinematic motion, smooth transitions, depth effects, and background music that fits the property. The result looks and feels like a proper video shoot.' },
+  { n: '03', title: 'Review and Approve', desc: 'You get a draft within 48 hours. If you want changes to the pacing, music, or room order, we sort it fast and send the final version over.' },
+  { n: '04', title: 'Post and Watch Inquiries Climb', desc: 'Put the video on Instagram, TikTok, Facebook, your listing portal, WhatsApp. Video listings get more saves, more shares, and more direct messages than photos alone.' },
+];
+
+const faqItems = [
+  { name: "Do I need to hire a photographer first?", answer: "No. We work with the listing photos you already have. If you have at least 8 to 10 good images of the property, we can build the full video from those." },
+  { name: "How long does each video take to produce?", answer: "Standard turnaround is 48 hours from when you send the photos. If you need it faster, get in touch and we will sort something out." },
+  { name: "What resolution and format do I get?", answer: "You get a 1080p MP4 ready for social media. Vertical 9:16 for Reels and TikTok, horizontal 16:9 for portals and YouTube. Both formats come included. Pricing starts at 90€ per video and is based on the deal." },
+  { name: "Can I use these videos on listing portals and my own website?", answer: "Yes. Full usage rights across all channels: social media, listing portals, your agency website, email, and paid ads." },
+  { name: "How many photos do I need per property?", answer: "8 photos is the minimum for a solid 30 to 45 second video. Most agencies send 15 to 25 images per property, which gives us more to work with." },
+];
+
+const videos = [
+  { id: '1T9ggm6Xzg5FJ8Mgwu3Blb-HOgrsxXNfQ', label: 'Example 1' },
+  { id: '1l56wT-rN7ZzWqXEAg7B794vzoMxyBALM', label: 'Example 2' },
+  { id: '1PDi0OMS1Gq9X5iO5jasglTvD0NqiPux5', label: 'Example 3' },
+  { id: '1La0UDn1kdJ4gP9X6XPeqpD_vJpAY1vQ6', label: 'Example 4' },
+];
+---
+
+<LayoutV2
+  title="Property Photos to Video: Cinematic Real Estate Tours | CreativeComplete"
+  description="Property photos to video in 48 hours. We turn your existing listing images into cinematic real estate tours that get 3x more views, shares, and inquiries. No new shoots needed."
+  {canonicalUrl}
+  {structuredData}
+  {hreflangAlternates}
+  navActive="services"
+>
+  <main>
+    <!-- Breadcrumb -->
+    <div class="v2-container v2-bc">
+      <a href="/">Home</a><span>/</span><a href="/services/">Services</a><span>/</span>
+      <span>Property Photos to Video</span>
+    </div>
+
+    <!-- Hero -->
+    <section class="svc-hero">
+      <div class="v2-container svc-hero__inner">
+        <span class="v2-eyebrow" data-m="fade">Real Estate Video</span>
+        <h1 class="v2-h1 svc-h1" data-m="up">
+          Property Photos to Video<br><span class="v2-grad">for Real Estate Agencies</span>
+        </h1>
+        <p class="v2-lead svc-lead" data-m="up">
+          Property photos to video. We take the listing images you already have and turn them into
+          cinematic tours that stop the scroll. No new shoots, no equipment, no waiting weeks.
+          Send the photos and get the video back in 48 hours.
+        </p>
+        <div class="svc-hero-actions" data-m="up">
+          <a href="https://cal.com/kerim-alihodza-7u7w6q/30min" class="v2-btn v2-btn-primary">
+            Book a free call
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#examples" class="v2-btn v2-btn-ghost">See examples</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="v2-section svc-metrics-section">
+      <div class="v2-container">
+        <div class="svc-metrics m-stagger" style={`--cols:${metrics.length}`}>
+          {metrics.map(m => (
+            <div class="svc-metric" data-m="up">
+              <div class="svc-metric__n">{m.value}</div>
+              <div class="svc-metric__l">{m.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Examples -->
+    <section class="v2-section svc-videos-section" id="examples">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Real Results
+          </span>
+          <h2 class="svc-h2">See What We Built From Listing Photos</h2>
+          <p class="svc-section-sub">Four real property tours created from standard listing photographs. No video footage used.</p>
+        </div>
+        <div class="svc-video-grid">
+          {videos.map((v, i) => (
+            <div class="svc-video-wrap" data-m="up" style={`--m-d:${i * 0.1}s`}>
+              <div class="svc-video-label">{v.label}</div>
+              <div class="svc-video-frame">
+                <iframe
+                  src={`https://drive.google.com/file/d/${v.id}/preview`}
+                  allow="autoplay"
+                  allowfullscreen
+                  loading="lazy"
+                  title={`Real estate property video ${v.label}`}
+                ></iframe>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="v2-section svc-content-section">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            The Problem
+          </span>
+          <h2 class="svc-h2">Static Photos Don't Sell Properties Anymore</h2>
+        </div>
+        <div class="svc-prose">
+          <p data-m="up">
+            Buyers scroll through dozens of listings every session. A grid of static photos looks the same
+            as every other listing. Your property gets a two-second glance and then a swipe. Video makes
+            people stop, watch, and actually feel the space. That shows up in inquiries.
+          </p>
+          <p data-m="up" style="--m-d:0.08s">
+            The obvious fix is video. The problem is cost and time. A proper video shoot per listing
+            is expensive, you need to schedule it, wait for the edit, and do it all over again for the
+            next deal. For agencies with multiple active listings, that adds up fast.
+          </p>
+          <p data-m="up" style="--m-d:0.16s">
+            We work from the photos you already took. We add cinematic motion, transitions, and music
+            and the result looks like a proper video shoot. You send the photos, we send back the video
+            in 48 hours, ready to post on Instagram, TikTok, YouTube, and Meta ads.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="v2-section svc-content-section" style="padding-top:0">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            How It Works
+          </span>
+          <h2 class="svc-h2">From Photos to Published Video in 4 Steps</h2>
+        </div>
+        <div class="svc-steps">
+          {steps.map((s, i) => (
+            <div class="svc-step" data-m="up" style={`--m-d:${i * 0.1}s`}>
+              <div class="svc-step__n">{s.n}</div>
+              <div class="svc-step__body">
+                <h3 class="svc-step__title">{s.title}</h3>
+                <p class="svc-step__desc">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="v2-section svc-content-section" style="padding-top:0">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Questions
+          </span>
+          <h2 class="svc-h2">Common Questions</h2>
+        </div>
+        <div class="svc-faq">
+          {faqItems.map((item, i) => (
+            <details class="svc-faq__item" data-m="up" style={`--m-d:${i * 0.07}s`}>
+              <summary class="svc-faq__q">{item.name}</summary>
+              <p class="svc-faq__a">{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </main>
+</LayoutV2>
+
+<style lang="scss" is:global>
+  .v2-bc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 24px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    font-family: var(--font-mono);
+    color: var(--fg-2);
+    a { color: var(--fg-2); text-decoration: none; &:hover { color: var(--c1-light); } }
+  }
+
+  /* Hero */
+  .svc-hero { padding: 52px 0 64px; }
+  .svc-hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .svc-h1 {
+    margin-top: 16px;
+    max-width: 100%;
+    font-family: var(--font-display);
+  }
+  .svc-lead {
+    max-width: 640px;
+    margin-top: 20px;
+  }
+  .svc-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    justify-content: center;
+  }
+
+  /* Eyebrow with icon */
+  .svc-eyebrow-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    svg { opacity: 0.7; }
+  }
+
+  /* Section H2 */
+  .svc-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(20px, 2.2vw, 32px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--fg-0);
+    margin: 12px 0 0;
+    line-height: 1.2;
+  }
+
+  .svc-section-sub {
+    font-size: 15px;
+    color: var(--fg-2);
+    margin-top: 12px;
+    max-width: 560px;
+  }
+
+  /* Content centering */
+  .svc-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .v2-section-head { margin-bottom: 0; }
+  }
+
+  /* Metrics */
+  .svc-metrics-section { padding-top: 0; padding-bottom: 64px; }
+  .svc-metrics {
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 4), 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    width: 100%;
+    @media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); }
+  }
+  .svc-metric {
+    background: var(--bg-card);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+  .svc-metric__n {
+    font-family: var(--font-display);
+    font-size: 40px;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    background: var(--grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .svc-metric__l {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--fg-2);
+  }
+
+  /* Video section */
+  .svc-videos-section { padding-bottom: 80px; }
+  .svc-video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 100%;
+    margin-top: 40px;
+    @media (max-width: 640px) { grid-template-columns: 1fr; }
+  }
+  .svc-video-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .svc-video-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--fg-2);
+    text-align: left;
+  }
+  .svc-video-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--bg-card);
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+
+  /* Prose */
+  .svc-prose {
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--fg-1);
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  /* Steps */
+  .svc-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    max-width: 720px;
+    margin-top: 32px;
+  }
+  .svc-step {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    &:last-child { border-bottom: none; }
+  }
+  .svc-step__n {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .1em;
+    color: var(--c1-light);
+    background: rgba(99,102,241,0.1);
+    border: 1px solid rgba(99,102,241,0.2);
+    border-radius: 6px;
+    padding: 4px 8px;
+    align-self: flex-start;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .svc-step__title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--fg-0);
+    margin: 0 0 6px;
+  }
+  .svc-step__desc {
+    font-size: 15px;
+    color: var(--fg-2);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* FAQ */
+  .svc-faq {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+  }
+  .svc-faq__item {
+    border-bottom: 1px solid var(--line);
+    padding: 20px 0;
+    &:first-child { border-top: 1px solid var(--line); }
+    &[open] .svc-faq__q { color: var(--fg-0); }
+  }
+  .svc-faq__q {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--fg-1);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+    text-align: left;
+    &::-webkit-details-marker { display: none; }
+    &::after {
+      content: '+';
+      font-family: var(--font-sans);
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--fg-2);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    details[open] &::after { transform: rotate(45deg); }
+  }
+  .svc-faq__a {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--fg-2);
+    text-align: left;
+  }
+</style>
