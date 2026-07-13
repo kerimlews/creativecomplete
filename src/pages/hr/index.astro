@@ -1,0 +1,64 @@
+---
+import LayoutV2 from '../../layouts/LayoutV2.astro';
+import Hero from '../../components/v2/Hero.astro';
+import Founder from '../../components/v2/Founder.astro';
+import Services from '../../components/v2/Services.astro';
+import Results from '../../components/v2/Results.astro';
+import BlogScroll from '../../components/v2/BlogScroll.astro';
+import Testimonials from '../../components/v2/Testimonials.astro';
+import FAQ from '../../components/v2/FAQ.astro';
+import Track from '../../components/v2/Track.astro';
+import CTA from '../../components/v2/CTA.astro';
+import BookingSection from '../../components/v2/BookingSection.astro';
+
+const siteUrl = 'https://www.creativecomplete.com';
+const canonicalUrl = `${siteUrl}/hr/`;
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteUrl}#organization`,
+    "name": "CreativeComplete",
+    "url": siteUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/favicon.svg`
+    },
+    "description": "Agencija za AI Customer System — kvalifikacija leadova, AI oglasne kreative i WhatsApp broadcast kampanje za agencije.",
+    "areaServed": ["HR", "BA", "RS", "ME"],
+    "inLanguage": "hr"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/hr/#website`,
+    "url": canonicalUrl,
+    "name": "CreativeComplete",
+    "inLanguage": "hr",
+    "publisher": { "@id": `${siteUrl}#organization` }
+  }
+];
+---
+
+<LayoutV2
+  lang="hr"
+  title="AI Customer System — Agencija za kvalifikaciju i konverziju leadova | CreativeComplete"
+  description="AI Customer System koji kvalificira nove leadove u manje od 60 sekundi, konvertira ih AI oglasnim kreativama i generira 42.5× ROI iz vaše postojeće baze leadova. Izgrađeno i vođeno od strane CreativeComplete."
+  canonicalUrl={canonicalUrl}
+  navActive="home"
+  structuredData={structuredData}
+>
+  <main>
+    <Hero lang="hr" />
+    <Track lang="hr" />
+    <Services lang="hr" />
+    <Results lang="hr" />
+    <Founder lang="hr" />
+    <BlogScroll lang="hr" />
+    <Testimonials lang="hr" />
+    <FAQ lang="hr" />
+    <CTA lang="hr" />
+    <BookingSection lang="hr" />
+  </main>
+</LayoutV2>

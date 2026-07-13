@@ -1,0 +1,755 @@
+---
+import LayoutV2 from '../../../layouts/LayoutV2.astro';
+import CTA from '../../../components/v2/CTA.astro';
+
+// Primary keyword: "Spletna stran za lokalna podjetja"
+// Placed in: slug, title, description, H1, and first line of body content.
+const canonicalUrl = 'https://www.creativecomplete.com/sl/storitve/spletna-stran-za-lokalna-podjetja/';
+
+const hreflangAlternates = {
+  en: 'https://creativecomplete.com/services/local-business-website-development/',
+  de: 'https://www.creativecomplete.com/de/dienstleistungen/website-fuer-lokale-unternehmen/',
+  sl: canonicalUrl,
+  hr: 'https://www.creativecomplete.com/hr/usluge/web-stranica-za-lokalne-tvrtke/',
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Spletna stran za lokalna podjetja",
+      "description": "Spletna stran za lokalna podjetja, ki združuje dizajn za konverzije, lokalni SEO, spletni rezervacijski sistem in avtomatizirano sledenje. Ena spletna stran, ki jo najdejo, rezervira posle in samodejno sledi.",
+      "url": canonicalUrl,
+      "provider": { "@type": "Organization", "name": "CreativeComplete", "url": "https://www.creativecomplete.com/" },
+      "serviceType": "Izdelava spletnih strani za lokalna podjetja",
+      "areaServed": "SI",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Domov", "item": "https://www.creativecomplete.com/sl/" },
+        { "@type": "ListItem", "position": 2, "name": "Storitve", "item": "https://www.creativecomplete.com/sl/storitve/" },
+        { "@type": "ListItem", "position": 3, "name": "Spletna stran za lokalna podjetja", "item": canonicalUrl },
+      ]
+    },
+  ]
+};
+
+const metrics = [
+  { value: '312%', label: 'Več dohodnih klicev' },
+  { value: 'Top 3', label: 'Doseženo uvrščanje na Google Zemljevidih' },
+  { value: '24/7', label: 'Rezervacije potekajo samodejno' },
+  { value: '< 2s', label: 'Čas nalaganja na mobilnem' },
+];
+
+const pillars = [
+  {
+    tag: 'Dizajn',
+    title: 'Dizajn za konverzije',
+    desc: 'Hitra, mobilnim napravam prilagojena spletna stran z eno samo nalogo: obiskovalca spremeniti v rezervirano stranko. Jasne storitve, klik za klic na vsakem zaslonu in signali zaupanja tam, kjer štejejo. Ne lepa brošura, ki samo stoji.',
+    icon: 'M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z',
+  },
+  {
+    tag: 'Lokalni SEO',
+    title: 'Lokalni SEO in Google Poslovni profil',
+    desc: 'Uvrstimo vas med rezultate na Google Zemljevidih, kjer stranke v vaši bližini dejansko iščejo. Nastavitev Google Poslovnega profila, lokacijske strani za vsako območje, ki ga pokrivate, in lokalni signali, ki poskrbijo, da vas najdejo pri iskanjih "v bližini".',
+    icon: 'M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z M12 10a2 2 0 100-4 2 2 0 000 4z',
+  },
+  {
+    tag: 'Rezervacije',
+    title: 'Spletni rezervacijski sistem',
+    desc: 'Stranke rezervirajo neposredno v vaš koledar, opolnoči, v nedeljo, kadar koli se odločijo. Brez telefonskega lovljenja, brez zamujenih klicev, brez izgubljenih povpraševanj, ker se nihče ni oglasil. Spletna stran termin sklene namesto vas.',
+    icon: 'M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z',
+  },
+  {
+    tag: 'Avtomatizacija',
+    title: 'Avtomatizirano sledenje',
+    desc: 'Nova povpraševanja dobijo takojšen odgovor. Rezervirane stranke prejmejo opomnike, da se res pojavijo. Zaključeni posli sprožijo prošnjo za oceno, ki samodejno gradi vašo Google oceno. Delo, ki običajno pade skozi razpoke, se opravi samo.',
+    icon: 'M4 4v6h6M20 20v-6h-6M20 4a9 9 0 00-15 4M4 20a9 9 0 0015-4',
+  },
+];
+
+const compare = [
+  { label: 'Se prikaže na Google Zemljevidih pri lokalnih iskanjih', them: false, you: true },
+  { label: 'Sprejema rezervacije 24/7 brez telefonskega klica', them: false, you: true },
+  { label: 'Takoj odgovori na nova povpraševanja', them: false, you: true },
+  { label: 'Samodejno zbira Google ocene', them: false, you: true },
+  { label: 'Naloži se na mobilnem v manj kot 2 sekundah', them: false, you: true },
+  { label: 'Zgrajena za konverzije, ne le za lep videz', them: false, you: true },
+];
+
+const steps = [
+  { n: '01', title: 'Analiza in načrt', desc: 'Pogledamo, kako se pojavljate danes: vašo trenutno spletno stran, vaš Google Poslovni profil in kaj vidijo stranke v vaši bližini, ko iščejo tisto, kar počnete. Nato začrtamo natančen sistem, ki ga vaše podjetje potrebuje.' },
+  { n: '02', title: 'Izdelava spletne strani', desc: 'Oblikujemo in zgradimo hitro, mobilnim napravam prilagojeno spletno stran, ki se naloži v manj kot dveh sekundah in je zasnovana za konverzije. Jasne storitve, močni pozivi k dejanju in rezervacijski sistem vgrajen od prvega dne.' },
+  { n: '03', title: 'Nastavitev lokalnega SEO in rezervacij', desc: 'Optimiziramo vaš Google Poslovni profil, ustvarimo lokacijske strani za vsako območje, ki ga pokrivate, in povežemo spletne rezervacije z vašim koledarjem. Prav to poskrbi, da vas najdejo in rezervirajo.' },
+  { n: '04', title: 'Avtomatizacija in zagon', desc: 'Takojšnji odgovori, opomniki za termine in samodejne prošnje za oceno gredo v živo. Zaženete s spletno stranjo, ki najde stranke, jih rezervira in sledi, medtem ko vi opravljate dejansko delo.' },
+];
+
+const faqItems = [
+  { name: "Kaj natančno vključuje spletna stran za lokalna podjetja?", answer: "To so štiri stvari v eni izdelavi: spletna stran za konverzije, lokalni SEO z nastavitvijo Google Poslovnega profila, spletni rezervacijski sistem, povezan z vašim koledarjem, in avtomatizirano sledenje za povpraševanja, opomnike in ocene. Večina agencij vam proda spletno stran in se tam ustavi. Mi zgradimo celoten sistem, da spletna stran dejansko prinaša posel." },
+  { name: "Spletno stran že imam. Zakaj mi ne prinaša strank?", answer: "Večina lokalnih spletnih strani je digitalnih vizitk. Izgledajo v redu, a se ne uvrščajo na Google Zemljevidih, ne morejo sprejeti rezervacije in nikoli ne sledijo. Zato ljudje najprej najdejo vašega konkurenta, rezervirajo pri tistem, ki se oglasi, vaša stran pa ostane tiha. Popravimo dele, ki prinašajo stranke, ne le tiste, ki jih gledate." },
+  { name: "Kako se to razlikuje od vaše storitve spletnega oblikovanja?", answer: "Spletno oblikovanje je en del. To je celoten paket za lokalno storitveno podjetje: dizajn plus lokalni SEO plus rezervacije plus avtomatizacija, zgrajeni tako, da delujejo skupaj. Če želite spletno stran, ki se lokalno uvršča in samodejno rezervira posle, je to prava izbira." },
+  { name: "Koliko časa traja izdelava?", answer: "Večina projektov gre v živo v 3 do 6 tednih, odvisno od tega, koliko lokacij pokrivate in koliko vsebine imate na začetku. Delamo v fazah, tako da lahko osrednja stran zažene najprej, lokacijske strani in avtomatizacija pa se dodajo pozneje." },
+  { name: "Ali sodelujete tudi s podjetji brez vsakršne spletne prisotnosti?", answer: "Da, in ta so pogosto najboljša izbira. Švicarsko čistilno podjetje iz naše študije primera je začelo brez spletne strani, brez Google Poslovnega profila in brez ocen. V 90 dneh so bili med prvimi tremi na Google Zemljevidih z 312 % več dohodnimi klici. Začeti z nič je prednost, saj je vsaka izboljšava hitro vidna." },
+  { name: "Koliko stane?", answer: "Odvisno je od tega, koliko lokacij pokrivate in koliko avtomatizacije potrebujete. Rezervirajte brezplačen klic in začrtali bomo natančen sistem za vaše podjetje ter vam podali fiksno ceno. Brez naročniške pasti, brez presenečenj." },
+];
+---
+
+<LayoutV2
+  lang="sl"
+  title="Spletna stran za lokalna podjetja: dizajn, lokalni SEO in rezervacije | CreativeComplete"
+  description="Spletna stran za lokalna podjetja, ki združuje dizajn za konverzije, lokalni SEO, spletne rezervacije in avtomatizirano sledenje. Večina konkurentov nima nič od tega. Oglejte si prave rezultate."
+  {canonicalUrl}
+  {structuredData}
+  {hreflangAlternates}
+  navActive="services"
+>
+  <main>
+    <!-- Breadcrumb -->
+    <div class="v2-container v2-bc">
+      <a href="/sl/">Domov</a><span>/</span><a href="/sl/storitve/">Storitve</a><span>/</span>
+      <span>Spletna stran za lokalna podjetja</span>
+    </div>
+
+    <!-- Hero -->
+    <section class="svc-hero">
+      <div class="v2-container svc-hero__inner">
+        <span class="v2-eyebrow" data-m="fade">Spletne strani za lokalna podjetja</span>
+        <h1 class="v2-h1 svc-h1" data-m="up">
+          Spletna stran za lokalna podjetja<br><span class="v2-grad">ki iskanja spremeni v rezervirane posle</span>
+        </h1>
+        <p class="v2-lead svc-lead" data-m="up">
+          Spletna stran za lokalna podjetja, ki zna več kot le lepo izgledati. Dobite dizajn za konverzije,
+          lokalni SEO, ki vas uvrsti na Google Zemljevide, spletni rezervacijski sistem in avtomatizirano
+          sledenje. To je natanko nastavitev, ki je večina lokalnih podjetij v vaši okolici nima, zato
+          njihove spletne strani ostajajo tihe, njihov telefon pa molči.
+        </p>
+        <div class="svc-hero-actions" data-m="up">
+          <a href="https://cal.com/kerim-alihodza-7u7w6q/30min" class="v2-btn v2-btn-primary">
+            Rezervirajte brezplačen klic
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#primer" class="v2-btn v2-btn-ghost">Oglejte si pravi rezultat</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="v2-section svc-metrics-section">
+      <div class="v2-container svc-content-center">
+        <div class="svc-metrics m-stagger" style={`--cols:${metrics.length}`}>
+          {metrics.map(m => (
+            <div class="svc-metric" data-m="up">
+              <div class="svc-metric__n">{m.value}</div>
+              <div class="svc-metric__l">{m.label}</div>
+            </div>
+          ))}
+        </div>
+        <p class="lbw-metrics-note">Številke iz nedavnega projekta za stranko. Celotna študija primera spodaj.</p>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="v2-section svc-content-section" style="padding-top:0">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Težava
+          </span>
+          <h2 class="svc-h2">Vaša spletna stran je morda videti v redu in vseeno ne naredi nič</h2>
+        </div>
+        <div class="svc-prose">
+          <p data-m="up">
+            Spletna stran, ki samo lepo izgleda, je digitalna vizitka. Ne najdejo je, ne more sprejeti
+            rezervacije in nikoli ne sledi. Zato samo stoji tam, tiha, medtem ko vi še naprej lovite posel
+            po težki poti.
+          </p>
+          <p data-m="up" style="--m-d:0.08s">
+            Tako v resnici poteka. Nekdo v vaši bližini išče tisto, kar počnete. Pritisne na prva podjetja
+            na Google Zemljevidih, pokliče tistega, ki se oglasi, in rezervira. To je celotna odločitev in
+            traja približno minuto. Če niste med temi prvimi rezultati, posel odide h konkurentu, še preden
+            ste vedeli, da obstaja.
+          </p>
+          <p data-m="up" style="--m-d:0.16s">
+            Večini lokalnih podjetij manjkajo vsi deli, ki dobijo to minuto. Brez uvrstitve na Zemljevidih,
+            brez spletnih rezervacij, brez takojšnjega odgovora, brez sistema ocen. To ni majhna vrzel. To
+            je razlika med spletno stranjo, ki zasluži, in tisto, ki samo obstaja. In vsak teden, ko ostane
+            tako, klici še naprej odhajajo drugam.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The System (4 pillars) -->
+    <section class="v2-section svc-content-section" style="padding-top:0">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Sistem
+          </span>
+          <h2 class="svc-h2">Štirje sistemi, ena spletna stran. Nastavitev, ki jo konkurenti izpustijo.</h2>
+          <p class="svc-section-sub">Vsak del je koristen sam po sebi. Skupaj tiho spletno stran spremenijo v tako, ki najde stranke, jih rezervira in poskrbi, da se vračajo.</p>
+        </div>
+        <div class="lbw-pillars">
+          {pillars.map((p, i) => (
+            <div class="lbw-pillar v2-card" data-m="up" style={`--m-d:${i * 0.08}s`}>
+              <div class="lbw-pillar__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d={p.icon} stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="lbw-pillar__tag">{p.tag}</span>
+              <h3 class="lbw-pillar__title">{p.title}</h3>
+              <p class="lbw-pillar__desc">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="v2-section svc-content-section" style="padding-top:0">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h4M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Vrzel
+          </span>
+          <h2 class="svc-h2">Večina lokalnih spletnih strani vs. vaša</h2>
+        </div>
+        <div class="lbw-compare" data-m="up">
+          <div class="lbw-compare__head">
+            <div class="lbw-compare__feature"></div>
+            <div class="lbw-compare__col lbw-compare__col--them">Večina lokalnih spletnih strani</div>
+            <div class="lbw-compare__col lbw-compare__col--you">Vaš novi sistem</div>
+          </div>
+          {compare.map(row => (
+            <div class="lbw-compare__row">
+              <div class="lbw-compare__feature">{row.label}</div>
+              <div class="lbw-compare__cell lbw-compare__cell--them">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-label="Ne"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <div class="lbw-compare__cell lbw-compare__cell--you">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-label="Da"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Real example: Belags case study -->
+    <section class="v2-section svc-content-section" style="padding-top:0" id="primer">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Pravi rezultat
+          </span>
+          <h2 class="svc-h2">Pravo lokalno podjetje, ki je naredilo prav to</h2>
+          <p class="svc-section-sub">Belags-Oberflächenreinigung, podjetje za čiščenje v Arbonu, Švica. Ko smo začeli: brez spletne strani, brez Google Poslovnega profila, brez ocen. Nič.</p>
+        </div>
+
+        <div class="lbw-case v2-card-grad" data-m="up">
+          <div class="lbw-case__grid">
+            <div class="lbw-case__side">
+              <span class="lbw-case__label">Prej</span>
+              <ul class="lbw-case__list lbw-case__list--before">
+                <li>Brez spletne strani, torej brez možnosti uvrstitve za karkoli</li>
+                <li>Sploh ne na Google Zemljevidih</li>
+                <li>Nič ocen in nobenega načina za njihovo zbiranje</li>
+                <li>Vsaka nova stranka je prišla od ust do ust</li>
+              </ul>
+            </div>
+            <div class="lbw-case__side">
+              <span class="lbw-case__label lbw-case__label--after">Potem</span>
+              <ul class="lbw-case__list lbw-case__list--after">
+                <li>Hitra spletna stran za konverzije s klikom za klic</li>
+                <li>Med prvimi tremi na Google Zemljevidih za ciljna iskanja</li>
+                <li>Lokacijske strani za 4 mesta v regiji</li>
+                <li>Samodejne prošnje za oceno po vsakem poslu</li>
+              </ul>
+            </div>
+          </div>
+          <div class="lbw-case__result">
+            <strong>312 % več dohodnih klicev</strong> v 90 dneh po zagonu, pri podjetju, ki prej sploh ni
+            imelo spletne prisotnosti. Ista ekipa, ista kakovost dela. Spremenila se je le spletna stran,
+            zgrajena tako, da jo najdejo in da rezervira.
+          </div>
+          <div class="lbw-case__actions">
+            <a href="/sl/projekti/belags-oberflaechenreinigung-arbon-case-study/" class="v2-btn v2-btn-outline">
+              Preberite celotno študijo primera
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="v2-section svc-content-section" style="padding-top:0">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Kako deluje
+          </span>
+          <h2 class="svc-h2">Od nevidnega do rezerviranega v 4 korakih</h2>
+        </div>
+        <div class="svc-steps">
+          {steps.map((s, i) => (
+            <div class="svc-step" data-m="up" style={`--m-d:${i * 0.1}s`}>
+              <div class="svc-step__n">{s.n}</div>
+              <div class="svc-step__body">
+                <h3 class="svc-step__title">{s.title}</h3>
+                <p class="svc-step__desc">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="v2-section svc-content-section" style="padding-top:0">
+      <div class="v2-container svc-content-center">
+        <div class="v2-section-head" data-m="up">
+          <span class="v2-eyebrow svc-eyebrow-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Vprašanja
+          </span>
+          <h2 class="svc-h2">Pogosta vprašanja</h2>
+        </div>
+        <div class="svc-faq">
+          {faqItems.map((item, i) => (
+            <details class="svc-faq__item" data-m="up" style={`--m-d:${i * 0.07}s`}>
+              <summary class="svc-faq__q">{item.name}</summary>
+              <p class="svc-faq__a">{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CTA
+      lang="sl"
+      headline="Spletna stran, ki najde stranke in jih rezervira"
+      subline="Rezervirajte brezplačen klic. Pokazali vam bomo natančno, kje vaša trenutna nastavitev izgublja posel, in začrtali sistem, ki to popravi. Fiksna cena, brez naročniške pasti."
+    />
+  </main>
+</LayoutV2>
+
+<style lang="scss" is:global>
+  .v2-bc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 24px;
+    padding-bottom: 8px;
+    font-size: 13px;
+    font-family: var(--font-mono);
+    color: var(--fg-2);
+    a { color: var(--fg-2); text-decoration: none; &:hover { color: var(--c1-light); } }
+  }
+
+  /* Hero */
+  .svc-hero { padding: 52px 0 64px; }
+  .svc-hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .svc-h1 {
+    margin-top: 16px;
+    max-width: 100%;
+    font-family: var(--font-display);
+  }
+  .svc-lead {
+    max-width: 660px;
+    margin-top: 20px;
+  }
+  .svc-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    justify-content: center;
+  }
+  .v2-btn-ghost {
+    background: transparent;
+    color: var(--fg-0);
+    border: 1px solid var(--line-2);
+    &:hover { background: var(--glass-hover); border-color: var(--line-accent); transform: translateY(-1px); }
+  }
+
+  /* Eyebrow with icon */
+  .svc-eyebrow-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    svg { opacity: 0.7; }
+  }
+
+  /* Section H2 */
+  .svc-h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(20px, 2.2vw, 32px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--fg-0);
+    margin: 12px 0 0;
+    line-height: 1.2;
+  }
+
+  .svc-section-sub {
+    font-size: 15px;
+    color: var(--fg-2);
+    margin-top: 12px;
+    max-width: 620px;
+    line-height: 1.6;
+  }
+
+  /* Content centering */
+  .svc-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .v2-section-head { margin-bottom: 0; }
+  }
+
+  /* Metrics */
+  .svc-metrics-section { padding-top: 0; padding-bottom: 64px; }
+  .svc-metrics {
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 4), 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    width: 100%;
+    @media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); }
+  }
+  .svc-metric {
+    background: var(--bg-card);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+  .svc-metric__n {
+    font-family: var(--font-display);
+    font-size: 40px;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    background: var(--grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .svc-metric__l {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--fg-2);
+  }
+  .lbw-metrics-note {
+    margin-top: 16px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .04em;
+    color: var(--fg-3);
+  }
+
+  /* Prose */
+  .svc-prose {
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--fg-1);
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  /* Pillars */
+  .lbw-pillars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 920px;
+    margin-top: 40px;
+    @media (max-width: 720px) { grid-template-columns: 1fr; }
+  }
+  .lbw-pillar {
+    padding: 28px 26px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .lbw-pillar__icon {
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: var(--r-sm);
+    background: rgba(99,102,241,0.1);
+    border: 1px solid rgba(99,102,241,0.22);
+    color: var(--c1-light);
+    margin-bottom: 18px;
+  }
+  .lbw-pillar__tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--c2);
+    margin-bottom: 8px;
+  }
+  .lbw-pillar__title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--fg-0);
+    margin: 0 0 10px;
+    line-height: 1.2;
+  }
+  .lbw-pillar__desc {
+    font-size: 14.5px;
+    color: var(--fg-2);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* Comparison table */
+  .lbw-compare {
+    width: 100%;
+    max-width: 760px;
+    margin-top: 40px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    text-align: left;
+  }
+  .lbw-compare__head, .lbw-compare__row {
+    display: grid;
+    grid-template-columns: 1fr 150px 150px;
+    align-items: center;
+    @media (max-width: 560px) { grid-template-columns: 1fr 80px 80px; }
+  }
+  .lbw-compare__head {
+    background: var(--bg-elev);
+    border-bottom: 1px solid var(--line);
+  }
+  .lbw-compare__row {
+    border-bottom: 1px solid var(--line);
+    &:last-child { border-bottom: none; }
+  }
+  .lbw-compare__feature {
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--fg-1);
+    line-height: 1.4;
+  }
+  .lbw-compare__col {
+    padding: 14px 12px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    line-height: 1.3;
+    &--them { color: var(--fg-2); }
+    &--you  { color: var(--c1-light); background: rgba(99,102,241,0.06); }
+  }
+  .lbw-compare__cell {
+    display: flex; align-items: center; justify-content: center;
+    padding: 14px 12px;
+    align-self: stretch;
+    &--them { color: var(--fg-3); }
+    &--you  { color: #34d399; background: rgba(99,102,241,0.06); }
+  }
+
+  /* Case study card */
+  .lbw-case {
+    width: 100%;
+    max-width: 820px;
+    margin-top: 40px;
+    padding: 32px;
+    text-align: left;
+    @media (max-width: 560px) { padding: 24px 20px; }
+  }
+  .lbw-case__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    @media (max-width: 560px) { grid-template-columns: 1fr; gap: 24px; }
+  }
+  .lbw-case__label {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--fg-2);
+    padding: 4px 10px;
+    border-radius: var(--r-pill);
+    border: 1px solid var(--line);
+    margin-bottom: 14px;
+    &--after { color: var(--c2); border-color: rgba(34,211,238,0.3); background: rgba(34,211,238,0.06); }
+  }
+  .lbw-case__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    li {
+      position: relative;
+      padding-left: 22px;
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: var(--fg-1);
+      &::before {
+        position: absolute;
+        left: 0; top: 1px;
+        font-family: var(--font-mono);
+      }
+    }
+    &--before li { color: var(--fg-2); &::before { content: '×'; color: var(--fg-3); font-size: 16px; } }
+    &--after  li { &::before { content: '✓'; color: #34d399; } }
+  }
+  .lbw-case__result {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--fg-1);
+    strong { color: var(--fg-0); font-weight: 600; }
+  }
+  .lbw-case__actions {
+    margin-top: 24px;
+  }
+
+  /* Steps */
+  .svc-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    max-width: 720px;
+    margin-top: 32px;
+  }
+  .svc-step {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    &:last-child { border-bottom: none; }
+  }
+  .svc-step__n {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .1em;
+    color: var(--c1-light);
+    background: rgba(99,102,241,0.1);
+    border: 1px solid rgba(99,102,241,0.2);
+    border-radius: 6px;
+    padding: 4px 8px;
+    align-self: flex-start;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .svc-step__title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--fg-0);
+    margin: 0 0 6px;
+  }
+  .svc-step__desc {
+    font-size: 15px;
+    color: var(--fg-2);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* FAQ */
+  .svc-faq {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+  }
+  .svc-faq__item {
+    border-bottom: 1px solid var(--line);
+    padding: 20px 0;
+    &:first-child { border-top: 1px solid var(--line); }
+    &[open] .svc-faq__q { color: var(--fg-0); }
+  }
+  .svc-faq__q {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--fg-1);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+    text-align: left;
+    &::-webkit-details-marker { display: none; }
+    &::after {
+      content: '+';
+      font-family: var(--font-sans);
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--fg-2);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    details[open] &::after { transform: rotate(45deg); }
+  }
+  .svc-faq__a {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--fg-2);
+    text-align: left;
+  }
+</style>

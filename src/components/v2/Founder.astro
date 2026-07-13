@@ -65,9 +65,28 @@ const content = {
     ],
     sigHref: '/kerim-alihodza/',
   },
+  hr: {
+    eyebrow: 'Riječ osnivača',
+    title: 'Građeno za rezultate.',
+    titleLine2: 'Vode ga inženjeri.',
+    paragraphs: [
+      "Većina alata prepušta posao vama. Mi vam ne predajemo platformu i tutorial pa vam poželimo sreću. Vodimo cijeli sustav leadova umjesto vas, od prvog klika na oglas do rezerviranog poziva u vašem kalendaru.",
+      "To znači rad izravno s vašim prodajnim timom, a ne mimo njega. Mapiramo vaš trenutni tok, pronađemo gdje se leadovi hlade i te praznine zamijenimo s AI-jem koji automatski odgovara, kvalificira i usmjerava svaki lead pravoj osobi.",
+      "Brinemo se i o vašem prometu. Bilo da je riječ o organskom pretraživanju, plaćenim kampanjama ili oboje: optimiziramo svaki kanal da privuče leadove koji zaista kupuju. Ne samo posjetitelje. Kupce.",
+      "A kada nešto ne radi kako treba, temeljito istražimo. Gradimo složene sustave više od desetljeća, davno prije nego što je AI olakšao stvari. To inženjersko iskustvo znači da pronađemo pravi problem, ne samo očiti, i riješimo ga u korijenu. Razliku ćete primijetiti za nekoliko tjedana, ne mjeseci.",
+      "S AI-jem sve to radimo brže nego ikad prije.",
+    ],
+    role: 'Osnivač, CreativeComplete',
+    stats: [
+      { n: '10+', l: 'godina iskustva' },
+      { n: '42.5×', l: 'ROI kampanja' },
+      { n: '48h', l: 'do pokretanja' },
+    ],
+    sigHref: '/kerim-alihodza/',
+  },
 } as const;
 
-const c = content[lang];
+const c = content[lang as keyof typeof content];
 ---
 
 <section class="v2-founder">

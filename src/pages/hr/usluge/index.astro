@@ -1,0 +1,355 @@
+---
+import LayoutV2 from '../../../layouts/LayoutV2.astro';
+import CTA from '../../../components/v2/CTA.astro';
+
+// ── Featured HR services (hardcoded links) ────────────────────────────────────
+const aiServices = [
+  {
+    title: "Web stranica za lokalne tvrtke: dizajn, lokalni SEO i rezervacije",
+    description: "Cjeloviti sustav za lokalne tvrtke: dizajn za konverzije, lokalni SEO, online rezervacije i automatizirano praćenje. Jedna stranica koja se pronalazi i rezervira poslove.",
+    href: "/hr/usluge/web-stranica-za-lokalne-tvrtke/",
+    tag: "Web + Lokalni SEO",
+    metric: "312% više poziva",
+  },
+  {
+    title: "AI kvalifikacija leadova: svaki lead ocijenjen za 60 sekundi",
+    description: "AI agenti automatski kvalificiraju svaki dolazni lead u manje od 60 sekundi, 24/7, na 40+ kanala. 81% stopa konverzije leadova.",
+    href: "/hr/usluge/ai-kvalifikacija-leadova/",
+    tag: "AI automatizacija",
+    metric: "81% konverzija",
+  },
+  {
+    title: "AI sustav za kreative: niži CPL za 40–60% u 30 dana",
+    description: "AI generirane kreative, trenirane na $35 mlrd.+ oglasnih podataka. Creative Scoring AI predviđa pobjednike s 90%+ točnosti. 14× više konverzija.",
+    href: "/hr/usluge/ai-sustav-oglasnih-kreativa/",
+    tag: "AI oglašavanje",
+    metric: "14× više konverzija",
+  },
+  {
+    title: "Brzina do leada: odgovor u 60 sekundi, 24/7",
+    description: "Svaki lead dobiva kvalificiran odgovor u roku od 60 sekundi, 24/7, na 40+ kanala. 60% kraći prodajni ciklusi.",
+    href: "/hr/usluge/brzina-do-leada/",
+    tag: "Upravljanje leadovima",
+    metric: "60s odziv",
+  },
+  {
+    title: "Monetizacija WhatsApp baze: 42× ROI",
+    description: "WhatsApp broadcast kampanje i AI sekvence za ponovni angažman pretvaraju neaktivne kontakte u prihod. Prosj. 42.5× ROI.",
+    href: "/hr/usluge/whatsapp-monetizacija-baze/",
+    tag: "WhatsApp marketing",
+    metric: "Prosj. 42.5× ROI",
+  },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Usluge — CreativeComplete",
+  "description": "Web stranice za lokalne tvrtke, AI kvalifikacija leadova, AI kreative, brzina do leada i WhatsApp monetizacija.",
+  "numberOfItems": aiServices.length,
+  "itemListElement": aiServices.map((s, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Service",
+      "name": s.title,
+      "description": s.description,
+      "url": `https://www.creativecomplete.com${s.href}`,
+    }
+  }))
+};
+---
+
+<LayoutV2
+  lang="hr"
+  title="Usluge — Web za lokalne tvrtke i AI Customer System | CreativeComplete"
+  description="Web stranice za lokalne tvrtke, AI kvalifikacija leadova, AI kreative, brzina do leada i WhatsApp monetizacija. CreativeComplete gradi i vodi cijeli sustav za vas."
+  canonicalUrl="https://www.creativecomplete.com/hr/usluge/"
+  structuredData={structuredData}
+  hreflangAlternates={{
+    en: 'https://www.creativecomplete.com/services/',
+    de: 'https://www.creativecomplete.com/de/dienstleistungen/',
+    sl: 'https://www.creativecomplete.com/sl/storitve/',
+    hr: 'https://www.creativecomplete.com/hr/usluge/',
+  }}
+>
+  <div class="svc-page">
+
+    <!-- ── Hero ────────────────────────────────────────────── -->
+    <section class="svc-hero">
+      <div class="v2-container">
+        <div class="svc-bc"><a href="/hr/">Početna</a><span>/</span><span>Usluge</span></div>
+        <div class="svc-hero__inner">
+          <span class="v2-eyebrow">CreativeComplete · Usluge</span>
+          <h1 class="v2-h1" style="margin-top:16px">
+            Usluge koje <span class="v2-grad">donose prave rezultate</span>
+          </h1>
+          <p class="v2-lead" style="margin-top:20px;max-width:58ch">
+            Gradimo, vodimo i optimiziramo cijeli sustav, od web stranice koja se pronalazi i rezervira do AI-ja koji kvalificira svaki lead. Potpuno upravljano, mjesečna paušalna cijena.
+          </p>
+          <div class="svc-hero__cta">
+            <a
+              href="https://cal.com/kerim-alihodza-7u7w6q/30min"
+              class="v2-btn v2-btn-primary"
+            >
+              Osigurajte besplatan audit sustava
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Services Grid ─────────────────────────────────── -->
+    <section class="svc-grid-section">
+      <div class="v2-container">
+        <div class="svc-section-head">
+          <span class="v2-eyebrow">Što radimo</span>
+          <h2 class="v2-h2" style="margin-top:12px">
+            <span class="v2-grad">Sustavi</span> koji rade zajedno.
+          </h2>
+          <p class="v2-lead" style="margin-top:12px">
+            Svaki sustav može se naručiti zasebno, ili aktivirajte sve za maksimalan učinak.
+          </p>
+        </div>
+
+        <div class="svc-ai-grid">
+          {aiServices.map((s, i) => (
+            <a href={s.href} class="svc-ai-card" data-m="up" style={`--m-d:${i * 0.08}s`}>
+              <div class="svc-ai-card__top">
+                <span class="svc-ai-tag">{String(i + 1).padStart(2, '0')}</span>
+                <span class="svc-ai-category">{s.tag}</span>
+                <span class="svc-ai-metric">{s.metric}</span>
+              </div>
+              <h3 class="svc-ai-title">{s.title}</h3>
+              <p class="svc-ai-desc">{s.description}</p>
+              <div class="svc-ai-cta">
+                Saznajte više
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M1.5 10.5L10.5 1.5M10.5 1.5H4.5M10.5 1.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Why managed ─────────────────────────────────────── -->
+    <section class="svc-why">
+      <div class="v2-container">
+        <div class="svc-why__inner">
+          <div class="svc-why__copy">
+            <span class="v2-eyebrow">Zašto upravljano?</span>
+            <h2 class="v2-h2" style="margin-top:16px">
+              Ne alat. <span class="v2-grad">Tim.</span>
+            </h2>
+            <p class="v2-lead" style="margin-top:16px">
+              Kupiti alate je lako. Konfigurirati ih, optimizirati i voditi 24/7 traje mjesece i interno znanje koje većina tvrtki nema.
+            </p>
+            <p class="v2-lead" style="margin-top:12px">
+              CreativeComplete je vaš cjeloviti AI odjel, za mjesečnu paušalnu cijenu bez skrivenih troškova.
+            </p>
+            <a
+              href="https://cal.com/kerim-alihodza-7u7w6q/30min"
+              class="v2-btn v2-btn-primary"
+              style="margin-top:28px"
+            >
+              Zatražite besplatno savjetovanje →
+            </a>
+          </div>
+          <div class="svc-why__stats">
+            {[
+              { n: "81%", l: "Stopa konverzije leadova" },
+              { n: "42.5×", l: "ROI broadcastova" },
+              { n: "14×", l: "Više konverzija iz oglasa" },
+              { n: "60s", l: "AI vrijeme odziva" },
+            ].map(stat => (
+              <div class="svc-why__stat">
+                <div class="svc-why__stat-n">{stat.n}</div>
+                <div class="svc-why__stat-l">{stat.l}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA lang="hr" />
+  </div>
+</LayoutV2>
+
+<style lang="scss">
+.svc-page { min-height: 100vh; }
+
+.svc-bc {
+  display: flex; align-items: center; gap: 8px;
+  padding: 20px 0 0;
+  font-size: 13px; font-family: var(--font-mono); color: var(--fg-2);
+  a { color: var(--fg-2); transition: color .15s; &:hover { color: var(--c1-light); } }
+}
+
+.svc-hero {
+  padding: 64px 0 80px;
+  border-bottom: 1px solid var(--line);
+}
+.svc-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+}
+.svc-hero__cta { margin-top: 32px; }
+
+/* ── AI grid ── */
+.svc-grid-section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line);
+}
+.svc-section-head {
+  margin-bottom: 48px;
+}
+
+.svc-ai-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (max-width: 720px) { grid-template-columns: 1fr; }
+}
+
+.svc-ai-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  text-decoration: none;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+
+  &:hover {
+    border-color: rgba(99,102,241,.35);
+    box-shadow: 0 16px 48px rgba(0,0,0,.25);
+    transform: translateY(-2px);
+
+    .svc-ai-cta { gap: 8px; color: #a5b4fc; }
+  }
+}
+
+.svc-ai-card__top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.svc-ai-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--c1-light);
+  background: rgba(99,102,241,.1);
+  border: 1px solid rgba(99,102,241,.25);
+  border-radius: var(--r-pill);
+  padding: 2px 7px;
+}
+.svc-ai-category {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+.svc-ai-metric {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--c2);
+  background: rgba(34,211,238,.08);
+  border: 1px solid rgba(34,211,238,.2);
+  border-radius: var(--r-pill);
+  padding: 2px 8px;
+}
+.svc-ai-title {
+  font-family: var(--font-display);
+  font-size: clamp(17px, 1.5vw, 22px);
+  font-weight: 400;
+  letter-spacing: -.01em;
+  line-height: 1.25;
+  color: var(--fg-0);
+  margin: 0;
+}
+.svc-ai-desc {
+  font-size: 13.5px;
+  color: var(--fg-1);
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+.svc-ai-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  color: rgba(99,102,241,.7);
+  margin-top: auto;
+  transition: gap .15s, color .15s;
+}
+
+/* ── Why section ── */
+.svc-why {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line);
+}
+.svc-why__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+.svc-why__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.svc-why__stat {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  text-align: center;
+}
+.svc-why__stat-n {
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: -.03em;
+  line-height: 1;
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.svc-why__stat-l {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  margin-top: 6px;
+}
+</style>

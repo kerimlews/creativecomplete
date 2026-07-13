@@ -9,7 +9,7 @@ export interface Props {
 const { lang = 'en' } = Astro.props;
 const c = getV2Content(lang).results;
 
-const projectsUrl: Record<string, string> = { en: '/projects/', de: '/de/projekte/', sl: '/sl/projekti/' };
+const projectsUrl: Record<string, string> = { en: '/projects/', de: '/de/projekte/', sl: '/sl/projekti/', hr: '/hr/projekti/' };
 const pUrl = projectsUrl[lang] ?? '/projects/';
 ---
 

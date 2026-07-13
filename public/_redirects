@@ -157,13 +157,12 @@
 /services/whatsapp-monetizacija-baze/        /services/whatsapp-database-monetization/  301
 
 # ---------------------------------------------------------------------------
-# 5. HR LOCALE — redirect to EN equivalent
-#    HR pages were removed; redirect to avoid 404 crawl waste.
+# 5. HR LOCALE — full locale (live). Only EN-only pages redirect.
 # ---------------------------------------------------------------------------
 
-/hr/blog/       /blog/      301
-/hr/projekti/   /projects/  301
-/hr/*           /           301
+/hr/kerim-alihodza/     /kerim-alihodza/    301
+/hr/terms-of-use/       /terms-of-use/      301
+/hr/privacy-policy/     /privacy-policy/    301
 
 # ---------------------------------------------------------------------------
 # 6. OLD GHOST URLS

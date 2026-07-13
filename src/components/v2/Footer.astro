@@ -1,6 +1,6 @@
 ---
 const seg = Astro.url.pathname.split('/').filter(Boolean)[0];
-const lang = (seg === 'de' || seg === 'sl') ? seg : 'en';
+const lang = (seg === 'de' || seg === 'sl' || seg === 'hr') ? seg : 'en';
 const base = lang === 'en' ? '' : `/${lang}`;
 
 // ── Link maps per language ──────────────────────────────────────────────────
@@ -31,6 +31,14 @@ const systemLinks: Record<string, FooterLink[]> = {
     { label: "Kako deluje",                href: "/sl/#how-it-works"                              },
     { label: "Rezultati",                  href: "/sl/#results"                                   },
   ],
+  hr: [
+    { label: "Web za lokalne tvrtke",      href: "/hr/usluge/web-stranica-za-lokalne-tvrtke/"     },
+    { label: "AI kvalifikacija leadova",   href: "/hr/usluge/ai-kvalifikacija-leadova/"           },
+    { label: "AI sustav za kreative",      href: "/hr/usluge/ai-sustav-oglasnih-kreativa/"        },
+    { label: "Brzina do leada",            href: "/hr/usluge/brzina-do-leada/"                    },
+    { label: "Kako radi",                  href: "/hr/#how-it-works"                              },
+    { label: "Rezultati",                  href: "/hr/#results"                                   },
+  ],
 };
 
 
@@ -59,6 +67,14 @@ const blogLinksMap: Record<string, FooterLink[]> = {
     { label: "AI prodajni agenti",        href: "/sl/blog/ai-prodajni-agenti/"                },
     { label: "Avtomatizacija CRM",        href: "/sl/blog/crm-avtomatizacija/"                },
   ],
+  hr: [
+    { label: "Brzina do leada",           href: "/hr/blog/brzina-do-leada/"                  },
+    { label: "AI kvalifikacija leadova",  href: "/hr/blog/ai-kvalifikacija-leadova/"          },
+    { label: "WhatsApp broadcast",        href: "/hr/blog/whatsapp-broadcast-kampanje/"       },
+    { label: "AI oglasne kreative",       href: "/hr/blog/ai-oglasne-kreative/"               },
+    { label: "AI prodajni agenti",        href: "/hr/blog/ai-prodajni-agenti/"                },
+    { label: "CRM automatizacija",        href: "/hr/blog/crm-automatizacija/"                },
+  ],
 };
 const blogLinks = blogLinksMap[lang];
 
@@ -84,6 +100,13 @@ const companyLinks: Record<string, FooterLink[]> = {
     { label: "Blog",                  href: "/sl/blog/"        },
     { label: "Kontakt",               href: "/sl/contact/"     },
   ],
+  hr: [
+    { label: "O CreativeComplete",    href: "/hr/about/"       },
+    { label: "Upoznaj Kerima",        href: "/kerim-alihodza/" },
+    { label: "Studije slučaja",       href: "/hr/projekti/"    },
+    { label: "Blog",                  href: "/hr/blog/"        },
+    { label: "Kontakt",               href: "/hr/contact/"     },
+  ],
 };
 
 const resourceLinks: Record<string, FooterLink[]> = {
@@ -102,30 +125,39 @@ const resourceLinks: Record<string, FooterLink[]> = {
     { label: "Zasebnost",                   href: "/privacy-policy/" },
     { label: "Pogoji uporabe",              href: "/terms-of-use/"   },
   ],
+  hr: [
+    { label: "Rezerviraj besplatni audit",  cal: true },
+    { label: "Privatnost",                  href: "/privacy-policy/" },
+    { label: "Uvjeti korištenja",           href: "/terms-of-use/"   },
+  ],
 };
 
 const footerDesc: Record<string, string> = {
   en: "Your embedded AI Customer System team. We capture every lead, qualify them in 60 seconds, and monetize your existing database, fully managed, no headcount added.",
   de: "Ihr eingebettetes KI Customer System Team. Wir erfassen jeden Lead, qualifizieren ihn in 60 Sekunden und monetarisieren Ihre bestehende Datenbank: vollständig gemanagt, kein zusätzliches Personal.",
   sl: "Vaša vgrajena ekipa AI Customer System. Zajemamo vsak lead, ga kvalificiramo v 60 sekundah in monetiziramo vašo obstoječo bazo: popolnoma upravljano, brez novih zaposlitev.",
+  hr: "Vaš ugrađeni tim za AI Customer System. Hvatamo svaki lead, kvalificiramo ga u 60 sekundi i monetiziramo vašu postojeću bazu: potpuno upravljano, bez novih zapošljavanja.",
 };
 
 const auditLabel: Record<string, string> = {
   en: "Book free audit",
   de: "Kostenloses Audit buchen",
   sl: "Rezerviraj brezplačni audit",
+  hr: "Rezerviraj besplatni audit",
 };
 
 const colHeads: Record<string, { system: string; blog: string; company: string; resources: string }> = {
   en: { system: "AI Customer System", blog: "Blog", company: "Company",    resources: "Resources"  },
   de: { system: "KI Customer System", blog: "Blog", company: "Unternehmen", resources: "Ressourcen" },
   sl: { system: "AI Customer System", blog: "Blog", company: "Podjetje",    resources: "Viri"       },
+  hr: { system: "AI Customer System", blog: "Blog", company: "Tvrtka",      resources: "Resursi"    },
 };
 
 const legalLabel: Record<string, { copyright: string; privacy: string; terms: string; contact: string }> = {
   en: { copyright: "© 2026 CreativeComplete · AI Customer System Agency", privacy: "Privacy", terms: "Terms",       contact: "Contact" },
   de: { copyright: "© 2026 CreativeComplete · KI Customer System Agentur", privacy: "Datenschutz", terms: "AGB",   contact: "Kontakt" },
   sl: { copyright: "© 2026 CreativeComplete · AI Customer System agencija", privacy: "Zasebnost", terms: "Pogoji", contact: "Kontakt" },
+  hr: { copyright: "© 2026 CreativeComplete · AI Customer System agencija", privacy: "Privatnost", terms: "Uvjeti", contact: "Kontakt" },
 };
 
 const system   = systemLinks[lang];
@@ -138,6 +170,7 @@ const langs = [
   { code: "EN", href: "/"     },
   { code: "SL", href: "/sl/" },
   { code: "DE", href: "/de/" },
+  { code: "HR", href: "/hr/" },
 ];
 ---
 

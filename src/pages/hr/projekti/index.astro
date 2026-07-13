@@ -1,0 +1,137 @@
+---
+import { Image } from 'astro:assets';
+import LayoutV2 from '../../../layouts/LayoutV2.astro';
+import CTA from '../../../components/v2/CTA.astro';
+import { getCollection } from 'astro:content';
+import { getProjectImage } from '../../../utils/constants';
+import { getProjectUrl } from '../../../utils/routing';
+
+const currentLang = 'hr';
+
+const projects = await getCollection('projectsHr');
+
+const cards = (await Promise.all(
+  projects.map(async (p) => {
+    const imgMod = p.data.image ? await getProjectImage(p.data.image as string) : null;
+    const img = imgMod ? (imgMod as any).default ?? imgMod : null;
+    return {
+      title: p.data.title as string,
+      description: p.data.description as string,
+      category: (p.data.category ?? 'Studija slučaja') as string,
+      slug: (p.data.slug ?? p.id) as string,
+      featured: (p.data.featured ?? false) as boolean,
+      updated: (p.data.updated ?? p.data.published ?? '') as string,
+      stats: (p.data.stats ?? []) as { value: string; label: string }[],
+      img,
+      url: getProjectUrl(currentLang, (p.data.slug ?? p.id) as string),
+    };
+  })
+)).sort((a, b) => {
+  if (a.featured !== b.featured) return a.featured ? -1 : 1;
+  return new Date(b.updated).getTime() - new Date(a.updated).getTime();
+});
+---
+
+<LayoutV2
+  lang="hr"
+  title="Studije slučaja i portfelj projekata | CreativeComplete"
+  description="Pravi rezultati iz pravih projekata. Provjerene brojke i detaljne studije slučaja."
+  canonicalUrl="https://www.creativecomplete.com/hr/projekti/"
+  navActive="results"
+  hreflangAlternates={{
+    en: 'https://www.creativecomplete.com/projects/',
+    de: 'https://www.creativecomplete.com/de/projekte/',
+    sl: 'https://www.creativecomplete.com/sl/projekti/',
+    hr: 'https://www.creativecomplete.com/hr/projekti/',
+  }}
+>
+  <main>
+    <section class="v2-proj-list v2-section">
+      <div class="v2-container">
+        <div class="v2-section-head center">
+          <span class="v2-eyebrow">Studije slučaja</span>
+          <h1 class="v2-h2">Naš portfelj projekata</h1>
+          <p class="v2-lead">Svaki projekt sadrži detaljnu studiju slučaja s provjerenim brojkama i stvarnim poslovnim rezultatima.</p>
+        </div>
+
+        <div class="v2-proj-grid">
+          {cards.map((c) => (
+            <a href={c.url} class="v2-proj-card">
+              {c.img && (
+                <div class="v2-proj-card__img">
+                  <Image src={c.img} alt={c.title} width={640} height={360} />
+                </div>
+              )}
+              <div class="v2-proj-card__body">
+                <span class="v2-chip-neutral">{c.category}</span>
+                <h2 class="v2-proj-card__title">{c.title}</h2>
+                <p class="v2-proj-card__desc">{c.description}</p>
+                {c.stats.length > 0 && (
+                  <div class="v2-proj-card__stats">
+                    {c.stats.map((s) => (
+                      <div class="v2-proj-card__stat">
+                        <div class="v2-proj-card__stat-n">{s.value}</div>
+                        <div class="v2-proj-card__stat-l">{s.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                <span class="v2-proj-card__cta">
+                  Pročitaj studiju slučaja
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+    <CTA lang="hr" />
+  </main>
+</LayoutV2>
+
+<style lang="scss">
+  .v2-proj-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    @media (max-width: 768px) { grid-template-columns: 1fr; }
+  }
+  .v2-proj-card {
+    display: flex; flex-direction: column;
+    background: var(--bg-card); border: 1px solid var(--line);
+    border-radius: var(--r-xl); overflow: hidden;
+    text-decoration: none; transition: border-color .2s, transform .2s;
+    &:hover { border-color: var(--line-accent); transform: translateY(-2px); }
+  }
+  .v2-proj-card__img {
+    width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-elev);
+    img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+    .v2-proj-card:hover & img { transform: scale(1.03); }
+  }
+  .v2-proj-card__body { display: flex; flex-direction: column; gap: 12px; padding: 28px; flex: 1; }
+  .v2-proj-card__title {
+    font-family: var(--font-display); font-size: clamp(18px, 1.6vw, 22px);
+    letter-spacing: -0.01em; font-weight: 400; color: var(--fg-0); line-height: 1.2; margin: 0;
+  }
+  .v2-proj-card__desc {
+    font-size: 14px; color: var(--fg-1); line-height: 1.6; margin: 0;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .v2-proj-card__stats { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 4px; }
+  .v2-proj-card__stat-n {
+    font-family: var(--font-display); font-size: 22px; letter-spacing: -0.02em;
+    background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .v2-proj-card__stat-l {
+    font-size: 11px; font-family: var(--font-mono); color: var(--fg-2);
+    letter-spacing: 0.06em; text-transform: uppercase; margin-top: 2px;
+  }
+  .v2-proj-card__cta {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 8px;
+    font-size: 13px; font-weight: 500; color: var(--c1-light); transition: gap .15s;
+    .v2-proj-card:hover & { gap: 10px; }
+  }
+</style>

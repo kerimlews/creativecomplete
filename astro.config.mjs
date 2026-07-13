@@ -120,12 +120,10 @@ export default defineConfig({
     '/services/hitrost-do-leada/': '/services/speed-to-lead-system/',
     '/services/whatsapp-monetizacija-baze/': '/services/whatsapp-database-monetization/',
 
-    // HR locale → EN equivalent
-    '/hr/': '/',
-    '/hr/blog/': '/blog/',
-    '/hr/projekti/': '/projects/',
+    // HR is a full locale. Only EN-only pages redirect (same as de/sl).
     '/hr/kerim-alihodza/': '/kerim-alihodza/',
     '/hr/terms-of-use/': '/terms-of-use/',
+    '/hr/privacy-policy/': '/privacy-policy/',
 
     // Old ghost URLs
     '/search': '/',
@@ -175,7 +173,6 @@ export default defineConfig({
 	partytown({ config: { forward: ['dataLayer.push', '_uxa', '_uxa.push'] } }),
 	sitemap({
       filter: (page) => {
-        if (page.includes('/hr/')) return false;
         if (page.includes('/v1/')) return false;
         // Exclude old (non-AI) service slugs from de and sl
         const oldDeSlugs = ['/de/dienstleistungen/automation/', '/de/dienstleistungen/ecommerce/', '/de/dienstleistungen/local-seo/', '/de/dienstleistungen/mobile-development/', '/de/dienstleistungen/saas-development/', '/de/dienstleistungen/seo/', '/de/dienstleistungen/web-design/'];
@@ -195,6 +192,7 @@ export default defineConfig({
           en: 'en-US',
           sl: 'sl-SI',
           de: 'de-DE',
+          hr: 'hr-HR',
         },
       },
   }),

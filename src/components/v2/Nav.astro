@@ -5,17 +5,18 @@ export interface Props {
 const { active = 'home' } = Astro.props;
 
 const seg = Astro.url.pathname.split('/').filter(Boolean)[0];
-const lang = (seg === 'de' || seg === 'sl') ? seg : 'en';
+const lang = (seg === 'de' || seg === 'sl' || seg === 'hr') ? seg : 'en';
 const base = lang === 'en' ? '' : `/${lang}`;
 
 const navContent: Record<string, { home: string; engines: string; howItWorks: string; results: string; projects: string; blog: string; audit: string }> = {
   en: { home: 'Home', engines: 'Engines', howItWorks: 'How it works', results: 'Results', projects: 'Projects', blog: 'Blog', audit: 'Free audit' },
   de: { home: 'Home', engines: 'Engines', howItWorks: 'So funktioniert\'s', results: 'Ergebnisse', projects: 'Projekte', blog: 'Blog', audit: 'Kostenloses Audit' },
   sl: { home: 'Home', engines: 'Sistemi', howItWorks: 'Kako deluje', results: 'Rezultati', projects: 'Projekti', blog: 'Blog', audit: 'Brezplačni audit' },
+  hr: { home: 'Home', engines: 'Sustavi', howItWorks: 'Kako radi', results: 'Rezultati', projects: 'Projekti', blog: 'Blog', audit: 'Besplatni audit' },
 };
 const n = navContent[lang];
 
-const projectsHref = lang === 'de' ? '/de/projekte/' : lang === 'sl' ? '/sl/projekti/' : '/projects/';
+const projectsHref = lang === 'de' ? '/de/projekte/' : (lang === 'sl' || lang === 'hr') ? `/${lang}/projekti/` : '/projects/';
 
 const links = [
   { id: 'home',     label: n.home,        href: `${base}/` },

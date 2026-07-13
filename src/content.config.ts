@@ -93,6 +93,11 @@ const blogsSl = defineCollection({
   //schema: blogSchema,
 });
 
+const blogsHr = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/blogs/hr' }),
+  //schema: blogSchema,
+});
+
 const authors = defineCollection({
   loader: glob({ pattern: 'en/**/*.md', base: './src/content/authors' }),
   //schema: authorSchema,
@@ -113,6 +118,11 @@ const projectsSl = defineCollection({
   //schema: projectSchema,
 });
 
+const projectsHr = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/projects/hr' }),
+  //schema: projectSchema,
+});
+
 const servicesEn = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/services/en' }),
   //schema: serviceSchema,
@@ -128,6 +138,11 @@ const servicesSl = defineCollection({
   //schema: serviceSchema,
 });
 
+const servicesHr = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/services/hr' }),
+  //schema: serviceSchema,
+});
+
 // const pages = defineCollection({
 //   loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
 //   schema: z.object({
@@ -140,12 +155,15 @@ export const collections = {
   blogs,
   blogsDe,
   blogsSl,
+  blogsHr,
   authors,
   projectsEn,
   projectsDe,
   projectsSl,
+  projectsHr,
   servicesEn,
   servicesDe,
   servicesSl,
+  servicesHr,
   //pages,
 };

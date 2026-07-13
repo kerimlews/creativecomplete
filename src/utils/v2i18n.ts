@@ -1,7 +1,7 @@
 // v2i18n.ts. Translation utility for v2 homepage components
-// Supports: en (fallback), de (German/DACH), sl (Slovenian)
+// Supports: en (fallback), de (German/DACH), sl (Slovenian), hr (Croatian)
 
-export type Lang = 'en' | 'de' | 'sl';
+export type Lang = 'en' | 'de' | 'sl' | 'hr';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -957,9 +957,286 @@ const sl = {
   } satisfies ClientsContent,
 };
 
+// ─── Croatian ─────────────────────────────────────────────────────────────────
+
+const hr = {
+  hero: {
+    badge: '50+ agencija · Rezultati u 1 tjednu',
+    h1Line1: 'Vodimo vaš sustav leadova.',
+    h1Line2: 'Vi sklapate poslove.',
+    subtitle: 'Svaki dolazni lead kvalificiran u manje od <span class="v2-em">60 sekundi</span>. Preko WhatsAppa, Instagrama, TikToka i <span class="v2-em">40+ kanala</span>. Bez novih zapošljavanja. Bez propuštenih leadova.',
+    ctaPrimary: 'Zatražite besplatan pregled sustava',
+    ctaSecondary: 'Pogledajte kako radi',
+    trustText: '50+ agencija vjeruje AI Customer Systemu',
+  } satisfies HeroContent,
+
+  stats: {
+    items: [
+      { n: '81%',   l: 'Stopa konverzije leadova',    c: 'S AI agentima koji kvalificiraju 24/7' },
+      { n: '60%',   l: 'Brži prodajni ciklusi',       c: 'u odnosu na ručnu kvalifikaciju' },
+      { n: '42.5×', l: 'ROI broadcast kampanja',      c: 'Iz postojeće baze leadova' },
+      { n: '14×',   l: 'Više konverzija iz oglasa',   c: 'AI kreative vs. ručni dizajn' },
+    ],
+    cta: 'Želim ove brojke za svoju agenciju →',
+  } satisfies StatsContent,
+
+  track: {
+    eyebrow: 'Kako počinjemo',
+    title: 'Od strateškog poziva do',
+    titleGrad: 'živog AI sustava',
+    titleSuffix: ' u danima, ne mjesecima.',
+    cta: 'Rezervirajte strateški poziv →',
+    steps: [
+      { label: 'Strateški poziv',          desc: 'Kratak uvodni poziv o vašim ciljevima, kanalima i trenutnom toku leadova.' },
+      { label: 'Analiza poslovanja',       desc: 'Mapiramo vaš prodajni proces, kriterije kvalifikacije i pravila usmjeravanja.' },
+      { label: 'Cijena i opseg',           desc: 'Dobivate fiksnu mjesečnu cijenu usluge prema opsegu posla.' },
+      { label: 'Izrada i pokretanje sustava', desc: 'Osmišljavamo, povezujemo i postavljamo vaš AI sustav na respond.io. Uključujući kvalifikaciju, usmjeravanje i predaju u CRM.' },
+      { label: 'Rezultati',                desc: 'Leadovi se kvalificiraju automatski, vrući kontakti usmjeravaju se brže, a vaš tim troši manje vremena na rutinske upite.' },
+    ],
+  } satisfies TrackContent & { titleSuffix: string },
+
+  services: {
+    eyebrow: 'Što radimo',
+    title: 'Četiri motora.',
+    lead: 'Uhvatimo svaki lead, konvertiramo ga s AI-jem i zadržimo automatiziranim porukama za praćenje. Većina agencija svaku fazu tretira zasebno. Mi smo vlasnici cijelog životnog ciklusa.',
+    bottomCta: 'Aktiviraj sva 4 motora →',
+    services: [
+      {
+        tag: '01',
+        kicker: '$35 mlrd.+ obrade · Tjedna produkcija',
+        title: 'AI sustav za oglasne kreative',
+        body: 'AI Customer System stvara visoko konverzivne oglasne kreative, trenirane na podacima od preko $35 mlrd. oglasne potrošnje. AI za ocjenjivanje kreativa predviđa pobjednike s više od 90% točnosti. Prije nego potrošite i cent.',
+        list: [
+          'Kreative u minutama, ne danima',
+          'Trenirano na $35 mlrd.+ stvarnih oglasnih podataka',
+          'AI za ocjenjivanje kreativa, 90%+ točnost',
+          'Meta, TikTok, Google, LinkedIn',
+        ],
+        cta: 'Stvori pobjedničke kreative →',
+        blogLabel: '6 AI kreativnih sustava →',
+        engTitle: 'AI kreativni sustav',
+        engMetricLabel: 'točnost predviđanja',
+      },
+      {
+        tag: '02',
+        kicker: '40+ kanala · Nula propuštenih leadova',
+        title: 'Hvatanje i konverzija leadova',
+        body: 'AI Customer System spaja WhatsApp, Instagram, TikTok, Facebook, e-poštu, SMS i live chat u jedan sandučić. Uhvatite svaki lead, konvertirajte ga s AI-jem i zadržite pametnim sekvencama.',
+        list: [
+          'Jedinstveni sandučić: 40+ kanala',
+          'WhatsApp Business API integracija',
+          'Okvir Conversation-Led Growth™',
+          'Usmjeravanje u stvarnom vremenu s punim kontekstom',
+        ],
+        cta: 'Uhvati svaki lead →',
+        blogLabel: 'Zašto brzina do leada odlučuje svaku prodaju →',
+        engTitle: 'Hvatanje leadova',
+        engMetricLabel: 'spojenih kanala',
+      },
+      {
+        tag: '03',
+        kicker: 'Ispod 60 sekundi · 24/7',
+        title: 'AI kvalifikacija leadova',
+        body: 'AI Customer System automatski kvalificira svaki dolazni lead pomoću AI agenata. Procjena namjere, budžeta i vremenskog okvira u manje od 60 sekundi preko WhatsAppa, Instagrama, TikToka, Facebooka i 8+ dodatnih kanala.',
+        list: [
+          'AI agenti vode prvi kontakt 24/7',
+          'BANT kvalifikacija na svakom jeziku',
+          'Vrući leadovi → prodajni kalendar odmah',
+          '80% rutinskih upita automatizirano',
+        ],
+        cta: 'Kvalificiraj moje leadove s AI-jem →',
+        blogLabel: 'Kako radi AI kvalifikacija →',
+        engTitle: 'AI kvalifikacija leadova',
+        engMetricLabel: 'prosj. vrijeme kvalifikacije',
+      },
+      {
+        tag: '04',
+        kicker: 'Tekući prihodi · Prosj. 42.5×',
+        title: 'Monetizacija postojećih leadova',
+        body: 'AI Customer System izvlači profit iz vašeg postojećeg CRM-a. WhatsApp broadcast kampanje i AI sekvence za reaktivaciju pretvaraju neaktivne kontakte u prihod. Prosječno 42.5× ROI na prvoj kampanji.',
+        list: [
+          'WhatsApp broadcasts (prosj. 42.5× ROI)',
+          'Tokovi za reaktivaciju neaktivnog CRM-a',
+          'Sekvence pokrenute ponašanjem',
+          'Segmentacija po namjeri, životnom ciklusu, vrijednosti',
+        ],
+        cta: 'Monetiziraj moju postojeću bazu →',
+        blogLabel: 'Priručnik za 42.5× broadcast →',
+        engTitle: 'Monetizacija leadova',
+        engMetricLabel: 'prosj. ROI',
+      },
+    ],
+  } satisfies ServicesContent,
+
+  faq: [
+    {
+      q: 'Što točno CreativeComplete radi za nas?',
+      a: 'Nastupamo kao vaš ugrađeni tim za AI Customer System. Konfiguriramo, gradimo i u potpunosti upravljamo infrastrukturom koja hvata leadove sa svakog kanala, kvalificira ih AI agentima u manje od 60 sekundi i pokreće broadcast sekvence na vašoj postojećoj bazi. Ne dobivate alat koji morate sami shvatiti. Dobivate specijalizirani tim koji vodi sustav od početka do kraja. Vaš se tim bavi samo vrućim leadovima koji dolaze u vaš kalendar.',
+    },
+    {
+      q: 'Kako AI kvalificira leadove bolje od ljudskog tima?',
+      a: 'AI agenti odgovaraju u manje od 60 sekundi, 24/7, na svim kanalima istovremeno. Svaki put primjenjuju istu BANT logiku kvalifikacije. Namjera, budžet, vremenski okvir, donositelj odluke. Bez umora, nedosljednosti ili propuštenih poruka za praćenje. Naši agencijski konfigurirani agenti postižu 81% stopu konverzije leadova u odnosu na industrijski prosjek od 20–30% za ljudske timove. Razlika nije u AI-ju. U kvaliteti je postavke. To je ono što mi isporučujemo.',
+    },
+    {
+      q: 'Koje kanale pokriva?',
+      a: '40+ kanala: WhatsApp Business API, WhatsApp Calling, Instagram DM, TikTok Business Messaging, Facebook Messenger, Facebook Messenger Calls, e-pošta (Gmail, Outlook, Yahoo), SMS (Twilio, MessageBird, Vonage), Telegram, Viber, WeChat, LINE, VoIP i više. Svaki razgovor. Bez obzira na izvor. Slijeva se u jedinstveni timski sandučić s potpunom atribucijom izvora, ocjenama leadova i poviješću razgovora. Ništa ne propada kroz pukotine.',
+    },
+    {
+      q: 'Koliko brzo ćemo vidjeti rezultate?',
+      a: 'Vaši AI agenti mogu obrađivati dolazne leadove u roku od 10 dana od početka. Cjelovit razvoj sustava. Tokovi kvalifikacije, sekvence njegovanja, broadcast kampanje, produkcija kreativa. Traje 3–4 tjedna. Broadcast kampanje na vašem postojećem CRM-u obično vrate ROI u prvom mjesecu. Većina klijenata vrati cijelo ulaganje u 45 dana.',
+    },
+    {
+      q: 'Moramo li biti tehnički potkovani ili zaposliti nekoga novog?',
+      a: 'Ne. To je bit. Mi smo vaš AI odjel. Konfiguriramo svaki tijek rada, povezujemo svaku integraciju, pišemo svaku skriptu za kvalifikaciju i vodimo tekuću optimizaciju. Dobivate mjesečno izvješće o učinku i posvećenog account managera. Jedino što vaš tim radi jest zaključivanje vrućih leadova koje vam usmjerimo.',
+    },
+    {
+      q: 'Kako je kreativna strana povezana sa sustavom razgovora?',
+      a: 'AI tjedno stvara 8–12 visoko konverzivnih varijanti oglasa, treniranih na $35 mlrd.+ oglasnih podataka. AI za ocjenjivanje kreativa rangira ih prije objave. Uživo idu samo dokazani pobjednici. Ti oglasi vode leadove izravno u sustav razgovora, gdje ih AI agenti odmah kvalificiraju. Bolje kreative donose bolje leadove. Bolja kvalifikacija konvertira više. Oba kruga vodimo zajedno, tako da se ROAS svakim tjednom povećava.',
+    },
+    {
+      q: 'Kakav ROI realno možemo očekivati?',
+      a: 'Medijane klijenata, ne iznimke: WhatsApp broadcast kampanje postižu prosječno 42.5× ROI. AI generirane kreative daju 14× više konverzija u odnosu na ručno dizajnirane oglase. AI kvalifikacija postiže 81% stopu konverzije leadova. Većina agencija vrati cijelo ulaganje u 45 dana. Mjesečno dijelimo potpune podatke o atribuciji, tako da točno vidite odakle dolazi svaki rezultat.',
+    },
+    {
+      q: 'Kako se povezuje s našim postojećim CRM-om?',
+      a: 'Nativne integracije s HubSpotom, Salesforceom, Pipedriveom i 50+ CRM-ova. Plus Zapier za sve ostalo. Vaša postojeća baza leadova uvozi se za broadcast i reaktivacijske kampanje. Vaš CRM ostaje sustav evidencije. Mi gradimo na njemu, bez ometanja vaših trenutnih procesa.',
+    },
+    {
+      q: 'Što ovo razlikuje od najma freelancera za automatizaciju ili chatbot alata?',
+      a: 'Freelanceri postave i odu. Chatbot alati pokrivaju jedan kanal i jedan korak. Mi smo trajan, upravljan specijalizirani tim koji je vlasnik cijelog životnog ciklusa leadova. Hvatanje, kvalifikacija, produkcija kreativa, reaktivacija. Na svim kanalima, neprekidno optimizirano. Dobivate učinak 5-članskog AI operativnog tima za djelić troška, bez tereta upravljanja.',
+    },
+  ] as FAQItem[],
+
+  cta: {
+    eyebrow: 'AI Customer System Agencija · 50+ agencija',
+    headline: 'Prestanite gubiti leadove,<br/><span class="v2-grad">za koje ste već platili oglasima.</span>',
+    subline: 'Rezervirajte besplatan 30-minutni pregled. Analiziramo vaš trenutni tok leadova, izračunamo vaš točan gubitak prihoda i pokažemo vam točnu AI konfiguraciju za vašu agenciju. Bez troška, bez obveze.',
+    buttonText: 'Rezerviraj besplatan pregled',
+    promises: [
+      'Bez prodajnog pritiska, osim ako ga želite',
+      'Individualna procjena ROI-ja na pozivu',
+      'Odgovor u roku od 4 sata',
+      '8 mjesta za pregled mjesečno, samo za agencije',
+    ],
+  } satisfies CTAContent,
+
+  results: {
+    eyebrow: 'Dokazani rezultati',
+    title: 'Ono što naši klijenti',
+    titleGrad: 'zaista vide.',
+    ctaSeeStudies: 'Pogledaj studije slučaja →',
+    ctaWant: 'Želim ove rezultate →',
+    items: [
+      { n: '81%',   l: 'Stopa konverzije leadova',   c: 'AI agenti kvalificiraju 24/7' },
+      { n: '60%',   l: 'Brži prodajni ciklusi',      c: 'u odnosu na ručnu kvalifikaciju' },
+      { n: '42.5×', l: 'Prosj. ROI broadcastova',    c: 'Iz postojeće baze leadova' },
+      { n: '14×',   l: 'Više konverzija iz oglasa',  c: 'AI kreative vs. ručni dizajn' },
+    ],
+  } satisfies ResultsContent,
+
+  endToEnd: {
+    eyebrow: 'Cijeli sustav',
+    title: 'AI Customer System,',
+    titleGrad: 'od početka do kraja.',
+    lead: 'Jedan sustav koji hvata, konvertira i zadržava. U potpunosti upravljan kod nas.',
+    bottomCta: 'Izgradi ovaj sustav za moju agenciju →',
+    phases: [
+      {
+        name: 'Stvori oglase',
+        tool: 'AI kreativni sustav',
+        desc: 'AI stvara visoko konverzivne slike i videe na temelju vašeg briefinga. Treniran na $35 mlrd.+ stvarnih oglasnih podataka. Creative Scoring predviđa pobjednike prije nego potrošite i cent.',
+        features: [
+          'Slike i videi. Svaki format',
+          'AI za ocjenjivanje kreativa. 90%+ točnost',
+          'A/B testiranje. Skaliranje samo pobjednika',
+          'Meta · TikTok · Google · LinkedIn',
+          'Tjedno svježe kreative',
+        ],
+        blogLabel: 'Detaljno: AI sustav za oglasne kreative',
+      },
+      {
+        name: 'Uhvati leadove',
+        tool: '40+ kanala',
+        desc: 'Svaki klik na oglas, DM, posjetitelj web stranice i posjet uživo slijeva se u jedinstveni sandučić. Nula propuštenih leadova na svih 40+ kanala.',
+        features: [
+          'Hvatanje iz oglasa',
+          'Hvatanje s društvenih mreža',
+          'Hvatanje s web stranice',
+          'Hvatanje offline',
+        ],
+        blogLabel: 'Detaljno: WhatsApp generiranje leadova',
+      },
+      {
+        name: 'Konvertiraj leadove',
+        tool: 'AI agenti',
+        desc: 'AI agenti kvalificiraju leadove u manje od 60 sekundi, usmjeravaju vruće prospekte vašem timu i rezerviraju termine. Automatski.',
+        features: [
+          'AI agenti ✨. 24/7 kvalifikacija',
+          'Timski sandučić. Pun kontekst, bez mijenjanja CRM-a',
+          'Kvalifikacija leadova. BANT na svakom jeziku',
+          'Usmjeravanje leadova. Pravi agent, pravo vrijeme',
+          'Rezervacija termina. U razgovoru',
+        ],
+        blogLabel: 'Detaljno: AI prodajni agenti',
+      },
+      {
+        name: 'Zadrži klijente',
+        tool: 'Broadcasts',
+        desc: 'Jednokratne kupce pretvorite u ponavljajući prihod. Automatizirane sekvence, pametni broadcasts i ankete o zadovoljstvu. Sve u razgovoru.',
+        features: [
+          'Razgovorna podrška. Uvijek dostupna',
+          'Promocije i newsletteri. Prosj. 42.5× ROI',
+          'Podsjetnici za obnovu. Automatizirane sekvence',
+          'Ankete CSAT i NPS. U chatu',
+        ],
+        blogLabel: 'Detaljno: WhatsApp broadcasts (42.5× ROI)',
+      },
+    ],
+    strip: [
+      { n: '60s',   l: 'Vrijeme odziva AI-ja' },
+      { n: '40+',   l: 'spojenih kanala' },
+      { n: '90%+',  l: 'točnost kreativa' },
+      { n: '42.5×', l: 'ROI broadcastova' },
+      { n: '$35B+', l: 'obrađenih oglasnih podataka' },
+    ],
+  } satisfies EndToEndContent,
+
+  testimonials: {
+    eyebrow: 'Rezultati klijenata',
+    readCaseStudy: 'Pročitaj studiju slučaja →',
+    joinCta: 'Pridruži nam se →',
+  } satisfies TestimonialsContent,
+
+  blogScroll: {
+    eyebrow: 'Iz bloga',
+    title: 'Vodiči koji',
+    titleGrad: 'sklapaju poslove.',
+    seeAll: 'Svi članci',
+    viewAll: 'Prikaži sve članke',
+    readLabel: 'Čitaj',
+  } satisfies BlogScrollContent,
+
+  bookingSection: {
+    eyebrow: 'Rezervirajte izravno',
+    title: 'Odaberite odgovarajući termin.',
+    titleGrad: 'Ostalo radimo mi.',
+    lead: '30 minuta. Pregledamo vašu trenutnu postavku, izračunamo vaš gubitak prihoda i pokažemo vam točno ono što bi AI Customer System izgradio za vašu agenciju.',
+    pills: [
+      { label: 'Besplatan pregled', sub: '30 minuta' },
+      { label: 'Brz odgovor',       sub: 'U roku od 4 sata' },
+      { label: 'Bez obveze',        sub: 'Otkažite bilo kada' },
+      { label: 'Samo agencije',     sub: 'Kvalificirani pozivi' },
+    ],
+  } satisfies BookingSectionContent,
+
+  clients: {
+    label: 'Pokreće',
+  } satisfies ClientsContent,
+};
+
 // ─── Export helper ────────────────────────────────────────────────────────────
 
-const translations = { en, de, sl } as const;
+const translations = { en, de, sl, hr } as const;
 
 export function getV2Content(lang: Lang = 'en') {
   return translations[lang] ?? translations.en;

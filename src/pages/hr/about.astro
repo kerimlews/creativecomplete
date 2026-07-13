@@ -1,0 +1,526 @@
+---
+import LayoutV2 from '../../layouts/LayoutV2.astro';
+
+const siteUrl = 'https://www.creativecomplete.com';
+const canonicalUrl = `${siteUrl}/hr/about/`;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "O CreativeComplete — agencija za AI Customer System",
+  "url": canonicalUrl,
+  "description": "CreativeComplete je agencija za AI Customer System. Gradimo, vodimo i optimiziramo cijeli AI sustav za kvalifikaciju leadova, kreative i WhatsApp monetizaciju.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "CreativeComplete",
+    "url": siteUrl,
+    "foundingDate": "2023",
+    "founder": {
+      "@type": "Person",
+      "name": "Kerim Alihodza",
+      "url": `${siteUrl}/kerim-alihodza/`
+    },
+    "areaServed": ["HR", "BA", "RS", "ME"],
+    "serviceType": "AI Customer System",
+    "description": "Agencija za AI Customer System — kvalifikacija leadova u manje od 60 sekundi, AI kreative i WhatsApp broadcast kampanje s prosj. 42.5× ROI."
+  }
+};
+
+const breadcrumbs = [
+  { name: "Početna", url: `${siteUrl}/hr/` },
+  { name: "O nama", url: canonicalUrl }
+];
+
+const engines = [
+  {
+    num: "01",
+    color: "var(--c1)",
+    icon: "🤖",
+    title: "AI kvalifikacija leadova",
+    body: "Svaki dolazni lead automatski se kvalificira u manje od 60 sekundi, 24/7, na WhatsAppu, Instagramu, TikToku, Facebooku i 40+ dodatnih kanala.",
+    metric: "81%",
+    metricLabel: "stopa konverzije leadova",
+  },
+  {
+    num: "02",
+    color: "var(--c3)",
+    icon: "🎨",
+    title: "AI oglasne kreative",
+    body: "AI generirani oglasi, trenirani na $35 mlrd.+ oglasnih podataka. Creative Scoring AI predviđa pobjednike s 90%+ točnosti, prije nego potrošite i cent.",
+    metric: "14×",
+    metricLabel: "više konverzija",
+  },
+  {
+    num: "03",
+    color: "var(--c2)",
+    icon: "📡",
+    title: "Hvatanje i konverzija leadova",
+    body: "Jedinstveni sandučić za 40+ kanala. Nijedan lead se ne gubi. Leadovi se konvertiraju s AI-jem i njeguju automatiziranim sekvencama praćenja.",
+    metric: "40+",
+    metricLabel: "spojenih kanala",
+  },
+  {
+    num: "04",
+    color: "#e879f9",
+    icon: "💰",
+    title: "Monetizacija leadova",
+    body: "WhatsApp broadcast kampanje i AI sekvence za ponovni angažman pretvaraju neaktivne CRM kontakte u prihod, prosječno 42.5× ROI na prvoj kampanji.",
+    metric: "42.5×",
+    metricLabel: "prosj. ROI",
+  },
+];
+
+const facts = [
+  { n: "81%",    l: "Stopa konverzije leadova", c: "Prosjek naših klijenata" },
+  { n: "60s",    l: "Prvo vrijeme odziva",      c: "Non-stop, 24/7" },
+  { n: "42.5×",  l: "ROI broadcastova",         c: "Prva kampanja" },
+  { n: "14×",    l: "Više konverzija",          c: "AI vs. ručne kreative" },
+];
+---
+
+<LayoutV2
+  lang="hr"
+  title="O CreativeComplete — agencija za AI Customer System"
+  description="CreativeComplete je vaša ugrađena agencija za AI Customer System. Kvalificiramo leadove u 60 sekundi, generiramo AI kreative i monetiziramo vašu postojeću bazu leadova s prosj. 42.5× ROI."
+  canonicalUrl={canonicalUrl}
+  structuredData={structuredData}
+  breadcrumbs={breadcrumbs}
+  hreflangAlternates={{
+    en: 'https://www.creativecomplete.com/about/',
+    de: 'https://www.creativecomplete.com/de/about/',
+    sl: 'https://www.creativecomplete.com/sl/about/',
+    hr: 'https://www.creativecomplete.com/hr/about/',
+  }}
+>
+
+<main class="about-de">
+
+  <!-- ── Hero ──────────────────────────────────────────────────── -->
+  <section class="ab-hero">
+    <div class="v2-container">
+      <div class="ab-hero__inner">
+        <span class="v2-eyebrow">Agencija za AI Customer System</span>
+        <h1 class="v2-h1" style="margin-top:16px">
+          Mi smo vaš<br/>
+          <span class="v2-grad">ugrađeni AI odjel</span>
+        </h1>
+        <p class="v2-lead" style="margin-top:20px;max-width:58ch">
+          CreativeComplete gradi, vodi i optimizira cijeli AI Customer System, od hvatanja leadova preko kvalifikacije do monetizacije postojećih kontakata. Potpuno upravljano. Jedna mjesečna paušalna cijena. Bez dodatnog zapošljavanja.
+        </p>
+        <div class="ab-hero__ctas">
+          <a
+            href="https://cal.com/kerim-alihodza-7u7w6q/30min"
+            class="v2-btn v2-btn-primary"
+          >
+            Osigurajte besplatan audit sustava
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="/hr/projekti/" class="v2-btn v2-btn-outline">Pogledaj rezultate klijenata</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Stats strip ────────────────────────────────────────────── -->
+  <section class="ab-stats">
+    <div class="v2-container">
+      <div class="ab-stats__grid">
+        {facts.map((f, i) => (
+          <div class="ab-stats__cell" style={`--d:${i * 0.08}s`}>
+            <div class="ab-stats__n">{f.n}</div>
+            <div class="ab-stats__l">{f.l}</div>
+            <div class="ab-stats__c">{f.c}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── What is AI Customer System ────────────────────────────── -->
+  <section class="ab-what">
+    <div class="v2-container">
+      <div class="ab-what__head">
+        <span class="v2-eyebrow">Što je AI Customer System?</span>
+        <h2 class="v2-h2" style="margin-top:14px">
+          <span class="v2-grad">Četiri motora.</span> Jedan cjeloviti sustav.
+        </h2>
+        <p class="v2-lead" style="margin-top:16px;max-width:60ch">
+          Hvatamo svaki lead, konvertiramo ga s AI-jem i zadržavamo ga automatiziranim sekvencama praćenja, sve u jednom potpuno upravljanom sustavu.
+        </p>
+      </div>
+
+      <div class="ab-engines">
+        {engines.map((e, i) => (
+          <div class="ab-engine" style={`--ec:${e.color};--d:${i * 0.08}s`} data-m="up">
+            <div class="ab-engine__top">
+              <span class="ab-engine__num">{e.num}</span>
+              <span class="ab-engine__icon">{e.icon}</span>
+            </div>
+            <h3 class="ab-engine__title">{e.title}</h3>
+            <p class="ab-engine__body">{e.body}</p>
+            <div class="ab-engine__metric">
+              <span class="ab-engine__n">{e.metric}</span>
+              <span class="ab-engine__l">{e.metricLabel}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why managed ────────────────────────────────────────────── -->
+  <section class="ab-why">
+    <div class="v2-container">
+      <div class="ab-why__grid">
+        <div class="ab-why__copy" data-m="up">
+          <span class="v2-eyebrow">Zašto upravljano?</span>
+          <h2 class="v2-h2" style="margin-top:14px">
+            Ne kupujte alat.<br/>
+            <span class="v2-grad">Angažirajte tim.</span>
+          </h2>
+          <p class="v2-lead" style="margin-top:16px">
+            Kupiti AI alate je lako. Ispravno ih konfigurirati, integrirati i svakodnevno optimizirati zahtijeva znanje koje većina tvrtki nema interno.
+          </p>
+          <p class="v2-lead" style="margin-top:12px">
+            CreativeComplete je vaš cjeloviti AI odjel, gradimo sustav, vodimo ga i neprekidno optimiziramo. Dobivate rezultate, bez muke.
+          </p>
+          <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+            <a
+              href="https://cal.com/kerim-alihodza-7u7w6q/30min"
+              class="v2-btn v2-btn-primary"
+            >
+              Besplatan audit →
+            </a>
+            <a href="/hr/usluge/" class="v2-btn v2-btn-outline">Sve usluge</a>
+          </div>
+        </div>
+
+        <div class="ab-why__list" data-m="up" style="--m-d:.12s">
+          {[
+            { icon: "✓", text: "Konfiguracija i izgradnja — u potpunosti od nas" },
+            { icon: "✓", text: "Kontinuirana optimizacija i mjesečna izvješća" },
+            { icon: "✓", text: "Nativna CRM integracija (HubSpot, Salesforce, Pipedrive)" },
+            { icon: "✓", text: "WhatsApp Business API — službeno certificirano" },
+            { icon: "✓", text: "Vaš tim zaključuje samo vruće leadove" },
+            { icon: "✓", text: "Ulaganje se isplati u prosjeku za 45 dana" },
+          ].map(item => (
+            <div class="ab-check">
+              <span class="ab-check__icon">{item.icon}</span>
+              <span class="ab-check__text">{item.text}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Founder ────────────────────────────────────────────────── -->
+  <section class="ab-founder">
+    <div class="v2-container">
+      <div class="ab-founder__grid">
+        <div class="ab-founder__copy" data-m="up">
+          <span class="v2-eyebrow">Tko stoji iza toga?</span>
+          <h2 class="v2-h2" style="margin-top:14px">Kerim Alihodza</h2>
+          <p class="ab-founder__role">Osnivač · Arhitekt AI Customer Systema</p>
+          <p class="v2-lead" style="margin-top:16px">
+            Kerim je osnovao CreativeComplete nakon što je uvidio da tvrtke svakodnevno gube leadove, ne zato što su leadovi loši, nego zato što nitko ne odgovara dovoljno brzo i nijedan sustav ne preuzima kvalifikaciju.
+          </p>
+          <p class="v2-lead" style="margin-top:12px">
+            Razvio je AI Customer System kao potpuno upravljanu infrastrukturu: hvatanje leadova, AI kvalifikacija, produkcija kreativa i WhatsApp monetizacija, sve iz jedne ruke, za mjesečnu paušalnu cijenu.
+          </p>
+          <div style="margin-top:24px">
+            <a href="/kerim-alihodza/" class="v2-btn v2-btn-outline">
+              Kerimov cijeli profil →
+            </a>
+          </div>
+        </div>
+
+        <div class="ab-founder__stats" data-m="up" style="--m-d:.1s">
+          {[
+            { n: "10+", l: "godina iskustva" },
+            { n: "50+", l: "završenih projekata" },
+            { n: "2M€+", l: "generiranog prihoda" },
+            { n: "42.5×", l: "prosj. ROI broadcastova" },
+          ].map(s => (
+            <div class="ab-founder__stat">
+              <div class="ab-founder__stat-n">{s.n}</div>
+              <div class="ab-founder__stat-l">{s.l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────────── -->
+  <section class="ab-cta">
+    <div class="v2-container">
+      <div class="ab-cta__card" data-m="up">
+        <div class="ab-cta__glow"></div>
+        <span class="v2-eyebrow">Agencija za AI Customer System · 50+ agencija</span>
+        <h2 class="v2-h2" style="margin-top:20px">
+          Spremni maksimizirati <span class="v2-grad">svaki lead?</span>
+        </h2>
+        <p class="v2-lead" style="margin-top:16px;max-width:52ch">
+          Rezervirajte besplatan 30-minutni audit sustava. Analiziramo vaš tok leadova, izračunamo vaš točan gubitak prihoda i pokažemo vam optimalnu AI konfiguraciju za vašu tvrtku.
+        </p>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+          <a
+            href="https://cal.com/kerim-alihodza-7u7w6q/30min"
+            class="v2-btn v2-btn-primary"
+          >
+            Rezerviraj besplatan audit sustava
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="/hr/projekti/" class="v2-btn v2-btn-outline">Pogledaj studije slučaja</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</LayoutV2>
+
+<style lang="scss">
+.about-de { overflow-x: hidden; }
+
+/* Hero */
+.ab-hero {
+  padding: 80px 0 72px;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+.ab-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ab-hero__ctas {
+  margin-top: 32px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Stats */
+.ab-stats {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--line);
+}
+.ab-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  @media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); }
+}
+.ab-stats__cell {
+  padding: 24px;
+  text-align: center;
+  border-right: 1px solid var(--line);
+  animation: fadeUp .5s ease both;
+  animation-delay: var(--d, 0s);
+  &:last-child { border-right: none; }
+}
+.ab-stats__n {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 42px);
+  letter-spacing: -.03em;
+  color: var(--c1-light);
+}
+.ab-stats__l {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg-0);
+  margin-top: 4px;
+}
+.ab-stats__c {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--fg-3);
+  margin-top: 2px;
+}
+
+/* What / Engines */
+.ab-what { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.ab-what__head { text-align: center; margin-bottom: 56px; }
+.ab-engines {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 560px) { grid-template-columns: 1fr; }
+}
+.ab-engine {
+  padding: 28px 24px;
+  border-right: 1px solid var(--line);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background .2s;
+  &:last-child { border-right: none; }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--ec);
+    opacity: .6;
+  }
+  &:hover { background: color-mix(in srgb, var(--ec) 4%, transparent); }
+  @media (max-width: 900px) {
+    border-bottom: 1px solid var(--line);
+    &:nth-child(2n) { border-right: none; }
+    &:nth-last-child(-n+2) { border-bottom: none; }
+  }
+  @media (max-width: 560px) { border-right: none !important; border-bottom: 1px solid var(--line) !important; &:last-child { border-bottom: none !important; } }
+}
+.ab-engine__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ab-engine__num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--ec);
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--ec) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ec) 25%, transparent);
+}
+.ab-engine__icon { font-size: 18px; }
+.ab-engine__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fg-0);
+  line-height: 1.3;
+}
+.ab-engine__body {
+  font-size: 13px;
+  color: var(--fg-2);
+  line-height: 1.6;
+  flex: 1;
+}
+.ab-engine__metric {
+  padding-top: 12px;
+  border-top: 1px solid color-mix(in srgb, var(--ec) 18%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ab-engine__n {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--ec);
+  letter-spacing: -.03em;
+}
+.ab-engine__l {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+/* Why managed */
+.ab-why { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.ab-why__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  @media (max-width: 768px) { grid-template-columns: 1fr; gap: 40px; }
+}
+.ab-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  &:last-child { border-bottom: none; }
+}
+.ab-check__icon {
+  color: var(--c1-light);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ab-check__text { font-size: 14px; color: var(--fg-1); line-height: 1.5; }
+
+/* Founder */
+.ab-founder { padding: 80px 0; border-bottom: 1px solid var(--line); }
+.ab-founder__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  @media (max-width: 768px) { grid-template-columns: 1fr; gap: 40px; }
+}
+.ab-founder__role {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: var(--c1-light);
+  margin-top: 6px;
+}
+.ab-founder__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+}
+.ab-founder__stat {
+  padding: 28px 24px;
+  background: var(--bg-card);
+}
+.ab-founder__stat-n {
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: -.03em;
+  color: var(--c1-light);
+}
+.ab-founder__stat-l {
+  font-size: 12px;
+  color: var(--fg-2);
+  margin-top: 4px;
+}
+
+/* CTA */
+.ab-cta { padding: 80px 0; }
+.ab-cta__card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  background: var(--bg-card);
+  padding: 64px 48px;
+  text-align: center;
+  box-shadow: 0 0 80px rgba(99,102,241,.08);
+}
+.ab-cta__glow {
+  position: absolute;
+  inset: -60px;
+  background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(99,102,241,.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+</style>

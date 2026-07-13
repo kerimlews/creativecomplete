@@ -47,6 +47,7 @@ const autoHreflangMap: Record<string, string> = {
   en: siteOrigin + path.replace(/^\/(sl|de|hr|fr)(\/|$)/, '/'),
   sl: siteOrigin + '/sl' + path.replace(/^\/(sl|de|hr|fr)(\/|$)/, '/'),
   de: siteOrigin + '/de' + path.replace(/^\/(sl|de|hr|fr)(\/|$)/, '/'),
+  hr: siteOrigin + '/hr' + path.replace(/^\/(sl|de|hr|fr)(\/|$)/, '/'),
 };
 const hreflangMap: Partial<Record<string, string>> = hreflangAlternates ?? autoHreflangMap;
 

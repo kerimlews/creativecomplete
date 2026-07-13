@@ -1,0 +1,281 @@
+---
+import { Image, getImage } from 'astro:assets';
+import LayoutV2 from '../../../layouts/LayoutV2.astro';
+import CTA from '../../../components/v2/CTA.astro';
+import AuthorBadge from '../../../components/v2/AuthorBadge.astro';
+import { getCollection } from 'astro:content';
+import { getProjectImage } from '../../../utils/constants';
+import { getProjectUrl } from '../../../utils/routing';
+
+export async function getStaticPaths() {
+  const all = await getCollection('projectsHr');
+  return all.map((p) => ({
+    params: { slug: p.data.slug as string },
+    props: { projectId: p.id },
+  }));
+}
+
+const { projectId } = Astro.props;
+const currentLang = 'hr';
+
+const project = await getCollection('projectsHr').then(
+  (ps) => ps.find((p) => p.id === projectId)
+);
+if (!project) throw new Error(`Project not found: ${projectId}`);
+
+const imgMod = project.data.image ? await getProjectImage(project.data.image as string) : null;
+const heroImg = imgMod ? (imgMod as any).default ?? imgMod : null;
+
+let ogImage: string | undefined;
+if (heroImg) {
+  try {
+    const optimized = await getImage({ src: heroImg, width: 1200, height: 630, format: 'webp' });
+    ogImage = Astro.url.origin + optimized.src;
+  } catch { ogImage = undefined; }
+}
+
+const slug = (project.data.slug ?? project.id) as string;
+const canonicalUrl = `${Astro.url.origin}/hr/projekti/${slug}/`;
+const siteUrl = 'https://www.creativecomplete.com';
+const hreflangAlternates = {
+  en: `${siteUrl}/projects/${slug}/`,
+  de: `${siteUrl}/de/projekte/${slug}/`,
+  sl: `${siteUrl}/sl/projekti/${slug}/`,
+  hr: `${siteUrl}/hr/projekti/${slug}/`,
+};
+
+const all = await getCollection('projectsHr');
+const related = all
+  .filter((p) => p.id !== project.id)
+  .slice(0, 4)
+  .map((p) => ({
+    title: p.data.title as string,
+    category: (p.data.category ?? '') as string,
+    url: getProjectUrl(currentLang, (p.data.slug ?? p.id) as string),
+  }));
+
+const publishedYear = project.data.published
+  ? new Date(project.data.published as string).getFullYear()
+  : new Date().getFullYear();
+
+const services: string[] = (project.data.services as string[] | undefined) ?? [];
+const technologies: string[] = (project.data.technologies as string[] | undefined) ?? [];
+const duration = (project.data.duration as string | undefined) ?? '';
+const liveUrl = (project.data.url as string | undefined) ?? '';
+const stats: { value: string; label: string }[] = (project.data.stats as any) ?? [];
+---
+
+<LayoutV2
+  title={project.data.title as string}
+  description={project.data.description as string}
+  canonicalUrl={canonicalUrl}
+  ogImage={ogImage}
+  lang="hr"
+  navActive="results"
+  {hreflangAlternates}
+>
+  <main>
+    <div class="v2-container v2-breadcrumb">
+      <a href="/hr/">Početna</a><span>/</span>
+      <a href="/hr/projekti/">Studije slučaja</a><span>/</span>
+      <span>{project.data.title as string}</span>
+    </div>
+
+    <section class="v2-proj-hero">
+      <div class="v2-container">
+        <div class="v2-proj-hero__inner">
+          <div class="v2-proj-hero__left">
+            <span class="v2-chip-neutral">{project.data.category as string}</span>
+            <h1 class="v2-h2" style="margin-top:20px">{project.data.title as string}</h1>
+            <p class="v2-lead" style="margin-top:16px">{project.data.description as string}</p>
+            <div class="v2-proj-meta">
+              <div class="v2-proj-meta__item">
+                <span class="v2-proj-meta__label">Godina</span>
+                <span class="v2-proj-meta__val">{publishedYear}</span>
+              </div>
+              {duration && (
+                <div class="v2-proj-meta__item">
+                  <span class="v2-proj-meta__label">Trajanje</span>
+                  <span class="v2-proj-meta__val">{duration}</span>
+                </div>
+              )}
+            </div>
+            {services.length > 0 && (
+              <div class="v2-proj-tags">
+                <span class="v2-proj-tags__label">Usluge</span>
+                <div class="v2-proj-tags__list">
+                  {services.map((s) => (
+                    <span class="v2-chip-neutral">{s.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+            {technologies.length > 0 && (
+              <div class="v2-proj-tags" style="margin-top:12px">
+                <span class="v2-proj-tags__label">Stack</span>
+                <div class="v2-proj-tags__list">
+                  {technologies.map((t) => <span class="v2-chip">{t}</span>)}
+                </div>
+              </div>
+            )}
+            <AuthorBadge
+              name="Kerim Alihodza"
+              role="CEO & Business Mechanic"
+              publishedYear={publishedYear}
+            />
+
+            {stats.length > 0 && (
+              <div class="v2-proj-stats">
+                {stats.map((s) => (
+                  <div class="v2-proj-stats__item">
+                    <div class="v2-proj-stats__n">{s.value}</div>
+                    <div class="v2-proj-stats__l">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+            {liveUrl && (
+              <a href={liveUrl} target="_blank" rel="noopener noreferrer" class="v2-btn v2-btn-primary" style="margin-top:24px;width:fit-content">
+                Pogledaj web stranicu uživo
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            )}
+          </div>
+          {heroImg && (
+            <div class="v2-proj-hero__img">
+              <Image src={heroImg} alt={project.data.title as string} width={700} height={420} />
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <section class="v2-section" style="padding-top:0">
+      <div class="v2-container">
+        <div class="v2-proj-content">
+          <div class="v2-prose" set:html={project.rendered?.html} />
+          {related.length > 0 && (
+            <aside class="v2-proj-aside">
+              <div class="v2-proj-aside__head">Više studija slučaja</div>
+              <ul>
+                {related.map((r) => (
+                  <li>
+                    <a href={r.url} class="v2-proj-aside__link">
+                      <span class="v2-proj-aside__cat">{r.category}</span>
+                      <span class="v2-proj-aside__title">{r.title}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <CTA lang="hr" />
+  </main>
+</LayoutV2>
+
+<style lang="scss">
+  .v2-breadcrumb {
+    display: flex; align-items: center; gap: 8px;
+    padding-top: 24px; padding-bottom: 8px;
+    font-size: 13px; font-family: var(--font-mono); color: var(--fg-2);
+    a { color: var(--fg-2); transition: color .15s; &:hover { color: var(--c1-light); } }
+  }
+  .v2-proj-hero { padding: 48px 0 64px; }
+  .v2-proj-hero__inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+    @media (max-width: 900px) { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .v2-proj-hero__left { display: flex; flex-direction: column; align-items: flex-start; }
+  .v2-proj-hero__img {
+    border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--line);
+    img { width: 100%; height: auto; display: block; }
+  }
+  .v2-proj-meta { display: flex; gap: 32px; margin-top: 24px; }
+  .v2-proj-meta__item { display: flex; flex-direction: column; gap: 4px; }
+  .v2-proj-meta__label {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--fg-2);
+  }
+  .v2-proj-meta__val { font-size: 15px; font-weight: 500; color: var(--fg-0); }
+  .v2-proj-tags { margin-top: 20px; }
+  .v2-proj-tags__label {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--fg-2); display: block; margin-bottom: 8px;
+  }
+  .v2-proj-tags__list { display: flex; gap: 6px; flex-wrap: wrap; }
+  .v2-proj-stats {
+    display: flex; gap: 24px; flex-wrap: wrap; margin-top: 28px;
+    padding-top: 24px; border-top: 1px solid var(--line); width: 100%;
+  }
+  .v2-proj-stats__n {
+    font-family: var(--font-display); font-size: 32px; letter-spacing: -0.02em;
+    background: var(--grad-text); -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; background-clip: text; line-height: 1;
+  }
+  .v2-proj-stats__l {
+    font-size: 12px; font-family: var(--font-mono); color: var(--fg-2);
+    letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px;
+  }
+  .v2-proj-content {
+    display: grid; grid-template-columns: 1fr 300px; gap: 64px; align-items: start;
+    @media (max-width: 1024px) { grid-template-columns: 1fr; gap: 48px; }
+  }
+  .v2-prose {
+    color: var(--fg-1); line-height: 1.75; font-size: 16px; max-width: 72ch;
+    :global(h2) {
+      font-family: var(--font-display); font-size: clamp(22px, 2.2vw, 32px);
+      letter-spacing: -0.015em; font-weight: 400; color: var(--fg-0); margin: 48px 0 16px;
+    }
+    :global(h3) {
+      font-family: var(--font-display); font-size: clamp(18px, 1.6vw, 24px);
+      letter-spacing: -0.01em; font-weight: 400; color: var(--fg-0); margin: 32px 0 12px;
+    }
+    :global(p) { margin: 0 0 16px; }
+    :global(ul), :global(ol) { padding-left: 1.5em; margin: 0 0 16px; display: flex; flex-direction: column; gap: 6px; }
+    :global(strong) { color: var(--fg-0); font-weight: 600; }
+    :global(a) { color: var(--c1-light); text-decoration: underline; text-underline-offset: 3px; &:hover { color: var(--fg-0); } }
+    :global(code) {
+      font-family: var(--font-mono); font-size: 0.88em; background: var(--glass-hover);
+      border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; color: var(--c2);
+    }
+    :global(blockquote) { border-left: 3px solid var(--c1); padding-left: 20px; margin: 24px 0; font-style: italic; }
+    :global(hr) { border: 0; height: 1px; background: var(--line); margin: 32px 0; }
+    :global(table) {
+      width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 14px;
+      border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);
+    }
+    :global(thead) { background: rgba(99,102,241,0.1); }
+    :global(th) {
+      font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(255,255,255,0.5); font-weight: 600;
+      padding: 10px 14px; text-align: left; border-bottom: 1px solid rgba(99,102,241,0.2); white-space: nowrap;
+    }
+    :global(td) {
+      padding: 10px 14px; color: var(--fg-1); border-bottom: 1px solid rgba(255,255,255,0.05);
+      vertical-align: top; line-height: 1.5;
+    }
+    :global(tbody tr:last-child td) { border-bottom: none; }
+    :global(tbody tr:nth-child(even)) { background: rgba(255,255,255,0.02); }
+    :global(tbody tr:hover) { background: rgba(99,102,241,0.05); }
+  }
+  .v2-proj-aside { position: sticky; top: 88px; @media (max-width: 1024px) { position: static; } }
+  .v2-proj-aside__head {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--fg-2); margin-bottom: 16px;
+  }
+  .v2-proj-aside ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; }
+  .v2-proj-aside__link {
+    display: flex; flex-direction: column; gap: 4px; padding: 14px 16px;
+    border-radius: var(--r-sm); border: 1px solid var(--line); text-decoration: none;
+    transition: border-color .15s, background .15s;
+    &:hover { border-color: var(--line-accent); background: var(--glass); }
+  }
+  .v2-proj-aside__cat { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c1-light); }
+  .v2-proj-aside__title { font-size: 13px; font-weight: 500; color: var(--fg-0); line-height: 1.4; }
+</style>

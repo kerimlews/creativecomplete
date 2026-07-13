@@ -34,9 +34,17 @@ const content = {
     cta: 'Oglejte si, kako deluje →',
     alt: 'Katalog kanalov z 40+ povezanimi platformami: WhatsApp, TikTok, Instagram, Messenger, Viber, LINE in več',
   },
+  hr: {
+    eyebrow: '40+ kanala',
+    title: 'Svaki kanal koji vaši leadovi koriste.',
+    titleGrad: 'Jedan objedinjeni sandučić.',
+    sub: 'WhatsApp, Instagram, Facebook Messenger, TikTok, e-pošta, SMS, live chat. Svaki razgovor koji vaši leadovi započnu, riješen na jednom mjestu uz vašeg AI prodajnog agenta.',
+    cta: 'Pogledajte kako se povezuje →',
+    alt: 'Katalog kanala s 40+ povezanih platformi: WhatsApp, TikTok, Instagram, Messenger, Viber, LINE i više',
+  },
 } as const;
 
-const c = content[lang];
+const c = content[lang as keyof typeof content];
 ---
 
 <section class="v2-channels">

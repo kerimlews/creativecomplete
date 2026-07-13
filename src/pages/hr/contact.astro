@@ -1,0 +1,313 @@
+---
+import LayoutV2 from '../../layouts/LayoutV2.astro';
+---
+
+<LayoutV2
+  lang="hr"
+  title="Kontakt — CreativeComplete | Agencija za AI Customer System"
+  description="Razgovarajmo o vašoj postavci. Pokazat ćemo vam točno što bi AI Customer System generirao za vašu tvrtku, u brojkama."
+  canonicalUrl="https://www.creativecomplete.com/hr/contact/"
+  hreflangAlternates={{
+    en: 'https://www.creativecomplete.com/contact/',
+    de: 'https://www.creativecomplete.com/de/contact/',
+    sl: 'https://www.creativecomplete.com/sl/contact/',
+    hr: 'https://www.creativecomplete.com/hr/contact/',
+  }}
+>
+  <main>
+    <div class="v2-container v2-bc">
+      <a href="/hr/">Početna</a><span>/</span><span>Kontakt</span>
+    </div>
+
+    <section class="ct-section">
+      <div class="v2-container">
+        <div class="ct-grid">
+
+          <!-- Left: info -->
+          <div class="ct-left">
+            <span class="v2-eyebrow">Javite nam se</span>
+            <h1 class="v2-h2" style="margin-top:16px">
+              Razgovarajmo o <br/><span class="v2-grad">vašem rastu.</span>
+            </h1>
+            <p class="v2-lead" style="margin-top:20px">
+              Recite nam nešto o svojoj tvrtki. Pregledat ćemo vašu postavku i pokazati vam točno što bi AI Customer System generirao, u brojkama.
+            </p>
+
+            <div class="ct-facts">
+              <div class="ct-fact">
+                <div class="ct-fact__icon">⚡</div>
+                <div>
+                  <div class="ct-fact__title">Odgovor u 4 sata</div>
+                  <div class="ct-fact__sub">Pon–pet, radno vrijeme</div>
+                </div>
+              </div>
+              <div class="ct-fact">
+                <div class="ct-fact__icon">📅</div>
+                <div>
+                  <div class="ct-fact__title">Ili rezervirajte izravno</div>
+                  <div class="ct-fact__sub">
+                    <a
+                      href="https://cal.com/kerim-alihodza-7u7w6q/30min"
+                      class="ct-cal-link"
+                    >
+                      Odaberite besplatan 30-min termin →
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="ct-fact">
+                <div class="ct-fact__icon">🏢</div>
+                <div>
+                  <div class="ct-fact__title">Radimo s tvrtkama</div>
+                  <div class="ct-fact__sub">Surađujemo s kvalificiranim klijentima</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: form -->
+          <div class="ct-right">
+            <form
+              class="ct-form"
+              id="contactForm"
+              action="https://formspree.io/f/xzzondpe"
+              method="POST"
+            >
+              <div class="ct-form__grid">
+                <div class="ct-field">
+                  <label for="name" class="ct-label">Puno ime <span class="ct-req">*</span></label>
+                  <input type="text" id="name" name="name" class="ct-input" required placeholder="Vaše puno ime" />
+                </div>
+
+                <div class="ct-field">
+                  <label for="email" class="ct-label">E-pošta <span class="ct-req">*</span></label>
+                  <input type="email" id="email" name="email" class="ct-input" required placeholder="vi@tvrtka.hr" />
+                </div>
+
+                <div class="ct-field">
+                  <label for="company" class="ct-label">Naziv tvrtke</label>
+                  <input type="text" id="company" name="company" class="ct-input" placeholder="Vaša tvrtka" />
+                </div>
+
+                <div class="ct-field">
+                  <label for="phone" class="ct-label">Telefon / WhatsApp</label>
+                  <input type="tel" id="phone" name="phone" class="ct-input" placeholder="+385 91 234 5678" />
+                </div>
+
+                <div class="ct-field ct-field--full">
+                  <label for="service" class="ct-label">Što vas zanima?</label>
+                  <select id="service" name="service" class="ct-select">
+                    <option value="">Odaberite temu</option>
+                    <option value="local-business-website">Web stranica za lokalne tvrtke</option>
+                    <option value="ai-customer-system">AI Customer System (cjeloviti sustav)</option>
+                    <option value="ai-lead-qualification">AI kvalifikacija leadova</option>
+                    <option value="ai-creative-engine">AI Creative Engine</option>
+                    <option value="lead-capture">Hvatanje leadova (40+ kanala)</option>
+                    <option value="lead-monetization">Monetizacija postojećih leadova</option>
+                    <option value="web-design">Web dizajn</option>
+                    <option value="other">Ostalo</option>
+                  </select>
+                </div>
+
+                <div class="ct-field ct-field--full">
+                  <label for="leads" class="ct-label">Mjesečni volumen leadova</label>
+                  <select id="leads" name="leads" class="ct-select">
+                    <option value="">Odaberite raspon</option>
+                    <option value="under-100">Ispod 100 leadova/mjesec</option>
+                    <option value="100-500">100–500 leadova/mjesec</option>
+                    <option value="500-2000">500–2.000 leadova/mjesec</option>
+                    <option value="2000-plus">2.000+ leadova/mjesec</option>
+                    <option value="not-sure">Još nisam siguran</option>
+                  </select>
+                </div>
+
+                <div class="ct-field ct-field--full">
+                  <label for="message" class="ct-label">Recite nam više <span class="ct-req">*</span></label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="ct-textarea"
+                    required
+                    rows="5"
+                    placeholder="Trenutna postavka, izazovi, što želite postići..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="ct-submit v2-btn v2-btn-primary" id="ctSubmit">
+                <span class="ct-submit__text">
+                  Pošalji poruku
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span class="ct-submit__loading" hidden>
+                  <svg class="ct-spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2.5" opacity=".25"/>
+                    <path d="M12 2a10 10 0 0110 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                  Slanje…
+                </span>
+              </button>
+
+              <div id="formStatus" class="ct-status" hidden></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+</LayoutV2>
+
+<script>
+  const form    = document.getElementById('contactForm') as HTMLFormElement;
+  const status  = document.getElementById('formStatus') as HTMLElement;
+  const btn     = document.getElementById('ctSubmit') as HTMLButtonElement;
+  const btnText = btn.querySelector('.ct-submit__text') as HTMLElement;
+  const btnLoad = btn.querySelector('.ct-submit__loading') as HTMLElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    btnText.hidden = true;
+    btnLoad.hidden = false;
+    btn.disabled = true;
+    status.hidden = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        showStatus('Hvala! Javit ćemo se u roku od 4 sata.', 'ok');
+        form.reset();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        showStatus(data.error || 'Nešto je pošlo po zlu. Pokušajte ponovno.', 'err');
+      }
+    } catch {
+      showStatus('Mrežna pogreška — provjerite vezu.', 'err');
+    } finally {
+      btnText.hidden = false;
+      btnLoad.hidden = true;
+      btn.disabled = false;
+    }
+  });
+
+  function showStatus(msg: string, type: 'ok' | 'err') {
+    status.textContent = msg;
+    status.className = `ct-status ct-status--${type}`;
+    status.hidden = false;
+    if (type === 'ok') setTimeout(() => { status.hidden = true; }, 6000);
+  }
+
+  form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('input,textarea,select').forEach(el => {
+    el.addEventListener('blur', () => {
+      if (el.required && !el.value.trim()) el.classList.add('ct-input--err');
+      else el.classList.remove('ct-input--err');
+    });
+    el.addEventListener('input', () => el.classList.remove('ct-input--err'));
+  });
+</script>
+
+<style lang="scss">
+  .v2-bc {
+    display: flex; align-items: center; gap: 8px;
+    padding-top: 24px; padding-bottom: 8px;
+    font-size: 13px; font-family: var(--font-mono); color: var(--fg-2);
+    a { color: var(--fg-2); &:hover { color: var(--c1-light); } }
+  }
+
+  .ct-section { padding: 48px 0 96px; }
+
+  .ct-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: start;
+    @media (max-width: 900px) { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  .ct-left {
+    position: sticky; top: 96px;
+    @media (max-width: 900px) { position: static; }
+  }
+
+  .ct-facts {
+    display: flex; flex-direction: column; gap: 20px;
+    margin-top: 40px; padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+
+  .ct-fact { display: flex; align-items: flex-start; gap: 14px; }
+
+  .ct-fact__icon {
+    width: 38px; height: 38px; border-radius: 10px;
+    background: var(--glass); border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; flex-shrink: 0;
+  }
+
+  .ct-fact__title { font-size: 14px; font-weight: 500; color: var(--fg-0); line-height: 1.3; }
+  .ct-fact__sub { font-size: 12px; color: var(--fg-2); margin-top: 2px; font-family: var(--font-mono); }
+
+  .ct-cal-link {
+    color: var(--c1-light); text-decoration: none; cursor: pointer;
+    &:hover { text-decoration: underline; }
+  }
+
+  .ct-right {
+    background: var(--bg-card); border: 1px solid var(--line);
+    border-radius: var(--r-xl); padding: 40px;
+    @media (max-width: 640px) { padding: 24px; }
+  }
+
+  .ct-form__grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;
+    @media (max-width: 600px) { grid-template-columns: 1fr; }
+  }
+
+  .ct-field { display: flex; flex-direction: column; gap: 6px; &--full { grid-column: 1 / -1; } }
+
+  .ct-label {
+    font-size: 12px; font-family: var(--font-mono);
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg-2);
+  }
+
+  .ct-req { color: var(--c1-light); }
+
+  %ct-control {
+    width: 100%; background: var(--bg-elev); border: 1px solid var(--line);
+    border-radius: var(--r-sm); padding: 11px 14px; font-size: 14px;
+    color: var(--fg-0); font-family: inherit;
+    transition: border-color .15s, box-shadow .15s; outline: none;
+    &::placeholder { color: var(--fg-2); }
+    &:focus { border-color: var(--c1); box-shadow: 0 0 0 3px rgba(99,102,241,.12); }
+    &.ct-input--err { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,.1); }
+  }
+
+  .ct-input    { @extend %ct-control; }
+  .ct-select   { @extend %ct-control; cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%234b5563' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  .ct-textarea { @extend %ct-control; resize: vertical; min-height: 120px; line-height: 1.6; }
+
+  .ct-submit {
+    width: 100%; justify-content: center; height: 48px; font-size: 15px;
+    &:disabled { opacity: 0.6; cursor: not-allowed; }
+  }
+
+  .ct-submit__text { display: inline-flex; align-items: center; gap: 8px; }
+  .ct-submit__loading:not([hidden]) { display: flex; align-items: center; gap: 8px; }
+
+  @keyframes ct-spin { to { transform: rotate(360deg); } }
+  .ct-spinner { animation: ct-spin .8s linear infinite; }
+
+  .ct-status {
+    margin-top: 16px; padding: 12px 16px;
+    border-radius: var(--r-sm); font-size: 14px; line-height: 1.5;
+    &--ok  { background: rgba(34,197,94,.08); border: 1px solid rgba(34,197,94,.25); color: #4ade80; }
+    &--err { background: rgba(239,68,68,.08);  border: 1px solid rgba(239,68,68,.25);  color: #f87171; }
+  }
+</style>

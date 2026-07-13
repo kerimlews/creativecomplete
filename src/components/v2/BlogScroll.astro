@@ -10,9 +10,9 @@ export interface Props {
 const { lang = 'en' } = Astro.props;
 const lc = getV2Content(lang).blogScroll;
 
-const collectionName = lang === 'de' ? 'blogsDe' : lang === 'sl' ? 'blogsSl' : 'blogs';
-const blogBase = lang === 'de' ? '/de/blog' : lang === 'sl' ? '/sl/blog' : '/blog';
-const dateLocale = lang === 'de' ? 'de-DE' : lang === 'sl' ? 'sl-SI' : 'en-US';
+const collectionName = lang === 'de' ? 'blogsDe' : lang === 'sl' ? 'blogsSl' : lang === 'hr' ? 'blogsHr' : 'blogs';
+const blogBase = lang === 'de' ? '/de/blog' : lang === 'sl' ? '/sl/blog' : lang === 'hr' ? '/hr/blog' : '/blog';
+const dateLocale = lang === 'de' ? 'de-DE' : lang === 'sl' ? 'sl-SI' : lang === 'hr' ? 'hr-HR' : 'en-US';
 
 const allPosts = await getCollection(collectionName);
 
