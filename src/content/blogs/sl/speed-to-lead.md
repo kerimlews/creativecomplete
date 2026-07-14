@@ -102,7 +102,7 @@ Poslovni primer za Speed to Lead ni zapleten. Če porabljate denar za oglase, pl
 
 Speed to Lead je prva plast celotnega sistema avtomatizacije prodaje. Za celoten okvir — od takojšnjega AI odziva prek kvalifikacije in usmerjanja do follow-up zaporedij in CRM integracije — preberite [celoten vodnik za avtomatizacijo prodajnega procesa](/blog/sales-automation-agencies-guide/).
 
-Pri **CreativeComplete** gradimo Speed to Lead kot prvo plast AI Customer Systema. Vsak nov lead, iz katerega koli kanala, dobi AI odziv v manj kot 60 sekundah, oceno kvalifikacije, preden ga vidi človek, in [odločitev usmerjanja](/sl/blog/avtomatizirana-distribucija-leadov/), ki ga postavi pred pravega predstavnika s polnim kontekstom.
+Pri **CreativeComplete** gradimo [Speed to Lead](/sl/storitve/hitrost-do-leada/) kot prvo plast AI Customer Systema. Vsak nov lead, iz katerega koli kanala, dobi AI odziv v manj kot 60 sekundah, oceno kvalifikacije, preden ga vidi človek, in [odločitev usmerjanja](/sl/blog/avtomatizirana-distribucija-leadov/), ki ga postavi pred pravega predstavnika s polnim kontekstom.
 
 Večina strank gre v živo v **5 dneh**.
 

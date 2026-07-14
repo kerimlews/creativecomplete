@@ -96,7 +96,7 @@ Ein Kunde, der mit einem 3-Varianten-Ad-Account einsteigt und auf ein 20-Variant
 - **3–5× mehr** profitable Creative-Konzepte gleichzeitig im Einsatz
 - Planbare Creative-Pipeline, mit immer getesteten Varianten bereit, um ermüdende Ads zu ersetzen
 
-Bei **CreativeComplete** ist Creative-Testing in die AI Creative Engine eingebettet. Die KI generiert Varianten, bewertet sie vorab, managt die Test-Struktur und skaliert Gewinner automatisch, während sie Underperformer pausiert. Der gesamte Prozess läuft, ohne dass Ihr Team Ad-Performance manuell überwachen oder Creative-Entscheidungen unter Unsicherheit treffen muss.
+Bei **CreativeComplete** ist Creative-Testing in die [AI Creative Engine](/de/dienstleistungen/ki-werbemittel-system/) eingebettet. Die KI generiert Varianten, bewertet sie vorab, managt die Test-Struktur und skaliert Gewinner automatisch, während sie Underperformer pausiert. Der gesamte Prozess läuft, ohne dass Ihr Team Ad-Performance manuell überwachen oder Creative-Entscheidungen unter Unsicherheit treffen muss.
 
 Das Ziel ist eine Creative-Operation, in der Sie jederzeit wissen, was funktioniert, warum es funktioniert und was als Nächstes zu testen ist.
 

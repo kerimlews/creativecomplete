@@ -96,7 +96,7 @@ Stranka, ki vstopi s 3-variantnim oglasnim računom in se premakne na 20-variant
 - **3–5× povečanje** števila dobičkonosnih kreativnih konceptov, ki tečejo hkrati
 - predvidljivo kreativno cev — vedno imate pripravljene testirane različice za zamenjavo utrujenih oglasov
 
-Pri **CreativeComplete** je testiranje kreativ vgrajeno v AI Creative Engine. AI generira različice, jih vnaprej oceni, vodi testno strukturo in samodejno skalira zmagovalce ob zaustavitvi slabih izvajalcev. Celoten proces teče, ne da bi vaša ekipa ročno spremljala zmogljivost oglasov ali sprejemala kreativne odločitve v negotovosti.
+Pri **CreativeComplete** je testiranje kreativ vgrajeno v [AI Creative Engine](/sl/storitve/ai-oglasevalski-kreativni-sistem/). AI generira različice, jih vnaprej oceni, vodi testno strukturo in samodejno skalira zmagovalce ob zaustavitvi slabih izvajalcev. Celoten proces teče, ne da bi vaša ekipa ročno spremljala zmogljivost oglasov ali sprejemala kreativne odločitve v negotovosti.
 
 Cilj je kreativna operacija, kjer vedno veste, kaj deluje, zakaj deluje in kaj testirati naprej.
 

@@ -78,7 +78,7 @@ Most leads don't buy on the first conversation. They buy on the third, fifth, or
 
 AI agents run the follow-up systematically: the right message, at the right interval, based on where the lead is in the conversation. No leads fall through the cracks because a rep was too busy, too forgetful, or too uncomfortable with persistent follow-up.
 
-At **CreativeComplete**, AI Sales Agents are configured as part of the AI Customer System's Convert phase, integrated with every lead channel, your [CRM](/blog/crm-automation/), and your rep's calendar. The system is built, trained, and tested within 5 days.
+At **CreativeComplete**, AI Sales Agents are configured as part of the [AI Customer System's Convert phase](/services/ai-lead-qualification/), integrated with every lead channel, your [CRM](/blog/crm-automation/), and your rep's calendar. The system is built, trained, and tested within 5 days.
 
 If your close rate is lower than it should be, the most likely explanation isn't your product or your pitch. It's the leads that went cold between first contact and first conversation.
 

@@ -129,6 +129,6 @@ The right platform ships all seven routing rules natively, with a visual configu
 
 Lead distribution is one layer of a complete sales automation system. For the full framework — qualification before routing, follow-up sequences, and CRM integration — read the [Sales Process Automation Guide](/blog/sales-automation-agencies-guide/).
 
-At **CreativeComplete**, we configure and manage the full automated lead distribution setup as part of our AI Customer System, including routing logic, agent training, and integration with your existing CRM. Most clients go from manual assignment to fully automated routing within **10 days**.
+At **CreativeComplete**, we configure and manage the full [automated lead distribution setup](/services/speed-to-lead-system/) as part of our AI Customer System, including routing logic, agent training, and integration with your existing CRM. Most clients go from manual assignment to fully automated routing within **10 days**.
 
 If your team is still assigning leads by hand, every day you wait is revenue leaving through a gap that's entirely fixable.

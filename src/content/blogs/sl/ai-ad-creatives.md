@@ -121,7 +121,7 @@ Za celotno arhitekturo produkcijskega sistema — kako zgraditi vseh šest siste
 
 Pot implementacije je preprosta: nalaganje brand kita, struktura copy briefinga, izbira platforme, konfiguracija praga ocenjevanja.
 
-Pri **CreativeComplete** to nastavimo kot del našega AI Customer Systema, integriranega z vašimi oglasnimi računi, CRM in usmerjanjem leadov, tako da je vsaka kreativna različica vezana na nadaljnje konverzijske podatke, ne le na metrike klikov na vrhu lijaka. Vidite, katera kreativa je generirala kateri [lead](/sl/blog/whatsapp-pridobivanje-leadov/), kateri lead je konvertiral in kakšna je bila življenjska vrednost.
+Pri **CreativeComplete** to nastavimo z našim [AI oglaševalskim kreativnim sistemom](/sl/storitve/ai-oglasevalski-kreativni-sistem/) kot del AI Customer Systema, integriranega z vašimi oglasnimi računi, CRM in usmerjanjem leadov, tako da je vsaka kreativna različica vezana na nadaljnje konverzijske podatke, ne le na metrike klikov na vrhu lijaka. Vidite, katera kreativa je generirala kateri [lead](/sl/blog/whatsapp-pridobivanje-leadov/), kateri lead je konvertiral in kakšna je bila življenjska vrednost.
 
 Večina strank ima svoj prvi ocenjeni batch kreativ v živo v **5 dneh**.
 

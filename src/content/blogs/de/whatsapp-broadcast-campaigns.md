@@ -100,7 +100,7 @@ Der Broadcast ist kein einmaliges Event, sondern der Eröffnungszug in einem lau
 
 Den vollständigen WhatsApp Business API Leitfaden — API-Zugang, Opt-in-Flows, Template-Freigabe und den Aufbau aller Lead-Gen-Kanäle — finden Sie im [WhatsApp Business API Leitfaden](/blog/whatsapp-business-api-guide/).
 
-Bei **CreativeComplete** werden WhatsApp Broadcast-Kampagnen als Teil der Retain-Phase des AI Customer Systems gebaut, integriert mit Ihrem CRM, Ihrem KI-Qualifizierungs-Layer und Ihrem Sales-Postfach, sodass jede Antwort ein nachverfolgtes Umsatz-Event erzeugt.
+Bei **CreativeComplete** werden [WhatsApp Broadcast-Kampagnen](/de/dienstleistungen/whatsapp-datenbank-monetarisierung/) als Teil der Retain-Phase des AI Customer Systems gebaut, integriert mit Ihrem CRM, Ihrem KI-Qualifizierungs-Layer und Ihrem Sales-Postfach, sodass jede Antwort ein nachverfolgtes Umsatz-Event erzeugt.
 
 Die meisten Kunden launchen ihre erste Kampagne innerhalb von **5 Tagen** nach Onboarding.
 

@@ -78,7 +78,7 @@ Večina leadov ne kupi pri prvem pogovoru. Kupijo pri tretjem, petem ali sedmem 
 
 AI agenti izvajajo follow-up sistematično: pravo sporočilo, v pravem intervalu, glede na to, kje je lead v pogovoru. Noben lead ne pade skozi razpoke, ker je bil predstavnik prezaposlen, prepozabljiv ali preveč nelagoden z vztrajnim follow-upom.
 
-Pri **CreativeComplete** so AI prodajni agenti konfigurirani kot del Convert faze AI Customer Systema, integrirani z vsakim kanalom leadov, vašim [CRM](/sl/blog/crm-avtomatizacija/) in koledarjem predstavnika. Sistem je zgrajen, treniran in testiran v 5 dneh.
+Pri **CreativeComplete** so AI prodajni agenti konfigurirani kot del [Convert faze AI Customer Systema](/sl/storitve/ai-kvalifikacija-leadov/), integrirani z vsakim kanalom leadov, vašim [CRM](/sl/blog/crm-avtomatizacija/) in koledarjem predstavnika. Sistem je zgrajen, treniran in testiran v 5 dneh.
 
 Če je vaša stopnja zaključkov nižja, kot bi morala biti, najbolj verjetna razlaga ni vaš produkt ali pitch. So leadi, ki so šli hladni med prvim stikom in prvim pogovorom.
 

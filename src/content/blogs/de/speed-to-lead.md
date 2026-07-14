@@ -102,7 +102,7 @@ Der Business Case für Speed to Lead ist klar. Wenn Sie Geld für Ads ausgeben, 
 
 Speed to Lead ist die erste Schicht eines vollständigen Sales-Automation-Systems. Das gesamte Framework — von KI-Erstantwort über Qualifizierung und Routing bis zu Follow-up-Sequenzen und CRM-Integration — beschreibt der [vollständige Sales-Process-Automation-Leitfaden](/blog/sales-automation-agencies-guide/).
 
-Bei **CreativeComplete** bauen wir Speed to Lead als erste Schicht des AI Customer Systems. Jeder neue Lead, von jedem Kanal, bekommt eine KI-Antwort in unter 60 Sekunden, einen Qualifizierungs-Score, bevor ein Mensch ihn sieht, und eine [Routing-Entscheidung](/de/blog/automatisierte-lead-verteilung/), die ihn mit vollem Kontext vor den richtigen Rep stellt.
+Bei **CreativeComplete** bauen wir [Speed to Lead](/de/dienstleistungen/reaktionszeit-system/) als erste Schicht des AI Customer Systems. Jeder neue Lead, von jedem Kanal, bekommt eine KI-Antwort in unter 60 Sekunden, einen Qualifizierungs-Score, bevor ein Mensch ihn sieht, und eine [Routing-Entscheidung](/de/blog/automatisierte-lead-verteilung/), die ihn mit vollem Kontext vor den richtigen Rep stellt.
 
 Die meisten Kunden sind in **5 Tagen** live.
 

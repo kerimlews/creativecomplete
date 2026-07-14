@@ -131,9 +131,36 @@ if (breadcrumbs && !structuredData) {
   <!-- Cal.com: preconnect for faster navigation on link click -->
   <link rel="preconnect" href="https://app.cal.com" />
 
-  <!-- Analytics: both run in Partytown web worker — zero main-thread blocking -->
-  <script is:inline type="text/partytown" src="https://t.contentsquare.net/uxa/be34155e4623d.js"></script>
-  <script is:inline type="text/partytown">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T7G6QHT9');</script>
+  <!-- Consent Mode v2 default — MUST run before any analytics tag loads.
+       Defines gtag() on the main thread so ConsentModal.astro can update consent. -->
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    // Honour a previously saved choice so returning visitors are tracked immediately.
+    (function () {
+      var granted = false;
+      try {
+        var saved = JSON.parse(localStorage.getItem('cc-consent-v1'));
+        granted = !!(saved && saved.analytics);
+      } catch (e) {}
+      gtag('consent', 'default', {
+        analytics_storage: granted ? 'granted' : 'denied',
+        ad_storage: 'denied',
+        wait_for_update: 500,
+      });
+    })();
+    gtag('js', new Date());
+    gtag('config', 'G-H7K7HX3RM4');
+  </script>
+  <!-- GA4 (direct — source of truth). Loaded normally, NOT via Partytown. -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-H7K7HX3RM4"></script>
+
+  <!-- Contentsquare / session insights -->
+  <script is:inline async src="https://t.contentsquare.net/uxa/be34155e4623d.js"></script>
+
+  <!-- Google Tag Manager — kept for any non-GA4 tags.
+       NOTE: if this GTM container also sends GA4 to G-H7K7HX3RM4, remove one of the two to avoid double counting. -->
+  <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T7G6QHT9');</script>
 </head>
 
 <body class="v2-body">

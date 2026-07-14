@@ -129,6 +129,6 @@ Die richtige Plattform liefert alle sieben Routing-Regeln nativ, mit visueller K
 
 Lead-Verteilung ist eine Schicht eines vollständigen Sales-Automation-Systems. Das gesamte Framework — Qualifizierung vor dem Routing, Follow-up-Sequenzen und CRM-Integration — beschreibt der [vollständige Sales-Process-Automation-Leitfaden](/blog/sales-automation-agencies-guide/).
 
-Bei **CreativeComplete** konfigurieren und betreiben wir das komplette automatisierte Lead-Verteilungs-Setup als Teil unseres AI Customer Systems, inklusive Routing-Logik, Agent-Training und Integration mit Ihrem bestehenden CRM. Die meisten Kunden gehen innerhalb von **10 Tagen** von manueller Zuweisung zu vollautomatisiertem Routing.
+Bei **CreativeComplete** konfigurieren und betreiben wir das komplette [automatisierte Lead-Verteilungs-Setup](/de/dienstleistungen/reaktionszeit-system/) als Teil unseres AI Customer Systems, inklusive Routing-Logik, Agent-Training und Integration mit Ihrem bestehenden CRM. Die meisten Kunden gehen innerhalb von **10 Tagen** von manueller Zuweisung zu vollautomatisiertem Routing.
 
 Wenn Ihr Team Leads noch von Hand zuweist, ist jeder Tag des Wartens Umsatz, der durch eine vollständig behebbare Lücke abfließt.

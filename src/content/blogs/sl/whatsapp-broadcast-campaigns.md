@@ -100,7 +100,7 @@ Broadcast ni enkratni dogodek. Je otvoritvena poteza v stalnem monetizacijskem s
 
 Za celoten vodnik za postavitev WhatsApp Business API — kako pridobiti dostop, konfigurirati opt-in tokove, dobiti odobritev predlog in zgraditi vsak kanal za pridobivanje leadov — preberite [vodnik za WhatsApp Business API](/blog/whatsapp-business-api-guide/).
 
-Pri **CreativeComplete** so WhatsApp broadcast kampanje zgrajene kot del Retain faze AI Customer Systema, integrirane z vašim CRM, AI kvalifikacijsko plastjo in prodajno pošto, tako da vsak odgovor generira sledljiv prihodkovni dogodek.
+Pri **CreativeComplete** so [WhatsApp broadcast kampanje](/sl/storitve/whatsapp-monetizacija-baze/) zgrajene kot del Retain faze AI Customer Systema, integrirane z vašim CRM, AI kvalifikacijsko plastjo in prodajno pošto, tako da vsak odgovor generira sledljiv prihodkovni dogodek.
 
 Večina strank lansira prvo kampanjo v **5 dneh** od onboardinga.
 

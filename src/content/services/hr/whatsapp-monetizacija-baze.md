@@ -1,5 +1,5 @@
 ---
-title: "WhatsApp monetizacija baze: 42× ROI"
+title: "WhatsApp monetizacija baze kontakata: 42× ROI"
 description: "Pretvorite svoju postojeću bazu leadova u ponavljajući prihod. WhatsApp broadcast kampanje i AI sekvence za reaktivaciju postižu medijanu od 42.5× ROI, u potpunosti upravljano od CreativeComplete."
 slug: "whatsapp-monetizacija-baze"
 image: "whatsapp-database-monetization"

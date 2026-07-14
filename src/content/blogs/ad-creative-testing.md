@@ -96,7 +96,7 @@ A client who enters with a 3-variant ad account and moves to a 20-variant system
 - **3–5× increase** in the number of profitable creative concepts running simultaneously
 - A predictable creative pipeline, with tested variants always ready to replace fatiguing ads
 
-At **CreativeComplete**, creative testing is embedded in the AI Creative Engine. AI generates the variants, pre-scores them, manages the test structure, and automatically scales winners while pausing underperformers. The entire process runs without requiring your team to manually monitor ad performance or make creative decisions under uncertainty.
+At **CreativeComplete**, creative testing is embedded in the [AI Creative Engine](/services/ai-ad-creative-engine/). AI generates the variants, pre-scores them, manages the test structure, and automatically scales winners while pausing underperformers. The entire process runs without requiring your team to manually monitor ad performance or make creative decisions under uncertainty.
 
 The goal is a creative operation where you always know what's working, why it's working, and what to test next.
 

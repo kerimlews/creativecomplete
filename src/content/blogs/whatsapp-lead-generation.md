@@ -95,6 +95,6 @@ Not qualifying before routing to a rep. Reps who receive every WhatsApp lead, re
 
 For the complete guide to WhatsApp Business API — how to get access, configure message templates, stay compliant with Meta, and scale broadcast and lead generation on the same platform — read the [WhatsApp Business API Guide](/blog/whatsapp-business-api-guide/).
 
-At **CreativeComplete**, WhatsApp lead generation is built as the Capture phase of the AI Customer System, integrated with every ad platform, every social channel, and your website, so that every entry point generates a WhatsApp lead that's immediately captured, qualified, and routed without manual intervention.
+At **CreativeComplete**, [WhatsApp lead generation](/services/whatsapp-database-monetization/) is built as the Capture phase of the AI Customer System, integrated with every ad platform, every social channel, and your website, so that every entry point generates a WhatsApp lead that's immediately captured, qualified, and routed without manual intervention.
 
 Most clients see their first qualified WhatsApp leads within **48 hours** of setup.

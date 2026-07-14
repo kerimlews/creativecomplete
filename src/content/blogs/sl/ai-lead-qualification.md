@@ -89,7 +89,7 @@ Vaši predstavniki še vedno lastnijo odnos. Le da ga lastnijo iz veliko močnej
 
 Za celoten pregled vseh kvalifikacijskih okvirov — BANT, CHAMP in MEDDIC — in kako zgraditi celotno sistemsko arhitekturo od začetka, preberite [celoten vodnik za AI kvalifikacijo leadov](/blog/ai-lead-qualification-guide/).
 
-Pri **CreativeComplete** je AI kvalifikacija leadov vgrajena v drugo fazo našega AI Customer Systema. Vsak inbound lead je kvalificiran, preden se dotakne vaše ekipe, ne glede na to, od kod je prišel, kdaj je prispel ali koliko jih je prišlo hkrati.
+Pri **CreativeComplete** je [AI kvalifikacija leadov](/sl/storitve/ai-kvalifikacija-leadov/) vgrajena v drugo fazo našega AI Customer Systema. Vsak inbound lead je kvalificiran, preden se dotakne vaše ekipe, ne glede na to, od kod je prišel, kdaj je prispel ali koliko jih je prišlo hkrati.
 
 Sistem skalira z vašim obsegom. Če jutri zaženete kampanjo in čez vikend pride 400 leadov, so vsi do ponedeljka zjutraj kvalificirani, ocenjeni in [usmerjeni](/sl/blog/avtomatizirana-distribucija-leadov/).
 

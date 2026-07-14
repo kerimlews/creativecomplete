@@ -78,7 +78,7 @@ Die meisten Leads kaufen nicht beim ersten Gespräch. Sie kaufen beim dritten, f
 
 AI Agents fahren das Follow-up systematisch: die richtige Nachricht, im richtigen Intervall, basierend auf dem Stand des Leads in der Konversation. Keine Leads fallen durch die Maschen, weil ein Rep zu beschäftigt, zu vergesslich oder zu unbehaglich mit persistentem Follow-up war.
 
-Bei **CreativeComplete** sind AI Sales Agents in der Convert-Phase des AI Customer Systems konfiguriert, integriert mit jedem Lead-Kanal, Ihrem [CRM](/de/blog/crm-automatisierung/) und dem Kalender Ihrer Reps. Das System wird in 5 Tagen gebaut, trainiert und getestet.
+Bei **CreativeComplete** sind AI Sales Agents in der [Convert-Phase des AI Customer Systems](/de/dienstleistungen/ki-lead-qualifizierung/) konfiguriert, integriert mit jedem Lead-Kanal, Ihrem [CRM](/de/blog/crm-automatisierung/) und dem Kalender Ihrer Reps. Das System wird in 5 Tagen gebaut, trainiert und getestet.
 
 Wenn Ihre Abschlussquote niedriger ist, als sie sein sollte, liegt es wahrscheinlich nicht am Produkt oder am Pitch. Es liegt an den Leads, die zwischen Erstkontakt und erstem Gespräch kalt geworden sind.
 
