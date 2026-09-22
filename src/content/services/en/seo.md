@@ -32,7 +32,7 @@ tags:
   - technical SEO audit
   - SEO for lead generation
   - conversion-optimized SEO
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas"]
+related_articles: ["careconnect-recruitment-automation"]
 faq:
   - question: "How long does it take to see SEO results?"
     answer: "Most clients see initial improvements within 30-60 days, with significant traffic increases typically occurring within 90 days. Local SEO results often appear faster."

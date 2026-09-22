@@ -7,7 +7,7 @@ description: "Večina SaaS izdelkov ne uspe pri skaliranju. Tako smo razvili Pap
 category: "Saas / Mobile / SEO / Marketing"
 url: https://paperpile.com/
 logo: https://alternative.me/media/256/paperpile-icon-kriuk5nzek80umqy-c.png
-related_articles: ["fitovision-gym-saas", "prepme-automation-saas"]
+related_articles: ["prepme-automation-saas"]
 slug: "paperpile-saas-scaling-case-study"
 published: "2025-12-08"
 updated: "2025-12-08"

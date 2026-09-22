@@ -30,7 +30,7 @@ tags:
   - abandoned cart recovery
   - mobile ecommerce
   - ecommerce CRO
-related_articles: ["nianave-ecommerce-scaling-case-study"]
+related_articles: []
 faq:
   - question: "What e-commerce platforms do you work with?"
     answer: "We work with Shopify, WooCommerce, BigCommerce, and custom solutions. We can optimize existing stores or build new ones from scratch. We choose the platform that best fits your needs."

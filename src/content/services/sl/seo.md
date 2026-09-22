@@ -19,7 +19,7 @@ priority: 9
 slug: "seo"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas"]
+related_articles: ["careconnect-recruitment-automation"]
 faq:
   - question: "Kako dolgo traja, da vidite rezultate SEO?"
     answer: "Večina strank vidi začetne izboljšave v 30-60 dneh, pri čemer se pomembna povečanja prometa običajno pojavijo v 90 dneh. Rezultati lokalnega SEO se pogosto pojavijo hitreje."

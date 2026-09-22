@@ -19,7 +19,7 @@ priority: 8
 slug: "web-design"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "paperpile-saas-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation", "paperpile-saas-scaling-case-study"]
 faq:
   - question: "Kako dolgo traja izdelava spletne strani?"
     answer: "Večina spletnih strani je dokončanih v 4-8 tednih, odvisno od kompleksnosti. Delamo v fazah, tako da lahko hitreje zaženete in iterirate na podlagi prave povratne informacije uporabnikov."

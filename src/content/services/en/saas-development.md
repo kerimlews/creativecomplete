@@ -30,7 +30,7 @@ tags:
   - white-label SaaS
   - SaaS from idea to launch
   - scalable SaaS architecture
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas", "paperpile-saas-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation", "prepme-automation-saas", "paperpile-saas-scaling-case-study"]
 faq:
   - question: "How long does it take to build a SaaS product?"
     answer: "MVP development typically takes 8-12 weeks. Full-featured SaaS products can take 4-6 months. We work in agile sprints, so you can launch faster and iterate based on user feedback."

@@ -30,7 +30,7 @@ tags:
   - app development for business
   - push notification strategy
   - mobile app ROI
-related_articles: ["fitovision-gym-saas"]
+related_articles: []
 faq:
   - question: "How long does it take to build a mobile app?"
     answer: "MVP development typically takes 8-12 weeks. Full-featured apps can take 4-6 months. We work in agile sprints, so you can launch faster and iterate based on user feedback."

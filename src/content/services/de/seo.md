@@ -19,7 +19,7 @@ priority: 9
 slug: "seo"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas"]
+related_articles: ["careconnect-recruitment-automation"]
 faq:
   - question: "Wie lange dauert es, SEO-Ergebnisse zu sehen?"
     answer: "Die meisten Kunden sehen erste Verbesserungen innerhalb von 30-60 Tagen, wobei signifikante Traffic-Steigerungen typischerweise innerhalb von 90 Tagen auftreten. Lokale SEO-Ergebnisse erscheinen oft schneller."

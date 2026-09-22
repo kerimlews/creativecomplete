@@ -6,7 +6,7 @@ author: "kerim-alihodza"
 description: "KI-Kundensystem kombiniert omnichannel KI-Agenten und eine KI-Kreativ-Engine, um Leads in unter 60 Sekunden zu qualifizieren, 14× mehr Konversionen zu erzielen und bestehende Lead-Datenbanken mit 42,5× ROI Broadcast-Kampagnen zu monetarisieren."
 category: "KI / Automatisierung / Lead-Generierung / Ad Creative"
 url: https://creativecomplete.agency/de/dienstleistungen/ki-kundensystem/
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas"]
+related_articles: ["careconnect-recruitment-automation", "prepme-automation-saas"]
 slug: "ai-customer-system-respond-io"
 published: "2026-05-06"
 updated: "2026-05-06"

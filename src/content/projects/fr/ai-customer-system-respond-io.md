@@ -6,7 +6,7 @@ author: "kerim-alihodza"
 description: "Système client IA combinant des agents IA omnicanaux et un moteur créatif IA pour qualifier les prospects en moins de 60 secondes, obtenir 14× plus de conversions et monétiser les bases de leads existantes avec un ROI de 42,5×."
 category: "IA / Automatisation / Génération de leads / Créatifs publicitaires"
 url: https://creativecomplete.agency/fr/services/systeme-client-ia/
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas"]
+related_articles: ["careconnect-recruitment-automation", "prepme-automation-saas"]
 slug: "ai-customer-system-respond-io"
 published: "2026-05-06"
 updated: "2026-05-06"

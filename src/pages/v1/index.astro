@@ -11,14 +11,13 @@ import Testimonials from '../../components/Testimonials.astro';
 import { getProjectImage, getTestimonalImage, testimonials } from '../../utils/constants';
 import { t, getLocalizedUrl } from '../../utils/translations';
 import { getHomepageServicesData } from '../../utils/homepageData';
-import { getProjectUrl } from '../../utils/routing';
 
 const currentLang = 'en';
 
 const bestCaseStudy = {
-  slug: 'fitovision-gym-saas',
-  title: '⚡ 245% Traffic Boom 🚀',
-  url: getProjectUrl(currentLang, 'fitovision-gym-saas')
+  slug: 'prepme-automation-saas',
+  title: '280 Hours Saved Every Month',
+  url: '/projects/prepme-automation-saas/'
 };
 
 const SERVICES_DATA = getHomepageServicesData(currentLang);

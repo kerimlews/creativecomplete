@@ -6,7 +6,7 @@ author: "kerim-alihodza"
 description: "AI sustav za kupce kombinira omnikanalske AI agente i AI motor za kreative za kvalifikaciju leadova za manje od 60 sekundi, 14× više konverzija i monetizaciju postojećih baza leadova s ROI-jem od 42,5×."
 category: "AI / Automatizacija / Generiranje leadova / Oglaševalski kreative"
 url: https://creativecomplete.agency/hr/usluge/ai-sustav-za-kupce/
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas"]
+related_articles: ["careconnect-recruitment-automation", "prepme-automation-saas"]
 slug: "ai-customer-system-respond-io"
 published: "2026-05-06"
 updated: "2026-05-06"

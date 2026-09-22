@@ -20,7 +20,7 @@ social:
 
 I've spent the last decade working through the details of digital business transformation. Not in theory. Not in conferences. In the reality of taking businesses from struggling to dominant.
 
-Most agencies sell dreams. I deliver measurable outcomes. While others talk about "brand presence," I'm building systems that drive [300% revenue growth](/blog/nianave-ecommerce-scaling-case-study/), automate [80% of manual work](/blog/prepme-automation-saas/), and position businesses as market leaders.
+Most agencies sell dreams. I deliver measurable outcomes. While others talk about "brand presence," I'm building systems that automate [80% of manual work](/blog/prepme-automation-saas/) and position businesses as market leaders.
 
 ## My Approach
 
@@ -33,7 +33,6 @@ Every project I lead follows one principle: build what actually works in the rea
 ### Execution That Delivers
 I've built systems that:
 
-- Scaled e-commerce revenue from $30k to $120k/month in 6 months ([see how](/blog/nianave-ecommerce-scaling-case-study/))
 - Automated 280 hours/month of manual work saving $280k annually ([read the case study](/blog/prepme-automation-saas/))
 - Built SaaS platforms serving 200,000+ users with 95% performance scores ([Paperpile case study](/blog/paperpile-saas-scaling-case-study/))
 - Dominated local search results in competitive Swiss markets ([Belags case study](/blog/belags-oberflaechenreinigung-arbon-case-study/))

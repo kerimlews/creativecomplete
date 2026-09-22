@@ -4,6 +4,16 @@
 # All rules: 301 Permanent
 # =============================================================================
 
+# Retired project case studies
+/projects/fitovision-gym-saas/                    /     301
+/projects/nianave-ecommerce-scaling-case-study/   /     301
+/de/projekte/fitovision-gym-saas/                 /de/  301
+/de/projekte/nianave-ecommerce-scaling-case-study/ /de/ 301
+/hr/projekti/fitovision-gym-saas/                 /hr/  301
+/hr/projekti/nianave-ecommerce-scaling-case-study/ /hr/ 301
+/sl/projekti/fitovision-gym-saas/                 /sl/  301
+/sl/projekti/nianave-ecommerce-scaling-case-study/ /sl/ 301
+
 # ---------------------------------------------------------------------------
 # 1. WRONG LOCALE PATH SEGMENTS
 #    Google crawled these because old hreflang pointed to wrong URL segments.

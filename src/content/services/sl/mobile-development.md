@@ -19,7 +19,7 @@ priority: 4
 slug: "mobile-development"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["fitovision-gym-saas"]
+related_articles: []
 faq:
   - question: "Kako dolgo traja izdelava mobilne aplikacije?"
     answer: "Razvoj MVP običajno traja 8-12 tednov. Popolnoma opremljene aplikacije lahko trajajo 4-6 mesecev. Delamo v agilnih sprintih, tako da lahko hitreje zaženete in iterirate na podlagi povratne informacije uporabnikov."

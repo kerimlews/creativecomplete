@@ -7,7 +7,7 @@ description: "Ein Druckreinigungs- und Oberflächenreinigungsunternehmen in Arbo
 category: "Local SEO / GBP / Webdesign / YouTube"
 url: https://xn--belags-oberflchenreinigung-shc.ch/
 logo: https://xn--belags-oberflchenreinigung-shc.ch/
-related_articles: ["fitovision-gym-saas", "careconnect-recruitment-automation", "nianave-ecommerce-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation"]
 slug: "belags-oberflaechenreinigung-arbon-case-study"
 published: "2026-05-01"
 updated: "2026-05-01"

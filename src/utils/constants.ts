@@ -110,16 +110,6 @@ export function getTestimonalImage(slug: string) {
 
 export const testimonials = [
   {
-    text: "I'm impressed by how seriously they take every project. They found the most cost-effective solution that replaced 7 different tools we were using - mobile app, WDMS, SaaS platform, and landing page all in one.",
-    author: "Matej Poznic",
-    role: "Founder",
-    company: "Fitovision",
-    avatar: "MP",
-    image: "matej-poznic", // Add image path
-    caseStudy: "fitovision-gym-saas",
-    verified: true
-  },
-  {
     text: "They automated our entire order processing system. What used to take hundreds of hours monthly now runs automatically. Zero stress, zero manual work - everything from Shopify orders to complex CSV files is handled flawlessly.",
     author: "Tomislav Bratunic",
     role: "Owner", 

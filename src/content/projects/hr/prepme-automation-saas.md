@@ -4,7 +4,7 @@ subtitle: "Zamjena pakla ručnih tablica prilagođenom automatizacijom koja se i
 image: "prepme-automation-saas"
 author: "kerim-alihodza"
 description: "Razvoj alata za automatizaciju koji štedi 4 sata ručnog rada dnevno. Izrađeno s Astrom, Reactom, Node.js-om i prilagođenim tijekovima automatizacije."
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "nianave-ecommerce-scaling-case-study", "paperpile-saas-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation", "paperpile-saas-scaling-case-study"]
 category: "AI / CRM / Automatizacija"
 url: https://prepme.hr/
 logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnKZIuKAGcnX3W8iVhgorLLMUlbHLSIWy_Eg&s

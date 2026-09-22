@@ -19,7 +19,7 @@ priority: 4
 slug: "mobile-development"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["fitovision-gym-saas"]
+related_articles: []
 faq:
   - question: "Wie lange dauert es, eine Mobile App zu erstellen?"
     answer: "MVP-Entwicklung dauert typischerweise 8-12 Wochen. Voll ausgestattete Apps können 4-6 Monate dauern. Wir arbeiten in agilen Sprints, damit Sie schneller starten und basierend auf Nutzerfeedback iterieren können."

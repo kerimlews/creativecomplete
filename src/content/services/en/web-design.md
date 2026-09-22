@@ -30,7 +30,7 @@ tags:
   - mobile-first web design
   - web design for lead generation
   - conversion-focused web design services
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "paperpile-saas-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation", "paperpile-saas-scaling-case-study"]
 faq:
   - question: "How long does it take to build a website?"
     answer: "Most websites are completed within 4-8 weeks, depending on complexity. We work in phases so you can launch faster and iterate based on real user feedback."

@@ -4,7 +4,7 @@ subtitle: "Replacing manual spreadsheet hell with custom automation that pays fo
 image: "prepme-automation-saas"
 author: "kerim-alihodza"
 description: "Develop automation tool which saves 4 hours per day of manual work. Built with Astro, React, Node.js, and custom automation workflows."
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "nianave-ecommerce-scaling-case-study", "paperpile-saas-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation", "paperpile-saas-scaling-case-study"]
 category: "AI / CRM / Automation"
 url: https://prepme.hr/
 logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnKZIuKAGcnX3W8iVhgorLLMUlbHLSIWy_Eg&s

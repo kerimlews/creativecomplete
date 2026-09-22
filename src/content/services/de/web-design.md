@@ -19,7 +19,7 @@ priority: 8
 slug: "web-design"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "paperpile-saas-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation", "paperpile-saas-scaling-case-study"]
 faq:
   - question: "Wie lange dauert es, eine Website zu erstellen?"
     answer: "Die meisten Websites werden innerhalb von 4-8 Wochen fertiggestellt, abhängig von der Komplexität. Wir arbeiten in Phasen, damit Sie schneller starten und basierend auf echtem Nutzerfeedback iterieren können."

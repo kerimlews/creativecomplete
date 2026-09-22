@@ -7,7 +7,7 @@ description: "Paperpile je bila postojeća istraživačka platforma izrađena na
 category: "SaaS / Arhitektura / Web dizajn"
 url: https://paperpile.com/
 logo: https://alternative.me/media/256/paperpile-icon-kriuk5nzek80umqy-c.png
-related_articles: ["nianave-ecommerce-scaling-case-study", "belags-oberflaechenreinigung-arbon-case-study", "imotorbike-ai-lead-qualification", "parcel-daily-conversion-boost"]
+related_articles: ["belags-oberflaechenreinigung-arbon-case-study", "imotorbike-ai-lead-qualification", "parcel-daily-conversion-boost"]
 slug: "paperpile-saas-scaling-case-study"
 published: "2025-12-08"
 updated: "2026-05-26"

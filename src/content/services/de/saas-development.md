@@ -19,7 +19,7 @@ priority: 6
 slug: "saas-development"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas", "paperpile-saas-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation", "prepme-automation-saas", "paperpile-saas-scaling-case-study"]
 faq:
   - question: "Wie lange dauert es, ein SaaS-Produkt zu erstellen?"
     answer: "MVP-Entwicklung dauert typischerweise 8-12 Wochen. Voll ausgestattete SaaS-Produkte können 4-6 Monate dauern. Wir arbeiten in agilen Sprints, damit Sie schneller starten und basierend auf Nutzerfeedback iterieren können."

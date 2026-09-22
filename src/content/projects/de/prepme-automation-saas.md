@@ -4,7 +4,7 @@ subtitle: "Ersetzen der manuellen Tabellenkalkulations-Hölle durch maßgeschnei
 image: "prepme-automation-saas"
 author: "kerim-alihodza"
 description: "Manuelle Bestellabwicklung stiehlt Ihren Gewinn. So haben wir maßgeschneiderte Automatisierung gebaut, die PrepMe 280 Stunden monatlich und $280k jährlich sparte."
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas"]
+related_articles: ["careconnect-recruitment-automation"]
 category: "AI / CRM / Automation"
 url: https://prepme.hr/
 logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnKZIuKAGcnX3W8iVhgorLLMUlbHLSIWy_Eg&s

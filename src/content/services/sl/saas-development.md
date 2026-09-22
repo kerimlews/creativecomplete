@@ -19,7 +19,7 @@ priority: 6
 slug: "saas-development"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas", "paperpile-saas-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation", "prepme-automation-saas", "paperpile-saas-scaling-case-study"]
 faq:
   - question: "Kako dolgo traja izdelava SaaS izdelka?"
     answer: "Razvoj MVP običajno traja 8-12 tednov. Popolnoma opremljeni SaaS izdelki lahko trajajo 4-6 mesecev. Delamo v agilnih sprintih, tako da lahko hitreje zaženete in iterirate na podlagi povratne informacije uporabnikov."

@@ -7,7 +7,7 @@ description: "Podjetje za tlačno čiščenje in čiščenje površin v Arbonu, 
 category: "Lokalni SEO / GBP / Spletni dizajn / YouTube"
 url: https://xn--belags-oberflchenreinigung-shc.ch/
 logo: https://xn--belags-oberflchenreinigung-shc.ch/
-related_articles: ["fitovision-gym-saas", "careconnect-recruitment-automation", "nianave-ecommerce-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation"]
 slug: "belags-oberflaechenreinigung-arbon-case-study"
 published: "2026-05-01"
 updated: "2026-05-01"

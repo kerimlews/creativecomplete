@@ -19,7 +19,7 @@ priority: 7
 slug: "automation"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas", "nianave-ecommerce-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation", "prepme-automation-saas"]
 faq:
   - question: "Katere naloge lahko AI avtomatizira za moje podjetje?"
     answer: "Pogoste avtomatizacije vključujejo komunikacijo s strankami, razporejanje terminov, obdelavo računov, vnos podatkov, ustvarjanje poročil, odgovore na e-pošto in upravljanje dokumentov. Identificiramo najbolj učinkovite priložnosti za vaše specifično podjetje."

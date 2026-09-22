@@ -19,7 +19,7 @@ priority: 5
 slug: "ecommerce"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["nianave-ecommerce-scaling-case-study"]
+related_articles: []
 faq:
   - question: "S katerimi platformami za e-trgovino delate?"
     answer: "Delamo s Shopify, WooCommerce, BigCommerce in prilagojenimi rešitvami. Lahko optimiziramo obstoječe trgovine ali gradimo nove od začetka. Izberemo platformo, ki najbolje ustreza vašim potrebam."

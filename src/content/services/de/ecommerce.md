@@ -19,7 +19,7 @@ priority: 5
 slug: "ecommerce"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["nianave-ecommerce-scaling-case-study"]
+related_articles: []
 faq:
   - question: "Mit welchen E-Commerce-Plattformen arbeiten Sie?"
     answer: "Wir arbeiten mit Shopify, WooCommerce, BigCommerce und benutzerdefinierten Lösungen. Wir können bestehende Shops optimieren oder neue von Grund auf erstellen. Wir wählen die Plattform, die am besten zu Ihren Bedürfnissen passt."

@@ -30,7 +30,7 @@ tags:
   - document processing automation
   - save time with automation
   - automation ROI
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas", "nianave-ecommerce-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation", "prepme-automation-saas"]
 faq:
   - question: "What tasks can AI automate for my business?"
     answer: "Common automations include customer communication, appointment scheduling, invoice processing, data entry, report generation, email responses, and document management. We identify the highest-impact opportunities for your specific business."

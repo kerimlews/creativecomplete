@@ -19,7 +19,7 @@ priority: 7
 slug: "automation"
 published: "2026-06-01"
 updated: "2025-01-15"
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas", "nianave-ecommerce-scaling-case-study"]
+related_articles: ["careconnect-recruitment-automation", "prepme-automation-saas"]
 faq:
   - question: "Welche Aufgaben kann KI für mein Unternehmen automatisieren?"
     answer: "Häufige Automatisierungen umfassen Kundenkommunikation, Terminplanung, Rechnungsverarbeitung, Datenerfassung, Berichtserstellung, E-Mail-Antworten und Dokumentenverwaltung. Wir identifizieren die wirkungsvollsten Möglichkeiten für Ihr spezifisches Unternehmen."

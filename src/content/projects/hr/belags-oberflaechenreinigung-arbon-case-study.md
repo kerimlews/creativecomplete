@@ -7,7 +7,7 @@ description: "Tvrtka za pranje pod pritiskom i čišćenje površina u Arbonu, �
 category: "Lokalni SEO / Google poslovni profil / Web dizajn / YouTube"
 url: https://xn--belags-oberflchenreinigung-shc.ch/
 logo: https://xn--belags-oberflchenreinigung-shc.ch/
-related_articles: ["nianave-ecommerce-scaling-case-study", "paperpile-saas-scaling-case-study", "imotorbike-ai-lead-qualification", "parcel-daily-conversion-boost"]
+related_articles: ["paperpile-saas-scaling-case-study", "imotorbike-ai-lead-qualification", "parcel-daily-conversion-boost"]
 slug: "belags-oberflaechenreinigung-arbon-case-study"
 published: "2026-05-01"
 updated: "2026-05-26"

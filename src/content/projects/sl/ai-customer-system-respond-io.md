@@ -6,7 +6,7 @@ author: "kerim-alihodza"
 description: "AI sistem za stranke združuje omnikanalske AI agente in AI motor za kreative za kvalifikacijo leadov v manj kot 60 sekundah, 14× več konverzij in monetizacijo obstoječih baz leadov z ROI 42,5×."
 category: "AI / Avtomatizacija / Generiranje leadov / Oglaševalski kreative"
 url: https://creativecomplete.agency/sl/storitve/ai-sistem-za-stranke/
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas", "prepme-automation-saas"]
+related_articles: ["careconnect-recruitment-automation", "prepme-automation-saas"]
 slug: "ai-customer-system-respond-io"
 published: "2026-05-06"
 updated: "2026-05-06"

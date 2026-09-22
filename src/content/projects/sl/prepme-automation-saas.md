@@ -4,7 +4,7 @@ subtitle: "Zamenjava ročnega pekla s preglednicami s prilagojeno avtomatizacijo
 image: "prepme-automation-saas"
 author: "kerim-alihodza"
 description: "Ročna obdelava naročil krade vaš dobiček. Tako smo zgradili prilagojeno avtomatizacijo, ki je PrepMe prihranila 280 ur mesečno in 280k $ letno."
-related_articles: ["careconnect-recruitment-automation", "fitovision-gym-saas"]
+related_articles: ["careconnect-recruitment-automation"]
 category: "AI / CRM / Automation"
 url: https://prepme.hr/
 logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnKZIuKAGcnX3W8iVhgorLLMUlbHLSIWy_Eg&s
